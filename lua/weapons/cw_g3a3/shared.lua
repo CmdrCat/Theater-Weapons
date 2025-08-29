@@ -185,7 +185,7 @@ SWEP.MaxSpreadInc = 0.06
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.17
 SWEP.Shots = 1
-SWEP.Damage = 42
+SWEP.Damage = 56
 SWEP.DeployTime = 0.8
 SWEP.NearWallDistance = 40
 
@@ -194,3 +194,10 @@ SWEP.ReloadTime = 2.5
 SWEP.ReloadTime_Empty = 3.3
 SWEP.ReloadHalt = 3.05
 SWEP.ReloadHalt_Empty = 4.85
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 65 * 39.37
+self.DamageFallOff = .2
+end
