@@ -130,7 +130,7 @@ SWEP.Primary.DefaultClip	= 10
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x54MMR"
 
-SWEP.FireDelay = 0.15
+SWEP.FireDelay = 60 / 425
 SWEP.FireSound = "CW_SVD_OFFICIAL_FIRE"
 SWEP.FireSoundSuppressed = "CW_SVD_OFFICIAL_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.85
@@ -142,7 +142,7 @@ SWEP.MaxSpreadInc = 0.08
 SWEP.SpreadPerShot = 0.015
 SWEP.SpreadCooldown = 0.25
 SWEP.Shots = 1
-SWEP.Damage = 55
+SWEP.Damage = 70
 SWEP.DeployTime = 0.85
 SWEP.NearWallDistance = 40
 
@@ -152,6 +152,13 @@ SWEP.ReloadTime_Empty = 4
 SWEP.ReloadHalt = 2.6
 SWEP.ReloadHalt_Empty = 4
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 90 * 39.37
+self.DamageFallOff = .45
+end
 
 function SWEP:checkAttachmentDependency()
 	-- wrap around this method to enable the rail when no sight attachment is active
