@@ -9,7 +9,7 @@ SWEP.DamageFallOff_Orig = .35
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "Cheytac M200"
+	SWEP.PrintName = "CheyTac M200"
 	SWEP.CSMuzzleFlashes = true
 	
 	SWEP.MoveType = 1
