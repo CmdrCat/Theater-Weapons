@@ -8,7 +8,7 @@ CustomizableWeaponry:registerAmmo(".300BL", ".300BL", 5, 56)
 if CLIENT then
 	SWEP.UseHands = true
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "Honeybadger"
+	SWEP.PrintName = "Honey Badger"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 
