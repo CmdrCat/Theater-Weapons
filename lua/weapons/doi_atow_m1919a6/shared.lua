@@ -10,7 +10,7 @@ include("sh_soundscript.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "M1919A6"
+	SWEP.PrintName = "M1919A6 Browning"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.UseHands = true
 	
@@ -23,8 +23,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 500 * 39.37
-	SWEP.DamageFallOff_Orig = .47
+	SWEP.EffectiveRange_Orig = 60 * 39.37
+	SWEP.DamageFallOff_Orig = .08
 	
 	SWEP.Shell = "khr3006"
 	SWEP.ShellScale = .6
@@ -159,7 +159,7 @@ SWEP.MaxSpreadInc = 0.07
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.2
 SWEP.Shots = 1
-SWEP.Damage = 25
+SWEP.Damage = 49
 SWEP.DeployTime = 1
 SWEP.HolsterTime = 1
 
@@ -184,8 +184,8 @@ function SWEP:IndividualThink()
 		self.ForegripParent = "nah"
 	end
 	
-	self.EffectiveRange = 500 * 39.37
-	self.DamageFallOff = .47
+	self.EffectiveRange = 60 * 39.37
+	self.DamageFallOff = .08
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 120 * 39.37))
