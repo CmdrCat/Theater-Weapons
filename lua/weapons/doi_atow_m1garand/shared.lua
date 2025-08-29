@@ -24,8 +24,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 500 * 39.37
-	SWEP.DamageFallOff_Orig = .4
+	SWEP.EffectiveRange_Orig = 60 * 39.37
+	SWEP.DamageFallOff_Orig = .35
 	
 	SWEP.Shell = "khr3006"
 	SWEP.ShellScale = .7
