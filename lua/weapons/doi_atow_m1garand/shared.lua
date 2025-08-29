@@ -263,7 +263,7 @@ else
 SWEP.Primary.Ammo			= ".30-06"
 end
 
-SWEP.FireDelay = 60/350
+SWEP.FireDelay = 60/500
 SWEP.FireSound = "DOIGARAND_FIRE"
 SWEP.FireSoundSuppressed = "DOIGARAND_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.745
@@ -277,7 +277,7 @@ SWEP.MaxSpreadInc = 0.2
 SWEP.SpreadPerShot = 0.02
 SWEP.SpreadCooldown = 0.22
 SWEP.Shots = 1
-SWEP.Damage = 50
+SWEP.Damage = 57
 SWEP.DeployTime = .5
 SWEP.HolsterTime = .6
 
@@ -312,8 +312,8 @@ end
 		self.ForeGripOffsetCycle_Reload_Empty = 0
 	end
 
-	self.EffectiveRange = 500 * 39.37
-	self.DamageFallOff = .4
+	self.EffectiveRange = 60 * 39.37
+	self.DamageFallOff = .25
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 50 * 39.37))
