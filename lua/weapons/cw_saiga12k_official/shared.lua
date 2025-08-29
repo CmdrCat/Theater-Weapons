@@ -201,7 +201,7 @@ SWEP.Primary.Ammo			= "12 Gauge"
 
 SWEP.Chamberable = true
 
-SWEP.FireDelay = 0.17
+SWEP.FireDelay = 60 / 350
 SWEP.FireSound = "CW_SAIGA12K_FIRE"
 SWEP.FireSoundSuppressed = "CW_SAIGA12K_FIRE_SUPPRESSED"
 SWEP.Recoil = 2.5
@@ -224,3 +224,10 @@ SWEP.ReloadTime = 2.5
 SWEP.ReloadTime_Empty = 3.5
 SWEP.ReloadHalt = 3
 SWEP.ReloadHalt_Empty = 4
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 7.5 * 39.37
+self.DamageFallOff = .6
+end
