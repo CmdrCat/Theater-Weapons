@@ -191,7 +191,7 @@ SWEP.MaxSpreadInc = 0.07
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.12
 SWEP.Shots = 1
-SWEP.Damage = 42
+SWEP.Damage = 36
 SWEP.DeployTime = 1.7
 
 SWEP.RecoilToSpread = 0.8 -- the M14 in particular will have 30% more recoil from continuous fire to give a feeling of "oh fuck I should stop firing 7.62x51MM in full auto at 750 RPM"
@@ -204,3 +204,10 @@ SWEP.ReloadHalt_Empty = 4.85
 SWEP.NearWallDistance = 35
 
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 70 * 39.37
+self.DamageFallOff = .05
+end
