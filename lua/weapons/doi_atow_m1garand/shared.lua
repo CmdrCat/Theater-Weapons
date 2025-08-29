@@ -263,7 +263,7 @@ else
 SWEP.Primary.Ammo			= ".30-06"
 end
 
-SWEP.FireDelay = 60/500
+SWEP.FireDelay = 60/350
 SWEP.FireSound = "DOIGARAND_FIRE"
 SWEP.FireSoundSuppressed = "DOIGARAND_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.745
