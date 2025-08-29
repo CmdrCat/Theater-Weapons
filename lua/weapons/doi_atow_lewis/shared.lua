@@ -21,8 +21,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 450 * 39.37
-	SWEP.DamageFallOff_Orig = .57
+	SWEP.EffectiveRange_Orig = 60 * 39.37
+	SWEP.DamageFallOff_Orig = .05
 	
 	SWEP.Shell = "khr303"
 	SWEP.ShellScale = .6
@@ -171,7 +171,7 @@ SWEP.MaxSpreadInc = 0.05
 SWEP.SpreadPerShot = 0.006
 SWEP.SpreadCooldown = 0.14
 SWEP.Shots = 1
-SWEP.Damage = 25
+SWEP.Damage = 48
 SWEP.DeployTime = .675
 SWEP.HolsterTime = .7
 
@@ -202,8 +202,8 @@ function SWEP:IndividualThink()
 		self.ForeGripOffsetCycle_Reload_Empty = 0.85
 	end
 	
-	self.EffectiveRange = 450 * 39.37
-	self.DamageFallOff = .57
+	self.EffectiveRange = 60 * 39.37
+	self.DamageFallOff = .05
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 100 * 39.37))
