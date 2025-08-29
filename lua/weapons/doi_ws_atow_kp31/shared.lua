@@ -8,7 +8,7 @@ include("sh_soundscript.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "KP 31"
+	SWEP.PrintName = "KP/-31"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.UseHands = true
 	
@@ -19,8 +19,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 150 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.EffectiveRange_Orig = 25 * 39.37
+	SWEP.DamageFallOff_Orig = .55
 	
 	SWEP.Shell = "khr9x19"
 	SWEP.ShellScale = .7
@@ -142,7 +142,7 @@ SWEP.ForegripParent = "nah"
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.DefaultClip	= 30
 SWEP.Primary.Automatic		= true
-SWEP.Chamberable			= true
+SWEP.Chamberable			= false --The KP/-31 used during WWII is an open-bolt gun
 
 if CustomizableWeaponry_doi_atow_hl2ammo then
 SWEP.Primary.Ammo			= "SMG1"
@@ -162,7 +162,7 @@ SWEP.MaxSpreadInc = 0.05
 SWEP.SpreadPerShot = 0.005
 SWEP.SpreadCooldown = 0.2
 SWEP.Shots = 1
-SWEP.Damage = 19
+SWEP.Damage = 35
 SWEP.DeployTime = .53
 SWEP.HolsterTime = .6
 
@@ -188,8 +188,8 @@ if self.FireMode == "semi" then
 	--	self.ForegripParent = "nah"
 	--end
 	
-	self.EffectiveRange = 150 * 39.37
-	self.DamageFallOff = .5
+	self.EffectiveRange = 25 * 39.37
+	self.DamageFallOff = .55
 	
 				if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 40 * 39.37))
