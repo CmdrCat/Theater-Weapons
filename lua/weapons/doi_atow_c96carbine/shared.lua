@@ -21,8 +21,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = false
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 200 * 39.37
-	SWEP.DamageFallOff_Orig = .33
+	SWEP.EffectiveRange_Orig = 10 * 39.37
+	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr763"
 	SWEP.ShellScale = .73
@@ -159,7 +159,7 @@ else
 SWEP.Primary.Ammo			= "7.63x25MM"
 end
 
-SWEP.FireDelay = 60/1100
+SWEP.FireDelay = 60/1000
 SWEP.FireSound = "DOIC96_FIRE"
 SWEP.Recoil = .75
 
@@ -170,7 +170,7 @@ SWEP.MaxSpreadInc = 0.05
 SWEP.SpreadPerShot = 0.005
 SWEP.SpreadCooldown = 0.2
 SWEP.Shots = 1
-SWEP.Damage = 22
+SWEP.Damage = 32
 SWEP.DeployTime = .5
 SWEP.HolsterTime = .5
 
@@ -199,8 +199,8 @@ if not self.ActiveAttachments.doi_atow_onehand then
 	self.BackupSights = {["doi_atow_zf4"] = {[1] = Vector(-2.3262, -2, 1.1502), [2] = Vector(0.2202, 0.0439, 0)}}
 	end
 	
-	self.EffectiveRange = 200 * 39.37
-	self.DamageFallOff = .33
+	self.EffectiveRange = 10 * 39.37
+	self.DamageFallOff = .6
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 30 * 39.37))
