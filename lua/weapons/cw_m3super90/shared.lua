@@ -148,7 +148,7 @@ SWEP.ClumpSpread = 0.013
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.8
 SWEP.Shots = 12
-SWEP.Damage = 9
+SWEP.Damage = 15
 SWEP.DeployTime = 0.8
 
 SWEP.ReloadStartTime = 0.3
@@ -159,3 +159,10 @@ SWEP.ShotgunReload = true
 SWEP.NearWallDistance = 30
 
 SWEP.Chamberable = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 10 * 39.37
+self.DamageFallOff = .6
+end
