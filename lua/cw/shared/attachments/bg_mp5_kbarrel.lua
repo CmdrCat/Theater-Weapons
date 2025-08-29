@@ -5,9 +5,8 @@ att.displayNameShort = "Short"
 att.isBG = true
 att.SpeedDec = -5
 
-att.statModifiers = {RecoilMult = -0.2,
-AimSpreadMult = 0.7,
-OverallMouseSensMult = 0.15,
+att.statModifiers = {DamageMult = -3 / 37
+RecoilMult = -0.2,
 DrawSpeedMult = 0.2,
 FireDelayMult = -0.11111111111111}
 
