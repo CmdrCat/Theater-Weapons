@@ -187,7 +187,7 @@ SWEP.Primary.DefaultClip	= 8
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "12 Gauge"
 
-SWEP.Chamberable = false
+SWEP.Chamberable = true
 
 SWEP.FireDelay = 0.2
 SWEP.FireSound = "CW_M4SUPER90_FIRE"
@@ -202,7 +202,7 @@ SWEP.ClumpSpread = 0.017
 SWEP.SpreadPerShot = 0.013
 SWEP.SpreadCooldown = 0.3
 SWEP.Shots = 12
-SWEP.Damage = 8
+SWEP.Damage = 9
 SWEP.DeployTime = 0.8
 SWEP.RecoilToSpread = 1.6 -- should actually be called SpreadToRecoil, but whatever
 
@@ -211,3 +211,10 @@ SWEP.InsertShellTime = 0.6
 SWEP.ReloadFinishWait = 1
 SWEP.PumpMidReloadWait = 0.6
 SWEP.ShotgunReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 7.5 * 39.37
+self.DamageFallOff = .5
+end
