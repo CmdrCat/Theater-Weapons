@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models\weapons\fas2\rifles\ak-47\main"
+	"$basetexture" "models\fas2\aks\main"
 	"$basemapalphaphongmask" 	"1"
 	"$phong" 			"1"
 	"$phongtint" 			"[1 1 0.8]"

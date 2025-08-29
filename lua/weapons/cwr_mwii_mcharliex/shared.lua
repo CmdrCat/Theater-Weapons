@@ -246,7 +246,7 @@ function SWEP:fireAnimFunc()
 	end
 	
 	self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
-end //*/
+end 
 
 SWEP.Animations = {
 
@@ -316,7 +316,7 @@ SWEP.Primary.DefaultClip	= 5000
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
-SWEP.FireDelay = 60 / 950
+SWEP.FireDelay = 60 / 900
 SWEP.FireSound = "MWII_M13B_FIRE"
 SWEP.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.05
@@ -333,7 +333,7 @@ SWEP.MaxSpreadInc = 0.025
 SWEP.SpreadPerShot = 0.002
 SWEP.SpreadCooldown = 0.14
 SWEP.Shots = 1
-SWEP.Damage = 30
+SWEP.Damage = 29
 SWEP.DeployTime = 0.6
 
 SWEP.ReloadSpeed = 1
@@ -344,6 +344,12 @@ SWEP.ReloadHalt_Empty = 2.8
 
 SWEP.SnapToIdlePostReload = false
 
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 55 * 39.37
+self.DamageFallOff = .1
+end
 
 SWEP.InspectAnim = "inspect_30" -- Needs to be in self.Animations
 SWEP.InspectTime = 0

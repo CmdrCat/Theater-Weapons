@@ -8,7 +8,7 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "Magpul Masada"
+	SWEP.PrintName = "Masada"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	
@@ -208,7 +208,7 @@ SWEP.Primary.DefaultClip	= 30
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
-SWEP.FireDelay = 0.075
+SWEP.FireDelay = 60 / 700
 SWEP.FireSound = "CW_MAGPUL_MASADA_FIRE"
 SWEP.FireSoundSuppressed = "CW_MAGPUL_MASADA_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.05
@@ -220,7 +220,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 30
+SWEP.Damage = 39
 SWEP.DeployTime = 1
 
 SWEP.ReloadSpeed = 1
@@ -229,5 +229,11 @@ SWEP.ReloadTime_Empty = 3.3
 SWEP.ReloadHalt = 2.4
 SWEP.ReloadHalt_Empty = 3.6
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 50 * 39.37
+end
 
 end

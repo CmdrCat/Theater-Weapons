@@ -153,7 +153,7 @@ SWEP.Instructions	= ""
 
 SWEP.ViewModelFOV	= 90
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel		= "models/weapons/rfas/ar/cw2_rfas_m4a1.mdl"
+SWEP.ViewModel		= "models/weapons/rfas/ar/cw2_theater_rfas_m4a1.mdl"
 SWEP.WorldModel		= "models/weapons/w_rif_m4a1.mdl"
 
 SWEP.Spawnable			= true
