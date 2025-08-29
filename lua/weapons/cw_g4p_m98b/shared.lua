@@ -8,7 +8,7 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "Barett M98 Bravo"
+	SWEP.PrintName = "Barrett M98 Bravo"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1
 	
