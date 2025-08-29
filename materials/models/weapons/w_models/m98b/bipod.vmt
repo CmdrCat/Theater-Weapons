@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Weapons/V_models/m98b/BipodCompleteMap"
+	"$bumpmap" "models/Weapons/V_models/m98b/Bipod_Norm"
+	"$nocull"	"1"
+
+}

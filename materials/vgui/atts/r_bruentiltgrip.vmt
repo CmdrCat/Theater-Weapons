@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/atts/r_bruentiltgrip"
+	"$translucent" 1
+}

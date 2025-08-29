@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/atts/r_bruenbm20"
+	"$translucent" 1
+}

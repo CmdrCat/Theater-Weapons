@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "reticles/zoom/CronenP_Reticle"
+	"$translucent" 1
+}

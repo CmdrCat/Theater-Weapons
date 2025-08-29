@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\khrcw2\doipack\garand\weapon_garand_syn_dm"
+	"$bumpmap"	 			"models\khrcw2\doipack\garand\weapon_garand_syn_nm"
+	"$phongexponenttexture" "models\khrcw2\doipack\garand\weapon_garand_syn_exp"
+
+	$selfillummask	"models\khrcw2\doipack\garand\weapon_garand_syn_illum"
+
+	"$selfillum"		"1"
+	
+	"$phong"  				"1"
+	"$phongtint"			"[0.65 0.9 1]"
+	"$phongboost"			"2"
+//	"$phongexponent" 		"48"
+//	"$phongfresnelranges"	"[1 2 4]"
+
+	"$envmap"					"env_cubemap"
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmaptint"				"[0.08 0.08 0.08]"
+}

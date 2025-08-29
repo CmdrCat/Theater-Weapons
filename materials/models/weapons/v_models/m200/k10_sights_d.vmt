@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/v_models/m200/k10_sights_d"
+	        $bumpmap   "models/weapons/v_models/m200/k10_sights_n"
+        $phongexponenttexture  "models/weapons/v_models/m200/k10_sights_s"
+        $phongexponent "30"
+       
+        $normalmapalphaenvmapmask   "1"
+        $envmaptint   "[0.01 0.01 0.01]"
+        $envmapfresnel "1" // Advanced envmap reflections
+ 
+        $phong  "1"
+        $phongboost  "1"      //tone down to decrease specular reflections
+        $phongfresnelranges     "[0.5 1.5 3.0]"
+        $phongalbedotint  "1"
+        $nocull  1
+		
+}

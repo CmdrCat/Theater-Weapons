@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+
+{
+	"$basetexture"				"models\khrcw2\doipack\kar98k\a_kar98k_4x_mount_dm"
+	"$bumpmap"					"models\khrcw2\doipack\kar98k\a_kar98k_4x_mount_nm"
+
+	"$phong"  			"1"
+	"$phongexponent" 		"36"
+	"$phongboost" 			"0.5"
+	"$phongfresnelranges" 		"[1 2 3]"
+	"$phongtint" 			"[0.6 0.8 1]"
+	"$phongalbedotint" 		"1"	
+	"$envmapfresnel"	"0.5"
+	"$envmap" 			"env_cubemap"
+	"$normalmapalphaenvmapmask" 	"1"
+	"$envmaptint"			"[0.01 0.01 0.01]"
+
+}

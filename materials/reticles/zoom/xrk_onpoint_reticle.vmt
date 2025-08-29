@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "reticles/zoom/XRK_OnPoint_Reticle"
+	"$translucent" 1
+}

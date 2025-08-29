@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"models\khrcw2\doipack\kar98k\kar98k_crosshair"
+	"$translucent" 	"1"
+}

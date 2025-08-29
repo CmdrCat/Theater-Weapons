@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\khrcw2\doipack\sten\weapon_sten_dm"
+	"$bumpmap"			"models\khrcw2\doipack\sten\weapon_sten_nm"
+
+	"$phong"  				"1"
+	"$phongexponent" 		"78"
+	"$phongboost" 			"1.5"
+	"$phongfresnelranges"	"[1 2 3]"
+	"$phongtint" 			"[0.7 0.8 1]"
+	"$phongalbedotint" 		"1"	
+
+	"$envmapfresnel"	"0.5"
+	"$envmap"			"env_cubemap"
+	"$envmaptint"		"[0.08 0.08  0.08 ]"
+	"$normalmapalphaenvmapmask"	"1"
+}

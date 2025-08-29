@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/atts/r_cronenzerop"
+	"$translucent" 1
+}

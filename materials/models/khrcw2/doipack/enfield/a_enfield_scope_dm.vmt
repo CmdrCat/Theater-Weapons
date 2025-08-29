@@ -1,0 +1,23 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\khrcw2\doipack\enfield\a_enfield_scope_dm"
+	"$bumpmap"			"models\khrcw2\doipack\enfield\a_enfield_scope_nm"
+
+//BASIC
+	$model						"1"
+    $color						"[ 1 1 1 ]"
+	
+//PHONG
+	$phong  					"1"
+//	$phongexponent 				"36"
+	$phongboost 				"5"
+	$basemapalphaphongmask		"1"
+	$phongfresnelranges 		"[ 0.1 0.5 1 ]"
+	$phongtint 					"[ 0.6 0.8 1 ]"
+
+//ENVMAP
+	$envmap						"env_cubemap"
+//	$envmapfresnel 				"-1"
+	$basealphaenvmapmask		"1"
+	$envmaptint               	"[ .015 .015 .015 ]"
+}
