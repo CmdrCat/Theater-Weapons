@@ -27,8 +27,8 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_ReloadInsert = 0
 	SWEP.ForeGripOffsetCycle_ReloadEnd = 0
 	
-	SWEP.EffectiveRange_Orig = 500 * 39.37
-	SWEP.DamageFallOff_Orig = .325
+	SWEP.EffectiveRange_Orig = 90 * 39.37
+	SWEP.DamageFallOff_Orig = .25
 	
 	SWEP.Shell = "khr3006"
 	SWEP.ShellScale = .49
@@ -182,7 +182,7 @@ SWEP.MaxSpreadInc = 0.25
 SWEP.SpreadPerShot = 0.04
 SWEP.SpreadCooldown = 0.12
 SWEP.Shots = 1
-SWEP.Damage = 88
+SWEP.Damage = 90
 SWEP.DeployTime = .425
 SWEP.HolsterTime = .65
 
@@ -243,8 +243,8 @@ self.Owner.ViewAff = 0
 		self.AimBreathingEnabled = false
 		end
 		
-	self.EffectiveRange = 500 * 39.37
-	self.DamageFallOff = .325
+	self.EffectiveRange = 90 * 39.37
+	self.DamageFallOff = .25
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 100 * 39.37))
