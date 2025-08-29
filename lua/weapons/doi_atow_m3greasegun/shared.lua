@@ -22,8 +22,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 170 * 39.37
-	SWEP.DamageFallOff_Orig = .55
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .5
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	
@@ -155,7 +155,7 @@ SWEP.Primary.Ammo			= ".45 ACP"
 end
 
 
-SWEP.FireDelay = 60/490
+SWEP.FireDelay = 60/600
 SWEP.FireSound = "DOIM3_FIRE"
 SWEP.FireSoundSuppressed = "DOIM3_FIRE_SUPP"
 SWEP.Recoil = 1.4
@@ -168,7 +168,7 @@ SWEP.MaxSpreadInc = 0.062
 SWEP.SpreadPerShot = 0.015
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 21
+SWEP.Damage = 65
 SWEP.DeployTime = .475
 SWEP.HolsterTime = .55
 
@@ -189,8 +189,8 @@ if self.FireMode == "semi" then
 	self.Owner.ViewAff = 0
 	end
 
-	self.EffectiveRange = 170 * 39.37
-	self.DamageFallOff = .55
+	self.EffectiveRange = 30 * 39.37
+	self.DamageFallOff = .5
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 45 * 39.37))
