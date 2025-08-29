@@ -6,9 +6,8 @@ att.isBG = true
 att.categoryFactors = {cqc = -1, lmg = 3}
 att.SpeedDec = 3
 
-att.statModifiers = {DamageMult = 0.1,
-AimSpreadMult = -0.2,
-OverallMouseSensMult = -0.15}
+att.statModifiers = {DamageMult = 44 / 42,
+FireDelayMult = -600 / 650}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ak74_rpkbarrel")
