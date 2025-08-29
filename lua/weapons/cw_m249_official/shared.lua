@@ -173,7 +173,7 @@ SWEP.Primary.DefaultClip	= 200
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
-SWEP.FireDelay = 0.075
+SWEP.FireDelay = 60 / 850
 SWEP.FireSound = "CW_M249_OFFICIAL_FIRE"
 SWEP.FireSoundSuppressed = "CW_M249_OFFICIAL_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.1
@@ -185,7 +185,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
-SWEP.Damage = 28
+SWEP.Damage = 30
 SWEP.DeployTime = 2
 
 SWEP.ReloadSpeed = 1.2
@@ -196,6 +196,13 @@ SWEP.ReloadHalt_Empty = 8.9
 SWEP.NearWallDistance = 35
 
 SWEP.Chamberable = false
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 60 * 39.37
+self.DamageFallOff = .1
+end
 
 if CLIENT then
 	SWEP.RoundBeltBoneNames = {
