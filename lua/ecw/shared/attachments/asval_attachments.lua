@@ -72,7 +72,7 @@ att.displayName = "AS VAL variant"
 att.displayNameShort = "AS VAL"
 att.isBG = true
 
-att.statModifiers = {FireDelayMult = -0.3333333333333}
+att.statModifiers = {DamageMult = 5 / 28}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/asval_variant")
@@ -94,10 +94,8 @@ att.isBG = true
 att.overrideSuppressorStatus = false -- it will override the weapon's default suppressor status to FALSE
 att.SpeedDec = -3
 
-att.statModifiers = {OverallMouseSensMult = 0.1,
-RecoilMult = -0.1,
-AimSpreadMult = 0.6,
-FireDelayMult = -0.3333333333333}
+att.statModifiers = {DamageMult = 5 / 28,
+RecoilMult = -0.1,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/sr3m_variant")
