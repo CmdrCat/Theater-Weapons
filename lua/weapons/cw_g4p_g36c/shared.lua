@@ -8,7 +8,7 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "HK G36C"
+	SWEP.PrintName = "G36C"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	
@@ -204,7 +204,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 30
+SWEP.Damage = 37
 SWEP.DeployTime = 1
 
 SWEP.ReloadSpeed = 1
@@ -213,5 +213,12 @@ SWEP.ReloadTime_Empty = 2.6
 SWEP.ReloadHalt = 1.8
 SWEP.ReloadHalt_Empty = 3
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 45 * 39.37
+self.DamageFallOff = .4
+end
 
 end
