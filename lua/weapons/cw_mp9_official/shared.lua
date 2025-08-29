@@ -165,7 +165,7 @@ SWEP.MaxSpreadInc = 0.033
 SWEP.SpreadPerShot = 0.004
 SWEP.SpreadCooldown = 0.09
 SWEP.Shots = 1
-SWEP.Damage = 22
+SWEP.Damage = 34
 SWEP.DeployTime = 0.6
 SWEP.NearWallDistance = 20
 
@@ -176,6 +176,13 @@ SWEP.ReloadHalt = 2.4
 SWEP.ReloadHalt_Empty = 2.4
 
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 25 * 39.37
+self.DamageFallOff = .55
+end
 
 function SWEP:getTelescopeAngles()
 	local ang = self.Owner:EyeAngles() + self.Owner:GetViewPunchAngles()
