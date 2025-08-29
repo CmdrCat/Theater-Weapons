@@ -165,7 +165,7 @@ SWEP.HolsterTime = 1
 
 SWEP.ADSFireAnim = true
 SWEP.BipodInstalled = true
-SWEP.Chamberable = false
+SWEP.Chamberable = true --The M1919A6 Browning is a closed-bolt gun
 
 SWEP.RecoilToSpread = -.25
 
