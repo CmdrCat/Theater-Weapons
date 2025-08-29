@@ -207,10 +207,10 @@ self.EffectiveRange = 90 * 39.37
 self.DamageFallOff = .1
 if (self.ActiveAttachments.bg_asval) then
 self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff + 0.25))
+self.DamageFallOff = ((self.DamageFallOff + .25))
 end
 if (self.ActiveAttachments.bg_sr3m) then
 self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff + 0.25))
+self.DamageFallOff = ((self.DamageFallOff + .25))
 end
 end
