@@ -189,21 +189,6 @@ function SWEP:IndividualThink()
 	
 	self.EffectiveRange = 50 * 39.37
 	self.DamageFallOff = .3
-	
-				if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 55 * 39.37))
-end
-	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .168))
-end
-	
-	if self.ActiveAttachments.doi_atow_unisuppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 25 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + .2))
-	else
-	self.EffectiveRange = 300 * 39.37
-	self.DamageFallOff = .56
-end
 end
 
 function SWEP:fireAnimFunc()
