@@ -3,7 +3,7 @@ att.name = "doi_atow_m2carbineconv"
 att.displayName = "Select-fire receiver"
 att.displayNameShort = "Auto"
 
-att.statModifiers = {FireDelayMult = -(650/750 - 60/700) / (60/700),
+att.statModifiers = {FireDelayMult = -1 / 15,
 MaxSpreadIncMult = 0.1,
 HipSpreadMult = 0.3}
 

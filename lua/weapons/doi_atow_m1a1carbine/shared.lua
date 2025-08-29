@@ -138,14 +138,12 @@ if CustomizableWeaponry_atowins2_optics then
 	[2] = {header = "Conversion", offset = {-50, -425}, atts = {"doi_atow_m2carbineconv"}, exclusions = {["am_atow_riot"] = true}},
 	[3] = {header = "Magazine", offset = {475, 300}, atts = {"doi_atow_m1carbine30rnd"}, exclusions = {["am_atow_riot"] = true}},
 	[1] = {header = "Accessory", offset = {-400, -200}, atts = {"doi_atow_sling"}},
-	["+walk"] = {header = "quit peeping", offset = {0, 2000}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-250, 150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	else
 	SWEP.Attachments = {[4] = {header = "Sight", offset = {1100, 125}, atts = {"doi_atow_altsight"}},
 	[2] = {header = "Conversion", offset = {250, -425}, atts = {"doi_atow_m2carbineconv"}, exclusions = {["am_atow_riot"] = true}},
 	[3] = {header = "Magazine", offset = {475, 300}, atts = {"doi_atow_m1carbine30rnd"}, exclusions = {["am_atow_riot"] = true}},
 	[1] = {header = "Accessory", offset = {-400, -200}, atts = {"doi_atow_sling"}},
-	["+walk"] = {header = "quit peeping", offset = {0, 2000}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-275, 150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	end
 
@@ -216,7 +214,7 @@ SWEP.MaxSpreadInc = 0.044
 SWEP.SpreadPerShot = 0.014
 SWEP.SpreadCooldown = 0.17
 SWEP.Shots = 1
-SWEP.Damage = 38
+SWEP.Damage = 40
 SWEP.DeployTime = .525
 SWEP.HolsterTime = .5
 
