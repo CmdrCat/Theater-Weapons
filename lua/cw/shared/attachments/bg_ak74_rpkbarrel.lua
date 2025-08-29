@@ -7,7 +7,7 @@ att.categoryFactors = {cqc = -1, lmg = 3}
 att.SpeedDec = 3
 
 att.statModifiers = {DamageMult = 44 / 42,
-FireDelayMult = -600 / 650}
+FireDelayMult = -1 / 13}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ak74_rpkbarrel")
