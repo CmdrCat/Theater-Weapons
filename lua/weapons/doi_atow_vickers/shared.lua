@@ -174,7 +174,7 @@ SWEP.HolsterTime = .8
 
 SWEP.ADSFireAnim = true
 SWEP.BipodInstalled = true
-SWEP.Chamberable = false
+SWEP.Chamberable = true --The Vickers Gun is a closed-bolt gun
 
 SWEP.RecoilToSpread = -.2
 
