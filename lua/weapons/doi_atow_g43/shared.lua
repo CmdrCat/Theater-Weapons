@@ -26,8 +26,8 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = 0
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0
 	
-	SWEP.EffectiveRange_Orig = 400 * 39.37
-	SWEP.DamageFallOff_Orig = .47
+	SWEP.EffectiveRange_Orig = 60 * 39.37
+	SWEP.DamageFallOff_Orig = .25
 	
 	SWEP.Shell = "khr79257"
 	SWEP.ShellScale = .5
