@@ -24,8 +24,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = false
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 75 * 39.37
-	SWEP.DamageFallOff_Orig = .4
+	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr12gbuck"
 	SWEP.ShellScale = .55
@@ -175,7 +175,7 @@ SWEP.ClumpSpread = 0.018
 SWEP.SpreadPerShot = 0.02
 SWEP.SpreadCooldown = 0.85
 SWEP.Shots = 9
-SWEP.Damage = 14
+SWEP.Damage = 25
 SWEP.DeployTime = .475
 SWEP.HolsterTime = .6
 
@@ -195,8 +195,8 @@ SWEP.ReloadFinishWait = 1
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
-    self.EffectiveRange = 75 * 39.37
-	self.DamageFallOff = .4
+    self.EffectiveRange = 15 * 39.37
+	self.DamageFallOff = .6
 	
 	self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast or self.ShellDelaySlow
 	self.GlobalDelayOnShoot = (self.ActiveAttachments.doi_atow_greasedbolt) and self.GlobalDelayOnShootFast or self.GlobalDelayOnShootSlow
