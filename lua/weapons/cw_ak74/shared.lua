@@ -192,13 +192,12 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
 self.DamageFallOff = .4
-if (self.ActiveAttachments.am_slugroundsm37) then
-self.EffectiveRange = ((self.EffectiveRange + 25 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff - .085))
+if (self.ActiveAttachments.bg_ak74_rpkbarrel) then
+self.EffectiveRange = ((self.EffectiveRange + 10 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff - .3))
 end
-if (self.ActiveAttachments.am_flechettem37) then
-self.EffectiveRange = ((self.EffectiveRange + 18 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff - .1))
-self.ClumpSpread = 0.035
+if (self.ActiveAttachments.bg_ak74_ubarrel) then
+self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + .1))
 end
 end
