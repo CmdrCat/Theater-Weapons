@@ -7,10 +7,7 @@ att.categoryFactors = {cqc = 3}
 att.SpeedDec = -3
 
 att.statModifiers = {RecoilMult = 0.05,
-AimSpreadMult = 1,
-OverallMouseSensMult = 0.1,
 DrawSpeedMult = 0.15,
-DamageMult = -0.1,
 FireDelayMult = -0.0714285}
 
 if CLIENT then
