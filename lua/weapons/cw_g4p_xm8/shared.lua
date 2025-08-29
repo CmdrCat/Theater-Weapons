@@ -8,7 +8,7 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "HK XM8"
+	SWEP.PrintName = "XM8"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	
@@ -226,7 +226,7 @@ SWEP.MaxSpreadInc = 0.07
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
-SWEP.Damage = 30
+SWEP.Damage = 36
 SWEP.DeployTime = 1
 
 SWEP.ReloadSpeed = 1
@@ -236,5 +236,11 @@ SWEP.ReloadHalt = 2.5
 SWEP.ReloadHalt_Empty = 3.8
 
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 50 * 39.37
+end
 
 end

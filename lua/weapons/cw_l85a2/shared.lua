@@ -175,5 +175,4 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
-self.DamageFallOff = .3
 end
