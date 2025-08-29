@@ -4,7 +4,7 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "H&K MP5A5"
+	SWEP.PrintName = "MP5A5"
 	SWEP.UseHands = true
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
