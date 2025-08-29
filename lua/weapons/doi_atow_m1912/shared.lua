@@ -10,7 +10,7 @@ include("sh_soundscript.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "M1912"
+	SWEP.PrintName = "M1912 Trench Gun"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.UseHands = true
 	
@@ -21,7 +21,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 70 * 39.37
+	SWEP.EffectiveRange_Orig = 7.5 * 39.37
 	SWEP.DamageFallOff_Orig = .5
 	
 	SWEP.Shell = "khr12gbuck"
@@ -157,7 +157,7 @@ SWEP.ClumpSpread = 0.02
 SWEP.SpreadPerShot = 0.02
 SWEP.SpreadCooldown = 0.75
 SWEP.Shots = 9
-SWEP.Damage = 13
+SWEP.Damage = 23
 SWEP.DeployTime = .425
 SWEP.HolsterTime = .6
 
@@ -196,7 +196,7 @@ self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDe
 	--self.ReloadStartTime = 0.5
 	--end
 
-	self.EffectiveRange = 70 * 39.37
+	self.EffectiveRange = 7.5 * 39.37
 	self.DamageFallOff = .5
 	
 	if (self.ActiveAttachments.am_slugroundsm37) then
