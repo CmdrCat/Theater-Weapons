@@ -187,7 +187,7 @@ SWEP.Primary.DefaultClip	= 30
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 
-SWEP.FireDelay = 0.092307
+SWEP.FireDelay = 60 / 500
 SWEP.FireSound = "CW_FAL_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAL_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.05
@@ -199,7 +199,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 36
+SWEP.Damage = 57
 SWEP.DeployTime = 1
 
 SWEP.ReloadSpeed = 1
@@ -208,5 +208,12 @@ SWEP.ReloadTime_Empty = 3
 SWEP.ReloadHalt = 2.7
 SWEP.ReloadHalt_Empty = 3.4
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 60 * 39.37
+self.DamageFallOff = .25
+end
 
 end
