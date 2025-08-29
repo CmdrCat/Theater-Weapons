@@ -6,7 +6,7 @@ CustomizableWeaponry:registerAmmo("4.6x30MM", "4.6x30MM", 4.6, 30)
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "HK MP7A1"
+	SWEP.PrintName = "MP7A1"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	
@@ -151,7 +151,7 @@ SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.005
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 21
+SWEP.Damage = 32
 SWEP.DeployTime = 0.5
 SWEP.NearWallDistance = 25
 
@@ -162,3 +162,10 @@ SWEP.ReloadTime = 2.2
 SWEP.ReloadTime_Empty = 3.5
 SWEP.ReloadHalt = 2.9
 SWEP.ReloadHalt_Empty = 4.5
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 20 * 39.37
+self.DamageFallOff = .5
+end
