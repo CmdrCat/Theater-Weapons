@@ -21,8 +21,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 200 * 39.37
-	SWEP.DamageFallOff_Orig = .55
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr9x19"
 	SWEP.ShellScale = .6
@@ -247,7 +247,7 @@ SWEP.MaxSpreadInc = 0.043
 SWEP.SpreadPerShot = 0.013
 SWEP.SpreadCooldown = 0.2
 SWEP.Shots = 1
-SWEP.Damage = 21
+SWEP.Damage = 41
 SWEP.DeployTime = .462
 SWEP.HolsterTime = .6
 
@@ -270,8 +270,8 @@ if self.FireMode == "semi" then
 	self.Owner.ViewAff = 0
 	end
 	
-	self.EffectiveRange = 200 * 39.37
-	self.DamageFallOff = .55
+	self.EffectiveRange = 30 * 39.37
+	self.DamageFallOff = .6
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 25 * 39.37))
