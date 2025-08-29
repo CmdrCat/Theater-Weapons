@@ -10,7 +10,7 @@ include("sh_soundscript.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "Owen gun"
+	SWEP.PrintName = "Owen Gun"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.UseHands = true
 	
@@ -24,8 +24,8 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = 0
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0
 	
-	SWEP.EffectiveRange_Orig = 170 * 39.37
-	SWEP.DamageFallOff_Orig = .42
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr9x19"
 	SWEP.ShellScale = .725
@@ -147,7 +147,7 @@ else
 SWEP.Primary.Ammo			= "9x19MM"
 end
 
-SWEP.FireDelay = 60/790
+SWEP.FireDelay = 60/700
 SWEP.FireSound = "DOIOWEN_FIRE"
 SWEP.Recoil = 1
 
@@ -159,7 +159,7 @@ SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.005
 SWEP.SpreadCooldown = 0.17
 SWEP.Shots = 1
-SWEP.Damage = 19
+SWEP.Damage = 43
 SWEP.DeployTime = .4
 SWEP.HolsterTime = .5
 SWEP.ADSFireAnim = true
@@ -176,8 +176,8 @@ function SWEP:IndividualThink()
 	self.Owner.ViewAff = 0
 	end
 	
-	self.EffectiveRange = 170 * 39.37
-	self.DamageFallOff = .42
+	self.EffectiveRange = 30 * 39.37
+	self.DamageFallOff = .6
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 45 * 39.37))
