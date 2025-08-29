@@ -5,6 +5,7 @@ include("sh_sounds.lua")
 if CLIENT then
 	SWEP.DrawCrosshair = false
 	SWEP.PrintName = "IMI Desert Eagle"
+	SWEP.UseHands = true
 	SWEP.CSMuzzleFlashes = true
 	
 	SWEP.IconLetter = "f"
@@ -24,32 +25,23 @@ if CLIENT then
 	SWEP.EoTechPos = Vector(-2.25, -6.198, -0.32)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 
-	SWEP.IronsightPos = Vector(-2.254, 5.913, 0.31)
-	SWEP.IronsightAng = Vector(0.1, 0, 0)
+	SWEP.IronsightPos = Vector(-2.605, 2, 0.639)
+	SWEP.IronsightAng = Vector(0.765, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.247, -6.5, -0.602)
 	SWEP.ACOGAng = Vector(0, 0, 0)
 	
-	SWEP.SprintPos = Vector(1.634, -8.28, -8.311)
-	SWEP.SprintAng = Vector(70, 0, 0)
+	SWEP.SprintPos = Vector(0, 0, -2.639)
+	SWEP.SprintAng = Vector(-11.612, 19.459, -38.855)
+
+	SWEP.CustomizePos = Vector(1, -3, -0.611)
+	SWEP.CustomizeAng = Vector(1.194, 21.681, -8.62)
 	
 	SWEP.AlternativePos = Vector(-0.88, 1.325, -0.561)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.241, -4.728, -1.568), [2] = Vector(0, 0, 0)}}
 	
-	SWEP.MoveType = 1
-	SWEP.ViewModelMovementScale = 0.8
-	SWEP.FullAimViewmodelRecoil = false
-	SWEP.BoltBone = "slider"
-	SWEP.BoltShootOffset = Vector(-2, 0, 0)
-	SWEP.HoldBoltWhileEmpty = true
-	SWEP.DontHoldWhenReloading = true
-	SWEP.DisableSprintViewSimulation = true
 	
-	SWEP.LuaVMRecoilAxisMod = {vert = 1, hor = 1.5, roll = 3, forward = 1, pitch = 4}
-	SWEP.CustomizationMenuScale = 0.01
-	SWEP.BoltBonePositionRecoverySpeed = 25 -- how fast does the bolt bone move back into it's initial position after the weapon has fired
 	
 	SWEP.AttachmentModelsVM = {
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(3.325, -1.075, 0.209), angle = Angle(90, 0, -90), size = Vector(0.4, 0.4, 0.4)},
@@ -63,29 +55,45 @@ SWEP.ShootWhileProne = true
 
 SWEP.MuzzleVelocity = 470 -- in meter/s
 
-SWEP.BarrelBGs = {main = 1, regular = 0, compensator = 1, extended = 2}
-SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1", "md_eotech", "md_acog"}},
-[2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker", "bg_deagle_compensator", "bg_deagle_extendedbarrel"}},
+[2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker"}},
 ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}
 
-SWEP.Animations = {fire = {"shoot1", "shoot2"},
-	reload = "reload",
-	reload_empty = "reload_2",
-	idle = "idle",
-	draw = "draw"}
-	
-SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_LIGHT"}},
+SWEP.Animations = {
+    fire         = "fire",
+	fire_last         = "fire_empty",
+	fire_aim         = "fire_iron",
+	fire_last_aim         = "fire_empty",
+    reload       = "reload",
+    reload_empty = "reload_empty",
+    idle         = "idle",
+    draw         = "draw"
+}
 
-	reload = {[1] = {time = 0.42, sound = "CW_DEAGLE_MAGOUT"},
-	[2] = {time = 1.5, sound = "CW_DEAGLE_MAGIN"}},
-	
-	reload_2 = {[1] = {time = 0.42, sound = "CW_DEAGLE_MAGOUT"},
-	[2] = {time = 1.5, sound = "CW_DEAGLE_MAGIN"},
-	[3] = {time = 2.36, sound = "CW_DEAGLE_SLIDEBACK"},
-	[4] = {time = 2.47, sound = "CW_DEAGLE_SLIDEFORWARD"}}}
+SWEP.Sounds = {
+    draw = {
+        {time = 0,    sound = "CW_FOLEY_LIGHT"}
+    },
+
+    reload = {
+        {time = 0.57, sound = "CW_TOO_DEAGLE_MAGREL"},
+        {time = 0.63,  sound = "CW_TOO_DEAGLE_MAGOUT"},
+		{time = 0.95,  sound = "CW_TOO_DEAGLE_MAGHIT"},
+		{time = 1.12,  sound = "CW_TOO_DEAGLE_MAGIN"},
+    },
+
+    reload_empty = {
+        {time = 0.30, sound = "CW_TOO_DEAGLE_MAGOUT_EMPTY"},
+		{time = 0.95, sound = "CW_TOO_DEAGLE_PIVOT"},
+		{time = 1.45, sound = "CW_TOO_DEAGLE_MAGHIT_EMPTY"},
+		{time = 1.58, sound = "CW_TOO_DEAGLE_MAGIN_EMPTY"},
+		{time = 2.23, sound = "CW_TOO_DEAGLE_SLIDEBACK"},
+		{time = 2.32, sound = "CW_TOO_DEAGLE_SLIDEREL"},
+    }
+}
+
 
 SWEP.SpeedDec = 10
 
@@ -95,18 +103,19 @@ SWEP.NormalHoldType = "revolver"
 SWEP.RunHoldType = "normal"
 SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0"
+SWEP.Category = "CW 2.0 - Theater Customs"
+SWEP.SubCategory = "Pistols"
 
-SWEP.Author			= "Spy"
+SWEP.Author			= "reshed"
 SWEP.Contact		= ""
 SWEP.Purpose		= ""
 SWEP.Instructions	= ""
 
 SWEP.DrawSpeed = 1.5
 
-SWEP.ViewModelFOV	= 70
+SWEP.ViewModelFOV	= 90
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel		= "models/cw2/pistols/deagle.mdl"
+SWEP.ViewModel		= "models/weapons/rfas/pi/cw2_rfas_deagle44.mdl"
 SWEP.WorldModel		= "models/weapons/w_pist_deagle.mdl"
 
 SWEP.Spawnable			= true
@@ -117,9 +126,9 @@ SWEP.Primary.DefaultClip	= 7
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".50 AE"
 
-SWEP.FireDelay = 0.17
-SWEP.FireSound = "CW_DEAGLE_FIRE"
-SWEP.FireSoundSuppressed = "CW_DEAGLE_FIRE_SUPPRESSED"
+SWEP.FireDelay = 60 / 350
+SWEP.FireSound = "CW_TOO_DEAGLE_FIRE"
+SWEP.FireSoundSuppressed = "CW_TOO_DEAGLE_FIRE_SUPPRESSED"
 SWEP.Recoil = 2.8
 
 SWEP.HipSpread = 0.045
@@ -135,8 +144,34 @@ SWEP.DeployTime = 1
 SWEP.NearWallDistance = 15
 
 SWEP.ReloadSpeed = 1
-SWEP.ReloadTime = 1.98
-SWEP.ReloadHalt = 2.49
+SWEP.ReloadTime = 1.89
+SWEP.ReloadHalt = 1.89
 
-SWEP.ReloadTime_Empty = 1.98
-SWEP.ReloadHalt_Empty = 3.4
+SWEP.ReloadTime_Empty = 2.9
+SWEP.ReloadHalt_Empty = 2.9
+
+
+SWEP.ADSFireAnim = true
+
+function SWEP:fireAnimFunc()
+    clip = self:Clip1()         -- gets the current number of bullets left in the weapon's magazine
+    cycle = 0                   -- default animation cycle start point
+    rate = 1                    -- default animation playback rate
+    anim = "safe"               -- unused variable here (probably placeholder)
+    prefix = ""                 -- prefix for the animation name
+    suffix = ""                 -- suffix for the animation name
+
+    -- If the weapon is down to the last bullet, mark this shot as the "last" animation
+    if clip == 1 then
+        suffix = suffix .. "_last"
+    end
+
+    -- If the player is aiming down sights, adjust animation suffix and cycle
+    if self:isAiming() then
+        suffix = suffix .. "_aim"
+        cycle = self.ironFireAnimStartCycle
+    end
+    
+    -- Actually play the weapon animation
+    self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+end
