@@ -21,8 +21,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 450 * 39.37
-	SWEP.DamageFallOff_Orig = .55
+	SWEP.EffectiveRange_Orig = 60 * 39.37
+	SWEP.DamageFallOff_Orig = .05
 	
 	SWEP.Shell = "khr303"
 	SWEP.ShellScale = .6
@@ -148,7 +148,7 @@ else
 SWEP.Primary.Ammo			= ".303"
 end
 
-SWEP.FireDelay = 60/550
+SWEP.FireDelay = 60/520
 SWEP.FireSound = "DOIBREN_FIRE"
 SWEP.Recoil = .85
 SWEP.BipodRecoilModifier = 0.1 --0.1 -- = 0 --0
@@ -161,7 +161,7 @@ SWEP.MaxSpreadInc = 0.15
 SWEP.SpreadPerShot = 0.008
 SWEP.SpreadCooldown = 0.11
 SWEP.Shots = 1
-SWEP.Damage = 38
+SWEP.Damage = 49
 SWEP.DeployTime = .7
 SWEP.HolsterTime = .75
 
@@ -195,8 +195,8 @@ function SWEP:IndividualThink()
 		--self.QuickMeleeLogic = true
 	end
 	
-	self.EffectiveRange = 450 * 39.37
-	self.DamageFallOff = .55
+	self.EffectiveRange = 60 * 39.37
+	self.DamageFallOff = .05
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 50 * 39.37))
