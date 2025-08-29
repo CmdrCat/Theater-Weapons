@@ -7,7 +7,7 @@ SWEP.DamageFallOff_Orig = .25
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "TAC .338"
+	SWEP.PrintName = "TAC-338"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1.2
