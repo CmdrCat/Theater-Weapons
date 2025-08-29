@@ -190,14 +190,14 @@ SWEP.SnapToIdlePostReload = true
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 50 * 39.37
-self.DamageFallOff = .4
-if (self.ActiveAttachments.bg_ak74_rpkbarrel) then
-self.EffectiveRange = ((self.EffectiveRange + 10 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff - .3))
+self.EffectiveRange = 90 * 39.37
+self.DamageFallOff = .1
+if (self.ActiveAttachments.bg_asval) then
+self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + .25))
 end
-if (self.ActiveAttachments.bg_ak74_ubarrel) then
-self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff + .1))
+if (self.ActiveAttachments.bg_sr3m) then
+self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + .25))
 end
 end
