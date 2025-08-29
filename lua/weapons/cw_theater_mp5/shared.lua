@@ -153,6 +153,8 @@ SWEP.Primary.DefaultClip	= 30
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 
+SWEP.Chamberable = false -- The user uses the charging handle while changing mags
+
 SWEP.FireDelay = 60 / 800
 SWEP.FireSound = "CW_TOO_MP5_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_MP5_FIRE_SUPPRESSED"
