@@ -213,4 +213,8 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .5
+if (self.ActiveAttachments.bg_mp5_sdbarrel) then
+self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + 0.3))
+end
 end
