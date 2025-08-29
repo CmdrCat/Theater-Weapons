@@ -191,7 +191,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 29
+SWEP.Damage = 48
 SWEP.DeployTime = 1
 
 SWEP.ReloadSpeed = 1
@@ -200,5 +200,12 @@ SWEP.ReloadTime_Empty = 3.1
 SWEP.ReloadHalt = 2.3
 SWEP.ReloadHalt_Empty = 3.3
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 40 * 39.37
+self.DamageFallOff = .4
+end
 
 end
