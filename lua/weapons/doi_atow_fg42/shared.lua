@@ -174,7 +174,7 @@ SWEP.MaxSpreadInc = 0.055
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.22
 SWEP.Shots = 1
-SWEP.Damage = 40
+SWEP.Damage = 33
 SWEP.DeployTime = .45
 SWEP.HolsterTime = .65
 
@@ -206,7 +206,7 @@ function SWEP:IndividualThink()
 	self.Owner.ViewAff = 0
 	end
 	
-	self.EffectiveRange = 400 * 39.37
+	self.EffectiveRange = 55 * 39.37
 	self.DamageFallOff = .5
 	
 	if self.ActiveAttachments.am_atow_light then
