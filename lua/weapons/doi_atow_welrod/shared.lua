@@ -12,7 +12,7 @@ include("sh_soundscript.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "Welrod MkIIA"
+	SWEP.PrintName = "Welrod Mk IIA"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.UseHands = true
 	
