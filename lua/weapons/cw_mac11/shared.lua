@@ -168,3 +168,10 @@ SWEP.ReloadHalt = 2
 SWEP.ReloadHalt_Empty = 3
 
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 10 * 39.37
+self.DamageFallOff = .8
+end
