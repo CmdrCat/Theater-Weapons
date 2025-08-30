@@ -20,16 +20,16 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = 1}
 		
-	SWEP.MicroT1Pos = Vector(-2.28, 0, -0.292)
+	SWEP.MicroT1Pos = Vector(-2.632, 0, -0.44)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
 
-	SWEP.EoTechPos = Vector(-2.25, -6.198, -0.32)
+	SWEP.EoTechPos = Vector(-2.631, 0, -0.48)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 
 	SWEP.IronsightPos = Vector(-2.605, 10, 0.639)
 	SWEP.IronsightAng = Vector(0.765, 0, 0)
 	
-	SWEP.ACOGPos = Vector(-2.247, -6.5, -0.602)
+	SWEP.ACOGPos = Vector(-2.631, 2, -0.64)
 	SWEP.ACOGAng = Vector(0, 0, 0)
 	
 	SWEP.SprintPos = Vector(0, 0, -2.639)
@@ -45,10 +45,10 @@ if CLIENT then
 	
 	
 	SWEP.AttachmentModelsVM = {
-		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(3.325, -1.075, 0.209), angle = Angle(90, 0, -90), size = Vector(0.4, 0.4, 0.4)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", pos = Vector(-6.054, 8.47, -0.035), angle = Angle(0, 1.5, -90), size = Vector(0.85, 0.85, 0.85)},
-		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-1.831, 3.892, 0.504), angle = Angle(-90, 0, -90), size = Vector(0.85, 0.85, 0.85)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", pos = Vector(-4.784, -0.408, -1.581), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)}
+	["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.221, 1.919), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", rel = "", pos = Vector(0.244, 8.673, -9.818), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", rel = "", pos = Vector(-0.415, 3.713, -3.882), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", rel = "", pos = Vector(0, 1.342, -8), angle = Angle(0, 0, -90), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
 end
 
@@ -57,6 +57,10 @@ SWEP.ShootWhileProne = true
 SWEP.MuzzleVelocity = 470 -- in meter/s
 
 SWEP.CanRestOnObjects = false
+SWEP.SightWithRail = false
+SWEP.SightBGs = {main = 1, on = 0, none = 1}
+
+
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1", "md_eotech", "md_acog"}},
 [2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker"}},
