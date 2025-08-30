@@ -24,7 +24,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = false
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.EffectiveRange_Orig = 20 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr12gbuck"
@@ -195,7 +195,7 @@ SWEP.ReloadFinishWait = 1
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
-    self.EffectiveRange = 15 * 39.37
+    self.EffectiveRange = 20 * 39.37
 	self.DamageFallOff = .6
 	
 	self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast or self.ShellDelaySlow
