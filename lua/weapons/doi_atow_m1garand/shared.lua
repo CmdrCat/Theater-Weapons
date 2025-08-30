@@ -277,7 +277,7 @@ SWEP.MaxSpreadInc = 0.2
 SWEP.SpreadPerShot = 0.02
 SWEP.SpreadCooldown = 0.22
 SWEP.Shots = 1
-SWEP.Damage = 57
+SWEP.Damage = 83
 SWEP.DeployTime = .5
 SWEP.HolsterTime = .6
 
@@ -313,7 +313,7 @@ end
 	end
 
 	self.EffectiveRange = 60 * 39.37
-	self.DamageFallOff = .25
+	self.DamageFallOff = .35
 	
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 50 * 39.37))

@@ -144,9 +144,9 @@ else
 SWEP.Primary.Ammo			= "9x25MM"
 end
 
-SWEP.FireDelay = 60/700
-SWEP.FireDelayAuto = 60/700
-SWEP.FireDelaySemi = 60/780
+SWEP.FireDelay = 60/600
+SWEP.FireDelayAuto = 60/600
+SWEP.FireDelaySemi = 60/600
 SWEP.FireSound = "DOIM3_FIRE"
 SWEP.FireSoundSuppressed = "DOIM3_FIRE_SUPP"
 SWEP.Recoil = .9

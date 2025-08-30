@@ -153,6 +153,8 @@ SWEP.Primary.DefaultClip	= 30
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 
+SWEP.Chamberable = false -- The user uses the charging handle while changing mags
+
 SWEP.FireDelay = 60 / 800
 SWEP.FireSound = "CW_TOO_MP5_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_MP5_FIRE_SUPPRESSED"
@@ -213,4 +215,8 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .5
+if (self.ActiveAttachments.too_sdbar_bar) then
+self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + 0.3))
+end
 end

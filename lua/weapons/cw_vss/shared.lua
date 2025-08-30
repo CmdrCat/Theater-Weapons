@@ -177,7 +177,7 @@ SWEP.Primary.DefaultClip	= 10
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x39MM"
 
-SWEP.FireDelay = 1 / 900
+SWEP.FireDelay = 60 / 900
 SWEP.FireSound = "CW_VSS_FIRE"
 SWEP.FireSoundSuppressed = "CW_VSS_FIRE"
 SWEP.Recoil = 1.1
@@ -205,4 +205,12 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 90 * 39.37
 self.DamageFallOff = .1
+if (self.ActiveAttachments.bg_asval) then
+self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + .25))
+end
+if (self.ActiveAttachments.bg_sr3m) then
+self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + .25))
+end
 end

@@ -4,9 +4,8 @@ att.displayName = "SD variant"
 att.displayNameShort = "SD"
 att.isBG = true
 
-att.statModifiers = {RecoilMult = -0.25,
-AimSpreadMult = 0.3,
-OverallMouseSensMult = 0.15,
+att.statModifiers = {DamageMult = 8 / 37
+RecoilMult = -0.25,
 FireDelayMult = 0.14285714285714}
 
 if CLIENT then
