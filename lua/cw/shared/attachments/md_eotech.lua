@@ -14,7 +14,7 @@ if CLIENT then
 	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE}}
 	
 	att.reticle = "cw2/reticles/eotech_reddot"
-	att._reticleSize = 3
+	att._reticleSize = 2
 
 	function att:drawReticle()
 		if not self:isAiming() or not self:isReticleActive() then

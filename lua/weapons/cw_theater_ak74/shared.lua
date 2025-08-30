@@ -45,8 +45,8 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = -3}
 	
-	SWEP.EffectiveRange_Orig = 50 * 39.37
-	SWEP.DamageFallOff_Orig = .4
+	SWEP.EffectiveRange_Orig = 40 * 39.37
+	SWEP.DamageFallOff_Orig = .5
 
 	SWEP.AttachmentModelsVM = {
 		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", rel = "", pos = Vector(0.319, 7.513, -10.016), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -135,19 +135,19 @@ SWEP.Primary.DefaultClip	= 30
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.45x39MM"
 
-SWEP.FireDelay = 60 / 680
+SWEP.FireDelay = 60 / 650
 SWEP.FireSound = "CW_TOO_AK74_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_AK74_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.9
+SWEP.Recoil = 0.75
 
-SWEP.HipSpread = 0.043
+SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.005
 SWEP.VelocitySensitivity = 1.6
-SWEP.MaxSpreadInc = 0.05
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.13
+SWEP.MaxSpreadInc = 1
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
-SWEP.Damage = 42
+SWEP.Damage = 44
 SWEP.DeployTime = 0.6
 
 SWEP.ReloadSpeed = 1
@@ -155,7 +155,7 @@ SWEP.ReloadTime = 2.35
 SWEP.ReloadTime_Empty = 1.5
 SWEP.ReloadHalt = 2.35
 SWEP.ReloadHalt_Empty = 2.6
-SWEP.SnapToIdlePostReload = true
+SWEP.SnapToIdlePostReload = false
 
 	SWEP.SprintPos = Vector(0, 0, -2.639)
 	SWEP.SprintAng = Vector(-11.612, 19.459, -38.855)
@@ -192,5 +192,5 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
-self.DamageFallOff = .4
+self.DamageFallOff = .5
 end

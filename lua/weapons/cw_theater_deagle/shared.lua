@@ -7,6 +7,7 @@ if CLIENT then
 	SWEP.PrintName = "Desert Eagle"
 	SWEP.UseHands = true
 	SWEP.CSMuzzleFlashes = true
+	SWEP.Spawnable = false
 	
 	SWEP.IconLetter = "f"
 	killicon.AddFont("cw_deagle", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
@@ -25,7 +26,7 @@ if CLIENT then
 	SWEP.EoTechPos = Vector(-2.25, -6.198, -0.32)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 
-	SWEP.IronsightPos = Vector(-2.605, 2, 0.639)
+	SWEP.IronsightPos = Vector(-2.605, 10, 0.639)
 	SWEP.IronsightAng = Vector(0.765, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.247, -6.5, -0.602)
