@@ -11,6 +11,9 @@ if CLIENT then
 	SWEP.IconLetter = "d"
 	killicon.AddFont("cw_mp9_official", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+	SWEP.EffectiveRange_Orig = 25 * 39.37
+	SWEP.DamageFallOff_Orig = .55
+
 	SWEP.MuzzleEffect = "muzzleflash_smg"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true

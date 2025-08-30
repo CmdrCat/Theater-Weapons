@@ -17,6 +17,9 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cwr_mwii_chimera")
 	killicon.Add( "cwr_mwii_chimera", "vgui/entities/cwr_mwii_chimera", Color(255, 0, 0, 0))
 	
+	SWEP.EffectiveRange_Orig = 35 * 39.37
+	SWEP.DamageFallOff_Orig = .6
+
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true

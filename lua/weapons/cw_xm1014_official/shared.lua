@@ -11,6 +11,9 @@ if CLIENT then
 	SWEP.IconLetter = "k"
 	killicon.AddFont("cw_xm1014_official", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+	SWEP.EffectiveRange_Orig = 10 * 39.37
+	SWEP.DamageFallOff_Orig = .5
+	
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.9
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9

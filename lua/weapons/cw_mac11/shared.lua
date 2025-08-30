@@ -12,6 +12,9 @@ if CLIENT then
 	
 	SWEP.IconLetter = "l"
 	killicon.AddFont("cw_ump45", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
+
+	SWEP.EffectiveRange_Orig = 10 * 39.37
+	SWEP.DamageFallOff_Orig = .8
 	
 	SWEP.MuzzleEffect = "muzzleflash_smg"
 	SWEP.PosBasedMuz = false
@@ -165,10 +168,3 @@ SWEP.ReloadHalt = 2
 SWEP.ReloadHalt_Empty = 3
 
 SWEP.SnapToIdlePostReload = true
-
-function SWEP:IndividualThink()
-self.Owner.ViewAff = 0
-clip = self:Clip1()
-self.EffectiveRange = 10 * 39.37
-self.DamageFallOff = .8
-end

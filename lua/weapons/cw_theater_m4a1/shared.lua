@@ -11,6 +11,9 @@ if CLIENT then
 	
 	SWEP.IconLetter = "w"
 	killicon.AddFont("cw_ar15", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
+
+	SWEP.EffectiveRange_Orig = 50 * 39.37
+	SWEP.DamageFallOff_Orig = .3
 	
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = true
@@ -167,7 +170,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.066666666666667
 SWEP.FireSound = "CW_TOO_AR15_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_AR15_FIRE_SUPPRESSED"
-SWEP.Recoil = 1.05
+SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.045
 SWEP.AimSpread = 0.003

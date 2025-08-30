@@ -13,6 +13,9 @@ if CLIENT then
 	SWEP.IconLetter = "x"
 	killicon.AddFont("cw_mp7_official", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+	SWEP.EffectiveRange_Orig = 20 * 39.37
+	SWEP.DamageFallOff_Orig = .5
+
 	SWEP.DrawTraditionalWorldModel = false
 	SWEP.WM = "models/cw2/smgs/mp7_world.mdl"
 	SWEP.WMPos = Vector(0, -2, -2)

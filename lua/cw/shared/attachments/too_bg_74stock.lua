@@ -1,5 +1,5 @@
 local att = {}
-att.name = "bg_ak74foldablestock"
+att.name = "too_bg_74stock"
 att.displayName = "Foldable stock"
 att.displayNameShort = "F. stock"
 att.isBG = true

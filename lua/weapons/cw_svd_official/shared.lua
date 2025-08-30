@@ -38,6 +38,9 @@ if CLIENT then
 	SWEP.IconLetter = "b"
 	killicon.AddFont("cw_svd_official", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+	SWEP.EffectiveRange_Orig = 90 * 39.37
+	SWEP.DamageFallOff_Orig = .45
+
 	SWEP.MuzzleEffect = "muzzleflash_m14"
 	SWEP.PosBasedMuz = false
 	SWEP.ShellScale = 0.7

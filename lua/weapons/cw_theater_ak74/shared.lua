@@ -11,25 +11,28 @@ if CLIENT then
 	SWEP.IronsightPos = Vector(-3.6, -2.922, 1.12)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
-	SWEP.AimpointPos = Vector(-2.371, -2.59, -0.925)
+	SWEP.AimpointPos = Vector(-3.481, 0, -0.16)
 	SWEP.AimpointAng = Vector(0, 0, 0)
 	
-	SWEP.EoTechPos = Vector(-2.4, -3.493, -0.98)
+	SWEP.EoTechPos = Vector(-3.56, 0, -0.24)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 	
 	SWEP.KobraPos = Vector(-3.641, -4.074, 0.159)
 	SWEP.KobraAng = Vector(0, 0, 0)
 
 	
-	SWEP.PSOPos = Vector(-2.5, 0.65, -0.101)
+	SWEP.PSOPos = Vector(-3.401, 2, 0.079)
 	SWEP.PSOAng = Vector(0, 0, 0)
 	
-	SWEP.ACOGPos = Vector(-2.412, -4.18, -0.977)
+	SWEP.ACOGPos = Vector(-3.471, 2, -0.48)
 	SWEP.ACOGAng = Vector(0, 0, 0)
 	
 	SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
+	SWEP.ShortDotPos = Vector(-3.441, 3, 0)
+	SWEP.ShortDotAng = Vector(0, 0, 0)
+
 
 	SWEP.ViewModelMovementScale = 1.15
 	
@@ -41,26 +44,21 @@ if CLIENT then
 	SWEP.ShellScale = 0.7
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = -3}
-	SWEP.ForeGripOffsetCycle_Draw = 0
-	SWEP.ForeGripOffsetCycle_Reload = 0.65
-	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 	
-
+	SWEP.EffectiveRange_Orig = 50 * 39.37
+	SWEP.DamageFallOff_Orig = .4
 
 	SWEP.AttachmentModelsVM = {
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "ak74_body", pos = Vector(11.609, 0.275, -7.834), adjustment = {min = 9, max = 11.609, axis = "x", inverse = true, inverseDisplay = true}, angle = Angle(0, 180, 0), size = Vector(1, 1, 1)},
-		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "ak74_body", pos = Vector(6.6, -0.247, -2.79), adjustment = {min = 4, max = 6.6, axis = "x", inverse = true}, angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", rel = "", pos = Vector(0.319, 7.513, -10.016), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "weapon", rel = "", pos = Vector(-0.16, 2.474, -5.295), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak74_body", pos = Vector(4.151, -0.433, -2.721), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75)},
-		["md_pbs1"] = {model = "models/cw2/attachments/pbs1.mdl", bone = "ak74_body", pos = Vector(-19.57, 0, -0.816), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+		["md_pbs1"] = { type = "Model", model = "models/cw2/attachments/pbs1.mdl", bone = "weapon", rel = "", pos = Vector(0.079, -2.274, 24.422), angle = Angle(0, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_kobra"] = { type = "Model", model = "models/cw2/attachments/kobra.mdl", bone = "weapon", rel = "", pos = Vector(0.479, 1.35, 0.842), angle = Angle(180, 0, -90), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", bone = "ak74_body", pos = Vector(5.521, -0.174, -1.107), angle = Angle(0, 90, 0), size = Vector(0.8, 0.8, 0.8)},
-		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak74_body", pos = Vector(4.558, -0.302, -1.67), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
-		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "ak74_body", pos = Vector(4.315, -0.288, -1.663), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
-		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "ak74_body", pos = Vector(-1.152, -0.083, 3.95), angle = Angle(0, 180, 0), size = Vector(1, 1, 1)},
+		["md_pso1"] = { type = "Model", model = "models/cw2/attachments/pso.mdl", bone = "weapon", rel = "", pos = Vector(0, 0.462, -3.254), angle = Angle(180, 0, -90), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "weapon", rel = "", pos = Vector(-0.24, 2.647, -4.875), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", rel = "", pos = Vector(-0.278, 2.487, -4.829), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
 
-	SWEP.ShortDotPos = Vector(-2.428, -4.107, -0.721)
-	SWEP.ShortDotAng = Vector(0, 0, 0)
 
 end
 
@@ -68,16 +66,13 @@ SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.LuaViewmodelRecoil = true
 
---SWEP.Attachments = {[1] = {header = "Sight", offset = {300, -50},  atts = {"md_kobra", "md_eotech", "md_aimpoint"}},
---	[2] = {header = "Barrel", offset = {-175, -100}, atts = {"md_pbs1"}},
---	[3] = {header = "Handguard", offset = {-100, 200}, atts = {"md_foregrip"}}}
-SWEP.SightWithRail = true
-SWEP.RailBGs = { main = 1, on = 1, off = 0 }
-SWEP.StockBGs = {main = 1, regular = 0, heavy = 1, foldable = 2}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -500},  atts = {"md_kobra", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_pso1", "md_acog", "md_nightforce_nxs"}},
+SWEP.SightBGs = {main = 1, carryhandle = 0, none = 1}
+SWEP.StockBGs = {main = 2, foldable = 1, regular = 0}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -500},  atts = {"md_kobra", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_pso1", "md_acog"}},
 	[2] = {header = "Barrel", offset = {300, -500}, atts = {"md_pbs1"}},
-	[3] = {header = "Stock", offset = {700, 500}, atts = {"bg_ak74foldablestock", "bg_ak74heavystock"}},
+	[3] = {header = "Stock", offset = {700, 500}, atts = {"too_bg_74stock"}},
 	["+reload"] = {header = "Ammo", offset = {950, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 
 SWEP.Animations = {
@@ -98,7 +93,7 @@ SWEP.Sounds = {
     reload = {
 		 {time = 0.31, sound = "CW_TOO_AK74_MAGOUT"},
 		{time = 1.6, sound = "CW_TOO_AK74_MAGHIT"},
-		{time = 1.78, sound = "CW_TOO_AK74_MAGIN"},
+		{time = 1.81, sound = "CW_TOO_AK74_MAGIN"},
     },
 
     reload_empty = {
@@ -120,6 +115,7 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_base"
 SWEP.Category = "CW 2.0 - Theater Customs"
+SWEP.SubCategory = "Assault Rifles"
 
 SWEP.Author			= "reshed"
 SWEP.Contact		= ""

@@ -11,6 +11,9 @@ if CLIENT then
 	SWEP.IconLetter = "k"
 	killicon.AddFont("cw_shorty", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+	SWEP.EffectiveRange_Orig = 5 * 39.37
+	SWEP.DamageFallOff_Orig = .75
+
 	SWEP.MuzzleEffect = "muzzleflash_m3"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
