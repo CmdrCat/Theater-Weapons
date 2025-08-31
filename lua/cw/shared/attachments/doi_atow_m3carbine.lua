@@ -4,9 +4,6 @@ att.displayName = "Extended Barrel"
 att.displayNameShort = "Ext."
 att.isBG = true
 
-att.statModifiers = {RecoilMult = -0.15,
-AimSpreadMult = -0.2}
-
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/m3barrel")
 	att.description = {[1] = {t = "Increases effective range by 10M.", c = CustomizableWeaponry.textColors.POSITIVE}}

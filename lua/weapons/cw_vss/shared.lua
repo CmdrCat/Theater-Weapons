@@ -183,18 +183,18 @@ SWEP.Primary.Ammo			= "9x39MM"
 SWEP.FireDelay = 60 / 900
 SWEP.FireSound = "CW_VSS_FIRE"
 SWEP.FireSoundSuppressed = "CW_VSS_FIRE"
-SWEP.Recoil = 1.1
+SWEP.Recoil = 0.25
 
 SWEP.SuppressedOnEquip = true
 
-SWEP.HipSpread = 0.045
-SWEP.AimSpread = 0.004
+SWEP.HipSpread = 0.05
+SWEP.AimSpread = 0.005
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.045
-SWEP.SpreadPerShot = 0.006
-SWEP.SpreadCooldown = 0.13
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
-SWEP.Damage = 28
+SWEP.Damage = 29
 SWEP.DeployTime = 1.2
 
 SWEP.ReloadSpeed = 1.2

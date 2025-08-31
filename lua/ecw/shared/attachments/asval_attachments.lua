@@ -72,7 +72,7 @@ att.displayName = "AS VAL variant"
 att.displayNameShort = "AS VAL"
 att.isBG = true
 
-att.statModifiers = {DamageMult = 5 / 28}
+att.statModifiers = {DamageMult = 4 / 29}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/asval_variant")
@@ -94,7 +94,7 @@ att.isBG = true
 att.overrideSuppressorStatus = false -- it will override the weapon's default suppressor status to FALSE
 att.SpeedDec = -3
 
-att.statModifiers = {DamageMult = 5 / 28,
+att.statModifiers = {DamageMult = 4 / 29,
 RecoilMult = -0.1,}
 
 if CLIENT then

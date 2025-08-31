@@ -92,23 +92,6 @@ if CLIENT then
 	}
 
 	SWEP.ForeGripHoldPos = {
-		["Bip01 L Finger3"] = {pos = Vector(0, 0, 0), angle = Angle(-8.907, 29.332, 27.155) },
-		["Bip01 L Finger41"] = {pos = Vector(0, 0, 0), angle = Angle(0, 3.367, 0) },
-		["Bip01 L Clavicle"] = {pos = Vector(4.335, -6.652, -3.984), angle = Angle(-42.875, 42.837, 0) },
-		["Bip01 L Finger22"] = {pos = Vector(0, 0, 0), angle = Angle(0, -13.565, 0) },
-		["Bip01 L Finger31"] = {pos = Vector(0, 0, 0), angle = Angle(0, 9.633, 0) },
-		["Bip01 L Finger02"] = {pos = Vector(0, 0, 0), angle = Angle(0, 96.544, 0) },
-		["Bip01 L Finger11"] = {pos = Vector(0, 0, 0), angle = Angle(0, 25.826, 0) },
-		["Bip01 L Finger4"] = {pos = Vector(0, 0, 0), angle = Angle(-3.777, 13.736, 42.478) },
-		["Bip01 L Finger1"] = {pos = Vector(0, 0, 0), angle = Angle(-4.395, 78.736, 22.27) },
-		["Bip01 L Finger42"] = {pos = Vector(0, 0, 0), angle = Angle(0, 58.242, 0) },
-		["Bip01 L Hand"] = {pos = Vector(0, 0, 0), angle = Angle(5.883, 57.971, -2.382) },
-		["Bip01 L Finger32"] = {pos = Vector(0, 0, 0), angle = Angle(0, 18.07, 0) },
-		["Bip01 L Finger0"] = {pos = Vector(0, 0, 0), angle = Angle(33.303, 1.07, 0) },
-		["Bip01 L Finger12"] = {pos = Vector(0, 0, 0), angle = Angle(0, 28.163, 0) },
-		["Bip01 L Finger21"] = {pos = Vector(0, 0, 0), angle = Angle(0, 25.208, 0) },
-		["Bip01 L Finger01"] = {pos = Vector(0, 0, 0), angle = Angle(0, 19.94, 0) },
-		["Bip01 L Finger2"] = {pos = Vector(0, 0, 0), angle = Angle(-5.336, 58.977, 28.6) }
 	}
 	
 	SWEP.LaserPosAdjust = Vector(1, 0, 0)
@@ -124,30 +107,44 @@ SWEP.BipodBGs = {main = 4, on = 1, off = 0}
 SWEP.SightBGs = {main = 2, sg1 = 1, none = 0}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "bg_sg1scope", "md_nightforce_nxs"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Barrel", offset = {-300, -300},  atts = {"md_saker"}},
-	[3] = {header = "Handguard", offset = {-300, 150}, atts = {"md_foregrip", "md_m203", "bg_bipod"}},
+	[3] = {header = "Handguard", offset = {-300, 150}, atts = {"md_foregrip","bg_bipod"}},
 	[4] = {header = "Rail", offset = {800, -20}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true}},
 	["+reload"] = {header = "Ammo", offset = {800, 430}, atts = {"am_magnum", "am_matchgrade"}}}
 
-SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
-	reload = "reload_full",
-	reload_empty = "reload",
-	idle = "idle",
-	draw = "draw"}
-	
-SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+SWEP.Animations = { 
+    fire         = "fire",
+	fire_aim         = "fire_iron",
+	fire_last_aim         = "fire",
+    reload       = "reload",
+    reload_empty = "reload_empty",
+    idle         = "idle",
+    draw         = "draw"
+}
 
-	reload_full = {[1] = {time = 0.6, sound = "CW_G3A3_HANDLE"},
-	[2] = {time = 0.9, sound = "CW_G3A3_MAGOUT"},
-	[3] = {time = 2.3, sound = "CW_G3A3_MAGIN"}},
-	
-	reload = {[1] = {time = 0.6, sound = "CW_G3A3_BOLTBACK"},
-	[2] = {time = 1.55, sound = "CW_G3A3_HANDLE"},
-	[3] = {time = 1.7, sound = "CW_G3A3_MAGOUT"},
-	[4] = {time = 3.1, sound = "CW_G3A3_MAGIN"},
-	[5] = {time = 3.85, sound = "CW_G3A3_BOLTFORWARD"}}}
+SWEP.Sounds = {
+    draw = {
+        {time = 0, sound = "CW_FOLEY_MEDIUM"}
+    },
 
+    reload = {
+		 {time = 0.18, sound = "CW_TOO_L86_MAGSLAP"},
+		 {time = 0.51, sound = "CW_TOO_L86_MAGOUT"},
+		{time = 2.0, sound = "CW_TOO_L86_MAGHIT"},
+		{time = 2.1, sound = "CW_TOO_L86_MAGIN"},
+    },
+
+    reload_empty = {
+		 {time = 0.18, sound = "CW_TOO_L86_MAGSLAP"},
+		{time = 0.51, sound = "CW_TOO_L86_MAGOUT"},
+		{time = 2.0, sound = "CW_TOO_L86_MAGHIT"},
+		{time = 2.1, sound = "CW_TOO_L86_MAGIN"},
+		{time = 2.68, sound = "CW_TOO_L86_BOLTBACK"},
+		{time = 2.79, sound = "CW_TOO_L86_BOLTFWD"},
+
+    }
+}
 SWEP.SpeedDec = 40
 
 SWEP.Slot = 3
@@ -203,4 +200,30 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 65 * 39.37
 self.DamageFallOff = .2
+end
+
+
+SWEP.ADSFireAnim = true
+
+function SWEP:fireAnimFunc()
+    clip = self:Clip1()         -- gets the current number of bullets left in the weapon's magazine
+    cycle = 0                   -- default animation cycle start point
+    rate = 1                    -- default animation playback rate
+    anim = "safe"               -- unused variable here (probably placeholder)
+    prefix = ""                 -- prefix for the animation name
+    suffix = ""                 -- suffix for the animation name
+
+    -- If the weapon is down to the last bullet, mark this shot as the "last" animation
+    if clip == 1 then
+        suffix = suffix .. "_last"
+    end
+
+    -- If the player is aiming down sights, adjust animation suffix and cycle
+    if self:isAiming() then
+        suffix = suffix .. "_aim"
+        cycle = self.ironFireAnimStartCycle
+    end
+    
+    -- Actually play the weapon animation
+    self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
 end

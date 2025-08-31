@@ -4,7 +4,6 @@ att.displayName = "Select-fire receiver"
 att.displayNameShort = "Auto"
 
 att.statModifiers = {FireDelayMult = -1 / 15,
-MaxSpreadIncMult = 0.1,
 HipSpreadMult = 0.3}
 
 if CLIENT then

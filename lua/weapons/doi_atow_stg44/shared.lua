@@ -155,14 +155,14 @@ end
 SWEP.FireDelay = 60/560
 SWEP.FireSound = "DOISTG44_FIRE"
 SWEP.FireSoundSuppressed = "DOIM1A1CAR_FIRE_SUPPRESSED"
-SWEP.Recoil = .9
+SWEP.Recoil = .75
 
-SWEP.HipSpread = 0.05
-SWEP.AimSpread = 0.006
-SWEP.VelocitySensitivity = .55
-SWEP.MaxSpreadInc = 0.047
-SWEP.SpreadPerShot = 0.015
-SWEP.SpreadCooldown = 0.15
+SWEP.HipSpread = 0.15
+SWEP.AimSpread = 0.003
+SWEP.VelocitySensitivity = 0.55
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 50
 SWEP.DeployTime = .48

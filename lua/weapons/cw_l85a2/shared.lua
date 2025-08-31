@@ -148,16 +148,16 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.092
 SWEP.FireSound = "CW_L85A2_FIRE"
 SWEP.FireSoundSuppressed = "CW_L85A2_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.95
+SWEP.Recoil = 0.45
 
-SWEP.HipSpread = 0.045
-SWEP.AimSpread = 0.0025
+SWEP.HipSpread = 0.12
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.045
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.16
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
-SWEP.Damage = 42
+SWEP.Damage = 41
 SWEP.DeployTime = 0.8
 
 SWEP.ReloadSpeed = 1.35

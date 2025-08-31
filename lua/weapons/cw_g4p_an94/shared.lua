@@ -233,7 +233,7 @@ function SWEP:CycleFiremodes()
 	end
 	
 	if self.FireMode == "2burst" then
-		self.FireDelay = 0.033
+		self.FireDelay = 60 / 1800
 	else self.FireDelay = 0.1 end
 	
 end
