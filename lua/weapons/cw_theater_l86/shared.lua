@@ -110,18 +110,19 @@ SWEP.Sounds = {
 
     reload = {
 		 {time = 0.18, sound = "CW_TOO_L86_MAGSLAP"},
-		 {time = 0.41, sound = "CW_TOO_L86_MAGOUT"},
+		 {time = 0.51, sound = "CW_TOO_L86_MAGOUT"},
 		{time = 2.0, sound = "CW_TOO_L86_MAGHIT"},
 		{time = 2.1, sound = "CW_TOO_L86_MAGIN"},
     },
 
     reload_empty = {
 		 {time = 0.18, sound = "CW_TOO_L86_MAGSLAP"},
-		 {time = 0.41, sound = "CW_TOO_L86_MAGOUT"},
+		{time = 0.51, sound = "CW_TOO_L86_MAGOUT"},
 		{time = 2.0, sound = "CW_TOO_L86_MAGHIT"},
 		{time = 2.1, sound = "CW_TOO_L86_MAGIN"},
-		{time = 2.58, sound = "CW_TOO_L86_BOLTBACK"},
-		{time = 2.71, sound = "CW_TOO_L86_BOLTFWD"},
+		{time = 2.68, sound = "CW_TOO_L86_BOLTBACK"},
+		{time = 2.79, sound = "CW_TOO_L86_BOLTFWD"},
+
     }
 }
 
