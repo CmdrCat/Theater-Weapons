@@ -92,8 +92,8 @@ SWEP.Sounds = {
 
     reload = {
 		 {time = 0.31, sound = "CW_TOO_AK74_MAGOUT"},
-		{time = 1.6, sound = "CW_TOO_AK74_MAGHIT"},
-		{time = 1.81, sound = "CW_TOO_AK74_MAGIN"},
+		{time = 1.55, sound = "CW_TOO_AK74_MAGHIT"},
+		{time = 1.75, sound = "CW_TOO_AK74_MAGIN"},
     },
 
     reload_empty = {
