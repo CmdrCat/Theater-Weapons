@@ -59,7 +59,6 @@ if CLIENT then
 	SWEP.ForegripOverridePos = {
 	}
 	
-	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
 	
 	SWEP.AttachmentModelsVM = {

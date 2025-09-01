@@ -181,7 +181,7 @@ SWEP.BipodFireAnim = true
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
-SWEP.Primary.ClipSize		= 10
+SWEP.Primary.ClipSize		= 5
 SWEP.Primary.DefaultClip	= 80
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x51MM"

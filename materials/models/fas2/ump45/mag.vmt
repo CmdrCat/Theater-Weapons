@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\fas2\ump45\mag"
+	"$bumpmap" "models\fas2\ump45\mag_normal"
+
+
+"$normalmapalphaenvmapmask" "1"
+"$phong" 		"1"
+"$phongexponent" 	"30"
+"$phongboost" "0.8"
+"$phongfresnelranges" "[2 5 9]"
+"$phongalbedotint" "1"
+}
