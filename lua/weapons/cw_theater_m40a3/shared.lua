@@ -100,7 +100,7 @@ SWEP.MuzzleVelocity = 936 -- in meter/s
 SWEP.PreventQuickScoping = true
 SWEP.QuickScopeSpreadIncrease = 0.2
 
-
+SWEP.GlobalDelayOnShoot = 1.1
 
     SWEP.Attachments = {
        [1] = {header = "Sight", offset = {350, -600}, atts = {"md_microt1","md_aimpoint", "md_eotech", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
