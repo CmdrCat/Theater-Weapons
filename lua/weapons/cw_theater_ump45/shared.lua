@@ -32,8 +32,9 @@ if CustomizableWeaponry then
         SWEP.IronsightPos = Vector(-2.757, -0.06, 0.519)
         SWEP.IronsightAng = Vector(0, 0, 0)
 
-        SWEP.EoTechPos = Vector(-2.8, -0.06, 0.119)
-        SWEP.EoTechAng = Vector(0, 0, 0)
+SWEP.EXPSPos = Vector(-2.721, 0, -0.24)
+SWEP.EXPSAng = Vector(0, 0, 0)
+
 
         SWEP.AimpointPos = Vector(-2.721, -0.06, 0.039)
         SWEP.AimpointAng = Vector(0, 0, 0)
@@ -66,7 +67,7 @@ if CustomizableWeaponry then
             ["md_anpeq15"] = {type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.64, -0.16, 9.208), angle = Angle(-90, 0, 180), size = Vector(0.8, 0.8, 0.8)},
             ["md_microt1"] = {type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0, -2.408, 1.44), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5)},
             ["md_aimpoint"] = {type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "weapon", pos = Vector(-0.24, 3.256, -5.935), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
-            ["md_eotech"] = {type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", pos = Vector(0.239, 8.43, -10.771), angle = Angle(90, 0, -90), size = Vector(1, 1, 1)},
+           ["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.306, 1.741), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
             ["md_acog"] = {type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-0.401, 3.262, -5.408), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)}
         }
 
@@ -78,17 +79,17 @@ if CustomizableWeaponry then
     SWEP.CustomizationMenuScale = 0.012
 
     SWEP.Attachments = {
-        [1] = {header = "Sight", offset = {200, -500}, atts = {"md_microt1","md_eotech", "md_aimpoint", "md_acog"}},
+        [1] = {header = "Sight", offset = {200, -500}, atts = {"md_microt1","too_reflex_exps", "md_aimpoint", "md_acog"}},
         [2] = {header = "Barrel extension", offset = {-300, -500}, atts = {"md_saker"}},
         [3] = {header = "Rail", offset = {-250, -50}, atts = {"md_anpeq15"}},
         [4] = {header = "Handguard", offset = {-850, -250}, atts = {"md_foregrip"}},
-        ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+        ["+use"] = {header = "Optic Type", offset = {200, -850}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
         ["+reload"] = {header = "Ammo", offset = {-300, 400}, atts = {"am_magnum", "am_matchgrade"}}
     }
 
     SWEP.AttachmentDependencies = {
 		["md_microt1"] = {"too_optic_category_reflex"},
-		["md_eotech"] = {"too_optic_category_reflex"},
+		["too_reflex_exps"] = {"too_optic_category_reflex"},
 		["md_aimpoint"] = {"too_optic_category_reflex"},
 		["md_acog"] = {"too_optic_category_magnified"},
 	}
@@ -167,7 +168,7 @@ if CustomizableWeaponry then
     SWEP.ReloadTime_Empty = 3.1
     SWEP.ReloadHalt = 2.20
     SWEP.ReloadHalt_Empty = 3.3
-    SWEP.SnapToIdlePostReload = true
+    SWEP.SnapToIdlePostReload = false
 
     SWEP.SprintPos = Vector(0, 0, -2.639)
     SWEP.SprintAng = Vector(-11.612, 19.459, -38.855)

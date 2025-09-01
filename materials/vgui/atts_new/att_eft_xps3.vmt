@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/atts_new/att_eft_xps3"
+	"$translucent" 1
+}

@@ -3,7 +3,7 @@ att.name = "too_reflex_mrs"
 att.displayName = "Walther MRS"
 att.displayNameShort = "MRS"
 att.aimPos = {"MRSPos", "MRSAng"}
-att.FOVModifier = 15
+att.FOVModifier = 5
 att.isSight = true
 
 if CLIENT then

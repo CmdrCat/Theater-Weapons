@@ -23,8 +23,8 @@ if CLIENT then
 	SWEP.MicroT1Pos = Vector(-2.632, 0, -0.44)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
 
-	SWEP.EoTechPos = Vector(-2.631, 0, -0.48)
-	SWEP.EoTechAng = Vector(0, 0, 0)
+	SWEP.EXPSPos = Vector(-2.6, 0, -0.601)
+SWEP.EXPSAng = Vector(0, 0, 0)
 
 	SWEP.IronsightPos = Vector(-2.613, 8.843, 0.519)
 	SWEP.IronsightAng = Vector(0.699, 0, 0)
@@ -41,10 +41,14 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-0.88, 1.325, -0.561)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
-	
+	SWEP.MRSPos = Vector(-2.6, 0, -0.64)
+    SWEP.MRSAng = Vector(0, 0, 0)
+
 	
 	
 	SWEP.AttachmentModelsVM = {
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.839, 2.563), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }, 
+	["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.933, 1.935), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.221, 1.919), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", rel = "", pos = Vector(0.244, 8.673, -9.818), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", rel = "", pos = Vector(-0.415, 3.713, -3.882), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -62,7 +66,7 @@ SWEP.SightBGs = {main = 1, on = 0, none = 1}
 
 
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1", "md_eotech", "md_acog"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1","too_reflex_mrs", "too_reflex_exps", "md_acog"}},
 [2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker"}},
 ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}
@@ -70,7 +74,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_m
 
     SWEP.AttachmentDependencies = {
 		["md_microt1"] = {"too_optic_category_reflex"},
-		["md_eotech"] = {"too_optic_category_reflex"},
+		["too_reflex_exps"] = {"too_optic_category_reflex"},
 		["md_acog"] = {"too_optic_category_magnified"},
 	}
 
