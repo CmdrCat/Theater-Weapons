@@ -1,5 +1,4 @@
-if CustomizableWeaponry then
-    SWEP.magType = "smgMag"
+
 
     AddCSLuaFile()
     AddCSLuaFile("sh_sounds.lua")
@@ -32,8 +31,11 @@ if CustomizableWeaponry then
         SWEP.IronsightPos = Vector(-2.757, -0.06, 0.519)
         SWEP.IronsightAng = Vector(0, 0, 0)
 
-SWEP.EXPSPos = Vector(-2.721, 0, -0.24)
-SWEP.EXPSAng = Vector(0, 0, 0)
+        SWEP.EXPSPos = Vector(-2.721, 0, -0.24)
+        SWEP.EXPSAng = Vector(0, 0, 0)
+
+        SWEP.MRSPos = Vector(-2.72, 0, -0.20)
+        SWEP.MRSAng = Vector(0, 0, 0)
 
 
         SWEP.AimpointPos = Vector(-2.721, -0.06, 0.039)
@@ -67,9 +69,9 @@ SWEP.EXPSAng = Vector(0, 0, 0)
             ["md_anpeq15"] = {type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.64, -0.16, 9.208), angle = Angle(-90, 0, 180), size = Vector(0.8, 0.8, 0.8)},
             ["md_microt1"] = {type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0, -2.408, 1.44), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5)},
             ["md_aimpoint"] = {type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "weapon", pos = Vector(-0.24, 3.256, -5.935), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
-           ["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.306, 1.741), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-            ["md_acog"] = {type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-0.401, 3.262, -5.408), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)}
-        }
+            ["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.306, 1.741), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+            ["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.306, 1.741), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+            ["md_acog"] = {type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-0.401, 3.262, -5.408), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)}}
 
         SWEP.LaserPosAdjust = Vector(1, 0, 1)
         SWEP.LaserAngAdjust = Angle(0, 180, 0)
@@ -78,8 +80,8 @@ SWEP.EXPSAng = Vector(0, 0, 0)
     SWEP.LuaViewmodelRecoil = false
     SWEP.CustomizationMenuScale = 0.012
 
-    SWEP.Attachments = {
-        [1] = {header = "Sight", offset = {200, -500}, atts = {"md_microt1","too_reflex_exps", "md_aimpoint", "md_acog"}},
+    SWEP.Attachments = { 
+        [1] = {header = "Sight", offset = {200, -500}, atts = {"md_microt1","too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_acog"}},
         [2] = {header = "Barrel extension", offset = {-300, -500}, atts = {"md_saker"}},
         [3] = {header = "Rail", offset = {-250, -50}, atts = {"md_anpeq15"}},
         [4] = {header = "Handguard", offset = {-850, -250}, atts = {"md_foregrip"}},
@@ -90,6 +92,7 @@ SWEP.EXPSAng = Vector(0, 0, 0)
     SWEP.AttachmentDependencies = {
 		["md_microt1"] = {"too_optic_category_reflex"},
 		["too_reflex_exps"] = {"too_optic_category_reflex"},
+        ["too_reflex_mrs"] = {"too_optic_category_reflex"},
 		["md_aimpoint"] = {"too_optic_category_reflex"},
 		["md_acog"] = {"too_optic_category_magnified"},
 	}
@@ -178,31 +181,31 @@ SWEP.EXPSAng = Vector(0, 0, 0)
 
     SWEP.ADSFireAnim = true
 
-    function SWEP:fireAnimFunc()
-        local clip = self:Clip1()
-        local cycle = 0
-        local rate = 1
-        local prefix = ""
-        local suffix = ""
+ function SWEP:fireAnimFunc()
+    local clip = self:Clip1()
+    local cycle = 0
+    local rate = 1
+    local prefix = ""
+    local suffix = ""
 
-        if clip == 1 then
-            suffix = suffix .. "_last"
-        end
-
-        if self:isAiming() then
-            suffix = suffix .. "_aim"
-            cycle = self.ironFireAnimStartCycle
-        end
-
-        self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+    if clip == 1 then
+        suffix = suffix .. "_last"
     end
 
-    function SWEP:IndividualThink()
-        if IsValid(self.Owner) then
-            self.Owner.ViewAff = 0
-        end
-
-        self.EffectiveRange = 50 * 39.37
-        self.DamageFallOff = 0.4
+    if self:isAiming() then
+        suffix = suffix .. "_aim"
+        cycle = self.ironFireAnimStartCycle
     end
+
+    self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
 end
+
+function SWEP:IndividualThink()
+    if IsValid(self.Owner) then
+        self.Owner.ViewAff = 0
+    end
+
+    self.EffectiveRange = 50 * 39.37
+    self.DamageFallOff = 0.4
+end
+

@@ -30,9 +30,11 @@ if CLIENT then
 	SWEP.IronsightPos = Vector(-3.161, 0, 1.44)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
-SWEP.EXPSPos = Vector(-3.161, 0, 0.239)
-SWEP.EXPSAng = Vector(0, 0, 0)
+	SWEP.EXPSPos = Vector(-3.161, 0, 0.239)
+	SWEP.EXPSAng = Vector(0, 0, 0)
 
+	SWEP.MRSPos = Vector(-3.161, 0, 0.239)
+	SWEP.MRSAng = Vector(0, 0, 0)
 	
 	SWEP.AimpointPos = Vector(-3.161, -2.695, 0.529)
 	SWEP.AimpointAng = Vector(-0, 0.0, 0)
@@ -88,7 +90,8 @@ SWEP.EXPSAng = Vector(0, 0, 0)
 	   	["md_nightforce_nxs"] = { type = "Model", model = "models/cw2/attachments/l96_scope.mdl", bone = "weapon", rel = "", pos = Vector(-0.08, -3.411, 1.409), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	    ["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", rel = "", pos = Vector(-0.322, 3.43, -4.317), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "weapon", rel = "", pos = Vector(-0.24, 3.361, -5.06), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-			["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.195, 1.771), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.195, 1.771), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.195, 1.771), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", rel = "", pos = Vector(0, 1.669, 14.112), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "weapon", rel = "", pos = Vector(-0.32, 3.437, -4.732), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
@@ -104,7 +107,7 @@ SWEP.QuickScopeSpreadIncrease = 0.2
 SWEP.GlobalDelayOnShoot = 1.1
 
     SWEP.Attachments = {
-       [1] = {header = "Sight", offset = {350, -600}, atts = {"md_microt1","md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+       [1] = {header = "Sight", offset = {350, -600}, atts = {"md_microt1","too_reflex_mrs", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
        [2] = {header = "Barrel", offset = {-800, -10}, atts = {"md_saker"}},
        [3] = {header = "Bolt", offset = {2700, 100}, atts = {"md_improved_bolt"}},
 	   ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
@@ -117,6 +120,7 @@ SWEP.GlobalDelayOnShoot = 1.1
     SWEP.AttachmentDependencies = {
 		["md_microt1"] = {"too_optic_category_reflex"},
 		["too_reflex_exps"] = {"too_optic_category_reflex"},
+		["too_reflex_mrs"] = {"too_optic_category_reflex"},
 		["md_aimpoint"] = {"too_optic_category_reflex"},
 		["md_acog"] = {"too_optic_category_magnified"},
 		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
