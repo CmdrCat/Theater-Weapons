@@ -106,8 +106,21 @@ SWEP.GlobalDelayOnShoot = 1.1
        [1] = {header = "Sight", offset = {350, -600}, atts = {"md_microt1","md_aimpoint", "md_eotech", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
        [2] = {header = "Barrel", offset = {-800, -10}, atts = {"md_saker"}},
        [3] = {header = "Bolt", offset = {2700, 100}, atts = {"md_improved_bolt"}},
+	   ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	   ["+reload"] = {header = "Ammo", offset = {1350, 950}, atts = {"am_magnum", "am_matchgrade"}}
+	   
     }
+		
+
+
+    SWEP.AttachmentDependencies = {
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["md_eotech"] = {"too_optic_category_reflex"},
+		["md_aimpoint"] = {"too_optic_category_reflex"},
+		["md_acog"] = {"too_optic_category_magnified"},
+		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+		["md_nightforce_nxs"] = {"too_optic_category_magnified"},
+	}
 	
    
 

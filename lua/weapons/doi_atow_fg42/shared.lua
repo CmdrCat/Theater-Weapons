@@ -97,10 +97,10 @@ SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
 
-SWEP.Attachments = {[2] = {header = "Optic", offset = {975, -275}, atts = {"doi_atow_zfg42"}},
-[3] = {header = "Fire Control", offset = {700, 250}, atts = {"doi_atow_heavybolt"}},
-[1] = {header = "Accessory", offset = {-200, -250}, atts = {"doi_atow_sling"}},
-["+reload"] = {header = "Ammo", offset = {-110, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
+SWEP.Attachments = {[2] = {header = "Optic", offset = {975, -275}, atts = {"doi_atow_zfg42"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
+[3] = {header = "Fire Control", offset = {700, 250}, atts = {"doi_atow_fg42m9kconv", "doi_atow_heavybolt"}},
+[1] = {header = "Accessory", offset = {-200, -250}, atts = {"doi_atow_sling"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
+["+reload"] = {header = "Ammo", offset = {-110, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}}}
 
 SWEP.Animations = {fire = {"base_fire2"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
@@ -163,7 +163,7 @@ SWEP.FireDelayAuto = 60/825
 SWEP.FireDelaySemi = 60/750
 SWEP.FireSound = "DOIFG42_FIRE"
 SWEP.FireSoundSuppressed = "DOIM1A1CAR_FIRE_SUPPRESSED"
-SWEP.Recoil = 1.4
+SWEP.Recoil = 0.8
 SWEP.BipodRecoilModifier = 0.2 -- = 0.1 -- = 0 --0.4
  -- = 1
 

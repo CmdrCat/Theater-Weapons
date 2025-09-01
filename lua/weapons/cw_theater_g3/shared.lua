@@ -95,7 +95,17 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Barrel", offset = {-300, -300},  atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-300, 150}, atts = {"md_foregrip"}},
-	["+reload"] = {header = "Ammo", offset = {800, 430}, atts = {"am_magnum", "am_matchgrade"}}}
+    ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+    ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}
+
+
+    SWEP.AttachmentDependencies = {
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["md_eotech"] = {"too_optic_category_reflex"},
+		["md_aimpoint"] = {"too_optic_category_reflex"},
+		["md_acog"] = {"too_optic_category_magnified"},
+		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+	}
 
 SWEP.Animations = { 
     fire         = "fire",

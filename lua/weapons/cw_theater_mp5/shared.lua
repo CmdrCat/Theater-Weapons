@@ -90,8 +90,19 @@ SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {700, -400}, atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Barrel", offset = {200, -400}, atts = {"md_tundra9mm"}},
 	[3] = {header = "Handguard", offset = {-400, -400}, atts = {"too_sdbar_bar"}},
+	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {700, 35}, atts = {"am_magnum", "am_matchgrade"}}
 }
+
+
+
+	SWEP.AttachmentDependencies = {
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["md_eotech"] = {"too_optic_category_reflex"},
+		["md_aimpoint"] = {"too_optic_category_reflex"},
+		["md_acog"] = {"too_optic_category_magnified"},
+		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+	}
 
 SWEP.Animations = {
     fire         = "fire",
@@ -163,12 +174,12 @@ SWEP.FireSound = "CW_TOO_MP5_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_MP5_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.63
 
-SWEP.HipSpread = 0.035
-SWEP.AimSpread = 0.009
+SWEP.HipSpread = 0.02
+SWEP.AimSpread = 0.005
 SWEP.VelocitySensitivity = 1.5
-SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.005
-SWEP.SpreadCooldown = 0.13
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 37
 SWEP.DeployTime = 0.8

@@ -33,6 +33,9 @@ if CLIENT then
 	SWEP.ShortDotPos = Vector(-3.441, 3, 0)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
 
+	SWEP.MRSPos = Vector(-3.481, 0, -0.561)
+    SWEP.MRSAng = Vector(0, 0, 0)
+
 
 	SWEP.ViewModelMovementScale = 1.15
 	
@@ -49,6 +52,7 @@ if CLIENT then
 	SWEP.DamageFallOff_Orig = .5
 
 	SWEP.AttachmentModelsVM = {
+	    ["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0.079, -3.264, 0.981), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", rel = "", pos = Vector(0.319, 7.513, -10.016), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "weapon", rel = "", pos = Vector(-0.16, 2.474, -5.295), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak74_body", pos = Vector(4.151, -0.433, -2.721), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75)},
@@ -70,11 +74,24 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.SightBGs = {main = 1, carryhandle = 0, none = 1}
 SWEP.StockBGs = {main = 2, foldable = 1, regular = 0}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -500},  atts = {"md_kobra", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_pso1", "md_acog"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -500},  atts = {"md_kobra","too_reflex_mrs", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_pso1", "md_acog"}},
 	[2] = {header = "Barrel", offset = {300, -500}, atts = {"md_pbs1"}},
 	[3] = {header = "Stock", offset = {700, 500}, atts = {"too_bg_74stock"}},
+	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {950, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 
+
+    SWEP.AttachmentDependencies = {
+		["md_kobra"] = {"too_optic_category_reflex"},
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["md_eotech"] = {"too_optic_category_reflex"},
+		["md_aimpoint"] = {"too_optic_category_reflex"},
+		["md_acog"] = {"too_optic_category_magnified"},
+		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+		["md_pso1"] = {"too_optic_category_magnified"},
+		["too_reflex_mrs"] = {"too_optic_category_reflex"},
+	}
+	
 SWEP.Animations = {
     fire         = "fire",
 	fire_aim         = "fire_iron",

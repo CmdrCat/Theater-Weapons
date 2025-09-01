@@ -91,7 +91,17 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_
 	[2] = {header = "Barrel", offset = {-500, -300}, atts = {"md_saker"}},
 	[3] = {header = "Rail", offset = {-500, 200},  atts = {"md_anpeq15"}},
 	[4] = {header = "Internals", offset = {2000, 800},  atts = {"too_l86_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {800, 150}, atts = {"am_magnum", "am_matchgrade"}}}
+    ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+    ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}
+
+
+    SWEP.AttachmentDependencies = {
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["md_eotech"] = {"too_optic_category_reflex"},	
+		["md_aimpoint"] = {"too_optic_category_reflex"},
+		["md_acog"] = {"too_optic_category_magnified"},
+		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+	}
 
 SWEP.Animations = { 
     fire         = "fire",

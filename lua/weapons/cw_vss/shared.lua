@@ -187,8 +187,8 @@ SWEP.Recoil = 0.25
 
 SWEP.SuppressedOnEquip = true
 
-SWEP.HipSpread = 0.05
-SWEP.AimSpread = 0.005
+SWEP.HipSpread = 0.12
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.0002
@@ -209,11 +209,11 @@ clip = self:Clip1()
 self.EffectiveRange = 90 * 39.37
 self.DamageFallOff = .1
 if (self.ActiveAttachments.bg_asval) then
-self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff + .25))
+self.EffectiveRange = ((self.EffectiveRange - 40 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + .35))
 end
 if (self.ActiveAttachments.bg_sr3m) then
-self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff + .25))
+self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + .6))
 end
 end

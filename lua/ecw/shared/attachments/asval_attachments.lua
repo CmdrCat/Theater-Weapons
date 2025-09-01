@@ -41,7 +41,7 @@ att.displayNameShort = "30RND"
 att.isBG = true
 
 att.statModifiers = {ReloadSpeedMult = -0.1,
-OverallMouseSensMult = -0.1}
+OverallMouseSensMult = -0.1,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/asval_30rndmag")
@@ -72,7 +72,8 @@ att.displayName = "AS VAL variant"
 att.displayNameShort = "AS VAL"
 att.isBG = true
 
-att.statModifiers = {DamageMult = 4 / 29}
+att.statModifiers = {DamageMult = 3 / 29,
+HipSpreadMult = -0.58}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/asval_variant")
@@ -95,7 +96,8 @@ att.overrideSuppressorStatus = false -- it will override the weapon's default su
 att.SpeedDec = -3
 
 att.statModifiers = {DamageMult = 4 / 29,
-RecoilMult = -0.1,}
+RecoilMult = -0.1,
+HipSpreadMult = -0.91}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/sr3m_variant")

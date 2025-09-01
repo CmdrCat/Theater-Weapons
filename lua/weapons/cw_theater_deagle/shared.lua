@@ -64,7 +64,15 @@ SWEP.SightBGs = {main = 1, on = 0, none = 1}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1", "md_eotech", "md_acog"}},
 [2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker"}},
+["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}
+
+
+    SWEP.AttachmentDependencies = {
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["md_eotech"] = {"too_optic_category_reflex"},
+		["md_acog"] = {"too_optic_category_magnified"},
+	}
 
 SWEP.Animations = {
     fire         = "fire",
