@@ -26,8 +26,8 @@ if CLIENT then
 	SWEP.EoTechPos = Vector(-2.631, 0, -0.48)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 
-	SWEP.IronsightPos = Vector(-2.605, 10, 0.639)
-	SWEP.IronsightAng = Vector(0.765, 0, 0)
+	SWEP.IronsightPos = Vector(-2.613, 8.843, 0.519)
+	SWEP.IronsightAng = Vector(0.699, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.631, 2, -0.64)
 	SWEP.ACOGAng = Vector(0, 0, 0)

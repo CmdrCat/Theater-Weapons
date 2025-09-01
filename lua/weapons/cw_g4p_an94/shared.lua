@@ -15,8 +15,8 @@ if CLIENT then
 	SWEP.IconLetter = "w"
 	killicon.AddFont("cw_ar15", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
-	SWEP.EffectiveRange_Orig = 50 * 39.37
-	SWEP.DamageFallOff_Orig = .4
+	SWEP.EffectiveRange_Orig = 40 * 39.37
+	SWEP.DamageFallOff_Orig = .5
 
 	SWEP.MuzzleEffect = "muzzleflash_ak74"
 	SWEP.PosBasedMuz = true
@@ -179,14 +179,14 @@ SWEP.Primary.Ammo			= "5.45x39MM"
 SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_AN94_FIRE"
 SWEP.FireSoundSuppressed = "CW_AN94_FIRE_SUPPRESSED"
-SWEP.Recoil = 1.05
+SWEP.Recoil = 0.9
 
-SWEP.HipSpread = 0.045
+SWEP.HipSpread = 0.1
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1.8
-SWEP.MaxSpreadInc = 0.04
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.13
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 45
 SWEP.DeployTime = 1
@@ -201,8 +201,8 @@ SWEP.SnapToIdlePostReload = true
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 50 * 39.37
-self.DamageFallOff = .4
+self.EffectiveRange = 40 * 39.37
+self.DamageFallOff = .5
 end
 
 function SWEP:CycleFiremodes()

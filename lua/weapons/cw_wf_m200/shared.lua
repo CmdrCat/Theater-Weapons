@@ -118,7 +118,7 @@ if CLIENT then
 	
     SWEP.CrosshairEnabled 	= false
 	
-	SWEP.AimBreathingEnabled = true
+	SWEP.AimBreathingEnabled = false
 --	SWEP.AimViewModelFOV = 70
 	
 	SWEP.HipFireFOVIncrease = false

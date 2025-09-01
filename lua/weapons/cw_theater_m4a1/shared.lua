@@ -170,7 +170,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.066666666666667
 SWEP.FireSound = "CW_TOO_AR15_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_AR15_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.6
 
 SWEP.HipSpread = 0.12
 SWEP.AimSpread = 0.003

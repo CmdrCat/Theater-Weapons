@@ -26,7 +26,7 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = 0.65
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 	SWEP.SightWithRail = false
-	SWEP.AimBreathingEnabled = true
+	SWEP.AimBreathingEnabled = false
 	SWEP.FullAimViewModelRecoil = false
 	
 	SWEP.M203OffsetCycle_Reload = 0.65

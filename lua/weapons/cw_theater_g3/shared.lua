@@ -157,17 +157,19 @@ SWEP.Primary.DefaultClip	= 20
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 
+SWEP.Chamberable = false -- Charging handle is used in every reload
+
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_TOO_G3A3_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_G3A3_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.5
 
-SWEP.HipSpread = 0.05
-SWEP.AimSpread = 0.002
+SWEP.HipSpread = 0.25
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 2
-SWEP.MaxSpreadInc = 0.06
-SWEP.SpreadPerShot = 0.01
-SWEP.SpreadCooldown = 0.17
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 56
 SWEP.DeployTime = 0.8
