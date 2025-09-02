@@ -1,5 +1,5 @@
 local att = {}
-att.name = "too_m14_br_conversion"
+att.name = "cw_m14_br_conversion"
 att.displayName = "Select-Fire Battle Rifle Conversion"
 att.displayNameShort = "Auto"
 
