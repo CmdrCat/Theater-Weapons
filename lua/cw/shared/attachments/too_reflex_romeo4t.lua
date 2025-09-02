@@ -7,7 +7,7 @@ att.FOVModifier = 5
 att.isSight = true
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("vgui/atts_new/att_eft_mrs")
+	att.displayIcon = surface.GetTextureID("vgui/atts_new/att_eft_romeo4t")
 	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
 	[2] = {t = "Slightly increases aim zoom.", c = CustomizableWeaponry.textColors.POSITIVE},
 	[3] = {t = "Narrow scope may decrease awareness.", c = CustomizableWeaponry.textColors.NEGATIVE}}
