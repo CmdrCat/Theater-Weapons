@@ -13,7 +13,7 @@ if CLIENT then
 	killicon.AddFont("cw_g3a3", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
 	SWEP.EffectiveRange_Orig = 70 * 39.37
-	SWEP.DamageFallOff_Orig = .05
+	SWEP.DamageFallOff_Orig = .5
 
 	SWEP.MuzzleEffect = "muzzleflash_m14"
 	SWEP.PosBasedMuz = false
@@ -160,7 +160,7 @@ SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"auto", "semi"}
+SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_base"
 SWEP.Category = "CW 2.0"
 
@@ -182,7 +182,7 @@ SWEP.Primary.DefaultClip	= 20
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 
-SWEP.FireDelay = 0.08
+SWEP.FireDelay = 60 / 450
 SWEP.FireSound = "CW_M14_FIRE"
 SWEP.FireSoundSuppressed = "CW_M14_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.6
@@ -194,7 +194,7 @@ SWEP.MaxSpreadInc = 0.07
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.12
 SWEP.Shots = 1
-SWEP.Damage = 36
+SWEP.Damage = 66
 SWEP.DeployTime = 1.7
 
 SWEP.RecoilToSpread = 0.8 -- the M14 in particular will have 30% more recoil from continuous fire to give a feeling of "oh fuck I should stop firing 7.62x51MM in full auto at 750 RPM"
@@ -212,5 +212,5 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 70 * 39.37
-self.DamageFallOff = .05
+self.DamageFallOff = .5
 end
