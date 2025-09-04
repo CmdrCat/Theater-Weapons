@@ -298,7 +298,7 @@ SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
-SWEP.Damage = 36
+SWEP.Damage = 35
 SWEP.DeployTime = 0.6
 SWEP.OverallMouseSens = 1.25
 

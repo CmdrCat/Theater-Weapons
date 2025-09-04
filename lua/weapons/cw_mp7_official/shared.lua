@@ -38,8 +38,8 @@ if CLIENT then
 	SWEP.MicroT1Pos = Vector(-2.224, 1.266, 0.246)
 	SWEP.MicroT1Ang = Vector(0, -0.232, 0)
 
-	SWEP.EoTechPos = Vector(-2.177, -3.758, -0.16)
-	SWEP.EoTechAng = Vector(0, 0, 0)
+	SWEP.EXPSPos = Vector(-2.161, 0, -0.401)
+	SWEP.EXPSAng = Vector(0, 0, 0)
 
 	SWEP.AimpointPos = Vector(-2.161, -4.607, 0.131)
 	SWEP.AimpointAng = Vector(0, 0, 0)
@@ -60,7 +60,8 @@ if CLIENT then
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "mp7_main", pos = Vector(-0.819, -2.135, -0.005), angle = Angle(90, 0, -90), size = Vector(0.349, 0.349, 0.349)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "mp7_main", pos = Vector(5.162, -0.343, -0.687), angle = Angle(0, 180, 180), size = Vector(0.5, 0.5, 0.5)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "mp7_main", pos = Vector(-4.719, 2.282, 0.25), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
-		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "mp7_main", pos = Vector(-4.637, 2.27, 0.273), angle = Angle(-90, 0, -90), size = Vector(0.75, 0.75, 0.75)}
+		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "mp7_main", pos = Vector(-4.637, 2.27, 0.273), angle = Angle(-90, 0, -90), size = Vector(0.75, 0.75, 0.75)},
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "mp7_main", rel = "", pos = Vector(0.4, -2, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 
 	SWEP.LaserPosAdjust = {x = 0, y = 0, z = 0.25}
@@ -77,7 +78,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
 SWEP.Attachments = {
-	[1] = {header = "Sight", offset = {1100, -400}, atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+	[1] = {header = "Sight", offset = {1100, -400}, atts = {"md_microt1", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Barrel", offset = {-200, -400}, atts = {"bg_mp7_unsuppressed"}},
 	[3] = {header = "Rail", offset = {-200, 0}, atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {1100, 35}, atts = {"am_magnum", "am_matchgrade"}}
