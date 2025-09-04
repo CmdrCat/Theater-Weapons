@@ -151,7 +151,7 @@ SWEP.ReloadViewBobEnabled = false //
 --SWEP.RVBRollMod = 1
 
 SWEP.Primary.ClipSize		= 6
-SWEP.Primary.DefaultClip	= 6
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Chamberable			= false
 

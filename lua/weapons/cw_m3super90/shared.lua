@@ -72,7 +72,6 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "Spas_Body", pos = Vector(-2.589, -4.256, 6.44), angle = Angle(0, 0, 180), size = Vector(1, 1, 1)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "Spas_Body", pos = Vector(-2.053, 0.184, 12.067), angle = Angle(-3.333, 90, 180), size = Vector(1, 1, 1)},
 		["md_rail"] = {model = "models/wystan/attachments/rail.mdl", bone = "Spas_Body", pos = Vector(-2.064, -11.19, 2.654), angle = Angle(0, -90, 180), size = Vector(0.6, 1.1, 1)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Spas_Body", pos = Vector(-2.32, -9.9, 0.635), angle = Angle(0, -180, -180), size = Vector(0.4, 0.4, 0.4), adjustment = {min = -11, max = -9.9, inverse = true, axis = "y"}},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "Spas_Body", pos = Vector(-2.609, -5.6, 5.35), angle = Angle(0, 90, 180), size = Vector(0.8, 0.8, 0.8)},
@@ -90,7 +89,7 @@ SWEP.MuzzleVelocity = 381 -- in meter/s
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.ADSFireAnim = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300}, atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300}, atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
@@ -134,7 +133,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 8
-SWEP.Primary.DefaultClip	= 8
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "12 Gauge"
 

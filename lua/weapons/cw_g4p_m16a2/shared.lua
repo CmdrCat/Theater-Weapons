@@ -98,7 +98,6 @@ if CLIENT then
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Body", rel = "", pos = Vector(0.03, -0.175, 8.555), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "Body", rel = "", pos = Vector(-0.06, 3.42, 2.4), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Body", rel = "", pos = Vector(0, 3.279, -1.201), angle = Angle(180, 0, 90), size = Vector(0.8, 0.8, 0.8)},
-		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "Body", rel = "", pos = Vector(-0.32, -7.441, -14.801), angle = Angle(90, 0, 90), size = Vector(1, 1, 1)},
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "Body", rel = "", pos = Vector(-0.08, 0.699, -2.141), angle = Angle(180, 0, 90), size = Vector(2, 2, 2)},
 		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Body", rel = "", pos = Vector(0.62, 1.159, 17.94), angle = Angle(90, 0, 0), size = Vector(0.75, 0.75, 0.75)},
 	}
@@ -143,7 +142,7 @@ end
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {100, -600},  atts = {"md_reflex", "md_trijicon", "md_eotech", "md_aimpoint", "md_elcan", "md_acog_fixed"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {100, -600},  atts = {"md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Barrel extension", offset = {-500, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-500, -100}, atts = {"md_foregrip", "md_bipod"}},
 	["+reload"] = {header = "Ammo", offset = {800, -100}, atts = {"am_magnum", "am_matchgrade"}}}
@@ -184,7 +183,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 

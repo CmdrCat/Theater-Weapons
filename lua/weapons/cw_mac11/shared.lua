@@ -72,7 +72,6 @@ if CLIENT then
 	
 	SWEP.AttachmentModelsVM = {
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0.037, -3.405, -0.942), angle = Angle(180, 0, -90), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 0)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", pos = Vector(0.282, 8.026, -10.797), angle = Angle(93.333, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0)},
 		["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0.018, -2.564, 6.34), angle = Angle(0, 0, 90), size = Vector(0.55, 0.55, 0.55)}
 	}
 
@@ -92,7 +91,7 @@ SWEP.StockBGs = {main = 1, unfolded = 1, folded = 0}
 SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "md_eotech"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1"}},
 	[2] = {header = "Barrel", offset = {-500, -600},  atts = {"md_tundra9mm"}},
 	[3] = {header = "Barrel length", offset = {-500, -150},  atts = {"bg_mac11_extended_barrel"}},
 	[4] = {header = "Stock", offset = {800, 150},  atts = {"bg_mac11_unfolded_stock"}},
@@ -138,7 +137,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 32
-SWEP.Primary.DefaultClip	= 32
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x17MM"
 

@@ -101,7 +101,6 @@ if CLIENT then
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "BaseW", rel = "", pos = Vector(0, -11.2, 4.739), angle = Angle(0, 0, 0), size = Vector(0.4, 0.4, 0.4)},
 		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "BaseW", rel = "", pos = Vector(0.019, -24.4, 1.2), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "BaseW", rel = "", pos = Vector(0, -13.4, 2), angle = Angle(0, 180, 0), size = Vector(2.2, 2.2, 2.2)},
-		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "BaseW", pos = Vector(-0.212, -0.169, -6.901), angle = Angle(4.512, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "BaseW", pos = Vector(0.212, -4.581, -1.032), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "BaseW", rel = "", pos = Vector(10.562, -17.726, -0.301), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "BaseW", rel = "", pos = Vector(0.112, -19.25, 0.537), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
@@ -146,10 +145,10 @@ SWEP.BoltShootOffset = Vector(0, 2, 0)
 SWEP.LuaViewmodelRecoil = true
 SWEP.CustomizationMenuScale = 0.015
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -600},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_eotech", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -600},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Barrel extension", offset = {-300, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-300, 200}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	[4] = {header = "Rail", offset = {300, 300}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_cmore = true, md_reflex = true, md_trijicon = true, md_eotech = true, md_aimpoint = true, md_acog_fixed = true, md_csgo_acog = true}},
+	[4] = {header = "Rail", offset = {300, 300}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_cmore = true, md_reflex = true, md_trijicon = true, md_aimpoint = true, md_acog_fixed = true, md_csgo_acog = true}},
 	["+reload"] = {header = "Ammo", offset = {1200, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 --SWEP.AttachmentDependencies = {["md_anpeq15"] = {"md_microt1"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
@@ -191,7 +190,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 

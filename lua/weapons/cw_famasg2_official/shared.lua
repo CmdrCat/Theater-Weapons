@@ -65,7 +65,7 @@ if CLIENT then
 	SWEP.AttachmentModelsVM = {
 		["md_rail"] = {model = "models/wystan/attachments/rail.mdl", bone = "gun", pos = Vector(-0.245, 1.501, 2.469), angle = Angle(0, -90, 0), size = Vector(1.034, 1.034, 1.034)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "gun", pos = Vector(0.006, 0.586, 4.493), adjustment = {min = 0.586, max = 4.245, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(0, 180, 0), size = Vector(0.347, 0.347, 0.347)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "gun", pos = Vector(0.277, -9.589, -7.021), adjustment = {min = -9.589, max = -8.370, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(2.75, -90, 0), size = Vector(1.019, 1.019, 1.019)},
+		
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "gun", pos = Vector(-0.253, -4.612, -0.678), adjustment = {min = -4.612, max = -2.086, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899)},
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "gun", pos = Vector(-0.019, 1.554, -0.249), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "gun", pos = Vector(-0.265, -2.544, 0.101), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75)},
@@ -107,10 +107,10 @@ SWEP.StockBGs = {main = 1, regular = 0, heavy = 1, foldable = 2}
 SWEP.ReceiverBGs = {main = 3, rpk = 1, regular = 0}
 SWEP.MagBGs = {main = 4, regular = 0, rpk = 1}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {850, -600},  atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {850, -600},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Barrel", offset = {-550, -150}, atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-550, -600}, atts = {"md_foregrip", "md_bipod"}},
-	[4] = {header = "Rail", offset = {100, -600}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_eotech = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true}},
+	[4] = {header = "Rail", offset = {100, -600}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true}},
 	[5] = {header = "Magazine", offset = {850, -150}, atts = {"md_cmag_556_official"}},
 	["+reload"] = {header = "Ammo", offset = {850, 350}, atts = {"am_magnum", "am_matchgrade"}}}
 
@@ -150,7 +150,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 

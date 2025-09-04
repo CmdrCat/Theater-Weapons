@@ -76,9 +76,6 @@ SWEP.LuaVMRecoilAxisMod = {vert = 1, hor = 5, roll = 3, forward = 2, pitch = 1}
 SWEP.PreventQuickScoping = true
 SWEP.QuickScopeSpreadIncrease = 0.3
 
---SWEP.Attachments = {[1] = {header = "Sight", offset = {300, -50},  atts = {"md_kobra", "md_eotech", "md_aimpoint"}},
---	[2] = {header = "Barrel", offset = {-175, -100}, atts = {"md_pbs1"}},
---	[3] = {header = "Handguard", offset = {-100, 200}, atts = {"md_foregrip"}}}
 
 SWEP.RailBGs = {main = 1, on = 0, off = 1}
 
@@ -129,7 +126,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 10
-SWEP.Primary.DefaultClip	= 10
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x54MMR"
 

@@ -94,7 +94,6 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "Object01", pos = Vector(-0.234, -6.67, -2.567), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "Object01", pos = Vector(0.282, -11.613, -8.844), angle = Angle(3.332, -90, 0), size = Vector(1, 1, 1)},
 		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "Object01", pos = Vector(-0.232, -0.908, 0.637), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
 		["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", bone = "Object01", pos = Vector(0.09, -6.288, -1.887), angle = Angle(0, 180, 0), size = Vector(0.899, 0.899, 0.899)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "Object01", pos = Vector(-0.32, -6.019, -2.675), angle = Angle(0, -90, 0), size = Vector(0.899, 0.899, 0.899)},
@@ -117,7 +116,7 @@ SWEP.StockBGs = {main = 3, foldable = 1, vss = 0}
 	
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, -500},  atts = {"md_kobra", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_pso1"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, -500},  atts = {"md_kobra", "md_aimpoint", "md_schmidt_shortdot", "md_pso1"}},
 	[2] = {header = "Magazine", offset = {0, 350},  atts = {"bg_asval_20rnd", "bg_asval_30rnd"}},
 	[3] = {header = "Variant", offset = {0, -550},  atts = {"bg_asval", "bg_sr3m"}},
 	[4] = {header = "Stock", offset = {1400, -50}, atts = {"bg_vss_foldable_stock"}},
@@ -176,7 +175,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 10
-SWEP.Primary.DefaultClip	= 10
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x39MM"
 

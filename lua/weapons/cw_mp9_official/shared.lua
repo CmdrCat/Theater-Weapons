@@ -72,7 +72,6 @@ if CLIENT then
 	
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "gun", pos = Vector(-0.104, -5.553, -2.28), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "gun", pos = Vector(0.37, -10.58, -9.006), angle = Angle(3.332, -90, 0), size = Vector(1, 1, 1)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "gun", pos = Vector(0.12, -0.88, 2.403), angle = Angle(0, -180, 0), size = Vector(0.349, 0.349, 0.349)},
 		["md_tundra9mm"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "gun", pos = Vector(0.064, -3.827, -0.19), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "gun", pos = Vector(-0.169, -5.193, -2.244), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
@@ -80,11 +79,7 @@ if CLIENT then
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "gun", pos = Vector(0.02, 0.206, 3.239), angle = Angle(0, -90, 0), size = Vector(0.899, 0.899, 0.899)}
 	}
 
-	--[[SWEP.AttachmentModelsVM = {
-		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0.037, -3.405, -0.942), angle = Angle(180, 0, -90), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 0)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", pos = Vector(0.282, 8.026, -10.797), angle = Angle(93.333, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0)},
-		["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0.018, -2.564, 6.34), angle = Angle(0, 0, 90), size = Vector(0.55, 0.55, 0.55)}
-	}]]
+
 
 	SWEP.TelescopeSkipRotate = true
 	SWEP.LuaVMRecoilAxisMod = {vert = 1.5, hor = 2, roll = 1, forward = 1, pitch = 1}
@@ -103,7 +98,7 @@ SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -300},  atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_nightforce_nxs"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -300},  atts = {"md_microt1","md_aimpoint", "md_schmidt_shortdot", "md_nightforce_nxs"}},
 	[2] = {header = "Barrel", offset = {-600, -300},  atts = {"md_tundra9mm"}},
 	[3] = {header = "Rail", offset = {600, 150},  atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {-600, 200}, atts = {"am_magnum", "am_matchgrade", "am_ultramegamatchammo"}}}
@@ -150,7 +145,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 

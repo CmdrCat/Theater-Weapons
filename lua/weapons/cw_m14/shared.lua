@@ -106,7 +106,6 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "M14_Body", pos = Vector(-0.253, -5.233, -4.358), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), adjustment = {min = -5.233, max = -2.5, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "M14_Body", pos = Vector(0.284, -9.179, -10.056), angle = Angle(3.332, -90, 0), size = Vector(1, 1, 1), adjustment = {min = -9.179, max = -6, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "M14_Body", pos = Vector(0.01, 0.93, 1.373), angle = Angle(0, 180, 0), size = Vector(0.4, 0.4, 0.4), adjustment = {min = 0.93, max = 4, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}},
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "M14_Body", pos = Vector(0.039, 1.595, -1.653), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "M14_Body", pos = Vector(-0.173, 6.684, 1.22), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
@@ -133,9 +132,9 @@ SWEP.BipodBGs = {main = 4, on = 1, off = 0}
 SWEP.SightBGs = {main = 2, sg1 = 1, none = 0}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -450},  atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -450},  atts = {"md_microt1",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Barrel", offset = {-450, -300},  atts = {"md_saker"}},
-	[3] = {header = "Rail", offset = {800, 0}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_eotech = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true, md_nightforce_nxs = true}},
+	[3] = {header = "Rail", offset = {800, 0}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true, md_nightforce_nxs = true}},
 	[4] = {header = "Handguard", offset = {-450, 150}, atts = {"md_foregrip", "md_bipod"}},
 	[5] = {header = "Conversion", offset = {-450, 150}, atts = {"cw_m14_br_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, 450}, atts = {"am_magnum", "am_matchgrade"}}}
@@ -179,7 +178,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 20
-SWEP.Primary.DefaultClip	= 20
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x51MM"
 

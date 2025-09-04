@@ -140,7 +140,7 @@ SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Chamberable			= false --The KP/-31 used during WWII is an open-bolt gun
 

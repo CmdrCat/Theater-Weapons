@@ -96,7 +96,6 @@ if CLIENT then
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Front", rel = "", pos = Vector(-4.5, 3.95, 0.321), angle = Angle(-90, 0, -90), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Front", rel = "", pos = Vector(3.045, -1.3, -0.004), angle = Angle(-90, 0, -90), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "Front", rel = "", pos = Vector(1.161, -1.1, -0.004), angle = Angle(-90, 0, -90), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "Front", rel = "", pos = Vector(-9.367, 10.33, -0.264), angle = Angle(0, 4.443, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "Front", rel = "", pos = Vector(1.649, -0.7, -1.5), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255)},
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "Front", rel = "", pos = Vector(-0.35, -1.26, 0), angle = Angle(90, -90, 0), size = Vector(0.3, 0.3, 0.3), color = Color(255, 255, 255, 255)},		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "Front", rel = "", pos = Vector(0.059, 14, -0.12), angle = Angle(-180, -90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_uecw_csgo_acog"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_acog.mdl", bone = "Front", rel = "", pos = Vector(-5.56, 2.009, -0.04), angle = Angle(0, 0, -90), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255)},
@@ -117,7 +116,7 @@ SWEP.ForceBackToHipAfterAimedShot = true
 SWEP.GlobalDelayOnShoot = 0.5
 SWEP.CustomizationMenuScale = 0.01
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -500},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan", "md_eotech", "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {md_frontsight = true, md_rearsight = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -500},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan", "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {md_frontsight = true, md_rearsight = true}},
 	[2] = {header = "Barrel extension", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
 	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 	
@@ -161,7 +160,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 1
-SWEP.Primary.DefaultClip	= 5
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".30 Winchester"
 SWEP.Chamberable = false

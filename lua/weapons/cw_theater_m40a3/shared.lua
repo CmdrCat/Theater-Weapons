@@ -200,7 +200,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 5
-SWEP.Primary.DefaultClip	= 80
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x51MM"
 SWEP.Chamberable = true
@@ -277,7 +277,7 @@ function SWEP:fireAnimFunc()
 
     local anim = "fire" .. suffix
 
-    -- ✅ fallback if the animation isn't defined in SWEP.Animations
+    --  fallback if the animation isn't defined in SWEP.Animations
     if not self.Animations[anim] then
         if suffix == "_aim_last" and self.Animations["fire_aim"] then
             anim = "fire_aim"

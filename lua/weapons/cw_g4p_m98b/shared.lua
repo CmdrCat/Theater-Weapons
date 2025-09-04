@@ -109,7 +109,6 @@ if CLIENT then
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "M98_Body", rel = "", pos = Vector(-0.322, -16.25, -3.82), angle = Angle(0, 0, 0), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "M98_Body", rel = "", pos = Vector(0, -1.5, -1.351), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "M98_Body", rel = "", pos = Vector(-1.55, -19.75, 1.625), angle = Angle(0, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "M98_Body", rel = "", pos = Vector(0.275, -21.851, -10.301), angle = Angle(3.5, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "M98_Body", rel = "", pos = Vector(0.419, 0.8, 1.94), angle = Angle(0, 180, 0), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "M98_Body", rel = "", pos = Vector(0.3, 9.8, 1.759), angle = Angle(0, 90, 0), size = Vector(0.4, 0.4, 0.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "M98_Body", rel = "", pos = Vector(0.4, 5.719, -2), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255)},
@@ -152,7 +151,7 @@ SWEP.ForceBackToHipAfterAimedShot = true
 SWEP.GlobalDelayOnShoot = 2.5
 SWEP.BipodFireAnim = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_eotech", "md_elcan", "md_acog_fixed", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_elcan", "md_acog_fixed", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
 	[2] = {header = "Barrel extension", offset = {100, -500}, atts = {"md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
 	[3] = {header = "Handguard", offset = {-500, -500}, atts = {"md_bipod"}},
 --	[4] = {header = "Misc", offset = {-500, 800}, atts = {"md_anpeq15"}},
@@ -217,7 +216,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 5
-SWEP.Primary.DefaultClip	= 5
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".338 Lapua"
 

@@ -97,7 +97,7 @@ if CLIENT then
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2, 0.96), angle = Angle(180, 180, 180), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.26, -8.2, -4.64), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.28, -7.2, -3.66), angle = Angle(180, 180, 180), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "Masada_body", rel = "", pos = Vector(0.25, -13.4, -9.76), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.419, 20.406, 1.975), angle = Angle(0, 0, 180), size = Vector(0.699, 0.699, 0.699)},
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "Masada_body", pos = Vector(0, -7.4, -3.3), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Masada_body", pos = Vector(0, -2, 1.1), angle = Angle(0, 180, 0), size = Vector(0.4, 0.4, 0.4)},
@@ -142,7 +142,7 @@ SWEP.SightBGs = {main = 1, carryhandle = 0, none = 1}
 SWEP.BarrelBGs = {regular = 0}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {-450, -600},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_eotech", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {-450, -600},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Barrel extension", offset = {-450, -200}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Rail", offset = {-450, 250}, atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {400, -200}, atts = {"am_magnum", "am_matchgrade"}}}

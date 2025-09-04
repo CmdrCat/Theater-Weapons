@@ -79,7 +79,6 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "Saiga12k", pos = Vector(-0.383, -5.723, -2.077), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "Saiga12k", pos = Vector(0.068, -10.988, -8.846), angle = Angle(3.332, -90, 0), size = Vector(1, 1, 1)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Saiga12k", pos = Vector(-0.181, -0.817, 2.581), angle = Angle(0, 180, 0), size = Vector(0.349, 0.349, 0.349)},
 		["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", bone = "Saiga12k", pos = Vector(0.002, -5.196, -1.596), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
 		["md_pbs1"] = {model = "models/cw2/attachments/pbs1.mdl", bone = "Saiga12k", pos = Vector(-0.113, 17.656, -0.9), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
@@ -130,9 +129,9 @@ SWEP.ADSFireAnim = false
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -500}, atts = {"md_kobra", "md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_pso1"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -500}, atts = {"md_kobra", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_pso1"}},
 	[2] = {header = "Barrel", offset = {-200, -400}, atts = {"md_pbs1"}},
-	[3] = {header = "Rail", offset = {-200, 50}, atts = {"md_anpeq15"}, exclusions = {md_kobra = true, md_pso1 = true}, dependencies = {md_microt1 = true, md_eotech = true, md_aimpoint = true, md_schmidt_shortdot = true}},
+	[3] = {header = "Rail", offset = {-200, 50}, atts = {"md_anpeq15"}, exclusions = {md_kobra = true, md_pso1 = true}, dependencies = {md_microt1 = true,  md_aimpoint = true, md_schmidt_shortdot = true}},
 	[4] = {header = "Fore-end", offset = {800, -50}, atts = {"md_foregrip"}},
 	["+reload"] = {header = "Ammo", offset = {800, 350}, atts = {"am_slugrounds", "am_flechetterounds"}}}
 
@@ -197,7 +196,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 5
-SWEP.Primary.DefaultClip	= 5
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "12 Gauge"
 

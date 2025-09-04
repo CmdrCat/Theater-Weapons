@@ -134,7 +134,6 @@ if CLIENT then
 	    ["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "body", rel = "", pos = Vector(-0.136, 7.177, 7.445), angle = Angle(0, -90, 0), size = Vector(1.473, 1.473, 1.473)},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "body", rel = "", pos = Vector(-0.401, -0.774, -0.821), angle = Angle(0, 0, 0), size = Vector(1.159, 1.159, 1.159)},
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "body", rel = "", pos = Vector(-0.301, -1.418, -1.201), angle = Angle(0, 0, 0), size = Vector(1.24, 1.24, 1.24)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "body", rel = "", pos = Vector(0.487, -13.087, -12.2), angle = Angle(0, -90, 0), size = Vector(1.682, 1.682, 1.682)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "body", rel = "", pos = Vector(-0.401, -0.461, -0.82), angle = Angle(0, -90, 0), size = Vector(1.175, 1.175, 1.175)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "body", rel = "", pos = Vector(1.52, 25.5, 4.4), angle = Angle(0, 90, 90), size = Vector(0.730, 0.730, 0.730)},
 	
@@ -176,7 +175,7 @@ SWEP.QuickScopeSpreadIncrease = 0.22
 if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 
     SWEP.Attachments = {
-       [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_eotech", "md_schmidt_shortdot", "md_snip2_elcan", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_acog", "md_nightforce_nxs", "md_uecw_csgo_scope_ssg"}},
+       [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_schmidt_shortdot", "md_snip2_elcan", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_acog", "md_nightforce_nxs", "md_uecw_csgo_scope_ssg"}},
 	   [2] = {header = "Barrel", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
 	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
 	   [4] = {header = "Railed", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
@@ -192,7 +191,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
     elseif CustomizableWeaponry_G4P_UECW then
 	
 	SWEP.Attachments = {
-       [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_eotech", "md_schmidt_shortdot", "md_snip2_elcan", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_acog", "md_nightforce_nxs", "md_uecw_csgo_scope_ssg"}},
+       [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_schmidt_shortdot", "md_snip2_elcan", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_acog", "md_nightforce_nxs", "md_uecw_csgo_scope_ssg"}},
 	   [2] = {header = "Barrel", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
 	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
 	   [4] = {header = "Railed", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
@@ -206,7 +205,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 	elseif CustomizableWeaponry_OP_Perks then
 	
     SWEP.Attachments = {
-       [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_aimpoint", "md_eotech", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+       [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	   [2] = {header = "Barrel", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
 	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
 	   [4] = {header = "Railed", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
@@ -221,7 +220,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 	elseif not CustomizableWeaponry_OP_Perks or CustomizableWeaponry_G4P_UECW then
 	
     SWEP.Attachments = {
-       [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_aimpoint", "md_eotech", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+       [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	   [2] = {header = "Barrel", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
 	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
 	   [4] = {header = "Railed", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
@@ -291,7 +290,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 7
-SWEP.Primary.DefaultClip	= 56
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".408 Cheytac"
 

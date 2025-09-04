@@ -102,6 +102,17 @@ SWEP.Attachments = {[2] = {header = "Optic", offset = {975, -275}, atts = {"doi_
 [1] = {header = "Accessory", offset = {-200, -250}, atts = {"doi_atow_sling"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
 ["+reload"] = {header = "Ammo", offset = {-110, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}}}
 
+SWEP.AttachmentExclusions = {
+    ["doi_atow_fg42m9kconv"] = {
+        "doi_atow_heavybolt",
+        "doi_atow_sling",
+        "am_atow_light",
+        "am_atow_lowvel",
+        "am_atow_ap"
+    }
+}
+
+
 SWEP.Animations = {fire = {"base_fire2"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
 	fire_last = {"base_firelast"},
@@ -149,7 +160,7 @@ SWEP.RVBYawMod = 0
 SWEP.RVBRollMod = .5
 
 SWEP.Primary.ClipSize		= 20
-SWEP.Primary.DefaultClip	= 20
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 
 if CustomizableWeaponry_doi_atow_hl2ammo then

@@ -80,7 +80,6 @@ if CLIENT then
 	
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "scar", pos = Vector(-0.233, -6.4, -2.172), angle = Angle(0, 0, 0), adjustment = {min = -6.4, max = -4, axis = "y", inverseOffsetCalc = true}, size = Vector(0.899, 0.899, 0.899)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "scar", pos = Vector(0.273, -11.3, -8.363), angle = Angle(3.332, -90, 0), adjustment = {min = -11.3, max = -9, axis = "y", inverseOffsetCalc = true}, size = Vector(1, 1, 1)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "scar", pos = Vector(-0.172, 7.369, 2.819), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "scar", pos = Vector(-0.392, -3.997, -1.839), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "scar", pos = Vector(0.016, -1.2, 3.079), angle = Angle(0, 180, 0), adjustment = {min = -1.2, max = 4, axis = "y", inverseOffsetCalc = true}, size = Vector(0.4, 0.4, 0.4)},
@@ -129,7 +128,7 @@ SWEP.MuzzleVelocity = 714 -- in meter/s
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Barrel", offset = {-400, -500},  atts = {"md_saker"}},
 	[3] = {header = "Rail", offset = {-400, -50},  atts = {"md_anpeq15"}},
 	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
@@ -174,7 +173,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 20
-SWEP.Primary.DefaultClip	= 20
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 

@@ -57,7 +57,6 @@ if CLIENT then
 	
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "mp7_main", pos = Vector(-4.927, 2.484, 0.188), angle = Angle(-90, 90, 0), size = Vector(0.8, 0.8, 0.8)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "mp7_main", pos = Vector(-10.389, 9.3, -0.278), angle = Angle(0, 3.332, -90), size = Vector(1, 1, 1)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "mp7_main", pos = Vector(-0.819, -2.135, -0.005), angle = Angle(90, 0, -90), size = Vector(0.349, 0.349, 0.349)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "mp7_main", pos = Vector(5.162, -0.343, -0.687), angle = Angle(0, 180, 180), size = Vector(0.5, 0.5, 0.5)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "mp7_main", pos = Vector(-4.719, 2.282, 0.25), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
@@ -78,7 +77,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
 SWEP.Attachments = {
-	[1] = {header = "Sight", offset = {1100, -400}, atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+	[1] = {header = "Sight", offset = {1100, -400}, atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Barrel", offset = {-200, -400}, atts = {"bg_mp7_unsuppressed"}},
 	[3] = {header = "Rail", offset = {-200, 0}, atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {1100, 35}, atts = {"am_magnum", "am_matchgrade"}}
@@ -138,7 +137,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 40
-SWEP.Primary.DefaultClip	= 40
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "4.6x30MM"
 

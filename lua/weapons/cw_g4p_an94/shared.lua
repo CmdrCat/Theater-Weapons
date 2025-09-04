@@ -87,7 +87,7 @@ if CLIENT then
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body_mesh", rel = "", pos = Vector(3.588, -0.24, -2.158), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "body_mesh", rel = "", pos = Vector(-3.8, -0.101, 2.25), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255)},		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "body_mesh", rel = "", pos = Vector(6.657, 0.18, -7.105), angle = Angle(5, 180, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "body_mesh", rel = "", pos = Vector(-3.8, -0.101, 2.25), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255)},
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "body_mesh", rel = "", pos = Vector(-2.011, -0.075, 2.035), angle = Angle(0, -90, 0), size = Vector(0.649, 0.649, 0.649), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "body", rel = "", pos = Vector(-0.551, -2.34, -2.639), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "body_mesh", rel = "", pos = Vector(-3.661, -0.04, -0.22), angle = Angle(0, -90, 0), size = Vector(1.95, 1.95, 1.95), color = Color(255, 255, 255, 255)},
@@ -130,7 +130,7 @@ end
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_microt1","md_cmore", "md_reflex", "md_trijicon", "md_elcan", "md_eotech", "md_aimpoint", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_microt1","md_cmore", "md_reflex", "md_trijicon", "md_elcan",  "md_aimpoint", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Barrel extension", offset = {100, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-400,-500}, atts = {"md_foregrip"}},
 	[4] = {header = "Magazine", offset = {-200, 0}, atts = {"md_uecw_akmag"}},
@@ -172,7 +172,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.45x39MM"
 

@@ -68,7 +68,6 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		["md_pbs1"] = { type = "Model", model = "models/cw2/attachments/pbs1.mdl", bone = "body", rel = "", pos = Vector(-0.031, 20.329, -0.635), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "body", rel = "", pos = Vector(0.319, -9.629, -11.506), angle = Angle(3.332, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body", rel = "", pos = Vector(-0.232, -2.754, -3.096), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "body", rel = "", pos = Vector(-0.385, -3.379, -2.883), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "body", rel = "", pos = Vector(-0.292, -1.991, -2.57), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -105,7 +104,7 @@ SWEP.ReceiverBGs = {main = 3, rpk = 1, regular = 0}
 SWEP.MagBGs = {main = 4, regular = 0, rpk = 1}
 
 SWEP.Attachments = {
-	{header = "Sight", offset = {950, -500},  atts = {"md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+	{header = "Sight", offset = {950, -500},  atts = {"md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	{header = "Barrel", offset = {0, -500}, atts = {"md_pbs1"}},
 	{header = "Handguard", offset = {-400, 100}, atts = {"md_foregrip"}, exclusions = {bg_ak74_rpkbarrel = true}},
 	["+reload"] = {header = "Ammo", offset = {950, 300}, atts = {"am_magnum", "am_matchgrade"}}}
@@ -155,7 +154,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x39MM"
 
