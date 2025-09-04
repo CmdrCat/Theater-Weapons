@@ -46,8 +46,8 @@ if CLIENT then
 	SWEP.EXPSPos = Vector(-4.881, 0, 1.12)
 	SWEP.EXPSAng = Vector(0, 0, 0)
 
-	SWEP.IronSightsPos = Vector(-4.821, -5.12, 2.24)
-	SWEP.IronSightsAng = Vector(0, 0, 0)
+	SWEP.IronsightPos = Vector(-4.816, -2, 2.24)
+	SWEP.IronsightAng = Vector(0, 0.009, 0)
 
 	
 	SWEP.SprintPos = Vector(1.786, 0, -1)
