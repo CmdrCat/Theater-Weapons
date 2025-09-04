@@ -14,7 +14,7 @@ if CLIENT then
 	SWEP.IconLetter = "f"
 	killicon.AddFont("cw_deagle", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
-	SWEP.MuzzleEffect = "muzzleflash_pistol"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
 	
 	SWEP.DryFire = true

@@ -14,7 +14,7 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .55
 
-	SWEP.MuzzleEffect = "muzzleflash_smg"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
 	SWEP.ShellScale = 0.7
@@ -156,12 +156,12 @@ SWEP.FireSound = "CW_MP9_FIRE"
 SWEP.FireSoundSuppressed = "CW_MAC11_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.6
 
-SWEP.HipSpread = 0.036
-SWEP.AimSpread = 0.01
-SWEP.VelocitySensitivity = 1.35
-SWEP.MaxSpreadInc = 0.033
-SWEP.SpreadPerShot = 0.004
-SWEP.SpreadCooldown = 0.09
+SWEP.HipSpread = 0.015
+SWEP.AimSpread = 0.005
+SWEP.VelocitySensitivity = 1.5
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 34
 SWEP.DeployTime = 0.6

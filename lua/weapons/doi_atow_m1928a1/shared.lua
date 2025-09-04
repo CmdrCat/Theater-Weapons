@@ -17,7 +17,7 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/inventory/weapon_thompson_m1928a1")
 	killicon.Add( "doi_atow_m1928a1", "vgui/inventory/killicons/weapon_thompson_m1928a1", Color(255, 120, 40, 0))
 	
-	SWEP.MuzzleEffect = "muzzleflash_ak74"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	

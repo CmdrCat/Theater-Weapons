@@ -17,7 +17,7 @@
         SWEP.EffectiveRange_Orig = 40 * 39.37
         SWEP.DamageFallOff_Orig = .4
 
-        SWEP.MuzzleEffect = "muzzleflash_smg"
+        SWEP.MuzzleEffect = "muzzleflash_suppressed"
         SWEP.PosBasedMuz = true
         SWEP.SnapToGrip = true
         SWEP.Shell = "smallshell"

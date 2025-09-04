@@ -14,7 +14,7 @@ if CLIENT then
 	SWEP.IconLetter = "f"
 	killicon.AddFont("cw_deagle", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
-	SWEP.MuzzleEffect = "muzzleflash_pistol"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
 	
 	SWEP.DryFire = true
@@ -84,7 +84,7 @@ SWEP.CanRestOnObjects = false
 SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -550}, atts = {"md_docter"}},
 [2] = {header = "Barrel extension", offset = {-600, -350}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
 [3] = {header = "Rail", offset = {-300, 200}, atts = {"md_anpeq15", "md_csgo_taclight"}},
-[4] = {header = "Fire Control Group", offset = {-300, 200}, atts = {"uecw_glock_switch"}},
+[4] = {header = "Fire Control Group", offset = {550, 300}, atts = {"uecw_glock_switch"}},
 ["+reload"] = {header = "Ammo", offset = {400, -100}, atts = {"am_magnum", "am_matchgrade"}}}
 
 SWEP.Animations = {fire = "shoot_1",

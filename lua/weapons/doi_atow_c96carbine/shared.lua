@@ -17,7 +17,7 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/inventory/weapon_c96carbine")
 	killicon.Add( "doi_atow_c96carbine", "vgui/inventory/killicons/weapon_c96carbine", Color(255, 120, 40, 0))
 	
-	SWEP.MuzzleEffect = "muzzleflash_ak47"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SightWithRail = true
 	
@@ -163,12 +163,12 @@ SWEP.FireDelay = 60/1000
 SWEP.FireSound = "DOIC96_FIRE"
 SWEP.Recoil = .75
 
-SWEP.HipSpread = 0.055
-SWEP.AimSpread = 0.0085
+SWEP.HipSpread = 0.01
+SWEP.AimSpread = 0.005
 SWEP.VelocitySensitivity = .45
-SWEP.MaxSpreadInc = 0.05
-SWEP.SpreadPerShot = 0.005
-SWEP.SpreadCooldown = 0.2
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 32
 SWEP.DeployTime = .5

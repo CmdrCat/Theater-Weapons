@@ -15,7 +15,7 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 30 * 39.37
 	SWEP.DamageFallOff_Orig = .5
 
-	SWEP.MuzzleEffect = "muzzleflash_smg"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
 	SWEP.Shell = "smallshell"
@@ -94,7 +94,7 @@ SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {700, -400}, atts = {"md_microt1", "too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Barrel", offset = {200, -400}, atts = {"md_tundra9mm"}},
 	[3] = {header = "Handguard", offset = {-400, -400}, atts = {"too_sdbar_bar"}},
-	[4] = {header = "Conversion", offset = {-400, -400}, atts = {"too_mp5_22lr_rifle"}},
+	[4] = {header = "Conversion", offset = {400, 400}, atts = {"too_mp5_22lr_rifle"}},
 	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {700, 35}, atts = {"am_magnum", "am_matchgrade"}}
 }

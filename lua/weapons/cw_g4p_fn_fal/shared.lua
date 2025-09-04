@@ -18,7 +18,7 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 60 * 39.37
 	SWEP.DamageFallOff_Orig = .25
 
-	SWEP.MuzzleEffect = "muzzleflash_ak74"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.NoSilMuz = true
 	SWEP.PosBasedMuz = true
 	SWEP.SnapToGrip = true

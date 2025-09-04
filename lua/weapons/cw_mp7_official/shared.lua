@@ -21,7 +21,7 @@ if CLIENT then
 	SWEP.WMPos = Vector(0, -2, -2)
 	SWEP.WMAng = Vector(-5, 0, 180)
 	 
-	SWEP.MuzzleEffect = "muzzleflash_smg"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
 	SWEP.Shell = "smallshell"
@@ -146,12 +146,12 @@ SWEP.FireSound = "CW_MP7_OFFICIAL_FIRE"
 SWEP.FireSoundSuppressed = "CW_MP7_OFFICIAL_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.55
 
-SWEP.HipSpread = 0.04
-SWEP.AimSpread = 0.0075
+SWEP.HipSpread = 0.015
+SWEP.AimSpread = 0.005
 SWEP.VelocitySensitivity = 1.5
-SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.005
-SWEP.SpreadCooldown = 0.13
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 32
 SWEP.DeployTime = 0.5
