@@ -95,7 +95,7 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Barrel", offset = {-500, -300}, atts = {"md_saker"}},
 	[3] = {header = "Rail", offset = {-500, 200},  atts = {"md_anpeq15"}},
-	[4] = {header = "Internals", offset = {2000, 800},  atts = {"too_l86_conversion"}},
+	[4] = {header = "Internals", offset = {700, 700},  atts = {"too_l86_conversion"}},
     ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
     ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}
 

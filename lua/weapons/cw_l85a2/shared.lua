@@ -91,6 +91,7 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Barrel", offset = {-500, -300}, atts = {"md_saker"}},
 	[3] = {header = "Rail", offset = {-500, 200},  atts = {"md_anpeq15"}},
+	[4] = {header = "Conversion", offset = {700, 600},  atts = {"cw_l85a1_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, 150}, atts = {"am_magnum", "am_matchgrade"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
@@ -178,4 +179,9 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
+self.DamageFallOff = .3
+if (self.ActiveAttachments.cw_l85a1_conversion) then
+self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + .9))
+end
 end
