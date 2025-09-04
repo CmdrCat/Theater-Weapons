@@ -157,16 +157,16 @@ end
 
 SWEP.FireDelay = 60/1300
 SWEP.FireSound = "DOIMG42_FIRE"
-SWEP.Recoil = 1.25
+SWEP.Recoil = 1.5
 SWEP.BipodRecoilModifier = 0.3 --0.1 -- = 0 --.4
  -- = 1.2
 
-SWEP.HipSpread = 0.08
-SWEP.AimSpread = 0.01
+SWEP.HipSpread = 0.14
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1
-SWEP.MaxSpreadInc = 0.05
-SWEP.SpreadPerShot = 0.0025
-SWEP.SpreadCooldown = 0.3
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 24
 SWEP.DeployTime = 1

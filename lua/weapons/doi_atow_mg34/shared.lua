@@ -148,12 +148,12 @@ SWEP.Recoil = 1.2
 SWEP.BipodRecoilModifier = 0.3 --0.1 -- = 0 --.65
  -- = 1.2
 
-SWEP.HipSpread = 0.07
-SWEP.AimSpread = 0.008
+SWEP.HipSpread = 0.14
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1
-SWEP.MaxSpreadInc = 0.08
-SWEP.SpreadPerShot = 0.004
-SWEP.SpreadCooldown = 0.14
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 33
 SWEP.DeployTime = .8

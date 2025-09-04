@@ -182,12 +182,12 @@ SWEP.FireSound = "CW_SCARH_FIRE"
 SWEP.FireSoundSuppressed = "CW_G3A3_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.4
 
-SWEP.HipSpread = 0.048
-SWEP.AimSpread = 0.0035
+SWEP.HipSpread = 0.125
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 2
-SWEP.MaxSpreadInc = 0.065
-SWEP.SpreadPerShot = 0.01
-SWEP.SpreadCooldown = 0.15
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 42
 SWEP.DeployTime = 1

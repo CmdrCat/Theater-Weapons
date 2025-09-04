@@ -269,13 +269,13 @@ SWEP.FireSoundSuppressed = "DOIGARAND_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.745
 SWEP.BipodRecoilModifier = 0.1 -- = 0 --.3
  -- = 1
-SWEP.HipSpread = 0.13
+SWEP.HipSpread = 0.125
 
-SWEP.AimSpread = 0.0028
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = .5
-SWEP.MaxSpreadInc = 0.2
-SWEP.SpreadPerShot = 0.02
-SWEP.SpreadCooldown = 0.22
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 83
 SWEP.DeployTime = .5

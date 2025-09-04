@@ -161,15 +161,15 @@ end
 
 SWEP.FireDelay = 60/530
 SWEP.FireSound = "DOILEWIS_FIRE"
-SWEP.Recoil = 1.1
+SWEP.Recoil = 0.4
 SWEP.BipodRecoilModifier = 0.4 --0.1 -- = 0 --.7
 
-SWEP.HipSpread = 0.075
-SWEP.AimSpread = 0.01
+SWEP.HipSpread = 0.14
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1.5
-SWEP.MaxSpreadInc = 0.05
-SWEP.SpreadPerShot = 0.006
-SWEP.SpreadCooldown = 0.14
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 48
 SWEP.DeployTime = .675

@@ -150,7 +150,7 @@ SWEP.FireSound = "CW_L85A2_FIRE"
 SWEP.FireSoundSuppressed = "CW_L85A2_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.45
 
-SWEP.HipSpread = 0.12
+SWEP.HipSpread = 0.13
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.045

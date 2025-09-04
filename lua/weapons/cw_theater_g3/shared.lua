@@ -186,7 +186,7 @@ SWEP.FireSound = "CW_TOO_G3A3_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_G3A3_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.5
 
-SWEP.HipSpread = 0.25
+SWEP.HipSpread = 0.13
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 2
 SWEP.MaxSpreadInc = 0.045

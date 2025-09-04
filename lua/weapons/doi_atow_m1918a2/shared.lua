@@ -167,16 +167,16 @@ SWEP.FireDelay = 60/600
 SWEP.FireDelayFast = 60/600
 SWEP.FireDelaySlow = 60/425
 SWEP.FireSound = "DOIBAR_FIRE"
-SWEP.Recoil = 1.4
+SWEP.Recoil = 0.6
 SWEP.BipodRecoilModifier = 0.3 --0.1 -- = 0 --0.35
  -- = 1
 
-SWEP.HipSpread = 0.075
-SWEP.AimSpread = 0.008
+SWEP.HipSpread = 0.125
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1
-SWEP.MaxSpreadInc = 0.055
-SWEP.SpreadPerShot = 0.01
-SWEP.SpreadCooldown = 0.24
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 45
 SWEP.DeployTime = .7

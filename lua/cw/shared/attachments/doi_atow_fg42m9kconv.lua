@@ -3,11 +3,12 @@ att.name = "doi_atow_fg42m9kconv"
 att.displayName = "M9K Variant"
 att.displayNameShort = "M9K"
 
-att.statModifiers = {FireDelayMult = -4 / 279,
-HipSpreadMult = -0.88,
+att.statModifiers = {DamageMult = -1 / 33,
+FireDelayMult = -4 / 279,
+HipSpreadMult = -0.99,
 ReloadSpeedMult = 0.622396,
-RecoilMult = 0.25,
-MaxSpreadIncMult = -0.88}
+RecoilMult = -0.45,
+MaxSpreadIncMult = -0.99}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

@@ -194,12 +194,12 @@ SWEP.FireSound = "CW_FAL_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAL_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.05
 
-SWEP.HipSpread = 0.045
+SWEP.HipSpread = 0.13
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1.8
-SWEP.MaxSpreadInc = 0.04
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.13
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 57
 SWEP.DeployTime = 1
