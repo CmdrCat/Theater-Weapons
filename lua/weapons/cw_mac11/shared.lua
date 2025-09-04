@@ -146,7 +146,7 @@ SWEP.Chamberable = false -- MAC-11 is an open-bolt weapon
 SWEP.FireDelay = 0.05
 SWEP.FireSound = "CW_MAC11_FIRE"
 SWEP.FireSoundSuppressed = "CW_MAC11_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.65
+SWEP.Recoil = 1.5
 SWEP.RecoilToSpread = 1.6 -- should actually be called SpreadToRecoil, but whatever
 
 SWEP.HipSpread = 0.01

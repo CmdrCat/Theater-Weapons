@@ -6,7 +6,7 @@
 
     if CLIENT then
         SWEP.DrawCrosshair = false
-        SWEP.PrintName = "UMP-45"
+        SWEP.PrintName = "UMP45"
         SWEP.UseHands = true
         SWEP.CSMuzzleFlashes = true
         SWEP.ViewModelMovementScale = 1.15
@@ -154,14 +154,14 @@
     SWEP.FireDelay = 60 / 600
     SWEP.FireSound = "CW_TOO_UMP45_FIRE"
     SWEP.FireSoundSuppressed = "CW_TOO_UMP45_FIRE_SUPPRESSED"
-    SWEP.Recoil = 1.05
+    SWEP.Recoil = 0.75
 
-    SWEP.HipSpread = 0.045
-    SWEP.AimSpread = 0.003
+    SWEP.HipSpread = 0.04
+    SWEP.AimSpread = 0.005
     SWEP.VelocitySensitivity = 1.8
-    SWEP.MaxSpreadInc = 0.04
-    SWEP.SpreadPerShot = 0.007
-    SWEP.SpreadCooldown = 0.13
+    SWEP.MaxSpreadInc = 0.045
+    SWEP.SpreadPerShot = 0.0002
+    SWEP.SpreadCooldown = 0.0005
     SWEP.Shots = 1
     SWEP.Damage = 48
     SWEP.DeployTime = 1

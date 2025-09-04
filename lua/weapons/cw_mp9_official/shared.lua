@@ -154,7 +154,7 @@ SWEP.Chamberable = true
 SWEP.FireDelay = 60 / 900
 SWEP.FireSound = "CW_MP9_FIRE"
 SWEP.FireSoundSuppressed = "CW_MAC11_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.75
 
 SWEP.HipSpread = 0.015
 SWEP.AimSpread = 0.005

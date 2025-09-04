@@ -152,12 +152,12 @@ SWEP.FireSoundSuppressed = "DOIM3_FIRE_SUPP"
 SWEP.Recoil = .9
 
 
-SWEP.HipSpread = 0.042
-SWEP.AimSpread = 0.0135
+SWEP.HipSpread = 0.02
+SWEP.AimSpread = 0.005
 SWEP.VelocitySensitivity = .35
-SWEP.MaxSpreadInc = 0.055
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.17
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 50
 SWEP.DeployTime = .4
