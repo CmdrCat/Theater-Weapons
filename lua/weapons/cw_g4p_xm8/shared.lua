@@ -165,6 +165,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -600},  atts = {"md_
 	[2] = {header = "Barrel extension", offset = {-300, -600},  atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-300, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Magazine", offset = {-300, 350},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_cmag", "md_uecw_60rnd"}},
+	[5] = {header = "Conversion", offset = {700, 350}, atts = {"uecw_m8a1_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, -100}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 SWEP.AttachmentExclusions = {
@@ -243,6 +244,9 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
+if (self.ActiveAttachments.uecw_m8a1_conversion) then
+self.EffectiveRange = ((self.EffectiveRange - 20 * 39.37))
+end
 end
 
 end

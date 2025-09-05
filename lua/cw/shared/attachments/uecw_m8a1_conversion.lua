@@ -1,0 +1,28 @@
+local att = {}
+att.name = "uecw_m8a1_conversion"
+att.displayName = "M8A1 Conversion"
+att.displayNameShort = "M8A1"
+
+att.statModifiers = {FireDelayMult = -2 / 5,
+DamageMult = -1 / 3}
+
+if CLIENT then
+	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.description = {[1] = {t = "Converts to a 4-round burst variant", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+end
+
+function att:attachFunc()
+	self:CycleFiremodes() 
+	self.FireModes = {"semi","safe","4burst"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+end
+
+function att:detachFunc()
+	self:CycleFiremodes()
+	self.FireModes = {"auto","semi","safe"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+end
+
+CustomizableWeaponry:registerAttachment(att)

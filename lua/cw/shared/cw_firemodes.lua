@@ -24,4 +24,5 @@ CustomizableWeaponry.firemodes:registerFiremode("pump", "PUMP-ACTION", false, 0,
 CustomizableWeaponry.firemodes:registerFiremode("break", "BREAK-ACTION", false, 0, 1)
 CustomizableWeaponry.firemodes:registerFiremode("2burst", "2-ROUND BURST", true, 2, 2)
 CustomizableWeaponry.firemodes:registerFiremode("3burst", "3-ROUND BURST", true, 3, 3)
+CustomizableWeaponry.firemodes:registerFiremode("4burst", "4-ROUND BURST", true, 4, 4)
 CustomizableWeaponry.firemodes:registerFiremode("safe", "SAFE", false, 0, 0)

@@ -3,7 +3,7 @@ att.name = "doi_atow_fg42m9kconv"
 att.displayName = "M9K Variant"
 att.displayNameShort = "M9K"
 
-att.statModifiers = {DamageMult = -1 / 33,
+att.statModifiers = {DamageMult = -1 / 11,
 FireDelayMult = -4 / 279,
 HipSpreadMult = -0.99,
 ReloadSpeedMult = 0.5288,
