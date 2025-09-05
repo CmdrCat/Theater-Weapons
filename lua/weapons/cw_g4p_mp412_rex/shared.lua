@@ -14,6 +14,9 @@ if CLIENT then
 	SWEP.IconLetter = "f"
 	killicon.AddFont("cw_deagle", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .85
+
 	SWEP.MuzzleEffect = "muzzleflash_pistol_rbull"
 	SWEP.PosBasedMuz = true
 	
@@ -135,7 +138,7 @@ SWEP.MaxSpreadInc = 0.06
 SWEP.SpreadPerShot = 0.02
 SWEP.SpreadCooldown = 0.25
 SWEP.Shots = 1
-SWEP.Damage = 46
+SWEP.Damage = 108
 SWEP.DeployTime = 1
 SWEP.Chamberable = false
 
@@ -145,5 +148,12 @@ SWEP.ReloadHalt = 4
 
 SWEP.ReloadTime_Empty = 4
 SWEP.ReloadHalt_Empty = 4
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 30 * 39.37
+self.DamageFallOff = .85
+end
 
 end

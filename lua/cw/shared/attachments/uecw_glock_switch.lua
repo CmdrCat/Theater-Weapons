@@ -3,7 +3,8 @@ att.name = "uecw_glock_switch"
 att.displayName = "Glock Switch"
 att.displayNameShort = "Switch"
 
-att.statModifiers = {FireDelayMult = -1 / 3}
+att.statModifiers = {DamageMult = -5 / 16,
+	FireDelayMult = -1 / 3}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

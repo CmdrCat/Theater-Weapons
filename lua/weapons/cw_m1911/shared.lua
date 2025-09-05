@@ -45,6 +45,9 @@ if CLIENT then
 	SWEP.SightWithRail = true
 	SWEP.FOVPerShot = 0.3
 
+	SWEP.EffectiveRange_Orig = 25 * 39.37
+	SWEP.DamageFallOff_Orig = .8
+
 	SWEP.AttachmentModelsVM = {
 		["md_cobram2"] = {model = "models/cw2/attachments/cobra_m2.mdl", bone = "body", pos = Vector(7.498, -1.479, 0.002), angle = Angle(0, 180, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255)},
 		["md_rail"] = {model = "models/cw2/attachments/slimpistolrail.mdl", bone = "body", pos = Vector(3.48, -0.452, 0), angle = Angle(0, 0, -90), size = Vector(0.1, 0.1, 0.1)},
@@ -136,7 +139,7 @@ SWEP.MaxSpreadInc = 0.036
 SWEP.SpreadPerShot = 0.0125
 SWEP.SpreadCooldown = 0.18
 SWEP.Shots = 1
-SWEP.Damage = 25
+SWEP.Damage = 48
 SWEP.DrawSpeed = 1.5
 SWEP.DeployTime = 1.1
 --SWEP.Chamberable = false
@@ -150,3 +153,10 @@ SWEP.ReloadTime_Empty = 1.69
 SWEP.ReloadHalt_Empty = 2.32
 
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 25 * 39.37
+self.DamageFallOff = .8
+end

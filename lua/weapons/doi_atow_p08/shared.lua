@@ -21,8 +21,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 170 * 39.37
-	SWEP.DamageFallOff_Orig = .36
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .75
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0
@@ -164,7 +164,7 @@ SWEP.MaxSpreadInc = 0.055
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.2
 SWEP.Shots = 1
-SWEP.Damage = 22
+SWEP.Damage = 51
 SWEP.DeployTime = .2
 SWEP.HolsterTime = .30
 
@@ -188,18 +188,18 @@ self.Owner.ViewAff = 0
 	self:setBodygroup(self.SightBGs.main, self.SightBGs.off)
 	end
 	
-	self.EffectiveRange = 170 * 39.37
-	self.DamageFallOff = .36
+	self.EffectiveRange = 30 * 39.37
+	self.DamageFallOff = .75
 	
 	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 40 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 2.5 * 39.37))
 end
 	if self.ActiveAttachments.am_atow_heavy then
 	self.DamageFallOff = ((self.DamageFallOff - .108))
 end
 	
 	if self.ActiveAttachments.doi_atow_lugerlongbarrel then
-	self.EffectiveRange = ((self.EffectiveRange + 25 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 2 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .03))
 end
 end

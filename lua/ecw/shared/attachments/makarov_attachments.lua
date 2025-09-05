@@ -48,8 +48,7 @@ pb.isSight = true
 pb.statModifiers = {RecoilMult = -0.1,
 	AimSpreadMult = -0.2,
 	DrawSpeedMult = -0.05,
-	DamageMult = 0.1,
-	FireDelayMult = 0.2}
+	FireDelayMult = 2 / 13}
 
 if CLIENT then
 	pb.displayIcon = surface.GetTextureID("atts/pb6p9")
@@ -87,7 +86,7 @@ pb_supp.isBG = true
 
 pb_supp.statModifiers = {RecoilMult = -0.1,
 	OverallMouseSensMult = -0.05,
-	DamageMult = -0.15}
+	DamageMult = 3 / 16}
 
 if CLIENT then
 	pb_supp.displayIcon = surface.GetTextureID("atts/pb_suppressor")

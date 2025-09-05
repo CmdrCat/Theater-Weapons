@@ -30,6 +30,9 @@ if CLIENT then
 	--SWEP.LuaVMRecoilAxisMod = {vert = 1, hor = 1.5, roll = 3, forward = 1, pitch = 4}
 	SWEP.CustomizationMenuScale = 0.01
 	SWEP.DisableSprintViewSimulation = true
+
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .85
 end
 
 SWEP.ShootWhileProne = true
@@ -94,7 +97,7 @@ SWEP.MaxSpreadInc = 0.06
 SWEP.SpreadPerShot = 0.02
 SWEP.SpreadCooldown = 0.25
 SWEP.Shots = 1
-SWEP.Damage = 50
+SWEP.Damage = 69
 SWEP.DeployTime = 0.7
 SWEP.NearWallDistance = 15
 SWEP.Chamberable = false
@@ -107,3 +110,10 @@ SWEP.ReloadHalt = 2.7
 
 SWEP.ReloadTime_Empty = 1.6
 SWEP.ReloadHalt_Empty = 2.7
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 30 * 39.37
+self.DamageFallOff = .85
+end

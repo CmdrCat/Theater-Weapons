@@ -46,6 +46,9 @@ if CLIENT then
 	SWEP.SightWithRail = true
 	SWEP.FOVPerShot = 0.3
 
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .75
+
 	SWEP.AttachmentModelsVM = {
 		["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "wpn_body", pos = Vector(-0.203, -9.6, 1.97), angle = Angle(0, 0, 0), size = Vector(0.52, 0.52, 0.52)},
 		["md_rail"] = {model = "models/cw2/attachments/pistolrail.mdl", bone = "wpn_body", pos = Vector(-0.173, -4.663, 0.777), angle = Angle(0, -90, 0), size = Vector(0.15, 0.15, 0.15)},
@@ -133,7 +136,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.17
 SWEP.Shots = 1
-SWEP.Damage = 21
+SWEP.Damage = 47
 SWEP.DeployTime = 0.4
 --SWEP.Chamberable = false
 SWEP.NearWallDistance = 15
@@ -147,3 +150,10 @@ SWEP.ReloadTime_Empty = 2.78
 SWEP.ReloadHalt_Empty = 3
 
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 30 * 39.37
+self.DamageFallOff = .75
+end

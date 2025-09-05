@@ -6,8 +6,7 @@ att.isBG = true
 att.SpeedDec = 5
 
 att.statModifiers = {RecoilMult = -0.2,
-OverallMouseSensMult = -0.05,
-FireDelayMult = -.05}
+OverallMouseSensMult = -0.05,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/c96stock")

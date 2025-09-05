@@ -25,8 +25,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 300 * 39.37
-	SWEP.DamageFallOff_Orig = .65
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .85
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0
@@ -174,7 +174,7 @@ SWEP.ClumpSpread = nil
 SWEP.SpreadPerShot = 0.04
 SWEP.SpreadCooldown = 0.7
 SWEP.Shots = 1
-SWEP.Damage = 50
+SWEP.Damage = 69
 SWEP.DeployTime = .375
 SWEP.HolsterTime = .35
 
@@ -199,25 +199,25 @@ SWEP.ReloadHalt_Empty = 5.3
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
-	self.EffectiveRange = 300 * 39.37
-	self.DamageFallOff = .65
+	self.EffectiveRange = 30 * 39.37
+	self.DamageFallOff = .85
 	
 	if self.ActiveAttachments.doi_atow_29ext then
-	self.EffectiveRange = ((self.EffectiveRange + 50 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 2.5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .05))
 end
 	if self.ActiveAttachments.doi_atow_29short then
-	self.EffectiveRange = ((self.EffectiveRange - 50 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange - 2.5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff + .075))
 end
 	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 105 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 end
 	if self.ActiveAttachments.am_atow_heavy then
 	self.DamageFallOff = ((self.DamageFallOff - .195))
 end
 	if self.ActiveAttachments.am_atow_riot then
-	self.EffectiveRange = ((self.EffectiveRange - 125 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange - 7.5 * 39.37))
 end
 		
 		clip = self:Clip1()	

@@ -3,7 +3,8 @@ att.name = "too_thunderbird_conversion"
 att.displayName = "Thunderbird Conversion"
 att.displayNameShort = "Thunderbird"
 
-att.statModifiers = {FireDelayMult = -191 / 543.5}
+att.statModifiers = {DamageMult = -27 / 79,
+	FireDelayMult = -191 / 543.5}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

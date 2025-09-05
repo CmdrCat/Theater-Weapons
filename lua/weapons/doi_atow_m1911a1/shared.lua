@@ -23,8 +23,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 150 * 39.37
-	SWEP.DamageFallOff_Orig = .64
+	SWEP.EffectiveRange_Orig = 25 * 39.37
+	SWEP.DamageFallOff_Orig = .8
 	
 	SWEP.Shell = "khr9x19"
 	SWEP.ShellScale = .695
@@ -150,7 +150,7 @@ SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.2
 SWEP.Shots = 1
-SWEP.Damage = 26
+SWEP.Damage = 58
 SWEP.DeployTime = .25
 SWEP.HolsterTime = .35
 
@@ -170,17 +170,17 @@ SWEP.ReloadHalt_Empty = 3
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
-self.EffectiveRange = 150 * 39.37
-self.DamageFallOff = .64
+self.EffectiveRange = 25 * 39.37
+self.DamageFallOff = .8
 
 	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 62 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 end
 	if self.ActiveAttachments.am_atow_heavy then
 	self.DamageFallOff = ((self.DamageFallOff - .192))
 end
 	if self.ActiveAttachments.am_atow_riot then
-	self.EffectiveRange = ((self.EffectiveRange - 68.7 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange - 7.5 * 39.37))
 end
 end
 

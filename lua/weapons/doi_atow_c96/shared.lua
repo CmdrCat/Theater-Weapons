@@ -26,8 +26,8 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = .85
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.8
 	
-	SWEP.EffectiveRange_Orig = 150 * 39.37
-	SWEP.DamageFallOff_Orig = .35
+	SWEP.EffectiveRange_Orig = 35 * 39.37
+	SWEP.DamageFallOff_Orig = .7
 	
 	SWEP.Shell = "khr763"
 	SWEP.ShellScale = .94
@@ -232,7 +232,7 @@ SWEP.MaxSpreadInc = 0.032
 SWEP.SpreadPerShot = 0.005
 SWEP.SpreadCooldown = 0.17
 SWEP.Shots = 1
-SWEP.Damage = 21
+SWEP.Damage = 57
 SWEP.DeployTime = .35
 SWEP.HolsterTime = .35
 
@@ -274,18 +274,22 @@ if self.FireMode == "semi" then
 	self.DisableSprintViewSimulation = true
 	end
 	
-	self.EffectiveRange = 150 * 39.37
-	self.DamageFallOff = .35
-	
+	self.EffectiveRange = 35 * 39.37
+	self.DamageFallOff = .7
+
+	if self.ActiveAttachments.doi_atow_m2carbineconv then
+	self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + 0.05))
+end
 	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 48 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 end
 	if self.ActiveAttachments.am_atow_heavy then
 	self.DamageFallOff = ((self.DamageFallOff - .105))
 end
 	
 	if self.ActiveAttachments.doi_atow_c96longbarrel then
-	self.EffectiveRange = ((self.EffectiveRange + 50 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 7.5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .13))
 end
 end

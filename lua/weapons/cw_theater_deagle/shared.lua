@@ -48,7 +48,8 @@ if CLIENT then
 	SWEP.MRSPos = Vector(-2.6, 0, -0.64)
     SWEP.MRSAng = Vector(0, 0, 0)
 
-	
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .85
 	
 	SWEP.AttachmentModelsVM = {
 		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.839, 2.563), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }, 
@@ -162,7 +163,7 @@ SWEP.MaxSpreadInc = 0.06
 SWEP.SpreadPerShot = 0.02
 SWEP.SpreadCooldown = 0.32
 SWEP.Shots = 1
-SWEP.Damage = 56
+SWEP.Damage = 79
 SWEP.DeployTime = 1
 --SWEP.Chamberable = false
 SWEP.NearWallDistance = 15
@@ -198,4 +199,11 @@ function SWEP:fireAnimFunc()
     
     -- Actually play the weapon animation
     self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+end
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 30 * 39.37
+self.DamageFallOff = .85
 end

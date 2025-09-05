@@ -24,8 +24,8 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = 0.75
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.7
 	
-	SWEP.EffectiveRange_Orig = 150 * 39.37
-	SWEP.DamageFallOff_Orig = .3
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .75
 	
 	SWEP.Shell = "khr9x19"
 	SWEP.ShellScale = .485
@@ -173,7 +173,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.012
 SWEP.SpreadCooldown = 0.2
 SWEP.Shots = 1
-SWEP.Damage = 22
+SWEP.Damage = 52
 SWEP.DeployTime = .3
 SWEP.HolsterTime = .3
 
@@ -199,18 +199,22 @@ self.Owner.ViewAff = 0
 	self.AlternativePos = (self.ActiveAttachments.doi_atow_onehand) and self.Alternative2Pos or self.Alternative1Pos
 	self.AlternativeAng = (self.ActiveAttachments.doi_atow_onehand) and self.Alternative2Ang or self.Alternative1Ang
 		
-	self.EffectiveRange = 150 * 39.37
-	self.DamageFallOff = .3
+	self.EffectiveRange = 30 * 39.37
+	self.DamageFallOff = .75
 	
+	if self.ActiveAttachments.doi_atow_m2carbineconv then
+	self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + 0.5)
+end
 	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 40 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 end
 	if self.ActiveAttachments.am_atow_heavy then
 	self.DamageFallOff = ((self.DamageFallOff - .09))
 end
 	
 	if self.ActiveAttachments.doi_atow_unisuppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 10 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange - 2 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff + .1))
 end
 end

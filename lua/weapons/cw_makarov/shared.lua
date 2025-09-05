@@ -39,6 +39,9 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = true
 	SWEP.FOVPerShot = 0.3
 	
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .75
+
 	SWEP.DrawTraditionalWorldModel = false
 	SWEP.WM = "models/cw2/pistols/w_makarov.mdl"
 	SWEP.WMPos = Vector(-2.5, -1.5, -1.25)
@@ -114,7 +117,7 @@ SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "9x18MM"
 
-SWEP.FireDelay = 0.11
+SWEP.FireDelay = 60 / 525
 SWEP.FireSound = "CW_MAKAROV_FIRE"
 SWEP.FireSoundSuppressed = "CW_MAKAROV_FIRE_SUPPRESSED_PM"
 SWEP.Recoil = 0.7
@@ -126,7 +129,7 @@ SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.005
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
-SWEP.Damage = 18
+SWEP.Damage = 48
 SWEP.DeployTime = 0.4
 --SWEP.Chamberable = false
 SWEP.NearWallDistance = 15
@@ -138,3 +141,14 @@ SWEP.ReloadHalt = 2.7
 
 SWEP.ReloadTime_Empty = 2.2
 SWEP.ReloadHalt_Empty = 3
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 30 * 39.37
+self.DamageFallOff = .75
+if (self.ActiveAttachments.bg_makarov_pm_suppressor) then
+self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + 0.05))
+end
+end
