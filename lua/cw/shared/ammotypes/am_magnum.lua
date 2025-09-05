@@ -3,7 +3,7 @@ att.name = "am_magnum"
 att.displayName = "Magnum rounds"
 att.displayNameShort = "Magnum"
 
-att.statModifiers = {DamageMult = 0.15,
+att.statModifiers = {DamageMult = 0.001,
 	RecoilMult = 0.25}
 
 if CLIENT then
