@@ -190,7 +190,7 @@ SWEP.SnapToIdlePostReload = true
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 20 * 39.37
+self.EffectiveRange = 10 * 39.37
 self.DamageFallOff = .85
 
 end
