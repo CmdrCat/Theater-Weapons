@@ -113,7 +113,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/v_pist_mp412.mdl"
-SWEP.WorldModel		= "models/weapons/w_pist_deagle.mdl"
+SWEP.WorldModel		= "models/weapons/w_357.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

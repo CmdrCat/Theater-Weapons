@@ -1,14 +1,14 @@
 local att = {}
 att.name = "cw_l85a1_conversion"
-att.displayName = "L85A1"
+att.displayName = "L85A1 Conversion"
 att.displayNameShort = "L85A1"
 
 att.statModifiers = {DamageMult = 159 / 41,
-RecoilMult = 2}
+RecoilMult = 10}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Gun jams after every round", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	att.description = {[1] = {t = "Gun frequently jams, but each round is overloaded", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
 function att:attachFunc()
