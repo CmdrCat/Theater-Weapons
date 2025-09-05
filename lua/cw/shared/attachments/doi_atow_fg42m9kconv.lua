@@ -6,7 +6,7 @@ att.displayNameShort = "M9K"
 att.statModifiers = {DamageMult = -1 / 33,
 FireDelayMult = -4 / 279,
 HipSpreadMult = -0.99,
-ReloadSpeedMult = 0.622396,
+ReloadSpeedMult = 0.5288,
 RecoilMult = -0.45,
 MaxSpreadIncMult = -0.99}
 

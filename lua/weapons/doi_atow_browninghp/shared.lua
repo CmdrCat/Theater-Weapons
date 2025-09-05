@@ -204,7 +204,7 @@ self.Owner.ViewAff = 0
 	
 	if self.ActiveAttachments.doi_atow_m2carbineconv then
 	self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + 0.5)
+	self.DamageFallOff = ((self.DamageFallOff + 0.5))
 end
 	if self.ActiveAttachments.am_atow_light then
 	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))

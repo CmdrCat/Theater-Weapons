@@ -128,11 +128,29 @@ SWEP.MuzzleVelocity = 714 -- in meter/s
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
-	[2] = {header = "Barrel", offset = {-400, -500},  atts = {"md_saker"}},
-	[3] = {header = "Rail", offset = {-400, -50},  atts = {"md_anpeq15"}},
-	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	["+reload"] = {header = "Ammo", offset = {900, 150}, atts = {"am_magnum", "am_matchgrade"}}}
+SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
+	[2] = {header = "Barrel", offset = {-400, -500},  atts = {"md_saker"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
+	[3] = {header = "Rail", offset = {-400, -50},  atts = {"md_anpeq15"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
+	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
+	[5] = {header = "Conversion", offset = {500, 400}, atts = {"cw_fortnite_scar_conversion"}},
+	["+reload"] = {header = "Ammo", offset = {900, 150}, atts = {"am_magnum", "am_matchgrade"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}}}
+
+SWEP.AttachmentExclusions = {
+    ["cw_fortnite_scar_conversion"] = {
+        "md_microt1",
+		"md_aimpoint",
+        "md_schmidt_shortdot",
+		"md_acog",
+		"md_nightforce_nxs",
+        "md_saker",
+        "md_anpeq15",
+        "md_foregrip",
+		"md_bipod",
+		"md_m203",
+		"am_magnum",
+		"am_matchgrade"
+    }
+}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "reload",
@@ -205,4 +223,8 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 60 * 39.37
 self.DamageFallOff = .25
+if (self.ActiveAttachments.cw_fortnite_scar_conversion) then
+self.EffectiveRange = ((self.EffectiveRange - 35 * 39.37))
+self.DamageFallOff = ((self.DamageFallOff + 0.55))
+end
 end
