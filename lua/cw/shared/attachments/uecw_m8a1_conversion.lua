@@ -8,12 +8,12 @@ DamageMult = -1 / 3}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Converts to a 4-round burst variant", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+	att.description = {[1] = {t = "Converts to 4-round burst only", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 
 function att:attachFunc()
 	self:CycleFiremodes() 
-	self.FireModes = {"semi","safe","4burst"}
+	self.FireModes = {"4burst", "safe"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 end

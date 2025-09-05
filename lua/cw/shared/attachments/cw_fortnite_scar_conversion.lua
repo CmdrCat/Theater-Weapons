@@ -7,7 +7,7 @@ att.statModifiers = {DamageMult = 20 / 21,
 FireDelayMult = 59 / 66,
 ReloadSpeedMult = 0.8789,
 RecoilMult = -0.5,
-HipSpreadMult = -0.99,
+HipSpreadMult = -0.8,
 MaxSpreadIncMult = -0.99}
 
 if CLIENT then
