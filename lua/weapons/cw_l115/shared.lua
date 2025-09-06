@@ -73,7 +73,7 @@ SWEP.ADSFireAnim = true
 SWEP.PreventQuickScoping = true
 SWEP.QuickScopeSpreadIncrease = 0.2
 
-SWEP.Attachments = {}
+SWEP.Attachments = {["+reload"] = {header = "Ammo", offset = {-500, 600}, atts = {"am_magnum", "am_matchgrade"}}}
 
 SWEP.Animations = {fire = {"shot"},
 	reload = "reload",

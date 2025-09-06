@@ -178,7 +178,7 @@ SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "shotgun"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"pump"}
+SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_base"
 SWEP.Category = "CW 2.0"
 
