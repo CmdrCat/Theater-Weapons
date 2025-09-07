@@ -1,7 +1,7 @@
 local att = {}
 att.name = "doi_atow_onehand"
-att.displayName = "Single-handed"
-att.displayNameShort = "S-H"
+att.displayName = "Sprint While Firing"
+att.displayNameShort = "Sprint-Shoot"
 att.isBG = true
 
 att.statModifiers = {RecoilMult = 0.40,

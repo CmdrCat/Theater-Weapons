@@ -83,6 +83,7 @@ SWEP.LuaViewmodelRecoil = false
 SWEP.CanRestOnObjects = false
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-550, -400}, atts = {"md_acog_fixed", "md_elcan", "md_docter"}},
+	[2] = {header = "Technique", offset = {500, 300}, atts = {"doi_atow_onehand"}},
 	["+reload"] = {header = "Ammo", offset = {-550, 100}, atts = {"am_magnum", "am_matchgrade"}}}
 
 SWEP.Animations = {fire = {"rex_fire1", "rex_fire2"},

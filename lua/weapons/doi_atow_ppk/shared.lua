@@ -98,7 +98,7 @@ SWEP.CanRestOnObjects = true
 SWEP.Attachments = {
 [2] = {header = "Finish", offset = {-120, -420}, atts = {"doi_atow_c96goldfinish"}},
 [1] = {header = "Muzzle", offset = {-550, -300}, atts = {"doi_atow_unisuppressor"}},
-[3] = {header = "Accessory", offset = {550, -250}, atts = {"doi_atow_onehand"}},
+[3] = {header = "Technique", offset = {550, -250}, atts = {"doi_atow_onehand"}},
 ["+reload"] = {header = "Ammo", offset = {-180, 90}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
 
 SWEP.Animations = {fire = {"iron_fire_1"},

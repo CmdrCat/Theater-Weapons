@@ -4,7 +4,7 @@ att.displayName = "High Capacity"
 att.displayNameShort = "30RND"
 att.isBG = true
 
-att.statModifiers = {ReloadSpeedMult = -0.1}
+att.statModifiers = {ReloadSpeedMult = -0.05}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/thom30rnd")

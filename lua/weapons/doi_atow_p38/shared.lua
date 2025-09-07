@@ -96,7 +96,7 @@ SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {
 ["+reload"] = {header = "Ammo", offset = {-300, 50}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}},
-[1] = {header = "Hold", offset = {550, -350}, atts = {"doi_atow_onehand"}}}
+[1] = {header = "Technique", offset = {550, -350}, atts = {"doi_atow_onehand"}},}
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire_1"},

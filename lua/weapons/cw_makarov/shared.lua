@@ -68,6 +68,7 @@ SWEP.CanRestOnObjects = false
 SWEP.Attachments = {[1] = {header = "Pistol variant", offset = {450, -350}, atts = {"bg_makarov_pb6p9"}},
 	[2] = {header = "Barrel", offset = {-400, -200}, atts = {"bg_makarov_pm_suppressor", "bg_makarov_pb_suppressor"}},
 	[3] = {header = "Magazine", offset = {-400, 200}, atts = {"bg_makarov_extmag"}},
+	[4] = {header = "Technique", offset = {-125, -500}, atts = {"doi_atow_onehand"}},
 	["+reload"] = {header = "Ammo", offset = {450, 150}, atts = {"am_sp7"}}}
 	
 SWEP.AttachmentDependencies = {["bg_makarov_pb_suppressor"] = {"bg_makarov_pb6p9"}}
