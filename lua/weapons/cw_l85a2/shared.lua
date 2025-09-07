@@ -181,7 +181,7 @@ clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
 self.DamageFallOff = .3
 if (self.ActiveAttachments.cw_l85a1_conversion) then
-self.EffectiveRange = ((self.EffectiveRange - 20 * 39.37))
+self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + .9))
 end
 end
