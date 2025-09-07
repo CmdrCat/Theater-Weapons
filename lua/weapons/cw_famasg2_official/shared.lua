@@ -103,15 +103,17 @@ SWEP.MuzzleVelocity = 925 -- in meter/s
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
+SWEP.Trivia = {text = "French bullpup assault rifle with a high fire rate.", x = 0, y = -450}
+
 SWEP.BarrelBGs = {main = 2, rpk = 1, short = 4, regular = 0}
 SWEP.StockBGs = {main = 1, regular = 0, heavy = 1, foldable = 2}
 SWEP.ReceiverBGs = {main = 3, rpk = 1, regular = 0}
 SWEP.MagBGs = {main = 4, regular = 0, rpk = 1}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {850, -600},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	[2] = {header = "Barrel", offset = {-550, -150}, atts = {"md_saker"}},
-	[3] = {header = "Handguard", offset = {-550, -600}, atts = {"md_foregrip", "md_bipod"}},
-	[4] = {header = "Rail", offset = {100, -600}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {1000, -600},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+	[2] = {header = "Muzzle", offset = {-900, -350}, atts = {"md_saker"}},
+	[3] = {header = "Handguard", offset = {-550, 100}, atts = {"md_foregrip", "md_bipod"}},
+	[4] = {header = "Laser", offset = {-550, -600}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true}},
 	[5] = {header = "Magazine", offset = {850, -150}, atts = {"md_cmag_556_official"}},
 	["+reload"] = {header = "Ammo", offset = {850, 350}, atts = {"am_magnum", "am_matchgrade"}}}
 

@@ -18,7 +18,7 @@ end
 
 function att:detachFunc()
 	self:CycleFiremodes()
-	self.FireModes = {"semi","safe"}
+	self.FireModes = {"semi","safe","3burst"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 end

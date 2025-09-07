@@ -161,12 +161,14 @@ end
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -600},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}},
-	[2] = {header = "Barrel extension", offset = {-300, -600},  atts = {"md_saker", "md_csgo_silencer_rifle"}},
+SWEP.Trivia = {text = "An advanced assault rifle platform meant to replace the US Army's M4. It instead became C.G.I.'s service rifle.", x = 50, y = -500}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}},
+	[2] = {header = "Muzzle", offset = {-300, -600},  atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-300, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Magazine", offset = {-300, 350},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_cmag", "md_uecw_60rnd"}},
 	[5] = {header = "Conversion", offset = {700, 350}, atts = {"uecw_m8a1_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {800, -100}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {1250, 50}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 SWEP.AttachmentExclusions = {
 	["md_foregrip"] = {"md_uecw_cmag"},

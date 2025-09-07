@@ -99,14 +99,16 @@ SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.LuaViewmodelRecoil = true
 
+SWEP.Trivia = {text = "The most common gun in the world, found in the hands of modern militaries and insurgents alike.", x = 0, y = -450}
+
 SWEP.BarrelBGs = {main = 2, rpk = 1, short = 4, regular = 0}
 SWEP.StockBGs = {main = 1, regular = 0, heavy = 1, foldable = 2}
 SWEP.ReceiverBGs = {main = 3, rpk = 1, regular = 0}
 SWEP.MagBGs = {main = 4, regular = 0, rpk = 1}
 
 SWEP.Attachments = {
-	{header = "Sight", offset = {950, -500},  atts = {"md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	{header = "Barrel", offset = {0, -500}, atts = {"md_pbs1"}},
+	{header = "Sight", offset = {950, -250},  atts = {"md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+	{header = "Muzzle", offset = {-500, -500}, atts = {"md_pbs1"}},
 	{header = "Handguard", offset = {-400, 100}, atts = {"md_foregrip"}, exclusions = {bg_ak74_rpkbarrel = true}},
 	["+reload"] = {header = "Ammo", offset = {950, 300}, atts = {"am_magnum", "am_matchgrade"}}}
 

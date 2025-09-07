@@ -83,6 +83,8 @@ SWEP.BarrelBGs = {main = 1, regular = 0, compensator = 1, extended = 2}
 SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
+SWEP.Trivia = {text = "Controllable pistol chambered in the armor piercing 5.7×28mm round.", x = -800, y = -600}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-200, -500}, atts = {"md_docter"}},
 [2] = {header = "Barrel extension", offset = {-700, -500}, atts = {"md_csgo_silencer_pistol"}},
 [3] = {header = "Rail", offset = {-700, -100}, atts = {"md_anpeq15", "md_csgo_taclight"}},

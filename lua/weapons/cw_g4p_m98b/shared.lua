@@ -151,8 +151,10 @@ SWEP.ForceBackToHipAfterAimedShot = true
 SWEP.GlobalDelayOnShoot = 2.5
 SWEP.BipodFireAnim = true
 
+SWEP.Trivia = {text = "A bolt-action sniper rifle chambered in .338 Lapua Magnum.", x = 0, y = -600}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_elcan", "md_acog_fixed", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
-	[2] = {header = "Barrel extension", offset = {100, -500}, atts = {"md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
+	[2] = {header = "Muzzle", offset = {100, -500}, atts = {"md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
 	[3] = {header = "Handguard", offset = {-500, -500}, atts = {"md_bipod"}},
 --	[4] = {header = "Misc", offset = {-500, 800}, atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade"}}}

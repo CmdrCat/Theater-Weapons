@@ -78,7 +78,7 @@ if CLIENT then
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .55
 	SWEP.LuaVMRecoilAxisMod = {vert = 0, hor = .05, roll = .05, forward = .5, pitch = .25}
 	
-	SWEP.Trivia = {text = "Deploying your bipod will vastly improve your aiming accuracy.", x = 0, y = -450}
+	SWEP.Trivia = {text = ".30 caliber medium machine gun commonly seen mounted on vehicles.", x = 0, y = -450}
 end
 end
 
@@ -91,6 +91,7 @@ SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {--[1] = {header = "Sight", offset = {450, -250}, atts = {"doi_atow_altsight"}},
 [1] = {header = "Belt", offset = {750, -150}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
+[2] = {header = "Conversion", offset = {1000, 400}, atts = {"doi_atow_stinger"}},
 ["+reload"] = {header = "Ammo", offset = {200, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_2"},

@@ -142,11 +142,13 @@ end
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {100, -600},  atts = {"md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
-	[2] = {header = "Barrel extension", offset = {-500, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
+SWEP.Trivia = {text = "A classic assault rifle known for its 3-round burst. Its variants still see widespread use to this day.", x = 0, y = -450}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {300, -350},  atts = {"md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+	[2] = {header = "Muzzle", offset = {-500, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-500, -100}, atts = {"md_foregrip", "md_bipod"}},
 	[4] = {header = "Conversion", offset = {800, 325}, atts = {"uecw_m16a3_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {800, -100}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {1200, -100}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 --SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 

@@ -158,10 +158,12 @@ SWEP.SightBGs = {main = 1, carryhandle = 0, none = 1}
 SWEP.BarrelBGs = {regular = 0}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -500},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
-	[2] = {header = "Barrel extension", offset = {-400, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
+SWEP.Trivia = {text = "An iconic assault rifle that takes inspiration from other popular rifles.", x = 0, y = -500}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -400},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+	[2] = {header = "Muzzle", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-400, 0}, atts = {"md_foregrip", "md_bipod"}},
-	[4] = {header = "Rail", offset = {250, 400}, atts = {"md_anpeq15"}},
+	[4] = {header = "Laser", offset = {250, 400}, atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 
 if CustomizableWeaponry_KK_HK416 then

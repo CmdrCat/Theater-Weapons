@@ -84,8 +84,10 @@ SWEP.BarrelBGs = {main = 1, regular = 0, compensator = 1, extended = 2}
 SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -550}, atts = {"md_docter"}},
-[2] = {header = "Barrel extension", offset = {-600, -350}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
+SWEP.Trivia = {text = "An extremely popular handgun foudn in the hands of soldiers, police officers, civilians, and criminals.", x = -600, y = -600}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -500}, atts = {"md_docter"}},
+[2] = {header = "Muzzle", offset = {-600, -350}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
 [3] = {header = "Rail", offset = {-300, 200}, atts = {"md_anpeq15", "md_csgo_taclight"}},
 [4] = {header = "Technique", offset = {-100, -500}, atts = {"doi_atow_onehand"}},
 [5] = {header = "Fire Control Group", offset = {550, 300}, atts = {"uecw_glock_switch"}},

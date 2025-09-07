@@ -144,10 +144,12 @@ SWEP.SightBGs = {sightup = "", sightdown = ""}
 SWEP.BarrelBGs = {regular = 0}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {00, -500},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
-	[2] = {header = "Barrel extension", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_ballistic"}},
-	[3] = {header = "Rail", offset = {-500, 400}, atts = {"md_anpeq15"}},
-	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade"}}}
+SWEP.Trivia = {text = "Adopted by many NATO countries, this battle rifle was dubbed \"the right arm of the free world.\"", x = 0, y = -450}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+	[2] = {header = "Muzzle", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_ballistic"}},
+	[3] = {header = "Laser", offset = {-500, 400}, atts = {"md_anpeq15"}},
+	["+reload"] = {header = "Ammo", offset = {1400, 200}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 

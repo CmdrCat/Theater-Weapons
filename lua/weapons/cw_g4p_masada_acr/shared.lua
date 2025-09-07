@@ -142,10 +142,12 @@ SWEP.SightBGs = {main = 1, carryhandle = 0, none = 1}
 SWEP.BarrelBGs = {regular = 0}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {-450, -600},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
-	[2] = {header = "Barrel extension", offset = {-450, -200}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
-	[3] = {header = "Rail", offset = {-450, 250}, atts = {"md_anpeq15"}},
-	["+reload"] = {header = "Ammo", offset = {400, -200}, atts = {"am_magnum", "am_matchgrade"}}}
+SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law enforcement use.", x = -200, y = -450}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -350},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+	[2] = {header = "Muzzle", offset = {-450, -200}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
+	[3] = {header = "Laser", offset = {-450, 250}, atts = {"md_anpeq15"}},
+	["+reload"] = {header = "Ammo", offset = {1250, 100}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 
