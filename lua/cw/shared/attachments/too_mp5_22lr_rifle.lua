@@ -18,6 +18,8 @@ function att:attachFunc()
 	self.FireModes = {"semi","safe"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
+	self.Primary.ClipSize = 25
+	self.Primary.ClipSize_Orig = 25
 end
 
 function att:detachFunc()
@@ -25,6 +27,8 @@ function att:detachFunc()
 	self.FireModes = {"semi","safe","auto"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
+	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
+	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 end
 
 CustomizableWeaponry:registerAttachment(att)

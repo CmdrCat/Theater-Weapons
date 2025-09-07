@@ -7,7 +7,6 @@ att.isBG = true
 att.statModifiers = {RecoilMult = 0.2,
 AimSpreadMult = -0.2,
 DrawSpeedMult = -0.2,
-OverallMouseSensMult = -0.1,
 DamageMult = 0.2}
 
 if CLIENT then

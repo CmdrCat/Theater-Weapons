@@ -7,7 +7,7 @@ att.FOVModifier = 15
 att.isSight = true
 att.withoutRail = true
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
-att.statModifiers = {OverallMouseSensMult = -0.05}
+att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/kobra")

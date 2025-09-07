@@ -6,7 +6,7 @@ att.aimPos = {"TrijiconPos", "TrijiconAng"}
 att.FOVModifier = 15
 att.isSight = true
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
-att.statModifiers = {OverallMouseSensMult = -0.1}
+att.statModifiers = {}
 
 
 if CLIENT then

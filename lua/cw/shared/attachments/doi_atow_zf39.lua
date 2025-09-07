@@ -8,9 +8,7 @@ att.AimViewModelFOV = 25
 att.isSight = true
 att.withoutRail = true
 
-att.statModifiers = {
-	OverallMouseSensMult = -0.1
-}
+att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/zf39")

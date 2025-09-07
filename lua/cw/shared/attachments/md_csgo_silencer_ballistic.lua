@@ -4,9 +4,7 @@ att.displayName = "Ballistic Suppressor"
 att.displayNameShort = "Ballistic"
 att.isSuppressor = true
 
-att.statModifiers = {OverallMouseSensMult = -0.3,
-RecoilMult = -0.2,
-DamageMult = -0.05}
+att.statModifiers = {RecoilMult = -0.2}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_csgo_silencer_ballistic")

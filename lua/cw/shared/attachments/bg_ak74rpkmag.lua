@@ -4,8 +4,7 @@ att.displayName = "RPK Magazine"
 att.displayNameShort = "RPK Mag"
 att.isBG = true
 
-att.statModifiers = {ReloadSpeedMult = -0.1,
-OverallMouseSensMult = -0.05}
+att.statModifiers = {ReloadSpeedMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/rpkmag")
@@ -14,7 +13,6 @@ end
 
 function att:attachFunc()
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.rpk)
-	self:unloadWeapon()
 	self.Primary.ClipSize = 45
 	self.Primary.ClipSize_Orig = 45
 end

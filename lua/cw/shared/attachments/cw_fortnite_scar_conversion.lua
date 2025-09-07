@@ -17,7 +17,6 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	self.Primary.ClipSize = 30
 	self.Primary.ClipSize_Orig = 30
 end

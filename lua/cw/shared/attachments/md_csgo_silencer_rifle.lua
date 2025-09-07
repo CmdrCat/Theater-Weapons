@@ -4,9 +4,7 @@ att.displayName = "Rifle Suppressor"
 att.displayNameShort = "Rifle"
 att.isSuppressor = true
 
-att.statModifiers = {OverallMouseSensMult = -0.05,
-RecoilMult = -0.25,
-DamageMult = -0.15}
+att.statModifiers = {RecoilMult = -0.25}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_csgo_silencer_rifle")

@@ -4,8 +4,7 @@ att.displayName = "Pistol Suppressor"
 att.displayNameShort = "Pistol"
 att.isSuppressor = true
 
-att.statModifiers = {RecoilMult = -0.35,
-DamageMult = -0.05}
+att.statModifiers = {RecoilMult = -0.35}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_csgo_silencer_pistol")

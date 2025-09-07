@@ -7,8 +7,7 @@ makarov_ext_mag.displayNameShort = "Ext mag"
 makarov_ext_mag.isBG = true
 
 makarov_ext_mag.statModifiers = {ReloadSpeedMult = -0.1,
-	DrawSpeedMult = -0.05,
-	OverallMouseSensMult = -0.05}
+	DrawSpeedMult = -0.05}
 
 if CLIENT then
 	makarov_ext_mag.displayIcon = surface.GetTextureID("atts/makarov_extmag")
@@ -16,7 +15,6 @@ if CLIENT then
 end
 
 function makarov_ext_mag:attachFunc()
-	self:unloadWeapon()
 	self.Primary.ClipSize = 12
 	self.Primary.ClipSize_Orig = 12
 	
@@ -85,7 +83,6 @@ pb_supp.displayNameShort = "Suppress"
 pb_supp.isBG = true
 
 pb_supp.statModifiers = {RecoilMult = -0.1,
-	OverallMouseSensMult = -0.05,
 	DamageMult = 3 / 16}
 
 if CLIENT then
@@ -118,7 +115,6 @@ pm_supp.displayNameShort = "Suppress"
 pm_supp.isBG = true
 
 pm_supp.statModifiers = {RecoilMult = -0.1,
-	OverallMouseSensMult = -0.05,
 	DamageMult = -0.1}
 
 if CLIENT then

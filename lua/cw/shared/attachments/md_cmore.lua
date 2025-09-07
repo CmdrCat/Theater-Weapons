@@ -6,7 +6,7 @@ att.aimPos = {"CmorePos", "CmoreAng"}
 att.FOVModifier = 15
 att.isSight = true
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
-att.statModifiers = {OverallMouseSensMult = -0.04}
+att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_cmore")

@@ -7,7 +7,6 @@ att.SpeedDec = -10
 
 att.statModifiers = {
 DrawSpeedMult = 0.1,
-OverallMouseSensMult = 0.5,
 VelocitySensitivityMult = -0.2,
 RecoilMult = 0.45,
 AimSpreadMult = 0.15}

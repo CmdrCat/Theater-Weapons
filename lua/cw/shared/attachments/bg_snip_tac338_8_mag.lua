@@ -5,8 +5,7 @@ att.displayNameShort = "+3 Bullets"
 att.isBG = true
 
 att.statModifiers = {
-ReloadSpeedMult = -0.03,
-OverallMouseSensMult = -0.03}
+ReloadSpeedMult = -0.03}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("entities/+3")
@@ -21,7 +20,6 @@ function att:attachFunc()
 	    draw = "draw"
 	}
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.extended)
-	self:unloadWeapon()
 	self.Primary.ClipSize = self.Primary.ClipSize + 3 
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_Orig + 3 
 end

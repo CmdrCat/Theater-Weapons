@@ -3,8 +3,7 @@ att.name = "md_bipod"
 att.displayName = "Harris Bipod"
 att.displayNameShort = "Bipod"
 
-att.statModifiers = {OverallMouseSensMult = -0.1,
-DrawSpeedMult = -0.15}
+att.statModifiers = {DrawSpeedMult = -0.15}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/bipod")

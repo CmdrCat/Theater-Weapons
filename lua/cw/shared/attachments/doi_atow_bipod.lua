@@ -4,7 +4,6 @@ att.displayName = "Heavy Bipod"
 att.displayNameShort = "Bipod"
 
 att.statModifiers = {
-	OverallMouseSensMult = -0.1,
 	DrawSpeedMult = -0.1
 }
 

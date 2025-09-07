@@ -5,8 +5,7 @@ att.displayNameShort = "M2"
 att.isSuppressor = true
 att.SpeedDec = 1
 
-att.statModifiers = {OverallMouseSensMult = -0.1,
-RecoilMult = -0.15,
+att.statModifiers = {RecoilMult = -0.15,
 DamageMult = -0.1}
 
 if CLIENT then

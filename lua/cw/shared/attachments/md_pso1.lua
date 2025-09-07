@@ -7,7 +7,7 @@ att.FOVModifier = 15
 att.isSight = true
 att.withoutRail = true
 att.SpeedDec = 2
-att.statModifiers = {OverallMouseSensMult = -0.1}
+att.statModifiers = {}
 
 if CLIENT then
 	-- the UV on the pso-1 is fucked, so we got to adjust it manually lOL!!!

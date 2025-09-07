@@ -8,8 +8,6 @@ att.aimPos = {"SG1Pos", "SG1Ang"}
 att.withoutRail = true
 att.SpeedDec = 3
 
-att.statModifiers = {OverallMouseSensMult = -0.2}
-
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/sg1scope")
 	att.description = {[1] = {t = "Provides 6x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},

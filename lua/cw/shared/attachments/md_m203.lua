@@ -6,7 +6,6 @@ att.isGrenadeLauncher = true
 att.SpeedDec = 3
 
 att.statModifiers = {DrawSpeedMult = -0.2,
-OverallMouseSensMult = -0.1,
 RecoilMult = -0.1}
 
 if CLIENT then

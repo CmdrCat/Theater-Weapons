@@ -3,8 +3,7 @@ att.name = "md_uecw_60rnd"
 att.displayName = "Surefire 60 Round Magazine"
 att.displayNameShort = "Surefire"
 
-att.statModifiers = {ReloadSpeedMult = -0.15,
-OverallMouseSensMult = -0.1}
+att.statModifiers = {ReloadSpeedMult = -0.15}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar1560rndmag")
@@ -12,7 +11,6 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	self.Primary.ClipSize = 60
 	self.Primary.ClipSize_Orig = 60
 	if self.MagBoneName then

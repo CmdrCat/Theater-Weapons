@@ -6,10 +6,7 @@ att.isSuppressor = true
 att.SpeedDec = 2
 
 att.statModifiers = {
-
-	OverallMouseSensMult = -0.15,
 RecoilMult = -0.20,
-DamageMult = -0.15,
 }
 
 if CLIENT then

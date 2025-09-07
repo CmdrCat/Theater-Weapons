@@ -6,7 +6,7 @@ att.aimPos = {"CSGO556Pos", "CSGO556Ang"}
 att.FOVModifier = 15
 att.isSight = true
 
-att.statModifiers = {OverallMouseSensMult = -0.1}
+att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_csgo_556scope")

@@ -6,7 +6,7 @@ att.aimPos = {"ShortDotPos", "ShortDotAng"}
 att.FOVModifier = 15
 att.isSight = true
 
-att.statModifiers = {OverallMouseSensMult = -0.1}
+att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/shortdot")

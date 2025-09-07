@@ -6,7 +6,6 @@ att.displayNameShort = "TIGER"
 att.statModifiers = {
     ReloadSpeedMult = 0.15,
     DrawSpeedMult = 0.10,
-    OverallMouseSensMult = -0.25,
     SpreadPerShotMult = -0.15,
     
     RecoilMult = -0.07} 

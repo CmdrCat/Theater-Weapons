@@ -15,12 +15,13 @@ function att:attachFunc()
 	self:unloadWeapon()
 	self.Primary.ClipSize = 1
 	self.Primary.ClipSize_Orig = 1
+	self.Chamberable = false
 end
 
 function att:detachFunc()
-	self:unloadWeapon()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	self.Chamberable = true
 end
 
 CustomizableWeaponry:registerAttachment(att)

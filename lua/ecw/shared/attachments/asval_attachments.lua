@@ -8,8 +8,7 @@ att.displayName = "20 round mag"
 att.displayNameShort = "20RND"
 att.isBG = true
 
-att.statModifiers = {ReloadSpeedMult = -0.05,
-OverallMouseSensMult = -0.1}
+att.statModifiers = {ReloadSpeedMult = -0.05}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/asval_20rndmag")
@@ -18,7 +17,6 @@ end
 
 function att:attachFunc()
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.round20)
-	self:unloadWeapon()
 	self.Primary.ClipSize = 20
 	self.Primary.ClipSize_Orig = 20
 end
@@ -40,8 +38,7 @@ att.displayName = "30 round mag"
 att.displayNameShort = "30RND"
 att.isBG = true
 
-att.statModifiers = {ReloadSpeedMult = -0.1,
-OverallMouseSensMult = -0.1,}
+att.statModifiers = {ReloadSpeedMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/asval_30rndmag")
@@ -50,7 +47,6 @@ end
 
 function att:attachFunc()
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.round30)
-	self:unloadWeapon()
 	self.Primary.ClipSize = 30
 	self.Primary.ClipSize_Orig = 30
 end
@@ -136,7 +132,6 @@ att.isBG = true
 att.SpeedDec = -3
 
 att.statModifiers = {DrawSpeedMult = 0.2,
-OverallMouseSensMult = 0.15,
 RecoilMult = 0.1}
 
 if CLIENT then

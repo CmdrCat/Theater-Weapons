@@ -5,8 +5,7 @@ att.displayNameShort = "C-Mag"
 att.SpeedDec = 3
 
 att.statModifiers = {ReloadSpeedMult = -0.25,
-DrawSpeedMult = -0.1,
-OverallMouseSensMult = -0.1}
+DrawSpeedMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/cmag_official")
@@ -14,7 +13,6 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	self.canOffsetMagBone = true
 	
 	self.ForegripOverride = true

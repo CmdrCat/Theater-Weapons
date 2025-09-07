@@ -7,7 +7,6 @@ att.laserBeamRange = 75
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
 
 att.statModifiers = {VelocitySensitivityMult = -0.2,
-OverallMouseSensMult = -0.05,
 HipSpreadMult = -0.2,
 DrawSpeedMult = -0.05,
 MaxSpreadIncMult = -0.25}

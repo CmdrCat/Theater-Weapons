@@ -8,7 +8,6 @@ att.SpeedDec = 5
 att.statModifiers = {
 RecoilMult = -0.25,
 AimSpreadMult = -0.25,
-OverallMouseSensMult = -0.22,
 VelocitySensitivityMult = 0.22,
 DamageMult = 0.1}
 

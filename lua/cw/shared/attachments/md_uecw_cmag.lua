@@ -5,7 +5,6 @@ att.displayNameShort = "CMAG"
 
 att.statModifiers = {
 	ReloadSpeedMult = -0.3,
-	OverallMouseSensMult = -0.1
 }
 
 if CLIENT then
@@ -14,7 +13,6 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	
 	if self.ActiveAttachments.md_foregrip or self.ActiveAttachments.md_m203 then
 		self.ForegripOverride = false

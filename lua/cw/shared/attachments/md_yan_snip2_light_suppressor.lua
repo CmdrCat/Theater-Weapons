@@ -7,9 +7,7 @@ att.SpeedDec = -5
 
 att.statModifiers = {
 RecoilMult = -0.15,
-AimSpreadMult = -0.1,
-OverallMouseSensMult = -0.05,
-DamageMult = -0.12}
+AimSpreadMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("entities/light_suppressor")

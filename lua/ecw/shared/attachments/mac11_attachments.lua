@@ -8,8 +8,7 @@ att.displayName = "Extended barrel"
 att.displayNameShort = "Ext"
 att.isBG = true
 
-att.statModifiers = {OverallMouseSensMult = -0.1,
-	AimSpreadMult = -0.15,
+att.statModifiers = {AimSpreadMult = -0.15,
 	DamageMult = 0.1}
 
 if CLIENT then

@@ -11,7 +11,6 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	self.Primary.ClipSize = 35
 	self.Primary.ClipSize_Orig = 35
 	if self.MagBoneName then

@@ -4,8 +4,7 @@ att.displayName = "Remove Default Bipod"
 att.displayNameShort = "No Bipod"
 att.isBG = true
 
-att.statModifiers = {
-OverallMouseSensMult = 0.12,
+att.statModifiers = {,
 VelocitySensitivityMult = -0.12,
 DrawSpeedMult = 0.05}
 

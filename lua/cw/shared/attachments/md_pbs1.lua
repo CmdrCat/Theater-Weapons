@@ -5,9 +5,7 @@ att.displayNameShort = "PBS-1"
 att.isSuppressor = true
 att.SpeedDec = 2
 
-att.statModifiers = {OverallMouseSensMult = -0.1,
-RecoilMult = -0.15,
-DamageMult = -0.1}
+att.statModifiers = {RecoilMult = -0.15,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/pbs1")

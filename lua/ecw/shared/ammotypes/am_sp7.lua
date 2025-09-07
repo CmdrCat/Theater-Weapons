@@ -13,12 +13,4 @@ if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/sp-7")
 end
 
-function att:attachFunc()
-	self:unloadWeapon()
-end
-
-function att:detachFunc()
-	self:unloadWeapon()
-end
-
 CustomizableWeaponry:registerAttachment(att)

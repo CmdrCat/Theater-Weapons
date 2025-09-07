@@ -6,7 +6,6 @@ att.displayNameShort = "TILT"
 att.statModifiers = {VelocitySensitivityMult = -0.1,
 DrawSpeedMult = -0.1,
 SpreadPerShotMult = -0.1,
-OverallMouseSensMult = -0.05,
 RecoilMult = -0.05} 
 
 

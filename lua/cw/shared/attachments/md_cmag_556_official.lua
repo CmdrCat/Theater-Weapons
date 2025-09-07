@@ -7,8 +7,7 @@ att.SpeedDec = 5
 att.statModifiers = {ReloadSpeedMult = -0.25,
 DrawSpeedMult = -0.1,
 HipSpreadMult = 0.15,
-VelocitySensitivityMult = 0.15,
-OverallMouseSensMult = -0.1}
+VelocitySensitivityMult = 0.15}
 
 
 if CLIENT then
@@ -17,7 +16,6 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	self.canOffsetMagBone = true
 	
 	self.ForegripOverride = true

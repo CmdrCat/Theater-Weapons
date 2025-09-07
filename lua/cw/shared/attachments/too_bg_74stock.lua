@@ -6,8 +6,7 @@ att.isBG = true
 att.SpeedDec = -5
 
 att.statModifiers = {DrawSpeedMult = 0.15,
-RecoilMult = 0.1,
-OverallMouseSensMult = 0.1}
+RecoilMult = 0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ak74foldablestock")

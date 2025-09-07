@@ -6,7 +6,7 @@ att.aimPos = {"AimpointPos", "AimpointAng"}
 att.FOVModifier = 20
 att.isSight = true
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
-att.statModifiers = {OverallMouseSensMult = -0.07}
+att.statModifiers = {}
 att.SpeedDec = 1
 
 if CLIENT then

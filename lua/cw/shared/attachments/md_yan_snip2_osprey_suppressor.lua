@@ -7,9 +7,7 @@ att.isSuppressor = true
 att.statModifiers = {
 RecoilMult = -0.2,
 AimSpreadMult = -0.2,
-HipSpreadMult = -0.05,
-OverallMouseSensMult = -0.15,
-DamageMult = -0.05}
+HipSpreadMult = -0.05}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("entities/osprey_suppressor")

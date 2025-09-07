@@ -5,8 +5,7 @@ att.displayNameShort = "Stock"
 att.isBG = true
 att.SpeedDec = 10
 
-att.statModifiers = {RecoilMult = -0.4,
-OverallMouseSensMult = -0.05}
+att.statModifiers = {RecoilMult = -0.4}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/bhpstock")
