@@ -124,6 +124,8 @@ if CLIENT then
 	SWEP.HipFireFOVIncrease = false
 	SWEP.LuaVMRecoilAxisMod = {vert = 0.5, hor = 1, roll = 1, forward = 0.5, pitch = 0.5}
 
+	SWEP.Trivia = {text = "This legendary sniper rifle is has unparalleled, sub-MOA accuracy. Land record-breaking longshots or quickscope at close range; the choice is yours.", x = -400, y = -750}
+
 	SWEP.AttachmentModelsVM = {
 	    ["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "body", rel = "", pos = Vector(0.1, 18.728, 0.699), angle = Angle(0, 0, 0), size = Vector(1.189, 1.189, 1.189)},
 		["md_snip2_light_suppressor"] = {model = "models/attachments/special_light_suppressor.mdl", bone = "body", rel = "", pos = Vector(0.032, 19.52, 0.728), angle = Angle(0, 0, 0), size = Vector(1.154, 1.154, 1.154)}, 
@@ -176,12 +178,12 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 
     SWEP.Attachments = {
        [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_schmidt_shortdot", "md_snip2_elcan", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_acog", "md_nightforce_nxs", "md_uecw_csgo_scope_ssg"}},
-	   [2] = {header = "Barrel", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
-	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
-	   [4] = {header = "Railed", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
+	   [2] = {header = "Muzzle", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
+	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
+	   [4] = {header = "Handguard", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
 	   [5] = {header = "Stock", offset = {2050, 1100}, atts = {"bg_snip_Cheytac_no_stock"}},
        [6] = {header = "Bolt", offset = {2350, 100}, atts = {"md_improved_bolt"}},
-	   [7] = {header = "Rail", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
+	   [7] = {header = "Laser", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
 	   [8] = {header = "Bipod", offset = {50, 600}, atts = {"bg_snip2_special_bipod"}, dependencies = {bg_Cheytac_Bipod = true}},
        ["+use"] = {header = "Perks", offset = {2350, 500}, atts = {"Cod_Extreme_Conditioning", "Cod_Fast_Hands", "Cod_Steady_Aim", "Perk_Force", "Perk_Stopping_Power"}},
 	   ["+reload"] = {header = "Ammo", offset = {850, 850}, atts = {"am_magnum", "am_matchgrade"}}
@@ -192,12 +194,12 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 	
 	SWEP.Attachments = {
        [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_schmidt_shortdot", "md_snip2_elcan", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_acog", "md_nightforce_nxs", "md_uecw_csgo_scope_ssg"}},
-	   [2] = {header = "Barrel", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
-	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
-	   [4] = {header = "Railed", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
+	   [2] = {header = "Muzzle", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
+	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
+	   [4] = {header = "Handguard", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
 	   [5] = {header = "Stock", offset = {2050, 1100}, atts = {"bg_snip_Cheytac_no_stock"}},
        [6] = {header = "Bolt", offset = {2050, 600}, atts = {"md_improved_bolt"}},
-	   [7] = {header = "Rail", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
+	   [7] = {header = "Laser", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
 	   [8] = {header = "Bipod", offset = {50, 600}, atts = {"bg_snip2_special_bipod"}, dependencies = {bg_Cheytac_Bipod = true}},
 	   ["+reload"] = {header = "Ammo", offset = {850, 850}, atts = {"am_magnum", "am_matchgrade"}}
 	}
@@ -206,12 +208,12 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 	
     SWEP.Attachments = {
        [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
-	   [2] = {header = "Barrel", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
-	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
-	   [4] = {header = "Railed", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
+	   [2] = {header = "Muzzle", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
+	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
+	   [4] = {header = "Handguard", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
 	   [5] = {header = "Stock", offset = {2050, 1100}, atts = {"bg_snip_Cheytac_no_stock"}},
        [6] = {header = "Bolt", offset = {2350, 100}, atts = {"md_improved_bolt"}},
-	   [7] = {header = "Rail", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
+	   [7] = {header = "Laser", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
 	   [8] = {header = "Bipod", offset = {50, 600}, atts = {"bg_snip2_special_bipod"}, dependencies = {bg_Cheytac_Bipod = true}},
        ["+use"] = {header = "Perks", offset = {2350, 500}, atts = {"Cod_Extreme_Conditioning", "Cod_Fast_Hands", "Cod_Steady_Aim", "Perk_Force", "Perk_Stopping_Power"}},
 	   ["+reload"] = {header = "Ammo", offset = {850, 850}, atts = {"am_magnum", "am_matchgrade"}}

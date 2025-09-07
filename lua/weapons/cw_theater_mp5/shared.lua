@@ -90,12 +90,14 @@ SWEP.FrameBGs = { main = 0, sd = 1, regular = 0 } -- Fixed duplicate 'main', add
 SWEP.HandguardBGs = { main = 3, regular = 0, none = 1 }
 SWEP.RailBGs = { main = 2, on = 1, off = 0 }
 SWEP.LuaViewmodelRecoil = true
+
+SWEP.Trivia = {text = "This reliable submachine gun is the face of counter-terrorism due its successful usage by SAS operators in Operation Nimrod.", x = -600, y = -600}
+
 SWEP.AttachmentExclusions = {["too_sdbar_bar"] = {"md_tundra9mm"}}
 SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {700, -400}, atts = {"md_microt1", "too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	[2] = {header = "Barrel", offset = {200, -400}, atts = {"md_tundra9mm"}},
-	[3] = {header = "Handguard", offset = {-400, -400}, atts = {"too_sdbar_bar"}},
-	[4] = {header = "Conversion", offset = {400, 400}, atts = {"too_mp5_22lr_rifle"}},
+	[2] = {header = "Muzzle", offset = {-400, -400}, atts = {"md_tundra9mm"}},
+	[3] = {header = "Conversion", offset = {400, 400}, atts = {"too_sdbar_bar","too_mp5_22lr_rifle"}},
 	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {700, 35}, atts = {"am_magnum", "am_matchgrade"}}
 }

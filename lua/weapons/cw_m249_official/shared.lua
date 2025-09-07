@@ -109,8 +109,10 @@ SWEP.MuzzleVelocity = 915
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
+SWEP.Trivia = {text = "A US army's light machine gun of choice, the M249 has seen combat in a plethora of conflicts.", x = -300, y = -450}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	[2] = {header = "Barrel", offset = {-500, -300}, atts = {"md_saker"}},
+	[2] = {header = "Muzzle", offset = {-500, -300}, atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-500, 150}, atts = {"md_foregrip", "md_bipod"}},
 	["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}}
 

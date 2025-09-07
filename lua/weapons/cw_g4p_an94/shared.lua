@@ -130,7 +130,7 @@ end
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Trivia = {text = "Unique assault rifle with a unique hyperburst mechanism. Rifle of choice for C.G.I. counter-terrorists.", x = 0, y = -450}
+SWEP.Trivia = {text = "A complex assault rifle with a unique hyperburst mechanism. The rifle of choice for C.G.I. counter-terrorists.", x = -250, y = -450}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -350},  atts = {"md_microt1","md_cmore", "md_reflex", "md_trijicon", "md_elcan",  "md_aimpoint", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-600, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},

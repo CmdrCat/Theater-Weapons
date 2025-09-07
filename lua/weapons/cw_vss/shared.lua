@@ -117,11 +117,13 @@ SWEP.StockBGs = {main = 3, foldable = 1, vss = 0}
 	
 SWEP.LuaViewmodelRecoil = true
 
+SWEP.Trivia = {text = "This unique marksman rifle has an integrated suppressor and is chambered in the subsonic 9×39mm cartridge, making every shot whisper-quiet.", x = -200, y = -650}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, -500},  atts = {"md_kobra", "md_aimpoint", "md_schmidt_shortdot", "md_pso1"}},
 	[2] = {header = "Magazine", offset = {0, 350},  atts = {"bg_asval_20rnd", "bg_asval_30rnd"}},
 	[3] = {header = "Variant", offset = {0, -550},  atts = {"bg_asval", "bg_sr3m"}},
 	[4] = {header = "Stock", offset = {1400, -50}, atts = {"bg_vss_foldable_stock"}},
-	[5] = {header = "Barrel", offset = {0, -100}, atts = {"md_pbs1"}, dependencies = {bg_sr3m = true}},
+	[5] = {header = "Muzzle", offset = {0, -100}, atts = {"md_pbs1"}, dependencies = {bg_sr3m = true}},
 	[6] = {header = "Front", offset = {800, -50}, atts = {"md_foregrip"}, dependencies = {bg_sr3m = true}},
 	["+reload"] = {header = "Ammo", offset = {1400, 350}, atts = {"am_magnum", "am_matchgrade"}}}
 

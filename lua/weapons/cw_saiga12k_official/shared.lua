@@ -130,10 +130,12 @@ SWEP.ADSFireAnim = false
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
+SWEP.Trivia = {text = "An AK-platform shotgun with a shorter barrel and folding stock.", x = 0, y = -600}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -500}, atts = {"md_kobra", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_pso1"}},
-	[2] = {header = "Barrel", offset = {-200, -400}, atts = {"md_pbs1"}},
-	[3] = {header = "Rail", offset = {-200, 50}, atts = {"md_anpeq15"}, exclusions = {md_kobra = true, md_pso1 = true}, dependencies = {md_microt1 = true,  md_aimpoint = true, md_schmidt_shortdot = true}},
-	[4] = {header = "Fore-end", offset = {800, -50}, atts = {"md_foregrip"}},
+	[2] = {header = "Muzzle", offset = {-200, -400}, atts = {"md_pbs1"}},
+	[3] = {header = "Laser", offset = {-200, 50}, atts = {"md_anpeq15"}, exclusions = {md_kobra = true, md_pso1 = true}, dependencies = {md_microt1 = true,  md_aimpoint = true, md_schmidt_shortdot = true}},
+	[4] = {header = "Handguard", offset = {800, -75}, atts = {"md_foregrip"}},
 	["+reload"] = {header = "Ammo", offset = {800, 350}, atts = {"am_slugrounds", "am_flechetterounds"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},

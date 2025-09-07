@@ -80,6 +80,8 @@ if CLIENT then
 	}
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 1.5, hor = 2, roll = 1, forward = 1, pitch = 1}
+
+	SWEP.Trivia = {text = "Though this shotgun normally has dual-mode capabilities, this one is locked to pump-action.", x = 0, y = -450}
 	
 	SWEP.LaserPosAdjust = Vector(0.8, 0, 0.3)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) 

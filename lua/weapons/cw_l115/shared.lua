@@ -53,8 +53,10 @@ if CLIENT then
 	
 	SWEP.LuaVMRecoilAxisMod = {vert = 0.5, hor = 1, roll = 1, forward = 0.5, pitch = 0.5}
 	SWEP.RTAlign = {right = 1.2, up = 0.25, forward = 0}
+
+	SWEP.Trivia = {text = "The AWM manufactured for the British military.", x = 0, y = -450}
 	
-	SWEP.OverallMouseSens = 0.7
+	SWEP.OverallMouseSens = 1
 	
 	SWEP.zoomLevels = {
 		10, 7.5, 5

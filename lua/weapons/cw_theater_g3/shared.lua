@@ -103,8 +103,10 @@ SWEP.MuzzleVelocity = 800 -- in meter/s
 SWEP.RailBGs = {main = 1, on = 1, off = 0}
 SWEP.LuaViewmodelRecoil = true
 
+SWEP.Trivia = {text = "A battle rifle made in collaboration between Heckler & Koch and CETME.", x = -100, y = -900}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -350},  atts = {"md_microt1","too_reflex_mrs","too_reflex_romeo4t", "too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	[2] = {header = "Barrel", offset = {-300, -300},  atts = {"md_saker"}},
+	[2] = {header = "Muzzle", offset = {-300, -300},  atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-300, 150}, atts = {"md_foregrip"}},
     ["+use"] = {header = "Optic Type", offset = {800, -750}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
     ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}

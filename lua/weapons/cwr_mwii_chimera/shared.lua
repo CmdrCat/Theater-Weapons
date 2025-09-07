@@ -183,8 +183,8 @@ SWEP.Attachments = {
 	{header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline",}, exclusions = {shroudhg = true}},
 	{header = "Muzzle", offset = {-450 , -400},  atts = {"md_saker","hard20"}, dependencies = {saphoenix = true}},
 	{header = "Bottom Rail", offset = {-650 , 100},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}},
-	{header = "Handguard", offset = {220 , 250},  atts = {"saphoenix"}},
-	{header = "Frontsights", offset = {-100 , 450},  atts = {"nofs2"}},
+	{header = "Barrel", offset = {220 , 250},  atts = {"saphoenix"}},
+	{header = "Front Sights", offset = {-100 , 450},  atts = {"nofs2"}},
 	{header = "Magazine", offset = {970, 400},  atts = {"md_uecw_emag"}},
 	["+reload"] = {header = "Ammo", offset = {900, -100}, atts = {"am_magnum", "am_matchgrade",}}
 
@@ -194,6 +194,8 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 SWEP.LuaVMRecoilAxisMod = {vert = 0, hor = 0.1, roll = 0.1, forward = 0.1, pitch = -0.1}
+
+SWEP.Trivia = {text = "Using subsonic .300 Blackout rounds, this carbine is meant to be used while suppressed.", x = -850, y = -500}
 
 function SWEP:fireAnimFunc()
 	clip = self:Clip1()

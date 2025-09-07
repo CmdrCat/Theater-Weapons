@@ -99,9 +99,11 @@ SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
+SWEP.Trivia = {text = "A continuation of the compact TMP, now manufactured by Brügger & Thomet.", x = -500, y = -450}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -300},  atts = {"md_microt1","md_aimpoint", "md_schmidt_shortdot", "md_nightforce_nxs"}},
-	[2] = {header = "Barrel", offset = {-600, -300},  atts = {"md_tundra9mm"}},
-	[3] = {header = "Rail", offset = {600, 150},  atts = {"md_anpeq15"}},
+	[2] = {header = "Muzzle", offset = {-600, -300},  atts = {"md_tundra9mm"}},
+	[3] = {header = "Laser", offset = {600, 150},  atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {-600, 200}, atts = {"am_magnum", "am_matchgrade", "am_ultramegamatchammo"}}}
 
 SWEP.Animations = {fire = {"fire1", "fire2"},

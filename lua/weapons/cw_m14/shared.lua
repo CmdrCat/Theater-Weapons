@@ -133,9 +133,11 @@ SWEP.BipodBGs = {main = 4, on = 1, off = 0}
 SWEP.SightBGs = {main = 2, sg1 = 1, none = 0}
 SWEP.LuaViewmodelRecoil = true
 
+SWEP.Trivia = {text = "A modern marksman rifle version of the classic M14.", x = -300, y = -450}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -450},  atts = {"md_microt1",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
-	[2] = {header = "Barrel", offset = {-450, -300},  atts = {"md_saker"}},
-	[3] = {header = "Rail", offset = {800, 0}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true, md_nightforce_nxs = true}},
+	[2] = {header = "Muzzle", offset = {-450, -300},  atts = {"md_saker"}},
+	[3] = {header = "Laser", offset = {800, 0}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true, md_nightforce_nxs = true}},
 	[4] = {header = "Handguard", offset = {-450, 150}, atts = {"md_foregrip", "md_bipod"}},
 	[5] = {header = "Conversion", offset = {350, 500}, atts = {"cw_m14_br_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, 450}, atts = {"am_magnum", "am_matchgrade"}}}

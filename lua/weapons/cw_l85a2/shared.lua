@@ -88,9 +88,11 @@ SWEP.SightBGs = {main = 1, none = 1}
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
+SWEP.Trivia = {text = "A British bullpup assault rifle, having a longer range yet shorter overall length compared to other traditional rifles.", x = -400, y = -500}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	[2] = {header = "Barrel", offset = {-500, -300}, atts = {"md_saker"}},
-	[3] = {header = "Rail", offset = {-500, 200},  atts = {"md_anpeq15"}},
+	[2] = {header = "Muzzle", offset = {-500, -300}, atts = {"md_saker"}},
+	[3] = {header = "Laser", offset = {-500, 200},  atts = {"md_anpeq15"}},
 	[4] = {header = "Conversion", offset = {700, 600},  atts = {"cw_l85a1_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, 150}, atts = {"am_magnum", "am_matchgrade"}}}
 

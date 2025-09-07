@@ -73,6 +73,8 @@ SWEP.MuzzleVelocity = 381 -- in meter/s
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.ADSFireAnim = true
 
+SWEP.Trivia = {text = "Though this shotgun has an incredibly short barrel and magazine tube, some US police departments and even its military have bought some.", x = -600, y = -450}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300}, atts = {"md_microt1"}},
 	["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}}
 

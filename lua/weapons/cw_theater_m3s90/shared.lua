@@ -83,8 +83,10 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.RailBGs = { main = 1, on = 1, off = 0 }
 
+SWEP.Trivia = {text = "Though this shotgun normally has dual-mode capabilities, this one is locked to semi-automatic.", x = -300, y = -600}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -450}, atts = {"too_reflex_romeo4t", "too_reflex_mrs", "too_reflex_exps"}},
-	[2] = {header = "Barrel", offset = {-200, -250}, atts = {"md_saker"}},
+	[2] = {header = "Muzzle", offset = {-200, -250}, atts = {"md_saker"}},
 	["+reload"] = {header = "Ammo", offset = {800, 450}, atts = {"am_slugrounds", "am_flechetterounds"}}}
 
 

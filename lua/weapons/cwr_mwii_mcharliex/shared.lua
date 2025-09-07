@@ -217,7 +217,7 @@ SWEP.Attachments = {
 	{header = "Muzzle", offset = {-250 , -300},  atts = {"md_saker","hard20"}},
 	{header = "Bottom Rail Long", offset = {-500 , 550},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}, exclusions = {bruenbm20 = true}},
 	{header = "Bottom Rail Short", offset = {-500 , 550},  atts = {"bruentiltgrip_s", "ftactiger_s"}, dependencies = {bruenbm20 = true}},
-	{header = "Frontsights", offset = {300 , 550},  atts = {"nofs"}},
+	{header = "Front Sights", offset = {300 , 550},  atts = {"nofs"}},
 	{header = "Handguard", offset = {750 , 550},  atts = {"bruenechelon", "bruenbm20"}},
 	{header = "Magazine", offset = {1950, 700},  atts = {"md_uecw_emag"}},
 	["+reload"] = {header = "Ammo", offset = {900, -100}, atts = {"am_magnum", "am_matchgrade", }}
@@ -229,7 +229,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 
-
+SWEP.Trivia = {text = "An accurate, modular assault rifle made by SIG Sauer.", x = -250, y = -450}
 
 function SWEP:fireAnimFunc()
 	clip = self:Clip1()

@@ -81,12 +81,14 @@
     SWEP.LuaViewmodelRecoil = false
     SWEP.CustomizationMenuScale = 0.012
 
+    SWEP.Trivia = {text = "This submachine gun was made as a lighter, cheaper alternative to the MP5, making heavy use of polymers.", x = -550, y = -700}
+
     SWEP.Attachments = { 
-        [1] = {header = "Sight", offset = {200, -500}, atts = {"md_microt1","too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_acog"}},
-        [2] = {header = "Barrel extension", offset = {-300, -500}, atts = {"md_saker"}},
-        [3] = {header = "Rail", offset = {-250, -50}, atts = {"md_anpeq15"}},
+        [1] = {header = "Sight", offset = {500, -500}, atts = {"md_microt1","too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_acog"}},
+        [2] = {header = "Muzzle", offset = {-300, -500}, atts = {"md_saker"}},
+        [3] = {header = "Laser", offset = {-250, -50}, atts = {"md_anpeq15"}},
         [4] = {header = "Handguard", offset = {-850, -250}, atts = {"md_foregrip"}},
-        ["+use"] = {header = "Optic Type", offset = {200, -850}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+        ["+use"] = {header = "Optic Type", offset = {700, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
         ["+reload"] = {header = "Ammo", offset = {-300, 400}, atts = {"am_magnum", "am_matchgrade"}}
     }
 

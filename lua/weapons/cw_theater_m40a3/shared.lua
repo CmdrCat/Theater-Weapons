@@ -85,6 +85,8 @@ if CLIENT then
     SWEP.LuaViewmodelRecoil = true  
 	SWEP.LuaVMRecoilAxisMod = {vert = 0.4, hor = 0.95, roll = 0.9, forward = 0.15, pitch = 0.25}
 		
+	SWEP.Trivia = {text = "The sniper rifle version of the Remington Model 700, the M40A3 has claimed many lives in modern conflicts.", x = -200, y = -800}
+
 	SWEP.AttachmentModelsVM = {
 	
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0.075, -2.498, 1.756), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -109,7 +111,7 @@ SWEP.GlobalDelayOnShoot = 1.1
 
     SWEP.Attachments = {
        [1] = {header = "Sight", offset = {350, -600}, atts = {"md_microt1","too_reflex_mrs", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
-       [2] = {header = "Barrel", offset = {-800, -10}, atts = {"md_saker"}},
+       [2] = {header = "Muzzle", offset = {-800, -10}, atts = {"md_saker"}},
        [3] = {header = "Bolt", offset = {2700, 100}, atts = {"md_improved_bolt"}},
 	   ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	   ["+reload"] = {header = "Ammo", offset = {1350, 950}, atts = {"am_magnum", "am_matchgrade"}}

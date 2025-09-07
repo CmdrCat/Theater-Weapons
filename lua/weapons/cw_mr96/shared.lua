@@ -43,6 +43,8 @@ SWEP.BarrelBGs = {main = 1, regular = 1, long = 2, short = 0}
 SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
+SWEP.Trivia = {text = "Though the MR96 is usually chambered in .357 Magnum or .38 Special, this unique model is chambered in .44 Magnum.", x = -700, y = -450}
+
 SWEP.Attachments = {[1] = {header = "Barrel", offset = {-250, -75},  atts = {"bg_regularbarrel", "bg_longbarrelmr96"}},
 	[2] = {header = "Technique", offset = {500, 450}, atts = {"doi_atow_onehand"}},
 	["+reload"] = {header = "Ammo", offset = {500, -75}, atts = {"am_reducedpowderload", "am_matchgrade"}}}

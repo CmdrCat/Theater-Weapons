@@ -70,14 +70,14 @@ SWEP.CanRestOnObjects = false
 SWEP.SightWithRail = false
 SWEP.SightBGs = {main = 1, on = 0, none = 1}
 
-
+SWEP.Trivia = {text = "This iconic handgun fires the largest round of any magazine-fed, self-loading pistol: The .50 Action Express.", x = -700, y = -500}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1","too_reflex_mrs", "too_reflex_romeo4t","too_reflex_exps", "md_acog"}},
-[2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker"}},
-["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-[3] = {header = "Technique", offset = {-200, -400}, atts = {"doi_atow_onehand"}},
-[4] = {header = "Conversion", offset = {-500, 0}, atts = {"too_thunderbird_conversion"}},
-["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}
+[2] = {header = "Muzzle", offset = {-750, -350}, atts = {"md_saker"}},
+["+use"] = {header = "Optic Type", offset = {-100, 40}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+[3] = {header = "Technique", offset = {-100, -400}, atts = {"doi_atow_onehand"}},
+[4] = {header = "Conversion", offset = {-600, 100}, atts = {"too_thunderbird_conversion"}},
+["+reload"] = {header = "Ammo", offset = {700, 100}, atts = {"am_magnum", "am_matchgrade"}}}
 
 
     SWEP.AttachmentDependencies = {

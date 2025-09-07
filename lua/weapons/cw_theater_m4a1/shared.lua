@@ -110,10 +110,12 @@ SWEP.StockBGs = {main = 2, regular = 0, heavy = 1, sturdy = 2}
 SWEP.MagBGs = {main = 5, regular = 0, round60 = 1}
 SWEP.LuaViewmodelRecoil = true
 
+SWEP.Trivia = {text = "The AR-15 platform sees global use from civilians, law enforcement agencies, and militaries. Many modern firearms take inspiration from the AR-15 in some way.", x = -900, y = -700}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_microt1","too_reflex_romeo4t", "too_reflex_exps","too_reflex_mrs",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
-	[2] = {header = "Barrel", offset = {300, -600}, atts = {"md_saker"}},
+	[2] = {header = "Muzzle", offset = {300, -600}, atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-400, -100}, atts = {"md_foregrip", "md_bipod"}},
-	[4] = {header = "Rail", offset = {250, 300}, atts = {"md_anpeq15"}},
+	[4] = {header = "Laser", offset = {250, 300}, atts = {"md_anpeq15"}},
 	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 

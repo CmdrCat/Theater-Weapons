@@ -67,6 +67,8 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-0.2, 0, -0.4)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
+	SWEP.ForegripOverridePos = {
+	}
 
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "weapon", rel = "", pos = Vector(-0.24, 2.737, -10.419), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -74,17 +76,27 @@ if CLIENT then
 		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.744, -2.684), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "weapon", rel = "", pos = Vector(-0.24, 2.796, -10.414), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0, -3.113, -3.26), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.53, 3.91, -8.396), angle = Angle(180, 180, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", rel = "", pos = Vector(0, 1.439, 5.085), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", rel = "", pos = Vector(0.953, -1.03, -0.258), angle = Angle(-90, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", rel = "", pos = Vector(-0.375, 2.88, -9.53), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	}
+
+	SWEP.ForeGripHoldPos = {
+	["ValveBiped.Bip01_L_Finger3"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(32.067, -28.056, 9.18) },
+	["ValveBiped.Bip01_L_Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(2.161, -81.763, 28.533) },
+	["ValveBiped.Bip01_L_Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(14.732, -40.451, 27.42) },
+	["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 57.699, -34.175) },
+	["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-0.564, 0.519, -0.713), angle = Angle(0, 0, 0) },
+	["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-17.928, 13.843, 43.887) },
+	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(41.328, 16.298, 0) }
+
 	}
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 1, hor = 2, roll = 1.5, forward = 1, pitch = 1}
 	
 	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
-	
-	SWEP.Trivia = {text = "This weapon comes with a bipod pre-installed.", x = -500, y = -360}
 end
 
 SWEP.MuzzleVelocity = 930 -- in meter/s
@@ -93,12 +105,15 @@ SWEP.SightBGs = {main = 1, none = 1}
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	[2] = {header = "Barrel", offset = {-500, -300}, atts = {"md_saker"}},
-	[3] = {header = "Rail", offset = {-500, 200},  atts = {"md_anpeq15"}},
-	[4] = {header = "Internals", offset = {700, 700},  atts = {"too_l86_conversion"}},
-    ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-    ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade"}}}
+SWEP.Trivia = {text = "Accurate yet maneuverable, this machine gun is the weapon of choice of C.G.I.'s commander.", x = -300, y = -550}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {1200, -300},  atts = {"md_microt1", "too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+	[2] = {header = "Muzzle", offset = {-700, -500}, atts = {"md_saker"}},
+	[3] = {header = "Handguard", offset = {-750, 0}, atts = {"md_foregrip"}},
+	[4] = {header = "Laser", offset = {-700, 500},  atts = {"md_anpeq15"}},
+	[5] = {header = "Internals", offset = {700, 700},  atts = {"too_l86_conversion"}},
+    ["+use"] = {header = "Optic Type", offset = {1200, 200}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+    ["+reload"] = {header = "Ammo", offset = {450, 250}, atts = {"am_magnum", "am_matchgrade"}}}
 
 
     SWEP.AttachmentDependencies = {

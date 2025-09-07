@@ -92,9 +92,11 @@ SWEP.StockBGs = {main = 1, unfolded = 1, folded = 0}
 SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.LuaViewmodelRecoil = true
 
+SWEP.Trivia = {text = "This submachine gun has a monstrous rate of fire; one so fast that many users find it disadvantageous.", x = -250, y = -450}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1"}},
-	[2] = {header = "Barrel", offset = {-500, -600},  atts = {"md_tundra9mm"}},
-	[3] = {header = "Barrel length", offset = {-500, -150},  atts = {"bg_mac11_extended_barrel"}},
+	[2] = {header = "Muzzle", offset = {-500, -600},  atts = {"md_tundra9mm"}},
+	[3] = {header = "Barrel", offset = {-500, -150},  atts = {"bg_mac11_extended_barrel"}},
 	[4] = {header = "Stock", offset = {800, 150},  atts = {"bg_mac11_unfolded_stock"}},
 	["+reload"] = {header = "Ammo", offset = {-500, 300}, atts = {"am_magnum", "am_matchgrade"}}}
 

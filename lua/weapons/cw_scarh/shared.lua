@@ -129,9 +129,11 @@ SWEP.MuzzleVelocity = 714 -- in meter/s
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
+SWEP.Trivia = {text = "A reliable battle rifle used by the US Army. Make sure your fingers are clear of the charging handle.", x = -100, y = -450}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
-	[2] = {header = "Barrel", offset = {-400, -500},  atts = {"md_saker"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
-	[3] = {header = "Rail", offset = {-400, -50},  atts = {"md_anpeq15"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
+	[2] = {header = "Muzzle", offset = {-400, -500},  atts = {"md_saker"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
+	[3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
 	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
 	[5] = {header = "Conversion", offset = {500, 400}, atts = {"cw_fortnite_scar_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {900, 150}, atts = {"am_magnum", "am_matchgrade"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}}}

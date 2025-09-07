@@ -80,9 +80,11 @@ SWEP.QuickScopeSpreadIncrease = 0.3
 
 SWEP.RailBGs = {main = 1, on = 0, off = 1}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -500},  atts = {"md_schmidt_shortdot", "md_pso1", "md_acog", "md_nightforce_nxs"}},
-	[2] = {header = "Barrel", offset = {-300, -100}, atts = {"md_pbs1"}},
-	["+reload"] = {header = "Ammo", offset = {950, 0}, atts = {"am_magnum", "am_matchgrade"}}}
+SWEP.Trivia = {text = "Developed in the Soviet Union, this marksman rifle is used by militaries and insurgencies alike.", x = -200, y = -450}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -300},  atts = {"md_schmidt_shortdot", "md_pso1", "md_acog", "md_nightforce_nxs"}},
+	[2] = {header = "Muzzle", offset = {-300, -100}, atts = {"md_pbs1"}},
+	["+reload"] = {header = "Ammo", offset = {1200, 200}, atts = {"am_magnum", "am_matchgrade"}}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},
 	reload = "reload",
