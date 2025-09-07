@@ -87,7 +87,8 @@ SWEP.CanRestOnObjects = false
 SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -550}, atts = {"md_docter"}},
 [2] = {header = "Barrel extension", offset = {-600, -350}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
 [3] = {header = "Rail", offset = {-300, 200}, atts = {"md_anpeq15", "md_csgo_taclight"}},
-[4] = {header = "Fire Control Group", offset = {550, 300}, atts = {"uecw_glock_switch"}},
+[4] = {header = "Technique", offset = {-100, -500}, atts = {"doi_atow_onehand"}},
+[5] = {header = "Fire Control Group", offset = {550, 300}, atts = {"uecw_glock_switch"}},
 ["+reload"] = {header = "Ammo", offset = {400, -100}, atts = {"am_magnum", "am_matchgrade"}}}
 
 SWEP.Animations = {fire = "shoot_1",
@@ -136,12 +137,12 @@ SWEP.FireSound = "CW_GLOCK17_FIRE"
 SWEP.FireSoundSuppressed = "CW_GLOCK17_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.75
 
-SWEP.HipSpread = 0.020
-SWEP.AimSpread = 0.01
-SWEP.VelocitySensitivity = 1.2
-SWEP.MaxSpreadInc = 0.06
-SWEP.SpreadPerShot = 0.02
-SWEP.SpreadCooldown = 0.32
+SWEP.HipSpread = 0.01
+SWEP.AimSpread = 0.005
+SWEP.VelocitySensitivity = 0.25
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 32
 SWEP.DeployTime = 1

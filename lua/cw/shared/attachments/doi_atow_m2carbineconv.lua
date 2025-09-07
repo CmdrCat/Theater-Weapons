@@ -4,7 +4,7 @@ att.displayName = "Select-fire receiver"
 att.displayNameShort = "Auto"
 
 att.statModifiers = {FireDelayMult = -1 / 15,
-HipSpreadMult = 0.3}
+HipSpreadMult = 4}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

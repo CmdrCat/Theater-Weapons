@@ -4,7 +4,8 @@ att.displayName = "MP57 Conversion"
 att.displayNameShort = "MP57"
 
 att.statModifiers = {DamageMult = -31 / 51,
-	FireDelayMult = -41 / 66}
+	FireDelayMult = -41 / 66,
+	HipSpreadMult = 4}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
