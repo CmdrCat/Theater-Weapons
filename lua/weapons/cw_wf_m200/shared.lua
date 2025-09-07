@@ -273,7 +273,7 @@ SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"bolt"}
 SWEP.Base = "cw_base"
-SWEP.Category = "[CW2.0] Yan's Guns"
+SWEP.Category = "TCW - Sniper Rifles"
 
 SWEP.Author			= "Xxyan700xX"
 SWEP.Contact		= ""

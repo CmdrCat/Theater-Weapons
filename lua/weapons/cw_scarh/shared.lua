@@ -176,7 +176,7 @@ SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0"
+SWEP.Category = "TCW - Battle Rifles"
 
 SWEP.Author			= "Spy"
 SWEP.Contact		= ""

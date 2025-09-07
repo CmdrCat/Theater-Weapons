@@ -130,7 +130,7 @@ SWEP.NormalHoldType = "revolver"
 SWEP.RunHoldType = "normal"
 SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0 - Theater Customs"
+SWEP.Category = "TCW - Theater Customs"
 SWEP.SubCategory = "Pistols"
 
 SWEP.Author			= "reshed"

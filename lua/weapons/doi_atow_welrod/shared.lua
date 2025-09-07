@@ -111,7 +111,7 @@ SWEP.NormalHoldType = "revolver"
 SWEP.RunHoldType = "normal"
 SWEP.FireModes = {"bolt"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0 - ATOW"
+SWEP.Category = "TCW - Pistols"
 
 SWEP.Author			= "Khris"
 SWEP.Contact		= ""

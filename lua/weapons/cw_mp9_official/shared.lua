@@ -130,7 +130,7 @@ SWEP.NormalHoldType = "revolver"
 SWEP.RunHoldType = "normal"
 SWEP.FireModes = {"auto", "semi", "safe"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0"
+SWEP.Category = "TCW - Submachine Guns"
 
 SWEP.Author			= "Spy"
 SWEP.Contact		= ""

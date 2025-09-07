@@ -159,7 +159,7 @@ SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0 - Theater Customs"
+SWEP.Category = "TCW - Theater Customs"
 SWEP.SubCategory = "Battle Rifles"
 
 SWEP.Author			= "reshed"

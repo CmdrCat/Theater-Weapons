@@ -49,7 +49,7 @@ SWEP.FireModes = {"meleeet"}
 SWEP.NormalHoldType = "melee2"
 SWEP.RunHoldType = "normal"
 SWEP.Base = "cw_melee_base"
-SWEP.Category = "CW 2.0 - ATOW"
+SWEP.Category = "TCW - Other"
 
 SWEP.Author			= "Khris"
 SWEP.Contact		= ""

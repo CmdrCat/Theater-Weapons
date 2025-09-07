@@ -117,7 +117,7 @@ SWEP.NormalHoldType = "shotgun"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"pump"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0"
+SWEP.Category = "TCW - Shotguns"
 SWEP.FireAnimSpeed = 1.65
 
 SWEP.Author			= "Spy"

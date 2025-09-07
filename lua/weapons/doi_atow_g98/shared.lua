@@ -129,7 +129,7 @@ SWEP.NormalHoldType = "rpg"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"bolt"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0 - ATOW"
+SWEP.Category = "TCW - Marksman Rifles"
 
 SWEP.Author			= "Khris"
 SWEP.Contact		= ""

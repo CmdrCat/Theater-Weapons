@@ -121,7 +121,7 @@ SWEP.NormalHoldType = "rpg"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"semi","auto"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0 - ATOW"
+SWEP.Category = "TCW - Submachine Guns"
 
 SWEP.Author			= "Khris"
 SWEP.Contact		= ""
