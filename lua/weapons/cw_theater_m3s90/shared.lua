@@ -12,7 +12,7 @@ if CLIENT then
 	SWEP.IconLetter = "k"
 	killicon.AddFont("cw_xm1014_official", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
-	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.EffectiveRange_Orig = 20 * 39.37
 	SWEP.DamageFallOff_Orig = .5
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
@@ -180,7 +180,7 @@ SWEP.ShotgunReload = true
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 15 * 39.37
+self.EffectiveRange = 20 * 39.37
 self.DamageFallOff = .5
 end
 

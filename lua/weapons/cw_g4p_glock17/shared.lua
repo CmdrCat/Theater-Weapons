@@ -36,11 +36,11 @@ if CLIENT then
 	SWEP.EoTechPos = Vector(-2.08, -2.8, 0.13)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 	
-	SWEP.DocterPos = Vector(2, -4.046, 0.639)
+	SWEP.DocterPos = Vector(2.01, 5, 0.65)
 	SWEP.DocterAng = Vector(0, 0, 0)
 
-	SWEP.IronsightPos = Vector(2, -4.046, 1.095)
-	SWEP.IronsightAng = Vector(0, 0, 0)
+	SWEP.IronsightPos = Vector(2.01, 5, 1.03)
+	SWEP.IronsightAng = Vector(0.2, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.247, -6.5, -0.602)
 	SWEP.ACOGAng = Vector(0, 0, 0)

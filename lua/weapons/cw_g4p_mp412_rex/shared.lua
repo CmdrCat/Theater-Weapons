@@ -27,20 +27,20 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = 1}
 		
-	SWEP.MicroT1Pos = Vector(-2.115, -2.8, 0.04)
+	SWEP.MicroT1Pos = Vector(-2.115, 5, 0.04)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
 
-	SWEP.ELCANPos = Vector(-2.328, -3.053, -0.567)
-	SWEP.ELCANAng = Vector(0, 0, 0)
+	SWEP.ELCANPos = Vector(-2.31, 5, -0.567)
+	SWEP.ELCANAng = Vector(0, 0.14, 0)
 	
-	SWEP.DocterPos = Vector(-2.346, -3, 0.142)
-	SWEP.DocterAng = Vector(0, 0, 0)
+	SWEP.DocterPos = Vector(-2.31, -3, 0.16)
+	SWEP.DocterAng = Vector(0, 0.3, 0)
 
-	SWEP.IronsightPos = Vector(-2.326, -2.126, 0.507)
-	SWEP.IronsightAng = Vector(0.49, 0.14, 0)
+	SWEP.IronsightPos = Vector(-2.31, 5, 0.45)
+	SWEP.IronsightAng = Vector(0.5, 0.14, 0)
 	
-	SWEP.ACOGPos = Vector(-2.32, -3.053, -0.518)
-	SWEP.ACOGAng = Vector(0, 0, 0)
+	SWEP.ACOGPos = Vector(-2.31, 5, -0.518)
+	SWEP.ACOGAng = Vector(0, 0.14, 0)
 	
 	SWEP.SprintPos = Vector(1.634, -8.28, -8.311)
 	SWEP.SprintAng = Vector(70, 0, 0)

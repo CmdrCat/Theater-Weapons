@@ -21,7 +21,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.EffectiveRange_Orig = 20 * 39.37
 	SWEP.DamageFallOff_Orig = .5
 	
 	SWEP.Shell = "khr12gbuck"
@@ -196,7 +196,7 @@ self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDe
 	--self.ReloadStartTime = 0.5
 	--end
 
-	self.EffectiveRange = 15 * 39.37
+	self.EffectiveRange = 20 * 39.37
 	self.DamageFallOff = .5
 	
 	if (self.ActiveAttachments.am_slugroundsm37) then

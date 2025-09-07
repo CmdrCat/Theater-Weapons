@@ -322,7 +322,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 60 / 900
 SWEP.FireSound = "MWII_M13B_FIRE"
 SWEP.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.6
 
 
 --paloma shit

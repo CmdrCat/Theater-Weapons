@@ -3,7 +3,7 @@ att.name = "too_l86_conversion"
 att.displayName = "Commander Variant"
 att.displayNameShort = "FCG"
 
-att.statModifiers = {DamageMult = -7 / 34,
+att.statModifiers = {DamageMult = -5 / 32,
 FireDelayMult = -9 / 40}
 
 if CLIENT then

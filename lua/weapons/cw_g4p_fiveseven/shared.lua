@@ -36,11 +36,11 @@ if CLIENT then
 	SWEP.EoTechPos = Vector(-2.08, -2.8, 0.13)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 	
-	SWEP.DocterPos = Vector(2.61, -2.757, 1.204)
+	SWEP.DocterPos = Vector(2.612, 5, 1.225)
 	SWEP.DocterAng = Vector(0, 0, 0)
 
-	SWEP.IronsightPos = Vector(2.608, -2.757, 1.394)
-	SWEP.IronsightAng = Vector(1.263, 0, 0)
+	SWEP.IronsightPos = Vector(2.612, 5, 1.2)
+	SWEP.IronsightAng = Vector(1.34, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.247, -6.5, -0.602)
 	SWEP.ACOGAng = Vector(0, 0, 0)
@@ -136,7 +136,7 @@ SWEP.Primary.Ammo			= "FN 5.7x28MM"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FIVESEVEN_FIRE"
 SWEP.FireSoundSuppressed = "CW_FIVESEVEN_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.78
+SWEP.Recoil = 0.25
 
 SWEP.HipSpread = 0.022
 SWEP.AimSpread = 0.01
