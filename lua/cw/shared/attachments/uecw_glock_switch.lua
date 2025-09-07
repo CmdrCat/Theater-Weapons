@@ -3,7 +3,7 @@ att.name = "uecw_glock_switch"
 att.displayName = "Glock Switch"
 att.displayNameShort = "Switch"
 
-att.statModifiers = {DamageMult = -5 / 16,
+att.statModifiers = {DamageMult = -7 / 32,
 	FireDelayMult = -1 / 3,
 	HipSpreadMult = 4}
 

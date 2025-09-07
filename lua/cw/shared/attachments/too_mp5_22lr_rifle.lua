@@ -4,7 +4,7 @@ att.displayName = "MP5 .22 LR Rifle Conversion"
 att.displayNameShort = ".22 LR Rifle"
 
 att.statModifiers = {FireDelayMult = -3 / 5,
-DamageMult = -22 / 37,
+DamageMult = -20 / 37,
 RecoilMult = -0.75,
 HipSpreadMult = -0.99,}
 

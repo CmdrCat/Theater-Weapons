@@ -3,7 +3,7 @@ att.name = "uecw_mp57_conversion"
 att.displayName = "MP57 Conversion"
 att.displayNameShort = "MP57"
 
-att.statModifiers = {DamageMult = -31 / 51,
+att.statModifiers = {DamageMult = -13 / 24,
 	FireDelayMult = -41 / 66,
 	HipSpreadMult = 4}
 
