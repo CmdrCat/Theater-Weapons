@@ -11,6 +11,7 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.014
 	
 	SWEP.IconLetter = "i"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_scarh")
 	killicon.AddFont("cw_g3a3", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
 	SWEP.EffectiveRange_Orig = 60 * 39.37

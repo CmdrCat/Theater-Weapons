@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/entities/cw_famasg2_official"
+	"$translucent" 1
+}

@@ -11,6 +11,7 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.012
 	
 	SWEP.IconLetter = "i"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_theater_l86")
 	killicon.AddFont("cw_g36c", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 
 	SWEP.EffectiveRange_Orig = 55 * 39.37
@@ -153,7 +154,7 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_base"
 SWEP.Category = "CW 2.0 - Theater Customs"
-SWEP.SubCategory = "Light Machine Guns"
+SWEP.SubCategory = "Machine Guns"
 
 SWEP.Author			= "reshed"
 SWEP.Contact		= ""

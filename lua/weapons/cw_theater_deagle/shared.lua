@@ -10,6 +10,7 @@ if CLIENT then
 	SWEP.Spawnable = false
 	
 	SWEP.IconLetter = "f"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_theater_deagle")
 	killicon.AddFont("cw_deagle", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
 	SWEP.MuzzleEffect = "muzzleflash_pistol_deagle"

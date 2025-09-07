@@ -10,6 +10,7 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1.15
 	
 	SWEP.IconLetter = "w"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_theater_m4a1")
 	killicon.AddFont("cw_ar15", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 
 	SWEP.EffectiveRange_Orig = 50 * 39.37

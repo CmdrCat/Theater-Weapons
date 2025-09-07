@@ -11,6 +11,7 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1
 	
 	SWEP.IconLetter = "l"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_mac11")
 	killicon.AddFont("cw_ump45", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 
 	SWEP.EffectiveRange_Orig = 10 * 39.37

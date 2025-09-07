@@ -9,6 +9,7 @@ if CLIENT then
 	SWEP.PrintName = "M1911"
 
 	SWEP.IconLetter = "f"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_m1911")
 	killicon.AddFont("cw_deagle", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
 	SWEP.MuzzleEffect = "muzzleflash_pistol"

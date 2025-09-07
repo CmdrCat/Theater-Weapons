@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/entities/cw_mp7_official"
+	"$translucent" 1
+}

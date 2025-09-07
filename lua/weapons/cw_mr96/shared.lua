@@ -7,7 +7,7 @@ if CLIENT then
 	SWEP.PrintName = "MR96"
 	SWEP.CSMuzzleFlashes = true
 	
-	SWEP.SelectIcon = surface.GetTextureID("weaponicons/mr96")
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_mr96")
 	killicon.Add("cw_mr96", "weaponicons/mr96", Color(255, 80, 0, 150))
 	
 	SWEP.MuzzleEffect = "muzzleflash_6"

@@ -14,6 +14,7 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1.2
 	
 	SWEP.IconLetter = "r"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_theater_m40a3")
 	killicon.AddFont("cw_l115", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
 	SWEP.MuzzleEffect = "muzzleflash_pistol"

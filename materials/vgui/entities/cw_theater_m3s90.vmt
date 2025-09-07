@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/entities/cw_theater_m3s90"
+	"$translucent" 1
+}

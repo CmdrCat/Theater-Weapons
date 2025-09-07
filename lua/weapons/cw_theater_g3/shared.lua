@@ -10,6 +10,7 @@ if CLIENT then
 	SWEP.UseHands = true
 	
 	SWEP.IconLetter = "i"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_theater_g3")
 	killicon.AddFont("cw_g3a3", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
 	SWEP.EffectiveRange_Orig = 65 * 39.37
