@@ -152,7 +152,7 @@ SWEP.RecoilToSpread = 1.6 -- should actually be called SpreadToRecoil, but whate
 
 SWEP.HipSpread = 0.01
 SWEP.AimSpread = 0.005
-SWEP.VelocitySensitivity = 1.2
+SWEP.VelocitySensitivity = 0.5
 SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
