@@ -242,4 +242,10 @@ if (self.ActiveAttachments.too_sdbar_bar) then
 self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + 0.3))
 end
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
 end
