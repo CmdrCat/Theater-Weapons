@@ -15,6 +15,9 @@ if CLIENT then
 	SWEP.IconLetter = "w"
 	killicon.AddFont("cw_ar15", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+	SWEP.EffectiveRange_Orig = 100 * 39.37
+	SWEP.DamageFallOff_Orig = .1
+
 	SWEP.MuzzleEffect = "muzzleflash_SR25"
 	SWEP.NoSilMuz = true
 	SWEP.PosBasedMuz = true
@@ -234,7 +237,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 85
+SWEP.Damage = 190
 SWEP.DeployTime = 1
 
 SWEP.ReloadSpeed = 1
@@ -243,5 +246,18 @@ SWEP.ReloadTime_Empty = 5
 SWEP.ReloadHalt = 3.3
 SWEP.ReloadHalt_Empty = 5.3
 SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 100 * 39.37
+self.DamageFallOff = .1
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+end
 
 end

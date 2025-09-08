@@ -119,4 +119,10 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .85
+if self.ActiveAttachments.am_reducedpowderload then
+	self.EffectiveRange = ((self.EffectiveRange * 0.85))
+end	
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end	
 end

@@ -14,6 +14,9 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_l115")
 	killicon.AddFont("cw_l115", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+	SWEP.EffectiveRange_Orig = 100 * 39.37
+	SWEP.DamageFallOff_Orig = .2
+
 	SWEP.ZoomTextures = {{tex = surface.GetTextureID("sprites/scope_leo"), offset = {0, 1}}}
 	SWEP.SimpleTelescopicsFOV = 75
 	
@@ -142,7 +145,7 @@ SWEP.MaxSpreadInc = 0.2
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 1.55
 SWEP.Shots = 1
-SWEP.Damage = 90
+SWEP.Damage = 170
 SWEP.DeployTime = 1
 
 SWEP.ReloadSpeed = 1
@@ -151,6 +154,19 @@ SWEP.ReloadTime_Empty = 2.42
 SWEP.ReloadHalt = 3.48
 SWEP.ReloadHalt_Empty = 3.48
 SWEP.NearWallDistance = 40
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 100 * 39.37
+self.DamageFallOff = .2
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+end
 
 if CLIENT then
 	function SWEP:IndividualInitialize()

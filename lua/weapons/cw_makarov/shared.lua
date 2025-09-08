@@ -155,4 +155,7 @@ if (self.ActiveAttachments.bg_makarov_pm_suppressor) then
 self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + 0.05))
 end
+if self.ActiveAttachments.am_sp7 then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
 end

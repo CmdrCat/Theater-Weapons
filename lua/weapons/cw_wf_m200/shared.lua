@@ -4,8 +4,8 @@ include("sh_sounds.lua")
 
 CustomizableWeaponry:registerAmmo(".408 Cheytac", ".408 Cheytac", 10.36, 77)
 
-SWEP.EffectiveRange_Orig = 100 * 910
-SWEP.DamageFallOff_Orig = .35
+SWEP.EffectiveRange_Orig = 150 * 39.37
+SWEP.DamageFallOff_Orig = .25
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
@@ -325,15 +325,15 @@ SWEP.BipodInstalled = true
 
 function SWEP:IndividualThink()
 
-	self.EffectiveRange = 100 * 910
-	self.DamageFallOff = .35
+	self.EffectiveRange = 150 * 39.37
+	self.DamageFallOff = .25
 
 	if self.ActiveAttachments.bg_cheytac_short_barrel then
 	    self.EffectiveRange = (self.EffectiveRange * 0.9)
 	    self.DamageFallOff = (self.DamageFallOff + 0.05)	
 	else
-	    self.EffectiveRange = 100 * 910
-	    self.DamageFallOff = .35	
+	    self.EffectiveRange = 150 * 39.37
+	    self.DamageFallOff = .25
 	end
 
 	if self.dt.BipodDeployed and self.ActiveAttachments.bg_snip2_special_bipod then 
@@ -349,4 +349,11 @@ function SWEP:IndividualThink()
         self:setBodygroup(self.SB_BipodBGs.main, self.SB_BipodBGs.SB_OFF)
         self.BipodInstalled = true
 	end
- end
+
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+end

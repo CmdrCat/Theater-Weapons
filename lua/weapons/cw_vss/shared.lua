@@ -218,4 +218,10 @@ if (self.ActiveAttachments.bg_sr3m) then
 self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + .6))
 end
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
 end

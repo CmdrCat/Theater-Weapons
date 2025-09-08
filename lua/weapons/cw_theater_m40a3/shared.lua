@@ -2,8 +2,8 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
-SWEP.EffectiveRange_Orig = 100 * 280
-SWEP.DamageFallOff_Orig = .25
+SWEP.EffectiveRange_Orig = 90 * 39.37
+SWEP.DamageFallOff_Orig = .3
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
@@ -220,7 +220,7 @@ SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.85
 SWEP.Shots = 1
-SWEP.Damage = 122
+SWEP.Damage = 150
 SWEP.DeployTime = 1.12
 
 SWEP.ReloadSpeed = 1
@@ -228,36 +228,6 @@ SWEP.ReloadTime = 2.6
 SWEP.ReloadTime_Empty = 4.5
 SWEP.ReloadHalt = 2.6
 SWEP.ReloadHalt_Empty = 4.5
-
-function SWEP:IndividualThink()
-	
-	self.EffectiveRange = 100 * 280
-	self.DamageFallOff = .25
-	
-	if self.ActiveAttachments.bg_tac338_short_barrel then
-	    self.EffectiveRange = (self.EffectiveRange * 0.95)
-	else
-	    self.EffectiveRange = 100 * 280
-	end
-	
-	if self.dt.BipodDeployed and self.ActiveAttachments.bg_snip2_special_bipod then 
-        self:setBodygroup(self.SB_BipodBGs.main, self.SB_BipodBGs.SB_DEPLOYED)
-	else
-        self:setBodygroup(self.SB_BipodBGs.main, self.SB_BipodBGs.SB_ON)
-    end	
-	
-	if not self.ActiveAttachments.bg_snip2_special_bipod then
-        self:setBodygroup(self.SB_BipodBGs.main, self.SB_BipodBGs.SB_OFF)
-	end
-	
-    self.Animations.draw = "draw2"
-	if self.Animations.draw == "draw2" then
-	    self.DeployTime = 1.12
-	end
-end
-
-
-
 
 SWEP.ADSFireAnim = true
 
@@ -294,9 +264,19 @@ function SWEP:fireAnimFunc()
     self:sendWeaponAnim(anim, rate, cycle)
 end
 
-
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 50 * 39.37
+self.EffectiveRange = 90 * 39.37
+self.DamageFallOff = .3
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+ self.Animations.draw = "draw2"
+if self.Animations.draw == "draw2" then
+    self.DeployTime = 1.12
+end
 end

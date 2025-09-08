@@ -183,6 +183,15 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 25 * 39.37
 self.DamageFallOff = .55
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_ultramegamatchammo then
+	self.DamageFallOff = ((self.DamageFallOff * 0.1))
+end
 end
 
 function SWEP:getTelescopeAngles()
