@@ -18,7 +18,7 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 50 * 39.37
 	SWEP.DamageFallOff_Orig = .3
 
-	SWEP.MuzzleEffect = "muzzleflash_ak74"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
 	SWEP.SnapToGrip = true
 	SWEP.ShellScale = 0.7
@@ -168,7 +168,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_
 	[3] = {header = "Handguard", offset = {-300, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Magazine", offset = {-300, 350},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_cmag", "md_uecw_60rnd"}},
 	[5] = {header = "Conversion", offset = {700, 350}, atts = {"uecw_m8a1_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {1250, 50}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {1100, 50}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 SWEP.AttachmentExclusions = {
 	["md_foregrip"] = {"md_uecw_cmag"},

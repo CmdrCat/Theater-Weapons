@@ -212,7 +212,7 @@ SWEP.AttachmentPosDependency = {
 
 SWEP.Attachments = {
 
-	{header = "Optic", offset = {950 , -600},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop",}},
+	{header = "Optic", offset = {950 , -350},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop",}},
 	{header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline",}, exclusions = {shroudhg = true}},
 	{header = "Muzzle", offset = {-250 , -300},  atts = {"md_saker","hard20"}},
 	{header = "Bottom Rail Long", offset = {-500 , 550},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}, exclusions = {bruenbm20 = true}},
@@ -220,7 +220,7 @@ SWEP.Attachments = {
 	{header = "Front Sights", offset = {300 , 550},  atts = {"nofs"}},
 	{header = "Handguard", offset = {750 , 550},  atts = {"bruenechelon", "bruenbm20"}},
 	{header = "Magazine", offset = {1950, 700},  atts = {"md_uecw_emag"}},
-	["+reload"] = {header = "Ammo", offset = {900, -100}, atts = {"am_magnum", "am_matchgrade", }}
+	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", }}
 
 }
 	
@@ -229,7 +229,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 
-SWEP.Trivia = {text = "An accurate, modular assault rifle made by SIG Sauer.", x = -250, y = -450}
+SWEP.Trivia = {text = "The Virtus delivers unmatched performance with modular adaptibility and precision. BSTF's standard-issue rifle.", x = -250, y = -450}
 
 function SWEP:fireAnimFunc()
 	clip = self:Clip1()
