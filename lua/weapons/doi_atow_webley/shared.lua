@@ -83,7 +83,7 @@ SWEP.FullAimViewmodelRecoil = true
 SWEP.MuzzleVelocity = 250
 
 SWEP.Attachments = {[1] = {header = "Reload", offset = {-150, 125}, atts = {"doi_atow_revsbandoler","doi_atow_revspeedstrip","doi_atow_revspeedloader"}},
-["+reload"] = {header = "Ammo", offset = {350, -150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_riot"}}}
+["+reload"] = {header = "Ammo", offset = {350, -150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_riot","am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"base_fire2","base_fire3"},
 	fire_aim = {"iron_fire_1","iron_fire_2"},

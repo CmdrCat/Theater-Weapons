@@ -93,7 +93,7 @@ SWEP.MuzzleVelocity = 250
 
 SWEP.Attachments = {[2] = {header = "Reload", offset = {-150, 150}, atts = {"doi_atow_revsbandoler","doi_atow_revspeedloader"}},
 [1] = {header = "Barrel", offset = {-400, -250}, atts = {"doi_atow_1917ext"}},
-["+reload"] = {header = "Ammo", offset = {350, -150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_riot"}}}
+["+reload"] = {header = "Ammo", offset = {350, -150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_riot","am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire2"},
 	fire_aim = {"iron_fire_1"},
@@ -160,14 +160,12 @@ SWEP.FireDelay = 60/399
 SWEP.FireSound = "DOIM1917_FIRE"
 SWEP.Recoil = 1.3
 
-SWEP.HipSpread = 0.07
-SWEP.AimSpread = 0.007
+SWEP.HipSpread = 0.065
+SWEP.AimSpread = 0.0085
 SWEP.VelocitySensitivity = 0
-SWEP.MaxSpreadInc = 0.06
-SWEP.ClumpSpread_Orig = nil
-SWEP.ClumpSpread = nil
+SWEP.MaxSpreadInc = 0.028
 SWEP.SpreadPerShot = 0.012
-SWEP.SpreadCooldown = 0.58
+SWEP.SpreadCooldown = 0.3
 SWEP.Shots = 1
 SWEP.Damage = 69
 SWEP.DeployTime = .375

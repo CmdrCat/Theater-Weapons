@@ -124,7 +124,7 @@ if CLIENT then
 	SWEP.HipFireFOVIncrease = false
 	SWEP.LuaVMRecoilAxisMod = {vert = 0.5, hor = 1, roll = 1, forward = 0.5, pitch = 0.5}
 
-	SWEP.Trivia = {text = "This legendary sniper rifle is has unparalleled, sub-MOA accuracy. Land record-breaking longshots or quickscope at close range; the choice is yours.", x = -400, y = -750}
+	SWEP.Trivia = {text = "This legendary sniper rifle has unparalleled, sub-MOA accuracy. Land record-breaking longshots or quickscope at close range; the choice is yours.", x = -400, y = -750}
 
 	SWEP.AttachmentModelsVM = {
 	    ["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "body", rel = "", pos = Vector(0.1, 18.728, 0.699), angle = Angle(0, 0, 0), size = Vector(1.189, 1.189, 1.189)},

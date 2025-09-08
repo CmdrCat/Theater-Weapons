@@ -1,23 +1,23 @@
 local att = {}
-att.name = "am_atow_riot"
-att.displayName = "Shotshell"
-att.displayNameShort = "SHOT"
+att.name = "am_snakeshot"
+att.displayName = "Snake Shot"
+att.displayNameShort = "Snake"
 
 att.statModifiers = {
-	DamageMult = -0.4,
-	RecoilMult = -.35}
+	DamageMult = -99 / 100,
+	RecoilMult = -.5}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/riot")
-	att.description = {{t = "Riot control shell with four pellets.", c = CustomizableWeaponry.textColors.COSMETIC}}
+	att.description = {{t = "Shells loaded with a flurry of weak shot meant to kill small pests.", c = CustomizableWeaponry.textColors.COSMETIC}}
 end
 
 function att:attachFunc()
 	self.CrosshairParts = {left = true, right = true, upper = false, lower = true}
-	self.ClumpSpread = 0.11
-	self.ClumpSpread_Orig = 0.11
-	self.Shots = 4
-	self.PenMod = .8
+	self.ClumpSpread = 5
+	self.ClumpSpread_Orig = 5
+	self.Shots = 100
+	self.PenMod = 0.1
 end
 
 function att:detachFunc()

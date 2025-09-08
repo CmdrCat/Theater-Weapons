@@ -153,7 +153,7 @@ SWEP.ForceBackToHipAfterAimedShot = true
 SWEP.AimBreathingIntensity = 1
 SWEP.GlobalDelayOnShoot = 1.6
 
-SWEP.Trivia = {text = "Accurate sniper rifle designed for magnum rifle rounds. The original design was made in a shed.", x = 0, y = -450}
+SWEP.Trivia = {text = "An accurate sniper rifle designed for magnum rifle rounds. The original design was made in a shed. With a box of scraps!", x = -100, y = -450}
 
 SWEP.Attachments = {
 	{header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan",  "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}},

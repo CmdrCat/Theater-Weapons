@@ -47,7 +47,7 @@ SWEP.Trivia = {text = "Though the MR96 is usually chambered in .357 Magnum or .3
 
 SWEP.Attachments = {[1] = {header = "Barrel", offset = {-250, -75},  atts = {"bg_regularbarrel", "bg_longbarrelmr96"}},
 	[2] = {header = "Technique", offset = {500, 450}, atts = {"doi_atow_onehand"}},
-	["+reload"] = {header = "Ammo", offset = {500, -75}, atts = {"am_reducedpowderload", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {500, -75}, atts = {"am_reducedpowderload", "am_matchgrade","am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
 	reload = "reload",
@@ -99,6 +99,8 @@ SWEP.VelocitySensitivity = 1.35
 SWEP.MaxSpreadInc = 0.06
 SWEP.SpreadPerShot = 0.02
 SWEP.SpreadCooldown = 0.25
+SWEP.ClumpSpread_Orig = nil
+SWEP.ClumpSpread = nil
 SWEP.Shots = 1
 SWEP.Damage = 69
 SWEP.DeployTime = 0.7

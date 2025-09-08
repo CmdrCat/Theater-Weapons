@@ -78,7 +78,7 @@ SWEP.MuzzleVelocity = 750 -- in meter/s
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
-SWEP.Trivia = {text = "A compact submachine gun that uses 4.6×30mm armor-piercing rounds.", x = 0, y = -550}
+SWEP.Trivia = {text = "A compact submachine gun that uses 4.6×30mm armor-piercing rounds. Its prototype is a favorite amongst certain rebels...", x = -400, y = -550}
 
 SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {1100, -400}, atts = {"md_microt1", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog"}},

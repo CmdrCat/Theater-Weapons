@@ -147,6 +147,7 @@ SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law
 SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -350},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-450, -200}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Laser", offset = {-450, 250}, atts = {"md_anpeq15"}},
+	[4] = {header = "Conversion", offset = {500, 200}, atts = {"uecw_acr_68_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {1250, 100}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
@@ -215,6 +216,11 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
+self.DamageFallOff = 0.3
+if self.ActiveAttachments.uecw_acr_68_conversion then
+	self.EffectiveRange = ((self.EffectiveRange + 15 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff - 0.1))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

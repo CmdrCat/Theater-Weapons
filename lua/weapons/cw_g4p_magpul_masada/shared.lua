@@ -164,6 +164,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -400},  atts = {"md_
 	[2] = {header = "Muzzle", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-400, 0}, atts = {"md_foregrip", "md_bipod"}},
 	[4] = {header = "Laser", offset = {250, 400}, atts = {"md_anpeq15"}},
+	[5] = {header = "Conversion", offset = {1000, 500}, atts = {"uecw_acr_68_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 
 if CustomizableWeaponry_KK_HK416 then
@@ -238,6 +239,11 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
+self.DamageFallOff = 0.3
+if self.ActiveAttachments.uecw_acr_68_conversion then
+	self.EffectiveRange = ((self.EffectiveRange + 15 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff - 0.1))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end
