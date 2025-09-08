@@ -37,6 +37,7 @@ if CLIENT then
 	SWEP.ShellDelay = .84
 	SWEP.ShellDelaySlow = .84
 	SWEP.ShellDelayFast = .74
+	SWEP.ShellDelaySuperFast = .3
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 5.5, y = -2.75, z = .5}
 
@@ -106,7 +107,7 @@ SWEP.AimBreathingEnabled = true
 
 SWEP.Attachments = {[1] = {header = "Reload", offset = {-150, 120}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_no32"] = true, ["doi_atow_wina5"] = true, ["doi_atow_unertl"] = true}},
 [2] = {header = "Optic", offset = {250, -400}, atts = {"doi_atow_no32", "doi_atow_wina5", "doi_atow_unertl"}},
-[3] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt"}},
+[3] = {header = "Bolt", offset = {950, 240}, atts = {"doi_atow_greasedbolt","doi_atow_mad_minute"}},
 [4] = {header = "Finish", offset = {1050, -100}, atts = {"doi_atow_wornfinish"}},
 ["+reload"] = {header = "Ammo", offset = {320, 200}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
 
@@ -187,6 +188,7 @@ SWEP.ADSFireAnim = true
 SWEP.GlobalDelayOnShoot = 60/42
 SWEP.GlobalDelayOnShootSlow = 60/42
 SWEP.GlobalDelayOnShootFast = 60/52
+SWEP.GlobalDelayOnShootSuperFast = 60/115
 SWEP.Chamberable = false
 SWEP.PreventQuickScoping = false
 
@@ -272,8 +274,8 @@ function SWEP:IndividualThink()
 								
 							
 	self.Owner.ViewAff = 0
-	self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast or self.ShellDelaySlow
-	self.GlobalDelayOnShoot = (self.ActiveAttachments.doi_atow_greasedbolt) and self.GlobalDelayOnShootFast or self.GlobalDelayOnShootSlow
+	self.ShellDelay = ((self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast) or ((self.ActiveAttachments.doi_atow_mad_minute) and self.ShellDelaySuperFast) or self.ShellDelaySlow
+	self.GlobalDelayOnShoot = ((self.ActiveAttachments.doi_atow_greasedbolt) and self.GlobalDelayOnShootFast) or ((self.ActiveAttachments.doi_atow_mad_minute) and self.GlobalDelayOnShootSuperFast) or self.GlobalDelayOnShootSlow
 	
 	if not self.ActiveAttachments.doi_atow_stripperclips then
 	self.ShotgunReload = true
