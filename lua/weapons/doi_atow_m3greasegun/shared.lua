@@ -227,7 +227,91 @@ function SWEP:fireAnimFunc()
 	end
 	
 	self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
-end //*/
+end
+
+function SWEP:Holster(wep)
+	-- can't switch if neither the weapon we want to switch to or the wep we're trying to switch to are not valid
+	if not IsValid(wep) and not IsValid(self.SwitchWep) then
+		self.SwitchWep = nil
+		return false
+	end
+	
+	local CT = CurTime()
+	
+	-- can't holster if we have a global delay on the weapon
+	if CT < self.GlobalDelay or CT < self.HolsterWait then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.HolsterDelay ~= 0 and CT < self.dt.HolsterDelay then
+		return false
+	end
+	
+	-- can't holster if there are sequenced actions
+	if #self._activeSequences > 0 then
+		return false
+	end
+	
+	if self.ReloadDelay then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.State ~= CW_HOLSTER_START then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+	end
+	
+	self.dt.State = CW_HOLSTER_START
+	
+	-- if holster sequence is over, let us select the desired weapon
+	if self.SwitchWep and self.dt.State == CW_HOLSTER_START and CurTime() > self.dt.HolsterDelay then
+		self.dt.State = CW_IDLE
+		self.dt.HolsterDelay = 0
+		
+		return true
+	end
+	
+	-- if it isn't, make preparations for it
+	self.ShotgunReloadState = 0
+	self.ReloadDelay = nil
+	
+	if self:filterPrediction() then
+		if self.holsterSound then -- quick'n'dirty prediction fix
+			self:EmitSound("CW_HOLSTER", 70, 100)
+			self.holsterSound = false
+			
+			if IsFirstTimePredicted() then
+				if self.holsterAnimFunc then
+					self:holsterAnimFunc()
+				else
+					if self.Animations.holster then
+						self:sendWeaponAnim("holster")
+					end
+				end
+			end
+		end
+	end
+	
+	self.SwitchWep = wep
+	self.SuppressTime = nil
+	
+	if self.dt.M203Active then
+		if SERVER and SP then
+			SendUserMessage("CW20_M203OFF", self.Owner)
+		end
+		
+		if CLIENT then
+			self:resetM203Anim()
+		end
+	end
+
+	self.dt.M203Active = false
+end
+
+/*/
 
 local simpleTextColor = Color(255, 210, 0, 255)
 local mod = 25
