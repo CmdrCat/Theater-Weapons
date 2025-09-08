@@ -3,7 +3,7 @@ AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
 SWEP.EffectiveRange_Orig = 90 * 39.37
-SWEP.DamageFallOff_Orig = .3
+SWEP.DamageFallOff_Orig = .15
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
@@ -213,14 +213,14 @@ SWEP.FireSound = "CW_TOO_M40_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_M40_FIRESUPPRESSED"
 SWEP.Recoil = 2.5
 
-SWEP.HipSpread = 0.045
-SWEP.AimSpread = 0.0005
-SWEP.VelocitySensitivity = 1.7
-SWEP.MaxSpreadInc = 0.1
-SWEP.SpreadPerShot = 0.01
-SWEP.SpreadCooldown = 0.85
+SWEP.HipSpread = 0.01
+SWEP.AimSpread = 0.005
+SWEP.VelocitySensitivity = 0
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
-SWEP.Damage = 150
+SWEP.Damage = 170
 SWEP.DeployTime = 1.12
 
 SWEP.ReloadSpeed = 1
@@ -268,7 +268,7 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 90 * 39.37
-self.DamageFallOff = .3
+self.DamageFallOff = .15
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

@@ -4,18 +4,19 @@ include("sh_sounds.lua")
 
 CustomizableWeaponry:registerAmmo(".408 Cheytac", ".408 Cheytac", 10.36, 77)
 
-SWEP.EffectiveRange_Orig = 150 * 39.37
-SWEP.DamageFallOff_Orig = .25
+SWEP.EffectiveRange_Orig = 200 * 39.37
+SWEP.DamageFallOff_Orig = .09
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "CheyTac M200"
+	SWEP.PrintName = "M200 Intervention"
 	SWEP.CSMuzzleFlashes = true
 	
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1.85
 	
 	SWEP.IconLetter = "r"
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_wf_m200")
 	killicon.AddFont("cw_l115", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
     SWEP.ZoomAmount = 10 -- 15
@@ -312,7 +313,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.04
 SWEP.SpreadCooldown = 1.0
 SWEP.Shots = 1
-SWEP.Damage = 180
+SWEP.Damage = 190
 SWEP.DeployTime = 0.55
 
 SWEP.ReloadSpeed = 0.9
@@ -332,8 +333,8 @@ function SWEP:IndividualThink()
 	    self.EffectiveRange = (self.EffectiveRange * 0.9)
 	    self.DamageFallOff = (self.DamageFallOff + 0.05)	
 	else
-	    self.EffectiveRange = 150 * 39.37
-	    self.DamageFallOff = .25
+	    self.EffectiveRange = 200 * 39.37
+	    self.DamageFallOff = .09
 	end
 
 	if self.dt.BipodDeployed and self.ActiveAttachments.bg_snip2_special_bipod then 

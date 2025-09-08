@@ -15,7 +15,7 @@ if CLIENT then
 	SWEP.IconLetter = "w"
 	killicon.AddFont("cw_ar15", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
-	SWEP.EffectiveRange_Orig = 100 * 39.37
+	SWEP.EffectiveRange_Orig = 150 * 39.37
 	SWEP.DamageFallOff_Orig = .1
 
 	SWEP.MuzzleEffect = "muzzleflash_SR25"
@@ -241,7 +241,7 @@ SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 190
+SWEP.Damage = 185
 SWEP.DeployTime = 1
 
 SWEP.ReloadSpeed = 1
@@ -256,11 +256,11 @@ self.Owner.ViewAff = 0
 self.ShellDelay = (self.ActiveAttachments.uecw_mrad_conversion) and self.ShellDelayFast
 self.GlobalDelayOnShoot = (self.ActiveAttachments.uecw_mrad_conversion) and self.GlobalDelayOnShootFast
 clip = self:Clip1()
-self.EffectiveRange = 100 * 39.37
+self.EffectiveRange = 150 * 39.37
 self.DamageFallOff = .1
 if self.ActiveAttachments.uecw_mrad_conversion then
-	self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + 0.15))
+	self.EffectiveRange = ((self.EffectiveRange - 55 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + 0.1))
 end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))

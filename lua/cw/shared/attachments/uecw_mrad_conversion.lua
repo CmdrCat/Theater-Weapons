@@ -3,7 +3,7 @@ att.name = "uecw_mrad_conversion"
 att.displayName = "MRAD .308 Winchester Conversion"
 att.displayNameShort = "MRAD"
 
-att.statModifiers = {DamageMult = -3 / 19,
+att.statModifiers = {DamageMult = -3 / 37,
 	FireDelayMult = -2 / 5,
 	RecoilMult = -0.25,
 	HipSpreadMult = -0.9}
