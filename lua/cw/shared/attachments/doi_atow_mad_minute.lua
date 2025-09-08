@@ -5,8 +5,8 @@ att.displayNameShort = "Mad Minute"
 att.isBG = true
 
 att.statModifiers = {FireDelayMult = -73 / 115,
-AimSpreadMult = 10,
-HipSpreadMult = 10}
+	AimSpreadMult = 10,
+	HipSpreadMult = 10}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/greasedbolt")

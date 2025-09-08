@@ -26,6 +26,8 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = -2, y = 0, z = 3}
 	SWEP.ShellDelay = 1.2
+	SWEP.ShellDelayFast = 0.72
+
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.65
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
@@ -105,7 +107,7 @@ if CLIENT then
 		["md_fas2_leupold_mount"] = { type = "Model", model = "models/v_fas2_leupold_mounts.mdl", bone = "M98_Body", rel = "", pos = Vector(0, -12.025, 2.049), angle = Angle(0, -90, 0), size = Vector(1.5, 1.5, 1.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_sight_front"] = { type = "Model", model = "models/bunneh/frontsight.mdl", bone = "M98_Body", rel = "", pos = Vector(-2.75, -11.25, 2.424), angle = Angle(0, -90, 0), size = Vector(1.25, 1.25, 1.25), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_sight_rear"] = { type = "Model", model = "models/bunneh/rearsight.mdl", bone = "M98_Body", rel = "", pos = Vector(-2.826, -20.75, 2.424), angle = Angle(0, -90, 0), size = Vector(1.25, 1.25, 1.25), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
---		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "M98_Body", rel = "", pos = Vector(0.168, -4.244, -3.869), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+--		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "M98_Body", rel = "", pos = Vector(-0.322, -16.25, -4.64), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "M98_Body", rel = "", pos = Vector(0.4, 3.18, 1.981), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "M98_Body", rel = "", pos = Vector(0.4, 1.649, 1.713), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "M98_Body", rel = "", pos = Vector(-0.322, -16.25, -3.82), angle = Angle(0, 0, 0), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -113,7 +115,7 @@ if CLIENT then
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "M98_Body", rel = "", pos = Vector(0, -1.5, -1.351), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "M98_Body", rel = "", pos = Vector(-1.55, -19.75, 1.625), angle = Angle(0, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "M98_Body", rel = "", pos = Vector(0.419, 0.8, 1.94), angle = Angle(0, 180, 0), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
---		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "M98_Body", rel = "", pos = Vector(0.3, 9.8, 1.759), angle = Angle(0, 90, 0), size = Vector(0.4, 0.4, 0.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "M98_Body", rel = "", pos = Vector(0.3, -2, 1.), angle = Angle(0, 90, 0), size = Vector(0.4, 0.4, 0.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "M98_Body", rel = "", pos = Vector(0.4, 5.719, -2), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255)},
 --		["md_csgo_acog"] = { type = "Model", model = "models/kali/weapons/csgo/eq_optic_acog.mdl", bone = "M98_Body", rel = "", pos = Vector(0.439, -3.8, -1.351), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_csgo_556"] = { type = "Model", model = "models/kali/weapons/csgo/eq_optic_sig.mdl", bone = "M98_Body", rel = "", pos = Vector(0.449, 1.6, 1.6), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -152,6 +154,7 @@ SWEP.LuaViewmodelRecoil = false
 SWEP.ADSFireAnim = true
 SWEP.ForceBackToHipAfterAimedShot = true
 SWEP.GlobalDelayOnShoot = 2.5
+SWEP.GlobalDelayOnShootFast = 1.5
 SWEP.BipodFireAnim = true
 
 SWEP.Trivia = {text = "A bolt-action sniper rifle chambered in .338 Lapua Magnum.", x = 0, y = -600}
@@ -159,7 +162,8 @@ SWEP.Trivia = {text = "A bolt-action sniper rifle chambered in .338 Lapua Magnum
 SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_elcan", "md_acog_fixed", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
 	[2] = {header = "Muzzle", offset = {100, -500}, atts = {"md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
 	[3] = {header = "Handguard", offset = {-500, -500}, atts = {"md_bipod"}},
---	[4] = {header = "Misc", offset = {-500, 800}, atts = {"md_anpeq15"}},
+	[4] = {header = "Laser", offset = {-800, 0}, atts = {"md_anpeq15"}},
+	[5] = {header = "Conversion", offset = {-500, 800}, atts = {"uecw_mrad_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 if CustomizableWeaponry_KK_HK416 then
@@ -249,9 +253,15 @@ SWEP.SnapToIdlePostReload = true
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
+self.ShellDelay = (self.ActiveAttachments.uecw_mrad_conversion) and self.ShellDelayFast
+self.GlobalDelayOnShoot = (self.ActiveAttachments.uecw_mrad_conversion) and self.GlobalDelayOnShootFast
 clip = self:Clip1()
 self.EffectiveRange = 100 * 39.37
 self.DamageFallOff = .1
+if self.ActiveAttachments.uecw_mrad_conversion then
+	self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + 0.15))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

@@ -103,7 +103,7 @@ SWEP.MuzzleVelocity = 925 -- in meter/s
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
-SWEP.Trivia = {text = "French bullpup assault rifle with a high fire rate.", x = 0, y = -450}
+SWEP.Trivia = {text = "A French bullpup assault rifle with a high fire rate.", x = -100, y = -450}
 
 SWEP.BarrelBGs = {main = 2, rpk = 1, short = 4, regular = 0}
 SWEP.StockBGs = {main = 1, regular = 0, heavy = 1, foldable = 2}
