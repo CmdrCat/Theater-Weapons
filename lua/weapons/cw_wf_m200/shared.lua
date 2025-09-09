@@ -306,12 +306,12 @@ SWEP.Recoil = 4
 SWEP.CanPenetrate = true
 SWEP.PenMod = 4
 
-SWEP.HipSpread = 0.077
-SWEP.AimSpread = 0.001
+SWEP.HipSpread = 0.13
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 3.3
-SWEP.MaxSpreadInc = 0.04
-SWEP.SpreadPerShot = 0.04
-SWEP.SpreadCooldown = 1.0
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 190
 SWEP.DeployTime = 0.55

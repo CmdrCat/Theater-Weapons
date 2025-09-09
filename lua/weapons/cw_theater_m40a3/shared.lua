@@ -213,8 +213,8 @@ SWEP.FireSound = "CW_TOO_M40_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_M40_FIRESUPPRESSED"
 SWEP.Recoil = 2.5
 
-SWEP.HipSpread = 0.01
-SWEP.AimSpread = 0.005
+SWEP.HipSpread = 0.13
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 0
 SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.0002
