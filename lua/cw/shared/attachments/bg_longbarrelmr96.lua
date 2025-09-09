@@ -1,13 +1,11 @@
 local att = {}
 att.name = "bg_longbarrelmr96"
-att.displayName = "Long barrel"
+att.displayName = "Long Barrel"
 att.displayNameShort = "Long"
 att.isBG = true
 
 att.statModifiers = {RecoilMult = 0.2,
-AimSpreadMult = -0.2,
-DrawSpeedMult = -0.2,
-DamageMult = 0.2}
+DrawSpeedMult = -0.2}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/longbarrel_revolver")

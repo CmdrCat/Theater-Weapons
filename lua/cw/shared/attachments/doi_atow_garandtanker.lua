@@ -5,8 +5,7 @@ att.displayNameShort = "Tanker"
 att.isBG = true
 att.SpeedDec = -5
 
-att.statModifiers = {DamageMult = -0.13,
-RecoilMult = 0.23,
+att.statModifiers = {RecoilMult = 0.23,
 AimSpreadMult = 0.32,
 ReloadSpeedMult = 0.075}
 

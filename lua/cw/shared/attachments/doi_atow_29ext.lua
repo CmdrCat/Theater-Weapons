@@ -5,7 +5,6 @@ att.displayNameShort = "Ext."
 att.isBG = true
 
 att.statModifiers = {DamageMult = 0.1,
-AimSpreadMult = -0.1,
 RecoilMult = -0.15}
 
 if CLIENT then

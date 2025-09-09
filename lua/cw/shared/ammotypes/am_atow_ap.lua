@@ -1,9 +1,9 @@
 local att = {}
 att.name = "am_atow_ap"
-att.displayName = "Tungsten core"
+att.displayName = "Tungsten Core"
 att.displayNameShort = "AP"
 
-att.statModifiers = {DamageMult = 0.05}
+att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/apammo")

@@ -3,9 +3,7 @@ att.name = "am_atow_heavy"
 att.displayName = "Overpressure"
 att.displayNameShort = "+P"
 
-att.statModifiers = {DamageMult = 0.15,
-	RecoilMult = 0.2,
-	AimSpreadMult = 0.25}
+att.statModifiers = {RecoilMult = 0.2,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/hvyammo")

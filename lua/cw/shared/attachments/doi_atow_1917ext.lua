@@ -4,8 +4,7 @@ att.displayName = "Extended Barrel"
 att.displayNameShort = "Ext."
 att.isBG = true
 
-att.statModifiers = {AimSpreadMult = -0.1,
-RecoilMult = 0.15}
+att.statModifiers = {RecoilMult = 0.15}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/m3barrel")

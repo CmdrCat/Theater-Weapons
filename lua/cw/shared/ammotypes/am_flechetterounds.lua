@@ -1,6 +1,6 @@
 local att = {}
 att.name = "am_flechetterounds"
-att.displayName = "Flechette rounds"
+att.displayName = "Flechette Rounds"
 att.displayNameShort = "Flechette"
 
 att.statModifiers = {ClumpSpreadMult = -0.15,
