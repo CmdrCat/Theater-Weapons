@@ -120,7 +120,7 @@ SWEP.Trivia = {text = "A precise, single-shot pistol popular with hunters.", x =
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -500},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan", "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {md_frontsight = true, md_rearsight = true}},
 	[2] = {header = "Muzzle", offset = {-700, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
-	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade","am_snakeshot"}}}
+	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_snakeshot"}}}
 	
 --SWEP.AttachmentDependencies = {} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 
@@ -172,8 +172,8 @@ SWEP.FireSound = "CW_G2_FIRE"
 SWEP.FireSoundSuppressed = "CW_G2_FIRE_SUPPRESSED"
 SWEP.Recoil = 2.6
 
-SWEP.HipSpread = 0.01
-SWEP.AimSpread = 0.005
+SWEP.HipSpread = 0.13
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 0
 SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.0002
@@ -194,12 +194,6 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 10 * 39.37
 self.DamageFallOff = .85
-if self.ActiveAttachments.am_magnum then
-	self.EffectiveRange = ((self.EffectiveRange * 1.15))
-end
-if self.ActiveAttachments.am_matchgrade then
-	self.DamageFallOff = ((self.DamageFallOff * 0.5))
-end
 end
 
 end

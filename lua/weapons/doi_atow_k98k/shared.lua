@@ -176,8 +176,8 @@ SWEP.FireSoundSuppressed = "DOIK98_FIRE_SUPPRESSED"
 SWEP.Recoil = 1
  -- = 1
 
-SWEP.HipSpread = 0.01
-SWEP.AimSpread = 0.005
+SWEP.HipSpread = 0.13
+SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 0
 SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.0002
