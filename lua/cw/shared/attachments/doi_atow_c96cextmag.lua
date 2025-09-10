@@ -3,6 +3,7 @@ att.name = "doi_atow_c96cextmag"
 att.displayName = "40rnd Mag"
 att.displayNameShort = "40rnd"
 att.isBG = true
+att.SpeedDec = 30
 
 att.statModifiers = {DrawSpeedMult = -0.15,
 ReloadSpeedMult = -0.2}

@@ -204,11 +204,6 @@ if self.FireMode == "semi" then
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
-	
-	if self.ActiveAttachments.doi_atow_unisuppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + .35))
-end
 end
 
 function SWEP:fireAnimFunc()

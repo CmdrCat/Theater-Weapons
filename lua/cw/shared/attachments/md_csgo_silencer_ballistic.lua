@@ -4,11 +4,12 @@ att.displayName = "Ballistic Suppressor"
 att.displayNameShort = "Ballistic"
 att.isSuppressor = true
 
-att.statModifiers = {RecoilMult = -0.2}
+att.statModifiers = {RecoilMult = -0.05}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_csgo_silencer_ballistic")
-	att.description = {[1] = {t = "Decreases firing noise.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Decreases firing noise.", c = CustomizableWeaponry.textColors.POSITIVE},
+					   [2] = {t = "Increases effective range by 10%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

@@ -1,8 +1,9 @@
 local att = {}
 att.name = "doi_atow_bhpextmag"
-att.displayName = "20rnd Mag"
-att.displayNameShort = "20rnd"
+att.displayName = "20-Round Mag"
+att.displayNameShort = "20RND"
 att.isBG = true
+att.SpeedDec = 20
 
 att.statModifiers = {DrawSpeedMult = -0.1}
 

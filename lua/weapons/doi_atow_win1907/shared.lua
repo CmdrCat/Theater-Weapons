@@ -130,7 +130,7 @@ SWEP.MagBGs = {main = 1, five = 0, fifteen = 1}
 
 	SWEP.Attachments = {--[2] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82"}},
 	[1] = {header = "Magazine", offset = {975, -100}, atts = {"doi_atow_win190715"}},
-	[2] = {header = "Barrel", offset = {-400, -400}, atts = {"doi_atow_unisuppressor"}},
+	[2] = {header = "Barrel", offset = {-400, -400}, atts = {"doi_atow_m3a1suppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-250, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire2"},
@@ -237,11 +237,6 @@ function SWEP:IndividualThink()
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
-	
-	if self.ActiveAttachments.doi_atow_unisuppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 12 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + .15))
-end
 end
 
 function SWEP:fireAnimFunc()

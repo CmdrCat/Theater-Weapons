@@ -1,8 +1,9 @@
 local att = {}
 att.name = "doi_atow_mp3430rnd"
-att.displayName = "High Capacity"
+att.displayName = "High-Capacity Mag"
 att.displayNameShort = "32RND"
 att.isBG = true
+att.SpeedDec = 15
 
 att.statModifiers = {DrawSpeedMult = -0.1,
 ReloadSpeedMult = -0.15}

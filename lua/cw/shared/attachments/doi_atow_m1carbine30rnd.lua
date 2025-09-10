@@ -3,6 +3,7 @@ att.name = "doi_atow_m1carbine30rnd"
 att.displayName = "High Capacity - M2"
 att.displayNameShort = "30RND"
 att.isBG = true
+att.SpeedDec = 15
 
 att.statModifiers = {DrawSpeedMult = -0.1,
 ReloadSpeedMult = -0.1}

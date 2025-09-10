@@ -252,7 +252,7 @@ function SWEP:IndividualThink()
 		self.ForegripOverride = true
 		self.ForegripParent = "3"
 	end
-end
+	end
 	
 	self.EffectiveRange = 40 * 39.37
 	self.DamageFallOff = .5
@@ -270,11 +270,6 @@ end
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
-	
-	if self.ActiveAttachments.doi_atow_stensuppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + .24))
-end
 end
 
 function SWEP:fireAnimFunc()

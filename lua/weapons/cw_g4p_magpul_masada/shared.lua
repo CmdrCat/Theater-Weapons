@@ -257,6 +257,12 @@ if self.ActiveAttachments.am_atow_heavy then
 	self.EffectiveRange = ((self.EffectiveRange * 1.1))
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
+if self.ActiveAttachments.md_csgo_silencer_rifle then
+	self.EffectiveRange = ((self.EffectiveRange * 0.85))
+end
+if self.ActiveAttachments.uecw_skin_silencer then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+end
 end
 
 end

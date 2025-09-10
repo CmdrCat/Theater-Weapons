@@ -212,15 +212,16 @@ SWEP.AttachmentPosDependency = {
 
 SWEP.Attachments = {
 
-	{header = "Optic", offset = {950 , -350},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop",}},
-	{header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline",}, exclusions = {shroudhg = true}},
-	{header = "Muzzle", offset = {-250 , -300},  atts = {"md_saker","hard20"}},
-	{header = "Bottom Rail Long", offset = {-500 , 550},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}, exclusions = {bruenbm20 = true}},
-	{header = "Bottom Rail Short", offset = {-500 , 550},  atts = {"bruentiltgrip_s", "ftactiger_s"}, dependencies = {bruenbm20 = true}},
-	{header = "Front Sights", offset = {300 , 550},  atts = {"nofs"}},
-	{header = "Handguard", offset = {750 , 550},  atts = {"bruenechelon", "bruenbm20"}},
-	{header = "Magazine", offset = {1950, 700},  atts = {"md_uecw_emag"}},
-	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}
+	[1] = {header = "Optic", offset = {1200 , -350},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop"}},
+	[6] = {header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline",}, exclusions = {shroudhg = true}},
+	[2] = {header = "Muzzle", offset = {-400 , -300},  atts = {"md_saker","hard20"}},
+	[4] = {header = "Bottom Rail Long", offset = {-600 , 150},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}, exclusions = {bruenbm20 = true}},
+	[5] = {header = "Bottom Rail Short", offset = {-600 , 150},  atts = {"bruentiltgrip_s", "ftactiger_s"}, dependencies = {bruenbm20 = true}},
+	[9] = {header = "Front Sights", offset = {300 , 550},  atts = {"nofs"}},
+	[3] = {header = "Handguard", offset = {-600 , 650},  atts = {"bruenechelon", "bruenbm20"}},
+	[7] = {header = "Magazine", offset = {1200, 700},  atts = {"md_uecw_emag"}},
+	[8] = {header = "Conversion", offset = {1950, 500},  atts = {"r_mwii_300blk"}},
+	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }
 	
@@ -361,6 +362,12 @@ end
 if self.ActiveAttachments.am_atow_heavy then
 	self.EffectiveRange = ((self.EffectiveRange * 1.1))
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+if self.ActiveAttachments.hard20 then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+end
+if self.ActiveAttachments.r_mwii_300blk then
+	self.EffectiveRange = ((self.EffectiveRange * 0.875))
 end
 end
 

@@ -210,11 +210,6 @@ self.Owner.ViewAff = 0
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
-	
-	if self.ActiveAttachments.doi_atow_unisuppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 2 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + .15))
-end
 end
 
 function SWEP:fireAnimFunc()

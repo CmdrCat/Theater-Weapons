@@ -8,8 +8,8 @@ att.statModifiers = {RecoilMult = -0.05}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/suppressor")
-	att.description = {[1] = {t = "Decreases firing noise", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Does not negate any damage", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Decreases firing noise.", c = CustomizableWeaponry.textColors.POSITIVE},
+					   [2] = {t = "Increases effective range by 10%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

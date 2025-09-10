@@ -38,7 +38,7 @@ CustomizableWeaponry:registerAttachment(makarov_ext_mag)
 
 local pb = {}
 pb.name = "bg_makarov_pb6p9"
-pb.displayName = "PB variant"
+pb.displayName = "PB Conversion"
 pb.displayNameShort = "PB"
 pb.isBG = true
 pb.isSight = true
@@ -114,8 +114,7 @@ pm_supp.displayName = "PM Suppressor"
 pm_supp.displayNameShort = "Suppress"
 pm_supp.isBG = true
 
-pm_supp.statModifiers = {RecoilMult = -0.1,
-	DamageMult = -0.1}
+pm_supp.statModifiers = {RecoilMult = -0.1}
 
 if CLIENT then
 	pm_supp.displayIcon = surface.GetTextureID("atts/pm_suppressor")

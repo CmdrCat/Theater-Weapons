@@ -205,11 +205,6 @@ if self.FireMode == "semi" then
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
-	
-	if self.ActiveAttachments.doi_atow_m3a1suppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 10 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + .23))
-end
 	if self.ActiveAttachments.doi_atow_m3carbine then
 	self.EffectiveRange = ((self.EffectiveRange + 10 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .1))

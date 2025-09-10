@@ -15,7 +15,7 @@ if CLIENT then
 	SWEP.IconLetter = "w"
 	killicon.AddFont("cw_ar15", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
-	SWEP.EffectiveRange_Orig = 20 * 39.37
+	SWEP.EffectiveRange_Orig = 10 * 39.37
 	SWEP.DamageFallOff_Orig = .85
 
 	SWEP.MuzzleEffect = "muzzleflash_SR25"
@@ -119,7 +119,7 @@ SWEP.CustomizationMenuScale = 0.01
 SWEP.Trivia = {text = "A precise, single-shot pistol popular with hunters.", x = 0, y = -650}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -500},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan", "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {md_frontsight = true, md_rearsight = true}},
-	[2] = {header = "Muzzle", offset = {-700, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
+	[2] = {header = "Muzzle", offset = {-700, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	["+reload"] = {header = "Ammo", offset = {800, -100}, atts = {"am_atow_lowvel", "am_atow_ap", "am_snakeshot"}}}
 	
 --SWEP.AttachmentDependencies = {} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
@@ -194,6 +194,12 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 10 * 39.37
 self.DamageFallOff = .85
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.md_csgo_silencer_rifle then
+	self.EffectiveRange = ((self.EffectiveRange * 0.85))
+end
 end
 
 end

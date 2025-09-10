@@ -1,9 +1,8 @@
 local att = {}
 att.name = "md_snip2_light_suppressor"
-att.displayName = "Lightwheight Suppressor"
+att.displayName = "Lightweight Suppressor"
 att.displayNameShort = "Light"
 att.isSuppressor = true
-att.SpeedDec = -5
 
 att.statModifiers = {
 RecoilMult = -0.15,

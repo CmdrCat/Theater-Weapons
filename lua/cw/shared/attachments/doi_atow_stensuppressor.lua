@@ -4,14 +4,11 @@ att.displayName = "Integrated Suppressor"
 att.displayNameShort = "Suppress"
 att.isSuppressor = true
 
-att.statModifiers = {
-RecoilMult = -0.15,
-DrawSpeedMult = -.1}
+att.statModifiers = {RecoilMult = -0.1,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/stenmk2sup")
-	att.description = {[1] = {t = "Greatly reduces firing signature.", c = CustomizableWeaponry.textColors.VPOSITIVE},
-	[2] = {t = "Decreases effective range.", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	att.description = {[1] = {t = "Greatly reduces firing signature.", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 
 function att:attachFunc()

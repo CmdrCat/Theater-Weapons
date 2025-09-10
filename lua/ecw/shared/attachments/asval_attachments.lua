@@ -4,9 +4,10 @@ AddCSLuaFile()
 
 local att = {}
 att.name = "bg_asval_20rnd"
-att.displayName = "20 round mag"
+att.displayName = "20-Round Mag"
 att.displayNameShort = "20RND"
 att.isBG = true
+att.SpeedDec = 25
 
 att.statModifiers = {ReloadSpeedMult = -0.05}
 
@@ -34,9 +35,10 @@ CustomizableWeaponry:registerAttachment(att)
 
 local att = {}
 att.name = "bg_asval_30rnd"
-att.displayName = "30 round mag"
+att.displayName = "30-Round Mag"
 att.displayNameShort = "30RND"
 att.isBG = true
+att.SpeedDec = 40
 
 att.statModifiers = {ReloadSpeedMult = -0.1}
 

@@ -1,9 +1,9 @@
 local att = {}
 att.name = "doi_atow_suomi71rnd"
-att.displayName = "High-cap Drum"
+att.displayName = "High-Cap Drum"
 att.displayNameShort = "71RND"
 att.isBG = true
-att.SpeedDec = 15
+att.SpeedDec = 50
 
 att.statModifiers = {DrawSpeedMult = -0.1,
 ReloadSpeedMult = -0.1}

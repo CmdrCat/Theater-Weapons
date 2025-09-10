@@ -3,6 +3,7 @@ att.name = "doi_atow_win190715"
 att.displayName = "High Capacity"
 att.displayNameShort = "15RND"
 att.isBG = true
+att.SpeedDec = 30
 
 att.statModifiers = {DrawSpeedMult = -0.1,
 ReloadSpeedMult = -0.05}

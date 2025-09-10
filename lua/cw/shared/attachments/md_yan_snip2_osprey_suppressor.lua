@@ -1,6 +1,6 @@
 local att = {}
 att.name = "md_snip2_osprey_suppressor"
-att.displayName = "Silencerco Osprey"
+att.displayName = "SilencerCo Osprey"
 att.displayNameShort = "Osprey"
 att.isSuppressor = true
 
