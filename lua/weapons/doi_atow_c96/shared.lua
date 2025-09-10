@@ -153,10 +153,10 @@ SWEP.ForegripOverridePos = {
 }
 
 SWEP.Attachments = {[1] = {header = "Barrel", offset = {-500, -450}, atts = {"doi_atow_c96longbarrel"}},
-[3] = {header = "Finish", offset = {250, 250}, atts = {"doi_atow_c96goldfinish"}},
-[4] = {header = "Accessory", offset = {650, -100}, atts = {"doi_atow_c96stock","doi_atow_onehand"}},
-[2] = {header = "Fire Control", offset = {150, -500}, atts = {"doi_atow_m2carbineconv"}},
-["+reload"] = {header = "Ammo", offset = {-370, 70}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+[4] = {header = "Finish", offset = {150, -500}, atts = {"doi_atow_c96goldfinish"}},
+[3] = {header = "Accessory", offset = {650, -115}, atts = {"doi_atow_c96stock","doi_atow_onehand"}},
+[2] = {header = "Fire Control", offset = {500, 300}, atts = {"doi_atow_m2carbineconv"}},
+["+reload"] = {header = "Ammo", offset = {-700, 70}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},

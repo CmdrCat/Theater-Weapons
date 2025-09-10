@@ -87,10 +87,10 @@ SWEP.Trivia = {text = "A controllable pistol chambered in the armor-piercing 5.7
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-200, -500}, atts = {"md_docter"}},
 [2] = {header = "Muzzle", offset = {-700, -500}, atts = {"md_csgo_silencer_pistol"}},
-[3] = {header = "Rail", offset = {-700, -100}, atts = {"md_anpeq15", "md_csgo_taclight"}},
-[4] = {header = "Technique", offset = {600, -600}, atts = {"doi_atow_onehand"}},
-[5] = {header = "Conversion", offset = {0, 50}, atts = {"uecw_mp57_conversion"}},
-["+reload"] = {header = "Ammo", offset = {400, -100}, atts = {"am_magnum", "am_matchgrade"}}}
+[3] = {header = "Rail", offset = {-1000, -100}, atts = {"md_anpeq15", "md_csgo_taclight"}},
+[4] = {header = "Technique", offset = {600, -800}, atts = {"doi_atow_onehand"}},
+[5] = {header = "Conversion", offset = {550, -325}, atts = {"uecw_mp57_conversion"}},
+["+reload"] = {header = "Ammo", offset = {-250, -100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},
 	fireDry = "shoot_last",
@@ -169,6 +169,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

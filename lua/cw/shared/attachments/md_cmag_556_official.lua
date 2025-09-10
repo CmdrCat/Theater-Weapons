@@ -2,7 +2,7 @@ local att = {}
 att.name = "md_cmag_556_official"
 att.displayName = "Beta C-Mag 5.56x45MM"
 att.displayNameShort = "C-Mag"
-att.SpeedDec = 5
+att.SpeedDec = 50
 
 att.statModifiers = {ReloadSpeedMult = -0.25,
 DrawSpeedMult = -0.1,

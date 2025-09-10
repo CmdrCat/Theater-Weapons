@@ -94,10 +94,10 @@ SWEP.BarrelBGs = {main = 2, smg = 0, carbine = 1}
 
 SWEP.Attachments = {[2] = {header = "Barrel", offset = {-400, 50}, atts = {"doi_atow_m3carbine"}, exclusions = {doi_atow_m3a1suppressor = true}},
 [1] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_m3flashhider","doi_atow_m3a1suppressor"}},
-[3] = {header = "Accessory", offset = {600, -300}, atts = {"doi_atow_sling"}},
-[4] = {header = "Fire Control", offset = {-200, 450}, atts = {"doi_atow_heavybolt", "doi_atow_lightbolt"}},
-[5] = {header = "Body", offset = {1100, 150}, atts = {"doi_atow_m3stock"}},
-["+reload"] = {header = "Ammo", offset = {450, 270}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+[5] = {header = "Accessory", offset = {600, -300}, atts = {"doi_atow_sling"}},
+[3] = {header = "Fire Control", offset = {-200, 450}, atts = {"doi_atow_heavybolt", "doi_atow_lightbolt"}},
+[4] = {header = "Body", offset = {1200, 0}, atts = {"doi_atow_m3stock"}},
+["+reload"] = {header = "Ammo", offset = {450, 270}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire_3"},
 	fire_aim = {"iron_fire","iron_fire_a","iron_fire_b"},
@@ -192,12 +192,19 @@ if self.FireMode == "semi" then
 	self.EffectiveRange = 45 * 39.37
 	self.DamageFallOff = .5
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 45 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .21))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 	if self.ActiveAttachments.doi_atow_m3a1suppressor then
 	self.EffectiveRange = ((self.EffectiveRange - 10 * 39.37))

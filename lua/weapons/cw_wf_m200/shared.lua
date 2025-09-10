@@ -187,7 +187,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 	   [7] = {header = "Laser", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
 	   [8] = {header = "Bipod", offset = {50, 600}, atts = {"bg_snip2_special_bipod"}, dependencies = {bg_Cheytac_Bipod = true}},
        ["+use"] = {header = "Perks", offset = {2350, 500}, atts = {"Cod_Extreme_Conditioning", "Cod_Fast_Hands", "Cod_Steady_Aim", "Perk_Force", "Perk_Stopping_Power"}},
-	   ["+reload"] = {header = "Ammo", offset = {850, 850}, atts = {"am_magnum", "am_matchgrade"}}
+	   ["+reload"] = {header = "Ammo", offset = {700, 850}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 	
 	}
 	
@@ -202,7 +202,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
        [6] = {header = "Bolt", offset = {2050, 600}, atts = {"md_improved_bolt"}},
 	   [7] = {header = "Laser", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
 	   [8] = {header = "Bipod", offset = {50, 600}, atts = {"bg_snip2_special_bipod"}, dependencies = {bg_Cheytac_Bipod = true}},
-	   ["+reload"] = {header = "Ammo", offset = {850, 850}, atts = {"am_magnum", "am_matchgrade"}}
+	   ["+reload"] = {header = "Ammo", offset = {700, 850}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 	}
 	
 	elseif CustomizableWeaponry_OP_Perks then
@@ -217,7 +217,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 	   [7] = {header = "Laser", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
 	   [8] = {header = "Bipod", offset = {50, 600}, atts = {"bg_snip2_special_bipod"}, dependencies = {bg_Cheytac_Bipod = true}},
        ["+use"] = {header = "Perks", offset = {2350, 500}, atts = {"Cod_Extreme_Conditioning", "Cod_Fast_Hands", "Cod_Steady_Aim", "Perk_Force", "Perk_Stopping_Power"}},
-	   ["+reload"] = {header = "Ammo", offset = {850, 850}, atts = {"am_magnum", "am_matchgrade"}}
+	   ["+reload"] = {header = "Ammo", offset = {700, 850}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 	}
 	
 	elseif not CustomizableWeaponry_OP_Perks or CustomizableWeaponry_G4P_UECW then
@@ -231,7 +231,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
        [6] = {header = "Bolt", offset = {2050, 600}, atts = {"md_improved_bolt"}},
 	   [7] = {header = "Rail", offset = {50, 50}, atts = {"md_anpeq15"}, dependencies = {bg_Cheytac_Bipod = true}},
 	   [8] = {header = "Bipod", offset = {50, 600}, atts = {"bg_snip2_special_bipod"}, dependencies = {bg_Cheytac_Bipod = true}},
-	   ["+reload"] = {header = "Ammo", offset = {850, 850}, atts = {"am_magnum", "am_matchgrade"}}
+	   ["+reload"] = {header = "Ammo", offset = {700, 850}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 	}
 	
 end
@@ -356,6 +356,13 @@ function SWEP:IndividualThink()
 	end
 	if self.ActiveAttachments.am_matchgrade then
 		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
+	if self.ActiveAttachments.am_atow_heavy then
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
 end
 

@@ -105,11 +105,11 @@ SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 SWEP.AimBreathingEnabled = true
 
-SWEP.Attachments = {[1] = {header = "Reload", offset = {-150, 120}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_no32"] = true, ["doi_atow_wina5"] = true, ["doi_atow_unertl"] = true}},
-[2] = {header = "Optic", offset = {250, -400}, atts = {"doi_atow_no32", "doi_atow_wina5", "doi_atow_unertl"}},
-[3] = {header = "Bolt", offset = {950, 240}, atts = {"doi_atow_greasedbolt","doi_atow_mad_minute"}},
-[4] = {header = "Finish", offset = {1050, -100}, atts = {"doi_atow_wornfinish"}},
-["+reload"] = {header = "Ammo", offset = {320, 200}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
+SWEP.Attachments = {[3] = {header = "Reload", offset = {-150, 120}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_no32"] = true, ["doi_atow_wina5"] = true, ["doi_atow_unertl"] = true}},
+[1] = {header = "Optic", offset = {250, -400}, atts = {"doi_atow_no32", "doi_atow_wina5", "doi_atow_unertl"}},
+[2] = {header = "Bolt", offset = {1150, -50}, atts = {"doi_atow_greasedbolt","doi_atow_mad_minute"}},
+[4] = {header = "Finish", offset = {950, -400}, atts = {"doi_atow_wornfinish"}},
+["+reload"] = {header = "Ammo", offset = {320, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"iron_fire"},
 	fire_aim = {"iron_fire"},
@@ -290,12 +290,19 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 70 * 39.37
 	self.DamageFallOff = .25
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 150 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .15))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 
 end
 

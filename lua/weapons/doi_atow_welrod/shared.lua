@@ -90,7 +90,7 @@ SWEP.MuzzleVelocity = 170
 
 SWEP.Attachments = {[1] = {header = "Action", offset = {450, -200}, atts = {"doi_atow_greasedboltwelrod"}},
 [2] = {header = "Technique", offset = {400, 225}, atts = {"doi_atow_onehand"}},
-["+reload"] = {header = "Ammo", offset = {-175, 50}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+["+reload"] = {header = "Ammo", offset = {-450, 50}, atts = {"am_atow_lowvel", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = "base_fire",
 	fire_aim = "iron_fire",
@@ -186,12 +186,9 @@ self.Owner.ViewAff = 0
 	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .8
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 2 * 39.37))
-end
-	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .15))
-end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 
 end
 

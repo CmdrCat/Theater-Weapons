@@ -114,10 +114,10 @@ SWEP.Trivia = {text = "The AR-15 platform sees global use from civilians, law en
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_microt1","too_reflex_romeo4t", "too_reflex_exps","too_reflex_mrs",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Muzzle", offset = {300, -600}, atts = {"md_saker"}},
-	[3] = {header = "Handguard", offset = {-400, -100}, atts = {"md_foregrip", "md_bipod"}},
+	[3] = {header = "Handguard", offset = {-650, -100}, atts = {"md_foregrip", "md_bipod"}},
 	[4] = {header = "Laser", offset = {250, 300}, atts = {"md_anpeq15"}},
-	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+use"] = {header = "Optic Type", offset = {0, -100}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+reload"] = {header = "Ammo", offset = {1050, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 
 
@@ -255,6 +255,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

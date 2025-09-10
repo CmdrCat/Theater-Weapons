@@ -111,9 +111,9 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {1200, -300},  atts = {"md
 	[2] = {header = "Muzzle", offset = {-700, -500}, atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-750, 0}, atts = {"md_foregrip"}},
 	[4] = {header = "Laser", offset = {-700, 500},  atts = {"md_anpeq15"}},
-	[5] = {header = "Internals", offset = {700, 700},  atts = {"too_l86_conversion"}},
+	[5] = {header = "Conversion", offset = {850, 700},  atts = {"too_l86_conversion"}},
     ["+use"] = {header = "Optic Type", offset = {1200, 200}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-    ["+reload"] = {header = "Ammo", offset = {450, 250}, atts = {"am_magnum", "am_matchgrade"}}}
+    ["+reload"] = {header = "Ammo", offset = {150, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 
     SWEP.AttachmentDependencies = {
@@ -254,6 +254,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

@@ -136,7 +136,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -350},  atts = {"md_
 	[2] = {header = "Muzzle", offset = {-600, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-400,0}, atts = {"md_foregrip"}},
 	[4] = {header = "Magazine", offset = {-200, 500}, atts = {"md_uecw_akmag"}},
-	["+reload"] = {header = "Ammo", offset = {1400, 200}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {900, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 
@@ -210,6 +210,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

@@ -3,9 +3,8 @@ att.name = "md_saker"
 att.displayName = "SAKER"
 att.displayNameShort = "SAKER"
 att.isSuppressor = true
-att.SpeedDec = 2
 
-att.statModifiers = {RecoilMult = -0.15,}
+att.statModifiers = {RecoilMult = -0.01,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/saker")

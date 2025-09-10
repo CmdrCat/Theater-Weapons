@@ -131,29 +131,28 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "A reliable battle rifle used by the US Army. Make sure your fingers are clear of the charging handle.", x = -100, y = -450}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
-	[2] = {header = "Muzzle", offset = {-400, -500},  atts = {"md_saker"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
-	[3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
-	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}},
-	[5] = {header = "Conversion", offset = {500, 400}, atts = {"cw_fortnite_scar_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {900, 150}, atts = {"am_magnum", "am_matchgrade"}, exclusions = {["cw_fortnite_scar_conversion"] = true,}}}
+SWEP.AttachmentExclusions = {["md_microt1"] = {"cw_fortnite_scar_conversion"},
+							 ["md_aimpoint"] = {"cw_fortnite_scar_conversion"},
+							 ["md_schmidt_shortdot"] = {"cw_fortnite_scar_conversion"},
+							 ["md_acog"] = {"cw_fortnite_scar_conversion"},
+							 ["md_nightforce_nxs"] = {"cw_fortnite_scar_conversion"},
+							 ["md_saker"] = {"cw_fortnite_scar_conversion"},
+							 ["md_anpeq15"] = {"cw_fortnite_scar_conversion"},
+							 ["md_foregrip"] = {"cw_fortnite_scar_conversion"},
+							 ["md_bipod"] = {"cw_fortnite_scar_conversion"},
+							 ["md_m203"] = {"cw_fortnite_scar_conversion"},
+							 ["am_magnum"] = {"cw_fortnite_scar_conversion"},
+							 ["am_matchgrade"] = {"cw_fortnite_scar_conversion"},
+							 ["am_atow_lowvel"] = {"cw_fortnite_scar_conversion"},
+							 ["am_atow_heavy"] = {"cw_fortnite_scar_conversion"},
+							 ["am_atow_ap"] = {"cw_fortnite_scar_conversion"}}
 
-SWEP.AttachmentExclusions = {
-    ["cw_fortnite_scar_conversion"] = {
-        "md_microt1",
-		"md_aimpoint",
-        "md_schmidt_shortdot",
-		"md_acog",
-		"md_nightforce_nxs",
-        "md_saker",
-        "md_anpeq15",
-        "md_foregrip",
-		"md_bipod",
-		"md_m203",
-		"am_magnum",
-		"am_matchgrade"
-    }
-}
+SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+	[2] = {header = "Muzzle", offset = {-400, -500},  atts = {"md_saker"}},
+	[3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}},
+	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
+	[5] = {header = "Conversion", offset = {500, 400}, atts = {"cw_fortnite_scar_conversion"}},
+	["+reload"] = {header = "Ammo", offset = {900, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "reload",
@@ -234,6 +233,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 end

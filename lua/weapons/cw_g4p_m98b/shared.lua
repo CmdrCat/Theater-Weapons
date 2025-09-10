@@ -164,7 +164,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_
 	[3] = {header = "Handguard", offset = {-500, -500}, atts = {"md_bipod"}},
 	[4] = {header = "Laser", offset = {-800, 0}, atts = {"md_anpeq15"}},
 	[5] = {header = "Conversion", offset = {-500, 800}, atts = {"uecw_mrad_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 if CustomizableWeaponry_KK_HK416 then
 	table.insert( SWEP.Attachments[1].atts, 1, "md_fas2_aimpoint" )
@@ -267,6 +267,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

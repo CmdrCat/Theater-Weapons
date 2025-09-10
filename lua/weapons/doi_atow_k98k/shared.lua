@@ -105,12 +105,12 @@ SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
 
-SWEP.Attachments = {[1] = {header = "Reload", offset = {-150, 120}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_zf39"] = true, ["doi_atow_zf4"] = true}},
-[2] = {header = "Optic", offset = {250, -400}, atts = { "doi_atow_zf4", "doi_atow_zf39"}},
-[4] = {header = "Finish", offset = {1050, -100}, atts = {"doi_atow_wornfinish"}},
-[3] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt"}},
-["+attack2"] = {header = "Muzzle", offset = {0, 2000}, atts = {"doi_atow_unisuppressor"}, dependencies = {["doi_atow_greasedbolt"] = true}},
-["+reload"] = {header = "Ammo", offset = {320, 200}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
+SWEP.Attachments = {[4] = {header = "Reload", offset = {-150, 120}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_zf39"] = true, ["doi_atow_zf4"] = true}},
+[1] = {header = "Optic", offset = {250, -400}, atts = { "doi_atow_zf4", "doi_atow_zf39"}},
+[5] = {header = "Finish", offset = {900, -300}, atts = {"doi_atow_wornfinish"}},
+[3] = {header = "Action", offset = {1200, 25}, atts = {"doi_atow_greasedbolt"}},
+[2] = {header = "Muzzle", offset = {-300, -400}, atts = {"doi_atow_unisuppressor"}},
+["+reload"] = {header = "Ammo", offset = {320, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"iron_fire"},
 	fire_aim = {"iron_fire"},
@@ -250,12 +250,19 @@ if not self.ActiveAttachments.doi_atow_stripperclips then
 self.EffectiveRange = 70 * 39.37
 	self.DamageFallOff = .3
 		
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 160 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .144))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 		
 	if self.ActiveAttachments.doi_atow_unisuppressor then
 	self.EffectiveRange = ((self.EffectiveRange - 100 * 39.37))

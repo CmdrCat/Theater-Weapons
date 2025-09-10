@@ -80,11 +80,11 @@ SWEP.Trivia = {text = "A version of the legendary AKM that uses 5.45×39mm round
 SWEP.SightBGs = {main = 1, carryhandle = 0, none = 1}
 SWEP.StockBGs = {main = 2, foldable = 1, regular = 0}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -500},  atts = {"md_kobra","too_reflex_mrs","too_reflex_romeo4t", "too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_pso1", "md_acog"}},
-	[2] = {header = "Muzzle", offset = {300, -500}, atts = {"md_pbs1"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {1000, -500},  atts = {"md_kobra","too_reflex_mrs","too_reflex_romeo4t", "too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_pso1", "md_acog"}},
+	[2] = {header = "Muzzle", offset = {-300, -500}, atts = {"md_pbs1"}},
 	[3] = {header = "Stock", offset = {700, 500}, atts = {"too_bg_74stock"}},
 	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	["+reload"] = {header = "Ammo", offset = {950, 0}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {1300, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 
     SWEP.AttachmentDependencies = {
@@ -222,6 +222,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

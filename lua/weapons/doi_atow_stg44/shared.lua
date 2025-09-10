@@ -93,11 +93,11 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 --SWEP.AimBreathingIntensity = .875
 
-SWEP.Attachments = {[1] = {header = "Accessory", offset = {-250, -175}, atts = {"doi_atow_sling"}},
-[3] = {header = "Fire Control", offset = {650, 250}, atts = {"doi_atow_heavybolt", "doi_atow_lightbolt"}},
-[2] = {header = "Finish", offset = {200, -300}, atts = {"doi_atow_normandycamo"}},
-[4] = {header = "Optic", offset = {800, -275}, atts = {"doi_atow_zf4"}},
-["+reload"] = {header = "Ammo", offset = {-50, 200}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
+SWEP.Attachments = {[3] = {header = "Accessory", offset = {-250, -175}, atts = {"doi_atow_sling"}},
+[2] = {header = "Fire Control", offset = {900, 250}, atts = {"doi_atow_heavybolt", "doi_atow_lightbolt"}},
+[4] = {header = "Finish", offset = {200, -300}, atts = {"doi_atow_normandycamo"}},
+[1] = {header = "Optic", offset = {800, -275}, atts = {"doi_atow_zf4"}},
+["+reload"] = {header = "Ammo", offset = {-300, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire_1"},
@@ -189,6 +189,20 @@ function SWEP:IndividualThink()
 	
 	self.EffectiveRange = 50 * 39.37
 	self.DamageFallOff = .3
+
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
+	if self.ActiveAttachments.am_atow_heavy then
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 end
 
 function SWEP:fireAnimFunc()

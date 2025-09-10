@@ -99,10 +99,10 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
-SWEP.Attachments = {[2] = {header = "Model", offset = {575, -300}, atts = {"doi_atow_lewisaa"}},
-[3] = {header = "Fire Control", offset = {750, 300}, atts = {"doi_atow_burstconv","doi_atow_heavybolt", "doi_atow_lightbolt"}},
+SWEP.Attachments = {[3] = {header = "Model", offset = {575, -300}, atts = {"doi_atow_lewisaa"}},
+[2] = {header = "Fire Control", offset = {750, 300}, atts = {"doi_atow_burstconv","doi_atow_heavybolt", "doi_atow_lightbolt"}},
 [1] = {header = "Frame", offset = {-250, -200}, atts = {"doi_atow_bipodremove"}},
-["+reload"] = {header = "Ammo", offset = {0, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+["+reload"] = {header = "Ammo", offset = {-100, 350}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
 	fire_aim = {"iron_fire_1","iron_fire_2"},
@@ -205,12 +205,19 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 60 * 39.37
 	self.DamageFallOff = .05
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 100 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .17))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 end
 

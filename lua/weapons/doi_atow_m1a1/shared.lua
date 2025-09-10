@@ -167,17 +167,17 @@ SWEP.MagBGs = {main = 6, twenty = 0, thirty = 1}
 
 if CustomizableWeaponry_atowins2_optics then
 SWEP.Attachments = {[2] = {header = "Grip", offset = {-550, 100}, atts = {"doi_atow_m1928grip"}},
-[3] = {header = "Magazine", offset = {-150, 30}, atts = {"doi_atow_thompson30rnd"}, exclusions = {["am_atow_riot"] = true}},
+[3] = {header = "Magazine", offset = {-150, 30}, atts = {"doi_atow_thompson30rnd"}},
 [4] = {header = "Optic", offset = {150, -425}, atts = {"doi_atow_altsight","md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog"}},
 [1] = {header = "Muzzle", offset = {-600, -350}, atts = {"doi_atow_thompsonrc","doi_atow_unisuppressor"}},
 [5] = {header = "Accessory", offset = {750, 0}, atts = {"doi_atow_sling"}},
-["+reload"] = {header = "Ammo", offset = {450, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+["+reload"] = {header = "Ammo", offset = {450, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 else
-SWEP.Attachments = {[2] = {header = "Grip", offset = {200, -350}, atts = {"doi_atow_m1928grip"}},
-[3] = {header = "Magazine", offset = {150, 250}, atts = {"doi_atow_thompson30rnd"}, exclusions = {["am_atow_riot"] = true}},
-[4] = {header = "Sight", offset = {900, -50}, atts = {"doi_atow_altsight"}},
-[1] = {header = "Muzzle", offset = {-450, -300}, atts = {"doi_atow_thompsonrc","doi_atow_unisuppressor"}},
-["+reload"] = {header = "Ammo", offset = {-435, 100}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+SWEP.Attachments = {[3] = {header = "Grip", offset = {200, -350}, atts = {"doi_atow_m1928grip"}},
+[4] = {header = "Magazine", offset = {225, 400}, atts = {"doi_atow_thompson30rnd"}},
+[1] = {header = "Sight", offset = {900, -50}, atts = {"doi_atow_altsight"}},
+[2] = {header = "Muzzle", offset = {-450, -300}, atts = {"doi_atow_thompsonrc","doi_atow_unisuppressor"}},
+["+reload"] = {header = "Ammo", offset = {-435, 75}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 end
 
 SWEP.Animations = {fire = {"base_fire","base_fire_2","base_fire_3"},
@@ -273,12 +273,20 @@ if self.FireMode == "semi" then
 	self.EffectiveRange = 30 * 39.37
 	self.DamageFallOff = .6
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 25 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .201))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
+
 	if self.ActiveAttachments.doi_atow_unisuppressor then
 	self.EffectiveRange = ((self.EffectiveRange - 25 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff + .15))

@@ -95,12 +95,12 @@ SWEP.ForegripOverridePos = {
 	["R Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 }
 
-SWEP.Attachments = {[2] = {header = "Rear Sight", offset = {-100, -375}, atts = {"doi_atow_altsight"}},
-[3] = {header = "Magazine", offset = {50, 250}, atts = {"doi_atow_bhpextmag"}},
+SWEP.Attachments = {[1] = {header = "Rear Sight", offset = {-100, -375}, atts = {"doi_atow_altsight"}},
+[4] = {header = "Magazine", offset = {400, 350}, atts = {"doi_atow_bhpextmag"}},
 [5] = {header = "Accessory", offset = {600, -125}, atts = {"doi_atow_bhpstock", "doi_atow_onehand"}},
-[1] = {header = "Muzzle", offset = {-750, -350}, atts = {"doi_atow_bhpcomp","doi_atow_unisuppressor"}},
-[4] = {header = "Fire Control", offset = {360, -570}, atts = {"doi_atow_m2carbineconv"}},
-["+reload"] = {header = "Ammo", offset = {-600, 100}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+[2] = {header = "Muzzle", offset = {-750, -350}, atts = {"doi_atow_bhpcomp","doi_atow_unisuppressor"}},
+[3] = {header = "Fire Control", offset = {360, -570}, atts = {"doi_atow_m2carbineconv"}},
+["+reload"] = {header = "Ammo", offset = {-800, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire2"},
 	fire_aim = {"iron_fire","iron_fire2"},

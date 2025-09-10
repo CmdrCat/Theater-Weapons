@@ -89,7 +89,7 @@
         [3] = {header = "Laser", offset = {-250, -50}, atts = {"md_anpeq15"}},
         [4] = {header = "Handguard", offset = {-850, -250}, atts = {"md_foregrip"}},
         ["+use"] = {header = "Optic Type", offset = {700, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-        ["+reload"] = {header = "Ammo", offset = {-300, 400}, atts = {"am_magnum", "am_matchgrade"}}
+        ["+reload"] = {header = "Ammo", offset = {-300, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
     }
 
     SWEP.AttachmentDependencies = {
@@ -216,6 +216,13 @@ function SWEP:IndividualThink()
     if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
     end
+    if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+    end
+    if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
 end
 
 function SWEP:Holster(wep)

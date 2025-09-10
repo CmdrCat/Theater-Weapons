@@ -85,8 +85,8 @@ SWEP.CanRestOnObjects = false
 SWEP.Trivia = {text = "A Russian break-action revolver meant to be exported to foreign countries.", x = -500, y = -550}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-550, -400}, atts = {"md_acog_fixed", "md_elcan", "md_docter"}},
-	[2] = {header = "Technique", offset = {500, 300}, atts = {"doi_atow_onehand"}},
-	["+reload"] = {header = "Ammo", offset = {-550, 100}, atts = {"am_magnum", "am_matchgrade","am_snakeshot"}}}
+	[2] = {header = "Technique", offset = {500, 200}, atts = {"doi_atow_onehand"}},
+	["+reload"] = {header = "Ammo", offset = {-800, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"rex_fire1", "rex_fire2"},
 	fireDry = "rex_fire_empty",
@@ -162,6 +162,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

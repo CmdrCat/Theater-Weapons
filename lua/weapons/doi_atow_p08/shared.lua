@@ -86,10 +86,10 @@ SWEP.LuaViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {
-[2] = {header = "Finish", offset = {350, -350}, atts = {"doi_atow_c96goldfinish"}},
+[3] = {header = "Finish", offset = {350, -350}, atts = {"doi_atow_c96goldfinish"}},
 [1] = {header = "Barrel", offset = {-450, -350}, atts = {"doi_atow_lugerlongbarrel"}},
-["+zoom"] = {header = "quit peeping", offset = {0, 2000}, atts = {"doi_atow_unisuppressor"}, dependencies = {["doi_atow_c96goldfinish"] = true}},
-["+reload"] = {header = "Ammo", offset = {-175,80}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+[2] = {header = "Muzzle", offset = {-800, 0}, atts = {"doi_atow_unisuppressor"}},
+["+reload"] = {header = "Ammo", offset = {-175,80}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire3"},
 	fire_aim = {"iron_fire_2","iron_fire_3"},
@@ -191,12 +191,19 @@ self.Owner.ViewAff = 0
 	self.EffectiveRange = 30 * 39.37
 	self.DamageFallOff = .75
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 2.5 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .108))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 	if self.ActiveAttachments.doi_atow_lugerlongbarrel then
 	self.EffectiveRange = ((self.EffectiveRange + 2 * 39.37))

@@ -89,11 +89,11 @@ SWEP.CanRestOnObjects = false
 
 SWEP.Trivia = {text = "An reliable handgun chambered in .40 S&W.", x = -200, y = -450}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1", "md_docter"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -350}, atts = {"md_microt1", "md_docter"}},
 [2] = {header = "Muzzle", offset = {-600, -350}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
 [3] = {header = "Rail", offset = {-500, 250}, atts = {"md_anpeq15", "md_csgo_taclight"}},
-[4] = {header = "Technique", offset = {700, 50}, atts = {"doi_atow_onehand"}},
-["+reload"] = {header = "Ammo", offset = {250, 400}, atts = {"am_magnum", "am_matchgrade"}}}
+[4] = {header = "Technique", offset = {700, -50}, atts = {"doi_atow_onehand"}},
+["+reload"] = {header = "Ammo", offset = {400, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"fire1", "fire2", "fire3"},
 	fireDry = "fire_last",
@@ -168,6 +168,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

@@ -87,11 +87,11 @@ SWEP.CanRestOnObjects = false
 SWEP.Trivia = {text = "An extremely popular handgun found in the hands of soldiers, police officers, civilians, and criminals.", x = -600, y = -600}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -500}, atts = {"md_docter"}},
-[2] = {header = "Muzzle", offset = {-600, -350}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
-[3] = {header = "Rail", offset = {-300, 200}, atts = {"md_anpeq15", "md_csgo_taclight"}},
-[4] = {header = "Technique", offset = {-100, -500}, atts = {"doi_atow_onehand"}},
+[2] = {header = "Muzzle", offset = {-900, -200}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
+[3] = {header = "Rail", offset = {-700, 200}, atts = {"md_anpeq15", "md_csgo_taclight"}},
+[4] = {header = "Technique", offset = {-450, -500}, atts = {"doi_atow_onehand"}},
 [5] = {header = "Fire Control Group", offset = {550, 300}, atts = {"uecw_glock_switch"}},
-["+reload"] = {header = "Ammo", offset = {400, -100}, atts = {"am_magnum", "am_matchgrade"}}}
+["+reload"] = {header = "Ammo", offset = {200, -175}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = "shoot_1",
 	fireDry = "shoot_last",
@@ -167,6 +167,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

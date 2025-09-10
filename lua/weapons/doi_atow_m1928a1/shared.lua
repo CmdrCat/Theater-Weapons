@@ -134,11 +134,11 @@ SWEP.MagBGs = {main = 3, twenty = 0, thirty = 1, fifty = 2}
 SWEP.BarrelBGs = {main = 5, smg = 0, carbine = 1}
 SWEP.StockBGs = {main = 4, off = 0, on = 1}
 
-SWEP.Attachments = {[3] = {header = "Grip", offset = {200, -350}, atts = {"doi_atow_m1928grip"}},
-[2] = {header = "Magazine", offset = {150, 250}, atts = {"doi_atow_thompson30rnd","doi_atow_thompson50rnd"}, exclusions = {["am_atow_riot"] = true}},
+SWEP.Attachments = {[3] = {header = "Grip", offset = {200, -450}, atts = {"doi_atow_m1928grip"}},
+[2] = {header = "Magazine", offset = {250, 350}, atts = {"doi_atow_thompson30rnd","doi_atow_thompson50rnd"}},
 [4] = {header = "Stock", offset = {900, -50}, atts = {"doi_atow_thompsonnostock"}},
-[1] = {header = "Muzzle", offset = {-450, -300}, atts = {"doi_atow_unisuppressor"}},
-["+reload"] = {header = "Ammo", offset = {-435, 100}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_riot"}}}
+[1] = {header = "Muzzle", offset = {-450, -500}, atts = {"doi_atow_unisuppressor"}},
+["+reload"] = {header = "Ammo", offset = {-435, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 
 SWEP.Animations = {fire = {"base_fire_1"},
 	fire_aim = {"iron_fire_1","iron_fire_2"},
@@ -245,15 +245,19 @@ if self.FireMode == "semi" then
 	self.EffectiveRange = 30 * 39.37
 	self.DamageFallOff = .45
 	
-		if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 25 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .21))
-end
-	if self.ActiveAttachments.am_atow_riot then
-	self.EffectiveRange = ((self.EffectiveRange - 72 * 39.37))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	if self.ActiveAttachments.doi_atow_unisuppressor then
 	self.EffectiveRange = ((self.EffectiveRange - 25 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff + .15))

@@ -71,7 +71,7 @@ SWEP.Attachments = {[1] = {header = "Conversion", offset = {450, -350}, atts = {
 	[2] = {header = "Muzzle", offset = {-400, -200}, atts = {"bg_makarov_pm_suppressor", "bg_makarov_pb_suppressor"}},
 	[3] = {header = "Magazine", offset = {-400, 200}, atts = {"bg_makarov_extmag"}},
 	[4] = {header = "Technique", offset = {-125, -500}, atts = {"doi_atow_onehand"}},
-	["+reload"] = {header = "Ammo", offset = {450, 150}, atts = {"am_sp7"}}}
+	["+reload"] = {header = "Ammo", offset = {500, 100}, atts = {"am_sp7", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["bg_makarov_pb_suppressor"] = {"bg_makarov_pb6p9"}}
 SWEP.AttachmentExclusions = {["bg_makarov_pm_suppressor"] = {"bg_makarov_pb6p9"}}
@@ -157,6 +157,16 @@ self.DamageFallOff = ((self.DamageFallOff + 0.05))
 end
 if self.ActiveAttachments.am_sp7 then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

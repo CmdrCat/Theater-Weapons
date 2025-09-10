@@ -93,13 +93,14 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "This reliable submachine gun is the face of counter-terrorism due its successful usage by SAS operators in Operation Nimrod.", x = -600, y = -600}
 
-SWEP.AttachmentExclusions = {["too_sdbar_bar"] = {"md_tundra9mm"}}
+SWEP.AttachmentExclusions = {["too_sdbar_bar"] = {"md_tundra9mm"},
+							 ["am_atow_lowvel"] = {"too_mp5_22lr_rifle"}}
 SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {700, -400}, atts = {"md_microt1", "too_reflex_mrs","too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-400, -400}, atts = {"md_tundra9mm"}},
 	[3] = {header = "Conversion", offset = {400, 400}, atts = {"too_sdbar_bar","too_mp5_22lr_rifle"}},
 	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	["+reload"] = {header = "Ammo", offset = {700, 35}, atts = {"am_magnum", "am_matchgrade"}}
+	["+reload"] = {header = "Ammo", offset = {1400, 35}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 
 
@@ -247,6 +248,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

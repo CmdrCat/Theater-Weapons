@@ -1,7 +1,7 @@
 local att = {}
 att.name = "uecw_skin_silencer"
 att.displayName = "Tactical Suppressor"
-att.displayNameShort = "Suppressor"
+att.displayNameShort = "Tactical"
 att.isSuppressor = true
 
 att.statModifiers = {RecoilMult = -0.05}

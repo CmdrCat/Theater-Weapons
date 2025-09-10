@@ -74,10 +74,10 @@ SWEP.MagBGs = {main = 2, off = 0, on = 1}
 
 SWEP.MuzzleVelocity = 250
 
-SWEP.Attachments = {[2] = {header = "Magazine", offset = {450, 250}, atts = {"doi_atow_pistolextmag"}},
+SWEP.Attachments = {[2] = {header = "Magazine", offset = {550, 250}, atts = {"doi_atow_pistolextmag"}},
 [1] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_unisuppressor"}},
 [3] = {header = "Finish", offset = {175, -350}, atts = {"doi_atow_m1911satinfinish","doi_atow_c96goldfinish"}},
-["+reload"] = {header = "Ammo", offset = {-350, 100}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_riot"}}}
+["+reload"] = {header = "Ammo", offset = {-700, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire3"},
 	fire_aim = {"iron_fire","iron_fire2","iron_fire3"},
@@ -173,15 +173,22 @@ self.Owner.ViewAff = 0
 self.EffectiveRange = 25 * 39.37
 self.DamageFallOff = .8
 
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .192))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	if self.ActiveAttachments.am_atow_riot then
-	self.EffectiveRange = ((self.EffectiveRange - 7.5 * 39.37))
-end
+		self.EffectiveRange = ((self.EffectiveRange - 7.5 * 39.37))
+	end
 end
 
 function SWEP:fireAnimFunc()

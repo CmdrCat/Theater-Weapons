@@ -184,21 +184,19 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 
 if CustomizableWeaponry_atowins2_optics then
-SWEP.Attachments = {[5] = {header = "Optic", offset = {550, -500}, atts = {"md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
-[7] = {header = "Sight", offset = {1300, 90}, atts = {"doi_atow_altsight"}},
-[4] = {header = "Model", offset = {200, 225}, atts = {"doi_atow_garandtanker"}},
+SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"doi_ato_altsight","md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
+[3] = {header = "Model", offset = {200, 225}, atts = {"doi_atow_garandtanker"}},
 [6] = {header = "Finish", offset = {650, -100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish"}},
-[1] = {header = "Muzzle", offset = {-420, -400}, atts = {"ins2_atow_riflesuppressor"}},
-[2] = {header = "Underbarrel", offset = {-400, 50}, atts = {"ins2_atow_clamplaser"}},
-[3] = {header = "Accessory", offset = {20, -475}, atts = {"doi_atow_sling", "md_foregrip","ins2_atow_tacbipod"}},
-["+reload"] = {header = "Ammo", offset = {800, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
+[2] = {header = "Muzzle", offset = {-420, -400}, atts = {"ins2_atow_riflesuppressor"}},
+[4] = {header = "Underbarrel", offset = {-400, 50}, atts = {"ins2_atow_clamplaser"}},
+[5] = {header = "Accessory", offset = {20, -475}, atts = {"doi_atow_sling", "md_foregrip","ins2_atow_tacbipod"}},
+["+reload"] = {header = "Ammo", offset = {800, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 else
-SWEP.Attachments = {[3] = {header = "Optic", offset = {600, -325}, atts = {"doi_atow_lymanm82"}},
-[5] = {header = "Sight", offset = {1200, 50}, atts = {"doi_atow_altsight"}},
-[1] = {header = "Model", offset = {-300, -400}, atts = {"doi_atow_garandtanker"}},
-[4] = {header = "Finish", offset = {950, 400}, atts = {"doi_atow_wornfinish"}},
-[2] = {header = "Accessory", offset = {-250, 200}, atts = {"doi_atow_sling"}},
-["+reload"] = {header = "Ammo", offset = {300, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
+SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -325}, atts = {"doi_atow_altsight", "doi_atow_lymanm82"}},
+[2] = {header = "Model", offset = {-300, -400}, atts = {"doi_atow_garandtanker"}},
+[4] = {header = "Finish", offset = {1200, 50}, atts = {"doi_atow_wornfinish"}},
+[3] = {header = "Accessory", offset = {-250, 200}, atts = {"doi_atow_sling"}},
+["+reload"] = {header = "Ammo", offset = {300, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 end
 
 SWEP.AttachmentExclusions = {
@@ -315,12 +313,19 @@ end
 	self.EffectiveRange = 60 * 39.37
 	self.DamageFallOff = .35
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 50 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .12))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 	if self.ActiveAttachments.ins2_atow_riflesuppressor then
 	self.EffectiveRange = ((self.EffectiveRange - 50 * 39.37))

@@ -79,7 +79,7 @@ SWEP.ADSFireAnim = true
 SWEP.PreventQuickScoping = true
 SWEP.QuickScopeSpreadIncrease = 0.2
 
-SWEP.Attachments = {["+reload"] = {header = "Ammo", offset = {-500, 600}, atts = {"am_magnum", "am_matchgrade"}}}
+SWEP.Attachments = {["+reload"] = {header = "Ammo", offset = {-500, 600}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shot"},
 	reload = "reload",
@@ -165,6 +165,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

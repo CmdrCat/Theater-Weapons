@@ -96,12 +96,12 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
-SWEP.Attachments = {[1] = {header = "Barrel", offset = {-250, -350}, atts = {"doi_atow_c96cshortbarrel"}},
-[4] = {header = "Finish", offset = {950, 350}, atts = {"doi_atow_c96goldfinish"}},
-[2] = {header = "Magazine", offset = {300, 300}, atts = {"doi_atow_c96cextmag"}},
-[3] = {header = "Optic", offset = {350, -375}, atts = {"doi_atow_zf4"}},
-[5] = {header = "Fire Control", offset = {1050, -250}, atts = {"doi_atow_heavybolt"}},
-["+reload"] = {header = "Ammo", offset = {-300, 150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+SWEP.Attachments = {[2] = {header = "Barrel", offset = {-250, -440}, atts = {"doi_atow_c96cshortbarrel"}},
+[5] = {header = "Finish", offset = {1050, -250}, atts = {"doi_atow_c96goldfinish"}},
+[4] = {header = "Magazine", offset = {150, 350}, atts = {"doi_atow_c96cextmag"}},
+[1] = {header = "Optic", offset = {350, -375}, atts = {"doi_atow_zf4"}},
+[3] = {header = "Fire Control", offset = {1000, 350}, atts = {"doi_atow_heavybolt"}},
+["+reload"] = {header = "Ammo", offset = {-500, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_2"},
 	fire_aim = {"iron_fire_3","iron_fire_2"},
@@ -202,15 +202,22 @@ if not self.ActiveAttachments.doi_atow_onehand then
 	self.EffectiveRange = 10 * 39.37
 	self.DamageFallOff = .6
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 30 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .1))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 	if self.ActiveAttachments.doi_atow_c96cshortbarrel then
-	self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange * 0.80))
 	self.DamageFallOff = ((self.DamageFallOff + .02))
 end
 end

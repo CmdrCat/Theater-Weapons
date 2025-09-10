@@ -90,11 +90,15 @@ SWEP.LuaViewmodelRecoilOverride = true
 
 SWEP.Trivia = {text = "A British bullpup assault rifle, having a longer range yet shorter overall length compared to other traditional rifles.", x = -400, y = -500}
 
+SWEP.AttachmentExclusions = {["am_magnum"] = {"cw_l85a1_conversion"},
+							 ["am_matchgrade"] = {"cw_l85a1_conversion"},
+							 ["am_atow_heavy"] = {"cw_l85a1_conversion"}}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-500, -300}, atts = {"md_saker"}},
 	[3] = {header = "Laser", offset = {-500, 200},  atts = {"md_anpeq15"}},
 	[4] = {header = "Conversion", offset = {700, 600},  atts = {"cw_l85a1_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {800, 150}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {800, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "Reload_Full",
@@ -191,6 +195,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

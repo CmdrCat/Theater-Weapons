@@ -110,7 +110,7 @@ SWEP.Attachments = {
 	{header = "Sight", offset = {950, -250},  atts = {"md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	{header = "Muzzle", offset = {-500, -500}, atts = {"md_pbs1"}},
 	{header = "Handguard", offset = {-400, 100}, atts = {"md_foregrip"}, exclusions = {bg_ak74_rpkbarrel = true}},
-	["+reload"] = {header = "Ammo", offset = {950, 300}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {950, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"ak47_fire1", "ak47_fire2", "ak47_fire3"},
 	reload = "ak47_reload",
@@ -193,6 +193,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

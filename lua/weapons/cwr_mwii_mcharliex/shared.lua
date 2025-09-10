@@ -220,7 +220,7 @@ SWEP.Attachments = {
 	{header = "Front Sights", offset = {300 , 550},  atts = {"nofs"}},
 	{header = "Handguard", offset = {750 , 550},  atts = {"bruenechelon", "bruenbm20"}},
 	{header = "Magazine", offset = {1950, 700},  atts = {"md_uecw_emag"}},
-	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", }}
+	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}
 
 }
 	
@@ -357,6 +357,10 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

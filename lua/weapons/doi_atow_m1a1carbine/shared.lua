@@ -133,18 +133,19 @@ SWEP.MagBGs = {main = 3, fifteen = 0, thirty = 1}
 SWEP.SlingBGs = {main = 4, off = 0, on = 1}
 
 if CustomizableWeaponry_atowins2_optics then
-	SWEP.Attachments = {[4] = {header = "Optic", offset = {550, -350}, atts = {"md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
-	[5] = {header = "Sight", offset = {1100, 125}, atts = {"doi_atow_altsight"}},
-	[2] = {header = "Conversion", offset = {-50, -425}, atts = {"doi_atow_m2carbineconv"}, exclusions = {["am_atow_riot"] = true}},
-	[3] = {header = "Magazine", offset = {475, 300}, atts = {"doi_atow_m1carbine30rnd"}, exclusions = {["am_atow_riot"] = true}},
-	[1] = {header = "Accessory", offset = {-400, -200}, atts = {"doi_atow_sling"}},
-	["+reload"] = {header = "Ammo", offset = {-250, 150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_altsight", "md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
+	[3] = {header = "Conversion", offset = {250, -425}, atts = {"doi_atow_m2carbineconv"}},
+	[4] = {header = "Magazine", offset = {600, 300}, atts = {"doi_atow_m1carbine30rnd"}},
+	[5] = {header = "Accessory", offset = {700, -300}, atts = {"doi_atow_sling"}},
+	[2] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
+	["+reload"] = {header = "Ammo", offset = {-600, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	else
-	SWEP.Attachments = {[4] = {header = "Sight", offset = {1100, 125}, atts = {"doi_atow_altsight"}},
-	[2] = {header = "Conversion", offset = {250, -425}, atts = {"doi_atow_m2carbineconv"}, exclusions = {["am_atow_riot"] = true}},
-	[3] = {header = "Magazine", offset = {475, 300}, atts = {"doi_atow_m1carbine30rnd"}, exclusions = {["am_atow_riot"] = true}},
-	[1] = {header = "Accessory", offset = {-400, -200}, atts = {"doi_atow_sling"}},
-	["+reload"] = {header = "Ammo", offset = {-275, 150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	SWEP.Attachments = {[1] = {header = "Sight", offset = {1100, 125}, atts = {"doi_atow_altsight"}},
+	[3] = {header = "Conversion", offset = {250, -425}, atts = {"doi_atow_m2carbineconv"}},
+	[4] = {header = "Magazine", offset = {600, 300}, atts = {"doi_atow_m1carbine30rnd"}},
+	[5] = {header = "Accessory", offset = {700, -300}, atts = {"doi_atow_sling"}},
+	[2] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
+	["+reload"] = {header = "Ammo", offset = {-600, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	end
 
 SWEP.Animations = {fire = {"base_fire"},
@@ -204,6 +205,7 @@ end
 
 SWEP.FireDelay = 60/700
 SWEP.FireSound = "DOIM1A1CAR_FIRE"
+SWEP.FireSoundSuppressed = "DOIM1A1CAR_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.75
  -- = 1.1
 
@@ -239,15 +241,19 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 55 * 39.37
 	self.DamageFallOff = .25
 	
-			if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 72 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .12))
-end
-	if self.ActiveAttachments.am_atow_riot then
-	self.EffectiveRange = ((self.EffectiveRange - 60 * 39.37))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 	if self.ActiveAttachments.doi_atow_unisuppressor then
 	self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))

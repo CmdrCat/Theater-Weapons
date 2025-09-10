@@ -95,7 +95,7 @@ SWEP.LuaViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {
-["+reload"] = {header = "Ammo", offset = {-300, 50}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}},
+["+reload"] = {header = "Ammo", offset = {-300, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}},
 [1] = {header = "Technique", offset = {550, -350}, atts = {"doi_atow_onehand"}},}
 
 SWEP.Animations = {fire = {"base_fire"},
@@ -192,12 +192,19 @@ self.Owner.ViewAff = 0
 	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .8
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 2 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .096))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 end
 

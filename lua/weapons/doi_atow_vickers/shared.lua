@@ -98,7 +98,7 @@ SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {
 [1] = {header = "Belt", offset = {550, -250}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
-["+reload"] = {header = "Ammo", offset = {-50, 50}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+["+reload"] = {header = "Ammo", offset = {-250, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_2"},
 	fire_aim = {"base_fire_2"},
@@ -198,12 +198,19 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 35 * 39.37
 	self.DamageFallOff = .5
 	
-				if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 72 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .175))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 end
 

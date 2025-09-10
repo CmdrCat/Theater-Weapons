@@ -137,10 +137,10 @@ SWEP.Trivia = {text = "A modern marksman rifle version of the classic M14.", x =
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -450},  atts = {"md_microt1",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Muzzle", offset = {-450, -300},  atts = {"md_saker"}},
-	[3] = {header = "Laser", offset = {800, 0}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true, md_nightforce_nxs = true}},
+	[3] = {header = "Laser", offset = {0, -300}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true, md_nightforce_nxs = true}},
 	[4] = {header = "Handguard", offset = {-450, 150}, atts = {"md_foregrip", "md_bipod"}},
 	[5] = {header = "Conversion", offset = {350, 500}, atts = {"cw_m14_br_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {800, 450}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {1200, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"M14_Fire1", "M14_Fire2"},
 	reload = "M14_Reload",
@@ -221,6 +221,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

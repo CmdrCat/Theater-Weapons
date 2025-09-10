@@ -98,10 +98,10 @@ SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 
-SWEP.Attachments = {[3] = {header = "Optic", offset = {850, -350}, atts = {"doi_atow_zf4"}},
-[2] = {header = "Finish", offset = {300, -250}, atts = {"doi_atow_wornfinish"}},
-[1] = {header = "Accessory", offset = {-200, 80}, atts = {"doi_atow_sling"}},
-["+reload"] = {header = "Ammo", offset = {380, 180}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
+SWEP.Attachments = {[1] = {header = "Optic", offset = {850, -350}, atts = {"doi_atow_zf4"}},
+[3] = {header = "Finish", offset = {300, -250}, atts = {"doi_atow_wornfinish"}},
+[2] = {header = "Accessory", offset = {-200, 80}, atts = {"doi_atow_sling"}},
+["+reload"] = {header = "Ammo", offset = {380, 180}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
@@ -199,12 +199,19 @@ end
 	self.EffectiveRange = 60  * 39.37
 	self.DamageFallOff = .25
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 140 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .141))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 end
 

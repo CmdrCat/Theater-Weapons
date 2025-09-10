@@ -110,7 +110,7 @@ SWEP.Attachments = {[1] = {header = "Reload", offset = {-150, 120}, atts = {"doi
 [2] = {header = "Optic", offset = {250, -400}, atts = {"doi_atow_m73","doi_atow_wina5","doi_atow_unertl"}},
 [4] = {header = "Finish", offset = {1050, -100}, atts = {"doi_atow_wornfinish"}},
 [3] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt"}},
-["+reload"] = {header = "Ammo", offset = {320, 180}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}}}
+["+reload"] = {header = "Ammo", offset = {320, 180}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire"},
@@ -246,12 +246,19 @@ self.Owner.ViewAff = 0
 	self.EffectiveRange = 500 * 39.37
 	self.DamageFallOff = .325
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 100 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .1))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 end
 
 function SWEP:fireAnimFunc()

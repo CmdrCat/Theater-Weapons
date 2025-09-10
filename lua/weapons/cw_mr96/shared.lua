@@ -47,7 +47,7 @@ SWEP.Trivia = {text = "Though the MR96 is usually chambered in .357 Magnum or .3
 
 SWEP.Attachments = {[1] = {header = "Barrel", offset = {-250, -75},  atts = {"bg_regularbarrel", "bg_longbarrelmr96"}},
 	[2] = {header = "Technique", offset = {500, 450}, atts = {"doi_atow_onehand"}},
-	["+reload"] = {header = "Ammo", offset = {500, -75}, atts = {"am_reducedpowderload", "am_matchgrade","am_snakeshot"}}}
+	["+reload"] = {header = "Ammo", offset = {500, -75}, atts = {"am_reducedpowderload", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
 	reload = "reload",
@@ -126,7 +126,14 @@ if self.ActiveAttachments.am_reducedpowderload then
 end	
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
-end	
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
 end
 
 function SWEP:Holster(wep)

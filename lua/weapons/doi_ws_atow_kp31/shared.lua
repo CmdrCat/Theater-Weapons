@@ -89,7 +89,7 @@ SWEP.CanRestOnObjects = true
 SWEP.Attachments = {[2] = {header = "Muzzle", offset = {50, -380}, atts = {"doi_atow_unisuppressor"}},
 [1] = {header = "Magazine", offset = {-200, 150}, atts = {"doi_atow_suomi71rnd"}},
 [3] = {header = "Fire Control", offset = {750, -250}, atts = {"doi_atow_heavybolt"}},
-["+reload"] = {header = "Ammo", offset = {540, 230}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+["+reload"] = {header = "Ammo", offset = {540, 230}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire_1"},
@@ -191,12 +191,19 @@ if self.FireMode == "semi" then
 	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .55
 	
-				if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 40 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .15))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 	if self.ActiveAttachments.doi_atow_unisuppressor then
 	self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))

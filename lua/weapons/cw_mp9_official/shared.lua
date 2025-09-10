@@ -104,7 +104,7 @@ SWEP.Trivia = {text = "A continuation of the compact TMP, now manufactured by Br
 SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -300},  atts = {"md_microt1","md_aimpoint", "md_schmidt_shortdot", "md_nightforce_nxs"}},
 	[2] = {header = "Muzzle", offset = {-600, -300},  atts = {"md_tundra9mm"}},
 	[3] = {header = "Laser", offset = {600, 150},  atts = {"md_anpeq15"}},
-	["+reload"] = {header = "Ammo", offset = {-600, 200}, atts = {"am_magnum", "am_matchgrade", "am_ultramegamatchammo"}}}
+	["+reload"] = {header = "Ammo", offset = {-1000, 200}, atts = {"am_magnum", "am_matchgrade", "am_ultramegamatchammo", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"fire1", "fire2"},
 	reload = "reload",
@@ -191,6 +191,13 @@ if self.ActiveAttachments.am_matchgrade then
 end
 if self.ActiveAttachments.am_ultramegamatchammo then
 	self.DamageFallOff = ((self.DamageFallOff * 0.1))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

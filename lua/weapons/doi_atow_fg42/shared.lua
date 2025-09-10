@@ -96,22 +96,18 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
+SWEP.AttachmentExclusions = {["doi_atow_zfg42"] = {"doi_atow_fg42m9kconv"},
+							 ["doi_atow_sling"] = {"doi_atow_fg42m9kconv"},
+							 ["am_magnum"] = {"doi_atow_fg42m9kconv"},
+							 ["am_matchgrade"] = {"doi_atow_fg42m9kconv"},
+						 	 ["am_atow_lowvel"] = {"doi_atow_fg42m9kconv"},
+							 ["am_atow_heavy"] = {"doi_atow_fg42m9kconv"},
+							 ["am_atow_ap"] = {"doi_atow_fg42m9kconv"}}
 
-SWEP.Attachments = {[2] = {header = "Optic", offset = {975, -275}, atts = {"doi_atow_zfg42"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
-[3] = {header = "Fire Control", offset = {700, 250}, atts = {"doi_atow_fg42m9kconv", "doi_atow_heavybolt"}},
-[1] = {header = "Accessory", offset = {-200, -250}, atts = {"doi_atow_sling"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
-["+reload"] = {header = "Ammo", offset = {-110, 250}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_ap"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}}}
-
-SWEP.AttachmentExclusions = {
-    ["doi_atow_fg42m9kconv"] = {
-        "doi_atow_heavybolt",
-        "doi_atow_sling",
-        "am_atow_light",
-        "am_atow_lowvel",
-        "am_atow_ap"
-    }
-}
-
+SWEP.Attachments = {[1] = {header = "Optic", offset = {975, -275}, atts = {"doi_atow_zfg42"}},
+[2] = {header = "Fire Control", offset = {950, 250}, atts = {"doi_atow_fg42m9kconv", "doi_atow_heavybolt"}},
+[3] = {header = "Accessory", offset = {-200, -250}, atts = {"doi_atow_sling"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
+["+reload"] = {header = "Ammo", offset = {-300, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire2"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
@@ -220,17 +216,19 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 55 * 39.37
 	self.DamageFallOff = .5
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 130 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .15))
-end
-	
-	if self.ActiveAttachments.doi_atow_unisuppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 65 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + .125))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 end
 

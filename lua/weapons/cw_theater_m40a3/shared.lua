@@ -112,9 +112,9 @@ SWEP.GlobalDelayOnShoot = 1.1
     SWEP.Attachments = {
        [1] = {header = "Sight", offset = {350, -600}, atts = {"md_microt1","too_reflex_mrs", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
        [2] = {header = "Muzzle", offset = {-800, -10}, atts = {"md_saker"}},
-       [3] = {header = "Bolt", offset = {2700, 100}, atts = {"md_improved_bolt"}},
+       [3] = {header = "Bolt", offset = {2000, 600}, atts = {"md_improved_bolt"}},
 	   ["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	   ["+reload"] = {header = "Ammo", offset = {1350, 950}, atts = {"am_magnum", "am_matchgrade"}}
+	   ["+reload"] = {header = "Ammo", offset = {2200, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 	   
     }
 		
@@ -274,6 +274,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
  self.Animations.draw = "draw2"
 if self.Animations.draw == "draw2" then

@@ -153,11 +153,11 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 --SWEP.AimBreathingIntensity = .75
 
-SWEP.Attachments = {[4] = {header = "Model", offset = {650, -250}, atts = {"doi_atow_stenmk5"}},
-[2] = {header = "Accessory", offset = {-310, 100}, atts = {"doi_atow_sling"}},
-[3] = {header = "Fire Control", offset = {60, -420}, atts = {"doi_atow_burstconv","doi_atow_heavybolt", "doi_atow_lightbolt"}},
+SWEP.Attachments = {[3] = {header = "Model", offset = {650, -250}, atts = {"doi_atow_stenmk5"}},
+[4] = {header = "Accessory", offset = {-310, 100}, atts = {"doi_atow_sling"}},
+[2] = {header = "Fire Control", offset = {60, -420}, atts = {"doi_atow_burstconv","doi_atow_heavybolt", "doi_atow_lightbolt"}},
 [1] = {header = "Muzzle", offset = {-450, -300}, atts = {"doi_atow_altsightmk5", "doi_atow_stensuppressor"}},
-["+reload"] = {header = "Ammo", offset = {200, 150}, atts = {"am_atow_light", "am_atow_lowvel", "am_atow_heavy"}}}
+["+reload"] = {header = "Ammo", offset = {200, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
@@ -257,12 +257,19 @@ end
 	self.EffectiveRange = 40 * 39.37
 	self.DamageFallOff = .5
 	
-	if self.ActiveAttachments.am_atow_light then
-	self.EffectiveRange = ((self.EffectiveRange + 40 * 39.37))
-end
+	if self.ActiveAttachments.am_magnum then
+		self.EffectiveRange = ((self.EffectiveRange * 1.15))
+	end
+	if self.ActiveAttachments.am_matchgrade then
+		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
 	if self.ActiveAttachments.am_atow_heavy then
-	self.DamageFallOff = ((self.DamageFallOff - .135))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
 	
 	if self.ActiveAttachments.doi_atow_stensuppressor then
 	self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))

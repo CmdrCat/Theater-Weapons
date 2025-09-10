@@ -17,7 +17,7 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 10 * 39.37
 	SWEP.DamageFallOff_Orig = .8
 	
-	SWEP.MuzzleEffect = "muzzleflash_smg"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
 	SWEP.ShellScale = 0.7
@@ -98,7 +98,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_
 	[2] = {header = "Muzzle", offset = {-500, -600},  atts = {"md_tundra9mm"}},
 	[3] = {header = "Barrel", offset = {-500, -150},  atts = {"bg_mac11_extended_barrel"}},
 	[4] = {header = "Stock", offset = {800, 150},  atts = {"bg_mac11_unfolded_stock"}},
-	["+reload"] = {header = "Ammo", offset = {-500, 300}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {-500, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"mac10_fire", "mac10_fire2", "mac10_fire3"},
 	reload = "mac10_reload",
@@ -181,6 +181,13 @@ if self.ActiveAttachments.am_magnum then
 end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
 

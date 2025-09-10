@@ -4,11 +4,11 @@ att.displayName = "L85A1 Conversion"
 att.displayNameShort = "L85A1"
 
 att.statModifiers = {DamageMult = 161 / 39,
-RecoilMult = 10}
+RecoilMult = 25}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Gun frequently jams, but each round is overloaded", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	att.description = {[1] = {t = "Gun frequently jams, but loaded with heavier rounds to compensate", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
 function att:attachFunc()
