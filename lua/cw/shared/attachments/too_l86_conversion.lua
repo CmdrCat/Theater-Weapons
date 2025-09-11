@@ -3,7 +3,7 @@ att.name = "too_l86_conversion"
 att.displayName = "Liberator Variant"
 att.displayNameShort = "Liberator"
 
-att.statModifiers = {DamageMult = -5 / 32,
+att.statModifiers = {DamageMult = -1 / 4,
 FireDelayMult = -9 / 40}
 
 if CLIENT then

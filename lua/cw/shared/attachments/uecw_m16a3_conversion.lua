@@ -3,6 +3,8 @@ att.name = "uecw_m16a3_conversion"
 att.displayName = "M16A3 Conversion"
 att.displayNameShort = "M16A3"
 
+att.statModifiers = {DamageMult = -1 / 17}
+
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "Converts to an M16A3, a select-fire variant of the M16A2", c = CustomizableWeaponry.textColors.VPOSITIVE},

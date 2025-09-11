@@ -70,7 +70,7 @@ att.displayName = "AS VAL variant"
 att.displayNameShort = "AS VAL"
 att.isBG = true
 
-att.statModifiers = {DamageMult = 3 / 29,
+att.statModifiers = {DamageMult = 1 / 7,
 HipSpreadMult = -0.58}
 
 if CLIENT then
@@ -93,7 +93,7 @@ att.isBG = true
 att.overrideSuppressorStatus = false -- it will override the weapon's default suppressor status to FALSE
 att.SpeedDec = -3
 
-att.statModifiers = {DamageMult = 4 / 29,
+att.statModifiers = {DamageMult = 5 / 28,
 RecoilMult = -0.1,
 HipSpreadMult = -0.91}
 

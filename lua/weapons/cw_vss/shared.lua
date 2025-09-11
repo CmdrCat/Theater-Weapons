@@ -120,7 +120,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.Trivia = {text = "This unique marksman rifle has an integrated suppressor and is chambered in the subsonic 9×39mm cartridge, making every shot whisper-quiet.", x = -200, y = -650}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, -500},  atts = {"md_kobra", "md_aimpoint", "md_schmidt_shortdot", "md_pso1"}},
-	[2] = {header = "Magazine", offset = {0, 350},  atts = {"bg_asval_20rnd", "bg_asval_30rnd"}},
+	[2] = {header = "Magazine", offset = {0, 350},  atts = {"bg_asval_20rnd", "bg_asval_30rnd"}, dependencies = {bg_asval = true, bg_sr3m = true}},
 	[3] = {header = "Variant", offset = {0, -550},  atts = {"bg_asval", "bg_sr3m"}},
 	[4] = {header = "Stock", offset = {1400, -50}, atts = {"bg_vss_foldable_stock"}},
 	[5] = {header = "Muzzle", offset = {0, -100}, atts = {"md_pbs1"}, dependencies = {bg_sr3m = true}},
@@ -196,7 +196,7 @@ SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
-SWEP.Damage = 29
+SWEP.Damage = 28
 SWEP.DeployTime = 1.2
 
 SWEP.ReloadSpeed = 1.2

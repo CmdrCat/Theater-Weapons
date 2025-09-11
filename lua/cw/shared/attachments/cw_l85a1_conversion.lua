@@ -4,7 +4,8 @@ att.displayName = "L85A1 Conversion"
 att.displayNameShort = "L85A1"
 
 att.statModifiers = {DamageMult = 161 / 39,
-RecoilMult = 25}
+RecoilMult = 25,
+ReloadSpeedMult = 0.52}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
