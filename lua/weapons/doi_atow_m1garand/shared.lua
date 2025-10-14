@@ -184,7 +184,7 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 
 if CustomizableWeaponry_atowins2_optics then
-SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"doi_ato_altsight","md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
+SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"doi_atow_altsight","md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
 [3] = {header = "Model", offset = {200, 225}, atts = {"doi_atow_garandtanker"}},
 [6] = {header = "Finish", offset = {650, -100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish"}},
 [2] = {header = "Muzzle", offset = {-420, -400}, atts = {"ins2_atow_riflesuppressor"}},
@@ -439,8 +439,6 @@ function SWEP:Holster(wep)
 	self.dt.M203Active = false
 end
 
-/*/
-
 local simpleTextColor = Color(255, 210, 0, 255)
 local mod = 25
 
@@ -530,3 +528,4 @@ function SWEP:adjustVisibleRounds(curMag)
 end
 
  
+/*/

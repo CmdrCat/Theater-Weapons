@@ -38,9 +38,8 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1.15
 	SWEP.CustomizationMenuScale = 0.012
 	
-	SWEP.IconLetter = "t"
-	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_famasg2_official")
-	killicon.AddFont("cw_famasg2", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
+	SWEP.SelectIcon = surface.GetTextureID("vgui/g2 famas")
+	killicon.Add("cw_famasg2_official", "vgui/killicons/g2 famas", Color(255, 120, 40, 0))
 	
 	SWEP.EffectiveRange_Orig = 50 * 39.37
 	SWEP.DamageFallOff_Orig = .55

@@ -14,8 +14,8 @@ if CLIENT then
 
 	
 	
-	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cwr_mwii_chimera")
-	killicon.Add( "cwr_mwii_chimera", "vgui/entities/cwr_mwii_chimera", Color(255, 0, 0, 0))
+	SWEP.SelectIcon = surface.GetTextureID("vgui/chimera")
+	killicon.Add( "cwr_mwii_chimera", "vgui/killicon/chimera", Color(255, 120, 40, 0))
 	
 	SWEP.EffectiveRange_Orig = 35 * 39.37
 	SWEP.DamageFallOff_Orig = .6
@@ -444,4 +444,25 @@ function SWEP:Holster(wep)
 	end
 
 	self.dt.M203Active = false
+end
+
+local simpleTextColor = Color(255, 210, 0, 255)
+local mod = 25
+
+function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
+	if self.SelectIcon then
+		surface.SetTexture(self.SelectIcon)
+		
+		wide = wide - mod
+		
+		x = x + (mod / 2)
+		y = y + (mod / 4) + (wide / 8)
+		
+		surface.SetDrawColor(255, 255, 255, alpha)
+		
+		surface.DrawTexturedRect(x, y, wide, (wide / 2))
+	else
+		simpleTextColor.a = alpha
+		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
+	end
 end

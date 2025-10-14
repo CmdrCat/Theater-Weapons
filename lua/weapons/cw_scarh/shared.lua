@@ -4,15 +4,13 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.Spawnable = false
 	SWEP.PrintName = "SCAR-H"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	SWEP.CustomizationMenuScale = 0.014
 	
-	SWEP.IconLetter = "i"
-	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_scarh")
-	killicon.AddFont("cw_g3a3", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
+	SWEP.SelectIcon = surface.GetTextureID("vgui/scarh")
+	killicon.Add("cw_scarh", "vgui/killicons/scarh", Color(255, 120, 40, 0))
 	
 	SWEP.EffectiveRange_Orig = 60 * 39.37
 	SWEP.DamageFallOff_Orig = .25
@@ -27,6 +25,11 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = 0.9
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.8
 	SWEP.FireMoveMod = 0.6
+	
+	SWEP.DrawTraditionalWorldModel = false
+	SWEP.WM = "models/cw2/rifles/w_scarh.mdl"
+	SWEP.WMPos = Vector(0, -0.5, 0.5)
+	SWEP.WMAng = Vector(0, 0, 180)
 	
 	
 	SWEP.IronsightPos = Vector(-2.023, -4.479, 0.104)
@@ -199,7 +202,7 @@ SWEP.Primary.Ammo			= "7.62x51MM"
 
 SWEP.FireDelay = 0.096
 SWEP.FireSound = "CW_SCARH_FIRE"
-SWEP.FireSoundSuppressed = "CW_G3A3_FIRE_SUPPRESSED"
+SWEP.FireSoundSuppressed = "CW_TOO_G3A3_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.4
 
 SWEP.HipSpread = 0.125
@@ -225,9 +228,11 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 60 * 39.37
 self.DamageFallOff = .25
+
 if (self.ActiveAttachments.cw_fortnite_scar_conversion) then
 self.EffectiveRange = ((self.EffectiveRange - 35 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + 0.55))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end
@@ -242,7 +247,7 @@ if self.ActiveAttachments.am_atow_heavy then
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 end
-end
+
 
 function SWEP:Holster(wep)
 	-- can't switch if neither the weapon we want to switch to or the wep we're trying to switch to are not valid
@@ -324,4 +329,25 @@ function SWEP:Holster(wep)
 	end
 
 	self.dt.M203Active = false
+end
+
+local simpleTextColor = Color(255, 210, 0, 255)
+local mod = 25
+
+function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
+	if self.SelectIcon then
+		surface.SetTexture(self.SelectIcon)
+		
+		wide = wide - mod
+		
+		x = x + (mod / 2)
+		y = y + (mod / 4) + (wide / 8)
+		
+		surface.SetDrawColor(255, 255, 255, alpha)
+		
+		surface.DrawTexturedRect(x, y, wide, (wide / 2))
+	else
+		simpleTextColor.a = alpha
+		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
+	end
 end

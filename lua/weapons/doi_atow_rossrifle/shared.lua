@@ -359,8 +359,6 @@ function SWEP:Holster(wep)
 	self.dt.M203Active = false
 end
 
-/*/
-
 local simpleTextColor = Color(255, 210, 0, 255)
 local mod = 25
 
@@ -443,4 +441,4 @@ function SWEP:adjustVisibleRounds(curMag)
 	end
 end
 
- 
+ /*/

@@ -311,8 +311,6 @@ function SWEP:Holster(wep)
 	self.dt.M203Active = false
 end
 
-/*/
-
 local simpleTextColor = Color(255, 210, 0, 255)
 local mod = 25
 
@@ -333,3 +331,5 @@ function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
 		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
 	end
 end
+
+/*/

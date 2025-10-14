@@ -12,8 +12,8 @@ if CLIENT then
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	
-	SWEP.IconLetter = "w"
-	killicon.AddFont("cw_ar15", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
+	SWEP.SelectIcon = surface.GetTextureID("vgui/m16a4")
+	killicon.Add("cw_g4p_m16a2", "vgui/killicons/m16a4", Color(255, 120, 40, 0))
 	
 	SWEP.EffectiveRange_Orig = 50 * 39.37
 	SWEP.DamageFallOff_Orig = .25
@@ -321,4 +321,25 @@ function SWEP:Holster(wep)
 	end
 
 	self.dt.M203Active = false
+end
+
+local simpleTextColor = Color(255, 210, 0, 255)
+local mod = 25
+
+function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
+	if self.SelectIcon then
+		surface.SetTexture(self.SelectIcon)
+		
+		wide = wide - mod
+		
+		x = x + (mod / 2)
+		y = y + (mod / 4) + (wide / 8)
+		
+		surface.SetDrawColor(255, 255, 255, alpha)
+		
+		surface.DrawTexturedRect(x, y, wide, (wide / 2))
+	else
+		simpleTextColor.a = alpha
+		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
+	end
 end

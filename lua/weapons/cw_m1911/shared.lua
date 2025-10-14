@@ -9,8 +9,8 @@ if CLIENT then
 	SWEP.PrintName = "M1911"
 
 	SWEP.IconLetter = "f"
-	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw_m1911")
-	killicon.AddFont("cw_deagle", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
+	SWEP.SelectIcon = surface.GetTextureID("vgui/m1911")
+	killicon.Add("cw_m1911", "vgui/killicons/m1911", Color(255, 120, 40, 0))
 	
 	SWEP.MuzzleEffect = "muzzleflash_pistol"
 	SWEP.PosBasedMuz = false
@@ -258,4 +258,25 @@ function SWEP:Holster(wep)
 	end
 
 	self.dt.M203Active = false
+end
+
+local simpleTextColor = Color(255, 210, 0, 255)
+local mod = 25
+
+function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
+	if self.SelectIcon then
+		surface.SetTexture(self.SelectIcon)
+		
+		wide = wide - mod
+		
+		x = x + (mod / 2)
+		y = y + (mod / 4) + (wide / 8)
+		
+		surface.SetDrawColor(255, 255, 255, alpha)
+		
+		surface.DrawTexturedRect(x, y, wide, (wide / 2))
+	else
+		simpleTextColor.a = alpha
+		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
+	end
 end
