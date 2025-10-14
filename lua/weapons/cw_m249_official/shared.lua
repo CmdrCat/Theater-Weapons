@@ -182,7 +182,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 60 / 850
 SWEP.FireSound = "CW_M249_OFFICIAL_FIRE"
 SWEP.FireSoundSuppressed = "CW_M249_OFFICIAL_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.3
+SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.14
 SWEP.AimSpread = 0.003

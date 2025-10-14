@@ -100,7 +100,7 @@ SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {[3] = {header = "Model", offset = {575, -300}, atts = {"doi_atow_lewisaa"}},
-[2] = {header = "Fire Control", offset = {750, 300}, atts = {"doi_atow_burstconv","doi_atow_heavybolt", "doi_atow_lightbolt"}},
+[2] = {header = "Fire Control", offset = {750, 300}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
 [1] = {header = "Frame", offset = {-250, -200}, atts = {"doi_atow_bipodremove"}},
 ["+reload"] = {header = "Ammo", offset = {-100, 350}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 

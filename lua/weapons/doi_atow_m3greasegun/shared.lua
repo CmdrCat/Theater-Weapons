@@ -95,7 +95,7 @@ SWEP.BarrelBGs = {main = 2, smg = 0, carbine = 1}
 SWEP.Attachments = {[2] = {header = "Barrel", offset = {-400, 50}, atts = {"doi_atow_m3carbine"}, exclusions = {doi_atow_m3a1suppressor = true}},
 [1] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_m3flashhider","doi_atow_m3a1suppressor"}},
 [5] = {header = "Accessory", offset = {600, -300}, atts = {"doi_atow_sling"}},
-[3] = {header = "Fire Control", offset = {-200, 450}, atts = {"doi_atow_heavybolt", "doi_atow_lightbolt"}},
+[3] = {header = "Fire Control", offset = {-200, 450}, atts = {"doi_atow_heavybolt"}},
 [4] = {header = "Body", offset = {1200, 0}, atts = {"doi_atow_m3stock"}},
 ["+reload"] = {header = "Ammo", offset = {450, 270}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}}
 

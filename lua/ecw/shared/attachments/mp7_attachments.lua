@@ -9,7 +9,6 @@ att.displayNameShort = "Unsup"
 att.isBG = true
 
 att.statModifiers = {
-	DamageMult = 0.1,
 	RecoilMult = 0.15
 }
 

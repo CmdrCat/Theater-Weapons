@@ -1,7 +1,7 @@
 local att = {}
 att.name = "r_mwii_300blk"
 att.displayName = ".300 Blackout Conversion"
-att.displayNameShort = "300 BLK"
+att.displayNameShort = ".300 BLK"
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

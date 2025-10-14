@@ -22,7 +22,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 45 * 39.37
+	SWEP.EffectiveRange_Orig = 30 * 39.37
 	SWEP.DamageFallOff_Orig = .4
 	
 	SWEP.Shell = "khr9x19"
@@ -239,7 +239,7 @@ function SWEP:IndividualThink()
 		self.ForegripParent = "nah"
 	end
 	
-	self.EffectiveRange = 45 * 39.37
+	self.EffectiveRange = 30 * 39.37
 	self.DamageFallOff = .4
 	
 	if self.ActiveAttachments.am_magnum then

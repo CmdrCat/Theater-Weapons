@@ -23,7 +23,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 50 * 39.37
+	SWEP.EffectiveRange_Orig = 60 * 39.37
 SWEP.DamageFallOff_Orig = .3
 	
 	SWEP.Shell = "khr79233"
@@ -95,9 +95,9 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 --SWEP.AimBreathingIntensity = .875
 
-SWEP.Attachments = {[3] = {header = "Accessory", offset = {-250, -175}, atts = {"doi_atow_sling"}},
-[2] = {header = "Fire Control", offset = {900, 250}, atts = {"doi_atow_heavybolt", "doi_atow_lightbolt"}},
-[4] = {header = "Finish", offset = {200, -300}, atts = {"doi_atow_normandycamo"}},
+SWEP.Attachments = {[2] = {header = "Accessory", offset = {-250, -175}, atts = {"doi_atow_sling"}},
+[2] = {header = "Fire Control", offset = {900, 250}, atts = {"doi_atow_heavybolt"}},
+[3] = {header = "Finish", offset = {200, -300}, atts = {"doi_atow_normandycamo"}},
 [1] = {header = "Optic", offset = {800, -275}, atts = {"doi_atow_zf4"}},
 ["+reload"] = {header = "Ammo", offset = {-300, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -154,7 +154,7 @@ else
 SWEP.Primary.Ammo			= "7.92x33MM"
 end
 
-SWEP.FireDelay = 60/560
+SWEP.FireDelay = 60/600
 SWEP.FireSound = "DOISTG44_FIRE"
 SWEP.FireSoundSuppressed = "DOIM1A1CAR_FIRE_SUPPRESSED"
 SWEP.Recoil = .75
@@ -189,7 +189,7 @@ function SWEP:IndividualThink()
 	self.Owner.ViewAff = 0
 	end
 	
-	self.EffectiveRange = 50 * 39.37
+	self.EffectiveRange = 60 * 39.37
 	self.DamageFallOff = .3
 
 	if self.ActiveAttachments.am_magnum then

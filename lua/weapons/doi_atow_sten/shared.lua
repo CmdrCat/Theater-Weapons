@@ -155,7 +155,7 @@ SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {[3] = {header = "Model", offset = {650, -250}, atts = {"doi_atow_stenmk5"}},
 [4] = {header = "Accessory", offset = {-310, 100}, atts = {"doi_atow_sling"}},
-[2] = {header = "Fire Control", offset = {60, -420}, atts = {"doi_atow_burstconv","doi_atow_heavybolt", "doi_atow_lightbolt"}},
+[2] = {header = "Fire Control", offset = {60, -420}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
 [1] = {header = "Muzzle", offset = {-450, -300}, atts = {"doi_atow_altsightmk5", "doi_atow_stensuppressor"}},
 ["+reload"] = {header = "Ammo", offset = {200, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -254,7 +254,7 @@ function SWEP:IndividualThink()
 	end
 	end
 	
-	self.EffectiveRange = 40 * 39.37
+	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .5
 	
 	if self.ActiveAttachments.am_magnum then
