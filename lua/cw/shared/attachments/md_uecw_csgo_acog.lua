@@ -5,6 +5,7 @@ att.displayNameShort = "ACOG"
 att.aimPos = {"CSGOACOGPos", "CSGOACOGAng"}
 att.FOVModifier = 15
 att.isSight = true
+att.SpeedDec = 2
 
 att.statModifiers = {}
 

@@ -4,11 +4,12 @@ att.displayName = "Short Barrel"
 att.displayNameShort = "Short"
 att.FOVModifier = 10
 att.isBG = true
+att.SpeedDec = -5
 
-att.statModifiers = {AimSpreadMult = 1.25,
-HipSpreadMult = -0.15,
+att.statModifiers = {HipSpreadMult = -0.15,
 RecoilMult = 0.45,
-ReloadSpeedMult = 0.05}
+ReloadSpeedMult = 0.05,
+DrawSpeedMult = 0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/shortbarrel")

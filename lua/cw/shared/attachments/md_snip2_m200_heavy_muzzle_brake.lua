@@ -8,8 +8,7 @@ att.SpeedDec = 5
 att.statModifiers = {
 RecoilMult = -0.25,
 AimSpreadMult = -0.25,
-VelocitySensitivityMult = 0.22,
-DamageMult = 0.1}
+VelocitySensitivityMult = 0.22}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("entities/heavy_muzzle_brake")

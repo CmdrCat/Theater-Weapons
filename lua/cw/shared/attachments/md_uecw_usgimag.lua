@@ -2,6 +2,7 @@ local att = {}
 att.name = "md_uecw_usgimag"
 att.displayName = "USGI Magazine"
 att.displayNameShort = "USGI"
+att.SpeedDec = 2
 
 att.statModifiers = {}
 

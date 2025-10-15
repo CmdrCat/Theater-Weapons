@@ -1,6 +1,6 @@
 local att = {}
 att.name = "doi_atow_burstconv"
-att.displayName = "Burst-fire receiver"
+att.displayName = "Burst-Fire Receiver"
 att.displayNameShort = "Burst"
 
 att.statModifiers = {FireDelayMult = -.35}

@@ -215,11 +215,6 @@ if not self.ActiveAttachments.doi_atow_onehand then
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
-	
-	if self.ActiveAttachments.doi_atow_c96cshortbarrel then
-	self.EffectiveRange = ((self.EffectiveRange * 0.80))
-	self.DamageFallOff = ((self.DamageFallOff + .02))
-end
 end
 
 function SWEP:fireAnimFunc()

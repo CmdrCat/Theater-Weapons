@@ -1,7 +1,7 @@
 local att = {}
 att.name = "xrkonpoint"
 att.displayName = "XRK On-Point Reflex"
-att.displayNameShort = "POINT"
+att.displayNameShort = "On-Point"
 att.aimPos = {"POINTPos", "POINTAng"}
 att.FOVModifier = 15
 att.isSight = true

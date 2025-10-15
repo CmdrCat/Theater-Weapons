@@ -1,8 +1,9 @@
 local att = {}
 att.name = "doi_atow_pistolextmag"
-att.displayName = "High Capacity"
+att.displayName = "High Capacity Mag"
 att.displayNameShort = "14RND"
 att.isBG = true
+att.SpeedDec = 15
 
 att.statModifiers = {DrawSpeedMult = -0.15,
 ReloadSpeedMult = -0.1}

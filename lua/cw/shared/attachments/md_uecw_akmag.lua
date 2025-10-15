@@ -2,6 +2,7 @@ local att = {}
 att.name = "md_uecw_akmag"
 att.displayName = "Extended AK Magazine"
 att.displayNameShort = "EAK"
+att.SpeedDec = 5
 
 att.statModifiers = {}
 

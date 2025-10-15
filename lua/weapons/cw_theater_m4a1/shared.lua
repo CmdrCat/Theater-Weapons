@@ -115,6 +115,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_m
 	[2] = {header = "Muzzle", offset = {300, -600}, atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-650, -100}, atts = {"md_foregrip", "md_bipod"}},
 	[4] = {header = "Laser", offset = {250, 300}, atts = {"md_anpeq15"}},
+	[5] = {header = "Conversion", offset = {1050, 500}, atts = {"too_m4a1_50_beowulf"}},
 	["+use"] = {header = "Optic Type", offset = {0, -100}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1050, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -250,6 +251,9 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
 self.DamageFallOff = .3
+if self.ActiveAttachments.too_m4a1_50_beowulf then
+	self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

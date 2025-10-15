@@ -182,6 +182,9 @@ self.DamageFallOff = .8
 if self.ActiveAttachments.cw_mac11_380_conversion then
 	self.EffectiveRange = ((self.EffectiveRange - 2.5 * 39.37))
 end
+if self.ActiveAttachments.bg_mac11_extended_barrel then
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

@@ -1,7 +1,7 @@
 local att = {}
 att.name = "ftacgrimline"
-att.displayName = "FTAC GrimLine"
-att.displayNameShort = "GRIM"
+att.displayName = "FTac GrimLine"
+att.displayNameShort = "Grim"
 att.laserRange = 4096
 att.laserBeamRange = 75
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
@@ -10,8 +10,6 @@ att.statModifiers = {VelocitySensitivityMult = -0.2,
 HipSpreadMult = -0.2,
 DrawSpeedMult = -0.1,
 MaxSpreadIncMult = -0.25}
-
-att.SpeedDec = -5
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_ftacgrimline")

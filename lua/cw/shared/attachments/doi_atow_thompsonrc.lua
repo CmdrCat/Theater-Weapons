@@ -4,7 +4,7 @@ att.displayName = "Compensator"
 att.displayNameShort = "Comp"
 att.isBG = true
 
-att.statModifiers = {RecoilMult = -0.1}
+att.statModifiers = {RecoilMult = -0.25}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/thomrc")

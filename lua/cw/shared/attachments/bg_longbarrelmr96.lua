@@ -3,6 +3,7 @@ att.name = "bg_longbarrelmr96"
 att.displayName = "Long Barrel"
 att.displayNameShort = "Long"
 att.isBG = true
+att.SpeedDec = 15
 
 att.statModifiers = {RecoilMult = 0.2,
 DrawSpeedMult = -0.2}

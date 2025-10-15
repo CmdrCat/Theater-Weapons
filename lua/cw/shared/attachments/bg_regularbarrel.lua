@@ -1,8 +1,9 @@
 local att = {}
 att.name = "bg_regularbarrel"
-att.displayName = "Regular barrel"
+att.displayName = "Regular Barrel"
 att.displayNameShort = "Regular"
 att.isBG = true
+att.SpeedDec = 10
 
 att.statModifiers = {RecoilMult = 0.1,
 AimSpreadMult = -0.15,

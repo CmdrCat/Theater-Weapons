@@ -6,6 +6,7 @@ att.aimPos = {"LymanPos", "LymanAng"}
 att.FOVModifier = 15
 att.isSight = true
 att.withoutRail = true
+att.SpeedDec = 2
 
 att.statModifiers = {
 }

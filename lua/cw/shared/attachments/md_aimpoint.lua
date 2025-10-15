@@ -7,7 +7,6 @@ att.FOVModifier = 20
 att.isSight = true
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
 att.statModifiers = {}
-att.SpeedDec = 1
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/compm4")

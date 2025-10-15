@@ -3,8 +3,7 @@ att.name = "doi_atow_heavybolt"
 att.displayName = "Heavy Bolt"
 att.displayNameShort = "HWB"
 
-att.statModifiers = {FireDelayMult = .35,
-MaxSpreadIncMult = 0.25}
+att.statModifiers = {FireDelayMult = .35,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/3burstrec")

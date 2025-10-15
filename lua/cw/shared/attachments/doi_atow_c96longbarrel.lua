@@ -7,15 +7,16 @@ att.FOVModifier = 10
 att.isBG = true
 att.isSight = true
 att.withoutRail = true
-att.SpeedDec = 3
+att.SpeedDec = 5
 
 att.statModifiers = {AimSpreadMult = -0.5,
-RecoilMult = 0.15,
-ReloadSpeedMult = -0.1}
+RecoilMult = -0.10,
+ReloadSpeedMult = -0.1,
+DrawSpeedMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/c96barrel")
-		att.description = {}
+		att.description = {[1] = {t = "Increases effective range by 5M", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 	
 function att:attachFunc()

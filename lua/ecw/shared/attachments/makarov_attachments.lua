@@ -2,9 +2,10 @@ AddCSLuaFile()
 
 local makarov_ext_mag = {}
 makarov_ext_mag.name = "bg_makarov_extmag"
-makarov_ext_mag.displayName = "Extended magazine"
-makarov_ext_mag.displayNameShort = "Ext mag"
+makarov_ext_mag.displayName = "Extended Magazine"
+makarov_ext_mag.displayNameShort = "Ext Mag"
 makarov_ext_mag.isBG = true
+makarov_ext_mag.SpeedDec = 5
 
 makarov_ext_mag.statModifiers = {ReloadSpeedMult = -0.1,
 	DrawSpeedMult = -0.05}

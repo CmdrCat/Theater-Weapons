@@ -31,7 +31,7 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.01
 	SWEP.DisableSprintViewSimulation = true
 
-	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .85
 end
 
@@ -119,11 +119,17 @@ SWEP.ReloadHalt_Empty = 2.7
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 30 * 39.37
+self.EffectiveRange = 25 * 39.37
 self.DamageFallOff = .85
+if self.ActiveAttachments.bg_regularbarrel then
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
+end
+if self.ActiveAttachments.bg_longbarrelmr96 then
+	self.EffectiveRange = ((self.EffectiveRange + 15 * 39.37))
+end
 if self.ActiveAttachments.am_reducedpowderload then
 	self.EffectiveRange = ((self.EffectiveRange * 0.85))
-end	
+end
 if self.ActiveAttachments.am_matchgrade then
 	self.DamageFallOff = ((self.DamageFallOff * 0.5))
 end

@@ -13,7 +13,7 @@ MaxSpreadIncMult = -0.99}
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "Lethal and accurate at the cost of fire rate;", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "reliable assault rifle capable of handling all types of combat scenarios", c = CustomizableWeaponry.textColors.POSITIVE}}
+	[2] = {t = "Reliable assault rifle capable of handling all types of combat scenarios", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

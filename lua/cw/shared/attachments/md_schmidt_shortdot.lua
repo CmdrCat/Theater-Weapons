@@ -1,7 +1,7 @@
 local att = {}
 att.name = "md_schmidt_shortdot"
-att.displayName = "Schmidt&Bender Short dot"
-att.displayNameShort = "Short dot"
+att.displayName = "Schmidt & Bender ShortDot"
+att.displayNameShort = "ShortDot"
 att.aimPos = {"ShortDotPos", "ShortDotAng"}
 att.FOVModifier = 15
 att.isSight = true

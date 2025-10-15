@@ -1,11 +1,12 @@
 local att = {}
 att.name = "doi_atow_no32"
 att.displayNameShort = "N.32 3.5x"
-att.displayName = "No.32"
+att.displayName = "No.32 3.5x"
 att.aimPos = {"No32Pos", "No32Ang"}
 att.AimViewModelFOV = 25
 att.isSight = true
 att.withoutRail = true
+att.SpeedDec = 2
 
 att.statModifiers = {
 }

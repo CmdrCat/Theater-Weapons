@@ -289,7 +289,7 @@ end
 end
 	
 	if self.ActiveAttachments.doi_atow_c96longbarrel then
-	self.EffectiveRange = ((self.EffectiveRange + 7.5 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .13))
 end
 end

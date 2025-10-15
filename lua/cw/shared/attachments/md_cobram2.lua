@@ -3,7 +3,6 @@ att.name = "md_cobram2"
 att.displayName = "Cobra M2"
 att.displayNameShort = "M2"
 att.isSuppressor = true
-att.SpeedDec = 1
 
 att.statModifiers = {RecoilMult = -0.1}
 

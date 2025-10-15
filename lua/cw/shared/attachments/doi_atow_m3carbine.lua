@@ -3,10 +3,14 @@ att.name = "doi_atow_m3carbine"
 att.displayName = "Extended Barrel"
 att.displayNameShort = "Ext."
 att.isBG = true
+att.SpeedDec = 10
+
+att.statModifiers = {RecoilMult = -0.10,
+DrawSpeedMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/m3barrel")
-	att.description = {[1] = {t = "Increases effective range by 10M.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Increases effective range by 10M", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

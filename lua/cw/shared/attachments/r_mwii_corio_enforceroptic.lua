@@ -1,7 +1,7 @@
 local att = {}
 att.name = "corioenforcer"
-att.displayName = "CORIO Enforcer Optic"
-att.displayNameShort = "ENFORCER"
+att.displayName = "Corio Enforcer Optic"
+att.displayNameShort = "Enforcer"
 att.aimPos = {"ENFORPos", "ENFORAng"}
 att.FOVModifier = 5
 att.isSight = true

@@ -1,10 +1,11 @@
 local att = {}
 att.name = "cronenzerop"
-att.displayName = "CRONEN Zero P 4x"
-att.displayNameShort = "ZERO. 4X"
+att.displayName = "Cronen Zero-P 4x"
+att.displayNameShort = "Zero 4x"
 att.aimPos = {"ZEROPos", "ZEROAng"}
 att.FOVModifier = 5
 att.isSight = true
+att.SpeedDec = 2
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_cronenzerop")

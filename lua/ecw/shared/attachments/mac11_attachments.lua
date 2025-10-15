@@ -4,16 +4,16 @@ AddCSLuaFile()
 
 local att = {}
 att.name = "bg_mac11_extended_barrel"
-att.displayName = "Extended barrel"
+att.displayName = "Extended Barrel"
 att.displayNameShort = "Ext"
 att.isBG = true
+att.SpeedDec = 5
 
-att.statModifiers = {AimSpreadMult = -0.15,
-	DamageMult = 0.1}
+att.statModifiers = {AimSpreadMult = -0.15}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/mac11_ext_barrel")
-	att.description = {[1] = {t = "An extended barrel.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "An extended barrel", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()
@@ -30,7 +30,7 @@ CustomizableWeaponry:registerAttachment(att)
 
 local att = {}
 att.name = "bg_mac11_unfolded_stock"
-att.displayName = "Unfolded stock"
+att.displayName = "Unfolded Stock"
 att.displayNameShort = "Unfold"
 att.isBG = true
 

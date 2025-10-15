@@ -2,6 +2,7 @@ local att = {}
 att.name = "md_uecw_cmag"
 att.displayName = "Beta C-Magazine"
 att.displayNameShort = "CMAG"
+att.SpeedDec = 50
 
 att.statModifiers = {
 	ReloadSpeedMult = -0.3,

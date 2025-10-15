@@ -1,10 +1,11 @@
 local att = {}
 att.name = "md_uecw_csgo_556"
-att.displayName = "Sig 556 Sight"
+att.displayName = "SIG556 ACOG"
 att.displayNameShort = "556"
 att.aimPos = {"CSGO556Pos", "CSGO556Ang"}
 att.FOVModifier = 15
 att.isSight = true
+att.SpeedDec = 2
 
 att.statModifiers = {}
 

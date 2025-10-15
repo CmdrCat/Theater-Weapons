@@ -4,9 +4,8 @@ att.displayName = "Flash Cone"
 att.displayNameShort = "Cone"
 att.isBG = true
 
-att.statModifiers = {RecoilMult = -0.05,
-HipSpreadMult = 0.1,
-AimSpreadMult = 0.1}
+att.statModifiers = {RecoilMult = -0.15,
+HipSpreadMult = 0.1,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/m3flash")

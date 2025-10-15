@@ -156,7 +156,7 @@ SWEP.GlobalDelayOnShoot = 1.6
 SWEP.Trivia = {text = "An accurate sniper rifle designed for magnum rifle rounds. The original design was made in a shed. With a box of scraps!", x = -100, y = -450}
 
 SWEP.Attachments = {
-	{header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan",  "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
+	{header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
 	{header = "Muzzle", offset = {100, -350}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
 	{header = "Handguard", offset = {-500, -500}, atts = {"md_bipod"}},
 	{header = "Laser", offset = {-500, 100}, atts = {"md_anpeq15"}},

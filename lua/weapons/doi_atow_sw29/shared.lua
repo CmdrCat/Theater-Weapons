@@ -203,11 +203,11 @@ self.Owner.ViewAff = 0
 	self.DamageFallOff = .85
 	
 	if self.ActiveAttachments.doi_atow_29ext then
-		self.EffectiveRange = ((self.EffectiveRange + 2.5 * 39.37))
+		self.EffectiveRange = ((self.EffectiveRange + 10 * 39.37))
 		self.DamageFallOff = ((self.DamageFallOff - .05))
 	end
 	if self.ActiveAttachments.doi_atow_29short then
-		self.EffectiveRange = ((self.EffectiveRange - 2.5 * 39.37))
+		self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
 		self.DamageFallOff = ((self.DamageFallOff + .075))
 	end
 	if self.ActiveAttachments.am_magnum then

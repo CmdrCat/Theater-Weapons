@@ -6,6 +6,7 @@ att.aimPos = {"ZFG42Pos", "ZFG42Ang"}
 att.FOVModifier = 15 
 att.isSight = true
 att.withoutRail = true
+att.SpeedDec = 2
 
 att.statModifiers = {
 }

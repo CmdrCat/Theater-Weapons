@@ -1,7 +1,8 @@
 local att = {}
 att.name = "md_uecw_60rnd"
-att.displayName = "Surefire 60 Round Magazine"
+att.displayName = "Surefire 60-Round Magazine"
 att.displayNameShort = "Surefire"
+att.SpeedDec = 15
 
 att.statModifiers = {ReloadSpeedMult = -0.15}
 

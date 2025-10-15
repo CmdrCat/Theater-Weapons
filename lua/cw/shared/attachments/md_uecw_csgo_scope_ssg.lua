@@ -1,10 +1,11 @@
 local att = {}
 att.name = "md_uecw_csgo_scope_ssg"
-att.displayName = "Schmidt Bender 12x Scope"
+att.displayName = "Schmidt & Bender 12x Scope"
 att.displayNameShort = "Bender"
 att.aimPos = {"CSGOSSGPos", "CSGOSSGAng"}
 att.FOVModifier = 15
 att.isSight = true
+att.SpeedDec = 5
 
 att.statModifiers = {}
 

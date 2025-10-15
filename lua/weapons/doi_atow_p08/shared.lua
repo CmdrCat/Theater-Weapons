@@ -206,7 +206,7 @@ self.Owner.ViewAff = 0
 	end
 	
 	if self.ActiveAttachments.doi_atow_lugerlongbarrel then
-	self.EffectiveRange = ((self.EffectiveRange + 2 * 39.37))
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .03))
 end
 end

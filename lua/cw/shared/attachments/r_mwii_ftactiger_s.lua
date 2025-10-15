@@ -1,16 +1,14 @@
 local att = {}
 att.name = "ftactiger_s"
-att.displayName = "FTAC TIGER"
-att.displayNameShort = "TIGER"
+att.displayName = "FTac Tiger Grip"
+att.displayNameShort = "Tiger"
 
 att.statModifiers = {
     ReloadSpeedMult = 0.15,
     DrawSpeedMult = 0.10,
     SpreadPerShotMult = -0.15,
-    
+    VelocitySensitivityMult = -0.9,
     RecoilMult = -0.07}  
-
-
 
 --balance this
 

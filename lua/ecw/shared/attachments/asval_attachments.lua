@@ -128,13 +128,13 @@ CustomizableWeaponry:registerAttachment(att)
 
 local att = {}
 att.name = "bg_vss_foldable_stock"
-att.displayName = "Foldable stock"
+att.displayName = "Foldable Stock"
 att.displayNameShort = "Fold"
 att.isBG = true
 att.SpeedDec = -3
 
 att.statModifiers = {DrawSpeedMult = 0.2,
-RecoilMult = 0.1}
+RecoilMult = 3}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/asval_foldable_stock")

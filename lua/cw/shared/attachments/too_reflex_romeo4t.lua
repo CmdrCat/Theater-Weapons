@@ -1,6 +1,6 @@
 local att = {}
 att.name = "too_reflex_romeo4t"
-att.displayName = "SiG Romeo 4T"
+att.displayName = "SIG Romeo 4T"
 att.displayNameShort = "Romeo 4"
 att.aimPos = {"ROMEO4TPos", "ROMEO4TAng"}
 att.FOVModifier = 5

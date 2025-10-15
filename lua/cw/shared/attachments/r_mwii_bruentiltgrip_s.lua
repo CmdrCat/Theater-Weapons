@@ -1,12 +1,11 @@
 local att = {}
 att.name = "bruentiltgrip_s"
-att.displayName = "BRUEN TILT GRIP"
-att.displayNameShort = "TILT"
+att.displayName = "Bruen Tilt Grip"
+att.displayNameShort = "Tilt"
 
 att.statModifiers = {VelocitySensitivityMult = -0.1,
-DrawSpeedMult = -0.1,
 SpreadPerShotMult = -0.1,
-RecoilMult = -0.05} 
+RecoilMult = -0.15} 
 
 --balance this
 

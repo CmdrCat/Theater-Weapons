@@ -133,18 +133,16 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingIntensity = .75
 
 if CustomizableWeaponry_atowins2_optics then
-SWEP.Attachments = {[4] = {header = "Accessory", offset = {-350, 160}, atts = {"doi_atow_sling"}},
-[5] = {header = "Finish", offset = {900, -50}, atts = {"doi_atow_normandycamo"}},
+SWEP.Attachments = {[3] = {header = "Accessory", offset = {-350, 160}, atts = {"doi_atow_sling"}},
+[4] = {header = "Finish", offset = {900, -50}, atts = {"doi_atow_normandycamo"}},
 [1] = {header = "Optic", offset = {450, -450}, atts = {"md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","doi_atow_zf4","md_ins2po424p","md_ins2wsacog"}},
 [2] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_unisuppressor"}},
-[3] = {header = "Fire Control", offset = {50, -300}, atts = {"doi_atow_burstconv"}},
 ["+reload"] = {header = "Ammo", offset = {150, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 else
-SWEP.Attachments = {[4] = {header = "Accessory", offset = {-350, 160}, atts = {"doi_atow_sling"}},
-[5] = {header = "Finish", offset = {700, -400}, atts = {"doi_atow_normandycamo"}},
+SWEP.Attachments = {[3] = {header = "Accessory", offset = {-350, 160}, atts = {"doi_atow_sling"}},
+[4] = {header = "Finish", offset = {700, -400}, atts = {"doi_atow_normandycamo"}},
 [1] = {header = "Optic", offset = {900, -50}, atts = {"doi_atow_zf4"}},
 [2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor"}},
-[3] = {header = "Fire Control", offset = {150, -350}, atts = {"doi_atow_burstconv"}},
 ["+reload"] = {header = "Ammo", offset = {150, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 end
 

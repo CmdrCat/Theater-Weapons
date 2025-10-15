@@ -1,6 +1,6 @@
 local att = {}
 att.name = "cw_mac11_380_conversion"
-att.displayName = ".380 ACP Conversion"
+att.displayName = ".380 ACP Receiver"
 att.displayNameShort = ".380 ACP"
 
 att.statModifiers = {FireDelayMult = -13 / 25,

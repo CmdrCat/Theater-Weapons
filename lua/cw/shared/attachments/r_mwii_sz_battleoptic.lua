@@ -1,7 +1,7 @@
 local att = {}
 att.name = "szbattleoptic"
 att.displayName = "SZ Battle Optic"
-att.displayNameShort = "BATTLE"
+att.displayNameShort = "Battle"
 att.aimPos = {"BATPos", "BATAng"}
 att.FOVModifier = 5
 att.isSight = true

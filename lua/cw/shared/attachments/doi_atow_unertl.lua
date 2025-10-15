@@ -7,6 +7,7 @@ att.FOVModifier = 20
 att.AimViewModelFOV = 25
 att.isSight = true
 att.withoutRail = true
+att.SpeedDec = 3
 
 att.statModifiers = {}
 

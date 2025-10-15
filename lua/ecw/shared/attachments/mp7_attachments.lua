@@ -9,7 +9,7 @@ att.displayNameShort = "Unsup"
 att.isBG = true
 
 att.statModifiers = {
-	RecoilMult = 0.15
+	RecoilMult = 0.10
 }
 
 if CLIENT then
