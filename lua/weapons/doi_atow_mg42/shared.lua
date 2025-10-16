@@ -113,7 +113,7 @@ SWEP.Animations = {fire = {"base_fire_1"},
 
 SWEP.SpeedDec = 95
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "rpg"
 SWEP.RunHoldType = "passive"
@@ -164,8 +164,8 @@ SWEP.BipodRecoilModifier = 0.3 --0.1 -- = 0 --.4
 
 SWEP.HipSpread = 0.14
 SWEP.AimSpread = 0.003
-SWEP.VelocitySensitivity = 1
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 1.5
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1

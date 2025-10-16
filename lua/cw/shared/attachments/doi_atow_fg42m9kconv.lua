@@ -8,7 +8,8 @@ FireDelayMult = -4 / 279,
 HipSpreadMult = -0.99,
 ReloadSpeedMult = 0.5288,
 RecoilMult = -0.45,
-MaxSpreadIncMult = -0.99}
+MaxSpreadIncMult = -0.99,
+VelocitySensitivityMult = -1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

@@ -4,7 +4,9 @@ att.displayName = "Select-Fire Battle Rifle Conversion"
 att.displayNameShort = "Auto"
 
 att.statModifiers = {FireDelayMult = -2 / 5,
-DamageMult = -5 / 11}
+DamageMult = -5 / 11,
+HipSpreadMult = -0.04,
+VelocitySensitivityMult = -0.25}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

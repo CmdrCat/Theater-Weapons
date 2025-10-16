@@ -140,7 +140,7 @@ SWEP.Sounds = {awm_reload = {[1] = {time = 0.5, sound = "CW_G2_OPEN"},
 
 SWEP.SpeedDec = 30
 
-SWEP.Slot = 3
+SWEP.Slot = 1
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
@@ -174,8 +174,8 @@ SWEP.Recoil = 2.6
 
 SWEP.HipSpread = 0.13
 SWEP.AimSpread = 0.003
-SWEP.VelocitySensitivity = 0
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 1.19
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1

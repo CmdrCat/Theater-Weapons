@@ -48,7 +48,7 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.AimBreathingEnabled = false
-	SWEP.CrosshairEnabled = false
+	SWEP.CrosshairEnabled = true
 	SWEP.AimViewModelFOV = 40
 	
 	SWEP.HipFireFOVIncrease = false
@@ -138,10 +138,10 @@ SWEP.FireDelay = 1.5
 SWEP.FireSound = "CW_L96_FIRE"
 SWEP.Recoil = 2.5
 
-SWEP.HipSpread = 0.13
+SWEP.HipSpread = 0.15
 SWEP.AimSpread = 0.003
-SWEP.VelocitySensitivity = 2.5
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 1.65
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1

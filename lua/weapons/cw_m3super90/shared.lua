@@ -145,10 +145,10 @@ SWEP.FireSound = "CW_M3SUPER90_FIRE"
 SWEP.FireSoundSuppressed = "CW_M3SUPER90_FIRE_SUPPRESSED"
 SWEP.Recoil = 3
 
-SWEP.HipSpread = 0.05
+SWEP.HipSpread = 0.045
 SWEP.AimSpread = 0.005
-SWEP.VelocitySensitivity = 1.9
-SWEP.MaxSpreadInc = 0.06
+SWEP.VelocitySensitivity = 0.75
+SWEP.MaxSpreadInc = 0.1
 SWEP.ClumpSpread = 0.013
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.8

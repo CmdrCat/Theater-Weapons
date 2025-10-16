@@ -152,7 +152,7 @@ end
 SWEP.SightBGs = {sightup = "", sightdown = ""}
 SWEP.LuaViewmodelRecoil = false
 SWEP.ADSFireAnim = true
-SWEP.ForceBackToHipAfterAimedShot = true
+SWEP.ForceBackToHipAfterAimedShot = false
 SWEP.GlobalDelayOnShoot = 2.5
 SWEP.GlobalDelayOnShootFast = 1.5
 SWEP.BipodFireAnim = true
@@ -234,10 +234,10 @@ SWEP.FireSound = "CW_M98_FIRE"
 SWEP.FireSoundSuppressed = "CW_M98_FIRE_SUPPRESSED"
 SWEP.Recoil = 3.2
 
-SWEP.HipSpread = 0.13
+SWEP.HipSpread = 0.15
 SWEP.AimSpread = 0.003
-SWEP.VelocitySensitivity = 1.8
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 1.65
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1

@@ -22,7 +22,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 45 * 39.37
+	SWEP.EffectiveRange_Orig = 40 * 39.37
 	SWEP.DamageFallOff_Orig = .5
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
@@ -95,7 +95,7 @@ SWEP.BarrelBGs = {main = 2, smg = 0, carbine = 1}
 SWEP.Attachments = {[2] = {header = "Barrel", offset = {-400, 50}, atts = {"doi_atow_m3carbine"}, exclusions = {doi_atow_m3a1suppressor = true}},
 [1] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_m3flashhider","doi_atow_m3a1suppressor"}},
 [5] = {header = "Accessory", offset = {600, -300}, atts = {"doi_atow_sling"}},
-[3] = {header = "Fire Control", offset = {-200, 450}, atts = {"doi_atow_heavybolt"}},
+[3] = {header = "Receiver", offset = {-200, 450}, atts = {"doi_atow_m3pam1conv", "doi_atow_heavybolt"}},
 [4] = {header = "Body", offset = {1200, 0}, atts = {"doi_atow_m3stock"}},
 ["+reload"] = {header = "Ammo", offset = {450, 270}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -163,8 +163,8 @@ SWEP.Recoil = 1
 
 SWEP.HipSpread = 0.04
 SWEP.AimSpread = 0.005
-SWEP.VelocitySensitivity = .35
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = .3
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
@@ -189,7 +189,7 @@ if self.FireMode == "semi" then
 	self.Owner.ViewAff = 0
 	end
 
-	self.EffectiveRange = 45 * 39.37
+	self.EffectiveRange = 40 * 39.37
 	self.DamageFallOff = .5
 	
 	if self.ActiveAttachments.am_magnum then

@@ -6,7 +6,8 @@ att.displayNameShort = "MRAD"
 att.statModifiers = {DamageMult = -3 / 37,
 	FireDelayMult = -2 / 5,
 	RecoilMult = -0.25,
-	HipSpreadMult = -0.9}
+	HipSpreadMult = -0.135,
+	VelocitySensitivityMult = -0.28}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

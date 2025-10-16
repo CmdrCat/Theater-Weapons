@@ -136,10 +136,10 @@ SWEP.FireSound = "CW_SERBU_SHORTY_FIRE"
 SWEP.Recoil = 2
 SWEP.FireAnimSpeed = 1.65 * 1.3
 
-SWEP.HipSpread = 0.04
+SWEP.HipSpread = 0.07
 SWEP.AimSpread = 0.01
-SWEP.VelocitySensitivity = 1.4
-SWEP.MaxSpreadInc = 0.02
+SWEP.VelocitySensitivity = 0.15
+SWEP.MaxSpreadInc = 0.1
 SWEP.ClumpSpread = 0.02
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.85

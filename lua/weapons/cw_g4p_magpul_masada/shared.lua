@@ -18,7 +18,7 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 50 * 39.37
 	SWEP.DamageFallOff_Orig = .3
 
-	SWEP.MuzzleEffect = "muzzleflash_ak74"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
 	SWEP.SnapToGrip = true
 	SWEP.ShellScale = 0.7
@@ -187,7 +187,7 @@ SWEP.Sounds = {reload = {[1] = {time = 0.9, sound = "CW_MAGPUL_MASADA_MAGOUT"},
 
 SWEP.SpeedDec = 30
 
-SWEP.Slot = 3
+SWEP.Slot = 2
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
@@ -220,8 +220,8 @@ SWEP.Recoil = 0.9
 
 SWEP.HipSpread = 0.12
 SWEP.AimSpread = 0.003
-SWEP.VelocitySensitivity = 1.8
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 0.6
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1

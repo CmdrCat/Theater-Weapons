@@ -196,8 +196,8 @@ SWEP.Recoil = 1.7
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.005
-SWEP.VelocitySensitivity = 0.5
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 0.45
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1

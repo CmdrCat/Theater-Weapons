@@ -167,8 +167,8 @@ SWEP.Recoil = 2
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.01
-SWEP.VelocitySensitivity = 0
-SWEP.MaxSpreadInc = 0.055
+SWEP.VelocitySensitivity = 0.45
+SWEP.MaxSpreadInc = 0.1
 SWEP.ClumpSpread_Orig = nil
 SWEP.ClumpSpread = nil
 SWEP.SpreadPerShot = 0.04

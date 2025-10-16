@@ -116,7 +116,7 @@ if CLIENT then
 	SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
 	SWEP.ElcanAxisAlign = {right = 0, up = 0, forward = 0}
 	
-    SWEP.CrosshairEnabled 	= false
+    SWEP.CrosshairEnabled 	= true
 	
 	SWEP.AimBreathingEnabled = false
 --	SWEP.AimViewModelFOV = 70
@@ -305,10 +305,10 @@ SWEP.Recoil = 4
 SWEP.CanPenetrate = true
 SWEP.PenMod = 4
 
-SWEP.HipSpread = 0.13
+SWEP.HipSpread = 0.15
 SWEP.AimSpread = 0.003
-SWEP.VelocitySensitivity = 3.3
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 1.65
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1

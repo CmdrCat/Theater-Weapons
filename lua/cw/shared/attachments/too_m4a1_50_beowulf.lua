@@ -5,8 +5,8 @@ att.displayNameShort = ".50 Beowulf"
 
 att.statModifiers = {FireDelayMult = 7 / 9,
 DamageMult = 16 / 15,
-RecoilMult = 5,
-HipSpreadMult = 1}
+RecoilMult = 3.5,
+HipSpreadMult = 0.25}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
@@ -15,7 +15,6 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	self.Primary.ClipSize = 10
 	self.Primary.ClipSize_Orig = 10
 end

@@ -77,7 +77,7 @@ if CLIENT then
 
 	
 	SWEP.AimBreathingEnabled = false
-	SWEP.CrosshairEnabled = false
+	SWEP.CrosshairEnabled = true
 --	SWEP.AimViewModelFOV = 60
 	SWEP.HipFireFOVIncrease = false
 
@@ -212,10 +212,10 @@ SWEP.FireSound = "CW_TOO_M40_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_M40_FIRESUPPRESSED"
 SWEP.Recoil = 2.5
 
-SWEP.HipSpread = 0.13
+SWEP.HipSpread = 0.15
 SWEP.AimSpread = 0.003
-SWEP.VelocitySensitivity = 0
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 1.65
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1

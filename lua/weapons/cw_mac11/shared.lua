@@ -121,7 +121,7 @@ SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 
 SWEP.SpeedDec = 10
 
-SWEP.Slot = 3
+SWEP.Slot = 2
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "revolver"
 SWEP.RunHoldType = "normal"
@@ -157,8 +157,8 @@ SWEP.RecoilToSpread = 1.6 -- should actually be called SpreadToRecoil, but whate
 
 SWEP.HipSpread = 0.01
 SWEP.AimSpread = 0.005
-SWEP.VelocitySensitivity = 0.5
-SWEP.MaxSpreadInc = 0.045
+SWEP.VelocitySensitivity = 0.15
+SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
