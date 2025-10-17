@@ -70,8 +70,14 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
 	SWEP.BackupSights = {
-	["md_elcan"] = {[1] = Vector(-1.795,-4.5,-1.52), [2] = Vector(0, -0.101, 0)},
-	["md_acog_fixed"] = {[1] = Vector(-1.787,-4.5,-1.601), [2] = Vector(0, 0, 0)}
+	["md_microt1"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_cmore"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_trijicon"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_reflex"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_elcan"] = {[1] = Vector(-1.798,0,-1.515), [2] = Vector(-0.1, -0.101, 0)},
+	["md_acog_fixed"] = {[1] = Vector(-1.787,0,-1.601), [2] = Vector(-0.05, 0, 0)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}

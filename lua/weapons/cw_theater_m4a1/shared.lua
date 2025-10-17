@@ -67,7 +67,16 @@ if CLIENT then
 	SWEP.ForegripOverridePos = {
 	}
 	
-
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_mrs"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_romeo4t"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_exps"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-2.98, 0, -0.95), [2] = Vector(-0.01, 0, 0)},
+	["md_nightforce_nxs"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)}
+	}
 	
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "weapon", rel = "", pos = Vector(-0.324, 3.194, -6.04), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

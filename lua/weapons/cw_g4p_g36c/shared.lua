@@ -84,8 +84,14 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.BackupSights = {
-	["md_elcan"] = {[1] = Vector(4.065, -6.80, -0.5), [2] = Vector(0.2, 0.2, 0)},
-	["md_acog_"] = {[1] = Vector(4.074, -6.80, -0.42), [2] = Vector(0, 0, 0)}
+	["md_microt1"] = {[1] = Vector(6, 5, 2), [2] = Vector(0,0,30)},
+	["md_cmore"] = {[1] = Vector(6, 5, 2), [2] = Vector(0,0,30)},
+	["md_trijicon"] = {[1] = Vector(6, 5, 2), [2] = Vector(0,0,30)},
+	["md_reflex"] = {[1] = Vector(6, 5, 2), [2] = Vector(0,0,30)},
+	["md_aimpoint"] = {[1] = Vector(6, 5, 2), [2] = Vector(0,0,30)},
+	["md_elcan"] = {[1] = Vector(4.065, 0, -0.495), [2] = Vector(-0.1, 0.2, 0)},
+	["md_acog_fixed"] = {[1] = Vector(4.074, 0, -0.43), [2] = Vector(0, 0, 0)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(6, 5, 2), [2] = Vector(0,0,30)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
@@ -201,7 +207,7 @@ SWEP.FireSound = "CW_G36C_FIRE"
 SWEP.FireSoundSuppressed = "CW_G36C_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.95
 
-SWEP.HipSpread = 0.1
+SWEP.HipSpread = 0.075
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 0.45
 SWEP.MaxSpreadInc = 0.1

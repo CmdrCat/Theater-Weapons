@@ -35,8 +35,8 @@ if CLIENT then
 --	SWEP.CustomizePos = Vector(-13.507, -6.981, 1.175)
 --	SWEP.CustomizeAng = Vector(27.256, -50.713, -29.239)
 	
-	SWEP.IronsightPos = Vector(0, 0, 0)
-	SWEP.IronsightAng = Vector(0, 0, 0)
+	SWEP.IronsightPos = Vector(-3, 5, -0.04)
+	SWEP.IronsightAng = Vector(0,0,-30)
 	
 	SWEP.FoldSightPos = Vector(-2.208, -4.3, 0.143)
 	SWEP.FoldSightAng = Vector(0.605, 0, -0.217)
@@ -81,8 +81,15 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.BackupSights = {
-	["md_elcan"] = {[1] = Vector(-1.62, -2.8, -0.89), [2] = Vector(0, 0, 0)},
-	["md_acog"] = {[1] = Vector(-1.635, -2.8, -1.5), [2] = Vector(0, 0, 0)}
+	["md_microt1"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
+	["md_cmore"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
+	["md_trijicon"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
+	["md_reflex"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
+	["md_elcan"] = {[1] = Vector(-1.63, 0, -0.903), [2] = Vector(-0.1, -0.2, 0)},
+	["md_acog"] = {[1] = Vector(-1.635, 5, -1.5), [2] = Vector(-0.05, 0.01, 0)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
+	["md_uecw_csgo_556"] = {[1] = Vector(-1.667, 0, -0.88), [2] = Vector(0.75, 0, 0)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
@@ -147,7 +154,7 @@ SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law
 SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -350},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-450, -200}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Laser", offset = {-450, 250}, atts = {"md_anpeq15"}},
-	[4] = {header = "Conversion", offset = {400, 200}, atts = {"uecw_acr_68_conversion"}},
+	[4] = {header = "Conversion", offset = {350, 275}, atts = {"uecw_acr_68_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
@@ -195,7 +202,7 @@ SWEP.FireSound = "CW_MASADA_FIRE"
 SWEP.FireSoundSuppressed = "CW_MASADA_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.9
 
-SWEP.HipSpread = 0.12
+SWEP.HipSpread = 0.1
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 0.6
 SWEP.MaxSpreadInc = 0.1

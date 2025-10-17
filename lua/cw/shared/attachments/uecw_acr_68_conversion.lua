@@ -10,7 +10,9 @@ att.statModifiers = {DamageMult = 28 / 39,
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Installs a 6.8mm Remington SPC conversion kit. Fire more lethal shots in semi-automatic mode.", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+	att.description = {[1] = {t = "Installs a 6.8mm Remington SPC conversion kit. Fire more lethal shots in semi-automatic mode.", c = CustomizableWeaponry.textColors.VPOSITIVE},
+					   [2] = {t = "Increases effective range by 15 M", c = CustomizableWeaponry.textColors.POSITIVE},
+					   [3] = {t = "Decreases damage fall off by 10%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

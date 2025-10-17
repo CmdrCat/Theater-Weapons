@@ -97,12 +97,10 @@ SWEP.CrosshairParts = {left = true, right = true, upper = false, lower = true}
 if CustomizableWeaponry_atowins2_optics then
 SWEP.Attachments = {[1] = {header = "Accessory", offset = {150, -250}, atts = {"doi_atow_sling"}},
 [2] = {header = "Muzzle", offset = {500, -220}, atts = {"doi_atow_unisuppressor"}, dependencies = {["am_slugroundsm37"] = true}},
-[3] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt"}},
-["+reload"] = {header = "Ammo", offset = {450, 160}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
+["+reload"] = {header = "Ammo", offset = {600, 175}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
 else
 SWEP.Attachments = {[1] = {header = "Accessory", offset = {150, -250}, atts = {"doi_atow_sling"}},
-[2] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt"}},
-["+reload"] = {header = "Ammo", offset = {450, 160}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
+["+reload"] = {header = "Ammo", offset = {600, 175}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
 end
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},

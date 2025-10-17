@@ -1,10 +1,10 @@
 local att = {}
 att.name = "doi_atow_m2carbineconv"
-att.displayName = "Select-fire receiver"
+att.displayName = "Select-Fire Receiver"
 att.displayNameShort = "Auto"
 
 att.statModifiers = {FireDelayMult = -1 / 15,
-HipSpreadMult = 4}
+HipSpreadMult = 0.2}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

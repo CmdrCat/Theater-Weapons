@@ -1,14 +1,14 @@
 local att = {}
 att.name = "am_slugroundsm37"
-att.displayName = "Rifled"
-att.displayNameShort = "RFL"
+att.displayName = "Rifled Slugs"
+att.displayNameShort = "Slugs"
 
 att.statModifiers = {DamageMult = 4,
 	RecoilMult = .25,
 	AimSpreadMult = -.55}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/rifleslug")
+	att.displayIcon = surface.GetTextureID("atts/slugrounds")
 	att.description = {{t = "Lead slug designed for long range accuracy", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 

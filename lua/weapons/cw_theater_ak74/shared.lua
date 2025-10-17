@@ -56,6 +56,17 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 40 * 39.37
 	SWEP.DamageFallOff_Orig = .5
 
+	SWEP.BackupSights = {
+	["md_kobra"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_mrs"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_romeo4t"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_exps"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_pso1"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-3.48, 0, -1.605), [2] = Vector(0, 0, 0)}
+	}
+
 	SWEP.AttachmentModelsVM = {
 	    ["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0.079, -3.264, 0.981), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -3.165, 2), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

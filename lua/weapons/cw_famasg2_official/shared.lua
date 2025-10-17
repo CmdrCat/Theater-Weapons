@@ -30,7 +30,10 @@ if CLIENT then
 	SWEP.SprintPos = Vector(1.786, 0, -2)
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
 	
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.796, -3, -2.717), [2] = Vector(0.46, -0.887, 2.65)}}
+	SWEP.BackupSights = {["md_microt1"] = {[1] = Vector(-4, 5, 0), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-4, 5, 0), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-4, 5, 0), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-2.85, 0, -2.717), [2] = Vector(0.3, -0.93, 2.65)}}
 	
 	SWEP.AlternativePos = Vector(-0.8, 0, -0.8)
 	SWEP.AlternativeAng = Vector(0, 0, 0)

@@ -81,7 +81,7 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(8, -2, .5)
 	SWEP.CustomizeAng = Vector(10, 40, 18)
 	
-	SWEP.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.4768, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
+	SWEP.BackupSights = {["doi_atow_altsight"] = {[1] = Vector(-5, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
 	["md_ins2elcan"] = {[1] = Vector(-2.472, -7, -1.436), [2] = Vector(-0.4, 0, 0)}}
 	
 	SWEP.MoveType = 1
@@ -136,14 +136,14 @@ if CustomizableWeaponry_atowins2_optics then
 	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_altsight", "md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
 	[3] = {header = "Conversion", offset = {250, -425}, atts = {"doi_atow_m2carbineconv"}},
 	[4] = {header = "Magazine", offset = {600, 300}, atts = {"doi_atow_m1carbine30rnd"}},
-	[5] = {header = "Accessory", offset = {700, -300}, atts = {"doi_atow_sling"}},
+	[5] = {header = "Accessory", offset = {900, -300}, atts = {"doi_atow_sling"}},
 	[2] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-600, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	else
 	SWEP.Attachments = {[1] = {header = "Sight", offset = {1100, 125}, atts = {"doi_atow_altsight"}},
 	[3] = {header = "Conversion", offset = {250, -425}, atts = {"doi_atow_m2carbineconv"}},
 	[4] = {header = "Magazine", offset = {600, 300}, atts = {"doi_atow_m1carbine30rnd"}},
-	[5] = {header = "Accessory", offset = {700, -300}, atts = {"doi_atow_sling"}},
+	[5] = {header = "Accessory", offset = {900, -300}, atts = {"doi_atow_sling"}},
 	[2] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-600, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	end

@@ -85,8 +85,7 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
-SWEP.Attachments = {[1] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt"}},
-["+reload"] = {header = "Ammo", offset = {250, 175}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
+SWEP.Attachments = {["+reload"] = {header = "Ammo", offset = {650, 200}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
 	fire_aim = {"iron_fire_1","iron_fire_2"},

@@ -63,6 +63,10 @@ SWEP.DamageFallOff_Orig = .3
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .8
 	SWEP.CustomizationMenuScale = 0.025 --  0.0275
 	
+	SWEP.BackupSights = {
+	["doi_atow_zf4"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	}
+
 	SWEP.AttachmentModelsVM = {
 	["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/zf4scope.mdl", pos = Vector(-0.04, -4.2041, 5.525), angle = Angle(0, -90, 0), size = Vector(1.075, 1.075, 1.075), bone = "STG44"},
 		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-.375, 16.7, 3.275), angle = Angle(0, -90, 0), size = Vector(1.5, 1.3, 1.3), bone = "STG44"},

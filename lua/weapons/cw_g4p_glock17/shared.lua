@@ -51,7 +51,7 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-0.88, 1.325, -0.561)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.241, -4.728, -1.568), [2] = Vector(0, 0, 0)}}
+	SWEP.BackupSights = {["md_docter"] = {[1] = Vector(4.25, 5, -2.1), [2] = Vector(5, 0, 30)}}
 	
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 0.8

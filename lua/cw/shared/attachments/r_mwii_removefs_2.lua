@@ -1,6 +1,6 @@
 local att = {}
 att.name = "nofs2"
-att.displayName = "NO FRONT SIGHTS"
+att.displayName = "Remove Front Sights"
 att.displayNameShort = "NO FS"
 att.isBG = true
 
@@ -8,7 +8,7 @@ att.isBG = true
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_removefs")
-	att.description = {[1] = {t = "Remove those frontsights.", c = CustomizableWeaponry.textColors.REGULAR}}
+	att.description = {[1] = {t = "Remove those front sights", c = CustomizableWeaponry.textColors.COSMETIC}}
 end
 
 function att:attachFunc()

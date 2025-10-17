@@ -7,7 +7,7 @@ att.SpeedDec = 75
 
 att.statModifiers = {DrawSpeedMult = -0.1,
 ReloadSpeedMult = -0.1,
-VelocitySensitivityMult = 100}
+VelocitySensitivityMult = 7}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/thom50rnd")

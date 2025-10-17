@@ -23,11 +23,13 @@ if CLIENT then
 	SWEP.IronsightPos = Vector(-2.007, 8, 0.293)
 	SWEP.IronsightAng = Vector(0.381, 0, 0)
 
-	SWEP.SprintPos = Vector(2.526, -9.506, -8.24)
+	SWEP.SprintPos = Vector(2.526, -9.506, -7)
 	SWEP.SprintAng = Vector(70, 0, 0)
 	
-	SWEP.RMRPos = Vector(-2.004, -3.22, -0.238)
+	SWEP.RMRPos = Vector(-2.004, 5, -0.238)
 	SWEP.RMRAng = Vector(0, 0, 0)
+
+	SWEP.BackupSights = {["md_rmr"] = {[1] = Vector(-4, 6, -2), [2] = Vector(5, 0, -30)}}
 
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 0.8

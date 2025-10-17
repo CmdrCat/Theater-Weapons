@@ -38,7 +38,9 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.BackupSights = {
-		["md_acog"] = {Vector(-3.862, -8.995, -0.676), Vector(0, 0, 0)},
+		["md_aimpoint"] = {[1] = Vector(-6, 5, 1), [2] = Vector(0,0,-30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-6, 5, 1), [2] = Vector(0,0,-30)},
+		["md_acog"] = {Vector(-3.862, 0, -0.676), Vector(0, 0, 0)},
 	}
 
 	SWEP.ViewModelMovementScale = 1.15

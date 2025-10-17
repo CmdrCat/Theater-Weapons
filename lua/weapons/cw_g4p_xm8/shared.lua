@@ -77,8 +77,14 @@ if CLIENT then
 	SWEP.SprintAng = Vector(-8.2, -42.201, 0)
 	
 	SWEP.BackupSights = {
-	["md_elcan"] = {[1] = Vector(2.539, -3, -1.35), [2] = Vector(0, 0, 0)},
-	["md_acog_fixed"] = {[1] = Vector(2.56, -3, -1.275), [2] = Vector(0.2, 0, 0)}
+	["md_microt1"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_cmore"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_trijicon"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_reflex"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_aimpoint"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_elcan"] = {[1] = Vector(2.554, 0, -1.335), [2] = Vector(-0.1, 0, 0)},
+	["md_acog_fixed"] = {[1] = Vector(2.575, 0, -1.275), [2] = Vector(0.2, 0, 0)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)}
 	}
 
 	SWEP.SightWithRail = true
@@ -166,7 +172,7 @@ SWEP.Trivia = {text = "An advanced assault rifle platform meant to replace the U
 SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}},
 	[2] = {header = "Muzzle", offset = {-300, -500},  atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-300, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	[4] = {header = "Magazine", offset = {-300, 350},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_cmag", "md_uecw_60rnd"}},
+	[4] = {header = "Magazine", offset = {-300, 350},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag"}},
 	[5] = {header = "Conversion", offset = {650, 350}, atts = {"uecw_m8a1_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {1050, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	

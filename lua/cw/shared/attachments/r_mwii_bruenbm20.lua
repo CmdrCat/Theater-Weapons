@@ -1,7 +1,7 @@
 local att = {}
 att.name = "bruenbm20"
-att.displayName = "7' BRUEN B-M20"
-att.displayNameShort = "7' BRUEN"
+att.displayName = "7\" Bruen B-M20"
+att.displayNameShort = "7\" Bruen"
 att.isBG = true
 
 att.statModifiers = {
@@ -13,7 +13,7 @@ att.statModifiers = {
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_bruenbm20")
-	att.description = {[1] = {t = "Full on mobility handguard and barrel.", c = CustomizableWeaponry.textColors.REGULAR}}
+	att.description = {[1] = {t = "Handguard and barrel designed for full-on mobility", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 
 function att:attachFunc()

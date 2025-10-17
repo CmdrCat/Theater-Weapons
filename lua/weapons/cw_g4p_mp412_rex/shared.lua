@@ -33,7 +33,7 @@ if CLIENT then
 	SWEP.ELCANPos = Vector(-2.31, 5, -0.567)
 	SWEP.ELCANAng = Vector(0, 0.14, 0)
 	
-	SWEP.DocterPos = Vector(-2.31, -3, 0.16)
+	SWEP.DocterPos = Vector(-2.27, 5, 0.16)
 	SWEP.DocterAng = Vector(0, 0.3, 0)
 
 	SWEP.IronsightPos = Vector(-2.31, 5, 0.45)
@@ -53,9 +53,9 @@ if CLIENT then
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
 	
 	SWEP.BackupSights = {
-	["md_elcan"] = {[1] = Vector(-2.32, -3.053, -1.366), [2] = Vector(0.345, 0, 0)},
-	["md_acog_fixed"] = {[1] = Vector(-2.32, -3.053, -1.395), [2] = Vector(0, 0, 0)}
-	}
+	["md_elcan"] = {[1] = Vector(-2.32, 5, -1.365), [2] = Vector(0.15, 0, 0)},
+	["md_acog_fixed"] = {[1] = Vector(-2.305, 5, -1.395), [2] = Vector(-0.1, 0.13, 0)},
+	["md_docter"] = {[1] = Vector(-4.5, 6, -2), [2] = Vector(5, 0, -30)}}
 	
 	SWEP.ViewModelMovementScale = 0.8
 	SWEP.FullAimViewmodelRecoil = true

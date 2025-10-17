@@ -8,7 +8,7 @@ att.statModifiers = {ClumpSpreadMult = -0.2,
 	RecoilMult = -.25}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/num2buck")
+	att.displayIcon = surface.GetTextureID("atts/flechetterounds")
 	att.description = {{t = "Adds hit probability with 20 smaller pellets", c = CustomizableWeaponry.textColors.POSITIVE},
 	{t = "Decreases penetration by 25%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end

@@ -87,8 +87,14 @@ if CLIENT then
 
 	
 	SWEP.BackupSights = {
-	["md_elcan"] = {[1] = Vector(2.02, -3.28, -0.56), [2] = Vector(0, 0, 0)},
-	["md_acog_fixed"] = {[1] = Vector(2.005, -4.28, -0.65), [2] = Vector(0, 0, 0)}
+	["md_microt1"] = {[1] = Vector(4, 5, 1), [2] = Vector(0,0,30)},
+	["md_cmore"] = {[1] = Vector(4, 5, 1), [2] = Vector(0,0,30)},
+	["md_trijicon"] = {[1] = Vector(4, 5, 1), [2] = Vector(0,0,30)},
+	["md_reflex"] = {[1] = Vector(4, 5, 1), [2] = Vector(0,0,30)},
+	["md_aimpoint"] = {[1] = Vector(4, 5, 1), [2] = Vector(0,0,30)},
+	["md_elcan"] = {[1] = Vector(2.035, 0, -0.555), [2] = Vector(-0.05, 0.14, 0)},
+	["md_acog_fixed"] = {[1] = Vector(1.99, 0, -0.65), [2] = Vector(0, 0, 0)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(4, 5, 1), [2] = Vector(0,0,30)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
@@ -163,7 +169,7 @@ SWEP.Trivia = {text = "An iconic assault rifle that takes inspiration from other
 SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -400},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-400, 0}, atts = {"md_foregrip", "md_bipod"}},
-	[4] = {header = "Laser", offset = {250, 400}, atts = {"md_anpeq15"}},
+	[4] = {header = "Laser", offset = {0, 475}, atts = {"md_anpeq15"}},
 	[5] = {header = "Conversion", offset = {1000, 500}, atts = {"uecw_acr_68_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -218,7 +224,7 @@ SWEP.FireSound = "CW_MAGPUL_MASADA_FIRE"
 SWEP.FireSoundSuppressed = "CW_MAGPUL_MASADA_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.9
 
-SWEP.HipSpread = 0.12
+SWEP.HipSpread = 0.1
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 0.6
 SWEP.MaxSpreadInc = 0.1

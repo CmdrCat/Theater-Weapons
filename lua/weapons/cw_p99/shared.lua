@@ -29,6 +29,11 @@ if CLIENT then
 	SWEP.SprintPos = Vector(2.526, -9.506, -8.24)
 	SWEP.SprintAng = Vector(70, 0, 0)
 
+	SWEP.BackupSights = {
+	["md_elcan"] = {[1] = Vector(-2.32, 5, -1.365), [2] = Vector(0.15, 0, 0)},
+	["md_acog_fixed"] = {[1] = Vector(-2.305, 5, -1.395), [2] = Vector(-0.1, 0.13, 0)},
+	["md_microt1"] = {[1] = Vector(-4.5, 10, -2), [2] = Vector(5, 0, -30)}}
+
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 0.8
 	SWEP.FullAimViewmodelRecoil = false

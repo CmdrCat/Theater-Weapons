@@ -21,20 +21,19 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = 1}
 		
-	SWEP.MicroT1Pos = Vector(-2.632, 0, -0.44)
+	SWEP.MicroT1Pos = Vector(-2.632, 20, -0.44)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
 
-	SWEP.EXPSPos = Vector(-2.6, 0, -0.601)
+	SWEP.EXPSPos = Vector(-2.6, 15, -0.601)
 	SWEP.EXPSAng = Vector(0, 0, 0)
 
-
-	SWEP.ROMEO4TPos = Vector(-2.6, 0, -0.72)
+	SWEP.ROMEO4TPos = Vector(-2.6, 10, -0.72)
 	SWEP.ROMEO4TAng = Vector(0, 0, 0)
 
-	SWEP.IronsightPos = Vector(-2.613, 8.843, 0.519)
+	SWEP.IronsightPos = Vector(-2.613, 25, 0.519)
 	SWEP.IronsightAng = Vector(0.699, 0, 0)
 	
-	SWEP.ACOGPos = Vector(-2.631, 2, -0.64)
+	SWEP.ACOGPos = Vector(-2.631, 5, -0.64)
 	SWEP.ACOGAng = Vector(0, 0, 0)
 	
 	SWEP.SprintPos = Vector(0, 0, -2.639)
@@ -46,12 +45,19 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-0.88, 1.325, -0.561)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
-	SWEP.MRSPos = Vector(-2.6, 0, -0.64)
+	SWEP.MRSPos = Vector(-2.6, 10, -0.64)
     SWEP.MRSAng = Vector(0, 0, 0)
 
 	SWEP.EffectiveRange_Orig = 30 * 39.37
 	SWEP.DamageFallOff_Orig = .85
 	
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-5.5, 15, -3), [2] = Vector(5, 0, -30)},
+	["too_reflex_mrs"] = {[1] = Vector(-5.5, 7.5, -2.5), [2] = Vector(5, 0, -30)},
+	["too_reflex_romeo4t"] = {[1] = Vector(-5.5, 5, -2), [2] = Vector(5, 0, -30)},
+	["too_reflex_exps"] = {[1] = Vector(-5.5, 10, -2), [2] = Vector(5, 0, -30)},
+	["md_acog"] = {[1] = Vector(-2.65, 10, -1.74), [2] = Vector(-0.1, 0, 0)}}
+
 	SWEP.AttachmentModelsVM = {
 		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.839, 2.563), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }, 
 	["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.933, 1.935), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

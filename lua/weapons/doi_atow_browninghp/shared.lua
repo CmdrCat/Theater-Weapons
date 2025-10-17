@@ -60,6 +60,8 @@ if CLIENT then
 	SWEP.PronePos = Vector(0, -4, -2.5579)
 	SWEP.ProneAng = Vector(10, 12.7368, -8.9474)
 	
+	SWEP.BackupSights = {["doi_atow_altsight"] = {[1] = Vector(4.25, 5, -2.1), [2] = Vector(5, 0, 30)}}
+
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = true

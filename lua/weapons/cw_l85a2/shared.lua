@@ -53,7 +53,11 @@ if CLIENT then
 	SWEP.SprintPos = Vector(1.786, 0, -1)
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
 
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.199, -7.633, -0.973), [2] = Vector(0, 0, 0)}}
+	SWEP.BackupSights = {
+		["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_aimpoint"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_acog"] = {[1] = Vector(-2.199, 0, -0.973), [2] = Vector(0, 0, 0)}}
 
 	SWEP.SightWithRail = true
 	SWEP.ACOGAxisAlign = {right = 0.5, up = 0, forward = 0}
@@ -95,11 +99,11 @@ SWEP.AttachmentExclusions = {["am_magnum"] = {"cw_l85a1_conversion"},
 							 ["am_matchgrade"] = {"cw_l85a1_conversion"},
 							 ["am_atow_heavy"] = {"cw_l85a1_conversion"}}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -400},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-500, -300}, atts = {"md_saker"}},
 	[3] = {header = "Laser", offset = {-500, 200},  atts = {"md_anpeq15"}},
-	[4] = {header = "Conversion", offset = {700, 600},  atts = {"cw_l85a1_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {800, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	[4] = {header = "Conversion", offset = {700, 550},  atts = {"cw_l85a1_conversion"}},
+	["+reload"] = {header = "Ammo", offset = {800, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "Reload_Full",

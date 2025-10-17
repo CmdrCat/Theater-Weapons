@@ -82,7 +82,8 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(8, -2, .5)
 	SWEP.CustomizeAng = Vector(10, 40, 18)
 	
-	SWEP.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.4768, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
+	SWEP.BackupSights = {
+	["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.25), [2] = Vector(0, 0.0355, 0)},
 	["md_ins2elcan"] = {[1] = Vector(-2.472, -7, -1.236), [2] = Vector(-0.4, 0, 0)}}
 
 	SWEP.MoveType = 1
@@ -141,11 +142,12 @@ if CustomizableWeaponry_atowins2_optics then
 	[2] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-250, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	else
-	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_altsight", "doi_atow_lymanm82"}},
-	[3] = {header = "Conversion", offset = {-50, -425}, atts = {"doi_atow_m2carbineconv"}},
-	[4] = {header = "Magazine", offset = {475, 300}, atts = {"doi_atow_m1carbine30rnd"}},
-	[5] = {header = "Accessory", offset = {1200, -100}, atts = {"doi_atow_sling"}},
-	[2] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
+	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82"}},
+	[2] = {header = "Iron Sights", offset = {1200, 300}, atts = {"doi_atow_altsight"}},
+	[4] = {header = "Conversion", offset = {-50, -425}, atts = {"doi_atow_m2carbineconv"}},
+	[5] = {header = "Magazine", offset = {475, 300}, atts = {"doi_atow_m1carbine30rnd"}},
+	[6] = {header = "Accessory", offset = {1200, -100}, atts = {"doi_atow_sling"}},
+	[3] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-550, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	end
 
@@ -210,7 +212,7 @@ SWEP.FireSoundSuppressed = "DOIM1A1CAR_FIRE_SUPPRESSED"
 SWEP.Recoil = 1
  -- = 1.1
 
-SWEP.HipSpread = 0.12
+SWEP.HipSpread = 0.1
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = .6
 SWEP.MaxSpreadInc = 0.1
@@ -239,10 +241,10 @@ function SWEP:IndividualThink()
 	self.RecoilToSpread = (self.FireMode == "auto") and self.RecoilToSpreadAuto or self.RecoilToSpreadSemi
 	
 	if self.ActiveAttachments.doi_atow_altsight then
-	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.4768, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
+	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.14), [2] = Vector(0.25, 0.0355, 0)},
 	["md_ins2elcan"] = {[1] = Vector(-2.472, -7, -1.323), [2] = Vector(-0.4, 0, 0)}}
 	else
-	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.4773, -2.5, 1.2686), [2] = Vector(0.2625, 0.0213, 0)},
+	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.25), [2] = Vector(0.2625, 0.0213, 0)},
 	["md_ins2elcan"] = {[1] = Vector(-2.472, -7, -1.323), [2] = Vector(-0.4, 0, 0)}}
 	end
 	

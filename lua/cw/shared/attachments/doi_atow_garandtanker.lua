@@ -11,7 +11,9 @@ ReloadSpeedMult = 0.075}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/garandtanker")
-	att.description = {[1] = {t = "Last thing a kraut peering into your hatch wants to see.", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+	att.description = {[1] = {t = "Last thing a kraut peering into your hatch wants to see", c = CustomizableWeaponry.textColors.VPOSITIVE},
+					   [2] = {t = "Decreases effective range by 25 M", c = CustomizableWeaponry.textColors.NEGATIVE},
+					   [3] = {t = "Increases damage fall off by 17%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
 function att:attachFunc()

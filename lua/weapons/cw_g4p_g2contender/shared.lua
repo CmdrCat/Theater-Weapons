@@ -140,6 +140,19 @@ SWEP.Sounds = {awm_reload = {[1] = {time = 0.5, sound = "CW_G2_OPEN"},
 
 SWEP.SpeedDec = 30
 
+SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-4.5, 5, 1), [2] = Vector(0,0,-30)},
+	["md_cmore"] = {[1] = Vector(-4.5, 5, 1), [2] = Vector(0,0,-30)},
+	["md_reflex"] = {[1] = Vector(-4.5, 5, 1), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-4.5, 5, 1), [2] = Vector(0,0,-30)},
+	["md_elcan"] = {[1] = Vector(-3.01, 0, -0.76), [2] = Vector(-0.1, -0.15, 0)},
+	["md_acog"] = {[1] = Vector(-3, 0, -0.76), [2] = Vector(-0.03, 0, 0)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(-4.5, 5, 1), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-3, 0, -0.76), [2] = Vector(-0.03, 0, 0)},
+	["md_uecw_csgo_556"] = {[1] = Vector(-3.005, 0, 0.005), [2] = Vector(0.73, 0, 0)},
+	["md_ballistic"] = {[1] = Vector(-4.5, 5, 1), [2] = Vector(0,0,-30)}
+}
+
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
