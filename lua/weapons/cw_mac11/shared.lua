@@ -71,6 +71,9 @@ if CLIENT then
 	
 	SWEP.CustomizationMenuScale = 0.01
 	
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-5, 9, -2), [2] = Vector(5, 0, -30)}}
+
 	SWEP.AttachmentModelsVM = {
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0.037, -3.405, -0.942), angle = Angle(180, 0, -90), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 0)},
 		["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0.018, -2.564, 6.34), angle = Angle(0, 0, 90), size = Vector(0.55, 0.55, 0.55)}
@@ -175,6 +178,13 @@ SWEP.ReloadHalt_Empty = 3
 SWEP.SnapToIdlePostReload = true
 
 function SWEP:IndividualThink()
+	if self.ActiveAttachments.bg_mac11_unfolded_stock then
+	self.BackupSights = {["md_microt1"] = {[1] = Vector(-3, 10, -1.7), [2] = Vector(0, 0, -30)},
+	["md_ins2elcan"] = {[1] = Vector(-2.472, -7, -1.323), [2] = Vector(-0.4, 0, 0)}}
+	else
+	self.BackupSights = {["md_microt1"] = {[1] = Vector(-5, 9, -2), [2] = Vector(5, 0, -30)},
+	["md_ins2elcan"] = {[1] = Vector(-2.472, -7, -1.323), [2] = Vector(-0.4, 0, 0)}}
+	end
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 10 * 39.37

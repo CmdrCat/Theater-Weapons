@@ -57,8 +57,15 @@ if CLIENT then
 	SWEP.ShortDotPos = Vector(-2.32, 5, -0.76)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
 	
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-4, 9, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_mrs"] = {[1] = Vector(-4, 3, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_exps"] = {[1] = Vector(-4, 5, 0), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-4, 7, 0), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-4, 9, 0), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-2.34, 10, -2.1), [2] = Vector(-0.1, 0, 0)}
+	}
 
-	
 
 	SWEP.AttachmentModelsVM = {
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0, -3.087, 1.457), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -101,7 +108,6 @@ SWEP.Attachments = {
 	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1400, 35}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
-
 
 
 	SWEP.AttachmentDependencies = {

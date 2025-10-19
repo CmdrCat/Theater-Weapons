@@ -65,7 +65,15 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(0.319, 1.325, -1.04)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
-	
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["too_reflex_mrs"] = {[1] = Vector(-4, 0, 0.5), [2] = Vector(0,0,-30)},
+	["too_reflex_romeo4t"] = {[1] = Vector(-4, 0, 0.5), [2] = Vector(0,0,-30)},
+	["too_reflex_exps"] = {[1] = Vector(-4, 3, 0.5), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-3.5, 3, 0.5), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-2.725, 10, -1.35), [2] = Vector(-0.1, 0, 0)}
+	}
 
 	SWEP.AttachmentModelsVM = {
 		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.882, -0.062), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

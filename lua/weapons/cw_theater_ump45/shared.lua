@@ -63,6 +63,14 @@
         SWEP.AlternativePos = Vector(-0.32, 0, -0.64)
         SWEP.AlternativeAng = Vector(0, 0, 0)
 
+        SWEP.BackupSights = {
+        ["md_microt1"] = {[1] = Vector(-4, 9, 0), [2] = Vector(0,0,-30)},
+        ["too_reflex_mrs"] = {[1] = Vector(-4, 3, 0), [2] = Vector(0,0,-30)},
+        ["too_reflex_exps"] = {[1] = Vector(-4, 5, 0), [2] = Vector(0,0,-30)},
+        ["md_aimpoint"] = {[1] = Vector(-4, 7, 0), [2] = Vector(0,0,-30)},
+        ["md_acog"] = {[1] = Vector(-2.79, 10, -1.4), [2] = Vector(-0.1, 0, 0)}
+        }
+
         SWEP.AttachmentModelsVM = {
             ["md_saker"] = {type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", pos = Vector(0, -1.997, 2.828), angle = Angle(0, 180, -90), size = Vector(0.5, 0.5, 0.5)},
             ["md_foregrip"] = {type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", pos = Vector(-0.406, 2.694, -2.169), angle = Angle(0, 0, -90), size = Vector(0.699, 0.699, 0.699)},

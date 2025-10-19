@@ -184,18 +184,20 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 
 if CustomizableWeaponry_atowins2_optics then
-SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"doi_atow_altsight","md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
-[3] = {header = "Model", offset = {200, 225}, atts = {"doi_atow_garandtanker"}},
-[6] = {header = "Finish", offset = {650, -100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish"}},
-[2] = {header = "Muzzle", offset = {-420, -400}, atts = {"ins2_atow_riflesuppressor"}},
-[4] = {header = "Underbarrel", offset = {-400, 50}, atts = {"ins2_atow_clamplaser"}},
-[5] = {header = "Accessory", offset = {20, -475}, atts = {"doi_atow_sling", "md_foregrip","ins2_atow_tacbipod"}},
+SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
+[2] = {header = "Iron Sights", offset = {1500, -325}, atts = {"doi_atow_altsight"}},
+[4] = {header = "Model", offset = {200, 225}, atts = {"doi_atow_garandtanker"}},
+[7] = {header = "Finish", offset = {650, -100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish"}},
+[3] = {header = "Muzzle", offset = {-420, -400}, atts = {"ins2_atow_riflesuppressor"}},
+[5] = {header = "Underbarrel", offset = {-400, 50}, atts = {"ins2_atow_clamplaser"}},
+[6] = {header = "Accessory", offset = {20, -475}, atts = {"doi_atow_sling", "md_foregrip","ins2_atow_tacbipod"}},
 ["+reload"] = {header = "Ammo", offset = {800, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 else
-SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -325}, atts = {"doi_atow_altsight", "doi_atow_lymanm82"}},
-[2] = {header = "Model", offset = {-300, -400}, atts = {"doi_atow_garandtanker"}},
-[4] = {header = "Finish", offset = {1200, 50}, atts = {"doi_atow_wornfinish"}},
-[3] = {header = "Accessory", offset = {-250, 200}, atts = {"doi_atow_sling"}},
+SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -325}, atts = {"doi_atow_lymanm82"}},
+[2] = {header = "Iron Sights", offset = {1500, -325}, atts = {"doi_atow_altsight"}},
+[3] = {header = "Model", offset = {-300, -400}, atts = {"doi_atow_garandtanker"}},
+[5] = {header = "Finish", offset = {1200, 100}, atts = {"doi_atow_wornfinish"}},
+[4] = {header = "Accessory", offset = {-250, 200}, atts = {"doi_atow_sling"}},
 ["+reload"] = {header = "Ammo", offset = {300, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 end
 

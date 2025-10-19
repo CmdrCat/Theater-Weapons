@@ -54,7 +54,12 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(0, 1.325, -0.801)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.165, -4.825, -0.852), [2] = Vector(0, 0, 0)}}
+	SWEP.BackupSights = {
+		["md_microt1"] = {[1] = Vector(-3, 10, -1.2), [2] = Vector(0, 0, -30)},
+		["md_aimpoint"] = {[1] = Vector(-3, 7.5, -1.2), [2] = Vector(0, 0, -30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-3, 10, -1.2), [2] = Vector(0, 0, -30)},
+		["too_reflex_exps"] = {[1] = Vector(-3, 6, -1.2), [2] = Vector(0, 0, -30)},
+		["md_acog"] = {[1] = Vector(-2.17, 0, -0.852), [2] = Vector(0, 0, 0)}}
 	
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "mp7_main", pos = Vector(-4.927, 2.484, 0.188), angle = Angle(-90, 90, 0), size = Vector(0.8, 0.8, 0.8)},

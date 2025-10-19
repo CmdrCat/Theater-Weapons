@@ -51,13 +51,13 @@ if CLIENT then
 	SWEP.ReflexPos = Vector(-2.715, -2.8, 0.46)
 	SWEP.ReflexAng = Vector(0, 0, 0)
 	
-	SWEP.BallisticPos = Vector(-2.7, -2.8, 0.12)
+	SWEP.BallisticPos = Vector(-2.7, -2.8, -0.05)
 	SWEP.BallisticAng = Vector(0, 0, 0)
 	
 	SWEP.TrijiconPos = Vector(-2.721, -3.201, 0.319)
 	SWEP.TrijiconAng = Vector(0, 0, 0)
 	
-	SWEP.CmorePos = Vector(-2.75, -2.8, 0.285)
+	SWEP.CmorePos = Vector(-2.725, -2.8, 0.285)
 	SWEP.CmoreAng = Vector(0, 0, 0)
 	
 	SWEP.MicroT1Pos = Vector(-2.721, -3.201, 0.4)
@@ -85,8 +85,17 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.BackupSights = {
-	["md_elcan"] = {[1] = Vector(-2.724, -3.8, -0.89), [2] = Vector(0.2, -0.06, 0)},
-	["md_acog_fixed"] = {[1] = Vector(-2.727, -3.8, -0.971), [2] = Vector(0.2, -0.06, 0)}
+	["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_cmore"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_trijicon"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_reflex"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_elcan"] = {[1] = Vector(-2.732, 5, -0.898), [2] = Vector(0.05, -0.06, 0)},
+	["md_acog_fixed"] = {[1] = Vector(-2.717, 5, -0.971), [2] = Vector(0, 0, 0)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_uecw_csgo_556"] = {[1] = Vector(-2.717, 5, -0.55), [2] = Vector(0.82, 0, 0)},
+	["md_uecw_csgo_scope_ssg"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_ballistic"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}

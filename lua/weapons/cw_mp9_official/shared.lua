@@ -71,6 +71,12 @@ if CLIENT then
 	
 	SWEP.CustomizationMenuScale = 0.01
 	
+	SWEP.BackupSights = {
+		["md_microt1"] = {[1] = Vector(-3, 10, -1.2), [2] = Vector(0, 0, -30)},
+		["md_aimpoint"] = {[1] = Vector(-3, 7.5, -1.2), [2] = Vector(0, 0, -30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-3, 10, -1.2), [2] = Vector(0, 0, -30)},
+		["md_nightforce_nxs"] = {[1] = Vector(-3, 10, -1.2), [2] = Vector(0, 0, -30)}}
+
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "gun", pos = Vector(-0.104, -5.553, -2.28), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "gun", pos = Vector(0.12, -0.88, 2.403), angle = Angle(0, -180, 0), size = Vector(0.349, 0.349, 0.349)},

@@ -32,29 +32,28 @@ if CLIENT then
 	SWEP.WMPos = Vector(0, -19, -7.5)
 	SWEP.WMAng = Vector(-6, 0, 180)
 		
-	SWEP.IronsightPos = Vector(-3.027, 0, 0.308)
-	SWEP.IronsightAng = Vector(1.532, 0, 0)
+	SWEP.IronsightPos = Vector(-3.027, -5, 0.41)
+	SWEP.IronsightAng = Vector(1.28, 0, 0)
 		
-	SWEP.MicroT1Pos = Vector(-3.04, -2, 0.2)
+	SWEP.MicroT1Pos = Vector(-3.04, -1.25, 0.2)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
 
-	SWEP.EXPSPos = Vector(-3, 0, 0.079)
+	SWEP.EXPSPos = Vector(-3, -3.5, 0.079)
 	SWEP.EXPSAng = Vector(0, 0, 0)
 
-	SWEP.MRSPos = Vector(-3, 0, 0.079)
+	SWEP.MRSPos = Vector(-3, -5, 0.079)
 	SWEP.MRSAng = Vector(0, 0, 0)
-
 	
-	SWEP.AimpointPos = Vector(-3.018, -2.388, 0.239)
+	SWEP.AimpointPos = Vector(-3.018, -3, 0.239)
 	SWEP.AimpointAng = Vector(0, 0, 0)
 	
-	SWEP.ShortDotPos = Vector(-2.881, 2, 0.28)
+	SWEP.ShortDotPos = Vector(-2.881, -2, 0.28)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
 	
-	SWEP.ACOGPos = Vector(-3, 2, 0.039)
+	SWEP.ACOGPos = Vector(-3, -1, 0.039)
 	SWEP.ACOGAng = Vector(0, 0, 0)
 	
-		SWEP.SprintPos = Vector(0, 0, -2.639)
+	SWEP.SprintPos = Vector(0, 0, -2.639)
 	SWEP.SprintAng = Vector(-11.612, 19.459, -38.855)
 
 	SWEP.CustomizePos = Vector(1, -3, -0.611)
@@ -67,6 +66,15 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
 	SWEP.ForegripOverridePos = {
+	}
+
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-4.5, 4, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_mrs"] = {[1] = Vector(-4.5, -1, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_exps"] = {[1] = Vector(-4.5, 1, 0), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-4.5, 2, 0), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-4.5, 4, 0), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-3.02, 5, -1.005), [2] = Vector(-0.2, 0, 0)}
 	}
 
 	SWEP.AttachmentModelsVM = {

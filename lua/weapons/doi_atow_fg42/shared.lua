@@ -61,6 +61,8 @@ if CLIENT then
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .8
 	SWEP.CustomizationMenuScale = 0.023 --  0.03
 	
+	SWEP.BackupSights = {["doi_atow_zfg42"] = {[1] = Vector(-4, 5, 0.2), [2] = Vector(0,0,-30)}}
+
 	SWEP.AttachmentModelsVM = {
 	["doi_atow_zfg42"] = {model = "models/khrcw2/doipack/attachments/zfg42scope.mdl", pos = Vector(0, 0, 0), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "A_Optic"},
 	["doi_atow_zfg41"] = {model = "models/khrcw2/doipack/attachments/zfg42scope.mdl", pos = Vector(0, 0, 0), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "A_Optic"},
