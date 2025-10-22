@@ -92,6 +92,12 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = 0.75
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
+	SWEP.BackupSights = {
+		["md_kobra"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_aimpoint"] = {[1] = Vector(-4, 5.5, 0.5), [2] = Vector(0,0,-30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-4, 7.5, 0.5), [2] = Vector(0,0,-30)},
+		["md_pso1"] = {[1] = Vector(-4, 7.5, 0.5), [2] = Vector(0,0,-30)}}
+	
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "Object01", pos = Vector(-0.234, -6.67, -2.567), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899)},
 		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "Object01", pos = Vector(-0.232, -0.908, 0.637), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},

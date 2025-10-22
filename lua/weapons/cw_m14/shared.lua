@@ -59,7 +59,12 @@ if CLIENT then
 	SWEP.SprintPos = Vector(1.786, 0, -1)
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
 	
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.221, -4.617, -1.234), [2] = Vector(0, -0.008, 0)}}
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-3.5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-3.5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-3.5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-2.221, 0, -1.245), [2] = Vector(0, -0.008, 0)},
+	["md_nightforce_nxs"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)}}
 
 	SWEP.SightWithRail = true
 	SWEP.ACOGAxisAlign = {right = 0.35, up = 0, forward = 0}

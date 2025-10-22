@@ -72,6 +72,12 @@ if CLIENT then
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .75
 	SWEP.CustomizationMenuScale = 0.026 --  0.03
 	
+	SWEP.BackupSights = {
+	["doi_atow_unertl"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)},
+	["doi_atow_m73"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)},
+	["doi_atow_wina5"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)}
+	}
+
 	SWEP.AttachmentModelsVM = {
 	["doi_atow_m73"] = {model = "models/khrcw2/doipack/attachments/springfield4xscope.mdl", pos = Vector(0, 0, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "A_Optic"},
 	["doi_atow_unertl"] = {model = "models/khrcw2/doipack/attachments/springfield8xscope.mdl", pos = Vector(0, 0, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "A_Optic"},

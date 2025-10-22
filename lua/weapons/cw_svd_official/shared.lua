@@ -61,7 +61,11 @@ if CLIENT then
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "Base", pos = Vector(-0.505, -6.011, -3.149), angle = Angle(1.965, 3.263, 1.378), size = Vector(0.8, 0.8, 0.8)}
 	}
 	
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-3.21, -4.753, -0.515), [2] = Vector(-0.973, -0.317, 0)}}
+	SWEP.BackupSights = {
+		["md_schmidt_shortdot"] = {[1] = Vector(-4.5, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_pso1"] = {[1] = Vector(-4.5, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_acog"] = {[1] = Vector(-3.235, 0, -0.5), [2] = Vector(-0.65, -0.317, 0)},
+		["md_nightforce_nxs"] = {[1] = Vector(-5, 5, 0.5), [2] = Vector(0,0,-30)}}
 
 	SWEP.PSO1AxisAlign = {right = -1.32, up = 2.49, forward = 90 + 2.2}
 	SWEP.SchmidtShortDotAxisAlign = {right = -2.09, up = 2.93, forward = 0}

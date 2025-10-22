@@ -62,7 +62,7 @@ if CLIENT then
 	SWEP.PronePos = Vector(0, 0, -3.1579)
 	SWEP.ProneAng = Vector(-2, 22.7368, -28.9474)
 	
-	SWEP.BackupSights = {["doi_atow_zf39"] = {[1] = Vector(-2.5615, -3, 1.588), [2] = Vector(0.2652, 0.0073, 0)},["doi_atow_zf4"] = {[1] = Vector(-2.5615, -3, 1.588), [2] = Vector(0.2652, 0.0073, 0)},["doi_atow_zf41"] = {[1] = Vector(-2.5615, -3, 1.588), [2] = Vector(0.2652, 0.0073, 0)},}
+	SWEP.BackupSights = {["doi_atow_zf39"] = {[1] = Vector(-2, -3, 1.99), [2] = Vector(0.2652, 0.0073, 0)},["doi_atow_zf4"] = {[1] = Vector(-2, -3, 1.99), [2] = Vector(0.2525, 0.0073, 0)},["doi_atow_zf41"] = {[1] = Vector(-2.5615, -3, 1.588), [2] = Vector(0.2652, 0.0073, 0)}}
 	
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
