@@ -57,6 +57,9 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.01
 	SWEP.ReticleInactivityPostFire = 0.9
 
+	SWEP.BackupSights = {
+		["md_microt1"] = {[1] = Vector(5, 2.5, 1), [2] = Vector(0,0,30)}}
+
 	SWEP.AttachmentModelsVM = {
 		["md_rail"] = {model = "models/wystan/attachments/rail.mdl", bone = "yttohs", pos = Vector(-0.207, -0.215, 0.029), angle = Angle(0, 90, 180), size = Vector(0.5, 0.85, 0.75)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "yttohs", pos = Vector(-0.02, -1.188, -1.494), angle = Angle(0, 0, 179.587), size = Vector(0.3, 0.3, 0.3)}

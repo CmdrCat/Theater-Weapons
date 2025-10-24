@@ -78,6 +78,13 @@ if CLIENT then
 	
 	SWEP.CustomizationMenuScale = 0.015
 
+	SWEP.BackupSights = {
+		["md_kobra"] = {[1] = Vector(-4, 2.5, 0.5), [2] = Vector(0,0,-30)},
+		["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_aimpoint"] = {[1] = Vector(-4, 4, 0.5), [2] = Vector(0,0,-30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_pso1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)}}
+
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "Saiga12k", pos = Vector(-0.383, -5.723, -2.077), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Saiga12k", pos = Vector(-0.181, -0.817, 2.581), angle = Angle(0, 180, 0), size = Vector(0.349, 0.349, 0.349)},
