@@ -107,7 +107,7 @@ if CLIENT then
 	
 	
 	SWEP.LaserPosAdjust = Vector(1, 0, 0)
-	SWEP.LaserAngAdjust = Angle(2, 180, 0) 
+	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
 end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s

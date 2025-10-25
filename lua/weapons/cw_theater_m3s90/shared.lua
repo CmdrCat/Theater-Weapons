@@ -62,7 +62,8 @@ if CLIENT then
 	SWEP.BackupSights = {
 		["too_reflex_romeo4t"] = {[1] = Vector(-7, 2.5, 0.5), [2] = Vector(0,0,-30)},
 		["too_reflex_mrs"] = {[1] = Vector(-7, 2.5, 0.5), [2] = Vector(0,0,-30)},
-		["too_reflex_exps"] = {[1] = Vector(-7, 5, 0.5), [2] = Vector(0,0,-30)}}
+		["too_reflex_exps"] = {[1] = Vector(-7, 5, 0.5), [2] = Vector(0,0,-30)}
+	}
 
 	SWEP.AttachmentModelsVM = {
 		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.178, -1.905), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

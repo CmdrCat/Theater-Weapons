@@ -86,6 +86,16 @@ if CLIENT then
 		
 	SWEP.Trivia = {text = "The sniper rifle version of the Remington Model 700, the M40A3 has claimed many lives in modern conflicts.", x = -200, y = -800}
 
+	SWEP.BackupSights = {
+		["md_microt1"] = {[1] = Vector(-4.5, 5, -0.5), [2] = Vector(0,0,-20)},
+		["too_reflex_mrs"] = {[1] = Vector(-4.5, 2, -0.5), [2] = Vector(0,0,-20)},
+		["md_aimpoint"] = {[1] = Vector(-4.5, 4, -0.5), [2] = Vector(0,0,-20)},
+		["too_reflex_exps"] = {[1] = Vector(-4.5, 3, -0.5), [2] = Vector(0,0,-20)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-4.5, 5, -0.5), [2] = Vector(0,0,-20)},
+		["md_acog"] = {[1] = Vector(-3.13, 0, -0.85), [2] = Vector(-0.17, 0, 0)},
+		["md_nightforce_nxs"] = {[1] = Vector(-4.5, 5, -0.5), [2] = Vector(0,0,-20)}
+	}
+
 	SWEP.AttachmentModelsVM = {
 	
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0.075, -2.498, 1.756), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

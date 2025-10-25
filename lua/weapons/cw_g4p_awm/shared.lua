@@ -94,6 +94,19 @@ if CLIENT then
 	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 	
+	SWEP.BackupSights = {
+		["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_cmore"] = {[1] = Vector(-4, 2.5, 0.5), [2] = Vector(0,0,-30)},
+		["md_reflex"] = {[1] = Vector(-4, 2.5, 0.5), [2] = Vector(0,0,-30)},
+		["md_aimpoint"] = {[1] = Vector(-4, 3, 0.5), [2] = Vector(0,0,-30)},
+		["md_elcan"] = {[1] = Vector(-2.76, 0, -0.405), [2] = Vector(-0.1, -0.13, 0)},
+		["md_acog"] = {[1] = Vector(-2.74, 0, -0.5), [2] = Vector(0, 0, 0)},
+		["md_uecw_csgo_acog"] = {[1] = Vector(-4, 0, 0.5), [2] = Vector(0,0,-30)},
+		["md_uecw_csgo_556"] = {[1] = Vector(-2.77, 0, -0.41), [2] = Vector(0.79, 0, 0)},
+		["md_uecw_csgo_scope_ssg"] = {[1] = Vector(-4.5, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_ballistic"] = {[1] = Vector(-4.5, 5, 0.5), [2] = Vector(0,0,-30)}
+	}
+	
 	SWEP.AttachmentModelsVM = {
 		["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Base", rel = "", pos = Vector(0.237, 0.158, -1.209), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_fas2_leupold"] = { type = "Model", model = "models/v_fas2_leupold.mdl", bone = "Base", rel = "", pos = Vector(0, -2.34, 1.679), angle = Angle(0, -90, 0), size = Vector(1.5, 1.5, 1.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroups = {[3] = 2} },
