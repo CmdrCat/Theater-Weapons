@@ -112,9 +112,12 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "A battle rifle made in collaboration between Heckler & Koch and CETME.", x = -100, y = -900}
 
+SWEP.AttachmentExclusions = {["am_atow_lowvel"] = {"too_hk11"}}
+
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -350},  atts = {"md_microt1","too_reflex_mrs","too_reflex_romeo4t", "too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-300, -300},  atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-300, 150}, atts = {"md_foregrip"}},
+	[4] = {header = "Conversion", offset = {600, 550}, atts = {"too_hk11"}},
     ["+use"] = {header = "Optic Type", offset = {800, -750}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
     ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
