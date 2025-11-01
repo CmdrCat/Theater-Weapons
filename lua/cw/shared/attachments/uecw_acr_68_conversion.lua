@@ -22,6 +22,7 @@ function att:attachFunc()
 	self:CycleFiremodes()
 	self.Primary.ClipSize = 25
 	self.Primary.ClipSize_Orig = 25
+	self.Primary.Ammo = "6.8 SPC"
 end
 
 function att:detachFunc()
@@ -31,6 +32,7 @@ function att:detachFunc()
 	self:CycleFiremodes()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	self.Primary.Ammo = "5.56x45MM"
 end
 
 CustomizableWeaponry:registerAttachment(att)

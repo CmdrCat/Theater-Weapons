@@ -182,6 +182,9 @@ SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 
+SWEP.Secondary.DefaultClip	= 75
+SWEP.Secondary.Ammo			= ".22 LR"
+
 SWEP.Chamberable = false -- The user uses the charging handle while changing mags
 
 SWEP.FireDelay = 60 / 800

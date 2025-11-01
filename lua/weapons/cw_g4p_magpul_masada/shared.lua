@@ -219,6 +219,9 @@ SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
+SWEP.Secondary.DefaultClip	= 75
+SWEP.Secondary.Ammo			= "6.8 SPC"
+
 SWEP.FireDelay = 60 / 700
 SWEP.FireSound = "CW_MAGPUL_MASADA_FIRE"
 SWEP.FireSoundSuppressed = "CW_MAGPUL_MASADA_FIRE_SUPPRESSED"

@@ -193,9 +193,12 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
+
+SWEP.Secondary.DefaultClip	= 75
+SWEP.Secondary.Ammo			= "6.8 SPC"
 
 SWEP.FireDelay = 60 / 700
 SWEP.FireSound = "CW_MASADA_FIRE"

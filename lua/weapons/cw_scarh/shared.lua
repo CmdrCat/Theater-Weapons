@@ -202,7 +202,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 20
-SWEP.Primary.DefaultClip	= 120
+SWEP.Primary.DefaultClip	= 80
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 

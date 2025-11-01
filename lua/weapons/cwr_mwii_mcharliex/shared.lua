@@ -316,9 +316,12 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 5000
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
+
+SWEP.Secondary.DefaultClip	= 90
+SWEP.Secondary.Ammo			= ".300 Blackout"
 
 SWEP.FireDelay = 60 / 900
 SWEP.FireSound = "MWII_M13B_FIRE"

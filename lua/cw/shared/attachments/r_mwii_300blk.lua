@@ -15,4 +15,12 @@ att.statModifiers = {
     RecoilMult   = 0.25     -- +25% recoil
 }
 
+function att:attachFunc()
+	self.Primary.Ammo = ".300 Blackout"
+end
+
+function att:detachFunc()
+	self.Primary.Ammo = "5.56x45MM"
+end
+
 CustomizableWeaponry:registerAttachment(att)

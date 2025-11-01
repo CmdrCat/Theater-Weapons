@@ -2,8 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
-CustomizableWeaponry:registerAmmo(".300BL", ".300BL", 5, 56)
-
 
 if CLIENT then
 	SWEP.UseHands = true
@@ -279,9 +277,9 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 5000
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
-SWEP.Primary.Ammo			= ".300BL"
+SWEP.Primary.Ammo			= ".300 Blackout"
 
 SWEP.FireDelay = 60 / 800
 SWEP.FireSound = "MWII_CHIMERA_FIRE_SUPPRESSED"

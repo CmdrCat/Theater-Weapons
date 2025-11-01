@@ -158,7 +158,7 @@ SWEP.RVBYawMod = 0
 SWEP.RVBRollMod = .5
 
 SWEP.Primary.ClipSize		= 20
-SWEP.Primary.DefaultClip	= 120
+SWEP.Primary.DefaultClip	= 100
 SWEP.Primary.Automatic		= true
 
 if CustomizableWeaponry_doi_atow_hl2ammo then

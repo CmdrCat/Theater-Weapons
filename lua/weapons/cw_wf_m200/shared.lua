@@ -2,7 +2,7 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
-CustomizableWeaponry:registerAmmo(".408 Cheytac", ".408 Cheytac", 10.36, 77)
+CustomizableWeaponry:registerAmmo(".408 CheyTac", ".408 CheyTac Rounds", 10.36, 77)
 
 SWEP.EffectiveRange_Orig = 200 * 39.37
 SWEP.DamageFallOff_Orig = .09
@@ -302,7 +302,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 7
-SWEP.Primary.DefaultClip	= 120
+SWEP.Primary.DefaultClip	= 49
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".408 Cheytac"
 

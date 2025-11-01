@@ -228,9 +228,12 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 5
-SWEP.Primary.DefaultClip	= 120
+SWEP.Primary.DefaultClip	= 45
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".338 Lapua"
+
+SWEP.Secondary.DefaultClip	= 40
+SWEP.Secondary.Ammo			= ".308 Winchester"
 
 SWEP.FireDelay = 2.5
 SWEP.FireSound = "CW_M98_FIRE"

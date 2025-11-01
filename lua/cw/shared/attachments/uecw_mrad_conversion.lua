@@ -33,10 +33,11 @@ end
 		"Bullet_1",
 		"Bullet_2",
 	}
-
+	self.Primary.Ammo = ".308 Winchester"
 end
 
 function att:detachFunc()
+	self.Primary.Ammo = ".338 Lapua"
 end
 
 CustomizableWeaponry:registerAttachment(att)

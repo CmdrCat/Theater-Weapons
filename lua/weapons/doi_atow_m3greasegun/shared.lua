@@ -148,6 +148,9 @@ SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Chamberable			= false
 
+SWEP.Secondary.DefaultClip		= 90
+SWEP.Secondary.Ammo			= "9x19MM"
+
 if CustomizableWeaponry_doi_atow_hl2ammo then
 SWEP.Primary.Ammo			= "SMG1"
 else

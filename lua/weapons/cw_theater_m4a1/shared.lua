@@ -202,6 +202,9 @@ SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
+SWEP.Secondary.DefaultClip	= 30
+SWEP.Secondary.Ammo			= ".50 Beowulf"
+
 SWEP.FireDelay = 0.066666666666667
 SWEP.FireSound = "CW_TOO_AR15_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_AR15_FIRE_SUPPRESSED"
