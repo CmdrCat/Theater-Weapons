@@ -79,7 +79,7 @@ SWEP.ADSFireAnim = true
 SWEP.Trivia = {text = "Though this shotgun has an incredibly short barrel and magazine tube, some US police departments and even its military have bought some.", x = -600, y = -450}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300}, atts = {"md_microt1"}},
-	["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}}
+	["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds", "am_explosiveslugrounds"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
 	fire_aim = "shoot1",
@@ -133,6 +133,9 @@ SWEP.Primary.ClipSize		= 2
 SWEP.Primary.DefaultClip	= 32
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "12 Gauge"
+
+SWEP.Secondary.DefaultClip	= 30
+SWEP.Secondary.Ammo			= "12 Gauge Explosive Slugs"
 
 SWEP.FireDelay = 0.55 / 1.3
 SWEP.FireSound = "CW_SERBU_SHORTY_FIRE"

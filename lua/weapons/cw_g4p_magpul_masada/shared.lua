@@ -249,9 +249,13 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
 self.DamageFallOff = 0.3
+self.FireSound = "CW_MAGPUL_MASADA_FIRE"
+self.FireSoundSuppressed = "CW_MAGPUL_MASADA_FIRE_SUPPRESSED"
 if self.ActiveAttachments.uecw_acr_68_conversion then
 	self.EffectiveRange = ((self.EffectiveRange + 15 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - 0.1))
+	self.FireSound = "CW_M14_FIRE"
+	self.FireSoundSuppressed = "CW_M14_FIRE_SUPPRESSED"
 end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))

@@ -85,7 +85,7 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
-SWEP.Attachments = {["+reload"] = {header = "Ammo", offset = {650, 200}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
+SWEP.Attachments = {["+reload"] = {header = "Ammo", offset = {650, 200}, atts = {"am_flechettem37", "am_slugroundsm37", "am_explosiveslugrounds"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
 	fire_aim = {"iron_fire_1","iron_fire_2"},
@@ -141,6 +141,9 @@ SWEP.Primary.Ammo			= "Buckshot"
 else
 SWEP.Primary.Ammo			= "12 Gauge"
 end
+
+SWEP.Secondary.DefaultClip	= 30
+SWEP.Secondary.Ammo			= "12 Gauge Explosive Slugs"
 
 SWEP.FireDelay = 60/125
 SWEP.FireSound = "DOIM37_FIRE"

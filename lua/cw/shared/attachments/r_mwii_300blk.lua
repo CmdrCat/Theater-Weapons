@@ -16,10 +16,14 @@ att.statModifiers = {
 }
 
 function att:attachFunc()
+    self.FireSound = "MWII_CHIMERA_FIRE"
+    self.FireSoundSuppressed = "CW_TOO_UMP45_FIRE_SUPPRESSED"
 	self.Primary.Ammo = ".300 Blackout"
 end
 
 function att:detachFunc()
+    self.FireSound = "MWII_M13B_FIRE"
+    self.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
 	self.Primary.Ammo = "5.56x45MM"
 end
 

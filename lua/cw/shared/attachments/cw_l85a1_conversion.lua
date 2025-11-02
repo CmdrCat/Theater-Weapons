@@ -20,12 +20,16 @@ function att:attachFunc()
 	self.Primary.ClipSize = 1
 	self.Primary.ClipSize_Orig = 1
 	self.Chamberable = false
+	self.FireSound = "CW_M16A2_FIRE"
+    self.FireSoundSuppressed = "CW_FAL_FIRE_SUPPRESSED"
 end
 
 function att:detachFunc()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 	self.Chamberable = true
+	self.FireSound = "CW_L85A2_FIRE"
+    self.FireSoundSuppressed = "CW_L85A2_FIRE_SUPPRESSED"
 end
 
 CustomizableWeaponry:registerAttachment(att)

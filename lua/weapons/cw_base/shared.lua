@@ -1574,8 +1574,15 @@ function SWEP:PrimaryAttack()
 				self:playFireAnim()
 			end
 		end
+
+		if self.Primary.Ammo == "12 Gauge Explosive Slugs" then
+			if SERVER then
+				CustomizableWeaponry.grenadeTypes.createGrenadeEntity(self, "cw_12gauge_explosive")
+			end
+		else
+			self:FireBullet( self.Damage, self.CurCone, self.ClumpSpread, self.Shots )
+		end
 		
-		self:FireBullet(self.Damage, self.CurCone, self.ClumpSpread, self.Shots)
 		self:makeFireEffects()
 		
 		if CLIENT then

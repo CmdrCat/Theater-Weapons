@@ -97,7 +97,7 @@ SWEP.SightBGs = {main = 2, none = 1}
 SWEP.ADSFireAnim = true
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300}, atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}}
+	["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds", "am_explosiveslugrounds"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
 	reload_start = "start_reload",
@@ -143,6 +143,9 @@ SWEP.Primary.ClipSize		= 8
 SWEP.Primary.DefaultClip	= 40
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "12 Gauge"
+
+SWEP.Secondary.DefaultClip	= 32
+SWEP.Secondary.Ammo			= "12 Gauge Explosive Slugs"
 
 SWEP.FireDelay = 0.7 / 1.65
 SWEP.FireSound = "CW_M3SUPER90_FIRE"

@@ -97,10 +97,10 @@ SWEP.CrosshairParts = {left = true, right = true, upper = false, lower = true}
 if CustomizableWeaponry_atowins2_optics then
 SWEP.Attachments = {[1] = {header = "Accessory", offset = {150, -250}, atts = {"doi_atow_sling"}},
 [2] = {header = "Muzzle", offset = {500, -220}, atts = {"doi_atow_unisuppressor"}, dependencies = {["am_slugroundsm37"] = true}},
-["+reload"] = {header = "Ammo", offset = {600, 175}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
+["+reload"] = {header = "Ammo", offset = {600, 175}, atts = {"am_flechettem37", "am_slugroundsm37", "am_explosiveslugrounds"}}}
 else
 SWEP.Attachments = {[1] = {header = "Accessory", offset = {150, -250}, atts = {"doi_atow_sling"}},
-["+reload"] = {header = "Ammo", offset = {600, 175}, atts = {"am_flechettem37", "am_slugroundsm37"}}}
+["+reload"] = {header = "Ammo", offset = {600, 175}, atts = {"am_flechettem37", "am_slugroundsm37", "am_explosiveslugrounds"}}}
 end
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
@@ -158,6 +158,9 @@ else
 SWEP.Primary.Ammo			= "12 Gauge"
 end
 
+SWEP.Secondary.DefaultClip	= 28
+SWEP.Secondary.Ammo			= "12 Gauge Explosive Slugs"
+
 SWEP.FireDelay = 60/100
 SWEP.FireSound = "DOIM37_FIRE"
 SWEP.FireSoundSuppressed = "DOIK98_FIRE_SUPPRESSED"
@@ -203,7 +206,7 @@ self.Owner.ViewAff = 0
 		self.ForegripOverride = true
 		self.ForegripParent = "nah"
 	end
-	
+
 	if self.ActiveAttachments.am_slugroundsm37 then
 	self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.nohs)
 	else

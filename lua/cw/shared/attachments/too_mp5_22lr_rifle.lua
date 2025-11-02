@@ -20,6 +20,8 @@ function att:attachFunc()
 	self:CycleFiremodes()
 	self.Primary.ClipSize = 25
 	self.Primary.ClipSize_Orig = 25
+	self.FireSound = "CW_MP7_OFFICIAL_FIRE"
+	self.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
 	self.Primary.Ammo = ".22 LR"
 	self.Trivia = {text = "The MP5 .22 LR Rifle is a civilian-legal, .22 LR variant of the MP5. Though semi-automatic, it boasts a very high cyclic rate, if your finger can keep up with it.", x = -600, y = -600}
 	
@@ -32,6 +34,8 @@ function att:detachFunc()
 	self:CycleFiremodes()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	self.FireSound = "CW_TOO_MP5_FIRE"
+	self.FireSoundSuppressed = "CW_TOO_MP5_FIRE_SUPPRESSED"
 	self.Primary.Ammo = "9x19MM"
 	self.Trivia = {text = "This reliable submachine gun is the face of counter-terrorism due its successful usage by SAS operators in Operation Nimrod.", x = -600, y = -600}
 end
