@@ -23,7 +23,7 @@ function ENT:Initialize()
 	
 	spd = physenv.GetPerformanceSettings()
     -- spd.MaxVelocity = 2996 REVERT IF RAPED
-	spd.MaxVelocity = 1500
+	spd.MaxVelocity = 2996
 	
     physenv.SetPerformanceSettings(spd)
 end

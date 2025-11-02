@@ -3,8 +3,7 @@ att.name = "am_explosiveslugrounds"
 att.displayName = "Explosive Slug Rounds"
 att.displayNameShort = "Explosive"
 
-att.statModifiers =  {HipSpreadMult = 2.34,
-FireDelayMult = 0.5}
+att.statModifiers =  {FireDelayMult = 0.5}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/slugrounds")
@@ -13,10 +12,12 @@ if CLIENT then
 end
 
 function att:attachFunc()
+	self.ClumpSpread = nil
 	self.Primary.Ammo = "12 Gauge Explosive Slugs"
 end
 
 function att:detachFunc()
+	self.ClumpSpread = self.ClumpSpread_Orig
 	self.Primary.Ammo = "12 Gauge"
 end
 
