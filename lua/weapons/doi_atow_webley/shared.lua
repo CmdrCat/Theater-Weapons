@@ -199,7 +199,10 @@ self.Owner.ViewAff = 0
 	
 	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .8
-	
+	self.FireSound = "DOIWEBLEY_FIRE"
+	if self.ActiveAttachments.am_snakeshot then
+		self.FireSound = "DOIM37_FIRE"
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end
@@ -215,6 +218,7 @@ self.Owner.ViewAff = 0
 	end
 	if self.ActiveAttachments.am_atow_riot then
 		self.EffectiveRange = ((self.EffectiveRange - 7.5 * 39.37))
+		self.FireSound = "DOIM37_FIRE"
 end
 
 		clip = self:Clip1()	

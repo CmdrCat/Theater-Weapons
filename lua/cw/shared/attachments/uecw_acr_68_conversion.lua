@@ -22,6 +22,7 @@ function att:attachFunc()
 	self:CycleFiremodes()
 	self.Primary.ClipSize = 25
 	self.Primary.ClipSize_Orig = 25
+	self:unloadWeaponPartially()
 	self.Primary.Ammo = "6.8 SPC"
 end
 

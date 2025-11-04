@@ -21,9 +21,9 @@ end
 
 function att:detachFunc()
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.off)
-	self:unloadWeapon()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	self:unloadWeaponPartially()
 end
 
 CustomizableWeaponry:registerAttachment(att)

@@ -41,6 +41,9 @@ if CLIENT then
 
 	SWEP.IronsightPos = Vector(2.01, 5, 1.03)
 	SWEP.IronsightAng = Vector(0.2, 0, 0)
+
+	SWEP.HoodPos = Vector(2.01, 5, 1.03)
+	SWEP.HoodAng = Vector(0.2, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.247, -6.5, -0.602)
 	SWEP.ACOGAng = Vector(0, 0, 0)
@@ -62,6 +65,9 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.01
 	SWEP.BoltBonePositionRecoverySpeed = 25 -- how fast does the bolt bone move back into it's initial position after the weapon has fired
 	
+	SWEP.BaseArm = "Bip01 L UpperArm"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
 	SWEP.AttachmentModelsVM = {
 		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "Glock18", rel = "", pos = Vector(0, -2.241, 0.899), angle = Angle(0, -90, 180), size = Vector(0.3, 0.3, 0.3), color = Color(255, 255, 255, 255)},
 		["md_docter"] = { type = "Model", model = "models/wystan/attachments/2octorrds.mdl", bone = "Glock18 Slide", rel = "", pos = Vector(0.246, 10.06, 0.426), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -85,6 +91,15 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
 SWEP.Trivia = {text = "An extremely popular handgun found in the hands of soldiers, police officers, civilians, and criminals.", x = -600, y = -600}
+
+SWEP.ForegripOverride = true
+
+SWEP.ForegripOverridePos = {
+    ["onehand"] = {
+        ["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -10), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -500}, atts = {"md_docter"}},
 [2] = {header = "Muzzle", offset = {-900, -200}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
@@ -162,6 +177,16 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .75
+self.HoodPos = Vector(2.01, 5, 1.03)
+self.HoodAng = Vector(0.2, 0, 0)
+self.DocterPos = Vector(2.01, 5, 0.65)
+self.DocterAng = Vector(0, 0, 0)
+if self.ActiveAttachments.doi_atow_onehand then
+	self.HoodPos = Vector(0.402, 5, 1.206)
+	self.HoodAng = Vector(2.111, 0.704, 62.613)
+	self.DocterPos = Vector(2.01, 5, 0.65)
+	self.DocterAng =  Vector(0, 0, 90)
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

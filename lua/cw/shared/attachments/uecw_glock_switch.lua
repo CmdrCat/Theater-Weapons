@@ -2,6 +2,8 @@ local att = {}
 att.name = "uecw_glock_switch"
 att.displayName = "Glock Switch"
 att.displayNameShort = "Switch"
+att.aimPos = {"HoodPos", "HoodAng"}
+att.isSight = true
 
 att.statModifiers = {DamageMult = -7 / 32,
 	FireDelayMult = -1 / 3,

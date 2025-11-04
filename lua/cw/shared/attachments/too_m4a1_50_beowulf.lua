@@ -17,6 +17,7 @@ end
 function att:attachFunc()
 	self.Primary.ClipSize = 10
 	self.Primary.ClipSize_Orig = 10
+	self:unloadWeaponPartially()
 	self.FireSound = "CW_FAL_FIRE"
 	self.FireSoundSuppressed = "CW_TOO_M40_FIRESUPPRESSED"
 	self.Primary.Ammo = ".50 Beowulf"

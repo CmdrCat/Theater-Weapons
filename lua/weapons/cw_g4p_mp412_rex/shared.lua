@@ -65,6 +65,16 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.01
 	SWEP.DisableSprintViewSimulation = true
 	
+	SWEP.BaseArm = "l-upperarm"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverridePos = {
+    ["onehand"] = {
+        ["l-upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -4), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["l-upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
+
 	SWEP.AttachmentModelsVM = {
 --		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "MP412_Barrel", rel = "", pos = Vector(0, 2.24, 0.8), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 255)},
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "MP412_Barrel", rel = "", pos = Vector(-0.28, -5, -1.963), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -157,6 +167,10 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .85
+self.FireSound = "CW_MP412_FIRE"
+if self.ActiveAttachments.am_snakeshot then
+	self.FireSound = "DOIM37_FIRE"
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

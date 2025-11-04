@@ -517,6 +517,16 @@ function SWEP:unloadWeapon()
 	self:SetClip1(0)
 end
 
+function SWEP:unloadWeaponPartially()
+
+	local amt = self:Clip1()
+
+	if amt >= (self.Primary.ClipSize_Orig +1) then
+		self.Owner:SetAmmo(self.Owner:GetAmmoCount(self.Primary.Ammo) + (amt - self.Primary.ClipSize_Orig), self.Primary.Ammo)
+		self:SetClip1(self.Primary.ClipSize_Orig)
+	end
+end
+
 function SWEP:setBodygroup(main, sub)
 	if SERVER then
 		return

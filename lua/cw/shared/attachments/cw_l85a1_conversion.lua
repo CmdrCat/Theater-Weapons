@@ -16,9 +16,9 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	self.Primary.ClipSize = 1
 	self.Primary.ClipSize_Orig = 1
+	self:unloadWeaponPartially()
 	self.Chamberable = false
 	self.FireSound = "CW_M16A2_FIRE"
     self.FireSoundSuppressed = "CW_FAL_FIRE_SUPPRESSED"

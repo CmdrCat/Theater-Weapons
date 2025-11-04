@@ -33,6 +33,16 @@ if CLIENT then
 
 	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .85
+
+	SWEP.BaseArm = "Bip01 L UpperArm"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverridePos = {
+	["onehand"] = {
+		["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -10), angle = Angle(0, 0, 0) }},
+	["nah"] = {
+		["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
 end
 
 SWEP.ShootWhileProne = true
@@ -121,6 +131,10 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 25 * 39.37
 self.DamageFallOff = .85
+self.FireSound = "CW_MR96_FIRE_SHORT"
+if self.ActiveAttachments.am_snakeshot then
+	self.FireSound = "CW_SAIGA12K_FIRE"
+end
 if self.ActiveAttachments.bg_regularbarrel then
 	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 end

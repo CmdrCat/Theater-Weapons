@@ -207,6 +207,12 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 10 * 39.37
 self.DamageFallOff = .85
+self.FireSound = "CW_G2_FIRE"
+self.FireSoundSuppressed = "CW_G2_FIRE_SUPPRESSED"
+if self.ActiveAttachments.am_snakeshot then
+	self.FireSound = "DOIM37_FIRE"
+	self.FireSoundSuppressed = "CW_SAIGA12K_FIRE_SUPPRESSED"
+end
 if self.ActiveAttachments.am_atow_lowvel then
 	self.DamageFallOff = ((self.DamageFallOff * 1.2))
 end

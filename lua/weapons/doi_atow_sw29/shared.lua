@@ -201,7 +201,10 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 	self.EffectiveRange = 30 * 39.37
 	self.DamageFallOff = .85
-	
+	self.FireSound = "DOIWEBLEY2_FIRE"
+	if self.ActiveAttachments.am_snakeshot then
+		self.FireSound = "DOIM37_FIRE"
+	end
 	if self.ActiveAttachments.doi_atow_29ext then
 		self.EffectiveRange = ((self.EffectiveRange + 10 * 39.37))
 		self.DamageFallOff = ((self.DamageFallOff - .05))
@@ -225,6 +228,7 @@ self.Owner.ViewAff = 0
 	end
 	if self.ActiveAttachments.am_atow_riot then
 		self.EffectiveRange = ((self.EffectiveRange - 7.5 * 39.37))
+		self.FireSound = "DOIM37_FIRE"
 end
 		
 		clip = self:Clip1()	

@@ -35,4 +35,25 @@ end
 
 end
 
+function att:detachFunc()
+		function self:fireAnimFunc()
+	clip = self:Clip1()
+	cycle = 0
+	rate = 1
+	anim = "safe"
+	prefix = ""
+	suffix = ""
+	if self:isAiming() then
+		suffix = suffix .. "_aim"
+		cycle = self.ironFireAnimStartCycle
+	end
+	self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+end
+
+	self.RoundBeltBoneNames = {
+		"Bullet_1",
+		"Bullet_2",
+	}
+end
+
 CustomizableWeaponry:registerAttachment(att)

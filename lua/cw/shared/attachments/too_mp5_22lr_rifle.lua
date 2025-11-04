@@ -20,6 +20,7 @@ function att:attachFunc()
 	self:CycleFiremodes()
 	self.Primary.ClipSize = 25
 	self.Primary.ClipSize_Orig = 25
+	self:unloadWeaponPartially()
 	self.FireSound = "CW_MP7_OFFICIAL_FIRE"
 	self.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
 	self.Primary.Ammo = ".22 LR"

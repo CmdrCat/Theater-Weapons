@@ -51,6 +51,16 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .8
 
+	SWEP.BaseArm = "l_upperarm"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverridePos = {
+    ["onehand"] = {
+        ["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 5, 0), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
+	
 	SWEP.AttachmentModelsVM = {
 		["md_cobram2"] = {model = "models/cw2/attachments/cobra_m2.mdl", bone = "body", pos = Vector(7.498, -1.479, 0.002), angle = Angle(0, 180, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255)},
 		["md_rail"] = {model = "models/cw2/attachments/slimpistolrail.mdl", bone = "body", pos = Vector(3.48, -0.452, 0), angle = Angle(0, 0, -90), size = Vector(0.1, 0.1, 0.1)},

@@ -31,10 +31,10 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
-	self:unloadWeapon()
 	self.ForegripOverride = false
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	self:unloadWeaponPartially()
 	if self.MagBoneName then
 	self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
 	end

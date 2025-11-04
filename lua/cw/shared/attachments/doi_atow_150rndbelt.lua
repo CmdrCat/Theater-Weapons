@@ -16,6 +16,7 @@ end
 function att:attachFunc()
 	self.Primary.ClipSize = 150
 	self.Primary.ClipSize_Orig = 150
+	self:unloadWeaponPartially()
 end
 
 function att:detachFunc()

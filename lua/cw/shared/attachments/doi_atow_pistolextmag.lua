@@ -29,9 +29,9 @@ end
 
 function att:detachFunc()
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.off)
-	self:unloadWeapon()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	self:unloadWeaponPartially()
 	self.Animations = {fire = {"base_fire","base_fire2","base_fire3"},
 	fire_aim = {"iron_fire","iron_fire2","iron_fire3"},
 	fire_last = {"base_firelast"},

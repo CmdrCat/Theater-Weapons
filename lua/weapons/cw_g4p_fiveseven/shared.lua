@@ -62,6 +62,16 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.01
 	SWEP.BoltBonePositionRecoverySpeed = 25 -- how fast does the bolt bone move back into it's initial position after the weapon has fired
 	
+	SWEP.BaseArm = "Bone01"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverridePos = {
+    ["onehand"] = {
+        ["Bone01"] = { scale = Vector(1, 1, 1), pos = Vector(-2, 0, 0), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["Bone01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
+
 	SWEP.AttachmentModelsVM = {
 		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "frame", rel = "", pos = Vector(-3, 0, 0.2), angle = Angle(0, 0, 90), size = Vector(0.349, 0.349, 0.349)},
 		["md_docter"] = { type = "Model", model = "models/wystan/attachments/2octorrds.mdl", bone = "slide", rel = "", pos = Vector(-0.2, 0.284, -0.08), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

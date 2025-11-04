@@ -30,7 +30,7 @@ if CLIENT then
 	SWEP.ROMEO4TPos = Vector(-2.6, 10, -0.72)
 	SWEP.ROMEO4TAng = Vector(0, 0, 0)
 
-	SWEP.IronsightPos = Vector(-2.613, 25, 0.519)
+	SWEP.IronsightPos = Vector(-2.613, 15, 0.519)
 	SWEP.IronsightAng = Vector(0.699, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.631, 5, -0.64)
@@ -51,6 +51,16 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 30 * 39.37
 	SWEP.DamageFallOff_Orig = .85
 	
+	SWEP.BaseArm = "ValveBiped.Bip01_L_UpperArm"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverridePos = {
+    ["onehand"] = {
+        ["ValveBiped.Bip01_L_UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, -7, 0), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["ValveBiped.Bip01_L_UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
+
 	SWEP.BackupSights = {
 	["md_microt1"] = {[1] = Vector(-5.5, 15, -3), [2] = Vector(5, 0, -30)},
 	["too_reflex_mrs"] = {[1] = Vector(-5.5, 7.5, -2.5), [2] = Vector(5, 0, -30)},
@@ -182,7 +192,6 @@ SWEP.ReloadHalt = 1.89
 
 SWEP.ReloadTime_Empty = 2.9
 SWEP.ReloadHalt_Empty = 2.9
-
 
 SWEP.ADSFireAnim = true
 

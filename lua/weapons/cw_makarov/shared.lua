@@ -56,6 +56,16 @@ if CLIENT then
 	SWEP.SlideBGs = {main = 1, pm = 0, pb = 1}
 	SWEP.SuppressorBGs = {main = 2, pm = 1, pb = 2, none = 0}
 	SWEP.MagBGs = {main = 3, regular = 0, extended = 1}
+	SWEP.BaseArm = "Left_U_Arm"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverride = true
+	SWEP.ForegripOverridePos = {
+    ["onehand"] = {
+        ["Left_U_Arm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -10), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["Left_U_Arm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
 end
 
 SWEP.ShootWhileProne = true

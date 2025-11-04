@@ -26,7 +26,6 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
-	self:unloadWeapon()
 	self.canOffsetMagBone = false
 	
 	if CLIENT then
@@ -38,6 +37,7 @@ function att:detachFunc()
 	
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	self:unloadWeaponPartially()
 end
 
 CustomizableWeaponry:registerAttachment(att)

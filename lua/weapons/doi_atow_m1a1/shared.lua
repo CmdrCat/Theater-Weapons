@@ -272,7 +272,13 @@ if self.FireMode == "semi" then
 	
 	self.EffectiveRange = 30 * 39.37
 	self.DamageFallOff = .6
+	self.FireSound = "DOITHOM1928_FIRE"
+	self.FireSoundSuppressed = "DOITHOM1928_FIRE_SUPPRESSED"
 	
+	if self.ActiveAttachments.am_atow_riot then
+		self.FireSound = "DOIM37_FIRE"
+		self.FireSoundSuppressed = "CW_SAIGA12K_FIRE_SUPPRESSED"
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end
