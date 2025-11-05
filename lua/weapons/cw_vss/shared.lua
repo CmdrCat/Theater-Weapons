@@ -215,13 +215,16 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 90 * 39.37
 self.DamageFallOff = .1
+self.PrintName = "VSS Vintorez"
 if (self.ActiveAttachments.bg_asval) then
 self.EffectiveRange = ((self.EffectiveRange - 40 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + .35))
+self.PrintName = "AS VAL"
 end
 if (self.ActiveAttachments.bg_sr3m) then
 self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + .6))
+self.PrintName = "SR-3M"
 end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))

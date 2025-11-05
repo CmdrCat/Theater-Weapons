@@ -1,7 +1,7 @@
 local att = {}
 att.name = "doi_atow_stenmk5"
-att.displayName = "Sten Mk.V"
-att.displayNameShort = "Mk.V"
+att.displayName = "Sten Mk V"
+att.displayNameShort = "Mk V"
 att.isBG = true
 att.SpeedDec = 5
 
@@ -20,6 +20,7 @@ function att:attachFunc()
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.on)
 	self.ForegripOverride = true
 	self.ForegripParent = "grip"
+	self.PrintName = "Sten Mk V"
 end
 
 function att:detachFunc()
@@ -27,6 +28,7 @@ function att:detachFunc()
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.off)
 	self.ForegripOverride = true
 	self.ForegripParent = "none"
+	self.PrintName = "Sten Gun"
 end
 
 CustomizableWeaponry:registerAttachment(att)

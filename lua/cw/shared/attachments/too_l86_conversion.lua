@@ -10,5 +10,12 @@ if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "Uses custom internals machined by C.G.I.", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
+function att:attachFunc()
+	self.PrintName = "Liberator"
+end
+
+function att:detachFunc()
+	self.PrintName = "L86 LSW"
+end
 
 CustomizableWeaponry:registerAttachment(att)

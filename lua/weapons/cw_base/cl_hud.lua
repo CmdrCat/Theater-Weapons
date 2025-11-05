@@ -88,7 +88,7 @@ function SWEP:crosshairVisible()
 	end
 	
 	-- or are reloading the weapon
-	if (self.IsReloading or self.IsFiddlingWithSuppressor) and self.Cycle <= 0.9 then
+	if (self.IsReloading or self.IsFiddlingWithSuppressor) and self.Cycle <= 0.9 and not self.isDualwield then
 		return false
 	end
 	

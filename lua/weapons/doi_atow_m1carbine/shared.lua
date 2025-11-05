@@ -239,6 +239,11 @@ SWEP.ReloadHalt_Empty = 4.3
 
 function SWEP:IndividualThink()
 	self.RecoilToSpread = (self.FireMode == "auto") and self.RecoilToSpreadAuto or self.RecoilToSpreadSemi
+	self.PrintName = "M1 Carbine"
+	
+	if self.ActiveAttachments.doi_atow_m2carbineconv then
+		self.PrintName = "M2 Carbine"
+	end
 	
 	if self.ActiveAttachments.doi_atow_altsight then
 	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.14), [2] = Vector(0.25, 0.0355, 0)},

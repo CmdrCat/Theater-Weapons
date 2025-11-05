@@ -240,6 +240,12 @@ function SWEP:IndividualThink()
 	
 	self.EffectiveRange = 55 * 39.37
 	self.DamageFallOff = .25
+
+	self.PrintName = "M1A1 Carbine"
+	
+	if self.ActiveAttachments.doi_atow_m2carbineconv then
+		self.PrintName = "M2A1 Carbine"
+	end
 	
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

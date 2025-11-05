@@ -16,12 +16,14 @@ function att:attachFunc()
 	self.FireSound = "DOIOWEN_FIRE"
 	self.FireSoundSuppressed = "DOISTEN_SUPPRESSED"
 	self.Primary.Ammo = "9x19MM"
+	self.PrintName = "PAM-1"
 end
 
 function att:detachFunc()
 	self.FireSound = "DOIM3_FIRE"
 	self.FireSoundSuppressed = "DOIM3_FIRE_SUPP"
 	self.Primary.Ammo = ".45 ACP"
+	self.PrintName = "M3 Grease Gun"
 end
 
 

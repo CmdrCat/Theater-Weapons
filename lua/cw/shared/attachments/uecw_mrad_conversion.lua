@@ -36,9 +36,14 @@ end
 	self.FireSound = "DOIG98_FIRE"
     self.FireSoundSuppressed = "CW_SVD_OFFICIAL_FIRE_SUPPRESSED"
 	self.Primary.Ammo = ".308 Winchester"
+	self.PrintName = "Barrett MRAD"
 end
 
 function att:detachFunc()
+	self.FireSound = "CW_M98_FIRE"
+	self.FireSoundSuppressed = "CW_M98_FIRE_SUPPRESSED"
+	self.Primary.Ammo = ".338 Lapua"
+	self.PrintName = "Barrett M98 Bravo"
 	function att:detachFunc()
 		function self:fireAnimFunc()
 	clip = self:Clip1()
@@ -59,9 +64,6 @@ end
 		"Bullet_2",
 	}
 end
-	self.FireSound = "CW_M98_FIRE"
-	self.FireSoundSuppressed = "CW_M98_FIRE_SUPPRESSED"
-	self.Primary.Ammo = ".338 Lapua"
 end
 
 CustomizableWeaponry:registerAttachment(att)

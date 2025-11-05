@@ -15,11 +15,13 @@ end
 
 function att:attachFunc()
 	self.SpeedDec = 55
+	self.PrintName = "HK11"
 	self.Trivia = {text = "The HK11 is a machine gun variant fitted with a heavy barrel; it is used both in squad automatic and designated marksman roles.", x = -100, y = -900}
 end
 
 function att:detachFunc()
 	self.SpeedDec = 40
+	self.PrintName = "G3A3"
 	self.Trivia = {text = "A battle rifle made in collaboration between Heckler & Koch and CETME.", x = -100, y = -900}
 end
 

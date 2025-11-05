@@ -1,7 +1,7 @@
 local att = {}
 att.name = "doi_atow_owenmk2"
-att.displayName = "Owen Mk.II"
-att.displayNameShort = "Mk.II"
+att.displayName = "Owen Mark 2/3"
+att.displayNameShort = "Mark 2/3"
 att.isBG = true
 att.SpeedDec = 5
 
@@ -17,10 +17,12 @@ end
 
 function att:attachFunc()
 	self:setBodygroup(self.BodyBGs.main, self.BodyBGs.on)
+	self.PrintName = "Owen Mark 2/3"
 end
 
 function att:detachFunc()
 	self:setBodygroup(self.BodyBGs.main, self.BodyBGs.off)
+	self.PrintName = "Owen Gun"
 end
 
 CustomizableWeaponry:registerAttachment(att)

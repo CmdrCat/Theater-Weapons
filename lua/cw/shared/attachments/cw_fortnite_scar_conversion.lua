@@ -19,6 +19,7 @@ end
 function att:attachFunc()
 	self.Primary.ClipSize = 30
 	self.Primary.ClipSize_Orig = 30
+	self.PrintName = "Assault Rifle (Legendary)"
 	self.Trivia = {text = "Fully automatic, flexible assault rifle capable of handling all types of combat scenarios.", x = -100, y = -450}
 end
 
@@ -26,6 +27,7 @@ function att:detachFunc()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 	self:unloadWeaponPartially()
+	self.PrintName = "SCAR-H"
 	self.Trivia = {text = "A reliable battle rifle used by the US Army. Make sure your fingers are clear of the charging handle.", x = -100, y = -450}
 end
 

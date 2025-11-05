@@ -25,6 +25,9 @@ if CLIENT then
 
 	SWEP.SprintPos = Vector(2.526, -9.506, -7)
 	SWEP.SprintAng = Vector(70, 0, 0)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -3.511, -5.283)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
 	SWEP.RMRPos = Vector(-2.004, 5, -0.238)
 	SWEP.RMRAng = Vector(0, 0, 0)
@@ -56,7 +59,9 @@ if CLIENT then
 
 	SWEP.ForegripOverridePos = {
     ["onehand"] = {
-        ["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 5, 0), angle = Angle(0, 0, 0) }},
+        ["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 6, 0), angle = Angle(0, 0, 0) }},
+	["akimbo"] = {
+        ["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(-6, 6, 0), angle = Angle(0, 0, 0) }},
     ["nah"] = {
         ["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 	}
@@ -98,14 +103,24 @@ SWEP.Trivia = {text = "A handgun design so legendary, it is still used over a de
 SWEP.Attachments = {[1] = {header = "Muzzle", offset = {-350, -200}, atts = {"md_cobram2"}},
 	[2] = {header = "Sight", offset = {300, -300}, atts = {"md_rmr"}, exclusions = {md_insight_x2 = true}},
 	[3] = {header = "Laser", offset = {-350, 250}, atts = {"md_insight_x2"}, exclusions = {md_rmr = true}},
-	[4] = {header = "Technique", offset = {500, 450}, atts = {"doi_atow_onehand"}},
+	[4] = {header = "Technique", offset = {500, 450}, atts = {"cw_akimbo", "doi_atow_onehand"}},
 	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {reload = "reload",
 	fire = {"shoot1", "shoot2"},
 	idle = "idle",
 	draw = "draw"}
-	
+
+SWEP.Animations_Akimbo = {reload = "reload",
+	fire = {"shoot1", "shoot2"},
+	idle = "idle",
+	draw = "draw",
+	reload_right = "reload",
+	fire_right = {"shoot1", "shoot2"},
+	idle_right = "idle",
+	draw_right = "draw"
+}
+
 SWEP.Sounds = {draw = {{time = 0.3, sound = "CW_FOLEY_LIGHT"},
 	{time = 0.75, sound = "CW_M1911_TRIGGER"}},
 
@@ -134,6 +149,9 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/pistols/m1911.mdl"
 SWEP.WorldModel		= "models/weapons/cw_pist_m1911.mdl"
+
+SWEP.ViewModel_AkimboL = "models/cw2/pistols/m1911.mdl"
+SWEP.ViewModel_AkimboR = "models/cw2/pistols/m1911.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

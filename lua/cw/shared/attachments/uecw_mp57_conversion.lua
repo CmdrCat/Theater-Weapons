@@ -18,6 +18,7 @@ function att:attachFunc()
 	self.FireModes = {"auto", "safe"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
+	self.PrintName = "MP57"
 end
 
 function att:detachFunc()
@@ -25,6 +26,7 @@ function att:detachFunc()
 	self.FireModes = {"semi","safe"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
+	self.PrintName = "Five-seveN"
 end
 
 CustomizableWeaponry:registerAttachment(att)

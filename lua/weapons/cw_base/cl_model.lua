@@ -99,6 +99,9 @@ function SWEP:CreateShell(sh)
 	
 	sh = self.Shell or sh
 	vm = self.CW_VM
+		if fmode and fmode == 1 then
+		vm = self.CW_VM2
+	end
 	
 	att = vm:GetAttachment(2)
 	
@@ -456,6 +459,9 @@ function SWEP:CreateMuzzle()
 	end
 
 	vm = self.CW_VM
+		if fmode and fmode == 1 then
+		vm = self.CW_VM2
+	end
 	
 	if IsValid(vm) then
 		vm:StopParticles()
@@ -800,6 +806,10 @@ function SWEP:applyOffsetToVM()
 	
 	self.CW_VM:SetPos(pos)
 	self.CW_VM:SetAngles(ang)
+	if self.CW_VM2 then
+		self.CW_VM2:SetPos(pos)
+		self.CW_VM2:SetAngles(ang)
+	end
 end
 
 function SWEP:_drawViewModel()
@@ -822,6 +832,18 @@ function SWEP:_drawViewModel()
 			hands:SetParent(self.CW_VM)
 			hands:AddEffects(EF_BONEMERGE)
 			hands:DrawModel()
+		end
+	end
+
+	if self.CW_VM2 then
+		self.CW_VM2:FrameAdvance(FrameTime())
+		self.CW_VM2:SetupBones()
+		if not self.CW_VM2.hideModel then
+			self.CW_VM2:DrawModel()
+		end
+
+		if self.CW_CSTM_ARMS2 and not self.CW_CSTM_ARMS2.hideModel then
+			self.CW_CSTM_ARMS2:DrawModel()
 		end
 	end
 	
@@ -880,6 +902,12 @@ function SWEP:draw3D2DHUD()
 	ang:RotateAroundAxis(ang:Right(), 90)
 	ang:RotateAroundAxis(ang:Up(), -90)
 	
+	if self.isDualwield then
+		mag1pos = 2
+	else
+		mag1pos = 4
+	end
+
 	cam.Start3D2D(att.Pos + ang:Forward() * 4, ang, self.HUD_3D2DScale)
 		cam.IgnoreZ(true)
 			local FT = FrameTime()
@@ -987,6 +1015,11 @@ function SWEP:draw3D2DHUD()
 			CustomizableWeaponry.callbacks.processCategory(self, "drawTo3D2DHUD")
 		cam.IgnoreZ(false)
 	cam.End3D2D()
+
+	if not self.isDualwield then
+		return
+	end
+
 end
 	
 function SWEP:lengthAngle(ang)
@@ -1071,6 +1104,12 @@ end
 
 function SWEP:getMuzzlePosition()
 	return self.CW_VM:GetAttachment(self.MuzzleAttachment)
+end
+
+function SWEP:getMuzzlePosition2()
+	if self.isDualwield then
+		return self.CW_VM2:GetAttachment(self.MuzzleAttachment)
+	end
 end
 
 -- interaction menu, AKA weapon interaction menu
@@ -1649,7 +1688,12 @@ function SWEP:DrawWorldModel()
 		
 		if IsValid(wm) then
 			if IsValid(self.Owner) then
-				pos, ang = GetBonePosition(self.Owner, self.Owner:LookupBone("ValveBiped.Bip01_R_Hand"))
+				if self.isDualwield then
+					pos, ang = GetBonePosition(self.Owner, self.Owner:LookupBone("ValveBiped.Bip01_L_Hand"))
+					ang:Add(Angle(0,0,180))
+				else
+					pos, ang = GetBonePosition(self.Owner, self.Owner:LookupBone("ValveBiped.Bip01_R_Hand"))
+				end
 				
 				if pos and ang then
 					RotateAroundAxis(ang, Right(ang), self.WMAng[1])

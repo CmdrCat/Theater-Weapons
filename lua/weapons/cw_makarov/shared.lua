@@ -161,6 +161,10 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .75
+self.PrintName = "PM"
+if self.ActiveAttachments.bg_makarov_pb6p9 then
+	self.PrintName = "PB"
+end
 if (self.ActiveAttachments.bg_makarov_pm_suppressor) then
 self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + 0.05))

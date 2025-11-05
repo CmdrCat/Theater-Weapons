@@ -66,7 +66,7 @@ CustomizableWeaponry:registerAttachment(att)
 
 local att = {}
 att.name = "bg_asval"
-att.displayName = "AS VAL variant"
+att.displayName = "AS VAL Variant"
 att.displayNameShort = "AS VAL"
 att.isBG = true
 
@@ -88,7 +88,7 @@ CustomizableWeaponry:registerAttachment(att)
 
 local att = {}
 att.name = "bg_sr3m"
-att.displayName = "SR-3M variant"
+att.displayName = "SR-3M Variant"
 att.displayNameShort = "SR-3M"
 att.isBG = true
 att.overrideSuppressorStatus = false -- it will override the weapon's default suppressor status to FALSE

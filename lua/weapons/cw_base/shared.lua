@@ -356,6 +356,178 @@ local tbl, tbl2
 function SWEP:IndividualInitialize()
 end
 
+function SWEP:ActivateDualwield()
+    -- toggle attachmentequipped flag
+    self.AttachmentEquipped = true
+
+    -- change animations
+    self.Animations = self.Animations_Akimbo
+    self.NormalHoldType_Orig = self.NormalHoldType
+    self.NormalHoldType = "duel"
+	
+    -- enable secondary firemode
+    self.Secondary.ClipSize		= self.Primary.ClipSize
+	self.Secondary.DefaultClip	= self.Primary.DefaultClip
+	self.Secondary.Ammo			= self.Primary.Ammo
+    self.Secondary.Automatic    = self.Primary.Automatic
+
+	self.isDualwield = true
+
+    if CLIENT then
+        -- change the model to the akimbo viewmodel
+        self.CW_VM:SetModel( self.ViewModel_AkimboL )
+
+        -- create a second viewmodel for the right hand gun...
+        self.CW_VM2 = self:createManagedCModel(self.ViewModel_AkimboR, RENDERGROUP_BOTH)
+        self.CW_VM2:SetNoDraw(true)
+        self.CW_VM2:SetupBones()
+		local mtr = Matrix()
+		mtr:Scale(Vector(1, -1, 1))
+		
+		self.CW_VM2:EnableMatrix("RenderMultiply", mtr)
+
+        -- ...a second set of hands for that second gun...
+        local arms = self.Owner:GetHands()
+        self.CW_CSTM_ARMS2 = self:createManagedCModel(arms:GetModel(), RENDERGROUP_BOTH)
+        self.CW_CSTM_ARMS2:SetNoDraw(true)
+        self.CW_CSTM_ARMS2:SetupBones()
+        self.CW_CSTM_ARMS2:SetParent(self.CW_VM2)
+        self.CW_CSTM_ARMS2:AddEffects(EF_BONEMERGE)
+        self.CW_CSTM_ARMS2:AddEffects(EF_BONEMERGE_FASTCULL)
+
+        -- and a second worldmodel
+        if self.WM then
+			if self.WM2 then
+				self.WMEnt2 = self:createManagedCModel(self.WM2, RENDERGROUP_BOTH)
+			else
+				self.WMEnt2 = self:createManagedCModel(self.WM, RENDERGROUP_BOTH)
+			end
+			if self.WMDW then
+				self.WMEnt:Remove()
+				self.WMEnt = self:createManagedCModel(self.WMDW, RENDERGROUP_BOTH)
+				self.WMEnt:SetNoDraw(true)
+			end
+			self.WMEnt2:SetNoDraw(true)
+        end
+
+
+    end
+
+    if SERVER then
+	    local ammo = self.Owner:GetAmmoCount(self.Secondary.Ammo)
+	    self:SetClip2( math.Clamp(self:Clip1(), 0, ammo) )
+        self.Owner:RemoveAmmo(math.Clamp(self:Clip1(), 0, ammo), self.Secondary.Ammo)
+    end
+	
+	if not self.FirstDeploy then
+		if self:Clip1() == 0 and self.Animations["idle_empty"] then
+			self:sendWeaponAnim("idle_empty", 1, 0, true )
+		else
+			self:sendWeaponAnim("idle", 1, 0, true )
+		end
+		if self.CW_VM2 then
+			if self:Clip2() == 0 and self.Animations["idle_empty_right"] then
+				self:sendWeaponAnim("idle_empty", 1, 0, true, 1)
+			else
+				self:sendWeaponAnim("idle", 1, 0, true, 1)
+			end
+		end
+	end
+	
+	if self.ShotgunReload and self.ShotgunReload_Orig then
+		self.ShotgunReload = nil
+	end
+	
+	self.CustomizePos = self.CustomizePos_Akimbo
+	self.CustomizeAng = self.CustomizeAng_Akimbo
+	
+	if self.BoltBone and self.BoltBone_Orig then
+		self.BoltBone = nil
+		self.HoldBoltWhileEmpty = false
+	end
+	
+	self.CalcViewCamera = nil
+	
+end
+
+function SWEP:DisableDualwield()
+    -- reset attachment flag
+	self.AttachmentEquipped = nil
+
+    -- reset animation
+    self.Animations = self.Animations_Normal
+    self.NormalHoldType = self.NormalHoldType_Orig
+
+    -- put ammo back into the reserve
+    if SERVER then
+        self.Owner:GiveAmmo(self:Clip2(), self.Secondary.Ammo, true)
+    end
+
+    -- disable secondary fire mode
+    self.isDualwield = nil
+    self.Secondary.ClipSize 	= -1
+	self.Secondary.DefaultClip	= -1
+	self.Secondary.Ammo			= "none"
+    self.Secondary.Automatic    = self.Secondary.Automatic_Orig
+
+    if CLIENT then
+        -- reset viewmodel
+        self.CW_VM:SetModel( self.ViewModel )
+		
+		self:sendWeaponAnim("idle", 1, 0, false, 1)
+		
+        -- remove second viewmodel...
+        if self.CW_VM2 then
+            self.CW_VM2:Remove()
+            self.CW_VM2 = nil
+        end
+
+        -- ... and hands ...
+        if self.CW_CSTM_ARMS2 then
+            self.CW_CSTM_ARMS2:Remove()
+            self.CW_CSTM_ARMS2 = nil
+        end
+
+        -- ... and worldmodel
+        if self.WMEnt2 then
+            self.WMEnt2:Remove()
+            self.WMEnt2 = nil
+        end
+		
+		if self.WMDW then
+			self.WMEnt:Remove()
+			self.WMEnt = self:createManagedCModel(self.WM, RENDERGROUP_BOTH)
+			self.WMEnt:SetNoDraw(true)
+		end
+				
+        if self.dt.CurrentSkin and self.dt.CurrentSkin != "" then
+            self:applySkin( self.dt.CurrentSkin )
+        end
+
+    end
+
+	if self:Clip1() == 0 then
+		self:sendWeaponAnim("idle_empty", 1, 0, true, -1)
+	else
+		self:sendWeaponAnim("idle", 1, 0, true, -1)
+	end
+		
+	if self.ShotgunReload_Orig then
+		self.ShotgunReload = self.ShotgunReload_Orig
+	end
+	
+	self.CustomizePos = self.CustomizePos_Orig
+	self.CustomizeAng = self.CustomizeAng_Orig
+	
+	if self.BoltBone_Orig then
+		self.BoltBone = self.BoltBone_Orig
+		self.HoldBoltWhileEmpty = true
+	end
+	
+	self.CalcViewCamera = "Camera"
+	
+end
+
 local validPlayerProneFunction = function(self)
 	return self.Owner:IsProne()
 end
@@ -771,6 +943,37 @@ function SWEP:Reload()
 		end
 	end
 	
+	-- dualwield reload logic
+	if self.isDualwield then
+		-- nothing todo if the magazine is full
+		if not self.RightReloadDelay then
+			if overrideMagCheck or mag2 < self.Secondary.ClipSize then
+				-- make sure we have required ammo
+				if overrideAmmoCheck or self.Owner:GetAmmoCount(self.Secondary.Ammo) > 0 then
+					-- send lower aim so we reverse any model swaps
+					if self.dt.State == CW_AIMING and SERVER then
+						SendUserMessage( "CW_LOWERAIM", self.Owner )
+					end
+
+					self.dt.State = CW_IDLE
+					
+					local ammo = self.Owner:GetAmmoCount(self.Primary.Ammo)
+					local clips = self.Primary.ClipSize
+					local clip = self:Clip1()
+					
+					if self.Owner:KeyPressed(IN_RELOAD) then
+						if (ammo > clips - clip) then
+							self:beginRightReload()
+						end
+					end
+				end
+			end
+		end
+	end		-- dualwield reload logic end
+	if cantReload then
+		return
+	end
+
 	if not overrideAmmoCheck then
 		if self.Owner:GetAmmoCount(self.Primary.Ammo) == 0 then
 			return
@@ -821,11 +1024,21 @@ function SWEP:beginReload()
 				self.Primary.ClipSize = self.Primary.ClipSize_Orig
 			end
 			
-			reloadTime = self.ReloadTime_Empty
-			reloadHalt = self.ReloadHalt_Empty
+			if self.isDualwield and (self.ReloadTime_Empty_Akimbo and self.ReloadHalt_Empty_Akimbo) then
+				reloadTime = self.ReloadTime_Empty_Akimbo
+				reloadHalt = self.ReloadHalt_Empty_Akimbo
+			else
+				reloadTime = self.ReloadTime_Empty
+				reloadHalt = self.ReloadHalt_Empty
+			end
 		else
-			reloadTime = self.ReloadTime
-			reloadHalt = self.ReloadHalt
+			if self.isDualwield and (self.ReloadTime_Akimbo and self.ReloadHalt_Akimbo) then
+				reloadTime = self.ReloadTime_Akimbo
+				reloadHalt = self.ReloadHalt_Akimbo
+			else
+				reloadTime = self.ReloadTime
+				reloadHalt = self.ReloadHalt
+			end
 			
 			if self.Chamberable then
 				self.Primary.ClipSize = self.Primary.ClipSize_Orig + 1
@@ -855,6 +1068,67 @@ function SWEP:beginReload()
 	
 	self.Owner:SetAnimation(PLAYER_RELOAD)
 end
+
+function SWEP:beginRightReload()
+	local mag, ammo = self:Clip2(), self.Owner:GetAmmoCount(self.Secondary.Ammo)
+
+	if self.ShotgunReload then
+		local reloadHalt = CT + self.ReloadStartTime / self.ReloadSpeed
+
+	--	self.GlobalDelay = reloadHalt
+		self.RightReloadDelay = reloadHalt
+		self:SetNextSecondaryFire( reloadHalt )
+
+		self.RightShotgunReloadState = 1
+		self.RightForcedReloadStop = false
+
+		self:sendWeaponAnim( "reload_start", self.Altmode.ReloadSpeed, 0, false, 1 )
+
+		if SERVER then
+			self:SetClip2( mag + 1 )
+			--self.Owner:SetAmmo( ammo - 1, self.Secondary.Ammo )
+		end
+
+		-- if we've filled up the weapon (or we have no ammo left), we go to the "end reload" state
+		if mag + 1 == self.Secondary.ClipSize or ammo - 1 == 0 then
+			self.RightShotgunReloadState = 2
+		end
+	else
+		local reloadTime = nil
+		local reloadHalt = nil
+
+		if mag == 0 then
+			if self.isDualwield and (self.ReloadTime_Empty_Akimbo and self.ReloadHalt_Empty_Akimbo) then
+				reloadTime = self.ReloadTime_Empty_Akimbo
+				reloadHalt = self.ReloadHalt_Empty_Akimbo
+			else
+				reloadTime = self.ReloadTime_Empty
+				reloadHalt = self.ReloadHalt_Empty
+			end
+		else
+			if self.isDualwield and (self.ReloadTime_Akimbo and self.ReloadHalt_Akimbo) then
+				reloadTime = self.ReloadTime_Akimbo
+				reloadHalt = self.ReloadHalt_Akimbo
+			else
+				reloadTime = self.ReloadTime
+				reloadHalt = self.ReloadHalt
+			end
+		end
+
+		reloadTime = reloadTime / self.ReloadSpeed
+		reloadHalt = reloadHalt / self.ReloadSpeed
+
+		self.GlobalDelay = CT + reloadHalt
+		self.RightReloadDelay = CT + reloadTime
+		self:SetNextSecondaryFire( CT + reloadHalt )
+
+		self:sendWeaponAnim( self:Reload2Animation(), self.ReloadSpeed, 0, true, 1 )
+
+	end
+
+	self.Owner:SetAnimation( PLAYER_RELOAD )
+end
+
 
 function SWEP:finishReload()
 	mag, ammo = self:Clip1(), self.Owner:GetAmmoCount(self.Primary.Ammo)
@@ -1824,6 +2098,123 @@ function SWEP:SecondaryAttack()
 		self:CycleFiremodes()
 		return
 	end
+
+if self.isDualwield then
+		if CustomizableWeaponry.callbacks.processCategory(self, "preFire") then
+			return
+		end
+
+		if self.InactiveWeaponStates[self.dt.State] then
+			return
+		end
+
+		if self.RightReloadDelay then
+			return
+		end
+
+		if mag2 == 0 then
+			if self.wpnEmptyType == "pistol" then
+				self:EmitSound( "MW3_DRYFIRE_PISTOL", 100, 100 )
+			elseif self.wpnEmptyType == "smg" then
+				self:EmitSound( "MW3_DRYFIRE_SMG", 100, 100 )
+			elseif self.wpnEmptyType == "rifle" then
+				self:EmitSound( "MW3_DRYFIRE_RIFLE", 100, 100 )
+			else
+				self:EmitSound( "CW_EMPTY", 100, 100 )
+			end
+
+			self:SetNextSecondaryFire( CT + 1 )
+			return
+		end
+		
+		-- thirdperson animation
+		self.Owner:SetAnimation( PLAYER_ATTACK1 )
+
+		if IsFirstTimePredicted() then
+			local muzzleData = EffectData()
+			muzzleData:SetEntity( self )
+			util.Effect( "ma85_muzzleflash_dw", muzzleData )
+			
+			-- take care of looping fire sounds
+			if self.LoopFireSound then
+				-- start the sound if necessary
+				if not self.LoopSound then
+					if self.dt.Suppressed then
+						self:EmitSound(self.FireSoundSuppressed, 105)
+					else
+						self:EmitSound(self.FireSound, 105)
+					end
+					self.LoopSound = true
+				end
+
+				self.LoopSoundTime = CT + self.FireDelay + 0.02
+			else
+				if self.dt.Suppressed then
+					self:EmitSound(self.FireSoundSuppressed, 105, 100)
+					if self.FireMechanicSoundSuppressed then
+						self:EmitSound(self.FireMechanicSoundSuppressed, 105, 100)
+					end
+					if self.FireTailSoundSuppressed then
+						self:EmitSound(self.FireTailSoundSuppressed, 105, 100)
+					end
+				else
+					self:EmitSound(self.FireSound, 105, 100)
+					if self.FireMechanicSound then
+						self:EmitSound(self.FireMechanicSound, 105, 100)
+					end
+					if self.FireTailSound then
+						self:EmitSound(self.FireTailSound, 105, 100)
+					end
+				end
+			end
+
+			if self:Clip2() == 1 and self.Animations["fire_last_right"] then
+				self:sendWeaponAnim( "fire_last", self.FireAnimSpeed or 1, 0, true, 1 )
+			else
+				self:sendWeaponAnim( "fire", self.FireAnimSpeed or 1, 0, true, 1 )
+			end
+
+			if self.Primary.Ammo == "40MM" or self.Primary.Ammo == "40mm" then
+				if SERVER then
+					CustomizableWeaponry.grenadeTypes.createGrenadeEntity(self, "bo_grenade_chinalake")
+				end
+			else
+				self:FireBullet( self.Damage, self.CurCone, self.ClumpSpread, self.Shots )
+			end
+
+			self:makeFireEffects( 1 )
+
+			if CLIENT then
+				self:simulateRecoil()
+			end
+
+			self:addFireSpread(CT)
+
+			if SP and SERVER then
+				SendUserMessage("CW_Recoil", self.Owner)
+			end
+
+			-- apply a global delay after shooting, if there is one
+			if self.GlobalDelayOnShoot then
+				self.GlobalDelay = CT + self.GlobalDelayOnShoot
+			end
+		end
+
+		self:MakeRecoil()
+
+		local suppressAmmoUsage = CustomizableWeaponry.callbacks.processCategory(self, "shouldSuppressAmmoUsage")
+		if not suppressAmmoUsage then
+			local num = self.AmmoPerShot or 1
+			if self:Clip2() > 0 then
+				self:SetClip2( self:Clip2() - num )
+			end
+		end
+
+		self:SetNextSecondaryFire( CT + (self.FireDelay or 0.05) )
+		self.ReloadWait = CT + (self.FireDelay or 0.05)
+
+		return
+	end		-- dualwield fire logic end
 	
 	if self.InactiveWeaponStates[self.dt.State] or (self.dt.State == CW_AIMING and self.HoldToAim) then
 		return

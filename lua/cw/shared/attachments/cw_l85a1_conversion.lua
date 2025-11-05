@@ -22,6 +22,7 @@ function att:attachFunc()
 	self.Chamberable = false
 	self.FireSound = "CW_M16A2_FIRE"
     self.FireSoundSuppressed = "CW_FAL_FIRE_SUPPRESSED"
+	self.PrintName = "L85A1"
 end
 
 function att:detachFunc()
@@ -30,6 +31,7 @@ function att:detachFunc()
 	self.Chamberable = true
 	self.FireSound = "CW_L85A2_FIRE"
     self.FireSoundSuppressed = "CW_L85A2_FIRE_SUPPRESSED"
+	self.PrintName = "L85A2"
 end
 
 CustomizableWeaponry:registerAttachment(att)

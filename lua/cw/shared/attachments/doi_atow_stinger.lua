@@ -18,11 +18,13 @@ function att:attachFunc()
 	self.Primary.ClipSize = 100
 	self.Primary.ClipSize_Orig = 100
 	self:unloadWeaponPartially()
+	self.PrintName = "Stinger"
 end
 
 function att:detachFunc()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	self.PrintName = "M1919A6 Browning"
 end
 
 CustomizableWeaponry:registerAttachment(att)
