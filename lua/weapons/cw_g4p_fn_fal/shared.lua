@@ -68,6 +68,9 @@ if CLIENT then
 	
 	SWEP.ELCANPos = Vector(-2.725, -3.201, -0.071)
 	SWEP.ELCANAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(-2.725, -3.201, -0.071)
+	SWEP.ThermalAng = Vector(0, 0, 0)
 	
 	SWEP.CSGOACOGPos = Vector(-2.721, -2.8, 0.119)
 	SWEP.CSGOACOGAng = Vector(0, 0, 0)
@@ -118,6 +121,7 @@ if CLIENT then
 		["md_uecw_csgo_556"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_sig.mdl", bone = "weapon", rel = "", pos = Vector(-0.076, 0.56, 0.939), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", rel = "", pos = Vector(0.28, 5.199, -3.721), angle = Angle(0, 180, 0), size = Vector(0.85, 0.85, 0.85)},
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "weapon", rel = "", pos = Vector(0.28, 5.199, -3.721), angle = Angle(0, 180, 0), size = Vector(0.85, 0.85, 0.85)},
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "weapon", rel = "", pos = Vector(0.28, 5.199, -3.721), angle = Angle(0, 180, 0), size = Vector(0.85, 0.85, 0.85)},
 		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "weapon", rel = "", pos = Vector(1.5, 8.199, 1.75), angle = Angle(0, 90, 0), size = Vector(1.2, 1.2, 1.2)},
 		["md_uecw_csgo_scope_ssg"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_scope_bender.mdl", bone = "weapon", rel = "", pos = Vector(-0.08, -1.201, 0.949), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "weapon", rel = "", pos = Vector(-0.026, -0.45, -1.121), angle = Angle(0, 180, 0), size = Vector(1.899, 1.899, 1.899), color = Color(255, 255, 255, 255)},
@@ -155,7 +159,7 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "Adopted by many NATO countries, this battle rifle was dubbed \"the right arm of the free world.\"", x = 0, y = -450}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_ballistic"}},
 	[3] = {header = "Laser", offset = {-500, 400}, atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {1100, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}

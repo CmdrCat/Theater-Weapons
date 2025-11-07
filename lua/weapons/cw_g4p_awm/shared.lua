@@ -74,6 +74,9 @@ if CLIENT then
 	
 	SWEP.ELCANPos = Vector(-2.72, -2.8, 0.28)
 	SWEP.ELCANAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(-2.72, -2.8, 0.28)
+	SWEP.ThermalAng = Vector(0, 0, 0)
 	
 	SWEP.FAS2AimpointPos = Vector(-2.78, -2.8, 0.326)
 	SWEP.FAS2AimpointAng = Vector(0, 0, 0)
@@ -120,6 +123,7 @@ if CLIENT then
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "Base", rel = "", pos = Vector(-0, -0.981, 0.564), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "Base", rel = "", pos = Vector(-0.251, -5.538, -3.681), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Base", rel = "", pos = Vector(-0.251, -5.538, -3.681), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Base", rel = "", pos = Vector(-0.251, -5.538, -3.681), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["vertgrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "Base", rel = "", pos = Vector(-0.362, -5.115, -4.128), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Base", rel = "", pos = Vector(0.105, 9.359, -2.06), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), bodygroup = {1,1}},
 		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "Base", rel = "", pos = Vector(-1.28, -7.544, 1.124), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -169,7 +173,7 @@ SWEP.GlobalDelayOnShoot = 1.6
 SWEP.Trivia = {text = "An accurate sniper rifle designed for magnum rifle rounds. The original design was made in a shed. With a box of scraps!", x = -100, y = -450}
 
 SWEP.Attachments = {
-	{header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
+	{header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
 	{header = "Muzzle", offset = {100, -350}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
 	{header = "Handguard", offset = {-500, -500}, atts = {"md_bipod"}},
 	{header = "Laser", offset = {-500, 100}, atts = {"md_anpeq15"}},

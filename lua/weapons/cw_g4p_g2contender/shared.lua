@@ -76,6 +76,9 @@ if CLIENT then
 	
 	SWEP.ELCANPos = Vector(-2.98, -3.961, 0.112)
 	SWEP.ELCANAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(-2.98, -3.961, 0.112)
+	SWEP.ThermalAng = Vector(0, 0, 0)
 	
 	SWEP.M203Pos = Vector(-0.562, -2.481, 0.24)
 	SWEP.M203Ang = Vector(0, 0, 0)
@@ -94,6 +97,7 @@ if CLIENT then
 		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "Front", rel = "", pos = Vector(-5, 4.05, 0.333), angle = Angle(-90, 0, -90), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "Front", rel = "", pos = Vector(-4.566, 3.92, 0.228), angle = Angle(-90, 0, -90), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Front", rel = "", pos = Vector(-4.5, 3.95, 0.321), angle = Angle(-90, 0, -90), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Front", rel = "", pos = Vector(-4.5, 3.95, 0.321), angle = Angle(-90, 0, -90), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Front", rel = "", pos = Vector(3.045, -1.3, -0.004), angle = Angle(-90, 0, -90), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "Front", rel = "", pos = Vector(1.161, -1.1, -0.004), angle = Angle(-90, 0, -90), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "Front", rel = "", pos = Vector(1.649, -0.7, -1.5), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255)},
@@ -118,7 +122,7 @@ SWEP.CustomizationMenuScale = 0.01
 
 SWEP.Trivia = {text = "A precise, single-shot pistol popular with hunters.", x = 0, y = -650}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -500},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan", "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {md_frontsight = true, md_rearsight = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -500},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan", "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {md_frontsight = true, md_rearsight = true}},
 	[2] = {header = "Muzzle", offset = {-700, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	["+reload"] = {header = "Ammo", offset = {800, -100}, atts = {"am_atow_lowvel", "am_atow_ap", "am_snakeshot"}}}
 	

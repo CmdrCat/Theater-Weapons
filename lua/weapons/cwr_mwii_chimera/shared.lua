@@ -111,6 +111,7 @@ if CLIENT then
 		["saphoenix"] = { type = "Model", model = "models/shared/wparts/chimera/cw_reshed_att_saphoenix.mdl", bone = "weapon", rel = "", pos = Vector(3.854, -4.335, -13.978), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.741, 1.863), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["cronenzerop"] = { type = "Model", model = "models/shared/optics/r_cronenzerop.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.741, 1.863), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/shared/optics/r_cronenzerop.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.741, 1.863), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["szbattleoptic"] = { type = "Model", model = "models/shared/optics/r_sz_battleoptic.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.741, 1.863), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(0, -0.583, 7.691), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(0, -0.498, 8.218), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -132,6 +133,8 @@ if CLIENT then
 	SWEP.ZEROPos = Vector(-3.881, -7.206, 0.239)
     SWEP.ZEROAng = Vector(0, 0, 0)
 
+	SWEP.ThermalPos = Vector(-3.881, -7.206, 0.239)
+    SWEP.ThermalAng = Vector(0, 0, 0)
 
 	SWEP.BATPos = Vector(-3.881, -7.206, 0.119)
     SWEP.BATAng = Vector(0, 0, 0)
@@ -177,7 +180,7 @@ SWEP.FrontBGs = {main = 6 , fs = 0 , none = 3}
 SWEP.Attachments = {
 	
 
-	{header = "Optic", offset = {950 , -600},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer","cronenzerop"}},
+	{header = "Optic", offset = {950 , -600},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer","cronenzerop","md_thermal"}},
 	{header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline",}, exclusions = {shroudhg = true}},
 	{header = "Muzzle", offset = {-450 , -400},  atts = {"md_saker","hard20"}, dependencies = {saphoenix = true}},
 	{header = "Bottom Rail", offset = {-650 , 100},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}},

@@ -49,6 +49,9 @@ if CLIENT then
 	SWEP.ELCANPos = Vector(2.02, -2.8, 0.4)
 	SWEP.ELCANAng = Vector(0, 0, 0)
 
+	SWEP.ThermalPos = Vector(2.02, -2.8, 0.4)
+	SWEP.ThermalAng = Vector(0, 0, 0)
+
 	SWEP.EoTechPos = Vector(2.012, -3.28, 0.62)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 	
@@ -109,6 +112,7 @@ if CLIENT then
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "smdimport", rel = "", pos = Vector(0, 3, -2.52), angle = Angle(0, 180, 180), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "smdimport", rel = "", pos = Vector(0.26, -3.6, 3.1), angle = Angle(180, 0, 0), size = Vector(1, 1, 1)},
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "smdimport", rel = "", pos = Vector(0.36, -2.2, 3.18), angle = Angle(0, 180, 180), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0)},
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "smdimport", rel = "", pos = Vector(0.36, -2.2, 3.18), angle = Angle(0, 180, 180), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0)},
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "smdimport", rel = "", pos = Vector(-0.419, 20.406, 1.975), angle = Angle(0, 0, 180), size = Vector(0.699, 0.699, 0.699)},
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "smdimport", pos = Vector(0, 1, -4.1), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "smdimport", pos = Vector(0, 2, -2.7), angle = Angle(180, 180, 0), size = Vector(0.4, 0.4, 0.4)},
@@ -166,7 +170,7 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "An iconic assault rifle that takes inspiration from other popular rifles.", x = 0, y = -500}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -400},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -400},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-400, 0}, atts = {"md_foregrip", "md_bipod"}},
 	[4] = {header = "Laser", offset = {0, 475}, atts = {"md_anpeq15"}},

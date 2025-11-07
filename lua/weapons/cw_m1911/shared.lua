@@ -103,7 +103,7 @@ SWEP.Trivia = {text = "A handgun design so legendary, it is still used over a de
 SWEP.Attachments = {[1] = {header = "Muzzle", offset = {-350, -200}, atts = {"md_cobram2"}},
 	[2] = {header = "Sight", offset = {300, -300}, atts = {"md_rmr"}, exclusions = {md_insight_x2 = true}},
 	[3] = {header = "Laser", offset = {-350, 250}, atts = {"md_insight_x2"}, exclusions = {md_rmr = true}},
-	[4] = {header = "Technique", offset = {500, 450}, atts = {"cw_akimbo", "doi_atow_onehand"}},
+	[4] = {header = "Technique", offset = {500, 450}, atts = {"doi_atow_onehand"}}, -- "cw_akimbo"
 	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {reload = "reload",

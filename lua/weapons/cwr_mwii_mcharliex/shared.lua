@@ -137,6 +137,7 @@ if CLIENT then
 		["bruenbm20"] = { type = "Model", model = "models/shared/wparts/m13/cw_reshed_att_bruenbm20.mdl", bone = "weapon", rel = "", pos = Vector(3, -4.7, -17), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["bruenechelon"] = { type = "Model", model = "models/shared/wparts/m13/cw_reshed_att_bruenechelon.mdl", bone = "weapon", rel = "", pos = Vector(3, -4.7, -17), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["cronenzerop"] = { type = "Model", model = "models/shared/optics/r_cronenzerop.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.893, 0.95), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/shared/optics/r_cronenzerop.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.893, 0.95), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 8.817), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["bruentiltgrip_s"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 7.), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0, -3.168, 0.861), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -153,6 +154,9 @@ if CLIENT then
 
 	SWEP.ZEROPos = Vector(-3.06, -9.733, 0.472)
     SWEP.ZEROAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(-3.06, -9.733, 0.472)
+    SWEP.ThermalAng = Vector(0, 0, 0)
 
 	SWEP.ENFORPos = Vector(-3.06, -5.564, 0.639)
     SWEP.ENFORAng = Vector(0, 0, 0)
@@ -212,7 +216,7 @@ SWEP.AttachmentPosDependency = {
 
 SWEP.Attachments = {
 
-	[1] = {header = "Optic", offset = {1200 , -350},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop"}},
+	[1] = {header = "Optic", offset = {1200 , -350},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop", "md_thermal"}},
 	[6] = {header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline",}, exclusions = {shroudhg = true}},
 	[2] = {header = "Muzzle", offset = {-400 , -300},  atts = {"md_saker","hard20"}},
 	[4] = {header = "Bottom Rail Long", offset = {-600 , 150},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}, exclusions = {bruenbm20 = true}},

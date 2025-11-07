@@ -63,6 +63,9 @@ if CLIENT then
 	
 	SWEP.ELCANPos = Vector(2.539, -3, -0.44)
 	SWEP.ELCANAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(2.539, -3, -0.44)
+	SWEP.ThermalAng = Vector(0, 0, 0)
 	
 	SWEP.TrijiconPos = Vector(2.528, -6.2, -0.058)
 	SWEP.TrijiconAng = Vector(0, 0, 0)
@@ -126,6 +129,7 @@ if CLIENT then
 		["md_m203"] = { type = "Model", model = "models/cw2/attachments/m203.mdl", bone = "Base", rel = "", pos = Vector(-2.34, 10.659, 2.4), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), animated = true},
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "Base", rel = "", pos = Vector(0.3, 5.719, -1.885), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Base", rel = "", pos = Vector(0.298, 5.892, -2.497), angle = Angle(0, 180, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Base", rel = "", pos = Vector(0.298, 5.892, -2.497), angle = Angle(0, 180, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "Base", rel = "", pos = Vector(-0.04, -1.201, 0.419), angle = Angle(0, 180, 0), size = Vector(1.899, 1.899, 1.899)},
 		["md_uecw_csgo_acog"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_acog.mdl", bone = "Base", rel = "", pos = Vector(-0.04, 6.199, -0.51), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Base", rel = "", pos = Vector(0, -15.341, -1.101), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
@@ -169,7 +173,7 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "An advanced assault rifle platform meant to replace the US Army's M4. It instead became C.G.I.'s service rifle.", x = 50, y = -500}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}},
 	[2] = {header = "Muzzle", offset = {-300, -500},  atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-300, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Magazine", offset = {-300, 350},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag"}},

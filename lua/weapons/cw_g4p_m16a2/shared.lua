@@ -66,6 +66,9 @@ if CLIENT then
 	
 	SWEP.ELCANPos = Vector(3.898, -2, 0.45)
 	SWEP.ELCANAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(3.898, -2, 0.45)
+	SWEP.ThermalAng = Vector(0, 0, 0)
 	
 	SWEP.M203Pos = Vector(-0.562, -2.481, 0.24)
 	SWEP.M203Ang = Vector(0, 0, 0)
@@ -96,6 +99,7 @@ if CLIENT then
 	SWEP.AttachmentModelsVM = {
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "Body", rel = "", pos = Vector(0.312, -2.507, -9.039), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Body", rel = "", pos = Vector(0.312, -2.507, -9.039), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Body", rel = "", pos = Vector(0.312, -2.507, -9.039), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "Body", rel = "", pos = Vector(0.163, -2.283, -9.818), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "Body", rel = "", pos = Vector(-0.438, -1.726, 15.869), angle = Angle(0, 0, 90), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Body", rel = "", pos = Vector(0.03, -0.175, 8.555), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
@@ -147,7 +151,7 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "A classic assault rifle known for its 3-round burst. Its variants still see widespread use to this day.", x = 0, y = -450}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {300, -350},  atts = {"md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {300, -350},  atts = {"md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_thermal"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-500, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-500, -100}, atts = {"md_foregrip", "md_bipod"}},
 	[4] = {header = "Conversion", offset = {800, 325}, atts = {"uecw_m16a3_conversion"}},

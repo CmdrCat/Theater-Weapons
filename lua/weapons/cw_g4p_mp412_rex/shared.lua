@@ -32,6 +32,9 @@ if CLIENT then
 
 	SWEP.ELCANPos = Vector(-2.31, 5, -0.567)
 	SWEP.ELCANAng = Vector(0, 0.14, 0)
+
+	SWEP.ThermalPos = Vector(-2.31, 5, -0.567)
+	SWEP.ThermalAng = Vector(0, 0.14, 0)
 	
 	SWEP.DocterPos = Vector(-2.27, 5, 0.16)
 	SWEP.DocterAng = Vector(0, 0.3, 0)
@@ -80,7 +83,8 @@ if CLIENT then
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "MP412_Barrel", rel = "", pos = Vector(-0.28, -5, -1.963), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_docter"] = { type = "Model", model = "models/wystan/attachments/2octorrds.mdl", bone = "MP412_Barrel", rel = "", pos = Vector(-0.239, -1.44, 2.483), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "MP412_Barrel", rel = "", pos = Vector(0, -6.2, 0.1), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255)},
-		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "MP412_Barrel", rel = "", pos = Vector(-0.28, -5, -1.963), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "MP412_Barrel", rel = "", pos = Vector(-0.28, -5, -1.963), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "MP412_Barrel", rel = "", pos = Vector(-0.28, -5, -1.963), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 	
 	SWEP.LaserPosAdjust = Vector(0, 0, 0)--{x = 1, y = 0, z = 0}
@@ -94,7 +98,7 @@ SWEP.CanRestOnObjects = false
 
 SWEP.Trivia = {text = "A Russian break-action revolver meant to be exported to foreign countries.", x = -500, y = -550}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {-550, -400}, atts = {"md_acog_fixed", "md_elcan", "md_docter"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {-550, -400}, atts = {"md_acog_fixed", "md_elcan", "md_docter", "md_thermal"}},
 	[2] = {header = "Technique", offset = {500, 200}, atts = {"doi_atow_onehand"}},
 	["+reload"] = {header = "Ammo", offset = {-800, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_snakeshot"}}}
 

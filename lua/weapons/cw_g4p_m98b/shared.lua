@@ -76,6 +76,9 @@ if CLIENT then
 	
 	SWEP.ELCANPos = Vector(-2.201, -3.034, 0.474)
 	SWEP.ELCANAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(-2.201, -3.034, 0.474)
+	SWEP.ThermalAng = Vector(0, 0, 0)
 	
 	SWEP.FAS2AimpointPos = Vector(-2.201, -3.034, 0.8)
 	SWEP.FAS2AimpointAng = Vector(0, 0, 0)
@@ -115,6 +118,7 @@ if CLIENT then
 --		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "M98_Body", rel = "", pos = Vector(0.4, 1.649, 1.713), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "M98_Body", rel = "", pos = Vector(-0.322, -16.25, -3.82), angle = Angle(0, 0, 0), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "M98_Body", rel = "", pos = Vector(-0.322, -16.25, -3.82), angle = Angle(0, 0, 0), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "M98_Body", rel = "", pos = Vector(-0.322, -16.25, -3.82), angle = Angle(0, 0, 0), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "M98_Body", rel = "", pos = Vector(0, -1.5, -1.351), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "M98_Body", rel = "", pos = Vector(-1.55, -19.75, 1.625), angle = Angle(0, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 --		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "M98_Body", rel = "", pos = Vector(0.419, 0.8, 1.94), angle = Angle(0, 180, 0), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -162,7 +166,7 @@ SWEP.BipodFireAnim = true
 
 SWEP.Trivia = {text = "A bolt-action sniper rifle chambered in .338 Lapua Magnum.", x = 0, y = -600}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_elcan", "md_acog_fixed", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500},  atts = {"md_elcan", "md_acog_fixed", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
 	[2] = {header = "Muzzle", offset = {100, -500}, atts = {"md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
 	[3] = {header = "Handguard", offset = {-500, -500}, atts = {"md_bipod"}},
 	[4] = {header = "Laser", offset = {-800, 0}, atts = {"md_anpeq15"}},

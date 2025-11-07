@@ -59,6 +59,9 @@ if CLIENT then
 	
 	SWEP.ELCANPos = Vector(-1.785, -2.78, -0.78)
 	SWEP.ELCANAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(4.04, -5, 0.5)
+	SWEP.ThermalAng = Vector(0, 0, 0)
 	
 	SWEP.CSGOACOGPos = Vector(-1.795, -3.8, -0.64)
 	SWEP.CSGOACOGAng = Vector(0, 0, 0)
@@ -92,6 +95,7 @@ if CLIENT then
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.558, -0.051, 2.14), angle = Angle(0, 90, 0), size = Vector(0.3, 0.3, 0.3), color = Color(255, 255, 255, 255)},
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body_mesh", rel = "", pos = Vector(3.588, -0.24, -2.158), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "body_mesh", rel = "", pos = Vector(-3.8, -0.101, 2.25), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255)},
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "body_mesh", rel = "", pos = Vector(-2.011, -0.075, 2.035), angle = Angle(0, -90, 0), size = Vector(0.649, 0.649, 0.649), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -138,7 +142,7 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "A complex assault rifle with a unique hyperburst mechanism. The rifle of choice for C.G.I. counter-terrorists.", x = -250, y = -450}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -350},  atts = {"md_microt1","md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -350},  atts = {"md_microt1","md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-600, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-400,0}, atts = {"md_foregrip"}},
 	[4] = {header = "Magazine", offset = {-200, 500}, atts = {"md_uecw_akmag"}},
