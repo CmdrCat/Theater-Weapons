@@ -35,6 +35,7 @@ if CLIENT then
 	SWEP.ShellDelay = .93
 	SWEP.ShellDelaySlow = .93
 	SWEP.ShellDelayFast = .8
+	SWEP.ShellDelaySemi = .01
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 4.75, y = -3, z = .5}
 	
@@ -112,10 +113,12 @@ SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 
+SWEP.AttachmentExclusions = {["doi_atow_stripperclips"] = {"doi_atow_pedersen_device"}}
+
 SWEP.Attachments = {[3] = {header = "Reload", offset = {-200, -300}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_m73"] = true, ["doi_atow_wina5"] = true, ["doi_atow_unertl"] = true}},
 [1] = {header = "Optic", offset = {250, -400}, atts = {"doi_atow_m73","doi_atow_wina5","doi_atow_unertl"}},
 [4] = {header = "Finish", offset = {1050, -100}, atts = {"doi_atow_wornfinish"}},
-[2] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt"}},
+[2] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt", "doi_atow_pedersen_device"}},
 ["+reload"] = {header = "Ammo", offset = {0, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"iron_fire"},
@@ -169,6 +172,9 @@ SWEP.Primary.ClipSize		= 5
 SWEP.Primary.DefaultClip	= 55
 SWEP.Primary.Automatic		= false
 
+SWEP.Secondary.DefaultClip		= 45
+SWEP.Secondary.Ammo			= ".30 Carbine"
+
 if CustomizableWeaponry_doi_atow_hl2ammo then
 SWEP.Primary.Ammo			= "AR2"
 else
@@ -196,6 +202,7 @@ SWEP.ADSFireAnim = true
 SWEP.GlobalDelayOnShoot = 60/38
 SWEP.GlobalDelayOnShootSlow = 60/38
 SWEP.GlobalDelayOnShootFast = 60/47
+SWEP.GlobalDelayOnShootSemi = 60/400
 SWEP.Chamberable = false
 SWEP.ShotgunReload = true
 SWEP.PreventQuickScoping = false
@@ -238,8 +245,8 @@ function SWEP:IndividualThink()
 
 
 self.Owner.ViewAff = 0
-	self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast or self.ShellDelaySlow
-	self.GlobalDelayOnShoot = (self.ActiveAttachments.doi_atow_greasedbolt) and self.GlobalDelayOnShootFast or self.GlobalDelayOnShootSlow
+	self.ShellDelay = ((self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast) or ((self.ActiveAttachments.doi_atow_pedersen_device) and self.ShellDelaySemi) or self.ShellDelaySlow
+	self.GlobalDelayOnShoot = ((self.ActiveAttachments.doi_atow_greasedbolt) and self.GlobalDelayOnShootFast) or ((self.ActiveAttachments.doi_atow_pedersen_device) and self.GlobalDelayOnShootSemi) or self.GlobalDelayOnShootSlow
 	
 		if self.ActiveAttachments.doi_atow_m73 or self.ActiveAttachments.doi_atow_wina5 or self.ActiveAttachments.doi_atow_unertl then
 		self:setBodygroup(self.BoltBGs.main, self.BoltBGs.on)
@@ -252,6 +259,10 @@ self.Owner.ViewAff = 0
 	self.EffectiveRange = 90 * 39.37
 	self.DamageFallOff = .15
 	
+	if self.ActiveAttachments.doi_atow_pedersen_device then
+		self.EffectiveRange = self.EffectiveRange - 60 * 39.37
+		self.DamageFallOff = ((self.DamageFallOff + 0.1))
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end
@@ -270,7 +281,7 @@ end
 function SWEP:fireAnimFunc()
 	clip = self:Clip1()
 	cycle = 0
-	rate = 1.1
+	rate = 1
 	anim = "safe"
 	prefix = ""
 	suffix = ""

@@ -11,7 +11,7 @@ att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_elcan")
-	att.description = {[1] = {t = "Provides 3.4x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
+	att.description = {[1] = {t = "IR scope that highlights living beings in bright white.", c = CustomizableWeaponry.textColors.POSITIVE},
 	[2] = {t = "Narrow scope reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
 	[3] = {t = "Can be disorienting at close range.", c = CustomizableWeaponry.textColors.NEGATIVE}}
 
