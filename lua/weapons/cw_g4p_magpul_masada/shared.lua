@@ -21,9 +21,10 @@ if CLIENT then
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
 	SWEP.SnapToGrip = true
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.5
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = 16, y = 12, z = -1}
+	SWEP.ShellPosOffset = {x = 30, y = 12, z = -8}
+	                        -- ->     out     ^
 	SWEP.InvertShellEjectAngle = true
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0.43
@@ -256,12 +257,14 @@ self.DamageFallOff = 0.3
 self.FireSound = "CW_MAGPUL_MASADA_FIRE"
 self.FireSoundSuppressed = "CW_MAGPUL_MASADA_FIRE_SUPPRESSED"
 self.PrintName = "Masada"
+self.Trivia = {text = "An iconic assault rifle that takes inspiration from other popular rifles.", x = 0, y = -500}
 if self.ActiveAttachments.uecw_acr_68_conversion then
 	self.EffectiveRange = ((self.EffectiveRange + 15 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - 0.1))
 	self.FireSound = "CW_M14_FIRE"
 	self.FireSoundSuppressed = "CW_M14_FIRE_SUPPRESSED"
 	self.PrintName = "6.8 SPC ACR Carbine"
+	self.Trivia = {text = "6.8 SPC is a cartridge with properties that are midway between 5.56×45mm and 7.62×51mm.", x = 0, y = -500}
 end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))

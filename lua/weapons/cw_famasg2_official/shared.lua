@@ -49,9 +49,9 @@ if CLIENT then
 
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.5
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = -2, y = 0, z = -3}
+	SWEP.ShellPosOffset = {x = 3, y = -2, z = -1}
 	SWEP.SightWithRail = true
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.65

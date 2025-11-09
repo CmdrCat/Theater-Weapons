@@ -23,6 +23,7 @@ function att:attachFunc()
 	self.FireSound = "CW_M16A2_FIRE"
     self.FireSoundSuppressed = "CW_FAL_FIRE_SUPPRESSED"
 	self.PrintName = "L85A1"
+	self.Trivia = {text = "The L85A1 was a service rifle that was widely disliked by its users due to significant reliability issues.", x = -400, y = -500}
 end
 
 function att:detachFunc()
@@ -32,6 +33,7 @@ function att:detachFunc()
 	self.FireSound = "CW_L85A2_FIRE"
     self.FireSoundSuppressed = "CW_L85A2_FIRE_SUPPRESSED"
 	self.PrintName = "L85A2"
+	self.Trivia = {text = "A British bullpup assault rifle, having a longer range yet shorter overall length compared to other traditional rifles.", x = -400, y = -500}
 end
 
 CustomizableWeaponry:registerAttachment(att)

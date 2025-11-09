@@ -44,7 +44,7 @@ if CLIENT then
 
 	SWEP.MuzzleEffect = "muzzleflash_m14"
 	SWEP.PosBasedMuz = false
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.69
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = -2, y = 0, z = -3}
 	SWEP.SightWithRail = true

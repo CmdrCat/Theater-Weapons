@@ -22,7 +22,7 @@ if CLIENT then
 	SWEP.ShellScale = 0.7
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = -3}
-	SWEP.ShellDelay = 0.7
+	SWEP.ShellDelay = 0.69
 	SWEP.FireMoveMod = 0.6
 	
 	SWEP.DrawTraditionalWorldModel = true

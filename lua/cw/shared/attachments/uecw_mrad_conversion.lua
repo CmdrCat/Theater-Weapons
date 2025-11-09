@@ -37,6 +37,7 @@ end
     self.FireSoundSuppressed = "CW_SVD_OFFICIAL_FIRE_SUPPRESSED"
 	self.Primary.Ammo = ".308 Winchester"
 	self.PrintName = "Barrett MRAD"
+	self.ShellScale = 0.69
 end
 
 function att:detachFunc()
@@ -64,6 +65,7 @@ end
 		"Bullet_2",
 	}
 end
+self.ShellScale = 0.77
 end
 
 CustomizableWeaponry:registerAttachment(att)

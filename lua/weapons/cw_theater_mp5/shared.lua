@@ -19,9 +19,9 @@ if CLIENT then
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
 	SWEP.Shell = "smallshell"
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.81
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = 2, y = 0, z = -3}
+	SWEP.ShellPosOffset = {x = 1, y = 0, z = -3}
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.8
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.87

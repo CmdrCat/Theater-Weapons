@@ -31,7 +31,7 @@ if CLIENT then
 	SWEP.DamageFallOff_Orig = .35
 	
 	SWEP.Shell = "khr79257"
-	SWEP.ShellScale = .4
+	SWEP.ShellScale = .7
 	SWEP.ShellDelay = .69
 	SWEP.ShellDelaySlow = .69
 	SWEP.ShellDelayFast = .62

@@ -20,9 +20,9 @@ if CLIENT then
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.83
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = 4, y = 0, z = -3}
+	SWEP.ShellPosOffset = {x = 0, y = 0, z = -2}
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.9
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.8
@@ -216,15 +216,18 @@ clip = self:Clip1()
 self.EffectiveRange = 90 * 39.37
 self.DamageFallOff = .1
 self.PrintName = "VSS Vintorez"
+self.Trivia = {text = "This unique marksman rifle has an integrated suppressor and is chambered in the subsonic 9×39mm cartridge, making every shot whisper-quiet.", x = -200, y = -650}
 if (self.ActiveAttachments.bg_asval) then
-self.EffectiveRange = ((self.EffectiveRange - 40 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff + .35))
-self.PrintName = "AS VAL"
-end
+	self.EffectiveRange = ((self.EffectiveRange - 40 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + .35))
+	self.PrintName = "AS Val"
+	self.Trivia = {text = "Select-fire, integrally suppressed assault rifle almost identical to the VSS Vintorez marksman rifle. Meant to be used with a 20-round magazine.", x = -200, y = -650}
+	end
 if (self.ActiveAttachments.bg_sr3m) then
-self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
-self.DamageFallOff = ((self.DamageFallOff + .6))
-self.PrintName = "SR-3M"
+	self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + .6))
+	self.PrintName = "SR-3M"
+	self.Trivia = {text = "The SR-3M combines attributes of the SR-3, AS Val, and VSS Vintorez in a compact package.", x = -200, y = -650}
 end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))

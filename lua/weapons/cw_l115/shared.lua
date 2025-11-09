@@ -23,7 +23,7 @@ if CLIENT then
 	SWEP.MuzzleEffect = "muzzleflash_SR25"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.77
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellDelay = 0.7
 	SWEP.ShellPosOffset = {x = 0, y = -2, z = 0}

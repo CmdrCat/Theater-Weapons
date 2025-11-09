@@ -18,10 +18,10 @@ if CLIENT then
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.81
 	SWEP.ShellOffsetMul = 1
 	SWEP.Shell = "smallshell"
-	SWEP.ShellPosOffset = {x = 0, y = 1, z = -3}
+	SWEP.ShellPosOffset = {x = -5, y = 1, z = -5}
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.9
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.8

@@ -1181,6 +1181,38 @@ function SWEP:finishReload()
 	self.ReloadDelay = nil
 end
 
+function SWEP:finishRightReload()
+	local mag, ammo = self:Clip2(), self.Owner:GetAmmoCount(self.Secondary.Ammo)
+
+	if mag > 0 then
+		if ammo >= self.Secondary.ClipSize - mag then
+			if SERVER then
+				self:SetClip2( math.Clamp(self.Secondary.ClipSize, 0, self.Secondary.ClipSize) )
+				self.Owner:RemoveAmmo( self.Secondary.ClipSize - mag, self.Secondary.Ammo )
+			end
+		else
+			if SERVER then
+				self:SetClip2( math.Clamp(mag + ammo, 0, self.Secondary.ClipSize) )
+				self.Owner:RemoveAmmo(ammo, self.Primary.Ammo)
+			end
+		end
+	else
+		if ammo >= self.Secondary.ClipSize then
+			if SERVER then
+				self:SetClip2( math.Clamp(self.Secondary.ClipSize, 0, self.Secondary.ClipSize) )
+				self.Owner:RemoveAmmo(self.Secondary.ClipSize, self.Secondary.Ammo)
+			end
+		else
+			if SERVER then
+				self:SetClip2( math.Clamp(ammo, 0, self.Secondary.ClipSize) )
+				self.Owner:RemoveAmmo(ammo, self.Secondary.Ammo)
+			end
+		end
+	end
+
+	self.RightReloadDelay = nil
+end
+
 function SWEP:CycleFiremodes()
 	t = self.FireModes
 	
@@ -1482,6 +1514,9 @@ function SWEP:Think()
 	if not self.ShotgunReload then
 		if self.ReloadDelay and CT >= self.ReloadDelay then
 			self:finishReload() -- more like finnishReload ;0
+		end
+		if self.RightReloadDelay and CT >= self.RightReloadDelay then
+			self:finishRightReload()
 		end
 	end
 	
@@ -1804,8 +1839,10 @@ function SWEP:PrimaryAttack()
 		end
 	end
 	
-	if not self:canFireWeapon(2) then
-		return
+	if not self.isDualwield then
+		if not self:canFireWeapon(2) then
+			return
+		end
 	end
 	
 	if self.dt.Safe then
@@ -1902,7 +1939,9 @@ function SWEP:PrimaryAttack()
 		self.dt.State = CW_IDLE
 		self:SetNextSecondaryFire(CT + self.ForcedHipWaitTime)
 	else
-		self:SetNextSecondaryFire(CT + self.FireDelay)
+		if not self.isDualwield then
+			self:SetNextSecondaryFire(CT + self.FireDelay)
+		end
 	end
 	
 	self.ReloadWait = CT + (self.WaitForReloadAfterFiring and self.WaitForReloadAfterFiring or self.FireDelay)

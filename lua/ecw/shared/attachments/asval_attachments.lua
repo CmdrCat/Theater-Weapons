@@ -66,8 +66,8 @@ CustomizableWeaponry:registerAttachment(att)
 
 local att = {}
 att.name = "bg_asval"
-att.displayName = "AS VAL Variant"
-att.displayNameShort = "AS VAL"
+att.displayName = "AS Val Variant"
+att.displayNameShort = "AS Val"
 att.isBG = true
 
 att.statModifiers = {DamageMult = 1 / 7,

@@ -21,7 +21,7 @@ if CLIENT then
 	SWEP.SnapToGrip = true
 	SWEP.ShellScale = 0.5
 	SWEP.ShellOffsetMul = 0
-	SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
+	SWEP.ShellPosOffset = {x = 2, y = 0, z = 0}
 	SWEP.ForeGripOffsetCycle_Reload = 0.65
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 	

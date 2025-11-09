@@ -24,7 +24,7 @@ if CLIENT then
 	SWEP.SnapToGrip = true
 	SWEP.ShellScale = 0.7
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = 5, y = 0, z = -1}
+	SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
 	SWEP.Shell = "shotshell"
 	SWEP.ShellDelay = 0
 	

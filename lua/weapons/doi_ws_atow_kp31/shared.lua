@@ -23,7 +23,7 @@ if CLIENT then
 	SWEP.DamageFallOff_Orig = .55
 	
 	SWEP.Shell = "khr9x19"
-	SWEP.ShellScale = .7
+	SWEP.ShellScale = 1.25
 	SWEP.ShellDelay = 0
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 3.25, y = -4, z = -.5}

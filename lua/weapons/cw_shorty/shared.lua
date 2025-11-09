@@ -31,7 +31,7 @@ if CLIENT then
 	SWEP.PronePos = Vector(-7.397, -2.497, -1.551)
 	SWEP.ProneAng = Vector(5.618, -49.056, -15.311)
 	
-	SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
+	SWEP.ShellPosOffset = {x = -4, y = 0, z = 2}
 	SWEP.FireMoveMod = 1
 	
 	SWEP.SightWithRail = true

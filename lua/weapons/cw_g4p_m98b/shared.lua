@@ -22,10 +22,11 @@ if CLIENT then
 	SWEP.NoSilMuz = true
 	SWEP.PosBasedMuz = true
 	SWEP.SnapToGrip = true
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.77
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = -2, y = 0, z = 3}
+	SWEP.ShellPosOffset = {x = -1, y = 0, z = 0}
 	SWEP.ShellDelay = 1.2
+	SWEP.ShellDelaySlow = 1.2
 	SWEP.ShellDelayFast = 0.72
 
 	SWEP.ForeGripOffsetCycle_Draw = 0
@@ -263,7 +264,7 @@ SWEP.SnapToIdlePostReload = true
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
-self.ShellDelay = (self.ActiveAttachments.uecw_mrad_conversion) and self.ShellDelayFast
+self.ShellDelay = (self.ActiveAttachments.uecw_mrad_conversion) and self.ShellDelayFast or self.ShellDelaySlow
 self.GlobalDelayOnShoot = (self.ActiveAttachments.uecw_mrad_conversion) and self.GlobalDelayOnShootFast
 clip = self:Clip1()
 self.EffectiveRange = 150 * 39.37

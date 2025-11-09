@@ -28,10 +28,10 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	
 	SWEP.Shell = "khr9x19"
-	SWEP.ShellScale = .8
+	SWEP.ShellScale = 1.59
 	SWEP.ShellDelay = 0
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = 4.5, y = -3.5, z = -1.25}
+	SWEP.ShellPosOffset = {x = -5, y = 2, z = 0}
 
 	SWEP.IronsightPos = Vector(-2.5062, -2, 1.28)
 	SWEP.IronsightAng = Vector(-0.0021, 0.0392, 6)

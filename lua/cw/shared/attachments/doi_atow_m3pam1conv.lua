@@ -17,6 +17,7 @@ function att:attachFunc()
 	self.FireSoundSuppressed = "DOISTEN_SUPPRESSED"
 	self.Primary.Ammo = "9x19MM"
 	self.PrintName = "PAM-1"
+	self.ShellScale = 1.25
 end
 
 function att:detachFunc()
@@ -24,6 +25,7 @@ function att:detachFunc()
 	self.FireSoundSuppressed = "DOIM3_FIRE_SUPP"
 	self.Primary.Ammo = ".45 ACP"
 	self.PrintName = "M3 Grease Gun"
+	self.ShellScale = 1.59
 end
 
 

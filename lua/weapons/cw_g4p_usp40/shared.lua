@@ -23,9 +23,9 @@ if CLIENT then
 	SWEP.DryFire = true
 	
 	SWEP.Shell = "smallshell"
-	SWEP.ShellScale = 1
+	SWEP.ShellScale = 0.92
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = 2, y = 0, z = 1}
+	SWEP.ShellPosOffset = {x = 2, y = 0, z = 0}
 		
 	SWEP.MicroT1Pos = Vector(-2.095, 5, 0.07)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)

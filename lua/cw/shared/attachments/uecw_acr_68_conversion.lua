@@ -24,6 +24,7 @@ function att:attachFunc()
 	self.Primary.ClipSize_Orig = 25
 	self:unloadWeaponPartially()
 	self.Primary.Ammo = "6.8 SPC"
+	self.ShellScale = 0.61
 end
 
 function att:detachFunc()
@@ -34,6 +35,7 @@ function att:detachFunc()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.Ammo = "5.56x45MM"
+	self.ShellScale = 0.5
 end
 
 CustomizableWeaponry:registerAttachment(att)

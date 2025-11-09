@@ -28,7 +28,7 @@ if CLIENT then
 	SWEP.WMPos = Vector(-1, 1.5, 0)
 	SWEP.WMAng = Vector(0, 0, 180)
 	
-	SWEP.ShellPosOffset = {x = 4, y = 0, z = -3}
+	SWEP.ShellPosOffset = {x = 4, y = 0, z = 0}
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.9
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.8

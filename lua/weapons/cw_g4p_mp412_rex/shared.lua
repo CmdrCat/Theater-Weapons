@@ -23,7 +23,7 @@ if CLIENT then
 	SWEP.DryFire = true
 	
 	SWEP.Shell = "smallshell"
-	SWEP.ShellScale = 0
+	SWEP.ShellScale = 0.82
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = 1}
 		

@@ -16,7 +16,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = false
 
 	SWEP.Shell = "smallshell"
-	SWEP.ShellScale = 1
+	SWEP.ShellScale = 0.81
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = 1}
 

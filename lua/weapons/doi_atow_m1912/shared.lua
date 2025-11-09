@@ -199,6 +199,7 @@ self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDe
 	--end
 
 	self.EffectiveRange = 20 * 39.37
+	self.DamageFallOff = 0.5
 
 	if (self.ActiveAttachments.am_slugroundsm37) then
 	self.EffectiveRange = ((self.EffectiveRange + 25 * 39.37))

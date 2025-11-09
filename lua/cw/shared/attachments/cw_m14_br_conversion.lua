@@ -19,6 +19,7 @@ function att:attachFunc()
 	self.FireModes = {"semi","safe","auto"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
+	self.Trivia = {text = "The practicality of firing this in full-auto can be debated due to its significant recoil.", x = -873, y = -450}
 end
 
 function att:detachFunc()
@@ -26,6 +27,7 @@ function att:detachFunc()
 	self.FireModes = {"semi","safe"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
+	self.Trivia = {text = "A modern marksman rifle version of the classic M14.", x = -300, y = -450}
 end
 
 CustomizableWeaponry:registerAttachment(att)

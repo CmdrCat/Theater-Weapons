@@ -29,7 +29,7 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0
 	
 	SWEP.Shell = "khr9x19"
-	SWEP.ShellScale = .6
+	SWEP.ShellScale = 1.25
 	SWEP.ShellDelay = 0
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = -4, y = -2.35, z = -.25}

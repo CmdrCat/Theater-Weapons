@@ -19,9 +19,9 @@ if CLIENT then
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
-	SWEP.ShellScale = 0.7
+	SWEP.ShellScale = 0.5
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = -7, y = 0, z = 0}
+	SWEP.ShellPosOffset = {x = 0, y = -5, z = -2}
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.52
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.52
@@ -83,8 +83,6 @@ if CLIENT then
 	
 	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
-	
-	SWEP.Trivia = {text = "This weapon comes with a grippod pre-installed, which acts like a foregrip and a bipod.", x = -500, y = -360}
 end
 
 SWEP.MuzzleVelocity = 930 -- in meter/s

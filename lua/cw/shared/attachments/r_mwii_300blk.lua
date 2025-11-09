@@ -19,12 +19,14 @@ function att:attachFunc()
     self.FireSound = "MWII_CHIMERA_FIRE"
     self.FireSoundSuppressed = "CW_TOO_UMP45_FIRE_SUPPRESSED"
 	self.Primary.Ammo = ".300 Blackout"
+    self.Trivia = {text = "Now chambered in .300 Blackout, the Virtus is exceptionally deadly, yet whisper-quiet, at close-range.", x = -250, y = -450}
 end
 
 function att:detachFunc()
     self.FireSound = "MWII_M13B_FIRE"
     self.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
 	self.Primary.Ammo = "5.56x45MM"
+    self.Trivia = {text = "The Virtus delivers unmatched performance with modular adaptibility and precision. BSTF's standard-issue rifle.", x = -250, y = -450}
 end
 
 CustomizableWeaponry:registerAttachment(att)

@@ -34,7 +34,7 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_ReloadEnd = 0
 	
 	SWEP.Shell = "smallshell"
-	SWEP.ShellScale = .425
+	SWEP.ShellScale = 1.25
 	SWEP.NoShells = true
 
 	SWEP.IronsightPos = Vector(-1.9003, 1, 0.4979)

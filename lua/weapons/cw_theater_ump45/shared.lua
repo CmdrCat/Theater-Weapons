@@ -21,7 +21,7 @@
         SWEP.PosBasedMuz = true
         SWEP.SnapToGrip = true
         SWEP.Shell = "smallshell"
-        SWEP.ShellScale = 0.7
+        SWEP.ShellScale = 1.03
         SWEP.ShellOffsetMul = 1
         SWEP.ShellPosOffset = {x = 2, y = 0, z = -3}
         SWEP.ForeGripOffsetCycle_Draw = 0

@@ -25,7 +25,7 @@ if CLIENT then
 	SWEP.DamageFallOff_Orig = .5
 	
 	SWEP.Shell = "khr79257"
-	SWEP.ShellScale = .4756
+	SWEP.ShellScale = 0.7
 	SWEP.ShellDelay = 0
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2.4, y = -2.25, z = 0}
@@ -83,7 +83,7 @@ if CLIENT then
 	
 	SWEP.M82AxisAlign = {right = .02, up = -.015, forward = 0}
 	SWEP.LuaVMRecoilAxisMod = {vert = .2, hor = 0, roll = .35, forward = .2, pitch = .5}
-	SWEP.Trivia = {text = "Deploying the integrated bipod on a ledge will improve your recoil control.", x = -50, y = -400}
+	SWEP.Trivia = {text = "One of the most influencial weapon designs of WWII, the FG 42 has inspired the designs of many other weapons. Has an integrated bipod.", x = -450, y = -400}
 end
 end
 

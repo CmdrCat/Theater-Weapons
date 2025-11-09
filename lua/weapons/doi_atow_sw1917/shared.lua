@@ -34,7 +34,7 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_ReloadEnd = 0
 	
 	SWEP.Shell = "smallshell"
-	SWEP.ShellScale = .425
+	SWEP.ShellScale = 0.98
 	SWEP.NoShells = true
 	
 	SWEP.ForegripOverridePos = {

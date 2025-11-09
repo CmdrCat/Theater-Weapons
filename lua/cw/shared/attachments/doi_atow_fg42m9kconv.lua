@@ -16,4 +16,12 @@ if CLIENT then
 	att.description = {[1] = {t = "Tight hipfire spread at the cost of lethality", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 
+function att:attachFunc()
+	self.Trivia = {text = "The Fallschirmjägergewehr 42 Type 1. JOIN THE BATTLE FOR NET NEUTRALITY! THE FUTURE OF THE INTERNET DEPENDS ON YOU!", x = -450, y = -400}
+end
+
+function att:detachFunc()
+	self.Trivia = {text = "One of the most influencial weapon designs of WWII, the FG 42 has inspired the designs of many other weapons. Has an integrated bipod.", x = -450, y = -400}
+end
+
 CustomizableWeaponry:registerAttachment(att)

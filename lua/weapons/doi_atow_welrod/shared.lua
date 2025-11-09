@@ -33,7 +33,7 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0 
 	
 	SWEP.Shell = "khr380"
-	SWEP.ShellDelay = .7
+	SWEP.ShellDelay = 1.25
 	SWEP.ShellScale = .95
 	SWEP.ShellDelaySlow = .7
 	SWEP.ShellDelayFast = .6
