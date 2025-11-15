@@ -90,12 +90,12 @@ SWEP.MagBGs = {main = 2, off = 0, on = 1}
 SWEP.MuzzleVelocity = 250
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300}, atts = {"md_rmr"}, exclusions = {md_insight_x2 = true}},
-[2] = {header = "Laser", offset = {-350, 250}, atts = {"md_insight_x2"}, exclusions = {md_rmr = true}},
-[4] = {header = "Magazine", offset = {550, 250}, atts = {"doi_atow_pistolextmag"}},
-[3] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_unisuppressor"}},
-[5] = {header = "Finish", offset = {175, -350}, atts = {"doi_atow_m1911satinfinish","doi_atow_c96goldfinish"}},
-[6] = {header = "Stance", offset = {175, -350}, atts = {"cw_akimbo"}},
-["+reload"] = {header = "Ammo", offset = {-700, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
+[2] = {header = "Laser", offset = {-500, 250}, atts = {"md_insight_x2"}, exclusions = {md_rmr = true}},
+[4] = {header = "Magazine", offset = {550, 350}, atts = {"doi_atow_pistolextmag"}},
+[3] = {header = "Muzzle", offset = {-700, -350}, atts = {"doi_atow_unisuppressor"}},
+[5] = {header = "Finish", offset = {-150, -400}, atts = {"doi_atow_m1911satinfinish","doi_atow_c96goldfinish"}},
+-- [6] = {header = "Stance", offset = {175, -350}, atts = {"cw_akimbo"}},
+["+reload"] = {header = "Ammo", offset = {600, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire3"},
 	fire_aim = {"iron_fire","iron_fire2","iron_fire3"},
