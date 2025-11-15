@@ -7,6 +7,7 @@ include("sh_sounds.lua")
 include("sh_soundscript.lua")
 		
 		SWEP.magType = "arMag"
+		CustomizableWeaponry.shells:addNew("khr30carbine", "models/khrcw2/doipack/shells/357mag.mdl", "CW_SHELL_MAIN")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
@@ -22,7 +23,7 @@ if CLIENT then
 	SWEP.SightWithRail = true
 	
 	SWEP.EffectiveRange_Orig = 55 * 39.37
-	SWEP.DamageFallOff_Orig = .25
+	SWEP.DamageFallOff_Orig = .4
 	
 	SWEP.Shell = "khr30carbine"
 	SWEP.ShellScale = 1
@@ -81,7 +82,7 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(8, -2, .5)
 	SWEP.CustomizeAng = Vector(10, 40, 18)
 	
-	SWEP.BackupSights = {["doi_atow_altsight"] = {[1] = Vector(-5, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
+	SWEP.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
 	["md_ins2elcan"] = {[1] = Vector(-2.472, -7, -1.436), [2] = Vector(-0.4, 0, 0)}}
 	
 	SWEP.MoveType = 1
@@ -140,11 +141,12 @@ if CustomizableWeaponry_atowins2_optics then
 	[2] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-600, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	else
-	SWEP.Attachments = {[1] = {header = "Sight", offset = {1100, 125}, atts = {"doi_atow_altsight"}},
-	[3] = {header = "Conversion", offset = {250, -425}, atts = {"doi_atow_m2carbineconv"}},
-	[4] = {header = "Magazine", offset = {600, 300}, atts = {"doi_atow_m1carbine30rnd"}},
-	[5] = {header = "Accessory", offset = {900, -300}, atts = {"doi_atow_sling"}},
-	[2] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
+	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82"}},
+	[2] = {header = "Sight", offset = {1100, 125}, atts = {"doi_atow_altsight"}},
+	[4] = {header = "Conversion", offset = {250, -425}, atts = {"doi_atow_m2carbineconv"}},
+	[5] = {header = "Magazine", offset = {600, 300}, atts = {"doi_atow_m1carbine30rnd"}},
+	[6] = {header = "Accessory", offset = {900, -300}, atts = {"doi_atow_sling"}},
+	[3] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-600, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	end
 
@@ -239,14 +241,18 @@ function SWEP:IndividualThink()
 	self.RecoilToSpread = (self.FireMode == "auto") and self.RecoilToSpreadAuto or self.RecoilToSpreadSemi
 	
 	self.EffectiveRange = 55 * 39.37
-	self.DamageFallOff = .25
+	self.DamageFallOff = .4
 
 	self.PrintName = "M1A1 Carbine"
 	
 	if self.ActiveAttachments.doi_atow_m2carbineconv then
 		self.PrintName = "M2A1 Carbine"
 	end
-	
+	if self.ActiveAttachments.doi_atow_altsight then
+	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.27), [2] = Vector(-0.05, 0.0355, 0)}}
+	else
+	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0.2625, 0.0213, 0)}}
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end

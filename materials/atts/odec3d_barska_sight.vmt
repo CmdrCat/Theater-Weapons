@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "atts/odec3d_barska_sight"
+	"$nolod" 1
+	"$translucent" 1
+	"$vertexalpha" 1
+	"$vertexcolor" 1
+}

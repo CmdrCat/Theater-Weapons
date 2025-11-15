@@ -3,7 +3,7 @@ att.name = "uecw_acr_68_conversion"
 att.displayName = "6.8 SPC Receiver"
 att.displayNameShort = "6.8 SPC"
 
-att.statModifiers = {DamageMult = 28 / 39,
+att.statModifiers = {DamageMult = 9 / 13,
 	FireDelayMult = 27 / 43,
 	RecoilMult = 2,
 	HipSpreadMult = 0.2}

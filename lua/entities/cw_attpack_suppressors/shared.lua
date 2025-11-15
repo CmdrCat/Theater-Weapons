@@ -7,4 +7,4 @@ ENT.Author = "Spy"
 ENT.Spawnable = true
 ENT.AdminSpawnable = true 
 
-ENT.attachments = {"md_pbs1", "md_saker", "md_tundra9mm", "md_cobram2"}
+ENT.attachments = {"md_pbs1", "md_saker", "md_tundra9mm"}

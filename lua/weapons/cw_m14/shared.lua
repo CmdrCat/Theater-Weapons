@@ -14,7 +14,7 @@ if CLIENT then
 	killicon.Add("cw_m14", "vgui/killicons/m14", Color(255, 120, 40, 0))
 	
 	SWEP.EffectiveRange_Orig = 70 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.DamageFallOff_Orig = .3
 
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
@@ -220,7 +220,7 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 70 * 39.37
-self.DamageFallOff = .5
+self.DamageFallOff = .3
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

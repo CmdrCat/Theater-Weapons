@@ -7,4 +7,4 @@ ENT.Author = "Khris"
 ENT.Spawnable = true
 ENT.AdminSpawnable = true 
 
-ENT.attachments = {"doi_atow_thompson30rnd","doi_atow_thompson50rnd","doi_atow_m1928grip","doi_atow_thompsonrc"}
+ENT.attachments = {"doi_atow_thompson30rnd","doi_atow_thompson50rnd","doi_atow_m1928grip"}

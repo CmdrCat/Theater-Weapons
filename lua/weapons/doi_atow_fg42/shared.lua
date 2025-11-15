@@ -22,7 +22,7 @@ if CLIENT then
 	SWEP.SightWithRail = true
 	
 	SWEP.EffectiveRange_Orig = 55 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.DamageFallOff_Orig = .37
 	
 	SWEP.Shell = "khr79257"
 	SWEP.ShellScale = 0.7
@@ -104,11 +104,13 @@ SWEP.AttachmentExclusions = {["doi_atow_zfg42"] = {"doi_atow_fg42m9kconv"},
 							 ["am_matchgrade"] = {"doi_atow_fg42m9kconv"},
 						 	 ["am_atow_lowvel"] = {"doi_atow_fg42m9kconv"},
 							 ["am_atow_heavy"] = {"doi_atow_fg42m9kconv"},
-							 ["am_atow_ap"] = {"doi_atow_fg42m9kconv"}}
+							 ["am_atow_ap"] = {"doi_atow_fg42m9kconv"},
+							 ["doi_atow_unisuppressor"] = {"doi_atow_fg42m9kconv"}}
 
 SWEP.Attachments = {[1] = {header = "Optic", offset = {975, -275}, atts = {"doi_atow_zfg42"}},
-[2] = {header = "Fire Control", offset = {950, 250}, atts = {"doi_atow_fg42m9kconv", "doi_atow_heavybolt"}},
-[3] = {header = "Accessory", offset = {-200, -250}, atts = {"doi_atow_sling"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
+[2] = {header = "Muzzle", offset = {-200, -250}, atts = {"doi_atow_unisuppressor"}},
+[3] = {header = "Fire Control", offset = {950, 250}, atts = {"doi_atow_fg42m9kconv", "doi_atow_heavybolt"}},
+[4] = {header = "Accessory", offset = {1400, -50}, atts = {"doi_atow_sling"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
 ["+reload"] = {header = "Ammo", offset = {-300, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire2"},
@@ -216,7 +218,7 @@ function SWEP:IndividualThink()
 	end
 	
 	self.EffectiveRange = 55 * 39.37
-	self.DamageFallOff = .5
+	self.DamageFallOff = .37
 	
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

@@ -137,7 +137,7 @@ SWEP.StockBGs = {main = 4, off = 0, on = 1}
 SWEP.Attachments = {[3] = {header = "Grip", offset = {200, -450}, atts = {"doi_atow_m1928grip"}},
 [2] = {header = "Magazine", offset = {250, 350}, atts = {"doi_atow_thompson30rnd","doi_atow_thompson50rnd"}},
 [4] = {header = "Stock", offset = {900, -50}, atts = {"doi_atow_thompsonnostock"}},
-[1] = {header = "Muzzle", offset = {-450, -500}, atts = {"doi_atow_unisuppressor"}},
+[1] = {header = "Muzzle", offset = {-450, -500}, atts = {"doi_atow_thompsonlongbarrel", "doi_atow_unisuppressor"}},
 ["+reload"] = {header = "Ammo", offset = {-435, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 
 SWEP.Animations = {fire = {"base_fire_1"},
@@ -198,7 +198,7 @@ SWEP.FireDelayAuto = 60/725
 SWEP.FireDelaySemi = 60/725
 SWEP.FireSound = "DOITHOM1928_FIRE"
 SWEP.FireSoundSuppressed = "DOITHOM1928_FIRE_SUPPRESSED"
-SWEP.Recoil = 1
+SWEP.Recoil = 0.8
 
 
 SWEP.HipSpread = 0.02
@@ -248,6 +248,9 @@ if self.FireMode == "semi" then
 	self.FireSound = "DOITHOM1928_FIRE"
 	self.FireSoundSuppressed = "DOITHOM1928_FIRE_SUPPRESSED"
 	
+	if self.ActiveAttachments.doi_atow_thompsonlongbarrel then
+		self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
+	end
 	if self.ActiveAttachments.am_atow_riot then
 		self.FireSound = "DOIM37_FIRE"
 		self.FireSoundSuppressed = "CW_SAIGA12K_FIRE_SUPPRESSED"

@@ -256,6 +256,9 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 55 * 39.37
 self.DamageFallOff = .2
+if self.ActiveAttachments.too_l86_conversion then
+	self.DamageFallOff = ((self.DamageFallOff - 0.05))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

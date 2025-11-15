@@ -37,6 +37,9 @@ if CLIENT then
 
 	SWEP.IronsightPos = Vector(-2.627, 3, 0.6077)
 	SWEP.IronsightAng = Vector(1.04, 0.06, 0)
+
+	SWEP.ZF4Pos = Vector(-2.627, -2.5, -0.29)
+	SWEP.ZF4Ang = Vector(0, 0, 0)
 	
 	SWEP.LongBarrelPos = Vector(-2.627, 3, 0.727)
 	SWEP.LongBarrelAng = Vector(0.5, 0.036, 0)
@@ -73,6 +76,8 @@ if CLIENT then
 	
 	SWEP.PronePos = Vector(0, -3, -3.1579)
 	SWEP.ProneAng = Vector(10, 12.7368, -8.9474)
+
+	SWEP.BackupSights = {["doi_atow_zf4"] = {[1] = Vector	(-2.627, 3, 0.6077), [2] = Vector(1.04, 0.06, 0)}}
 	
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
@@ -80,7 +85,8 @@ if CLIENT then
 	
 	SWEP.CustomizationMenuScale = 0.015 --  0.0165
 	
-	SWEP.AttachmentModelsVM = {["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(1.3, -2.45, 1.34), angle = Angle(0, -90, 0), size = Vector(0.5, 0.65, 0.65), bone = "Slide"}}
+	SWEP.AttachmentModelsVM = {["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(1.3, -2.45, 1.34), angle = Angle(0, -90, 0), size = Vector(0.5, 0.65, 0.65), bone = "Slide"},
+							  ["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/kar98k1xscope.mdl", pos = Vector(-0.45, -0.1, 1.55), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"}}
 	
 	SWEP.AttachmentPosDependency = {
 	["doi_atow_unisuppressor"] = {
@@ -152,10 +158,11 @@ SWEP.ForegripOverridePos = {
 	["R Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 }
 
-SWEP.Attachments = {[1] = {header = "Barrel", offset = {-500, -450}, atts = {"doi_atow_c96longbarrel"}},
-[4] = {header = "Finish", offset = {150, -500}, atts = {"doi_atow_c96goldfinish"}},
-[3] = {header = "Accessory", offset = {650, -115}, atts = {"doi_atow_c96stock","doi_atow_onehand"}},
-[2] = {header = "Fire Control", offset = {500, 300}, atts = {"doi_atow_m2carbineconv"}},
+SWEP.Attachments = {[2] = {header = "Barrel", offset = {-500, -450}, atts = {"doi_atow_c96longbarrel", "doi_atow_unisuppressor"}},
+[1] = {header = "Optic", offset = {900, -450}, atts = {"doi_atow_zf4"}},
+[5] = {header = "Finish", offset = {150, -500}, atts = {"doi_atow_c96goldfinish"}},
+[4] = {header = "Accessory", offset = {1100, 0}, atts = {"doi_atow_c96stock","doi_atow_onehand"}},
+[3] = {header = "Receiver", offset = {500, 300}, atts = {"doi_atow_c96carbineconv", "doi_atow_m2carbineconv", "doi_atow_heavybolt"}},
 ["+reload"] = {header = "Ammo", offset = {-700, 70}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
@@ -277,6 +284,18 @@ if self.FireMode == "semi" then
 	self.EffectiveRange = 35 * 39.37
 	self.DamageFallOff = .7
 
+	self.DeployTime = .35
+
+	if self.ActiveAttachments.doi_atow_c96longbarrel then
+	self.BackupSights = {["doi_atow_zf4"] = {[1] = Vector(-2.627, 3, 0.727), [2] = Vector(0.5, 0.036, 0)}}
+	else
+	self.BackupSights = {["doi_atow_zf4"] = {[1] = Vector(-2.627, 3, 0.6077), [2] = Vector(1.04, 0.06, 0)}}
+	end
+	if self.ActiveAttachments.doi_atow_c96carbineconv then
+		self.EffectiveRange = ((self.EffectiveRange - 30 * 39.37))
+		self.DamageFallOff = ((self.DamageFallOff + 0.03))
+		self.DeployTime = .45
+	end
 	if self.ActiveAttachments.doi_atow_m2carbineconv then
 	self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff + 0.05))

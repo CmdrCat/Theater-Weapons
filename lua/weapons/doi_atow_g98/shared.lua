@@ -75,7 +75,7 @@ if CLIENT then
 	["doi_atow_zf41"] = {model = "models/khrcw2/doipack/attachments/kar98k1xscope.mdl", pos = Vector(2.15, 0, .05), angle = Angle(0, 0, -90), size = Vector(.9, .9, .9), bone = "A_Optic"},
 	["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/kar98k1xscope.mdl", pos = Vector(-5, 0, -.2), angle = Angle(0, 0, -90), size = Vector(.9, .9, .9), bone = "A_Optic"},
 	["doi_atow_zf39"] = {model = "models/khrcw2/doipack/attachments/kar98k7xscope.mdl", pos = Vector(-5.1, -.15, -.44), angle = Angle(0, 0, -90), size = Vector(.9, .9, .9), bone = "A_Optic"},
-	["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(2.4, 7, 4.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "K98"},
+	["doi_atow_m3a1suppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(2.4, 7, 4.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "K98"},
 	}
 	
 	SWEP.ForegripOverridePos = {
@@ -104,8 +104,9 @@ SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {--[4] = {header = "Reload", offset = {-150, 120}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_zf39"] = true, ["doi_atow_zf4"] = true}},
 [1] = {header = "Optic", offset = {250, -400}, atts = { "doi_atow_zf4", "doi_atow_zf39"}},
-[2] = {header = "Magazine", offset = {1050, -200}, atts = {"doi_atow_g98extmag"}},
-[3] = {header = "Action", offset = {1200, 225}, atts = {"doi_atow_greasedbolt"}},
+[2] = {header = "Muzzle", offset = {-200, -200}, atts = {"doi_atow_m3a1suppressor"}},
+[3] = {header = "Magazine", offset = {1050, -200}, atts = {"doi_atow_g98extmag"}},
+[4] = {header = "Action", offset = {1200, 225}, atts = {"doi_atow_greasedbolt"}},
 ["+reload"] = {header = "Ammo", offset = {20, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire"},

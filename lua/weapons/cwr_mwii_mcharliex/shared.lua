@@ -14,7 +14,7 @@ if CLIENT then
 	killicon.Add( "cwr_mwii_mcharliex", "vgui/killicons/m13b", Color(255, 120, 40, 0))
 	
 	SWEP.EffectiveRange_Orig = 55 * 39.37
-	SWEP.DamageFallOff_Orig = .1
+	SWEP.DamageFallOff_Orig = .15
 
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
@@ -359,7 +359,7 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 55 * 39.37
-self.DamageFallOff = .1
+self.DamageFallOff = .15
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end
@@ -375,6 +375,7 @@ if self.ActiveAttachments.hard20 then
 end
 if self.ActiveAttachments.r_mwii_300blk then
 	self.EffectiveRange = ((self.EffectiveRange * 0.875))
+	self.DamageFallOff = ((self.DamageFallOff + 0.26))
 end
 end
 

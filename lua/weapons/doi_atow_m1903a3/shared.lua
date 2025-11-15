@@ -261,7 +261,7 @@ self.Owner.ViewAff = 0
 	
 	if self.ActiveAttachments.doi_atow_pedersen_device then
 		self.EffectiveRange = self.EffectiveRange - 60 * 39.37
-		self.DamageFallOff = ((self.DamageFallOff + 0.1))
+		self.DamageFallOff = ((self.DamageFallOff + 0.15))
 	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

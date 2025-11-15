@@ -100,6 +100,7 @@ SWEP.Attachments = {[1] = {header = "Accessory", offset = {150, -250}, atts = {"
 ["+reload"] = {header = "Ammo", offset = {600, 175}, atts = {"am_flechettem37", "am_slugroundsm37", "am_explosiveslugrounds"}}}
 else
 SWEP.Attachments = {[1] = {header = "Accessory", offset = {150, -250}, atts = {"doi_atow_sling"}},
+[2] = {header = "Muzzle", offset = {500, -220}, atts = {"doi_atow_unisuppressor"}},
 ["+reload"] = {header = "Ammo", offset = {600, 175}, atts = {"am_flechettem37", "am_slugroundsm37", "am_explosiveslugrounds"}}}
 end
 
@@ -222,11 +223,6 @@ end
 	self.DamageFallOff = ((self.DamageFallOff - .12))
 	self.ClumpSpread = 0.035
 end
-	if self.ActiveAttachments.doi_atow_unisuppressor then
-	self.EffectiveRange = ((self.EffectiveRange - 10 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + .15))
-end
-	
 end
 
 function SWEP:fireAnimFunc()

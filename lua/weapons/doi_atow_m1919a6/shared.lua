@@ -188,6 +188,9 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 60 * 39.37
 	self.DamageFallOff = .08
 	
+	if self.ActiveAttachments.doi_atow_stinger then
+		self.DamageFallOff = ((self.DamageFallOff + 0.12))
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end

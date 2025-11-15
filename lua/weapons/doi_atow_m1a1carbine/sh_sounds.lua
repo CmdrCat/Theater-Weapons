@@ -1,4 +1,5 @@
 CustomizableWeaponry:addFireSound("DOIM1A1CAR_FIRE", "weapons/doipack/m1carbine_para/m1carbine_para_fp.wav", 1, 105, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("DOIM1A1CAR_FIRE_SUPPRESSED", "weapons/doipack/m1carbine_para/m1carbine_para_suppressed_fp.wav", 1, 80, CHAN_STATIC)
 
 CustomizableWeaponry:addReloadSound("DOIM1A1CAR_BOLTBACK", "weapons/doipack/m1carbine_para/handling/m1carbine_para_boltback.wav")
 CustomizableWeaponry:addReloadSound("DOIM1A1CAR_BOLTRELEASE", "weapons/doipack/m1carbine_para/handling/m1carbine_para_boltrelease.wav")

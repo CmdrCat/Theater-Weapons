@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 			"khrcw2/attachments/khr_ins2_cstm_acog/Acog"
+	"$bumpmap" 			"khrcw2/attachments/khr_ins2_cstm_acog/Acog_Normal"
+	
+	"$nocull" 			"1"
+	
+	"$phong" 			"1"
+	"$phongexponent" 		"64"
+	"$phongboost" 			"1.5"
+	"$phongfresnelranges" 		"[2 4 6]"
+	"$phongtint" 			"[0.6 0.8 1]"
+	"$phongalbedotint" 		"1"	
+}

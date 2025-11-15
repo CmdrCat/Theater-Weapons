@@ -236,7 +236,6 @@ self.PrintName = "ACR"
 self.Trivia = {text = "The Masada manufactured by Remington for military and law enforcement use.", x = -200, y = -450}
 if self.ActiveAttachments.uecw_acr_68_conversion then
 	self.EffectiveRange = ((self.EffectiveRange + 15 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff - 0.1))
 	self.FireSound = "CW_M14_FIRE"
 	self.FireSoundSuppressed = "CW_M14_FIRE_SUPPRESSED"
 	self.PrintName = "6.8 SPC ACR Carbine"

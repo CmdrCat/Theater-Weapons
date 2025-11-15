@@ -45,6 +45,14 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(9, -7.5, 2.7)
 	SWEP.CustomizeAng = Vector(15, 47, 30)
 
+	SWEP.CustomizePos_Akimbo = Vector(0, -3.511, -5.283)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
+
+	SWEP.RMRPos = Vector(-1.745, 0, -0.17)
+	SWEP.RMRAng = Vector(1, 0.06, 6.2803)
+
+	SWEP.BackupSights = {["md_rmr"] = {[1] = Vector(-4.5, 6, -3), [2] = Vector(5, 0, -30)}}
+
 	SWEP.AlternativePos = Vector(-.5, -2.35, -0.5)
 	SWEP.AlternativeAng = Vector(.5, 0.4, 2)
 	
@@ -54,12 +62,19 @@ if CLIENT then
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = true
+	SWEP.SightWithRail = true
 	
 	SWEP.LuaVMRecoilAxisMod = {vert = 4, hor = 2, roll = 2, forward = 2, pitch = 2}
 	SWEP.CustomizationMenuScale = 0.013 --  0.0165
 	
-	SWEP.AttachmentModelsVM = {["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(0.005, 3.6, .555), angle = Angle(-.7, -90, 0), size = Vector(0.725, 0.725, 0.725), bone = "barrel"}}
-	
+	SWEP.AttachmentModelsVM = {["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(0.005, 3.6, .555), angle = Angle(-.7, -90, 0), size = Vector(0.725, 0.725, 0.725), bone = "barrel"},
+		["md_rail"] = {model = "models/cw2/attachments/slimpistolrail.mdl", bone = "barrel", pos = Vector(0.005, 2, -0.4), angle = Angle(0, -90, 0), size = Vector(0.1, 0.1, 0.1)},
+		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "barrel", pos = Vector(-0.21, -2, -2.15), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6)},
+		["md_insight_x2"] = { type = "Model", model = "models/cw2/attachments/pistollaser.mdl", bone = "barrel", pos = Vector(0.1, 0.2, -0.33), angle = Angle(0, 90, 0), size = Vector(0.079, 0.079, 0.079), bodygroups = {[1] = 1}}}
+
+	SWEP.LaserPosAdjust = Vector(0.5, 0, -1)
+	SWEP.LaserAngAdjust = Angle(0, 180, 0)
+
 	SWEP.ForegripOverridePos = {
 	["nah"] = {
 	["ValveBiped.Bip01_R_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.75, .0, -.4), angle = Angle(0, 0, 0) },
@@ -74,9 +89,12 @@ SWEP.MagBGs = {main = 2, off = 0, on = 1}
 
 SWEP.MuzzleVelocity = 250
 
-SWEP.Attachments = {[2] = {header = "Magazine", offset = {550, 250}, atts = {"doi_atow_pistolextmag"}},
-[1] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_unisuppressor"}},
-[3] = {header = "Finish", offset = {175, -350}, atts = {"doi_atow_m1911satinfinish","doi_atow_c96goldfinish"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300}, atts = {"md_rmr"}, exclusions = {md_insight_x2 = true}},
+[2] = {header = "Laser", offset = {-350, 250}, atts = {"md_insight_x2"}, exclusions = {md_rmr = true}},
+[4] = {header = "Magazine", offset = {550, 250}, atts = {"doi_atow_pistolextmag"}},
+[3] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_unisuppressor"}},
+[5] = {header = "Finish", offset = {175, -350}, atts = {"doi_atow_m1911satinfinish","doi_atow_c96goldfinish"}},
+[6] = {header = "Stance", offset = {175, -350}, atts = {"cw_akimbo"}},
 ["+reload"] = {header = "Ammo", offset = {-700, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire3"},
@@ -87,6 +105,16 @@ SWEP.Animations = {fire = {"base_fire","base_fire3"},
 	reload_empty = "base_reloadempty",
 	idle = "base_idle",
 	draw = "base_draw"}
+
+SWEP.Animations_Akimbo = {reload = "base_reload",
+	fire = {"base_fire","base_fire3"},
+	idle = "base_idle",
+	draw = "base_draw",
+	reload_right = "base_reload",
+	fire_right = {"base_fire","base_fire3"},
+	idle_right = "base_idle",
+	draw_right = "base_draw"
+}
 	
 SWEP.ReloadViewBobEnabled = false //
 	
@@ -114,6 +142,9 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/m1911.mdl"
 SWEP.WorldModel		= "models/khrcw2/doipack/w_m1911.mdl"
 
+SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/m1911.mdl"
+SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/m1911.mdl"
+
 SWEP.DrawTraditionalWorldModel = false
 SWEP.WM = "models/khrcw2/doipack/w_m1911.mdl"
 SWEP.WMPos = Vector(-1.4, 5, 1.25)
@@ -138,10 +169,10 @@ SWEP.Primary.Ammo			= ".45 ACP"
 end
 
 
-SWEP.FireDelay = 60/450
+SWEP.FireDelay = 0.11
 SWEP.FireSound = "DOIM1911_FIRE"
 SWEP.FireSoundSuppressed = "DOIPPK_FIRE_SUPPRESSED"
-SWEP.Recoil = 1.23
+SWEP.Recoil = 1
 
 SWEP.HipSpread = 0.01
 SWEP.AimSpread = 0.005
@@ -150,7 +181,7 @@ SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
-SWEP.Damage = 58
+SWEP.Damage = 48
 SWEP.DeployTime = .25
 SWEP.HolsterTime = .35
 

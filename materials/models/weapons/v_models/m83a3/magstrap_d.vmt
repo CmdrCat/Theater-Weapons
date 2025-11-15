@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\v_models\m83a3\magstrap_d"
+	"$bumpmap" "models\weapons\v_models\m83a3\magstrap_n"
+$phongexponenttexture "models\weapons\v_models\m83a3\magstrap_d"
+$phong 1
+$phongboost ".1"
+$phongalbedoboost 1
+$phongfresnelranges "[.50 .50 1]"
+$basemapalphaphongmask 1
+
+$envmapfresnel 1
+$envmaptint "[.02 .02 .02]"
+$phongalbedotint 1
+$phongdisablehalflambert 1
+"$no_draw" "1"
+
+
+
+
+
+}

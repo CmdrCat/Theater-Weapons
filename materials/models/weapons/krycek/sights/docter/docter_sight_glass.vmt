@@ -1,0 +1,27 @@
+//VMT written by 4Echo
+"Vertexlitgeneric"
+{
+
+
+	$basetexture                "models\weapons\krycek\sights\docter\glass_diffuse"
+	$bumpmap                    "models\weapons\krycek\sights\docter\glass_normal"
+
+	$phong                      1
+	$phongboost                 10
+	$phongfresnelranges         "[5 10 10]"
+	"$phongalbedotint"		"1"
+	"$phongalbedoboost" 	"48"
+	$normalmapalphaenvmapmask    1
+	$phongexponenttexture       "models\weapons\krycek\sights\docter\glass_exponent"
+
+
+	$envmap                     env_cubemap
+	"$envmaptint"               "[0.05 0.05 0.65]"
+	"$alpha" "0.3"
+	$selfillum 1
+	$nocull 		"1"
+	$additive 		1
+	$model       1
+
+
+}

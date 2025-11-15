@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models/fruit/or"
+	"$bumpmap" "Models/fruit/or_n"
+}

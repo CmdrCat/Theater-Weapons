@@ -54,7 +54,7 @@ if CLIENT then
 	SWEP.ShellPosOffset = {x = 1, y = 0, z = -3}
 	
 	SWEP.EffectiveRange_Orig = 40 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.DamageFallOff_Orig = .4
 
 	SWEP.BackupSights = {
 	["md_kobra"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
@@ -226,8 +226,8 @@ end
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 50 * 39.37
-self.DamageFallOff = .5
+self.EffectiveRange = 40 * 39.37
+self.DamageFallOff = .4
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

@@ -6,7 +6,7 @@ att.isBG = true
 
 att.statModifiers = {FireDelayMult = -73 / 115,
 	HipSpreadMult = 0.2,
-	DamageMult = -84 / 167}
+	DamageMult = -67 / 167}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/greasedbolt")

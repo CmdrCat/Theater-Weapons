@@ -1,0 +1,9 @@
+
+VertexLitGeneric
+{
+$halflambert "1"
+$phong "1"
+$phongtint "[.12 .15 .1]"
+$phongboost "5"
+$phongexponent "50"
+$phongfresnelranges "[1 10 8]"

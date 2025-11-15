@@ -13,10 +13,10 @@ if CLIENT then
 	
 	
 	SWEP.SelectIcon = surface.GetTextureID("vgui/chimera")
-	killicon.Add( "cwr_mwii_chimera", "vgui/killicon/chimera", Color(255, 120, 40, 0))
+	
 	
 	SWEP.EffectiveRange_Orig = 35 * 39.37
-	SWEP.DamageFallOff_Orig = .6
+	SWEP.DamageFallOff_Orig = .48
 
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
@@ -317,7 +317,7 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 35 * 39.37
-self.DamageFallOff = .6
+self.DamageFallOff = .48
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

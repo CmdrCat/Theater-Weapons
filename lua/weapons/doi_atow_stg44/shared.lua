@@ -99,10 +99,11 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 --SWEP.AimBreathingIntensity = .875
 
-SWEP.Attachments = {[2] = {header = "Accessory", offset = {-250, -175}, atts = {"doi_atow_sling"}},
-[2] = {header = "Fire Control", offset = {900, 250}, atts = {"doi_atow_heavybolt"}},
-[3] = {header = "Finish", offset = {200, -300}, atts = {"doi_atow_normandycamo"}},
-[1] = {header = "Optic", offset = {800, -275}, atts = {"doi_atow_zf4"}},
+SWEP.Attachments = {[3] = {header = "Accessory", offset = {1300, -100}, atts = {"doi_atow_sling"}},
+[2] = {header = "Muzzle", offset = {-400, -200}, atts = {"doi_atow_unisuppressor"}},
+[5] = {header = "Fire Control", offset = {900, 250}, atts = {"doi_atow_heavybolt"}},
+[4] = {header = "Finish", offset = {200, -300}, atts = {"doi_atow_normandycamo"}},
+[1] = {header = "Optic", offset = {600, -400}, atts = {"doi_atow_zf4"}},
 ["+reload"] = {header = "Ammo", offset = {-300, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire"},

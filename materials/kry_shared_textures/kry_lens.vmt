@@ -1,0 +1,15 @@
+ "VertexLitGeneric"
+{
+
+	"$basetexture" "kry_shared_textures\lens"
+	
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 1
+	"$envmaptint" "[.2 .2 .2]"
+	
+
+	$rimlight               1
+	$rimlightexponent       2
+	$rimlightboost          9	
+	
+}

@@ -1,0 +1,20 @@
+ "vertexlitgeneric"
+{
+	"$basetexture" "models\weapons\v_models\m83a3\storm_d"
+	"$bumpmap" "models\weapons\v_models\m83a3\storm_n"
+
+$nocull 1
+
+	"$normalmapalphaenvmapmask" "1"
+	"$phongexponent"   "30"
+	"$phong"   "1"
+	"$phongfresnelranges"   "[0.8 0.9 1]"
+
+	"$phongboost"   "2"
+
+                "$PhongAlbedoTint"  "1"
+	"$phongexponenttexture" "models\weapons\v_models\m82a3\storm_s"
+"$no_draw" "1"
+
+
+}

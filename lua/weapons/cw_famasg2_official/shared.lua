@@ -45,7 +45,7 @@ if CLIENT then
 	killicon.Add("cw_famasg2_official", "vgui/killicons/g2 famas", Color(255, 120, 40, 0))
 	
 	SWEP.EffectiveRange_Orig = 50 * 39.37
-	SWEP.DamageFallOff_Orig = .55
+	SWEP.DamageFallOff_Orig = .45
 
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
@@ -186,7 +186,7 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
-self.DamageFallOff = .55
+self.DamageFallOff = .45
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end
