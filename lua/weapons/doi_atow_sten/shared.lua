@@ -26,7 +26,7 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.775
 	
 	SWEP.EffectiveRange_Orig = 40 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.DamageFallOff_Orig = .55
 	
 	SWEP.Shell = "khr9x19"
 	SWEP.ShellScale = 1.25
@@ -255,7 +255,7 @@ function SWEP:IndividualThink()
 	end
 	
 	self.EffectiveRange = 25 * 39.37
-	self.DamageFallOff = .5
+	self.DamageFallOff = .55
 	
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

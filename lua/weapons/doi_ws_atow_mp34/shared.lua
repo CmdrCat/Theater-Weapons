@@ -21,7 +21,7 @@ if CLIENT then
 	SWEP.SightWithRail = true
 	
 	SWEP.EffectiveRange_Orig = 40 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.DamageFallOff_Orig = .55
 	
 	SWEP.Shell = "khr9x25"
 	SWEP.ShellScale = 1.25
@@ -189,7 +189,7 @@ function SWEP:IndividualThink()
 	self.FireDelay = (self.FireMode == "3burst") and self.FireDelaySemi or self.FireDelayAuto
 	
 	self.EffectiveRange = 40 * 39.37
-	self.DamageFallOff = .5
+	self.DamageFallOff = .55
 	
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

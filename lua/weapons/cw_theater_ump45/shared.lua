@@ -15,7 +15,7 @@
         killicon.Add("cw_theater_ump45", "vgui/killicons/ump45", Color(255, 120, 40, 0))
 
         SWEP.EffectiveRange_Orig = 40 * 39.37
-        SWEP.DamageFallOff_Orig = .4
+        SWEP.DamageFallOff_Orig = .5
 
         SWEP.MuzzleEffect = "muzzleflash_suppressed"
         SWEP.PosBasedMuz = true
@@ -216,7 +216,7 @@ function SWEP:IndividualThink()
     end
 
     self.EffectiveRange = 50 * 39.37
-    self.DamageFallOff = 0.4
+    self.DamageFallOff = 0.5
     if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
     end

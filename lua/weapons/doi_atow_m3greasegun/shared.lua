@@ -23,7 +23,7 @@ if CLIENT then
 	SWEP.SightWithRail = true
 	
 	SWEP.EffectiveRange_Orig = 40 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	
@@ -193,7 +193,7 @@ if self.FireMode == "semi" then
 	end
 
 	self.EffectiveRange = 40 * 39.37
-	self.DamageFallOff = .5
+	self.DamageFallOff = .6
 	
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
@@ -209,9 +209,12 @@ if self.FireMode == "semi" then
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
 	if self.ActiveAttachments.doi_atow_m3carbine then
-	self.EffectiveRange = ((self.EffectiveRange + 10 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff - .1))
-end
+		self.EffectiveRange = ((self.EffectiveRange + 10 * 39.37))
+		self.DamageFallOff = ((self.DamageFallOff - .1))
+	end
+	if self.ActiveAttachments.doi_atow_m3pam1conv then
+		self.DamageFallOff = ((self.DamageFallOff - .05))
+	end
 end
 
 function SWEP:fireAnimFunc()

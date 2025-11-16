@@ -40,9 +40,8 @@ if CLIENT then
 	SWEP.SprintPos = Vector(4.119, -1.206, -3.12)
 	SWEP.SprintAng = Vector(-12.664, 50.652, -13.367)
 	
-	SWEP.MicroT1Pos = Vector(-2.180, -2.5, 0.81)
+	SWEP.MicroT1Pos = Vector(-2.180, -2.5, 0.54)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
-	
 	
 	SWEP.KR_CMOREPos =  Vector(-2.180, -2.5, 0.645)
 	SWEP.KR_CMOREAng =  Vector(0, 0, 0)
@@ -50,7 +49,9 @@ if CLIENT then
 	SWEP.ELCANPos = Vector(-2.1867, -2.5, 0.574)
 	SWEP.ELCANAng = Vector(0, 0, 0)
 	
-	
+	SWEP.ThermalPos = Vector(-2.1867, -2.5, 0.574)
+	SWEP.ThermalAng = Vector(0, 0, 0)
+
 	SWEP.CSGOACOGPos = Vector(-2.181, -2.5, 0.536)
 	SWEP.CSGOACOGAng = Vector(0, 0, 0)
 	
@@ -70,17 +71,25 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1.2
 	
 	SWEP.AttachmentModelsVM = {
-	
+	["md_microt1kh"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "body", rel = "", pos = Vector(3, -4.001, -0.015), angle = Angle(90, 0, -90), size = Vector(0.4, 0.4, 0.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_uecw_csgo_acog"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_acog.mdl", bone = "body", rel = "", pos = Vector(-2.3, -0.7, -0.024), angle = Angle(0, 0, -90), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["odec3d_cmore_kry"] = { type = "Model", model = "models/weapons/krycek/sights/odec3d_cmore_reddot.mdl", bone = "body", rel = "", pos = Vector(3.4, -3.941, 0.07), angle = Angle(0, 0, -90), size = Vector(0.2, 0.2, 0.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_nightforce_nxs"] = { type = "Model", model = "models/cw2/attachments/l96_scope.mdl", bone = "body", rel = "", pos = Vector(3.599, -4.801, 0.109), angle = Angle(0, 0, -90), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "body", rel = "", pos = Vector(-0.92, 0.119, 0.27), angle = Angle(0, 0, -90), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body", rel = "", pos = Vector(-0.401, 0, 0.259), angle = Angle(-90, 0, -90), size = Vector(0.66, 0.66, 0.66), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body", rel = "", pos = Vector(-0.401, 0, 0.259), angle = Angle(-90, 0, -90), size = Vector(0.66, 0.66, 0.66), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_sight_front"] = { type = "Model", model = "models/bunneh/frontsight.mdl", bone = "body", rel = "", pos = Vector(10.899, -4.75, 2.234), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_sight_rear"] = { type = "Model", model = "models/bunneh/rearsight.mdl", bone = "body", rel = "", pos = Vector(-5.651, -4.75, 2.249), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
 
-
+	SWEP.BackupSights = {
+		["md_microt1kh"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["odec3d_cmore_kry"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)},
+		["md_elcan"] = {[1] = Vector(-2.1867, 5, -0.045), [2] = Vector(-0.1, 0, 0)},
+		["md_uecw_csgo_acog"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)},
+		["md_nightforce_nxs"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)}
+	}
 
 	SWEP.ACOGAxisAlign = {right = 0.2, up = 0, forward = 0}
 	SWEP.NXSAlign = {right = 0, up = 0, forward = 0}
@@ -110,7 +119,7 @@ SWEP.BipodInstalled = true
 SWEP.CanRestOnObjects = false
 
 
-SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -100},  atts = {"md_microt1kh","odec3d_cmore_kry", "md_schmidt_shortdot", "md_uecw_csgo_acog", "md_nightforce_nxs"}},
+SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -100},  atts = {"md_microt1kh", "odec3d_cmore_kry", "md_schmidt_shortdot", "md_elcan", "md_uecw_csgo_acog", "md_thermal", "md_nightforce_nxs"}},
 ["+reload"] = {header = "Ammo", offset = {-250, 350}, atts = {"am_416barrett"}}}
 
 SWEP.Animations = {fire = {"shoot"},
@@ -179,9 +188,9 @@ SWEP.LegDamage = .8
 SWEP.HipSpread = 0.15
 SWEP.AimSpread = 0.003
 SWEP.VelocitySensitivity = 1.8
-SWEP.MaxSpreadInc = 0.075
-SWEP.SpreadPerShot = 0.025
-SWEP.SpreadCooldown = 60/140
+SWEP.MaxSpreadInc = 0.1
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.Shots = 1
 SWEP.Damage = 195
 SWEP.DeployTime = 1

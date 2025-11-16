@@ -81,13 +81,20 @@ if CLIENT then
 	["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "RSASS", rel = "", pos = Vector(2.589, -16.026, -1.481), angle = Angle(0, -90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
 
+	SWEP.BackupSights = {
+		["md_microt1kh"] = {[1] = Vector(-4.5, 3, 0.1), [2] = Vector(0,0,-30)},
+		["odec3d_cmore_kry"] = {[1] = Vector(-4.5, 3, 0.1), [2] = Vector(0,0,-30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-4.5, 8, 0.1), [2] = Vector(0,0,-30)},
+		["md_uecw_csgo_acog"] = {[1] = Vector(-4.5, 8, 0.1), [2] = Vector(0,0,-30)},
+		["md_nxs"] = {[1] = Vector(-4.5, 8, 0.1), [2] = Vector(0,0,-30)}
+	}
+
 	SWEP.ForeGripHoldPos = {
 	["l_wrist"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-5.557, 14.444, 5.556) },
 	["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-1.111, -1.111, 12.222) },
 	["l_armtwist_1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, -23.334) },
 	["l_forearm"] = { scale = Vector(1, 1, 1), pos = Vector(1.896, 0.555, -0.556), angle = Angle(0, -3.333, 36.666) },
 	["l_thumb_low"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(16.666, 14.444, 27.777) }
-	
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0.2, up = 0, forward = 0}
@@ -118,10 +125,10 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
 
-SWEP.Attachments = {[4] = {header = "Optic", offset = {600, -400},  atts = {"md_microt1kh","odec3d_cmore_kry", "md_uecw_csgo_acog", "md_nxs"}},
-[3] = {header = "Barrel", offset = {180, -400}, atts = {"md_saker222"}},
-[1] = {header = "Handguard", offset = {-650, 100}, atts = {"md_foregrip","md_bipod"}},
-[2] = {header = "Rail", offset = {-550, -350}, atts = {"md_anpeq15"}},
+SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -400},  atts = {"md_microt1kh","odec3d_cmore_kry", "md_schmidt_shortdot", "md_uecw_csgo_acog", "md_nxs"}},
+[2] = {header = "Muzzle", offset = {180, -400}, atts = {"md_saker222"}},
+[3] = {header = "Handguard", offset = {-650, 100}, atts = {"md_foregrip","md_bipod"}},
+[4] = {header = "Laser", offset = {-550, -350}, atts = {"md_anpeq15"}},
 ["+reload"] = {header = "Ammo", offset = {-400, 500}, atts = {"am_magnum","am_matchgrade"}}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},
@@ -178,9 +185,9 @@ SWEP.Recoil = 2.8
 SWEP.HipSpread = 0.13
 SWEP.AimSpread = 0.0013
 SWEP.VelocitySensitivity = 1.5
-SWEP.MaxSpreadInc = 0.055
-SWEP.SpreadPerShot = 0.020
-SWEP.SpreadCooldown = 0.60/200
+SWEP.MaxSpreadInc = 0.1
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
 SWEP.RecoilToSpread = .2
 SWEP.Shots = 1
 SWEP.Damage = 95

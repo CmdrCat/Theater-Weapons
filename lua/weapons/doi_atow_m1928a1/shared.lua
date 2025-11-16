@@ -22,7 +22,7 @@ if CLIENT then
 	SWEP.SightWithRail = true
 	
 	SWEP.EffectiveRange_Orig = 30 * 39.37
-	SWEP.DamageFallOff_Orig = .45
+	SWEP.DamageFallOff_Orig = .5
 	
 	SWEP.Shell = "khr9x19"
 	SWEP.ShellScale = 1.59
@@ -243,7 +243,7 @@ if self.FireMode == "semi" then
 	end
 	
 	self.EffectiveRange = 30 * 39.37
-	self.DamageFallOff = .45
+	self.DamageFallOff = .5
 
 	self.FireSound = "DOITHOM1928_FIRE"
 	self.FireSoundSuppressed = "DOITHOM1928_FIRE_SUPPRESSED"

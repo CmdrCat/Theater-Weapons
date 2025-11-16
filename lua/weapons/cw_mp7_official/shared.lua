@@ -15,7 +15,7 @@ if CLIENT then
 	killicon.Add("cw_mp7_official", "vgui/killicons/mp7", Color(255, 120, 40, 0))
 	
 	SWEP.EffectiveRange_Orig = 20 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.DamageFallOff_Orig = .52
 
 	SWEP.DrawTraditionalWorldModel = false
 	SWEP.WM = "models/cw2/smgs/mp7_world.mdl"
@@ -178,7 +178,7 @@ function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 20 * 39.37
-self.DamageFallOff = .5
+self.DamageFallOff = .52
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

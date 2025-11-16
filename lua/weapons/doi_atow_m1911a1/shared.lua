@@ -94,7 +94,6 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300}, atts = {"md_r
 [4] = {header = "Magazine", offset = {550, 350}, atts = {"doi_atow_pistolextmag"}},
 [3] = {header = "Muzzle", offset = {-700, -350}, atts = {"doi_atow_unisuppressor"}},
 [5] = {header = "Finish", offset = {-150, -400}, atts = {"doi_atow_m1911satinfinish","doi_atow_c96goldfinish"}},
--- [6] = {header = "Stance", offset = {175, -350}, atts = {"cw_akimbo"}},
 ["+reload"] = {header = "Ammo", offset = {600, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire3"},
