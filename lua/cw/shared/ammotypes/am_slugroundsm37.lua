@@ -13,14 +13,12 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
 	self.Shots = 1
 	self.ClumpSpread = nil
 	self.MuzzleEffect = "muzzleflash_ak47"
 end
 
 function att:detachFunc()
-	self.CrosshairParts = {left = true, right = true, upper = false, lower = true}
 	self.Shots = self.Shots_Orig
 	self.ClumpSpread = self.ClumpSpread_Orig
 	self.MuzzleEffect = "muzzleflash_m3"

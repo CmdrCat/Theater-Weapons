@@ -21,8 +21,8 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 20 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr12gbuck"
 	SWEP.ShellScale = .435
@@ -151,15 +151,15 @@ SWEP.Recoil = 2.6
 SWEP.RecoilToSpread = -.25
  -- = 1
 
-SWEP.HipSpread = 0.07
-SWEP.AimSpread = 0.055
+SWEP.HipSpread = 0.001
+SWEP.AimSpread = 0.001
 SWEP.VelocitySensitivity = .75
 SWEP.MaxSpreadInc = 0.1
-SWEP.ClumpSpread = 0.02
-SWEP.SpreadPerShot = 0.02
+SWEP.ClumpSpread = 0.025
+SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.75
 SWEP.Shots = 9
-SWEP.Damage = 23
+SWEP.Damage = 11
 SWEP.DeployTime = .425
 SWEP.HolsterTime = .6
 
@@ -170,7 +170,6 @@ SWEP.GlobalDelayOnShootFast = 60/154
 SWEP.Chamberable = true
 SWEP.ShotgunReload = true
 SWEP.PreventQuickScoping = false
-SWEP.CrosshairParts = {left = true, right = true, upper = false, lower = true}
 
 SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"
@@ -198,13 +197,22 @@ self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDe
 	--self.ReloadStartTime = 0.5
 	--end
 
-	self.EffectiveRange = 20 * 39.37
-	self.DamageFallOff = 0.5
+	self.EffectiveRange = 15 * 39.37
+	self.DamageFallOff = 0.6
 
+	self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
+	self.HipSpread = 0.001
+	
 	if (self.ActiveAttachments.am_slugroundsm37) then
+	self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
 	self.EffectiveRange = ((self.EffectiveRange + 25 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .085))
-end
+	self.HipSpread = 0.09
+	end
+	if (self.ActiveAttachments.am_explosiveslugrounds) then
+	self.CrosshairParts = {left = true, right = true, upper = false, lower = true}
+	self.HipSpread = 0.09
+	end
 	if (self.ActiveAttachments.am_flechettem37) then
 	self.EffectiveRange = ((self.EffectiveRange + 18 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .1))

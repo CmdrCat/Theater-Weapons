@@ -2,8 +2,8 @@ AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 include("shared.lua")
 
-ENT.BlastDamage = 50
-ENT.BlastRadius = 40
+ENT.BlastDamage = 60
+ENT.BlastRadius = 60
 
 function ENT:Initialize()
 	self:SetModel("models/Items/AR2_Grenade.mdl") 
@@ -56,6 +56,8 @@ function ENT:PhysicsCollide(data, physobj)
 		ef:SetOrigin(self:GetPos())
 		ef:SetMagnitude(1)
 		util.Effect("cball_explode", ef)
+		ef:SetScale(0)
+		util.Effect("Explosion", ef)
 		self:Remove()
 	end
 end

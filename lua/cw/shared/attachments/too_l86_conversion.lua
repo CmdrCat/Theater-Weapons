@@ -4,7 +4,8 @@ att.displayName = "Liberator Variant"
 att.displayNameShort = "Liberator"
 
 att.statModifiers = {DamageMult = -1 / 4,
-FireDelayMult = -9 / 40}
+FireDelayMult = -9 / 40,
+RecoilMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

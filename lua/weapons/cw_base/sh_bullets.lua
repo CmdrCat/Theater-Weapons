@@ -13,7 +13,7 @@ local zeroVec = Vector(0, 0, 0)
 local reg = debug.getregistry()
 local GetShootPos = reg.Player.GetShootPos
 
-SWEP.bulletCallback = function(ply, traceResult, dmgInfo) -- create the callback function once, to avoid function spam
+SWEP.bulletCallback = function(ply, traceResult, dmgInfo) 
 	CustomizableWeaponry.callbacks.processCategory(ply:GetActiveWeapon(), "bulletCallback", ply, traceResult, dmgInfo)
 end
 

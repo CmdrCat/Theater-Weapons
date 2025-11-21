@@ -24,7 +24,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = false
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 20 * 39.37
+	SWEP.EffectiveRange_Orig = 15 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr12gbuck"
@@ -169,15 +169,15 @@ SWEP.Recoil = 2
 SWEP.RecoilToSpread = -.25
  -- = 1
 
-SWEP.HipSpread = 0.06
-SWEP.AimSpread = 0.045
+SWEP.HipSpread = 0.001
+SWEP.AimSpread = 0.001
 SWEP.VelocitySensitivity = .75
 SWEP.MaxSpreadInc = 0.1
-SWEP.ClumpSpread = 0.018
-SWEP.SpreadPerShot = 0.02
+SWEP.ClumpSpread = 0.025
+SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.85
 SWEP.Shots = 9
-SWEP.Damage = 25
+SWEP.Damage = 12
 SWEP.DeployTime = .475
 SWEP.HolsterTime = .6
 
@@ -197,8 +197,11 @@ SWEP.ReloadFinishWait = 1
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
-    self.EffectiveRange = 20 * 39.37
+    self.EffectiveRange = 15 * 39.37
 	self.DamageFallOff = .6
+
+	self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
+	self.HipSpread = 0.001
 	
 	self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast or self.ShellDelaySlow
 	self.GlobalDelayOnShoot = (self.ActiveAttachments.doi_atow_greasedbolt) and self.GlobalDelayOnShootFast or self.GlobalDelayOnShootSlow
@@ -217,7 +220,13 @@ self.Owner.ViewAff = 0
 	if (self.ActiveAttachments.am_slugroundsm37) then
 	self.EffectiveRange = ((self.EffectiveRange + 25 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .05))
-end
+	self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
+	self.HipSpread = 0.09
+	end
+	if (self.ActiveAttachments.am_explosiveslugrounds) then
+	self.CrosshairParts = {left = true, right = true, upper = false, lower = true}
+	self.HipSpread = 0.09
+	end
 	if (self.ActiveAttachments.am_flechettem37) then
 	self.EffectiveRange = ((self.EffectiveRange + 19 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .12))

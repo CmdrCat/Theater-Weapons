@@ -9,10 +9,10 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1
 	
 	SWEP.IconLetter = "k"
-	SWEP.SelectIcon = surface.GetTextureID("vgui/m3")
-	killicon.Add("cw_m3super90", "vgui/killicons/m3", Color(255, 120, 40, 0))
+	SWEP.SelectIcon = surface.GetTextureID("vgui/community/icon_cac_weapon_sh_t9fullauto")
+	killicon.Add("mg_sh_t9fullauto", "vgui/killicons/m3", Color(255, 120, 40, 0))
 	
-	SWEP.EffectiveRange_Orig = 20 * 39.37
+	SWEP.EffectiveRange_Orig = 15 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 
 	SWEP.MuzzleEffect = "muzzleflash_m3"
@@ -152,15 +152,15 @@ SWEP.FireSound = "CW_M3SUPER90_FIRE"
 SWEP.FireSoundSuppressed = "CW_M3SUPER90_FIRE_SUPPRESSED"
 SWEP.Recoil = 3
 
-SWEP.HipSpread = 0.045
-SWEP.AimSpread = 0.005
+SWEP.HipSpread = 0.001
+SWEP.AimSpread = 0.001
 SWEP.VelocitySensitivity = 0.75
 SWEP.MaxSpreadInc = 0.1
-SWEP.ClumpSpread = 0.013
-SWEP.SpreadPerShot = 0.01
+SWEP.ClumpSpread = 0.02
+SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.8
 SWEP.Shots = 12
-SWEP.Damage = 15
+SWEP.Damage = 14
 SWEP.DeployTime = 0.8
 
 SWEP.ReloadStartTime = 0.3
@@ -175,8 +175,17 @@ SWEP.Chamberable = true
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 20 * 39.37
+self.EffectiveRange = 15 * 39.37
 self.DamageFallOff = .6
+self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
+	if self.ActiveAttachments.am_slugrounds then
+		self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
+		self.HipSpread = 0.07
+	end
+	if self.ActiveAttachments.am_explosiveslugrounds then
+		self.CrosshairParts = {left = true, right = true, upper = false, lower = true}
+		self.HipSpread = 0.07
+	end
 end
 
 function SWEP:Holster(wep)

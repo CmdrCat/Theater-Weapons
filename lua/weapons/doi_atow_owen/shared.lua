@@ -149,7 +149,7 @@ end
 
 SWEP.FireDelay = 60/700
 SWEP.FireSound = "DOIOWEN_FIRE"
-SWEP.Recoil = 1
+SWEP.Recoil = 1.2
 
 
 SWEP.HipSpread = 0.02

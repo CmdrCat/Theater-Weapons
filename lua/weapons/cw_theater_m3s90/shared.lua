@@ -12,8 +12,8 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/m3")
 	killicon.Add("cw_theater_m3s90", "vgui/killicons/m3", Color(255, 120, 40, 0))
 	
-	SWEP.EffectiveRange_Orig = 20 * 39.37
-	SWEP.DamageFallOff_Orig = .5
+	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.9
@@ -158,15 +158,15 @@ SWEP.FireSound = "CW_TOO_M3SUPER90_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_M3SUPER90_FIRE_SUPPRESSED"
 SWEP.Recoil = 2.5
 
-SWEP.HipSpread = 0.06
-SWEP.AimSpread = 0.008
+SWEP.HipSpread = 0.001
+SWEP.AimSpread = 0.001
 SWEP.VelocitySensitivity = 0.75
 SWEP.MaxSpreadInc = 0.1
-SWEP.ClumpSpread = 0.017
-SWEP.SpreadPerShot = 0.013
+SWEP.ClumpSpread = 0.02
+SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.3
 SWEP.Shots = 12
-SWEP.Damage = 9
+SWEP.Damage = 7
 SWEP.DeployTime = 1
 SWEP.RecoilToSpread = 1.6 -- should actually be called SpreadToRecoil, but whatever
 
@@ -187,8 +187,14 @@ SWEP.ShotgunReload = true
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 20 * 39.37
-self.DamageFallOff = .5
+self.EffectiveRange = 15 * 39.37
+self.DamageFallOff = .6
+self.HipSpread = 0.001
+self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
+	if self.ActiveAttachments.am_slugrounds then
+		self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
+		self.HipSpread = 0.07
+	end
 end
 
 

@@ -199,7 +199,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 60 / 775
 SWEP.FireSound = "CW_TOO_L86_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_L86_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.75
+SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.13
 SWEP.AimSpread = 0.003

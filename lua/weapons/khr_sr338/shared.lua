@@ -17,9 +17,9 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.NoDistance = true
 	SWEP.CrosshairEnabled = true
-	SWEP.ShellScale = 0.42
+	SWEP.ShellScale = 0.77
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = -0, y = 0, z = 0}
+	SWEP.ShellPosOffset = {x = -2, y = 0, z = 10}
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = .85
 	SWEP.ForeGripOffsetCycle_Reload_Empty = .85
@@ -172,7 +172,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 10
-SWEP.Primary.DefaultClip	= 10
+SWEP.Primary.DefaultClip	= 40
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".338 Lapua"
 

@@ -6,7 +6,7 @@ CustomizableWeaponry.firemodes:registerFiremode("melee", "READY", true, 0, 0)
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "Bayonet - Kar98k"
+	SWEP.PrintName = "Bayonet - Kar 98k"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.UseHands = true
 	

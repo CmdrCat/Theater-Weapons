@@ -218,7 +218,7 @@ end
 SWEP.FireDelay = 60/560
 SWEP.FireSound = "DOISTEN_FIRE"
 SWEP.FireSoundSuppressed = "DOISTEN_SUPPRESSED"
-SWEP.Recoil = .8
+SWEP.Recoil = 1.6
  -- = .54
 
 SWEP.HipSpread = 0.04

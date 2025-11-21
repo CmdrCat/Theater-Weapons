@@ -153,7 +153,7 @@ SWEP.Primary.Ammo			= "4.6x30MM"
 SWEP.FireDelay = 60 / 950
 SWEP.FireSound = "CW_MP7_OFFICIAL_FIRE"
 SWEP.FireSoundSuppressed = "CW_MP7_OFFICIAL_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.55
+SWEP.Recoil = 0.8
 
 SWEP.HipSpread = 0.015
 SWEP.AimSpread = 0.005

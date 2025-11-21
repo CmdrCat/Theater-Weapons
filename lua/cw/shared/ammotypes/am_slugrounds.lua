@@ -1,6 +1,6 @@
 local att = {}
 att.name = "am_slugrounds"
-att.displayName = "Slug rounds"
+att.displayName = "Slug Rounds"
 att.displayNameShort = "Slug"
 
 att.statModifiers = {DamageMult = 8,

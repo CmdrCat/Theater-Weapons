@@ -12,7 +12,7 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/saiga12")
 	killicon.Add("cw_saiga12k_official", "vgui/killicons/saiga12", Color(255, 120, 40, 0))
 	
-	SWEP.EffectiveRange_Orig = 20 * 39.37
+	SWEP.EffectiveRange_Orig = 15 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0.5
@@ -217,15 +217,15 @@ SWEP.FireSound = "CW_SAIGA12K_FIRE"
 SWEP.FireSoundSuppressed = "CW_SAIGA12K_FIRE_SUPPRESSED"
 SWEP.Recoil = 2.5
 
-SWEP.HipSpread = 0.065
-SWEP.AimSpread = 0.008
+SWEP.HipSpread = 0.001
+SWEP.AimSpread = 0.0001
 SWEP.VelocitySensitivity = 0.75
 SWEP.MaxSpreadInc = 0.1
-SWEP.ClumpSpread = 0.0185
-SWEP.SpreadPerShot = 0.015
+SWEP.ClumpSpread = 0.025
+SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.3
 SWEP.Shots = 12
-SWEP.Damage = 8
+SWEP.Damage = 9
 SWEP.DeployTime = 0.8
 SWEP.RecoilToSpread = 1.6 -- should actually be called SpreadToRecoil, but whatever
 SWEP.NearWallDistance = 30
@@ -239,8 +239,14 @@ SWEP.ReloadHalt_Empty = 4
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 20 * 39.37
+self.EffectiveRange = 15 * 39.37
 self.DamageFallOff = .6
+self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
+self.HipSpread = 0.001
+	if self.ActiveAttachments.am_slugrounds then
+		self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
+		self.HipSpread = 0.09
+	end
 end
 
 function SWEP:Holster(wep)

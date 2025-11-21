@@ -161,7 +161,7 @@ end
 SWEP.FireDelay = 60/450
 SWEP.FireSound = "DOIM3_FIRE"
 SWEP.FireSoundSuppressed = "DOIM3_FIRE_SUPP"
-SWEP.Recoil = 1
+SWEP.Recoil = 2
  -- = .6
 
 SWEP.HipSpread = 0.04
