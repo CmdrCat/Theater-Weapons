@@ -29,6 +29,7 @@ CustomizableWeaponry:registerAmmo(".308 Winchester", ".308 Winchester Rounds", 7
 CustomizableWeaponry:registerAmmo(".300 Blackout", ".300 Blackout Rounds", 7.62, 35)
 CustomizableWeaponry:registerAmmo(".44 Magnum", ".44 Magnum Rounds", 10.9, 32.6)
 CustomizableWeaponry:registerAmmo(".45 ACP", ".45 ACP Rounds", 11.5, 22.8)
+CustomizableWeaponry:registerAmmo(".500 Nitro Express", ".500 Nitro Express Rounds", 13, 76)
 CustomizableWeaponry:registerAmmo(".50 AE", ".50 AE Rounds", 12.7, 32.6)
 CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
 CustomizableWeaponry:registerAmmo(".22 LR", ".22 LR Rounds", 5.7, 15)

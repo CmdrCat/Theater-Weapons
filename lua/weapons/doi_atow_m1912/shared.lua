@@ -151,8 +151,8 @@ SWEP.Recoil = 2.6
 SWEP.RecoilToSpread = -.25
  -- = 1
 
-SWEP.HipSpread = 0.001
-SWEP.AimSpread = 0.001
+SWEP.HipSpread = 0
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = .75
 SWEP.MaxSpreadInc = 0.1
 SWEP.ClumpSpread = 0.025
@@ -201,7 +201,7 @@ self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDe
 	self.DamageFallOff = 0.6
 
 	self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
-	self.HipSpread = 0.001
+	self.HipSpread = 0
 	
 	if (self.ActiveAttachments.am_slugroundsm37) then
 	self.CrosshairParts = {left = true, right = true, upper = true, lower = true}

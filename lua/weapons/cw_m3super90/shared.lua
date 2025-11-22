@@ -152,8 +152,8 @@ SWEP.FireSound = "CW_M3SUPER90_FIRE"
 SWEP.FireSoundSuppressed = "CW_M3SUPER90_FIRE_SUPPRESSED"
 SWEP.Recoil = 3
 
-SWEP.HipSpread = 0.001
-SWEP.AimSpread = 0.001
+SWEP.HipSpread = 0
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = 0.75
 SWEP.MaxSpreadInc = 0.1
 SWEP.ClumpSpread = 0.02
@@ -177,6 +177,7 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 15 * 39.37
 self.DamageFallOff = .6
+self.HipSpread = 0
 self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
 	if self.ActiveAttachments.am_slugrounds then
 		self.CrosshairParts = {left = true, right = true, upper = true, lower = true}

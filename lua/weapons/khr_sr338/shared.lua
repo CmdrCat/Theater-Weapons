@@ -148,7 +148,7 @@ SWEP.LuaVMRecoilAxisMod = {vert = 1, hor = 1, roll = .25, forward = .25, pitch =
 
 SWEP.SpeedDec = 45
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.OverallMouseSens = .8
 SWEP.NormalHoldType = "rpg"

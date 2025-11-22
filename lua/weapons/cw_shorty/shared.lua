@@ -142,8 +142,8 @@ SWEP.FireSound = "CW_SERBU_SHORTY_FIRE"
 SWEP.Recoil = 2
 SWEP.FireAnimSpeed = 1.65 * 1.3
 
-SWEP.HipSpread = 0.001
-SWEP.AimSpread = 0.001
+SWEP.HipSpread = 0
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = 0.15
 SWEP.MaxSpreadInc = 0.1
 SWEP.ClumpSpread = 0.055
@@ -170,7 +170,7 @@ clip = self:Clip1()
 self.EffectiveRange = 15 * 39.37
 self.DamageFallOff = .75
 self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
-self.HipSpread = 0.001
+self.HipSpread = 0
 	if self.ActiveAttachments.am_slugrounds then
 		self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
 		self.HipSpread = 0.2

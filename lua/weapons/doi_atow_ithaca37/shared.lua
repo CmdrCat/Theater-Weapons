@@ -169,8 +169,8 @@ SWEP.Recoil = 2
 SWEP.RecoilToSpread = -.25
  -- = 1
 
-SWEP.HipSpread = 0.001
-SWEP.AimSpread = 0.001
+SWEP.HipSpread = 0
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = .75
 SWEP.MaxSpreadInc = 0.1
 SWEP.ClumpSpread = 0.025
@@ -201,7 +201,7 @@ self.Owner.ViewAff = 0
 	self.DamageFallOff = .6
 
 	self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
-	self.HipSpread = 0.001
+	self.HipSpread = 0
 	
 	self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast or self.ShellDelaySlow
 	self.GlobalDelayOnShoot = (self.ActiveAttachments.doi_atow_greasedbolt) and self.GlobalDelayOnShootFast or self.GlobalDelayOnShootSlow

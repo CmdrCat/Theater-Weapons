@@ -217,8 +217,8 @@ SWEP.FireSound = "CW_SAIGA12K_FIRE"
 SWEP.FireSoundSuppressed = "CW_SAIGA12K_FIRE_SUPPRESSED"
 SWEP.Recoil = 2.5
 
-SWEP.HipSpread = 0.001
-SWEP.AimSpread = 0.0001
+SWEP.HipSpread = 0
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = 0.75
 SWEP.MaxSpreadInc = 0.1
 SWEP.ClumpSpread = 0.025
@@ -242,7 +242,7 @@ clip = self:Clip1()
 self.EffectiveRange = 15 * 39.37
 self.DamageFallOff = .6
 self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
-self.HipSpread = 0.001
+self.HipSpread = 0
 	if self.ActiveAttachments.am_slugrounds then
 		self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
 		self.HipSpread = 0.09
