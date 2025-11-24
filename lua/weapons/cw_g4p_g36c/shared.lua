@@ -160,7 +160,7 @@ SWEP.Trivia = {text = "A compact German assault rifle that sees widespread use i
 SWEP.Attachments = {[1] = {header = "Sight", offset = {700, -450},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {100, -450}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-700, -200}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	[4] = {header = "Laser", offset = {-100, 200}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_cmore = true, md_reflex = true, md_trijicon = true, md_aimpoint = true, md_acog_fixed = true, md_csgo_acog = true}},
+	[4] = {header = "Laser", offset = {-100, 200}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_cmore = true, md_reflex = true, md_trijicon = true, md_aimpoint = true, md_acog_fixed = true, md_uecw_csgo_acog = true}},
 	["+reload"] = {header = "Ammo", offset = {900, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 --SWEP.AttachmentDependencies = {["md_anpeq15"] = {"md_microt1"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY

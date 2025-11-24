@@ -78,6 +78,7 @@ if CLIENT then
 	["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "body", rel = "", pos = Vector(-0.92, 0.119, 0.27), angle = Angle(0, 0, -90), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body", rel = "", pos = Vector(-0.401, 0, 0.259), angle = Angle(-90, 0, -90), size = Vector(0.66, 0.66, 0.66), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body", rel = "", pos = Vector(-0.401, 0, 0.259), angle = Angle(-90, 0, -90), size = Vector(0.66, 0.66, 0.66), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	["md_csgo_silencer_ballistic"] = { type = "Model", model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", bone = "barrel", rel = "", pos = Vector(-6.18, -2.313, -2.188), angle = Angle(0, 0, -90), size = Vector(1.111, 1.111, 1.111)},
 	["md_sight_front"] = { type = "Model", model = "models/bunneh/frontsight.mdl", bone = "body", rel = "", pos = Vector(10.899, -4.75, 2.234), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_sight_rear"] = { type = "Model", model = "models/bunneh/rearsight.mdl", bone = "body", rel = "", pos = Vector(-5.651, -4.75, 2.249), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
@@ -120,6 +121,7 @@ SWEP.CanRestOnObjects = false
 
 
 SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -100},  atts = {"md_microt1kh", "odec3d_cmore_kry", "md_schmidt_shortdot", "md_elcan", "md_uecw_csgo_acog", "md_thermal", "md_nightforce_nxs"}},
+[2] = {header = "Muzzle", offset = {-600, -300}, atts = {"md_csgo_silencer_ballistic"}},
 ["+reload"] = {header = "Ammo", offset = {-250, 350}, atts = {"am_416barrett"}}}
 
 SWEP.Animations = {fire = {"shoot"},
@@ -175,6 +177,7 @@ SWEP.Secondary.Ammo			= ".416 Barrett"
 SWEP.Chamberable = false
 SWEP.FireDelay = 60/180
 SWEP.FireSound = "K82.FIRE"
+SWEP.FireSoundSuppressed = "MW2CR_striker_FIRE_SUPPRESSED"
 SWEP.Recoil = 3.9
 
 SWEP.HeadDamage = 1
