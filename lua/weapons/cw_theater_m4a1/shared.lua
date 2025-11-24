@@ -1,0 +1,386 @@
+AddCSLuaFile()
+AddCSLuaFile("sh_sounds.lua")
+include("sh_sounds.lua")
+
+if CLIENT then
+	SWEP.DrawCrosshair = false
+	SWEP.UseHands = true
+	SWEP.PrintName = "M4A1"
+	SWEP.CSMuzzleFlashes = true
+	SWEP.ViewModelMovementScale = 1.15
+	
+	SWEP.SelectIcon = surface.GetTextureID("vgui/m4a1")
+	killicon.Add("cw_theater_m4a1", "vgui/killicons/m4a1", Color(255, 120, 40, 0))
+
+	SWEP.EffectiveRange_Orig = 50 * 39.37
+	SWEP.DamageFallOff_Orig = .3
+	
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
+	SWEP.PosBasedMuz = true
+	SWEP.SnapToGrip = true
+	SWEP.ShellScale = 0.5
+	SWEP.ShellOffsetMul = 1
+	SWEP.ShellPosOffset = {x = 1, y = 0, z = -3}
+	SWEP.ForeGripOffsetCycle_Draw = 0
+	SWEP.ForeGripOffsetCycle_Reload = 0.88
+	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+	
+
+	
+	SWEP.IronsightPos = Vector(-2.981, 0, 0.079)
+	SWEP.IronsightAng = Vector(0, 0, 0)
+	
+		
+	SWEP.EXPSPos = Vector(-2.961, 0, 0.119)
+	SWEP.EXPSAng = Vector(0, 0, 0)
+
+	SWEP.ROMEO4TPos = Vector(-2.961, 0, 0.05)
+	SWEP.ROMEO4TAng = Vector(0, 0, 0)
+
+
+	SWEP.MRSPos = Vector(-2.961, 0, 0.119)
+	SWEP.MRSAng = Vector(0, 0, 0)
+
+	
+	SWEP.NXSPos = Vector(-2.971, 2, 0.479)
+	SWEP.NXSAng = Vector(0, 0, 0)
+
+	SWEP.AimpointPos = Vector(-3.01, 0, 0.439)
+	SWEP.AimpointAng = Vector(0, 0, 0)
+	
+	SWEP.MicroT1Pos = Vector(-3, 0, 0.43)
+	SWEP.MicroT1Ang = Vector(0, 0, 0)
+	
+	SWEP.ACOGPos = Vector(-2.971, 2, 0.159)
+	SWEP.ACOGAng = Vector(0, 0, 0)
+	
+	SWEP.ShortDotPos = Vector(-2.971, 2, 0.56)
+	SWEP.ShortDotAng = Vector(0, 0, 0)
+	
+
+	
+	SWEP.AlternativePos = Vector(-0.32, 0, -0.64)
+	SWEP.AlternativeAng = Vector(0, 0, 0)
+	
+
+	
+	SWEP.ForegripOverridePos = {
+	}
+	
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_mrs"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_romeo4t"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["too_reflex_exps"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_aimpoint"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)},
+	["md_acog"] = {[1] = Vector(-2.98, 0, -0.95), [2] = Vector(-0.01, 0, 0)},
+	["md_nightforce_nxs"] = {[1] = Vector(-5, 5, 0), [2] = Vector(0,0,-30)}
+	}
+	
+	SWEP.AttachmentModelsVM = {
+		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "weapon", rel = "", pos = Vector(-0.324, 3.194, -6.04), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.406, 0.559), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.406, 0.559), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.406, 0.559), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.57, 1.319, -2.06), angle = Angle(0, 0, -90), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", rel = "", pos = Vector(0, 0.16, 3.585), angle = Angle(0, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(-0.029, -2.721, 0.386), angle = Angle(180, 0, -90), size = Vector(0.449, 0.449, 0.449), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", rel = "", pos = Vector(-0.401, 3.276, -6), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", rel = "", pos = Vector(-0.08, -2.355, 5.782), angle = Angle(-90, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 9.109), angle = Angle(0, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "weapon", rel = "", pos = Vector(-0.399, 3.362, -5.682), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_nightforce_nxs"] = { type = "Model", model = "models/cw2/attachments/l96_scope.mdl", bone = "weapon", rel = "", pos = Vector(-0.128, -3.567, 0), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	}
+
+
+	SWEP.ForeGripHoldPos = {
+		["ValveBiped.Bip01_L_Finger3"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(32.067, -28.056, 9.18) },
+	["ValveBiped.Bip01_L_Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(2.161, -81.763, 28.533) },
+	["ValveBiped.Bip01_L_Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(14.732, -40.451, 27.42) },
+	["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 57.699, -34.175) },
+	["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-0.564, 0.519, -0.713), angle = Angle(0, 0, 0) },
+	["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-17.928, 13.843, 43.887) },
+	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(41.328, 16.298, 0) }
+
+	}
+	
+	
+	SWEP.LaserPosAdjust = Vector(1, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
+end
+
+SWEP.MuzzleVelocity = 880 -- in meter/s
+
+SWEP.SightBGs = {main = 2, carryhandle = 0, none = 1}
+SWEP.BarrelBGs = {main = 3, longris = 4, long = 3, magpul = 2, ris = 1, regular = 0}
+SWEP.StockBGs = {main = 2, regular = 0, heavy = 1, sturdy = 2}
+SWEP.MagBGs = {main = 5, regular = 0, round60 = 1}
+SWEP.LuaViewmodelRecoil = true
+
+SWEP.Trivia = {text = "The AR-15 platform sees global use from civilians, law enforcement agencies, and militaries. Many modern firearms take inspiration from the AR-15 in some way.", x = -900, y = -700}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_microt1","too_reflex_romeo4t", "too_reflex_exps","too_reflex_mrs",  "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+	[2] = {header = "Muzzle", offset = {300, -600}, atts = {"md_saker"}},
+	[3] = {header = "Handguard", offset = {-650, -100}, atts = {"md_foregrip", "md_bipod"}},
+	[4] = {header = "Laser", offset = {250, 300}, atts = {"md_anpeq15"}},
+	[5] = {header = "Conversion", offset = {1050, 500}, atts = {"too_m4a1_50_beowulf"}},
+	["+use"] = {header = "Optic Type", offset = {0, -100}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+reload"] = {header = "Ammo", offset = {1050, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+
+
+
+    SWEP.AttachmentDependencies = {
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["too_reflex_exps"] = {"too_optic_category_reflex"},
+		["too_reflex_mrs"] = {"too_optic_category_reflex"},
+		["md_aimpoint"] = {"too_optic_category_reflex"},
+		["too_reflex_romeo4t"] = {"too_optic_category_reflex"},
+		["md_acog"] = {"too_optic_category_magnified"},
+		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+		["md_nightforce_nxs"] = {"too_optic_category_magnified"},
+	}
+	
+-- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
+
+SWEP.Animations = {
+    fire         = "fire",
+	fire_last         = "fire_empty",
+	fire_aim         = "fire_iron",
+	fire_last_aim         = "fire_empty",
+    reload       = "reload",
+    reload_empty = "reload_empty",
+    idle         = "idle",
+    draw         = "draw"
+}
+
+SWEP.Sounds = {
+    draw = {
+        {time = 0, sound = "CW_FOLEY_MEDIUM"}
+    },
+
+    reload = {
+		 {time = 0.51, sound = "CW_TOO_AR15_MAGOUT"},
+		 {time = 1.15, sound = "CW_TOO_AR15_MAGHIT"},
+		 {time = 1.26, sound = "CW_TOO_AR15_MAGIN"},
+    },
+
+    reload_empty = {
+		{time = 0.58, sound = "CW_TOO_AR15_MAGOUT_EMPTY"},
+		{time = 1.3, sound = "CW_TOO_AR15_MAGHIT_EMPTY"},
+		{time = 1.58, sound = "CW_TOO_AR15_MAGIN_EMPTY"},
+		{time = 1.90, sound = "CW_TOO_AR15_BOLT"},
+    }
+}
+
+SWEP.SpeedDec = 30
+
+SWEP.Slot = 2
+SWEP.SlotPos = 0
+SWEP.NormalHoldType = "ar2"
+SWEP.RunHoldType = "passive"
+SWEP.FireModes = {"auto", "semi"}
+SWEP.Base = "cw_base"
+SWEP.Category = "TCW - Theater Customs"
+SWEP.SubCategory = "Assault Rifles/Carbines"
+
+SWEP.Author			= "reshed"
+SWEP.Contact		= ""
+SWEP.Purpose		= ""
+SWEP.Instructions	= ""
+
+SWEP.ViewModelFOV	= 90
+SWEP.ViewModelFlip	= false
+SWEP.ViewModel		= "models/weapons/rfas/ar/cw2_theater_rfas_m4a1.mdl"
+SWEP.WorldModel		= "models/weapons/w_rif_m4a1.mdl"
+
+SWEP.Spawnable			= true
+SWEP.AdminSpawnable		= true
+
+SWEP.Primary.ClipSize		= 30
+SWEP.Primary.DefaultClip	= 120
+SWEP.Primary.Automatic		= true
+SWEP.Primary.Ammo			= "5.56x45MM"
+
+SWEP.Secondary.DefaultClip	= 30
+SWEP.Secondary.Ammo			= ".50 Beowulf"
+
+SWEP.FireDelay = 0.066666666666667
+SWEP.FireSound = "CW_TOO_AR15_FIRE"
+SWEP.FireSoundSuppressed = "CW_TOO_AR15_FIRE_SUPPRESSED"
+SWEP.Recoil = 0.6
+
+SWEP.HipSpread = 0.12
+SWEP.AimSpread = 0.003
+SWEP.VelocitySensitivity = 0.6
+SWEP.MaxSpreadInc = 0.1
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
+SWEP.Shots = 1
+SWEP.Damage = 30
+SWEP.DeployTime = 0.6
+
+SWEP.ReloadSpeed = 1.0
+SWEP.ReloadTime = 2.3
+SWEP.ReloadTime_Empty = 2.77
+SWEP.ReloadHalt = 2.3
+SWEP.ReloadHalt_Empty = 2.77
+
+	SWEP.SprintPos = Vector(0, 0, -2.639)
+	SWEP.SprintAng = Vector(-11.612, 19.459, -38.855)
+
+	SWEP.CustomizePos = Vector(1, -3, -0.611)
+	SWEP.CustomizeAng = Vector(1.194, 21.681, -8.62)
+
+SWEP.ADSFireAnim = true
+
+function SWEP:fireAnimFunc()
+    clip = self:Clip1()         -- gets the current number of bullets left in the weapon's magazine
+    cycle = 0                   -- default animation cycle start point
+    rate = 1                    -- default animation playback rate
+    anim = "safe"               -- unused variable here (probably placeholder)
+    prefix = ""                 -- prefix for the animation name
+    suffix = ""                 -- suffix for the animation name
+
+    -- If the weapon is down to the last bullet, mark this shot as the "last" animation
+    if clip == 1 then
+        suffix = suffix .. "_last"
+    end
+
+    -- If the player is aiming down sights, adjust animation suffix and cycle
+    if self:isAiming() then
+        suffix = suffix .. "_aim"
+        cycle = self.ironFireAnimStartCycle
+    end
+    
+    -- Actually play the weapon animation
+    self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+end
+
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 50 * 39.37
+self.DamageFallOff = .3
+if self.ActiveAttachments.too_m4a1_50_beowulf then
+	self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + 0.2))
+end
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+end
+
+function SWEP:Holster(wep)
+	-- can't switch if neither the weapon we want to switch to or the wep we're trying to switch to are not valid
+	if not IsValid(wep) and not IsValid(self.SwitchWep) then
+		self.SwitchWep = nil
+		return false
+	end
+	
+	local CT = CurTime()
+	
+	-- can't holster if we have a global delay on the weapon
+	if CT < self.GlobalDelay or CT < self.HolsterWait then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.HolsterDelay ~= 0 and CT < self.dt.HolsterDelay then
+		return false
+	end
+	
+	-- can't holster if there are sequenced actions
+	if #self._activeSequences > 0 then
+		return false
+	end
+	
+	if self.ReloadDelay then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.State ~= CW_HOLSTER_START then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+	end
+	
+	self.dt.State = CW_HOLSTER_START
+	
+	-- if holster sequence is over, let us select the desired weapon
+	if self.SwitchWep and self.dt.State == CW_HOLSTER_START and CurTime() > self.dt.HolsterDelay then
+		self.dt.State = CW_IDLE
+		self.dt.HolsterDelay = 0
+		
+		return true
+	end
+	
+	-- if it isn't, make preparations for it
+	self.ShotgunReloadState = 0
+	self.ReloadDelay = nil
+	
+	if self:filterPrediction() then
+		if self.holsterSound then -- quick'n'dirty prediction fix
+			self:EmitSound("CW_HOLSTER", 70, 100)
+			self.holsterSound = false
+			
+			if IsFirstTimePredicted() then
+				if self.holsterAnimFunc then
+					self:holsterAnimFunc()
+				else
+					if self.Animations.holster then
+						self:sendWeaponAnim("holster")
+					end
+				end
+			end
+		end
+	end
+	
+	self.SwitchWep = wep
+	self.SuppressTime = nil
+	
+	if self.dt.M203Active then
+		if SERVER and SP then
+			SendUserMessage("CW20_M203OFF", self.Owner)
+		end
+		
+		if CLIENT then
+			self:resetM203Anim()
+		end
+	end
+
+	self.dt.M203Active = false
+end
+
+local simpleTextColor = Color(255, 210, 0, 255)
+local mod = 25
+
+function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
+	if self.SelectIcon then
+		surface.SetTexture(self.SelectIcon)
+		
+		wide = wide - mod
+		
+		x = x + (mod / 2)
+		y = y + (mod / 4) + (wide / 8)
+		
+		surface.SetDrawColor(255, 255, 255, alpha)
+		
+		surface.DrawTexturedRect(x, y, wide, (wide / 2))
+	else
+		simpleTextColor.a = alpha
+		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
+	end
+end

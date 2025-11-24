@@ -17,7 +17,7 @@ function att:attachFunc()
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 	self.PrintName = "M8A1"
-	self.Trivia = {text = "4-round burst assault rifle. Bursts can be fired in quick succession.", x = 50, y = -500}
+	self.Trivia = {text = "4-round burst assault rifle. Bursts can be fired in quick succession.", x = -200, y = -900}
 end
 
 function att:detachFunc()
@@ -26,7 +26,7 @@ function att:detachFunc()
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 	self.PrintName = "XM8"
-	self.Trivia = {text = "An advanced assault rifle platform meant to replace the US Army's M4. It instead became C.G.I.'s service rifle.", x = 50, y = -500}
+	self.Trivia = {text = "An advanced assault rifle platform meant to replace the US Army's M4. It instead became C.G.I.'s service rifle.", x = -200, y = -900}
 end
 
 CustomizableWeaponry:registerAttachment(att)

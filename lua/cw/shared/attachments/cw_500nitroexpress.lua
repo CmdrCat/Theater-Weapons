@@ -18,13 +18,11 @@ att.statModifiers = {
 }
 
 function att:attachFunc()
-    self.FireSound = "CW_CHEYTAC_FIRE"
 	self.Primary.Ammo = ".500 Nitro Express"
     self.Trivia = {text = ".500 Nitro Express is a full-length rifle cartridge used for hunting big game.", x = -400, y = -400}
 end
 
 function att:detachFunc()
-    self.FireSound = "CW_BER_BULL_FIRE"
 	self.Primary.Ammo = ".44 Magnum"
     self.Trivia = {text = "The Raging Bull is a reliable revolver that delivers a .44 Magnum payload with no compromise.", x = -400, y = -400}
 end

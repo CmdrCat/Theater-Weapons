@@ -1,0 +1,308 @@
+AddCSLuaFile()
+AddCSLuaFile("sh_sounds.lua")
+include("sh_sounds.lua")
+
+if CLIENT then
+	SWEP.DrawCrosshair = false
+	SWEP.PrintName = "AKM"
+	SWEP.CSMuzzleFlashes = true
+	
+	SWEP.IronsightPos = Vector(-3.846, -3.109, 1.1)
+	SWEP.IronsightAng = Vector(0.577, 0.079, 0)
+
+	SWEP.AimpointPos = Vector(-3.873, -6.683, 0.351)
+	SWEP.AimpointAng = Vector(0, 0, 0)
+
+	SWEP.EoTechPos = Vector(-3.875, -4.528, -0.16)
+	SWEP.EoTechAng = Vector(0, 0, 0)
+
+	SWEP.KobraPos = Vector(-2.55, -3.224, -0.026)
+	SWEP.KobraAng = Vector(0.717, -0.638, 0)
+	
+	SWEP.ShortenedPos = Vector(-2.428, -3.618, 0.842)
+	SWEP.ShortenedAng = Vector(-0.098, -0.044, 0)
+
+	SWEP.RPKPos = Vector(-2.418, -3.481, 0.93)
+	SWEP.RPKAng = Vector(0.125, -0.25, 0)
+	
+	SWEP.PSOPos = Vector(-2.5, 0.65, -0.101)
+	SWEP.PSOAng = Vector(0, 0, 0)
+	
+	SWEP.ACOGPos = Vector(-3.866, -8.995, 0.229)
+	SWEP.ACOGAng = Vector(0, 0, 0)
+
+	SWEP.ShortDotPos = Vector(-3.859, -8.905, 0.476)
+	SWEP.ShortDotAng = Vector(0, 0, 0)
+
+	SWEP.AlternativePos = Vector(-1, -2, -0.6)
+	SWEP.AlternativeAng = Vector(0, 0, 0)
+	
+	SWEP.BackupSights = {
+		["md_aimpoint"] = {[1] = Vector(-6, 5, 1), [2] = Vector(0,0,-30)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-6, 5, 1), [2] = Vector(0,0,-30)},
+		["md_acog"] = {Vector(-3.862, 0, -0.676), Vector(0, 0, 0)},
+	}
+
+	SWEP.ViewModelMovementScale = 1.15
+	
+	SWEP.SelectIcon = surface.GetTextureID("vgui/akm")
+	killicon.Add("cw_akm_official", "vgui/killicons/akm", Color(255, 120, 40, 0))
+	
+	SWEP.EffectiveRange_Orig = 45 * 39.37
+	SWEP.DamageFallOff_Orig = .4
+
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
+	SWEP.PosBasedMuz = true
+	SWEP.ShellScale = 0.69
+	SWEP.ShellOffsetMul = 1
+	SWEP.ShellPosOffset = {x = 0, y = -1, z = 1}
+	SWEP.SightWithRail = true
+	SWEP.ForeGripOffsetCycle_Draw = 0
+	SWEP.ForeGripOffsetCycle_Reload = 0.52
+	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.76
+	
+	SWEP.BoltBone = "bolt"
+	SWEP.BoltShootOffset = Vector(-4.81, 0, 0)
+	SWEP.OffsetBoltOnBipodShoot = true
+
+	SWEP.NXSPos = Vector(-2.442, -2.941, -0.823)
+	SWEP.NXSAng = Vector(0, -0.429, 0)
+
+	SWEP.AttachmentModelsVM = {
+		["md_pbs1"] = { type = "Model", model = "models/cw2/attachments/pbs1.mdl", bone = "body", rel = "", pos = Vector(-0.031, 20.329, -0.635), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body", rel = "", pos = Vector(-0.232, -2.754, -3.096), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "body", rel = "", pos = Vector(-0.385, -3.379, -2.883), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "body", rel = "", pos = Vector(-0.292, -1.991, -2.57), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "body", rel = "", pos = Vector(-0.297, -2.053, -2.57), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	}
+
+	SWEP.ForeGripHoldPos = {
+		["Bip01 L Finger02"] = {pos = Vector(0, 0, 0), angle = Angle(0, 83.181, 0) },
+		["Bip01 L Finger41"] = {pos = Vector(0, 0, 0), angle = Angle(0, 34.194, 0) },
+		["Bip01 L UpperArm"] = {pos = Vector(0.907, -0.471, -2.847), angle = Angle(0, 0, 0) },
+		["Bip01 L Finger31"] = {pos = Vector(0, 0, 0), angle = Angle(0, 53.886, 0) },
+		["Bip01 L Finger12"] = {pos = Vector(0, 0, 0), angle = Angle(0, 21.756, 0) },
+		["Bip01 L ForeTwist"] = {pos = Vector(0, 0, 0), angle = Angle(0, 0, 44.928) },
+		["Bip01 L Finger0"] = {pos = Vector(0, 0, 0), angle = Angle(11.442, 0, 0) },
+		["Bip01 L Forearm"] = {pos = Vector(0, 0, 0), angle = Angle(0, 0, 72.1) },
+		["Bip01 L Finger21"] = {pos = Vector(0, 0, 0), angle = Angle(-7.89, 53.339, 0) },
+		["Bip01 L Finger11"] = {pos = Vector(0, 0, 0), angle = Angle(0, 67.512, 0) },
+		["Bip01 L Finger01"] = {pos = Vector(0, 0, 0), angle = Angle(13.019, 30.686, 0) },
+		["Bip01 L Hand"] = {pos = Vector(0, 0, 0), angle = Angle(0, 33.571, -11.86) }
+	}
+		
+	--SWEP.PSO1AxisAlign = {right = 0, up = 0.4, forward = -90}
+	--SWEP.SchmidtShortDotAxisAlign = {right = 0, up = -0.4, forward = 0}
+	--SWEP.ACOGAxisAlign = {right = 0, up = -0.4, forward = 0}
+end
+
+SWEP.MuzzleVelocity = 880 -- in meter/s
+
+SWEP.LuaViewmodelRecoil = true
+
+SWEP.Trivia = {text = "The most common gun in the world, found in the hands of modern militaries and insurgents alike.", x = 0, y = -450}
+
+SWEP.BarrelBGs = {main = 2, rpk = 1, short = 4, regular = 0}
+SWEP.StockBGs = {main = 1, regular = 0, heavy = 1, foldable = 2}
+SWEP.ReceiverBGs = {main = 3, rpk = 1, regular = 0}
+SWEP.MagBGs = {main = 4, regular = 0, rpk = 1}
+
+SWEP.Attachments = {
+	{header = "Sight", offset = {950, -250},  atts = {"md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
+	{header = "Muzzle", offset = {-500, -500}, atts = {"md_pbs1"}},
+	{header = "Handguard", offset = {-400, 100}, atts = {"md_foregrip"}, exclusions = {bg_ak74_rpkbarrel = true}},
+	["+reload"] = {header = "Ammo", offset = {950, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+
+SWEP.Animations = {fire = {"ak47_fire1", "ak47_fire2", "ak47_fire3"},
+	reload = "ak47_reload",
+	idle = "ak47_idle",
+	draw = "ak47_draw"}
+	
+SWEP.Sounds = {	
+	draw = {
+		{time = 0, sound = "CW_FOLEY_MEDIUM"}
+	},
+	ak47_reload = {
+		{time = 0.05, sound = "CW_FOLEY_MEDIUM"},
+		{time = 0.3, sound = "CW_AKM_OFFICIAL_MAGOUT"},
+		{time = 0.35, sound = "CW_AKM_OFFICIAL_MAGRELEASE"},
+		{time = 0.8, sound = "CW_AKM_OFFICIAL_CLOTH"},
+		{time = 1.15, sound = "CW_AKM_OFFICIAL_MAGIN"},
+		{time = 1.92, sound = "CW_AKM_OFFICIAL_BOLTPULL"},
+		{time = 2.08, sound = "CW_AKM_OFFICIAL_BOLTRELEASE"},
+		{time = 2.2, sound = "CW_FOLEY_MEDIUM"}
+	}
+}
+
+SWEP.SpeedDec = 30
+
+SWEP.Slot = 2
+SWEP.SlotPos = 0
+SWEP.NormalHoldType = "ar2"
+SWEP.RunHoldType = "passive"
+SWEP.FireModes = {"auto", "semi"}
+SWEP.Base = "cw_base"
+SWEP.Category = "TCW - Assault Rifles/Carbines"
+
+SWEP.Author			= "Spy"
+SWEP.Contact		= ""
+SWEP.Purpose		= ""
+SWEP.Instructions	= ""
+
+SWEP.ViewModelFOV	= 70
+SWEP.ViewModelFlip	= false
+SWEP.ViewModel		= "models/cw2/rifles/akm_official_v.mdl"
+SWEP.WorldModel		= "models/weapons/w_rif_ak47.mdl"
+
+SWEP.Spawnable			= true
+SWEP.AdminSpawnable		= true
+
+SWEP.Primary.ClipSize		= 30
+SWEP.Primary.DefaultClip	= 120
+SWEP.Primary.Automatic		= true
+SWEP.Primary.Ammo			= "7.62x39MM"
+
+SWEP.FireDelay = 60/600
+SWEP.FireSound = "CW_AKM_OFFICIAL_FIRE"
+SWEP.FireSoundSuppressed = "CW_AKM_OFFICIAL_FIRE_SUPPRESSED"
+SWEP.Recoil = 1.2
+
+SWEP.HipSpread = 0.1
+SWEP.AimSpread = 0.003
+SWEP.VelocitySensitivity = 0.6
+SWEP.MaxSpreadInc = 0.1
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
+SWEP.Shots = 1
+SWEP.Damage = 46
+SWEP.DeployTime = 0.6
+
+SWEP.ReloadSpeed = 0.85
+SWEP.ReloadTime = 1.65
+SWEP.ReloadTime_Empty = 2.1
+SWEP.ReloadHalt = 1.65
+SWEP.ReloadHalt_Empty = 2.6
+SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 45 * 39.37
+self.DamageFallOff = .4
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+end
+
+function SWEP:Holster(wep)
+	-- can't switch if neither the weapon we want to switch to or the wep we're trying to switch to are not valid
+	if not IsValid(wep) and not IsValid(self.SwitchWep) then
+		self.SwitchWep = nil
+		return false
+	end
+	
+	local CT = CurTime()
+	
+	-- can't holster if we have a global delay on the weapon
+	if CT < self.GlobalDelay or CT < self.HolsterWait then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.HolsterDelay ~= 0 and CT < self.dt.HolsterDelay then
+		return false
+	end
+	
+	-- can't holster if there are sequenced actions
+	if #self._activeSequences > 0 then
+		return false
+	end
+	
+	if self.ReloadDelay then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.State ~= CW_HOLSTER_START then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+	end
+	
+	self.dt.State = CW_HOLSTER_START
+	
+	-- if holster sequence is over, let us select the desired weapon
+	if self.SwitchWep and self.dt.State == CW_HOLSTER_START and CurTime() > self.dt.HolsterDelay then
+		self.dt.State = CW_IDLE
+		self.dt.HolsterDelay = 0
+		
+		return true
+	end
+	
+	-- if it isn't, make preparations for it
+	self.ShotgunReloadState = 0
+	self.ReloadDelay = nil
+	
+	if self:filterPrediction() then
+		if self.holsterSound then -- quick'n'dirty prediction fix
+			self:EmitSound("CW_HOLSTER", 70, 100)
+			self.holsterSound = false
+			
+			if IsFirstTimePredicted() then
+				if self.holsterAnimFunc then
+					self:holsterAnimFunc()
+				else
+					if self.Animations.holster then
+						self:sendWeaponAnim("holster")
+					end
+				end
+			end
+		end
+	end
+	
+	self.SwitchWep = wep
+	self.SuppressTime = nil
+	
+	if self.dt.M203Active then
+		if SERVER and SP then
+			SendUserMessage("CW20_M203OFF", self.Owner)
+		end
+		
+		if CLIENT then
+			self:resetM203Anim()
+		end
+	end
+
+	self.dt.M203Active = false
+end
+
+local simpleTextColor = Color(255, 210, 0, 255)
+local mod = 25
+
+function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
+	if self.SelectIcon then
+		surface.SetTexture(self.SelectIcon)
+		
+		wide = wide - mod
+		
+		x = x + (mod / 2)
+		y = y + (mod / 4) + (wide / 8)
+		
+		surface.SetDrawColor(255, 255, 255, alpha)
+		
+		surface.DrawTexturedRect(x, y, wide, (wide / 2))
+	else
+		simpleTextColor.a = alpha
+		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
+	end
+end

@@ -1,0 +1,386 @@
+if CustomizableWeaponry then
+
+SWEP.magType = "arMag"
+
+AddCSLuaFile()
+AddCSLuaFile("sh_sounds.lua")
+include("sh_sounds.lua")
+
+if CLIENT then
+	SWEP.DrawCrosshair = false
+	SWEP.PrintName = "XM8"
+	SWEP.CSMuzzleFlashes = true
+	SWEP.ViewModelMovementScale = 1.15
+	
+	SWEP.SelectIcon = surface.GetTextureID("vgui/xm8")
+	killicon.Add("cw_g4p_xm8", "vgui/killicons/xm8", Color(255, 120, 40, 0))
+	
+	SWEP.EffectiveRange_Orig = 50 * 39.37
+	SWEP.DamageFallOff_Orig = .3
+
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
+	SWEP.PosBasedMuz = true
+	SWEP.SnapToGrip = true
+	SWEP.ShellScale = 0.5
+	SWEP.ShellOffsetMul = 1
+	SWEP.ShellPosOffset = {x = 0, y = 0, z = -3}
+	SWEP.ForeGripOffsetCycle_Draw = 0
+	SWEP.ForeGripOffsetCycle_Reload = 0.9
+	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.8
+	SWEP.FireMoveMod = 0.6
+	
+	SWEP.DrawTraditionalWorldModel = true
+	
+	SWEP.CustomizePos = Vector(-5.6, -2.401, -2.401)
+	SWEP.CustomizeAng = Vector(18.2, -35.8, -7.401)
+	
+	SWEP.IronsightPos = Vector(2.556, -3.543, 0.778)
+	SWEP.IronsightAng = Vector(1.143, 0, 0)
+	
+	SWEP.EoTechPos = Vector(2.575, -5.119, -0.35)
+	SWEP.EoTechAng = Vector(0, 0, 0)
+	
+	SWEP.AimpointPos = Vector(2.539, -5.119, -0.132)
+	SWEP.AimpointAng = Vector(0, 0, 0)
+	
+	SWEP.MicroT1Pos = Vector(2.569, -6.2, 0.019)
+	SWEP.MicroT1Ang = Vector(0, 0, 0)
+	
+	SWEP.ACOGPos = Vector(2.575, -4, -0.35)
+	SWEP.ACOGAng = Vector(0, 0, 0)
+	
+	SWEP.SG1Pos = Vector(-1.614, -0.861, -0.51)
+	SWEP.SG1Ang = Vector(0, 0, 0)
+	
+	SWEP.CmorePos = Vector(2.575, -6.238, -0.024)
+	SWEP.CmoreAng = Vector(0, 0, 0)
+	
+	SWEP.ReflexPos = Vector(2.575, -6.238, 0.108)
+	SWEP.ReflexAng = Vector(0, 0, 0)
+	
+	SWEP.BallisticPos = Vector(-2.02, -4, 0.363)
+	SWEP.BallisticAng = Vector(0, 0, 0)
+	
+	SWEP.ELCANPos = Vector(2.539, -3, -0.44)
+	SWEP.ELCANAng = Vector(0, 0, 0)
+
+	SWEP.ThermalPos = Vector(2.539, -3, -0.44)
+	SWEP.ThermalAng = Vector(0, 0, 0)
+	
+	SWEP.TrijiconPos = Vector(2.528, -6.2, -0.058)
+	SWEP.TrijiconAng = Vector(0, 0, 0)
+	
+	SWEP.CSGOACOGPos = Vector(2.575, -5.401, -0.12)
+	SWEP.CSGOACOGAng = Vector(0, 0, 0)
+	
+	SWEP.CSGOSSGPos = Vector(-2.02, -3.217, 0.34)
+	SWEP.CSGOSSGAng = Vector(0, 0, 0)
+	
+	SWEP.SprintPos = Vector(-4.2, -1.8, 0)
+	SWEP.SprintAng = Vector(-8.2, -42.201, 0)
+	
+	SWEP.BackupSights = {
+	["md_microt1"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_cmore"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_trijicon"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_reflex"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_aimpoint"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_elcan"] = {[1] = Vector(2.554, 0, -1.335), [2] = Vector(-0.1, 0, 0)},
+	["md_acog_fixed"] = {[1] = Vector(2.575, 0, -1.275), [2] = Vector(0.2, 0, 0)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)}
+	}
+
+	SWEP.SightWithRail = true
+	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
+	
+	SWEP.AlternativePos = Vector(0.2, 0, -1)
+	SWEP.AlternativeAng = Vector(0, 0, 0)
+	
+	SWEP.M203OffsetCycle_Reload = 0.81
+	SWEP.M203OffsetCycle_Reload_Empty = 0.73
+	SWEP.M203OffsetCycle_Draw = 0
+	
+	SWEP.M203CameraRotation = {p = -90, y = 0, r = -90}
+
+	SWEP.BaseArm = "r-forearm"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+	
+	SWEP.M203Pos = Vector(-0.562, -2.481, 0.24)
+	SWEP.M203Ang = Vector(0, 0, 0)
+	
+	SWEP.M203HoldPos = {
+		["r-upperarm-movement"] = {pos = Vector(2.8, -0.46, -1.8), angle = Angle(0, 0, 0)}
+	}
+
+	SWEP.AttachmentModelsVM = {
+		["md_uecw_usgimag"] = { type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "Mag", rel = "", pos = Vector(0, 0, -2), angle = Angle(0, 180, 0), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_emag"] = { type = "Model", model = "models/gmod4phun/emag.mdl", bone = "Mag", rel = "", pos = Vector(0, 0, -2.75), angle = Angle(0, 180, 0), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "Mag", rel = "", pos = Vector(0, -1.201, -1.5), angle = Angle(0, 180, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_cmag"] = { type = "Model", model = "models/wystan/cmag.mdl", bone = "Mag", rel = "", pos = Vector(0.165, 4.21, -1.892), angle = Angle(0, 90, 0), size = Vector(0.68, 0.68, 0.68), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Base", rel = "", pos = Vector(0.234, 1.019, 0.804), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "Base", rel = "", pos = Vector(0, 0, 2.628), angle = Angle(0, 180, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Base", rel = "", pos = Vector(0, -1.777, 2.831), angle = Angle(0, 180, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Base", rel = "", pos = Vector(0.057, -8.466, -1.925), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
+		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "Base", rel = "", pos = Vector(0.194, 6.616, -2.481), angle = Angle(0, 180, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "Base", rel = "", pos = Vector(-0.601, -8.801, 0), angle = Angle(0, -90, 90), size = Vector(0.5, 0.5, 0.5)},
+		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "Base", rel = "", pos = Vector(-0.401, -17.066, -3.633), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "Base", rel = "", pos = Vector(-0.015, 1.12, 2.779), angle = Angle(0, 0, 0), size = Vector(0.34, 0.34, 0.34)},
+		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "Base", rel = "", pos = Vector(0, 5.44, -3.181), angle = Angle(0, 180, 0), size = Vector(1, 1, 1)},
+		["md_m203"] = { type = "Model", model = "models/cw2/attachments/m203.mdl", bone = "Base", rel = "", pos = Vector(-2.34, 10.659, 2.4), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), animated = true},
+		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "Base", rel = "", pos = Vector(0.3, 5.719, -1.885), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
+		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Base", rel = "", pos = Vector(0.298, 5.892, -2.497), angle = Angle(0, 180, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Base", rel = "", pos = Vector(0.298, 5.892, -2.497), angle = Angle(0, 180, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "Base", rel = "", pos = Vector(-0.04, -1.201, 0.419), angle = Angle(0, 180, 0), size = Vector(1.899, 1.899, 1.899)},
+		["md_uecw_csgo_acog"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_acog.mdl", bone = "Base", rel = "", pos = Vector(-0.04, 6.199, -0.51), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Base", rel = "", pos = Vector(0, -15.341, -1.101), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	}
+
+	SWEP.ForeGripHoldPos = {
+		["r-forearm"] = {vector = Vector(0, 0, 0), angle = Angle(-8.5, 14.8, -82.5)},
+		["r-thumb-tip"] = {vector = Vector(0, 0, 0), angle = Angle(57.558, 0, 0)},
+		["r-thumb-mid"] = {vector = Vector(0, 0, 0), angle = Angle(29.489, 0, 0)},
+		["r-middle-tip"] = {vector = Vector(0, 0, 0), angle = Angle(47.895, 0, 0)},
+		["r-thumb-low"] = {vector = Vector(0, 0, 0), angle = Angle(7.638, 26.665, 0)},
+		["r-pinky-low"] = {vector = Vector(0, 0, 0), angle = Angle(-8.7, 0, 0)},
+		["r-index-low"] = {vector = Vector(0, 0, 0), angle = Angle(51.199, 23.795, 7.397)},
+		["r-ring-tip"] = {vector = Vector(0, 0, 0), angle = Angle(51.741, 0, 0)},
+		["r-middle-low"] = {vector = Vector(0, 0, 0), angle = Angle(28.035, 7.127, -1.678)},
+		["r-index-tip"] = {vector = Vector(0, 0, 0), angle = Angle(11.036, 0, 0)},
+		["r-ring-low"] = {vector = Vector(0, 0, 0), angle = Angle(7.001, 4.373, 0)},
+		["r-rist"] = {vector = Vector(0, 0, 0), angle = Angle(0, -22.463, 0)},
+		["r-pinky-tip"] = {vector = Vector(0, 0, 0), angle = Angle(58.548, 0, 0)}
+	}
+	
+	SWEP.ForegripOverridePos = {
+		["md_uecw_cmag"] = {
+			["r-upperarm-movement"] = { scale = Vector(1, 1, 1), pos = Vector(2.599, 0, 0), angle = Angle(0, 0, 0) }
+		},
+	}
+
+	SWEP.LuaVMRecoilAxisMod = {vert = 0.5, hor = 1, roll = 1, forward = 0.5, pitch = 0.5}
+	
+	SWEP.BoltBone = "Bolt"
+	SWEP.BoltShootOffset = Vector(0, 2, 0)
+	
+	SWEP.LaserPosAdjust = Vector(0.5, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
+	
+	SWEP.MagBoneName = "Mag"
+end
+
+SWEP.SightBGs = {main = 2, none = 1}
+SWEP.LuaViewmodelRecoil = true
+SWEP.CustomizationMenuScale = 0.01
+
+SWEP.Trivia = {text = "An advanced assault rifle platform meant to replace the US Army's M4. It instead became C.G.I.'s service rifle.", x = -200, y = -900}
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -700},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}},
+	[2] = {header = "Muzzle", offset = {-500, -800},  atts = {"md_saker", "md_csgo_silencer_rifle"}},
+	[3] = {header = "Handguard", offset = {-600, 125}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
+	[4] = {header = "Laser", offset = {-600, -350}, atts = {"md_anpeq15"}},
+	[5] = {header = "Magazine", offset = {-300, 600},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag"}},
+	[6] = {header = "Conversion", offset = {1100, 600}, atts = {"uecw_m8a1_conversion"}},
+	["+reload"] = {header = "Ammo", offset = {1900, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	
+SWEP.AttachmentExclusions = {
+	["md_foregrip"] = {"md_uecw_cmag"},
+	["md_uecw_cmag"] = {"md_foregrip", "md_m203"},
+	["md_m203"] = {"md_uecw_cmag"}}
+
+SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
+	reload = "reload",
+	idle = "idle",
+	draw = "draw"}
+	
+SWEP.Sounds = {reload = {{time = 0.5, sound = "CW_XM8_FOLEY"},
+	{time = 0.95, sound = "CW_XM8_MAGOUT"},
+	{time = 1.2, sound = "CW_FOLEY_LIGHT"},
+	{time = 1.7, sound = "CW_XM8_MAGIN"},
+	{time = 1.75, sound = "CW_FOLEY_LIGHT"},
+	{time = 1.9, sound = "CW_XM8_MAGTAP"},
+	{time = 2.5, sound = "CW_XM8_BOLT"},
+	{time = 2.6, sound = "CW_FOLEY_MEDIUM"}},
+	draw = {{time = 0.01, sound = "CW_XM8_CLOTH"},
+	{time = 0.55, sound = "CW_XM8_SAFETY"}}}
+
+SWEP.SpeedDec = 40
+
+SWEP.Slot = 2
+SWEP.SlotPos = 0
+SWEP.NormalHoldType = "ar2"
+SWEP.RunHoldType = "passive"
+SWEP.FireModes = {"auto", "semi"}
+SWEP.Base = "cw_base"
+SWEP.Category = "TCW - Assault Rifles/Carbines"
+
+SWEP.Author			= "Spy"
+SWEP.Contact		= ""
+SWEP.Purpose		= ""
+SWEP.Instructions	= ""
+
+SWEP.ViewModelFOV	= 70
+SWEP.ViewModelFlip	= true
+SWEP.ViewModel		= "models/weapons/v_cstm_xm8.mdl"
+SWEP.WorldModel		= "models/weapons/w_rif_m4a1.mdl"
+
+SWEP.Spawnable			= true
+SWEP.AdminSpawnable		= true
+
+SWEP.Primary.ClipSize		= 30
+SWEP.Primary.DefaultClip	= 120
+SWEP.Primary.Automatic		= true
+SWEP.Primary.Ammo			= "5.56x45MM"
+
+SWEP.FireDelay = 0.08
+SWEP.FireSound = "CW_XM8_FIRE"
+SWEP.FireSoundSuppressed = "CW_XM8_FIRE_SUPPRESSED"
+SWEP.Recoil = 0.9
+
+SWEP.HipSpread = 0.12
+SWEP.AimSpread = 0.003
+SWEP.VelocitySensitivity = 0.6
+SWEP.MaxSpreadInc = 0.1
+SWEP.SpreadPerShot = 0.0002
+SWEP.SpreadCooldown = 0.0005
+SWEP.Shots = 1
+SWEP.Damage = 36
+SWEP.DeployTime = 1
+
+SWEP.ReloadSpeed = 1
+SWEP.ReloadTime = 2.2
+SWEP.ReloadTime_Empty = 3.6
+SWEP.ReloadHalt = 2.5
+SWEP.ReloadHalt_Empty = 3.8
+
+SWEP.SnapToIdlePostReload = true
+
+function SWEP:IndividualThink()
+self.Owner.ViewAff = 0
+clip = self:Clip1()
+self.EffectiveRange = 50 * 39.37
+self.DamageFallOff = .3
+if (self.ActiveAttachments.uecw_m8a1_conversion) then
+self.EffectiveRange = ((self.EffectiveRange - 20 * 39.37))
+end
+if self.ActiveAttachments.am_magnum then
+	self.EffectiveRange = ((self.EffectiveRange * 1.15))
+end
+if self.ActiveAttachments.am_matchgrade then
+	self.DamageFallOff = ((self.DamageFallOff * 0.5))
+end
+if self.ActiveAttachments.am_atow_lowvel then
+	self.DamageFallOff = ((self.DamageFallOff * 1.2))
+end
+if self.ActiveAttachments.am_atow_heavy then
+	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+if self.ActiveAttachments.md_csgo_silencer_rifle then
+	self.EffectiveRange = ((self.EffectiveRange * 0.85))
+end
+end
+
+end
+
+function SWEP:Holster(wep)
+	-- can't switch if neither the weapon we want to switch to or the wep we're trying to switch to are not valid
+	if not IsValid(wep) and not IsValid(self.SwitchWep) then
+		self.SwitchWep = nil
+		return false
+	end
+	
+	local CT = CurTime()
+	
+	-- can't holster if we have a global delay on the weapon
+	if CT < self.GlobalDelay or CT < self.HolsterWait then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.HolsterDelay ~= 0 and CT < self.dt.HolsterDelay then
+		return false
+	end
+	
+	-- can't holster if there are sequenced actions
+	if #self._activeSequences > 0 then
+		return false
+	end
+	
+	if self.ReloadDelay then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.State ~= CW_HOLSTER_START then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+	end
+	
+	self.dt.State = CW_HOLSTER_START
+	
+	-- if holster sequence is over, let us select the desired weapon
+	if self.SwitchWep and self.dt.State == CW_HOLSTER_START and CurTime() > self.dt.HolsterDelay then
+		self.dt.State = CW_IDLE
+		self.dt.HolsterDelay = 0
+		
+		return true
+	end
+	
+	-- if it isn't, make preparations for it
+	self.ShotgunReloadState = 0
+	self.ReloadDelay = nil
+	
+	if self:filterPrediction() then
+		if self.holsterSound then -- quick'n'dirty prediction fix
+			self:EmitSound("CW_HOLSTER", 70, 100)
+			self.holsterSound = false
+			
+			if IsFirstTimePredicted() then
+				if self.holsterAnimFunc then
+					self:holsterAnimFunc()
+				else
+					if self.Animations.holster then
+						self:sendWeaponAnim("holster")
+					end
+				end
+			end
+		end
+	end
+	
+	self.SwitchWep = wep
+	self.SuppressTime = nil
+	
+	if self.dt.M203Active then
+		if SERVER and SP then
+			SendUserMessage("CW20_M203OFF", self.Owner)
+		end
+		
+		if CLIENT then
+			self:resetM203Anim()
+		end
+	end
+
+	self.dt.M203Active = false
+end
+
+local simpleTextColor = Color(255, 210, 0, 255)
+local mod = 25
+
+function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
+	if self.SelectIcon then
+		surface.SetTexture(self.SelectIcon)
+		
+		wide = wide - mod
+		
+		x = x + (mod / 2)
+		y = y + (mod / 4) + (wide / 8)
+		
+		surface.SetDrawColor(255, 255, 255, alpha)
+		
+		surface.DrawTexturedRect(x, y, wide, (wide / 2))
+	else
+		simpleTextColor.a = alpha
+		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
+	end
+end

@@ -13,11 +13,9 @@ if CLIENT then
 end
 
 function att:attachFunc()
-self.MuzzleEffect = "muzzleflash_pistol"
 end
 
 function att:detachFunc()
-self.MuzzleEffect = "muzzleflash_ak47"
 end
 
 CustomizableWeaponry:registerAttachment(att)
