@@ -177,7 +177,7 @@ SWEP.Secondary.Ammo			= ".416 Barrett"
 SWEP.Chamberable = false
 SWEP.FireDelay = 60/180
 SWEP.FireSound = "K82.FIRE"
-SWEP.FireSoundSuppressed = "MW2CR_striker_FIRE_SUPPRESSED"
+SWEP.FireSoundSuppressed = "K82.FIRE_SUPPRESSED"
 SWEP.Recoil = 3.9
 
 SWEP.HeadDamage = 1
