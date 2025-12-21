@@ -88,7 +88,14 @@ SWEP.Trivia = {text = "Developed in the Soviet Union, this marksman rifle is use
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -300},  atts = {"md_schmidt_shortdot", "md_pso1", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Muzzle", offset = {-300, -100}, atts = {"md_pbs1"}},
+	[3] = {header = "Conversion", offset = {650, 500}, atts = {"cw_svdg_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+
+SWEP.AttachmentExclusions = {["am_magnum"] = {"cw_svdg_conversion"},
+							 ["am_matchgrade"] = {"cw_svdg_conversion"},
+							 ["am_atow_lowvel"] = {"cw_svdg_conversion"},
+							 ["am_atow_heavy"] = {"cw_svdg_conversion"},
+							 ["am_atow_ap"] = {"cw_svdg_conversion"}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},
 	reload = "reload",
@@ -137,6 +144,9 @@ SWEP.Primary.DefaultClip	= 50
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x54MMR"
 
+SWEP.Secondary.DefaultClip	= 14
+SWEP.Secondary.Ammo			= "10/4.5x54MM"
+
 SWEP.FireDelay = 60 / 425
 SWEP.FireSound = "CW_SVD_OFFICIAL_FIRE"
 SWEP.FireSoundSuppressed = "CW_SVD_OFFICIAL_FIRE_SUPPRESSED"
@@ -165,6 +175,10 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 90 * 39.37
 self.DamageFallOff = .25
+if self.ActiveAttachments.cw_svdg_conversion then
+	self.EffectiveRange = ((5 * 39.37))
+	self.DamageFallOff = ((0.05))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

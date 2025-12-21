@@ -93,10 +93,14 @@ SWEP.StockBGs = {main = 2, foldable = 1, regular = 0}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {1000, -500},  atts = {"md_kobra","too_reflex_mrs","too_reflex_romeo4t", "too_reflex_exps", "md_aimpoint", "md_schmidt_shortdot", "md_pso1", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-300, -500}, atts = {"md_pbs1"}},
-	[3] = {header = "Stock", offset = {700, 500}, atts = {"too_bg_74stock"}},
+	[3] = {header = "Stock", offset = {2200, 500}, atts = {"too_bg_74stock"}},
+	[4] = {header = "Conversion", offset = {900, 500}, atts = {"cw_sa-006_conv"}},
 	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1300, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
+SWEP.AttachmentExclusions = {
+	["am_atow_lowvel"] = {"cw_sa-006_conv"},
+}
 
     SWEP.AttachmentDependencies = {
 		["md_kobra"] = {"too_optic_category_reflex"},
@@ -173,7 +177,7 @@ SWEP.Primary.Ammo			= "5.45x39MM"
 SWEP.FireDelay = 60 / 650
 SWEP.FireSound = "CW_TOO_AK74_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_AK74_FIRE_SUPPRESSED"
-SWEP.Recoil = 0.75
+SWEP.Recoil = 2
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.005

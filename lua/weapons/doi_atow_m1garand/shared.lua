@@ -137,9 +137,11 @@ if CLIENT then
 	SWEP.AttachmentPosDependency = {
 		["ins2_atow_riflesuppressor"] = {
 			["doi_atow_garandtanker"] = Vector(-0.036, 12.05, 2.39),
+			["doi_atow_bm59conv"] = Vector(-0.036, 12.05, 2.39)
 		},
 		["ins2_atow_clamplaser"] = {
-			["doi_atow_garandtanker"] = Vector(-2.28, -8, 4.12)
+			["doi_atow_garandtanker"] = Vector(-2.28, -8, 4.12),
+			["doi_atow_bm59conv"] = Vector(-2.28, -8, 4.12)
 		},
 	}
 
@@ -186,7 +188,7 @@ SWEP.CanRestOnObjects = true
 if CustomizableWeaponry_atowins2_optics then
 SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
 [2] = {header = "Iron Sights", offset = {1500, -325}, atts = {"doi_atow_altsight"}},
-[4] = {header = "Model", offset = {200, 225}, atts = {"doi_atow_garandtanker"}},
+[4] = {header = "Model", offset = {200, 225}, atts = {"doi_atow_garandtanker", "doi_atow_bm59conv"}},
 [7] = {header = "Finish", offset = {650, -100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish"}},
 [3] = {header = "Muzzle", offset = {-420, -400}, atts = {"ins2_atow_riflesuppressor"}},
 [5] = {header = "Underbarrel", offset = {-400, 50}, atts = {"ins2_atow_clamplaser"}},
@@ -195,14 +197,14 @@ SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"md_i
 else
 SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -325}, atts = {"doi_atow_lymanm82"}},
 [2] = {header = "Iron Sights", offset = {1500, -325}, atts = {"doi_atow_altsight"}},
-[3] = {header = "Model", offset = {-300, -400}, atts = {"doi_atow_garandtanker"}},
+[3] = {header = "Model", offset = {-300, -400}, atts = {"doi_atow_garandtanker", "doi_atow_bm59conv"}},
 [5] = {header = "Finish", offset = {1200, 100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish"}},
 [4] = {header = "Accessory", offset = {-250, 200}, atts = {"doi_atow_sling", "md_foregrip"}},
 ["+reload"] = {header = "Ammo", offset = {300, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 end
 
 SWEP.AttachmentExclusions = {
-["ins2_atow_tacbipod"] = {"doi_atow_garandtanker"}
+["ins2_atow_tacbipod"] = {"doi_atow_garandtanker"},
 }
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
@@ -263,6 +265,9 @@ else
 SWEP.Primary.Ammo			= ".30-06"
 end
 
+SWEP.Secondary.DefaultClip	= 40
+SWEP.Secondary.Ammo			= "7.62x51MM"
+
 SWEP.FireDelay = 60/350
 SWEP.FireSound = "DOIGARAND_FIRE"
 SWEP.FireSoundSuppressed = "DOIGARAND_FIRE_SUPPRESSED"
@@ -293,6 +298,9 @@ SWEP.ReloadHalt_Empty = 3.4
 function SWEP:IndividualThink()
 
 self.Owner.ViewAff = 0
+self.FireSound = "DOIGARAND_FIRE"
+self.FireSoundSuppressed = "DOIGARAND_FIRE_SUPPRESSED"
+self.PrintName = "M1 Garand"
 
 	if self.ActiveAttachments.md_ins2m40tac or self.ActiveAttachments.doi_atow_lymanm82 or self.ActiveAttachments.md_ins2wsacog or self.ActiveAttachments.md_ins2po424p or self.ActiveAttachments.md_ins2elcan then
 		self.AimBreathingEnabled = false
@@ -315,6 +323,13 @@ end
 	self.EffectiveRange = 60 * 39.37
 	self.DamageFallOff = .35
 	
+	if self.ActiveAttachments.doi_atow_bm59conv then
+		self.EffectiveRange = ((self.EffectiveRange - 20 * 39.37))
+		self.DamageFallOff = ((self.DamageFallOff + 0.1))
+		self.FireSound = "CW_M14_FIRE"
+		self.FireSoundSuppressed = "CW_M14_FIRE_SUPPRESSED"
+		self.PrintName = "BM59 ITAL"
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end

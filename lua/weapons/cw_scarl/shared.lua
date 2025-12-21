@@ -37,7 +37,7 @@ if CLIENT then
 	SWEP.FoldSightPos = Vector(-2.208, -4.3, 0.143)
 	SWEP.FoldSightAng = Vector(0.605, 0, -0.217)
 
-	SWEP.MicroT1Pos = Vector(-1.71, -1.4, 0.12)
+	SWEP.MicroT1Pos = Vector(-1.71, -1.4, 0.16)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
 	
 	SWEP.CmorePos = Vector(-1.62, -1.4, -0.06)
@@ -180,7 +180,7 @@ SWEP.MuzzleVelocity = 714 -- in meter/s
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Trivia = {text = "A reliable battle rifle used by the US Army. Make sure your fingers are clear of the charging handle.", x = -100, y = -450}
+-- SWEP.Trivia = {text = "A reliable battle rifle used by the US Army. Make sure your fingers are clear of the charging handle.", x = -100, y = -450}
 
 SWEP.AttachmentExclusions = {["md_microt1"] = {"cw_fortnite_scar_conversion"},
 							 ["md_aimpoint"] = {"cw_fortnite_scar_conversion"},
@@ -198,11 +198,11 @@ SWEP.AttachmentExclusions = {["md_microt1"] = {"cw_fortnite_scar_conversion"},
 							 ["am_atow_heavy"] = {"cw_fortnite_scar_conversion"},
 							 ["am_atow_ap"] = {"cw_fortnite_scar_conversion"}}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
-	[2] = {header = "Muzzle", offset = {-400, -500},  atts = {"md_saker"}},
-	[3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}},
-	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod"}},
-	[5] = {header = "Conversion", offset = {500, 400}, atts = {"cw_fortnite_scar_conversion"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1"}}, -- , "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"
+	-- [2] = {header = "Muzzle", offset = {-400, -500},  atts = {"md_saker"}},
+	-- [3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}},
+	-- [4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod"}},
+	-- [5] = {header = "Conversion", offset = {500, 400}, atts = {"cw_fortnite_scar_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {900, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
@@ -228,9 +228,9 @@ SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_base"
-SWEP.Category = "TCW - Battle Rifles"
+SWEP.Category = "TCW - Assault Rifles/Carbines"
 
-SWEP.Author			= "Spy"
+SWEP.Author			= "CatGopher98"
 SWEP.Contact		= ""
 SWEP.Purpose		= ""
 SWEP.Instructions	= ""

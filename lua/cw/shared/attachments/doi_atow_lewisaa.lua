@@ -32,9 +32,6 @@ function att:detachFunc()
 	self:setBodygroup(self.BodyBGs.main, self.BodyBGs.off)
 	self:setBodygroup(self.FSightBGs.main, self.FSightBGs.off)
 	self:setBodygroup(self.RSightBGs.main, self.RSightBGs.off)
-	self.Primary.ClipSize = 47
-	self.Primary.ClipSize_Orig = 47
-	self:unloadWeaponPartially()
 	self:revertToOriginalIronsights()
 end
 

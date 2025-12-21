@@ -99,12 +99,13 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
-SWEP.AttachmentExclusions = {["doi_atow_altsightlewis"] = {"doi_atow_lewisaa"}}
+SWEP.AttachmentExclusions = {["doi_atow_altsightlewis"] = {"doi_atow_lewisaa"},
+							 ["doi_atow_altsightlewis"] = {"doi_atow_m20conv"}}
 
-SWEP.Attachments = {[4] = {header = "Model", offset = {575, -300}, atts = {"doi_atow_lewisaa"}},
+SWEP.Attachments = {[4] = {header = "Model", offset = {575, -300}, atts = {"doi_atow_lewisaa", "doi_atow_m20conv"}},
 [3] = {header = "Fire Control", offset = {750, 300}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
 [2] = {header = "Frame", offset = {-250, -200}, atts = {"doi_atow_bipodremove"}},
-[1] = {header = "Sight", offset = {-250, -200}, atts = {"doi_atow_altsightlewis"}},
+[1] = {header = "Sight", offset = {1550, 200}, atts = {"doi_atow_altsightlewis"}},
 ["+reload"] = {header = "Ammo", offset = {-100, 350}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
@@ -162,6 +163,9 @@ else
 SWEP.Primary.Ammo			= ".303"
 end
 
+SWEP.Secondary.DefaultClip	= 194
+SWEP.Secondary.Ammo			= "6.5x53MMR"
+
 SWEP.FireDelay = 60/530
 SWEP.FireSound = "DOILEWIS_FIRE"
 SWEP.Recoil = 0.4
@@ -207,6 +211,10 @@ function SWEP:IndividualThink()
 	
 	self.EffectiveRange = 60 * 39.37
 	self.DamageFallOff = .05
+	if self.ActiveAttachments.doi_atow_m20conv then
+		self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
+		self.DamageFallOff = ((self.DamageFallOff + 0.05))
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end

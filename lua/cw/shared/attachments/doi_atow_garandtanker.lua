@@ -24,7 +24,7 @@ end
 
 function att:detachFunc()
 	self:setBodygroup(self.BodyBGs.main, self.BodyBGs.rifle)
-	self.MuzzleEffect = "muzzleflash_m14"
+	self.MuzzleEffect = "muzzleflash_suppressed"
 	self.MuzzleAttachmentName = 1
 end
 
