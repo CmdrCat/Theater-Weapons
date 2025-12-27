@@ -1,6 +1,6 @@
 local att = {}
 att.name = "bg_ak74_ubarrel"
-att.displayName = "Shortened barrel"
+att.displayName = "Shortened Barrel"
 att.displayNameShort = "Short"
 att.isBG = true
 att.categoryFactors = {cqc = 3}

@@ -93,15 +93,15 @@ if CLIENT then
 	["md_acog"] = {[1] = Vector(-1.635, 5, -1.5), [2] = Vector(-0.05, 0.01, 0)},
 	["md_uecw_csgo_acog"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
 	["md_uecw_csgo_556"] = {[1] = Vector(-1.667, 0, -0.88), [2] = Vector(0.75, 0, 0)},
-	["md_ballistic"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
+	["md_ballistic"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
 	SWEP.M203CameraRotation = {p = -90, y = 0, r = -90}
 	
-	SWEP.BaseArm = "Right_L_Arm"
+	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
-	
+
 	SWEP.AttachmentModelsVM = {
 		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "Masada_body", rel = "", pos = Vector(-1.315, -10.2, 1.52), angle = Angle(0, -90, 0), size = Vector(1.039, 1.039, 1.039), color = Color(255, 255, 255, 255)},
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Masada_body", rel = "", pos = Vector(0.006, -0.4, 1.2), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
@@ -165,6 +165,12 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -600},  atts = {"md_
 	["+reload"] = {header = "Ammo", offset = {1500, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
+
+SWEP.AttachmentPosDependency = {["md_anpeq15"] = {["md_ballistic"] = Vector(-0.76, 6, -0.2)}}
+
+	SWEP.AttachmentAngDependency = {
+		md_anpeq15 = {md_ballistic = Angle(0, 90, -84)}
+	}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "reload_unsil",

@@ -121,7 +121,7 @@ if CLIENT then
 	}
 	
 	SWEP.AttachmentAngDependency = {
-		md_anpeq15 = {nd_nightforce_nxs = Angle(0, 90, -90)}
+		["md_anpeq15"] = {["md_nightforce_nxs"] = Angle(0, 90, -90)}
 	}
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 0.5, hor = 1, roll = 1, forward = 0.5, pitch = 0.5}

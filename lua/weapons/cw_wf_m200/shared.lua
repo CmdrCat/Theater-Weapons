@@ -193,7 +193,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
     SWEP.Attachments = {
        [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_schmidt_shortdot", "md_snip2_elcan", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_acog", "md_thermal", "md_nightforce_nxs", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
 	   [2] = {header = "Muzzle", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
-	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
+	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}},
 	   [4] = {header = "Handguard", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
 	   [5] = {header = "Stock", offset = {2050, 1100}, atts = {"bg_snip_Cheytac_no_stock"}},
        [6] = {header = "Bolt", offset = {2350, 100}, atts = {"md_improved_bolt"}},
@@ -209,7 +209,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
 	SWEP.Attachments = {
        [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_schmidt_shortdot", "md_snip2_elcan", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_acog", "md_thermal", "md_nightforce_nxs", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
 	   [2] = {header = "Muzzle", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
-	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
+	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}},
 	   [4] = {header = "Handguard", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
 	   [5] = {header = "Stock", offset = {2050, 1100}, atts = {"bg_snip_Cheytac_no_stock"}},
        [6] = {header = "Bolt", offset = {2050, 600}, atts = {"md_improved_bolt"}},
@@ -223,7 +223,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
     SWEP.Attachments = {
        [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_thermal", "md_nightforce_nxs"}},
 	   [2] = {header = "Muzzle", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
-	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
+	   [3] = {header = "Barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}},
 	   [4] = {header = "Handguard", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
 	   [5] = {header = "Stock", offset = {2050, 1100}, atts = {"bg_snip_Cheytac_no_stock"}},
        [6] = {header = "Bolt", offset = {2350, 100}, atts = {"md_improved_bolt"}},
@@ -238,7 +238,7 @@ if CustomizableWeaponry_OP_Perks and CustomizableWeaponry_G4P_UECW then
     SWEP.Attachments = {
        [1] = {header = "Sight", offset = {400, -600}, atts = {"md_rmr", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_thermal", "md_nightforce_nxs"}},
 	   [2] = {header = "Barrel", offset = {-840, 50}, atts = {"md_saker", "md_snip2_light_suppressor", "md_snip2_osprey_suppressor", "md_snip2_m200_heavy_muzzle_brake"}},
-	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}, exclusions = {md_snip2_light_suppressor = true, md_snip2_osprey_suppressor = true}},
+	   [3] = {header = "short barrel", offset = {-840, -600}, atts = {"bg_cheytac_short_barrel"}},
 	   [4] = {header = "Railed", offset = {-840, 600}, atts = {"bg_Cheytac_Bipod"}},
 	   [5] = {header = "Stock", offset = {2050, 1100}, atts = {"bg_snip_Cheytac_no_stock"}},
        [6] = {header = "Bolt", offset = {2050, 600}, atts = {"md_improved_bolt"}},

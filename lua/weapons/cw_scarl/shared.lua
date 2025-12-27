@@ -198,7 +198,7 @@ SWEP.AttachmentExclusions = {["md_microt1"] = {"cw_fortnite_scar_conversion"},
 							 ["am_atow_heavy"] = {"cw_fortnite_scar_conversion"},
 							 ["am_atow_ap"] = {"cw_fortnite_scar_conversion"}}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1"}}, -- , "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"
+SWEP.Attachments = {[1] = {header = "Sight", offset = {0, 2500},  atts = {"md_microt1"}}, -- , "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"
 	-- [2] = {header = "Muzzle", offset = {-400, -500},  atts = {"md_saker"}},
 	-- [3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}},
 	-- [4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod"}},

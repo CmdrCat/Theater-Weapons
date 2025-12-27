@@ -83,7 +83,7 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = true
 	
-	SWEP.CustomizationMenuScale = 0.015 --  0.0165
+	SWEP.CustomizationMenuScale = 0.01 --  0.0165
 	
 	SWEP.AttachmentModelsVM = {["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(1.3, -2.45, 1.34), angle = Angle(0, -90, 0), size = Vector(0.5, 0.65, 0.65), bone = "Slide"},
 							  ["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/kar98k1xscope.mdl", pos = Vector(-0.45, -0.1, 1.55), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"}}
@@ -158,12 +158,13 @@ SWEP.ForegripOverridePos = {
 	["R Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 }
 
-SWEP.Attachments = {[2] = {header = "Barrel", offset = {-500, -450}, atts = {"doi_atow_c96longbarrel", "doi_atow_unisuppressor"}},
-[1] = {header = "Optic", offset = {900, -450}, atts = {"doi_atow_zf4"}},
-[5] = {header = "Finish", offset = {150, -500}, atts = {"doi_atow_c96goldfinish"}},
-[4] = {header = "Accessory", offset = {1100, 0}, atts = {"doi_atow_c96stock","doi_atow_onehand"}},
-[3] = {header = "Receiver", offset = {500, 300}, atts = {"doi_atow_c96carbineconv", "doi_atow_m2carbineconv", "doi_atow_heavybolt"}},
-["+reload"] = {header = "Ammo", offset = {-700, 70}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+SWEP.Attachments = {[2] = {header = "Muzzle", offset = {-400, -550}, atts = {"doi_atow_unisuppressor"}},
+[3] = {header = "Barrel", offset = {-1100, -450}, atts = {"doi_atow_c96longbarrel"}},
+[1] = {header = "Optic", offset = {900, -600}, atts = {"doi_atow_zf4"}},
+[6] = {header = "Finish", offset = {150, -600}, atts = {"doi_atow_c96goldfinish"}},
+[5] = {header = "Accessory", offset = {1500, 200}, atts = {"doi_atow_c96stock","doi_atow_onehand"}},
+[4] = {header = "Receiver", offset = {500, 300}, atts = {"doi_atow_c96carbineconv", "doi_atow_m2carbineconv", "doi_atow_heavybolt"}},
+["+reload"] = {header = "Ammo", offset = {-1000, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},

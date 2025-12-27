@@ -1,6 +1,6 @@
 local att = {}
 att.name = "bg_cheytac_short_barrel"
-att.displayName = "Shortened barrel"
+att.displayName = "Shortened Barrel"
 att.displayNameShort = "Short"
 att.isBG = true
 att.categoryFactors = {cqc = 3}
