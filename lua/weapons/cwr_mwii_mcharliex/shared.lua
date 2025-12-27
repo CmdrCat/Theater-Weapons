@@ -152,7 +152,7 @@ if CLIENT then
 	-- Sight Pos Optic
 
 
-	SWEP.ZEROPos = Vector(-3.06, -9.733, 0.472)
+	SWEP.ZEROPos = Vector(-3.06, -7.433, 0.472)
     SWEP.ZEROAng = Vector(0, 0, 0)
 
 	SWEP.ThermalPos = Vector(-3.06, -9.733, 0.472)

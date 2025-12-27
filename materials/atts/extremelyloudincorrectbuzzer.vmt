@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "atts/extremelyloudincorrectbuzzer"
+	"$translucent" 1
+	"$nolod" 1
+	"$vertexalpha" 1
+	"$vertexcolor" 1
+}

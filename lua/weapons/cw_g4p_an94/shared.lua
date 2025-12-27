@@ -145,8 +145,9 @@ SWEP.Trivia = {text = "A complex assault rifle with a unique hyperburst mechanis
 SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -350},  atts = {"md_microt1","md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-600, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-400,0}, atts = {"md_foregrip"}},
-	[4] = {header = "Magazine", offset = {-200, 500}, atts = {"md_uecw_akmag"}},
-	["+reload"] = {header = "Ammo", offset = {900, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	[4] = {header = "Magazine", offset = {-300, 500}, atts = {"md_uecw_akmag"}},
+	[5] = {header = "Conversion", offset = {385, 400}, atts = {"uecw_an94_58_conversion"}},
+	["+reload"] = {header = "Ammo", offset = {1300, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 
@@ -188,6 +189,9 @@ SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.45x39MM"
 
+SWEP.Secondary.DefaultClip	= 90
+SWEP.Secondary.Ammo			= "5.8x42MM"
+
 SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_AN94_FIRE"
 SWEP.FireSoundSuppressed = "CW_AN94_FIRE_SUPPRESSED"
@@ -215,6 +219,10 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 40 * 39.37
 self.DamageFallOff = .4
+if self.ActiveAttachments.uecw_an94_58_conversion then
+	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff - 0.05))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

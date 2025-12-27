@@ -149,7 +149,7 @@ SWEP.Primary.Ammo			= ".40 S&W"
 
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_USP_FIRE"
-SWEP.FireSoundSuppressed = "CW_USP_FIRE_SUPPRESSED"
+SWEP.FireSoundSuppressed = "DOIPPK_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.82
 
 SWEP.HipSpread = 0.01

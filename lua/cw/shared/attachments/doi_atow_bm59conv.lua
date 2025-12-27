@@ -18,6 +18,22 @@ if CLIENT then
 					   [4] = {t = "Increases damage fall off by 10%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
+function att:attachFunc()
+	self:CycleFiremodes() 
+	self.FireModes = {"semi","safe","auto"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+	self:setBodygroup(self.BodyBGs.main, self.BodyBGs.carbine)
+	self.MuzzleEffect = "muzzleflash_m14"
+	self.Primary.Ammo = "7.62x51MM"
+end
+
+function att:detachFunc()
+	self:CycleFiremodes()
+	self.FireModes = {"semi","safe"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+	self:setBodygroup(self.BodyBGs.main, self.BodyBGs.rifle)
 	self.MuzzleEffect = "muzzleflash_suppressed"
 	self.Primary.Ammo = ".30-06"
 end
