@@ -17,8 +17,13 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	-- self:CycleFiremodes()
-	-- self.FireModes = {"semi","safe"}
+	self:CycleFiremodes()
+	self.FireModes = {"semi","safe"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+
+	self.MuzzleEffect = "muzzleflash_suppressed"
+
 	function self:fireAnimFunc()
 	clip = self:Clip1()
 	cycle = 0
@@ -46,6 +51,13 @@ end
 end
 
 function att:detachFunc()
+	self:CycleFiremodes()
+	self.FireModes = {"bolt","safe"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+
+	self.MuzzleEffect = "muzzleflash_pistol_deagle"
+
 	function self:fireAnimFunc()
 	clip = self:Clip1()
 	cycle = 0
