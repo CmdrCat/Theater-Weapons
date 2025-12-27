@@ -80,9 +80,12 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
+SWEP.CustomizePos = Vector(-1, 0, 1.5)
+SWEP.CustomizeAng = Vector(0, 0, 0)
+
 SWEP.Attachments = {
 
-	["+reload"] = {header = "Projectile", offset = {-300, 400}, atts = {"ha_cgm3_heat", "ha_cgm3_uhv", "ha_cgm3_smoke"}}
+	["+reload"] = {header = "Projectile", offset = {-800, 50}, atts = {"ha_cgm3_heat", "ha_cgm3_uhv", "ha_cgm3_smoke"}}
 	
 	}
 
