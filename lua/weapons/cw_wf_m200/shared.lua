@@ -37,7 +37,7 @@ if CLIENT then
 	SWEP.IronsightPos = Vector(-5.342, 0.15, 0.87)
 	SWEP.IronsightAng = Vector(-1.3, -0.05, 0)
 	
-	SWEP.RMRPos = Vector(-5.275, 0.5, 1.222)
+	SWEP.RMRPos = Vector(-5.275, -2, 1.222)
 	SWEP.RMRAng = Vector(-0.05, 0.23, 0)
 	
 	SWEP.MicroT1Pos = Vector(-5.334, 0, 0.843)
