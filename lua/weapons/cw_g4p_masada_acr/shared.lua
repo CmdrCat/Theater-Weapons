@@ -27,7 +27,83 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.65
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+
+--grip pos temp
+
+
+	SWEP.ForeGripHoldPos ={
+
+	["ValveBiped.Bip01_L_Finger41"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 23.59, 0) },
+	["ValveBiped.Bip01_L_Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-7.397, -87.78, 0) },
+	["ValveBiped.Bip01_L_Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 36.016, 0) },
+	["ValveBiped.Bip01_L_Finger31"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 8.699, 0) },
+	["ValveBiped.Bip01_L_Finger4"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(23.943, 8.255, 14.635) },
+	["ValveBiped.Bip01_L_UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-13.348, -1.923, 12.897) },
+	["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-14.533, -26.123, 37.264) },
+	["ValveBiped.Bip01_L_Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(3.45, -48.892, 0) },
+	["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 29.312, 4.981) },
+	["ValveBiped.Bip01_L_Finger3"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(23.763, -13.099, -1.884) },
+	["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-2.55, 2.98, -2.852), angle = Angle(8.472, 0, 0) },
+	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(2.44, 14.171, 14.847) }
+
+	}
+
+
+	SWEP.ForegripOverridePos = {
+
+		["default"] = {},
+
+		["bruentiltgrip_r"] = {
+
+			["ValveBiped.Bip01_L_Finger4"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(37.265, 0, 17.61) },
+			["ValveBiped.Bip01_L_Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(7.656, -59.252, -25.736) },
+			["ValveBiped.Bip01_L_Finger3"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(31.277, -31.014, -2.794) },
+			["ValveBiped.Bip01_L_Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(19.322, -46.232, -21.198) },
+			["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-2.48, 1.922, -1.007), angle = Angle(0, 0, 0) },
+			["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-35.827, -4.282, 27.684) },
+			["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-44.926, 17.809, 0) }
+		
+
+
 	
+
+		},
+
+		["bruentiltgrip_s"] = {
+
+			
+			["ValveBiped.Bip01_L_Finger4"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(37.265, 0, 17.61) },
+			["ValveBiped.Bip01_L_Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(7.656, -59.252, -25.736) },
+			["ValveBiped.Bip01_L_Finger3"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(31.277, -31.014, -2.794) },
+			["ValveBiped.Bip01_L_Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(19.322, -46.232, -21.198) },
+			["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-2.48, 0.922, -1.007), angle = Angle(0, 0, 0) },
+			["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-35.827, -4.282, 27.684) },
+			["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-44.926, 17.809, 0) }
+
+		
+				},
+
+				["ftactiger_r"] = {
+
+					["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-8.325, -17.361, 0) },
+	["ValveBiped.Bip01_L_Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-17.504, 0, 0) },
+	["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-23.334, 0, 0) },
+	["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-0.8, 3.96, -0.429), angle = Angle(0, 0, 0) },
+	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-13.363, 0, 0) }
+
+				},
+				
+				["ftactiger_s"] = {
+
+					["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-8.325, -17.361, 0) },
+	["ValveBiped.Bip01_L_Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-17.504, 0, 0) },
+	["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-23.334, 0, 0) },
+	["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-0.8, 0.96, -0.429), angle = Angle(0, 0, 0) },
+	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-13.363, 0, 0) }
+
+				},
+
+			}
 	SWEP.M203OffsetCycle_Reload = 0.65
 	SWEP.M203OffsetCycle_Reload_Empty = 0.73
 	SWEP.M203OffsetCycle_Draw = 0
@@ -40,8 +116,6 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 
 	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
-
-
 
 	
 	SWEP.IronsightPos = Vector(-3, 5, -0.04)
@@ -59,7 +133,10 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.ThermalPos = Vector(-1.62, -2.8, -0.14)
 	SWEP.ThermalAng = Vector(0, 0, 0)
 
-	SWEP.EoTechPos = Vector(-1.62, -1.4, -0.2)
+    SWEP.RMRPos = Vector(-1.635, -3, 0.25)
+    SWEP.RMRAng = Vector(0, 0, 0)
+
+	SWEP.EoTechPos = Vector(0, 0, 0)
 	SWEP.EoTechAng = Vector(0, 0, 0)
 	
 	SWEP.AimpointPos = Vector(-1.62, -1.4, -0.2)
@@ -67,6 +144,9 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	
 	SWEP.MicroT1Pos = Vector(-1.64, -1.4, 0.06)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
+
+	SWEP.ShortDotPos = Vector(-1.605, -2.85, -0.220265)
+    SWEP.ShortDotAng = Vector(0, 0, 0)
 	
 	SWEP.TrijiconPos = Vector(-1.64, -1.4, 0.1)
 	SWEP.TrijiconAng = Vector(0, 0, 0)
@@ -77,7 +157,7 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.ReflexPos = Vector(-1.62, -1.4, 0.08)
 	SWEP.ReflexAng = Vector(0, 0, 0)
 
-	SWEP.ENFORPos = Vector(0, -0, 0)
+	SWEP.ENFORPos = Vector(-1.635, -2.5, 0)
     SWEP.ENFORAng = Vector(0, 0, 0)
 
 	SWEP.POINTPos = Vector(-1.635, -2.5, 0.25)
@@ -89,6 +169,9 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.BallisticPos = Vector(-1.62, -1.4, -0.12)
 	SWEP.BallisticAng = Vector(0, 0, 0)
 	
+	SWEP.NXSPos = Vector(-1.665, -3.5, -0.06)
+    SWEP.NXSAng = Vector(0, 0, 0)
+
 	SWEP.CSGOACOGPos = Vector(-1.68, -2.8, -0.4)
 	SWEP.CSGOACOGAng = Vector(0, 0, 0)
 	
@@ -102,6 +185,7 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.BackupSights = {
+	["md_schmidt_shortdot"] = {[1] = Vector(-4.5, 5, -0.04), [2] = Vector(0,0,-60)},
 	["md_microt1"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
 	["md_cmore"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
 	["md_trijicon"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
@@ -123,7 +207,12 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	
 
 	SWEP.AttachmentModelsVM = {
-		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -3.325, 0.6), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -0.164, 8.02), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	    ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 0, 8.817), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.136, -0.5, 2.065), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "Masada_body", pos = Vector(-0.35, -7.5 , -4.65), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "Masada_body", pos = Vector(-0.4, -7.5, -4.75), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "Masada_body", rel = "", pos = Vector(0.06, -3.125, 0.6), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2.5, 1), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2, 0.9), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 4.5, 0.9), angle = Angle(0, -90, 0), size = Vector(0.9, 0.9, 0.9) },
@@ -147,6 +236,7 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 		["md_m203"] = {model = "models/cw2/attachments/m203.mdl", bone = "Masada_body", pos = Vector(2.299, -6.611, 4.138), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), animated = true}
 	}
 	
+
 	SWEP.M203HoldPos = {
 		["Bip01 L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-2.76, 2.651, 1.386), angle = Angle(0, 0, 0) }
 	}
@@ -181,9 +271,9 @@ SWEP.CustomizationMenuScale = 0.01
 
 SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law enforcement use.", x = -200, y = -800}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -600},  atts = {"md_microt1", "md_cmore", "too_reflex_exps", "xrkonpoint", "corioenforcer", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -600},  atts = {"md_rmr","xrkonpoint", "md_reflex", "md_microt1", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_uecw_csgo_556", "md_thermal", "md_nightforce_nxs"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-700, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
-	[3] = {header = "Handguard", offset = {-450, 350}, atts = {"md_foregrip", "md_bipod"}},
+	[3] = {header = "Handguard", offset = {-450, 350}, atts = {"bruentiltgrip_r", "ftactiger_r", "md_foregrip", "md_bipod"}},
 	[4] = {header = "Laser", offset = {-700, -150}, atts = {"ftacgrimline", "md_anpeq15"}},	
 	[5] = {header = "Conversion", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {1500, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
