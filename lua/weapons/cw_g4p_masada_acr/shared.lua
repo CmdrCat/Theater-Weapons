@@ -34,6 +34,15 @@ if CLIENT then
 	
 --	SWEP.CustomizePos = Vector(-13.507, -6.981, 1.175)
 --	SWEP.CustomizeAng = Vector(27.256, -50.713, -29.239)
+
+SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
+SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+
+	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
+
+
+
 	
 	SWEP.IronsightPos = Vector(-3, 5, -0.04)
 	SWEP.IronsightAng = Vector(0,0,-30)
@@ -67,6 +76,15 @@ if CLIENT then
 	
 	SWEP.ReflexPos = Vector(-1.62, -1.4, 0.08)
 	SWEP.ReflexAng = Vector(0, 0, 0)
+
+	SWEP.ENFORPos = Vector(0, -0, 0)
+    SWEP.ENFORAng = Vector(0, 0, 0)
+
+	SWEP.POINTPos = Vector(-1.635, -2.5, 0.25)
+    SWEP.POINTAng = Vector(0, 0, 0)
+
+	SWEP.EXPSPos = Vector(-1.635, -3.5, 0)
+	SWEP.EXPSAng = Vector(0, 0, 0)
 	
 	SWEP.BallisticPos = Vector(-1.62, -1.4, -0.12)
 	SWEP.BallisticAng = Vector(0, 0, 0)
@@ -102,7 +120,13 @@ if CLIENT then
 	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
+	
+
 	SWEP.AttachmentModelsVM = {
+		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -3.325, 0.6), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2.5, 1), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2, 0.9), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 4.5, 0.9), angle = Angle(0, -90, 0), size = Vector(0.9, 0.9, 0.9) },
 		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "Masada_body", rel = "", pos = Vector(-1.315, -10.2, 1.52), angle = Angle(0, -90, 0), size = Vector(1.039, 1.039, 1.039), color = Color(255, 255, 255, 255)},
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Masada_body", rel = "", pos = Vector(0.006, -0.4, 1.2), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2, 0.96), angle = Angle(180, 180, 180), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
@@ -157,10 +181,10 @@ SWEP.CustomizationMenuScale = 0.01
 
 SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law enforcement use.", x = -200, y = -800}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -600},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -600},  atts = {"md_microt1", "md_cmore", "too_reflex_exps", "xrkonpoint", "corioenforcer", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-700, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
 	[3] = {header = "Handguard", offset = {-450, 350}, atts = {"md_foregrip", "md_bipod"}},
-	[4] = {header = "Laser", offset = {-700, -150}, atts = {"md_anpeq15"}},
+	[4] = {header = "Laser", offset = {-700, -150}, atts = {"ftacgrimline", "md_anpeq15"}},	
 	[5] = {header = "Conversion", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {1500, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
