@@ -16,13 +16,14 @@ function ENT:Initialize()
 
 	if phys and phys:IsValid() then
 		phys:Wake()
+		phys:EnableGravity(false)
 	end
 	
 	self:GetPhysicsObject():SetBuoyancyRatio(0)
 	self.ArmTime = CurTime() + 0.05
 	
 	spd = physenv.GetPerformanceSettings()
-    spd.MaxVelocity = 15000
+    spd.MaxVelocity = 5000
 	
     physenv.SetPerformanceSettings(spd)
 end
@@ -39,6 +40,7 @@ local vel, len
 
 function ENT:PhysicsCollide(data, physobj)
 	if self.dt.Misfire then
+		physobj:EnableGravity(true)
 		vel = physobj:GetVelocity()
 		len = vel:Length()
 		

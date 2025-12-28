@@ -1901,7 +1901,7 @@ function SWEP:PrimaryAttack()
 				CustomizableWeaponry.grenadeTypes.createGrenadeEntity(self, "cw_12gauge_explosive")
 			end
 		else
-			self:FireBullet( self.Damage, self.CurCone, self.ClumpSpread, self.Shots )
+			self:FireBullet( self.Damage, self.CurCone, self.ClumpSpread, self.Shots)
 		end
 		
 		self:makeFireEffects()

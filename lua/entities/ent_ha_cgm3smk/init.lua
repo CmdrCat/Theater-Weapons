@@ -14,6 +14,7 @@ function ENT:Initialize()
 
 	if phys and phys:IsValid() then
 		phys:Wake()
+		phys:EnableGravity(false)
 	end
 	
 	self:GetPhysicsObject():SetBuoyancyRatio(0)

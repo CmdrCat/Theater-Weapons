@@ -67,7 +67,7 @@ if CLIENT then
 		10
 	}
 	
-	SWEP.Trivia = {text = "The integrated scope has adjustable zoom.", x = 0, y = -500}
+	SWEP.Trivia = {text = "The integrated scope has adjustable zoom.", x = -1000, y = -800}
 
 end
 
@@ -78,12 +78,12 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
-SWEP.CustomizePos = Vector(-1, 0, 1.5)
-SWEP.CustomizeAng = Vector(0, 0, 0)
+SWEP.CustomizePos = Vector(-1, 0, 5)
+SWEP.CustomizeAng = Vector(-25, 0, 0)
 
 SWEP.Attachments = {
 
-	["+reload"] = {header = "Projectile", offset = {-800, 50}, atts = {"ha_cgm3_heat", "ha_cgm3_uhv", "ha_cgm3_smoke"}}
+	["+reload"] = {header = "Projectile", offset = {-1000, -600}, atts = {"ha_cgm3_heat", "ha_cgm3_uhv", "ha_cgm3_smoke", "ha_cgm3_762"}}
 	
 	}
 
@@ -357,7 +357,10 @@ function SWEP:PrimaryAttack()
 		local muzzleData = EffectData()
 		muzzleData:SetEntity(self)
 		util.Effect("cw_muzzleflash", muzzleData)
-		
+
+		if self.ActiveAttachments.ha_cgm3_762 then
+			self:FireBullet( self.Damage, self.CurCone, self.ClumpSpread, self.Shots)
+		end
 		if self.dt.Suppressed then
 			self:EmitSound(self.FireSoundSuppressed, 105, 100)
 		else
@@ -399,7 +402,7 @@ function SWEP:PrimaryAttack()
 		if self:isAiming() then offset = forward * 35 + eyeAng:Right() * 0.5 - eyeAng:Up() * 2.5
 		end
 	
-	if SERVER and not self.ActiveAttachments.ha_cgm3_smoke and not self.ActiveAttachments.ha_cgm3_uhv and not self.ActiveAttachments.ha_cgm3_heat then
+	if SERVER and not self.ActiveAttachments.ha_cgm3_smoke and not self.ActiveAttachments.ha_cgm3_uhv and not self.ActiveAttachments.ha_cgm3_heat and not self.ActiveAttachments.ha_cgm3_762 then
 		missile = ents.Create("ent_ha_cgm3he")
 		missile:SetPos(pos + offset)
 		missile:SetAngles(eyeAng)
@@ -463,4 +466,120 @@ end
 	
 	self:SetClip1(0)
 	
+end
+
+function SWEP:IndividualThink()
+	self.EffectiveRange = 145 * 39.37
+	self.DamageFallOff = .45
+
+	self.CrosshairParts = {left = true, right = true, upper = false, lower = true}
+
+	if self.ActiveAttachments.ha_cgm3_762 then
+		self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
+		self.EffectiveRange = ((self.EffectiveRange + 55 * 39.37))
+		self.DamageFallOff = ((self.DamageFallOff - 0.45))
+	end
+end
+
+function SWEP:Holster(wep)
+	-- can't switch if neither the weapon we want to switch to or the wep we're trying to switch to are not valid
+	if not IsValid(wep) and not IsValid(self.SwitchWep) then
+		self.SwitchWep = nil
+		return false
+	end
+	
+	local CT = CurTime()
+	
+	-- can't holster if we have a global delay on the weapon
+	if CT < self.GlobalDelay or CT < self.HolsterWait then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.HolsterDelay ~= 0 and CT < self.dt.HolsterDelay then
+		return false
+	end
+	
+	-- can't holster if there are sequenced actions
+	if #self._activeSequences > 0 then
+		return false
+	end
+	
+	if self.ReloadDelay then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+		self.dt.State = CW_HOLSTER_START
+		self.dt.HolsterDelay = 0
+	end
+	
+	if self.dt.State ~= CW_HOLSTER_START then
+		self.dt.HolsterDelay = CurTime() + self.HolsterTime
+	end
+	
+	self.dt.State = CW_HOLSTER_START
+	
+	-- if holster sequence is over, let us select the desired weapon
+	if self.SwitchWep and self.dt.State == CW_HOLSTER_START and CurTime() > self.dt.HolsterDelay then
+		self.dt.State = CW_IDLE
+		self.dt.HolsterDelay = 0
+		
+		return true
+	end
+	
+	-- if it isn't, make preparations for it
+	self.ShotgunReloadState = 0
+	self.ReloadDelay = nil
+	
+	if self:filterPrediction() then
+		if self.holsterSound then -- quick'n'dirty prediction fix
+			self:EmitSound("CW_HOLSTER", 70, 100)
+			self.holsterSound = false
+			
+			if IsFirstTimePredicted() then
+				if self.holsterAnimFunc then
+					self:holsterAnimFunc()
+				else
+					if self.Animations.holster then
+						self:sendWeaponAnim("holster")
+					end
+				end
+			end
+		end
+	end
+	
+	self.SwitchWep = wep
+	self.SuppressTime = nil
+	
+	if self.dt.M203Active then
+		if SERVER and SP then
+			SendUserMessage("CW20_M203OFF", self.Owner)
+		end
+		
+		if CLIENT then
+			self:resetM203Anim()
+		end
+	end
+
+	self.dt.M203Active = false
+end
+
+local simpleTextColor = Color(255, 210, 0, 255)
+local mod = 25
+
+function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
+	if self.SelectIcon then
+		surface.SetTexture(self.SelectIcon)
+		
+		wide = wide - mod
+		
+		x = x + (mod / 2)
+		y = y + (mod / 4) + (wide / 8)
+		
+		surface.SetDrawColor(255, 255, 255, alpha)
+		
+		surface.DrawTexturedRect(x, y, wide, (wide / 2))
+	else
+		simpleTextColor.a = alpha
+		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
+	end
 end
