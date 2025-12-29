@@ -81,9 +81,13 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	}
 
 	SWEP.AttachmentModelsVM = { 
-		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "STG44", rel = "", pos = Vector(0, 4.5, -1), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-        ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "STG44", rel = "", pos = Vector(0, 5, -1.25), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "STG44", rel = "", pos = Vector(-0.4, -5, -3.295), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 19.7, 2.4), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "STG44", pos = Vector(-0.375, -0.85, 0.55), angle = Angle(0, 0, 0), size = Vector(0.9, 1, 0.9)},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 22, 3.25), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
+		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "STG44", rel = "", pos = Vector(-0.295, 7.5, 2), angle = Angle(0, 0, 0), size = Vector(0.80, 1, 1)},
+		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 6, 2.85), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+        ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "STG44", rel = "", pos = Vector(-0.375, 6, 2.75), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "STG44", rel = "", pos = Vector(-0.75, -5, 0.5), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "STG44", pos = Vector(-0.75, 8.5, 3.25), angle = Angle(0, 90, -90), size = Vector(0.8, 0.8, 0.8)},
 		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "STG44", pos = Vector(-0.09, -4.5, 3.85), angle = Angle(0, -180, 0), size = Vector(1, 1, 1)},
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "STG44", rel = "", pos = Vector(-0.315, -4.15, 5.975), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
