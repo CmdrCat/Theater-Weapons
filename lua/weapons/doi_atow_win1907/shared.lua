@@ -89,7 +89,7 @@ if CLIENT then
 	
 	SWEP.AttachmentModelsVM = {
 	["doi_atow_lymanm82"] = {model = "models/khrcw2/doipack/attachments/garandscope.mdl", pos = Vector(-0.5, 0.18, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "A_Optic"},
-	["doi_atow_m3a1suppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(2.02, 2.45, 4.25), angle = Angle(0, -90, 0), size = Vector(0.9, 0.9, 0.9), bone = "Weapon"},
+	["doi_atow_m3a1suppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(-1.78, 1.479, 9.875), angle = Angle(90, 0, 90), size = Vector(0.9, 0.9, 0.9), bone = "Weapon"},
 	["md_ins2wsacog"] = {model = "models/khrcw2/ins2pack/attachments/ins2wsacog.mdl", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(0.835, 0.835, 0.835), bone = "A_Optic", adjustment = {axis = "x", min = 6.4, max = 10, inverse = true, inverseOffsetCalc = false}, material = ""},
 	["md_ins2aimpoint"] = {model = "models/khrcw2/ins2pack/attachments/ins2aimpoint.mdl", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(0.85, 0.85, 0.85), bone = "A_Optic", adjustment = {axis = "x", min = 5.85, max = 11, inverse = true, inverseOffsetCalc = false}, material = ""},
 	["md_ins2aimpoint2x"] = {model = "models/khrcw2/ins2pack/attachments/ins2aimpoint2x.mdl", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(0.85, 0.85, 0.85), bone = "A_Optic", adjustment = {axis = "x", min = 6.45, max = 10.25, inverse = true, inverseOffsetCalc = false}, material = ""},
@@ -130,7 +130,7 @@ SWEP.MagBGs = {main = 1, five = 0, fifteen = 1}
 
 	SWEP.Attachments = {--[2] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82"}},
 	[1] = {header = "Magazine", offset = {975, -100}, atts = {"doi_atow_win190715"}},
-	[2] = {header = "Barrel", offset = {-400, -400}, atts = {"doi_atow_m3a1suppressor"}},
+	[2] = {header = "Barrel", offset = {-400, -400}, atts = {"doi_atow_unisuppressor"}},
 	["+reload"] = {header = "Ammo", offset = {-250, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire2"},
