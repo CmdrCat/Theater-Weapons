@@ -128,10 +128,10 @@ SWEP.Trivia = {text = "The first weapon to be denominated as an assault rifle.",
 -- sumn bout saving europa or whatevs
 
 SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {"doi_atow_sling"}},
-[6] = {header = "Handguard", offset = {-450, 50}, atts = {"bruentiltgrip_r", "ftactiger_r", "md_foregrip", "md_bipod"}},
-[2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "hard20", "md_saker", "md_csgo_silencer_rifle"}},
+[6] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
+[2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "md_saker", "md_csgo_silencer_rifle", "hard20"}},
 [4] = {header = "Finish", offset = {850, 400}, atts = {"doi_atow_normandycamo"}},
-[1] = {header = "Optic", offset = {600, -525}, atts = {"doi_atow_zf4", "md_reflex"}},
+[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4"}},
 [5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}},
 ["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 

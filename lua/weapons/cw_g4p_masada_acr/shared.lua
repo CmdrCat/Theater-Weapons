@@ -283,7 +283,7 @@ SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-100, -600},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_nightforce_nxs", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-700, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
-	[3] = {header = "Handguard", offset = {-650, 350}, atts = {"bruentiltgrip_r", "ftactiger_r", "md_foregrip", "md_bipod", "md_m203"}},
+	[3] = {header = "Handguard", offset = {-650, 350}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-700, -150}, atts = {"ftacgrimline", "md_anpeq15"}},	
 	[5] = {header = "Conversion", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
 	["+use"] = {header = "Optic Type", offset = {1450, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
