@@ -48,7 +48,7 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.ReflexPos = Vector(-2.25, -3.5, -0.45)
     SWEP.ReflexAng = Vector(0, 0, 0)
 	
-	SWEP.ZF4Pos = Vector(-2.3575, -3.5, 0.32)
+	SWEP.ZF4Pos = Vector(-2.3575, -5.25, 0.32)
 	SWEP.ZF4Ang = Vector(0, 0.0186, 0)
 	
 	SWEP.SprintPos = Vector(2, 0, 0)
