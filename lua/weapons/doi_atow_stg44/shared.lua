@@ -50,6 +50,9 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	
 	SWEP.ZF4Pos = Vector(-2.3575, -5.25, 0.32)
 	SWEP.ZF4Ang = Vector(0, 0.0186, 0)
+
+	SWEP.NXSPos = Vector(-2.285, -1, -0.5)
+    SWEP.NXSAng = Vector(0, 0, 0)
 	
 	SWEP.SprintPos = Vector(2, 0, 0)
 	SWEP.SprintAng = Vector(-15.478, 20.96, 0)
@@ -76,11 +79,13 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	
 
 	
-	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 5, 0.5), [2] = Vector(0, 0, -30)},
-	["doi_atow_zf4"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0, 0, -30)},
+	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, -1, 0.5), [2] = Vector(0, 0, -30)},
+	["doi_atow_zf4"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0, -1, -50)},
+	["md_nightforce_nxs"] = {[1] = Vector (-5, 7, 0.5), [2] = Vector(0, -1, -50)}
 	}
 
 	SWEP.AttachmentModelsVM = { 
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "STG44", rel = "", pos = Vector(-0.436, -6, 6.75), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 19.7, 2.4), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "STG44", pos = Vector(-0.375, -0.85, 0.55), angle = Angle(0, 0, 0), size = Vector(0.9, 1, 0.9)},
 		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 22, 3.25), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
@@ -125,13 +130,13 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingIntensity = .875
 
 SWEP.Trivia = {text = "The first weapon to be denominated as an assault rifle.", x = 0, y = -750}
--- sumn bout saving europa or whatevs
+-- sumn bout saving europa or whatevs -mg
 
 SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {"doi_atow_sling"}},
 [6] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 [2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "md_saker", "md_csgo_silencer_rifle", "hard20"}},
 [4] = {header = "Finish", offset = {850, 400}, atts = {"doi_atow_normandycamo"}},
-[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4"}},
+[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_nightforce_nxs"}},
 [5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}},
 ["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
