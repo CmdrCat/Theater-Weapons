@@ -35,8 +35,18 @@ SWEP.DamageFallOff_Orig = .3
 	SWEP.ForeGripOffsetCycle_Reload = .7
 	SWEP.ForeGripOffsetCycle_Reload_Empty = .7
 
+
+SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
+SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+
+	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
+
 	SWEP.IronsightPos = Vector(-2.316, -4.5, 0.58)
 	SWEP.IronsightAng = Vector(0.2536, 0.0368, 0)
+
+	SWEP.ReflexPos = Vector(-2.25, -3.5, -0.45)
+    SWEP.ReflexAng = Vector(0, 0, 0)
 	
 	SWEP.ZF4Pos = Vector(-2.3575, -3.5, 0.32)
 	SWEP.ZF4Ang = Vector(0, 0.0186, 0)
@@ -61,17 +71,28 @@ SWEP.DamageFallOff_Orig = .3
 	SWEP.DisableSprintViewSimulation = false
 	
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .8
-	SWEP.CustomizationMenuScale = 0.025 --  0.0275
+	SWEP.CustomizationMenuScale = 0.0165 --  0.0275
+
 	
-	SWEP.BackupSights = {
-	["doi_atow_zf4"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+
+	
+	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 5, 0.5), [2] = Vector(0, 0, -30)},
+	["doi_atow_zf4"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0, 0, -30)},
 	}
 
-	SWEP.AttachmentModelsVM = {
-	["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/zf4scope.mdl", pos = Vector(-0.04, -4.2041, 5.525), angle = Angle(0, -90, 0), size = Vector(1.075, 1.075, 1.075), bone = "STG44"},
-		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-.375, 16.7, 3.275), angle = Angle(0, -90, 0), size = Vector(1.5, 1.3, 1.3), bone = "STG44"},
+	SWEP.AttachmentModelsVM = { 
+		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "STG44", rel = "", pos = Vector(0, 4.5, -1), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+        ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "STG44", rel = "", pos = Vector(0, 5, -1.25), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "STG44", rel = "", pos = Vector(-0.4, -5, -3.295), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "STG44", pos = Vector(-0.75, 8.5, 3.25), angle = Angle(0, 90, -90), size = Vector(0.8, 0.8, 0.8)},
+		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "STG44", pos = Vector(-0.09, -4.5, 3.85), angle = Angle(0, -180, 0), size = Vector(1, 1, 1)},
+		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "STG44", rel = "", pos = Vector(-0.315, -4.15, 5.975), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
+	    ["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/zf4scope.mdl", pos = Vector(-0.04, -4.2041, 5.525), angle = Angle(0, -90, 0), size = Vector(1.075, 1.075, 1.075), bone = "STG44"},
+		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-.375, 16.7, 3.275), angle = Angle(0, -90, 0), size = Vector(1.55, 1.3, 1.3), bone = "STG44"},
+	    ["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "STG44", rel = "", pos = Vector(-0.95, 8, 3.75), angle = Angle(0, -90, 90), size = Vector(1, 1, 1) },
+
 	}
-	
+		
 	SWEP.ForegripOverridePos = {
 	["penos"] = {
 	["L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(1, .4, 1), angle = Angle(0, 0, 0) },
@@ -99,12 +120,16 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 --SWEP.AimBreathingIntensity = .875
 
-SWEP.Attachments = {[3] = {header = "Accessory", offset = {1300, -100}, atts = {"doi_atow_sling"}},
-[2] = {header = "Muzzle", offset = {-400, -200}, atts = {"doi_atow_unisuppressor"}},
-[5] = {header = "Fire Control", offset = {900, 250}, atts = {"doi_atow_heavybolt"}},
-[4] = {header = "Finish", offset = {200, -300}, atts = {"doi_atow_normandycamo"}},
-[1] = {header = "Optic", offset = {600, -400}, atts = {"doi_atow_zf4"}},
-["+reload"] = {header = "Ammo", offset = {-300, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+SWEP.Trivia = {text = "The first weapon to be denominated as an assault rifle.", x = 0, y = -750}
+-- sumn bout saving europa or whatevs
+
+SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {"doi_atow_sling"}},
+[6] = {header = "Handguard", offset = {-450, 50}, atts = {"bruentiltgrip_r", "ftactiger_r", "md_foregrip", "md_bipod"}},
+[2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "hard20", "md_saker", "md_csgo_silencer_rifle"}},
+[4] = {header = "Finish", offset = {850, 400}, atts = {"doi_atow_normandycamo"}},
+[1] = {header = "Optic", offset = {600, -525}, atts = {"doi_atow_zf4", "md_reflex"}},
+[5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}},
+["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire_1"},
