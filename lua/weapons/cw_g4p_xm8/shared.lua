@@ -183,6 +183,8 @@ if CLIENT then
 	}
 
 	SWEP.ForegripOverridePos = {
+		["default"] = {},
+		
 		["bruentiltgrip_r"] = {
 			["r-forearm"] = {vector = Vector(0, 0, 0), angle = Angle(-8.5, 14.8, -82.5)},
 			["r-thumb-tip"] = {vector = Vector(0, 0, 0), angle = Angle(57.558, 0, 0)},
