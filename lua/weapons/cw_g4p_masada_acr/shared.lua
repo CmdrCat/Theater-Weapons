@@ -145,6 +145,9 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.MicroT1Pos = Vector(-1.64, -1.4, 0.06)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
 
+	SWEP.ROMEO4TPos = Vector(-1.62, -1.4, -0.25)
+	SWEP.ROMEO4TAng = Vector(0, 0, 0)
+
 	SWEP.ShortDotPos = Vector(-1.605, -2.85, -0.220265)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 	
@@ -210,38 +213,42 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
 	SWEP.AttachmentModelsVM = {
+		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 5, -1.25), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 4.5, -1), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	    ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 5, -1.25), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.136, -0.5, 2.065), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "Masada_body", pos = Vector(-0.35, -7.5 , -4.65), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.4, -5, -3.295), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, 4.599, -2.06), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+		["md_m203"] = {model = "models/cw2/attachments/m203.mdl", bone = "Masada_body", pos = Vector(2.35, -12, 1.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), animated = true},
+
 		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "Masada_body", pos = Vector(-0.4, -7.5, -4.70), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "Masada_body", rel = "", pos = Vector(0.06, -3.125, 0.6), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2.5, 1), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2, 0.9), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 4.5, 0.9), angle = Angle(0, -90, 0), size = Vector(0.9, 0.9, 0.9) },
-		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "Masada_body", rel = "", pos = Vector(-1.315, -10.2, 1.52), angle = Angle(0, -90, 0), size = Vector(1.039, 1.039, 1.039), color = Color(255, 255, 255, 255)},
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Masada_body", rel = "", pos = Vector(0.006, -0.4, 1.2), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2, 0.96), angle = Angle(180, 180, 180), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
-		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.26, -8.2, -4.64), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.28, -7.2, -3.66), angle = Angle(180, 180, 180), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0)},
-		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.28, -7.2, -3.66), angle = Angle(180, 180, 180), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0)},
-		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.4, -5, -3.295), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "Masada_body", pos = Vector(0, -7.4, -3.3), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 15.2, -0.3), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
-		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Masada_body", pos = Vector(0, -2, 1.1), angle = Angle(0, 180, 0), size = Vector(0.4, 0.4, 0.4)},
-		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "Masada_body", pos = Vector(-0.38, -7.2, -4.8), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "Masada_body", pos = Vector(-0.08, 4, 0.94), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "Masada_Body", rel = "", pos = Vector(-0.02, -0.6, -1.44), angle = Angle(0, 0, 0), size = Vector(2, 2, 2)},
+		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Masada_body", pos = Vector(0, -2, 1.1), angle = Angle(0, 180, 0), size = Vector(0.4, 0.4, 0.4)},
+		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2, 0.98), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
+		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.26, -8.2, -4.64), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "Masada_body", rel = "", pos = Vector(0, -2, 0.9), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "Masada_body", rel = "", pos = Vector(0.06, -3.125, 0.6), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "Masada_body", pos = Vector(-0.35, -7.5 , -4.65), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.28, -7.2, -3.66), angle = Angle(180, 180, 180), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0)},
+		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "Masada_body", pos = Vector(-0.38, -7.2, -4.8), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
 		["md_uecw_csgo_acog"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_acog.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, -9.601, -3.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, 4.599, -2.06), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, 13.369, -1.201), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		["md_uecw_csgo_556"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_sig.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, -1.8, 0.74), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
-		["md_m203"] = {model = "models/cw2/attachments/m203.mdl", bone = "Masada_body", pos = Vector(2.299, -6.611, 4.138), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), animated = true}
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.28, -7.2, -3.66), angle = Angle(180, 180, 180), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0)},
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.136, -0.5, 2.065), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "Masada_body", rel = "", pos = Vector(-1.315, -10.2, 1.52), angle = Angle(0, -90, 0), size = Vector(1.039, 1.039, 1.039), color = Color(255, 255, 255, 255)},
+		
+		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 4.5, 0.9), angle = Angle(0, -90, 0), size = Vector(0.9, 0.9, 0.9) },
+		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "Masada_body", pos = Vector(-0.08, 4, 0.94), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
+		
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "Masada_body", pos = Vector(0, -7.4, -3.3), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, 13.369, -1.201), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 15.2, -0.3), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)}
 	}
 	
 
 	SWEP.M203HoldPos = {
-		["Bip01 L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-2.76, 2.651, 1.386), angle = Angle(0, 0, 0) }
+		["Bip01 L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(3.2, 0.3, -3.1), angle = Angle(0, 0, 0) }
 	}
 
 	SWEP.ForeGripHoldPos = {
@@ -274,22 +281,42 @@ SWEP.CustomizationMenuScale = 0.01
 
 SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law enforcement use.", x = -200, y = -800}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {200, -600},  atts = {"md_rmr","xrkonpoint", "md_reflex", "md_trijicon", "md_microt1", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_uecw_csgo_556", "md_thermal", "md_nightforce_nxs", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {-100, -600},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_nightforce_nxs", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-700, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
-	[3] = {header = "Handguard", offset = {-450, 350}, atts = {"bruentiltgrip_r", "ftactiger_r", "md_foregrip", "md_bipod"}},
+	[3] = {header = "Handguard", offset = {-650, 350}, atts = {"bruentiltgrip_r", "ftactiger_r", "md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-700, -150}, atts = {"ftacgrimline", "md_anpeq15"}},	
 	[5] = {header = "Conversion", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
+	["+use"] = {header = "Optic Type", offset = {1450, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1500, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
-SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
+SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
+		["xrkonpoint"] = {"too_optic_category_reflex"},
+		["md_reflex"] = {"too_optic_category_reflex"},
+		["md_cmore"] = {"too_optic_category_reflex"},
+		["md_trijicon"] = {"too_optic_category_reflex"},
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["too_reflex_romeo4t"] = {"too_optic_category_reflex"},
+		["md_aimpoint"] = {"too_optic_category_reflex"},
+		["too_reflex_exps"] = {"too_optic_category_reflex"},
+		["corioenforcer"] = {"too_optic_category_reflex"},
 
-SWEP.AttachmentPosDependency = {["md_anpeq15"] = {["md_ballistic"] = Vector(-0.76, 6, -0.2)},
-	["md_anpeq15"] = {["md_nightforce_nxs"] = Vector(-0.76, 6, -0.2)}
+		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+		["md_elcan"] = {"too_optic_category_magnified"},
+		["md_acog"] = {"too_optic_category_magnified"},
+		["md_uecw_csgo_acog"] = {"too_optic_category_magnified"},
+		["md_uecw_csgo_556"] = {"too_optic_category_magnified"},
+		["md_thermal"] = {"too_optic_category_magnified"},
+		["md_nightforce_nxs"] = {"too_optic_category_magnified"},
+		["md_ballistic"] = {"too_optic_category_magnified"}}
+
+SWEP.AttachmentPosDependency = {
+	["md_anpeq15"] = {["md_nightforce_nxs"] = Vector(-0.76, 6, -0.2)},
+	["md_anpeq15"] = {["md_ballistic"] = Vector(-0.76, 6, -0.2)}
 	}
 
-	SWEP.AttachmentAngDependency = {
-		md_anpeq15 = {md_ballistic = Angle(0, 90, -84)},
-		md_anpeq15 = {md_nightforce_nxs = Angle(0, 90, -84)}
+SWEP.AttachmentAngDependency = {
+	md_anpeq15 = {md_nightforce_nxs = Angle(0, 90, -84)},
+	md_anpeq15 = {md_ballistic = Angle(0, 90, -84)}
 	}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},

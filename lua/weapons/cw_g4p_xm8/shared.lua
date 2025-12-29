@@ -174,7 +174,7 @@ SWEP.CustomizationMenuScale = 0.01
 
 SWEP.Trivia = {text = "An advanced assault rifle platform meant to replace the US Army's M4. It instead became C.G.I.'s service rifle.", x = -200, y = -900}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -700},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -700},  atts = {"md_reflex", "md_cmore", "md_trijicon", "md_microt1", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}},
 	[2] = {header = "Muzzle", offset = {-500, -800},  atts = {"md_saker", "md_csgo_silencer_rifle"}},
 	[3] = {header = "Handguard", offset = {-600, 125}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-600, -350}, atts = {"md_anpeq15"}},

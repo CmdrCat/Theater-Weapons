@@ -1,12 +1,12 @@
 local att = {}
 att.name = "too_optic_category_reflex"
-att.displayName = "Reflex Sights"
-att.displayNameShort = "Reflex"
+att.displayName = "Unmagnified Sights"
+att.displayNameShort = "Unmag."
 
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Changes your optic category to Reflex Sights.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Changes your optic category to Unmagnified Sights.", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()
