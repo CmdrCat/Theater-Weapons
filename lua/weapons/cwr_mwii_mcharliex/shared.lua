@@ -125,11 +125,14 @@ if CLIENT then
 
 	
 	SWEP.AttachmentModelsVM = {
+
+        ["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.08, -2.8, 5.5), angle = Angle(-90, 90, 0), size = Vector(0.75, 0.75, 0.75)},
+		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "weapon", rel = "", pos = Vector(0, -3, -0.25), angle = Angle(90, -90, 0), size = Vector(1, 1, 1)},
 		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "weapon", rel = "", pos = Vector(0.105, -2.484, 0.939), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	   ["ftactiger_s"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(0,-0.2, 6.407), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	    ["ftactiger_s"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(0,-0.2, 6.407), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	    ["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(0, -0.164, 8.02), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.45, 20), angle = Angle(90, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "weapon", rel = "", pos = Vector(-0.036, -2.893, 2.033), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "weapon", rel = "", pos = Vector(-0.036, -2.893, -0.5), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	
 		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "weapon", rel = "", pos = Vector(-0.036, -2.893, 9.272), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["szbattleoptic"] = { type = "Model", model = "models/shared/optics/r_sz_battleoptic.mdl", bone = "weapon", rel = "", pos = Vector(-0.036, -2.893, 2.033), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -146,8 +149,12 @@ if CLIENT then
 		
 	}
 
+
 	SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
-	SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+
+	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
 	
 	-- Sight Pos Optic
 
@@ -170,6 +177,9 @@ if CLIENT then
     SWEP.ANGELPos = Vector(-3.06, -5.933, 0.509)
     SWEP.ANGELAng = Vector(0, 0, 0)
 
+	SWEP.ROMEO4TPos = Vector(-3.05, -10, 0.2)
+    SWEP.ROMEO4TAng = Vector(0, 0, 0)
+
 	SWEP.AngelPosAdjust = Vector(-1, 0, 1)
 	SWEP.AngelAngAdjust = Angle(0, 0, 0)
 
@@ -181,6 +191,7 @@ if CLIENT then
 	SWEP.AimpointAng = Vector(0,0,0)
 
 	SWEP.BackupSights = {
+	["too_reflex_romeo4t"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},	
 	["md_microt1"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
 	["xrkonpoint"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
 	["md_aimpoint"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
@@ -216,8 +227,8 @@ SWEP.AttachmentPosDependency = {
 
 SWEP.Attachments = {
 
-	[1] = {header = "Optic", offset = {1200 , -350},  atts = {"md_microt1","xrkonpoint","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop", "md_thermal"}},
-	[6] = {header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline",}, exclusions = {shroudhg = true}},
+	[1] = {header = "Optic", offset = {1200 , -350},  atts = {"md_microt1","xrkonpoint", "too_reflex_romeo4t","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop", "md_thermal"}},
+	[6] = {header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline","md_anpeq15"}, exclusions = {shroudhg = true}},
 	[2] = {header = "Muzzle", offset = {-400 , -300},  atts = {"md_saker","hard20"}},
 	[4] = {header = "Bottom Rail Long", offset = {-600 , 150},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}, exclusions = {bruenbm20 = true}},
 	[5] = {header = "Bottom Rail Short", offset = {-600 , 150},  atts = {"bruentiltgrip_s", "ftactiger_s"}, dependencies = {bruenbm20 = true}},
