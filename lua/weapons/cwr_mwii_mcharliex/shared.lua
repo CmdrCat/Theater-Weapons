@@ -343,9 +343,6 @@ SWEP.FireSound = "MWII_M13B_FIRE"
 SWEP.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.6
 
-
---paloma shit
-
 SWEP.AimMobilitySpreadMod = 0.3
 SWEP.VelocitySensitivity = 0.6
 
@@ -371,6 +368,19 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 55 * 39.37
 self.DamageFallOff = .15
+
+self:setBodygroup(self.FrontBGs.main, self.FrontBGs.med)
+
+if self.ActiveAttachments.bruenechelon then
+	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.long)
+end
+if self.ActiveAttachments.bruenbm20 then
+	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.short)
+end
+if self.ActiveAttachments.nofs or self.ActiveAttachments.xrkonpoint then
+	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.none)
+end
+
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

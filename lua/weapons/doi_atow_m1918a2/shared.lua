@@ -107,7 +107,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, 100}, atts = {"doi_
 [4] = {header = "Handle", offset = {200, -265}, atts = {"doi_atow_barcarry"}},
 [3] = {header = "Accessory", offset = {-400, -265}, atts = {"doi_atow_bipod"}},
 [2] = {header = "Handgaurd", offset = {-50, 200}, atts = {"doi_atow_barhandguard"}},
-[5] = {header = "Handle", offset = {800, -265}, atts = {"doi_atow_hcar"}},
+[5] = {header = "Conversion", offset = {800, -265}, atts = {"doi_atow_hcar"}},
 ["+reload"] = {header = "Ammo", offset = {450, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
