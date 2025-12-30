@@ -35,52 +35,91 @@ if CLIENT then
 	
 	SWEP.IronsightPos = Vector(-1.8, -1.497, 0.8)
 	SWEP.IronsightAng = Vector(-0.828, 0.14, 0)
-	
-	SWEP.EoTechPos = Vector(-1.78, -3.859, -0.76)
-	SWEP.EoTechAng = Vector(0, 0, 0)
-	
-	SWEP.AimpointPos = Vector(-1.8, -2.757, -0.52)
-	SWEP.AimpointAng = Vector(0, 0, 0)
-	
-	SWEP.TrijiconPos = Vector(-1.78, -3.6, -0.607)
-	SWEP.TrijiconAng = Vector(0, 0, 0)
-	
-	SWEP.MicroT1Pos = Vector(-1.8, -4.2, -0.361)
-	SWEP.MicroT1Ang = Vector(0, 0, 0)
-	
-	SWEP.CmorePos = Vector(-1.82, -4.016, -0.62)
-	SWEP.CmoreAng = Vector(0, 0, 0)
+
+	SWEP.RMRPos = Vector(-1.808, -3.6, -0.32)
+	SWEP.RMRAng = Vector(0, 0, 0)
+
+	SWEP.POINTPos = Vector(-1.81, -3.6, -0.44)
+    SWEP.POINTAng = Vector(0, 0, 0)
 	
 	SWEP.ReflexPos = Vector(-1.841, -4.2, -0.44)
 	SWEP.ReflexAng = Vector(0, 0, 0)
 
-	SWEP.ACOGPos = Vector(-1.785, -2.78, -0.76)
-	SWEP.ACOGAng = Vector(0, 0, 0)
+	SWEP.CmorePos = Vector(-1.82, -4.016, -0.62)
+	SWEP.CmoreAng = Vector(0, 0, 0)
+
+	SWEP.TrijiconPos = Vector(-1.78, -3.6, -0.607)
+	SWEP.TrijiconAng = Vector(0, 0, 0)
+
+	SWEP.KobraPos = Vector(-1.835, -1.497, -0.604)
+	SWEP.KobraAng = Vector(0, 0, 0)
+	
+	SWEP.MicroT1Pos = Vector(-1.8, -4.2, -0.361)
+	SWEP.MicroT1Ang = Vector(0, 0, 0)
+
+	SWEP.ROMEO4TPos = Vector(-1.81, -3.6, -0.82)
+	SWEP.ROMEO4TAng = Vector(0, 0, 0)
+	
+	SWEP.AimpointPos = Vector(-1.8, -2.757, -0.52)
+	SWEP.AimpointAng = Vector(0, 0, 0)
+
+	SWEP.EXPSPos = Vector(-1.82, -3.6, -0.72)
+	SWEP.EXPSAng = Vector(0, 0, 0)
+	
+	SWEP.ENFORPos = Vector(-1.8, -3.6, -0.67)
+    SWEP.ENFORAng = Vector(0, 0, 0)
+			
+	SWEP.ShortDotPos = Vector(-1.81, -2.78, -0.67)
+    SWEP.ShortDotAng = Vector(0, 0, 0)
 	
 	SWEP.ELCANPos = Vector(-1.785, -2.78, -0.78)
 	SWEP.ELCANAng = Vector(0, 0, 0)
 
-	SWEP.ThermalPos = Vector(4.04, -5, 0.5)
-	SWEP.ThermalAng = Vector(0, 0, 0)
+	SWEP.ACOGPos = Vector(-1.785, -2.78, -0.76)
+	SWEP.ACOGAng = Vector(0, 0, 0)
 	
 	SWEP.CSGOACOGPos = Vector(-1.795, -3.8, -0.64)
 	SWEP.CSGOACOGAng = Vector(0, 0, 0)
+
+	SWEP.PSOPos = Vector(-1.774, 3, -0.608)
+	SWEP.PSOAng = Vector(0, 0, 0)
 	
+	SWEP.ThermalPos = Vector(4.04, -5, 0.5)
+	SWEP.ThermalAng = Vector(0, 0, 0)
+
 	SWEP.M203Pos = Vector(-0.562, -2.481, 0.24)
 	SWEP.M203Ang = Vector(0, 0, 0)
+	
+	SWEP.NXSPos = Vector(-1.82, -2.78, -0.808)
+    SWEP.NXSAng = Vector(0, 0, 0)
 	
 	SWEP.AlternativePos = Vector(-0.32, 0, -0.64)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
+	SWEP.GrimlinePosAdjust = Vector(0, 0, 0)
+	SWEP.GrimlineAngAdjust = Angle(0, 0, 0) 
+	
+	SWEP.LaserPosAdjust = Vector(0, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 0, 0) 
+
 	SWEP.BackupSights = {
-	["md_microt1"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_rmr"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["xrkonpoint"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_reflex"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
 	["md_cmore"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
 	["md_trijicon"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["md_reflex"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_kobra"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_microt1"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["too_reflex_romeo4t"] = {[1] = Vector(-3, 3, 0.5), [2] = Vector(0,0,-30)},
 	["md_aimpoint"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["too_reflex_exps"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["corioenforcer"] = {[1] = Vector(-3, 3, 0.5), [2] = Vector(0,0,-30)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-3, 7, 0.5), [2] = Vector(0,0,-30)},
 	["md_elcan"] = {[1] = Vector(-1.798,0,-1.515), [2] = Vector(-0.1, -0.101, 0)},
 	["md_acog_fixed"] = {[1] = Vector(-1.787,0,-1.601), [2] = Vector(-0.05, 0, 0)},
-	["md_uecw_csgo_acog"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)}
+	["md_uecw_csgo_acog"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
+	["md_pso1"] = {[1] = Vector(-3, 7, 0.5), [2] = Vector(0,0,-30)},
+	["md_nightforce_nxs"] = {[1] = Vector(-3, 7, 0.5), [2] = Vector(0,0,-30)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
@@ -90,20 +129,43 @@ if CLIENT then
 	SWEP.BaseArmBoneOffset = Vector(0, 0, 0)
 	
 	SWEP.AttachmentModelsVM = {
+		--Magazines
 		["md_uecw_akmag"] = { type = "Model", model = "models/gmod4phun/akmag_bg_skin.mdl", bone = "mag_mesh", rel = "", pos = Vector(-0.25, 0, 1.649), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "bolt_mesh", rel = "", pos = Vector(-1.92, 0.66, -2.181), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255)},
-		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.558, -0.051, 2.14), angle = Angle(0, 90, 0), size = Vector(0.3, 0.3, 0.3), color = Color(255, 255, 255, 255)},
-		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body_mesh", rel = "", pos = Vector(3.588, -0.24, -2.158), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_akmag_bakelite"] = { type = "Model", model = "models/gmod4phun/akmag_bg_skin.mdl", bone = "mag_mesh", rel = "", pos = Vector(-0.25, 0, 1.649), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_akmag_snow"] = { type = "Model", model = "models/gmod4phun/akmag_bg_skin.mdl", bone = "mag_mesh", rel = "", pos = Vector(-0.25, 0, 1.649), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["uecw_an94_58_conversion"] = { type = "Model", model = "models/gmod4phun/akmag_bg_skin.mdl", bone = "mag_mesh", rel = "", pos = Vector(-0.25, 0, 1.649), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		--Muzzles
+		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "bolt_mesh", rel = "", pos = Vector(-2.7, 0.66, -2.181), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255)},
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "bolt_mesh", rel = "", pos = Vector(-20.16, 0.66, -0.7), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255)},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "bolt_mesh", rel = "", pos = Vector(-22.2, 0.64, 0.17), angle = Angle(0, 180, 90), size = Vector(1, 1, 1)},
+		--Optics
+		["md_rail"] = { type = "Model", model = "models/wystan/attachments/akrailmount.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.6, -0.299, 0.68), angle = Angle(0, -90, 0), size = Vector(1, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "body_mesh", pos = Vector(3.19, -0.37, -2.483), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
+		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.25, -0.075, 2.152), angle = Angle(0, 180, 0), size = Vector(0.77, 0.77, 0.77), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "body_mesh", rel = "", pos = Vector(-3.8, -0.101, 2.25), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255)},
 		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "body_mesh", rel = "", pos = Vector(-2.011, -0.075, 2.035), angle = Angle(0, -90, 0), size = Vector(0.649, 0.649, 0.649), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "body", rel = "", pos = Vector(-0.551, -2.34, -2.639), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "body_mesh", rel = "", pos = Vector(-3.661, -0.04, -0.22), angle = Angle(0, -90, 0), size = Vector(1.95, 1.95, 1.95), color = Color(255, 255, 255, 255)},
+		["md_kobra"] = { type = "Model", model = "models/cw2/attachments/kobra.mdl", bone = "body_mesh", rel = "", pos = Vector(-0.658, 0.357, -1.507), angle = Angle(0, 90, 0), size = Vector(0.59, 0.59, 0.59), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.558, -0.051, 2.14), angle = Angle(0, 90, 0), size = Vector(0.3, 0.3, 0.3), color = Color(255, 255, 255, 255)},
+		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.63, -0.065, 2.067), angle = Angle(0, 180, 0), size = Vector(0.74, 0.74, 0.74)},
+		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body_mesh", rel = "", pos = Vector(3.588, -0.24, -2.158), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.93, -0.07, 2.048), angle = Angle(0, 180, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.38, 0.004, 1.859), angle = Angle(0, 180, 0), size = Vector(0.74, 0.74, 0.74), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "body_mesh", pos = Vector(3.298, -0.39, -2.88), angle = Angle(0, 180, 0), size = Vector(0.87, 0.87, 0.87)},
+		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_uecw_csgo_acog"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_acog.mdl", bone = "body_mesh", rel = "", pos = Vector(3.72, -0.02, -1.081), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255)},
-		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "bolt_mesh", rel = "", pos = Vector(-20.16, 0.66, -0.7), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255)},
-		["md_rail"] = { type = "Model", model = "models/wystan/attachments/akrailmount.mdl", bone = "body_mesh", rel = "", pos = Vector(-1.6, -0.299, 0.68), angle = Angle(0, -90, 0), size = Vector(1, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", bone = "body_mesh", pos = Vector(4.499, -0.18, -1.53), angle = Angle(0, 90, 0), size = Vector(0.85, 0.85, 0.85)},
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body_mesh", rel = "", pos = Vector(3.296, -0.32, -2.208), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "body_mesh", rel = "", pos = Vector(-2.85, -0.19, 3.27), angle = Angle(0, 180, 0), size = Vector(1.1, 1.1, 1.1)},
+		--Handguards
+		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "body", rel = "", pos = Vector(-0.104, 9.036, -0.42), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "body", rel = "", pos = Vector(-0.104, 9.114, -0.435), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "body", rel = "", pos = Vector(-0.551, -2.34, -2.639), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "body", rel = "", pos = Vector(-0.05, 9.898, -1), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
+		--Lasers
+		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "body", rel = "", pos = Vector(-0.95, 11.15, 0.548), angle = Angle(0, -90, 90), size = Vector(0.9, 0.9, 0.9)},
+		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "body", rel = "", pos = Vector(-0.85, 10.839, 0.44), angle = Angle(180, -92, 90), size = Vector(0.5, 0.5, 0.5)}
 	}
 	
 	SWEP.ForeGripHoldPos = {
@@ -125,6 +187,29 @@ if CLIENT then
 		["l_forearm"] = {pos = Vector(2, -1.274, 1.055), angle = Angle(-1.905, 13.333, 87.619)},
 		["l_index_low"] = {vector = Vector(0, 0, 0), angle = Angle(74.286, 0, -9.469)}
 	}
+
+	SWEP.ForegripOverridePos = {
+		["default"] = {},
+		
+		["bruentiltgrip_r"] = {
+			["l_ring_low"] = {vector = Vector(0, 0, 0), angle = Angle(19.048, 0, 0)},
+			["l_middle_low"] = {vector = Vector(0, 0, 0), angle = Angle(47.618, 0, 0)},
+			["l_ring_mid"] = {vector = Vector(0, 0, 0), angle = Angle(-13.334, 0, 0)},
+			["l_middle_tip"] = {vector = Vector(0, 0, 0), angle = Angle(41.904, 0, 0)},
+			["l_thumb_low"] = {vector = Vector(0, 0, 0), angle = Angle(20.951, 0, -28.571)},
+			["l_wrist"] = {vector = Vector(0, 0, 0), angle = Angle(19.048, -2.534, 7.66)},
+			["l_thumb_tip"] = {vector = Vector(0, 0, 0), angle = Angle(0, 95.237, 0)},
+			["l_ring_tip"] = {vector = Vector(0, 0, 0), angle = Angle(60.951, 0, 0)},
+			["l_pinky_tip"] = {vector = Vector(0, 0, 0), angle = Angle(85.713, 0, 0)},
+			["l_thumb_mid"] = {vector = Vector(0, 0, 0), angle = Angle(0, 13.333, 0)},
+			["l_pinky_low"] = {vector = Vector(0, 0, 0), angle = Angle(0, 0, -15.238)},
+			["l_index_tip"] = {vector = Vector(0, 0, 0), angle = Angle(13.333, 0, 0)},
+			["l_middle_mid"] = {vector = Vector(0, 0, 0), angle = Angle(-15.238, 0, 0)},
+			["l_index_mid"] = {vector = Vector(0, 0, 0), angle = Angle(3.438, 0, 0)},
+			["l_pinky_mid"] = {vector = Vector(0, 0, 0), angle = Angle(-28.571, 0, 0)},
+			["l_forearm"] = {pos = Vector(2, -1.274, 1.055), angle = Angle(-1.905, 13.333, 87.619)},
+			["l_index_low"] = {vector = Vector(0, 0, 0), angle = Angle(74.286, 0, -9.469)}
+		}}
 	
 	SWEP.BoltBone = "bolt"
 	SWEP.BoltShootOffset = Vector(-3.2, 0, 0)
@@ -139,17 +224,38 @@ end
 
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
+SWEP.CustomizationMenuScale = 0.01
 
-SWEP.Trivia = {text = "A complex assault rifle with a unique hyperburst mechanism. The rifle of choice for C.G.I. counter-terrorists.", x = -250, y = -450}
+SWEP.Trivia = {text = "A complex assault rifle with a unique hyperburst mechanism. The rifle of choice for C.G.I. counter-terrorists.", x = 0, y = -800}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -350},  atts = {"md_microt1","md_cmore", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
-	[2] = {header = "Muzzle", offset = {-600, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
-	[3] = {header = "Handguard", offset = {-400,0}, atts = {"md_foregrip"}},
-	[4] = {header = "Magazine", offset = {-300, 500}, atts = {"md_uecw_akmag"}},
-	[5] = {header = "Conversion", offset = {385, 400}, atts = {"uecw_an94_58_conversion"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -650},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_kobra", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_pso1", "md_thermal", "md_nightforce_nxs"}},
+	[2] = {header = "Muzzle", offset = {-900, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
+	[3] = {header = "Handguard", offset = {-900, -50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
+	[4] = {header = "Lasers", offset = {-800, 500}, atts = {"ftacgrimline", "md_anpeq15"}},
+	[5] = {header = "Magazine", offset = {-50, 800}, atts = {"md_uecw_akmag", "md_uecw_akmag_bakelite", "md_uecw_akmag_snow"}},
+	[6] = {header = "Conversion", offset = {900, 800}, atts = {"uecw_an94_58_conversion"}},
+	["+use"] = {header = "Optic Type", offset = {1700, -650}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1300, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
-SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
+SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
+		["xrkonpoint"] = {"too_optic_category_reflex"},
+		["md_reflex"] = {"too_optic_category_reflex"},
+		["md_cmore"] = {"too_optic_category_reflex"},
+		["md_trijicon"] = {"too_optic_category_reflex"},
+		["md_kobra"] = {"too_optic_category_reflex"},
+		["md_microt1"] = {"too_optic_category_reflex"},
+		["too_reflex_romeo4t"] = {"too_optic_category_reflex"},
+		["md_aimpoint"] = {"too_optic_category_reflex"},
+		["too_reflex_exps"] = {"too_optic_category_reflex"},
+		["corioenforcer"] = {"too_optic_category_reflex"},
+
+		["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+		["md_elcan"] = {"too_optic_category_magnified"},
+		["md_acog_fixed"] = {"too_optic_category_magnified"},
+		["md_uecw_csgo_acog"] = {"too_optic_category_magnified"},
+		["md_pso1"] = {"too_optic_category_magnified"},
+		["md_thermal"] = {"too_optic_category_magnified"},
+		["md_nightforce_nxs"] = {"too_optic_category_magnified"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 
 SWEP.Animations = {fire = {"fire1", "fire2", "fire3"},
 	reload = "reload",
