@@ -35,42 +35,27 @@ if CLIENT then
 	
 	SWEP.IronsightPos = Vector(-2.887, -3, 1.2955)
 	SWEP.IronsightAng = Vector(0, 0, 0)
+
+	SWEP.ReflexPos = Vector(-2.885, -7, 0.185)
+    SWEP.ReflexAng = Vector(0, 0, 0)
 	
 	SWEP.AltIronPos = Vector(-2.4768, -3, 1.1628)
 	SWEP.AltIronAng = Vector(0.2625, 0.0213, 0)
 	
-	SWEP.LymanPos = Vector(-1.4022, -3.5, 1.1298)
+	SWEP.LymanPos = Vector(-1.965, -3.5, 0.60)
 	SWEP.LymanAng = Vector(0, 0, 0)
+
+	SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
+    SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+
+	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
 	
 	SWEP.SprintPos = Vector(2, 0, -1)
 	SWEP.SprintAng = Vector(-15.478, 20.96, -15)
 
 	SWEP.AlternativePos = Vector(-0.7, 1, -0.5)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
-	
-	SWEP.KobraPos = Vector(-2.47, -7.5, -.025)
-	SWEP.KobraAng = Vector(0, 0, 0)
-
-	SWEP.AimpointPos = Vector(-2.4643, -8, -0.08)
-	SWEP.AimpointAng = Vector(0, 0, 0)
-	
-	SWEP.Aimpoint2xPos = Vector(-2.4643, -8, -0.08)
-	SWEP.Aimpoint2xAng = Vector(0, 0, 0)
-
-	SWEP.M40Pos = Vector(-2.4804, -7, -0.138)
-	SWEP.M40Ang = Vector(0, 0, 0)
-
-	SWEP.EoTechPos = Vector(-2.4643, -7.5, -.23)
-	SWEP.EoTechAng = Vector(0, 0, 0)
-
-	SWEP.ACOGPos = Vector(-2.471, -7, -0.35)
-	SWEP.ACOGAng = Vector(0, 0, 0)
-
-	SWEP.PO424Pos = Vector(-2.415, -8, 0.112)
-	SWEP.PO424Ang = Vector(0, 0, 0)
-
-	SWEP.ElcanPos = Vector(-2.47, -7, -0.35)
-	SWEP.ElcanAng = Vector(0, 0, 0)
 
 	SWEP.SwimPos = Vector(0.5682, -1.7045, 1.0526)
 	SWEP.SwimAng = Vector(-50.8947, 35.0455, -25.2273)
@@ -85,21 +70,24 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
 	
-	SWEP.CustomizationMenuScale = 0.02 --  0.024
+	SWEP.CustomizationMenuScale = 0.0175 --  0.024
 	
 	SWEP.AttachmentModelsVM = {
-	["doi_atow_lymanm82"] = {model = "models/khrcw2/doipack/attachments/garandscope.mdl", pos = Vector(-0.5, 0.18, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "A_Optic"},
+	
+	--optics
+	["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Weapon", rel = "", pos = Vector(0, -1.55, 5), angle = Angle(0, 0, 270), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
+	["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Weapon", rel = "", pos = Vector(0.235, 0.55, 2.55), angle = Angle(270, 90, 0), size = Vector(1, 1, 1)},
+	["doi_atow_lymanm82"] = {model = "models/khrcw2/doipack/attachments/garandscope.mdl", pos = Vector(-0.15, -1.2, -2), angle = Angle(90, 270, 0), size = Vector(1, 1, 1), bone = "Weapon"},
+	--muzzles
 	["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(-1.78, 1.479, 9.875), angle = Angle(90, 0, 90), size = Vector(0.9, 0.9, 0.9), bone = "Weapon"},
-	["md_ins2wsacog"] = {model = "models/khrcw2/ins2pack/attachments/ins2wsacog.mdl", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(0.835, 0.835, 0.835), bone = "A_Optic", adjustment = {axis = "x", min = 6.4, max = 10, inverse = true, inverseOffsetCalc = false}, material = ""},
-	["md_ins2aimpoint"] = {model = "models/khrcw2/ins2pack/attachments/ins2aimpoint.mdl", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(0.85, 0.85, 0.85), bone = "A_Optic", adjustment = {axis = "x", min = 5.85, max = 11, inverse = true, inverseOffsetCalc = false}, material = ""},
-	["md_ins2aimpoint2x"] = {model = "models/khrcw2/ins2pack/attachments/ins2aimpoint2x.mdl", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(0.85, 0.85, 0.85), bone = "A_Optic", adjustment = {axis = "x", min = 6.45, max = 10.25, inverse = true, inverseOffsetCalc = false}, material = ""},
-	["md_rail"] = {model = "models/khrcw2/ins2pack/attachments/rails/rail2.mdl", pos = Vector(12.75, 1.025, 0), angle = Angle(0, 0, -90), size = Vector(1.575, 1.25, 1.25), bone = "A_Optic", material = ""},
-	["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.4, -9.55, -1.7628), angle = Angle(0, 0, 0), size = Vector(0.7, 0.7, 0.7), bone = "Weapon", material = ""},
-	["md_ins2eotech552"] = {model = "models/khrcw2/ins2pack/attachments/ins2eotech552.mdl", bone = "A_Optic", rel = "", pos = Vector(7.75, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(0.95, 0.95, 0.95), color = Color(255, 255, 255, 255), adjustment = {axis = "x", min = 6.85, max = 9.5, inverse = true, inverseOffsetCalc = false}, surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_ins2kobra"] = {model = "models/khrcw2/ins2pack/attachments/ins2kobra.mdl", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "A_Optic", adjustment = {axis = "x", min = 6, max = 10.5, inverse = true, inverseOffsetCalc = false}, material = ""},
-	["md_ins2elcan"] = {model = "models/khrcw2/ins2pack/attachments/ins2elcan.mdl", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(0.835, 0.835, 0.835), bone = "A_Optic", adjustment = {axis = "x", min = 6.8, max = 9.9, inverse = true, inverseOffsetCalc = false}, material = ""},
-	["md_ins2po424p"] = {model = "models/khrcw2/ins2pack/attachments/ins2po424p.mdl", bone = "A_Optic", rel = "", pos = Vector(8, -0.45, 0), angle = Angle(0, 0, -90), size = Vector(0.78, 0.78, 0.78), color = Color(255, 255, 255, 255), adjustment = {axis = "x", min = 6.45, max = 10.8, inverse = true, inverseOffsetCalc = false}, surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_ins2m40tac"] = {model = "models/khrcw2/ins2pack/attachments/ins2m40tac.mdl", bone = "A_Optic", rel = "", pos = Vector(8, -0.4, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), adjustment = {axis = "x", min = 6.75, max = 10, inverse = true, inverseOffsetCalc = false}, surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	--lasers
+	["ftacgrimline"] = {model = "models/shared/lasers/r_ftacgrimline.mdl", pos = Vector(-0.9, 0.05, 10.5), angle = Angle(90, 0, 0), size = Vector(1, 1, 1), bone = "Weapon"},
+	["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", pos = Vector(-0.75, 0.1, 11), angle = Angle(-90, 0, -185), size = Vector(0.6, 0.6, 0.6), bone = "Weapon"},
+	--handguard/grips
+    ["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Weapon", rel = "", pos = Vector(0, 1.75, 12), angle = Angle(0, 0, -90), size = Vector(0.80, 1, 1)},
+	["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "Weapon", rel = "", pos = Vector(-0.35, -5, 2.85), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+    ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "Weapon", rel = "", pos = Vector(-0.25, 1, 9.75), angle = Angle(-90, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+    ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Weapon", rel = "", pos = Vector(-0.295, 2.5, 1.555), angle = Angle(0, 0, -90), size = Vector(0.5, 0.5, 0.5)},
 	}
 	
 		SWEP.ForegripOverridePos = {
@@ -128,10 +116,13 @@ SWEP.CanRestOnObjects = true
 
 SWEP.MagBGs = {main = 1, five = 0, fifteen = 1}
 
-	SWEP.Attachments = {--[2] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82"}},
-	[1] = {header = "Magazine", offset = {975, -100}, atts = {"doi_atow_win190715"}},
-	[2] = {header = "Barrel", offset = {-400, -400}, atts = {"doi_atow_unisuppressor"}},
-	["+reload"] = {header = "Ammo", offset = {-250, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"md_reflex", "doi_atow_lymanm82"}},
+	[3] = {header = "Magazine", offset = {1000, 450}, atts = {"doi_atow_win190715"}},
+	[2] = {header = "Barrel", offset = {-450, -600}, atts = {"doi_atow_unisuppressor"}},
+	[4] = {header = "Laser", offset = {1000, 0}, atts = {"ftacgrimline", "md_anpeq15"}},
+	[5] = {header = "Handguard", offset = {-450, -150}, atts = {--"ftactiger_r", 
+    "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
+	["+reload"] = {header = "Ammo", offset = {-450, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire2"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
@@ -157,7 +148,7 @@ SWEP.Purpose		= ""
 SWEP.Instructions	= ""
 SWEP.NearWallEnabled = false
 
-SWEP.ViewModelFOV	= 75 // 75
+SWEP.ViewModelFOV	= 70
 SWEP.AimViewModelFOV = 63
 SWEP.ZoomAmount = 10
 SWEP.ViewModelFlip	= false
@@ -358,5 +349,5 @@ function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
 	end
 end
 
-/*/
+/*
 
