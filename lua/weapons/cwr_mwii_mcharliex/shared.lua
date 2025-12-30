@@ -165,7 +165,7 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.ThermalPos = Vector(-3.06, -9.733, 0.472)
     SWEP.ThermalAng = Vector(0, 0, 0)
 
-	SWEP.ENFORPos = Vector(-3.06, -5.564, 0.639)
+	SWEP.ENFORPos = Vector(-3.06, -11.5, 0.639)
     SWEP.ENFORAng = Vector(0, 0, 0)
 
 	SWEP.BATPos = Vector(-3.06, -5.733, 0.349)
