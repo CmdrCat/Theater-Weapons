@@ -71,9 +71,13 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = false
 	
 	SWEP.CustomizationMenuScale = 0.0175 --  0.024
+
+	SWEP.BackupSights = {
+		["md_reflex"] = {[1] = Vector(-4, 3, 0), [2] = Vector(0,0,-30)},
+		["doi_atow_lymanm82"] = {[1] = Vector(-2.887, -1.7, 1.2955), [2] = Vector(0,0,0)},
+	}
 	
 	SWEP.AttachmentModelsVM = {
-	
 	--optics
 	["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Weapon", rel = "", pos = Vector(0, -1.55, 5), angle = Angle(0, 0, 270), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
 	["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Weapon", rel = "", pos = Vector(0.235, 0.55, 2.55), angle = Angle(270, 90, 0), size = Vector(1, 1, 1)},
@@ -86,16 +90,16 @@ if CLIENT then
 	--handguard/grips
     ["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Weapon", rel = "", pos = Vector(0, 1.75, 12), angle = Angle(0, 0, -90), size = Vector(0.80, 1, 1)},
 	["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "Weapon", rel = "", pos = Vector(-0.35, -5, 2.85), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-    ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "Weapon", rel = "", pos = Vector(-0.25, 1, 9.75), angle = Angle(-90, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+    ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "Weapon", rel = "", pos = Vector(-0.25, 1, 9.75), angle = Angle(90, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
     ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Weapon", rel = "", pos = Vector(-0.295, 2.5, 1.555), angle = Angle(0, 0, -90), size = Vector(0.5, 0.5, 0.5)},
 	}
 	
-		SWEP.ForegripOverridePos = {
-	["nah"] = {
-	["ValveBiped.Bip01_L_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.75, .0, .3), angle = Angle(0, 0, 15) },
-	["L Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, .40, -.5), angle = Angle(5, 2, -5) },
-	["L Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5, -3, -5) },
-	["L Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 6, 0) }}
+	SWEP.ForegripOverridePos = {
+		["nah"] = {
+		["ValveBiped.Bip01_L_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.75, .0, .3), angle = Angle(0, 0, 15) },
+		["L Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, .40, -.5), angle = Angle(5, 2, -5) },
+		["L Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5, -3, -5) },
+		["L Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 6, 0) }}
 }
 	
 	SWEP.M82AxisAlign = {right = 0, up = -.02, forward = 0}
@@ -116,7 +120,7 @@ SWEP.CanRestOnObjects = true
 
 SWEP.MagBGs = {main = 1, five = 0, fifteen = 1}
 
-	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"md_reflex", "doi_atow_lymanm82"}},
+	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"md_reflex", "doi_atow_lymanm82"}},
 	[3] = {header = "Magazine", offset = {1000, 450}, atts = {"doi_atow_win190715"}},
 	[2] = {header = "Barrel", offset = {-450, -600}, atts = {"doi_atow_unisuppressor"}},
 	[4] = {header = "Laser", offset = {1000, 0}, atts = {"ftacgrimline", "md_anpeq15"}},

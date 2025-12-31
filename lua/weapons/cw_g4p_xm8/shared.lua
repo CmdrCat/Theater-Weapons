@@ -66,7 +66,7 @@ if CLIENT then
 
 	SWEP.ENFORPos = Vector(2.575, -3.543, -0.1)
     SWEP.ENFORAng = Vector(0, 0, 0)
-		
+	
 	SWEP.ShortDotPos = Vector(2.556, -3, -0.12)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
@@ -158,7 +158,7 @@ if CLIENT then
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Base", rel = "", pos = Vector(0.057, -8.466, -1.925), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
 		["md_m203"] = { type = "Model", model = "models/cw2/attachments/m203.mdl", bone = "Base", rel = "", pos = Vector(-2.34, 10.659, 2.4), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), animated = true},
 		--Lasers
-		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "Base", rel = "", pos = Vector(-0.8, -8.801, 0.2), angle = Angle(0, -90, 90), size = Vector(0.9, 0.9, 0.9)},
+		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "Base", rel = "", pos = Vector(-0.8, -8.801, 0.2), angle = Angle(180, -90, 90), size = Vector(0.9, 0.9, 0.9)},
 		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "Base", rel = "", pos = Vector(-0.7, -8.801, 0.3), angle = Angle(0, -90, 90), size = Vector(0.5, 0.5, 0.5)},
 		--Muzzles
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "Base", rel = "", pos = Vector(0, 5.44, -3.181), angle = Angle(0, 180, 0), size = Vector(1, 1, 1)},
@@ -207,7 +207,7 @@ if CLIENT then
 	SWEP.BoltShootOffset = Vector(0, 2, 0)
 
 	SWEP.GrimlinePosAdjust = Vector(0.5, 0, 0)
-	SWEP.GrimlineAngAdjust = Angle(0, 180, 0) 
+	SWEP.GrimlineAngAdjust = Angle(0, 0, 0) 
 	
 	SWEP.LaserPosAdjust = Vector(0.5, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
