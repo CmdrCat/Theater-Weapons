@@ -7,7 +7,7 @@ if CLIENT then
 	SWEP.PrintName = "L85A2"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
-	SWEP.CustomizationMenuScale = 0.012
+	SWEP.CustomizationMenuScale = 0.01
 	
 	SWEP.IconLetter = "i"
 	SWEP.SelectIcon = surface.GetTextureID("vgui/l85a2")
@@ -34,30 +34,70 @@ if CLIENT then
 		
 	SWEP.IronsightPos = Vector(-2.218, -1.785, -0.072)
 	SWEP.IronsightAng = Vector(0, 0, 0)
-		
+
+	SWEP.RMRPos = Vector(-2.2, -5, 0.821)
+	SWEP.RMRAng = Vector(0, 0, 0)
+
+	SWEP.POINTPos = Vector(-2.218, -5, 0.75)
+    SWEP.POINTAng = Vector(0, 0, 0)
+
+	SWEP.ReflexPos = Vector(-2.218, -5, 0.6)
+	SWEP.ReflexAng = Vector(0, 0, 0)
+	
+	SWEP.CmorePos = Vector(-2.218, -5, 0.42)
+	SWEP.CmoreAng = Vector(0, 0, 0)
+
+	SWEP.TrijiconPos = Vector(-2.16, -5, 0.424)
+	SWEP.TrijiconAng = Vector(0, 0, 0)
+
 	SWEP.MicroT1Pos = Vector(-2.211, -5, 0.518)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
-
-	SWEP.EoTechPos = Vector(-2.221, -6.48, 0.103)
-	SWEP.EoTechAng = Vector(0, 0, 0)
 	
+	SWEP.ROMEO4TPos = Vector(-2.218, -5, 0.268)
+	SWEP.ROMEO4TAng = Vector(0, 0, 0)
+
 	SWEP.AimpointPos = Vector(-2.221, -6.48, 0.474)
 	SWEP.AimpointAng = Vector(0, 0, 0)
+	
+	SWEP.EXPSPos = Vector(-2.203, -5, 0.28)
+	SWEP.EXPSAng = Vector(0, 0, 0)
+
+	SWEP.ENFORPos = Vector(-2.208, -5, 0.42)
+    SWEP.ENFORAng = Vector(0, 0, 0)
 	
 	SWEP.ShortDotPos = Vector(-2.145, -7, 0.44)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
 	
+	SWEP.ELCANPos = Vector(-2.218, -7.3, 0.378)
+	SWEP.ELCANAng = Vector(0, 0, 0)
+
 	SWEP.ACOGPos = Vector(-2.204, -7.3, 0.15)
 	SWEP.ACOGAng = Vector(0, 0, 0)
 	
+	SWEP.ThermalPos = Vector(-2.218, -7.3, 0.378)
+	SWEP.ThermalAng = Vector(0, 0, 0)
+
+	SWEP.NXSPos = Vector(-2.232, -5, 0.22)
+    SWEP.NXSAng = Vector(0, 0, 0)
+
 	SWEP.SprintPos = Vector(1.786, 0, -1)
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
 
 	SWEP.BackupSights = {
+		["md_rmr"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
+		["xrkonpoint"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
+		["md_reflex"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
+		["md_cmore"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
+		["md_trijicon"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
 		["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["too_reflex_romeo4t"] = {[1] = Vector(-4, 0, 0.5), [2] = Vector(0,0,-30)},
 		["md_aimpoint"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["too_reflex_exps"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
+		["corioenforcer"] = {[1] = Vector(-4, 0, 0.5), [2] = Vector(0,0,-30)},
 		["md_schmidt_shortdot"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
-		["md_acog"] = {[1] = Vector(-2.199, 0, -0.973), [2] = Vector(0, 0, 0)}}
+		["md_elcan"] = {[1] = Vector(-2.25, 0, -0.39), [2] = Vector(-0.1, -0.2, 0)},
+		["md_acog"] = {[1] = Vector(-2.199, 0, -0.973), [2] = Vector(0, 0, 0)},
+		["md_nightforce_nxs"] = {[1] = Vector(-4.5, 5, 0.5), [2] = Vector(0,0,-35)},}
 
 	SWEP.SightWithRail = true
 	SWEP.ACOGAxisAlign = {right = 0.5, up = 0, forward = 0}
@@ -70,19 +110,46 @@ if CLIENT then
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
 	SWEP.AttachmentModelsVM = {
-		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "body", pos = Vector(-2.119, 2.118, 0.241), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
-
-		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "body", pos = Vector(-1.6, 2.1, 0.3), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
+		--Optics
+		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "body", pos = Vector(-1.84, 2.133, 0.347), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
+		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "body", rel = "", pos = Vector(3.7, -3.64, -0.017), angle = Angle(0, 0, -90), size = Vector(0.9, 0.9, 0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "body", rel = "", pos = Vector(6.6, -3.804, 0.011), angle = Angle(-90, 0, -90), size = Vector(0.77, 0.77, 0.77), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_cmore"] = { type = "Model", model = "models/attachments/cmore.mdl", bone = "body", rel = "", pos = Vector(4.6, -3.531, -0.022), angle = Angle(-90, 0, -90), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "body", rel = "", pos = Vector(6.707, -0.704, -0.066), angle = Angle(-90, 0, -90), size = Vector(2.44, 2.44, 2.44)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "body", pos = Vector(3.588, -3.741, -0.049), angle = Angle(90, 0, -90), size = Vector(0.449, 0.449, 0.449)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "body", pos = Vector(0.976, -2.477, -1.522), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
+		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "body", rel = "", pos = Vector(3.59, -3.532, -0.03), angle = Angle(0, 0, -90), size = Vector(0.87, 0.87, 0.87)},
+		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "body", pos = Vector(-2.119, 2.118, 0.241), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "body", rel = "", pos = Vector(4.55, -3.531, -0.028), angle = Angle(0, 0, -90), size = Vector(0.87, 0.87, 0.87), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "body", rel = "", pos = Vector(3.85, -3.291, -0.106), angle = Angle(0, 0, -90), size = Vector(0.88, 0.88, 0.88), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "body", pos = Vector(-1.6, 2.1, 0.3), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
+		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body", rel = "", pos = Vector(-0.79, 0.974, 0.2664), angle = Angle(-90, 0, -90), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "body", pos = Vector(-1.433, 2.134, 0.33), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
+		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "body", rel = "", pos = Vector(-0.79, 0.974, 0.2664), angle = Angle(-90, 0, -90), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "body", rel = "", pos = Vector(4.84, -5.003, 0.128), angle = Angle(0, 0, -90), size = Vector(1.35, 1.35, 1.35)},
+		--Lasers
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "body", pos = Vector(4.293, -1.867, -0.764), angle = Angle(180, 0, 0), size = Vector(0.6, 0.6, 0.6)},
-		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "body", pos = Vector(-1.433, 2.134, 0.33), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)}
+		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "body", rel = "", pos = Vector(4.212, -1.73, -0.91), angle = Angle(0, 0, -180), size = Vector(0.9, 0.9, 0.9)},
+		--Muzzles
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "body", pos = Vector(2.3, -2.477, -1.522), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "body", rel = "", pos = Vector(14.3, -1.61, -0.018), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "body", rel = "", pos = Vector(16.46, -2.48, -0.03), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+		--Underbarrels
+		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "body", rel = "", pos = Vector(9.03, -0.479, -0.06), angle = Angle(-90, 90, 0), size = Vector(0.64, 0.64, 0.64), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
+		--Mags
+		["md_uecw_emag"] = { type = "mag", model = "models/gmod4phun/emag.mdl", bone = "mag", rel = "", pos = Vector(0.2, -0.792, 0), angle = Angle(-90, 90, 0), size = Vector(0.548, 0.548, 0.548), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_60rnd"] = { type = "mag", model = "models/gmod4phun/60rndmag.mdl", bone = "mag", rel = "", pos = Vector(1.864, -1.458, 0), angle = Angle(-90, 90, 0), size = Vector(0.747, 0.747, 0.747), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_tcw_stanag"] = { type = "mag", model = "models/gmod4phun/usgimag.mdl", bone = "Mag", rel = "", pos = Vector(0.216, -2.08, 0), angle = Angle(-90, 90, 0), size = Vector(0.616, 0.616, 0.616), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 1, hor = 2, roll = 1.5, forward = 1, pitch = 1}
 	
+	SWEP.GrimlinePosAdjust = Vector(0.5, 0, 0)
+	SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+
 	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
-	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
+	SWEP.LaserAngAdjust = Angle(0, 180, 0)
+
+	SWEP.MagBoneName = "mag"
 end
 
 SWEP.MuzzleVelocity = 930 -- in meter/s
@@ -91,18 +158,41 @@ SWEP.SightBGs = {main = 1, none = 1}
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
-SWEP.Trivia = {text = "A British bullpup assault rifle, having a longer range yet shorter overall length compared to other traditional rifles.", x = -400, y = -500}
+SWEP.Trivia = {text = "A British bullpup assault rifle, having a longer range yet shorter overall length compared to other traditional rifles.", x = -400, y = -800}
 
 SWEP.AttachmentExclusions = {["am_magnum"] = {"cw_l85a1_conversion"},
 							 ["am_matchgrade"] = {"cw_l85a1_conversion"},
-							 ["am_atow_heavy"] = {"cw_l85a1_conversion"}}
+							 ["am_atow_heavy"] = {"cw_l85a1_conversion"},
+							 ["md_uecw_emag"] = {"cw_l85a1_conversion"},
+							 ["md_uecw_60rnd"] = {"cw_l85a1_conversion"}}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -400},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
-	[2] = {header = "Muzzle", offset = {-500, -300}, atts = {"md_saker"}},
-	[3] = {header = "Laser", offset = {-500, 200},  atts = {"md_anpeq15"}},
-	[4] = {header = "Conversion", offset = {700, 550},  atts = {"cw_l85a1_conversion"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {50, -700},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_thermal", "md_nightforce_nxs"}},
+	[2] = {header = "Muzzle", offset = {-600, -700}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
+	[3] = {header = "Handguard", offset = {-700, 150},  atts = {"md_bipod"}},
+	[4] = {header = "Laser", offset = {-800, -300},  atts = {"ftacgrimline", "md_anpeq15"}},
+	[5] = {header = "Magazines", offset = {-400, 600},  atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_stanag"}},
+	[6] = {header = "Conversion", offset = {800, 700},  atts = {"cw_l85a1_conversion"}},
+	["+use"] = {header = "Optic Type", offset = {1600, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {800, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
+SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
+	["xrkonpoint"] = {"too_optic_category_reflex"},
+	["md_reflex"] = {"too_optic_category_reflex"},
+	["md_cmore"] = {"too_optic_category_reflex"},
+	["md_trijicon"] = {"too_optic_category_reflex"},
+	["md_microt1"] = {"too_optic_category_reflex"},
+	["too_reflex_romeo4t"] = {"too_optic_category_reflex"},
+	["md_aimpoint"] = {"too_optic_category_reflex"},
+	["too_reflex_exps"] = {"too_optic_category_reflex"},
+	["corioenforcer"] = {"too_optic_category_reflex"},
+
+	["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
+	["md_elcan"] = {"too_optic_category_magnified"},
+	["md_acog"] = {"too_optic_category_magnified"},
+	["md_uecw_csgo_acog"] = {"too_optic_category_magnified"},
+	["md_thermal"] = {"too_optic_category_magnified"},
+	["md_nightforce_nxs"] = {"too_optic_category_magnified"}}
+	
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "Reload_Full",
 	reload_empty = "Reload",
@@ -276,18 +366,6 @@ function SWEP:Holster(wep)
 	
 	self.SwitchWep = wep
 	self.SuppressTime = nil
-	
-	if self.dt.M203Active then
-		if SERVER and SP then
-			SendUserMessage("CW20_M203OFF", self.Owner)
-		end
-		
-		if CLIENT then
-			self:resetM203Anim()
-		end
-	end
-
-	self.dt.M203Active = false
 end
 
 local simpleTextColor = Color(255, 210, 0, 255)

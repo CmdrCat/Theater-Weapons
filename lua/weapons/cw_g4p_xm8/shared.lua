@@ -133,6 +133,8 @@ if CLIENT then
 		["md_uecw_emag"] = { type = "Model", model = "models/gmod4phun/emag.mdl", bone = "Mag", rel = "", pos = Vector(0, 0, -2.75), angle = Angle(0, 180, 0), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "Mag", rel = "", pos = Vector(0, -1.201, -1.5), angle = Angle(0, 180, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_uecw_cmag"] = { type = "Model", model = "models/wystan/cmag.mdl", bone = "Mag", rel = "", pos = Vector(0.165, 4.21, -1.892), angle = Angle(0, 90, 0), size = Vector(0.68, 0.68, 0.68), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_tcw_stanag"] = { type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "Mag", rel = "", pos = Vector(0, 0.157, -0.74), angle = Angle(0, 180, 0), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_tcw_pmag"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "Mag", rel = "", pos = Vector(0.09, -0.07, -2.808), angle = Angle(0, 90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		--Optics
 		["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Base", rel = "", pos = Vector(0.234, 1.019, 0.804), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
 		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "Base", pos = Vector(0.295, 6.420, -1.895), angle = Angle(0, 90, 0), size = Vector(0.8, 0.8, 0.8)},
@@ -225,7 +227,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {150, -700},  atts = {"md_
 	[2] = {header = "Muzzle", offset = {-500, -800},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
 	[3] = {header = "Handguard", offset = {-600, 125}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-600, -350}, atts = {"ftacgrimline", "md_anpeq15"}},
-	[5] = {header = "Magazine", offset = {-300, 600},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag"}},
+	[5] = {header = "Magazine", offset = {-300, 600},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag", "md_tcw_stanag", "md_tcw_pmag"}},
 	[6] = {header = "Conversion", offset = {1100, 600}, atts = {"uecw_m8a1_conversion"}},
 	["+use"] = {header = "Optic Type", offset = {1550, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1900, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}

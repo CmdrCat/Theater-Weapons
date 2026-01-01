@@ -98,7 +98,8 @@ if CLIENT then
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "scar", pos = Vector(-0.364, -4.625, -2.806), angle = Angle(0, 0, 0), adjustment = {min = -4.625, max = -2.3, axis = "y", inverseOffsetCalc = true}, size = Vector(1, 1, 1)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "scar", pos = Vector(-0.281, -4.494, -1.621), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
 		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "scar", pos = Vector(0, 9.411, -0.064), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699) },
-		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "scar", pos = Vector(-0.102, 2.661, 4.099), angle = Angle(0, -90, 0), size = Vector(1.1, 1.1, 1.1)}
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "scar", pos = Vector(-0.102, 2.661, 4.099), angle = Angle(0, -90, 0), size = Vector(1.1, 1.1, 1.1)},
+		["md_hamr_conv"] = { type = "Model", model = "models/wystan/cmag.mdl", bone = "mag", rel = "", pos = Vector(-0.181, -3.78, 1.623), angle = Angle(1.2, -90, 0), size = Vector(0.68, 0.68, 0.68), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
 
 	SWEP.ForeGripHoldPos = {
@@ -130,7 +131,9 @@ if CLIENT then
 	SWEP.BoltShootOffset = Vector(-2, 0, 0)
 	
 	SWEP.LaserPosAdjust = Vector(0.5, 0, 0)
-	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
+	SWEP.LaserAngAdjust = Angle(0, 180, 0)
+
+	SWEP.MagBoneName = "mag"
 end
 
 SWEP.MuzzleVelocity = 714 -- in meter/s
@@ -138,13 +141,17 @@ SWEP.MuzzleVelocity = 714 -- in meter/s
 SWEP.SightBGs = {main = 2, none = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Trivia = {text = "A reliable battle rifle used by the US Army. Make sure your fingers are clear of the charging handle.", x = -100, y = -450}
+SWEP.Trivia = {text = "A reliable battle rifle used by the US Army. Make sure your fingers are clear of the charging handle.", x = -100, y = -600}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -500},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Muzzle", offset = {-400, -500},  atts = {"md_saker"}},
 	[3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}},
 	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	["+reload"] = {header = "Ammo", offset = {900, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	[5] = {header = "Conversion", offset = {700, 500},  atts = {"md_hamr_conv"}},
+	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+
+SWEP.AttachmentExclusions = {
+	["am_atow_lowvel"] = {"md_hamr_conv"}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "reload",
@@ -189,6 +196,9 @@ SWEP.Primary.DefaultClip	= 80
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 
+SWEP.Secondary.ClipSize		= 300
+SWEP.Secondary.Ammo			= "5.56x45MM"
+
 SWEP.FireDelay = 0.096
 SWEP.FireSound = "CW_SCARH_FIRE"
 SWEP.FireSoundSuppressed = "CW_TOO_G3A3_FIRE_SUPPRESSED"
@@ -218,6 +228,9 @@ clip = self:Clip1()
 self.EffectiveRange = 60 * 39.37
 self.DamageFallOff = .25
 
+if self.ActiveAttachments.md_hamr_conv then
+	self.DamageFallOff = ((self.DamageFallOff - 0.05))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

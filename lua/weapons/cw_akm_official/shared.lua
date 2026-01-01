@@ -122,7 +122,8 @@ if CLIENT then
 		--Magazines
 		["md_ak_556_conv"] = { type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "mag", rel = "", pos = Vector(0, -0.25, 1.5), angle = Angle(0, 0, 0), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_uecw_emag"] = { type = "Model", model = "models/gmod4phun/emag.mdl", bone = "mag", rel = "", pos = Vector(0, -0.3, 0.75), angle = Angle(0, 0, 0), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "mag", rel = "", pos = Vector(0, 1.39, 1.3), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "mag", rel = "", pos = Vector(0, 1.39, 1.3), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_tcw_pmag"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "mag", rel = "", pos = Vector(0, -0.096, -0.405), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
 
 	SWEP.ForeGripHoldPos = {
@@ -174,7 +175,7 @@ SWEP.Attachments = {
 	{header = "Muzzle", offset = {-600, -500}, atts = {"md_pbs1", "md_csgo_silencer_rifle", "hard20"}},
 	{header = "Handguard", offset = {-600, 100}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	{header = "Conversion", offset = {500, 500}, atts = {"md_ak_556_conv"}},
-	{header = "Magazines", offset = {-400, 600}, atts = {"md_uecw_emag", "md_uecw_60rnd"}, dependencies = {md_ak_556_conv = true}},
+	{header = "Magazines", offset = {-400, 600}, atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}, dependencies = {md_ak_556_conv = true}},
 	["+use"] = {header = "Sight", offset = {1550, -500},  atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {950, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
