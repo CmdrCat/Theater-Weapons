@@ -268,7 +268,7 @@ SWEP.ReloadHalt_Empty = 5.05
 
 -- the model that this L85A2 uses comes with a grippod, so we add bipod functionality to it, but make it very tame when compared to a regular bipod
 SWEP.BipodInstalled = true
-SWEP.BipodRecoilModifier = 0.75
+SWEP.BipodRecoilModifier = 0.8
 
 function SWEP:getBipodHipSpread()
 	return self.HipSpread * 0.75
@@ -279,6 +279,12 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 50 * 39.37
 self.DamageFallOff = .25
+self.BipodInstalled = true
+self.BipodRecoilModifier = 0.8
+if self.ActiveAttachments.md_bipod then
+	self.BipodInstalled = true
+	self.BipodRecoilModifier = 0.3
+end
 if (self.ActiveAttachments.cw_l85a1_conversion) then
 	self.EffectiveRange = ((self.EffectiveRange - 40 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff + 65))
