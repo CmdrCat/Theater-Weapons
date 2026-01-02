@@ -39,6 +39,9 @@ if CLIENT then
 	
 	SWEP.FoldSightPos = Vector(-2.208, -4.3, 0.143)
 	SWEP.FoldSightAng = Vector(0.605, 0, -0.217)
+
+	SWEP.RMRPos = Vector(3.894, -2.401, 1.115)
+	SWEP.RMRAng = Vector(0, 0, 0)
 		
 	SWEP.EoTechPos = Vector(3.88, -2.401, 0.649)
 	SWEP.EoTechAng = Vector(0, 0, 0)
@@ -97,16 +100,24 @@ if CLIENT then
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 	
 	SWEP.AttachmentModelsVM = {
+		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "Body", pos = Vector(0.248, -1.19, -8.32), angle = Angle(90, 0, 90), size = Vector(0.8, 0.8, 0.8)},
 		["md_acog_fixed"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "Body", rel = "", pos = Vector(0.312, -2.507, -9.039), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_elcan"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Body", rel = "", pos = Vector(0.312, -2.507, -9.039), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_thermal"] = { type = "Model", model = "models/bunneh/elcan.mdl", bone = "Body", rel = "", pos = Vector(0.312, -2.507, -9.039), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "Body", rel = "", pos = Vector(0.163, -2.283, -9.818), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "Body", rel = "", pos = Vector(-0.438, -1.726, 15.869), angle = Angle(0, 0, 90), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Body", rel = "", pos = Vector(0.03, -0.175, 8.555), angle = Angle(180, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
-		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "Body", rel = "", pos = Vector(-0.06, 3.42, 2.4), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
+		
+		--Muzzles
+		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "Body", rel = "", pos = Vector(-0.08, 3.42, 2.25), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Body", rel = "", pos = Vector(0.6, 1.159, 17.78), angle = Angle(90, 0, 0), size = Vector(0.75, 0.75, 0.75)},
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Body", rel = "", pos = Vector(0, 3.279, -1.201), angle = Angle(180, 0, 90), size = Vector(0.8, 0.8, 0.8)},
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "Body", rel = "", pos = Vector(-0.08, 0.699, -2.141), angle = Angle(180, 0, 90), size = Vector(2, 2, 2)},
-		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Body", rel = "", pos = Vector(0.62, 1.159, 17.94), angle = Angle(90, 0, 0), size = Vector(0.75, 0.75, 0.75)},
+		--Mags
+		["md_uecw_usgimag"] = { type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "Clip", rel = "", pos = Vector(0.07, 1.017, -0.09), angle = Angle(0, 180, -90), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_emag"] = { type = "Model", model = "models/gmod4phun/emag.mdl", bone = "Clip", rel = "", pos = Vector(0.08, 0.333, -0.11), angle = Angle(0, 180, -90), size = Vector(0.55, 0.55, 0.55), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "Clip", rel = "", pos = Vector(0.1, 0.556, 1.55), angle = Angle(0, 180, -90), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_tcw_pmag"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "Clip", rel = "", pos = Vector(0.12, -0.406, 0.11), angle = Angle(90, 180, -90), size = Vector(0.67, 0.67, 0.67), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 	
 	SWEP.M203HoldPos = {
@@ -133,6 +144,8 @@ if CLIENT then
 
 	SWEP.LaserPosAdjust = Vector(1, 0, 0)--{x = 1, y = 0, z = 0}
 	SWEP.LaserAngAdjust = Angle(2, 180, 0) --{p = 2, y = 180, r = 0}
+
+	SWEP.MagBoneName = "Clip"
 	
 function SWEP:RenderTargetFunc()
 	
@@ -151,10 +164,11 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "A classic assault rifle known for its 3-round burst. Its variants still see widespread use to this day.", x = 0, y = -450}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {300, -350},  atts = {"md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_thermal"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {300, -350},  atts = {"md_rmr", "md_reflex", "md_trijicon", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_thermal"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-500, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-500, -100}, atts = {"md_foregrip", "md_bipod"}},
-	[4] = {header = "Conversion", offset = {800, 325}, atts = {"uecw_m16a3_conversion"}},
+	[4] = {header = "Magazines", offset = {-500, -100}, atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}},
+	[5] = {header = "Conversion", offset = {800, 325}, atts = {"uecw_m16a3_conversion"}},
 	["+reload"] = {header = "Ammo", offset = {-500, 350}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 --SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY

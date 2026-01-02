@@ -141,6 +141,7 @@ if CLIENT then
 		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "gun", rel = "", pos = Vector(0, 5.6, 4.36), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "gun", pos = Vector(-0.123, 5.447, 4.297), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
 		--Magazines
+		["md_uecw_usgimag"] = { type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "magazine", rel = "", pos = Vector(-0.154, -0.31, 1.998), angle = Angle(0, 0, -3.86), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_uecw_emag"] = { type = "Model", model = "models/gmod4phun/emag.mdl", bone = "magazine", rel = "", pos = Vector(0, -0.27, 1.079), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "magazine", rel = "", pos = Vector(0, 1.405, 1.8), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_cmag_556_official"] = {model = "models/wystan/Cmag.mdl", bone = "magazine", pos = Vector(-0.182, -3.918, 1.111), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699)},
@@ -207,7 +208,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {-100, -600},  atts = {"md
 	[2] = {header = "Muzzle", offset = {-950, -250}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
 	[3] = {header = "Handguard", offset = {-650, 200}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	[4] = {header = "Laser", offset = {-900, -700}, atts = {"ftacgrimline", "md_anpeq15"}, dependencies = {md_rmr = true, xrkonpoint = true, md_reflex = true, md_cmore = true, md_trijicon = true, md_microt1 = true, too_reflex_romeo4t = true, md_aimpoint = true, too_reflex_exps = true, corioenforcer = true, md_schmidt_shortdot = true, md_elcan = true, md_acog = true, md_thermal = true, md_nightforce_nxs = true}},
-	[5] = {header = "Magazine", offset = {600, 300}, atts = {"md_uecw_emag", "md_uecw_60rnd", "md_cmag_556_official", "md_tcw_pmag"}},
+	[5] = {header = "Magazine", offset = {600, 300}, atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_cmag_556_official", "md_tcw_pmag"}},
 	["+use"] = {header = "Sight", offset = {1450, -600},  atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {850, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
