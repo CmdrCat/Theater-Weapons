@@ -87,7 +87,7 @@ if CLIENT then
 	SWEP.M203HoldPos = {
 		["Left_U_Arm"] = {pos = Vector(2.197, -2.123, -1.015), angle = Angle(0, 0, 0)}
 	}
-	
+
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "scar", pos = Vector(-0.233, -6.4, -2.172), angle = Angle(0, 0, 0), adjustment = {min = -6.4, max = -4, axis = "y", inverseOffsetCalc = true}, size = Vector(0.899, 0.899, 0.899)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "scar", pos = Vector(-0.172, 7.369, 2.819), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
@@ -151,6 +151,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -500},  atts = {"md_
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentExclusions = {
+	["md_m203"] = {"md_hamr_conv"},
 	["am_atow_lowvel"] = {"md_hamr_conv"}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
