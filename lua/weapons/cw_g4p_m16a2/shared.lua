@@ -85,7 +85,7 @@ if CLIENT then
 	SWEP.ThermalPos = Vector(3.886, -6.5, 0.79)
 	SWEP.ThermalAng = Vector(0, 0, 0)
 	
-	SWEP.NXSPos = Vector(3.917, -6.5, 0.767)
+	SWEP.NXSPos = Vector(3.917, -5, 0.767)
     SWEP.NXSAng = Vector(0, 0, 0)
 
 	SWEP.M203Pos = Vector(-0.562, -2.481, 0.24)
