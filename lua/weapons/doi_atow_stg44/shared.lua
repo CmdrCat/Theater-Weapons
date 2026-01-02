@@ -79,27 +79,31 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	
 
 	
-	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, -1, 0.5), [2] = Vector(0, 0, -30)},
-	["doi_atow_zf4"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0, -1, -50)},
-	["md_nightforce_nxs"] = {[1] = Vector (-5, 7, 0.5), [2] = Vector(0, -1, -50)}
+	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 0, 0.5), [2] = Vector(0, 0, -40)},
+	["doi_atow_zf4"] = {[1] = Vector(-5, 0, 0.5), [2] = Vector(0, 0, -50)},
+	["md_nightforce_nxs"] = {[1] = Vector (-5, 0, 0.5), [2] = Vector(0, 0, -50)}
 	}
 
 	SWEP.AttachmentModelsVM = { 
-		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "STG44", rel = "", pos = Vector(-0.436, -6, 6.75), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 19.7, 2.4), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "STG44", pos = Vector(-0.375, -0.85, 0.55), angle = Angle(0, 0, 0), size = Vector(0.9, 1, 0.9)},
-		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 22, 3.25), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
+
+		--optics
+		["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/zf4scope.mdl", pos = Vector(-0.04, -4.2041, 5.525), angle = Angle(0, -90, 0), size = Vector(1.075, 1.075, 1.075), bone = "STG44"},
+		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "STG44", pos = Vector(-0.09, -4.5, 3.85), angle = Angle(0, -180, 0), size = Vector(1, 1, 1)},
+		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "STG44", rel = "", pos = Vector(-0.315, -4.15, 5.975), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
+		--handguard
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "STG44", rel = "", pos = Vector(-0.295, 7.5, 2), angle = Angle(0, 0, 0), size = Vector(0.80, 1, 1)},
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 6, 2.85), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
         ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "STG44", rel = "", pos = Vector(-0.375, 6, 2.75), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
         ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "STG44", rel = "", pos = Vector(-0.75, -5, 0.5), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		--lasers
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "STG44", pos = Vector(-0.75, 8.5, 3.25), angle = Angle(0, 90, -90), size = Vector(0.8, 0.8, 0.8)},
-		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "STG44", pos = Vector(-0.09, -4.5, 3.85), angle = Angle(0, -180, 0), size = Vector(1, 1, 1)},
-		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "STG44", rel = "", pos = Vector(-0.315, -4.15, 5.975), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
-	    ["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/zf4scope.mdl", pos = Vector(-0.04, -4.2041, 5.525), angle = Angle(0, -90, 0), size = Vector(1.075, 1.075, 1.075), bone = "STG44"},
+		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "STG44", rel = "", pos = Vector(-0.95, 8, 3.75), angle = Angle(0, -90, 90), size = Vector(1, 1, 1) },
+		--muzzles
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "STG44", rel = "", pos = Vector(-0.436, -6, 6.75), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 19.7, 2.4), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "STG44", pos = Vector(-0.375, -0.85, 0.55), angle = Angle(0, 0, 0), size = Vector(0.9, 1, 0.9)},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 22, 3.25), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
 		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-.375, 16.7, 3.275), angle = Angle(0, -90, 0), size = Vector(1.55, 1.3, 1.3), bone = "STG44"},
-	    ["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "STG44", rel = "", pos = Vector(-0.95, 8, 3.75), angle = Angle(0, -90, 90), size = Vector(1, 1, 1) },
-
 	}
 		
 	SWEP.ForegripOverridePos = {
@@ -130,7 +134,7 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingIntensity = .875
 
 SWEP.Trivia = {text = "The first weapon to be denominated as an assault rifle.", x = 0, y = -750}
--- sumn bout saving europa or whatevs -mg
+-- sumn bout saving europa or whatevs
 
 SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {"doi_atow_sling"}},
 [6] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
