@@ -17,7 +17,7 @@ function att:attachFunc()
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 	self.PrintName = "M16A3"
-	self.Trivia = {text = "The M16A3 is a fully automatic variant of the M16A2 that is used in a limited capacity by select armed units.", x = 0, y = -450}
+	self.Trivia = {text = "The M16A3 is a fully automatic variant of the M16A2 that is used in a limited capacity by select armed units.", x = -200, y = -700}
 end
 
 function att:detachFunc()
@@ -26,7 +26,7 @@ function att:detachFunc()
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 	self.PrintName = "M16A2"
-	self.Trivia = {text = "A classic assault rifle known for its 3-round burst. Its variants still see widespread use to this day.", x = 0, y = -450}
+	self.Trivia = {text = "A classic assault rifle known for its 3-round burst. Its variants still see widespread use to this day.", x = -200, y = -700}
 end
 
 CustomizableWeaponry:registerAttachment(att)

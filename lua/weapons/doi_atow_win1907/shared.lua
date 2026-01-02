@@ -89,7 +89,7 @@ if CLIENT then
 	["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "Weapon", rel = "", pos = Vector(-0.1, -2.35, 3), angle = Angle(90, -90, 0), size = Vector(1, 1, 1)},
 	--muzzles
 	["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(-1.78, 1.479, 9.875), angle = Angle(90, 0, 90), size = Vector(0.9, 0.9, 0.9), bone = "Weapon"},
-	["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Weapon", rel = "", pos = Vector(0.85, -0.5, 25), angle = Angle(90, -90, 90), size = Vector(1,0.8, 0.8)},
+	["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Weapon", rel = "", pos = Vector(0.69, -0.5, 25), angle = Angle(90, -90, 90), size = Vector(1,0.8, 0.8)},
 	["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "Weapon", rel = "", pos = Vector(0, -0.55, 27), angle = Angle(90, 90, -90), size = Vector(1, 0.8, 0.8)},
 	--lasers
 	["ftacgrimline"] = {model = "models/shared/lasers/r_ftacgrimline.mdl", pos = Vector(-0.9, 0.05, 10.5), angle = Angle(90, 0, 0), size = Vector(1, 1, 1), bone = "Weapon"},
