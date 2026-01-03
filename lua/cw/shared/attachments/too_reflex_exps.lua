@@ -9,7 +9,9 @@ att.SpeedDec = 1
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts_new/att_eft_xps3")
-	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Slightly increases aim zoom.", c = CustomizableWeaponry.textColors.POSITIVE}}
 	
 	att.reticle = "vgui/atts_new/ret/exps_reticle"
 	att._reticleSize = 5

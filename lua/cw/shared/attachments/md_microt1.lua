@@ -10,7 +10,8 @@ att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/microt1")
 	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
-	[3] = {t = "Narrow scope may decrease awareness.", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Narrow scope reduces spatial awareness.", c = CustomizableWeaponry.textColors.NEGATIVE}}
 	
 	att.reticle = "cw2/reticles/aim_reticule"
 	att._reticleSize = 0.35

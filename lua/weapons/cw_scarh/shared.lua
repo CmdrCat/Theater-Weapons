@@ -93,7 +93,7 @@ if CLIENT then
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "scar", pos = Vector(-0.172, 7.369, 2.819), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "scar", pos = Vector(-0.392, -3.997, -1.839), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "scar", pos = Vector(0.016, -1.2, 3.079), angle = Angle(0, 180, 0), adjustment = {min = -1.2, max = 4, axis = "y", inverseOffsetCalc = true}, size = Vector(0.4, 0.4, 0.4)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "scar", pos = Vector(0, 2.413, -0.743), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "scar", pos = Vector(0, 1.58, -0.78), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_m203"] = {model = "models/cw2/attachments/m203.mdl", bone = "scar", pos = Vector(2.316, -9.063, 3.388), angle = Angle(1.07, -90, 0), size = Vector(1, 1, 1), animated = true},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "scar", pos = Vector(-0.364, -4.625, -2.806), angle = Angle(0, 0, 0), adjustment = {min = -4.625, max = -2.3, axis = "y", inverseOffsetCalc = true}, size = Vector(1, 1, 1)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "scar", pos = Vector(-0.281, -4.494, -1.621), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},

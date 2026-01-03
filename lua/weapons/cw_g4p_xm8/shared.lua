@@ -40,7 +40,7 @@ if CLIENT then
     SWEP.RMRPos = Vector(2.569, -3.543, 0.2)
     SWEP.RMRAng = Vector(0, 0, 0)
 	
-	SWEP.POINTPos = Vector(2.569, -3.543, 0.2)
+	SWEP.POINTPos = Vector(2.569, -3.543, 0.18)
     SWEP.POINTAng = Vector(0, 0, 0)
 	
 	SWEP.ReflexPos = Vector(2.575, -3.543, 0.108)
@@ -223,13 +223,13 @@ SWEP.CustomizationMenuScale = 0.01
 
 SWEP.Trivia = {text = "An advanced assault rifle platform meant to replace the US Army's M4. It instead became C.G.I.'s service rifle.", x = -200, y = -900}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {150, -700},  atts = {"md_rmr", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal", "md_nightforce_nxs"}},
-	[2] = {header = "Muzzle", offset = {-500, -800},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
-	[3] = {header = "Handguard", offset = {-600, 125}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
-	[4] = {header = "Laser", offset = {-600, -350}, atts = {"ftacgrimline", "md_anpeq15"}},
-	[5] = {header = "Magazine", offset = {-300, 600},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag", "md_tcw_stanag", "md_tcw_pmag"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {150, -700},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal", "md_nightforce_nxs"}},
+	[2] = {header = "Muzzle", offset = {-500, -700},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
+	[3] = {header = "Handguard", offset = {-600, 225}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
+	[4] = {header = "Laser", offset = {-600, -250}, atts = {"ftacgrimline", "md_anpeq15"}},
+	[5] = {header = "Magazine", offset = {-300, 700},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag", "md_tcw_stanag", "md_tcw_pmag"}},
 	[6] = {header = "Conversion", offset = {1100, 600}, atts = {"uecw_m8a1_conversion"}},
-	["+use"] = {header = "Optic Type", offset = {1550, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+use"] = {header = "Optic Type", offset = {1700, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1900, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 	SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},

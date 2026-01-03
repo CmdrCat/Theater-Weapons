@@ -99,13 +99,10 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
-SWEP.AttachmentExclusions = {["doi_atow_altsightlewis"] = {"doi_atow_lewisaa"},
-							 ["doi_atow_altsightlewis"] = {"doi_atow_m20conv"}}
-
 SWEP.Attachments = {[4] = {header = "Model", offset = {575, -300}, atts = {"doi_atow_lewisaa", "doi_atow_m20conv"}},
 [3] = {header = "Fire Control", offset = {750, 300}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
 [2] = {header = "Frame", offset = {-250, -200}, atts = {"doi_atow_bipodremove"}},
-[1] = {header = "Sight", offset = {1550, 200}, atts = {"doi_atow_altsightlewis"}},
+[1] = {header = "Sight", offset = {1550, 200}, atts = {"doi_atow_altsightlewis"}, exclusions = {doi_atow_lewisaa = true, doi_atow_m20conv = true}},
 ["+reload"] = {header = "Ammo", offset = {-100, 350}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},

@@ -1,7 +1,7 @@
 local att = {}
 att.name = "odec3d_cmore_kry"
-att.displayName = "CMoreSight"
-att.displayNameShort = "Barska"
+att.displayName = "C-More Railway Sight"
+att.displayNameShort = "C-More"
 att.aimPos = {"KR_CMOREPos", "KR_CMOREAng"}
 att.FOVModifier = 15
 att.isSight = true
@@ -9,7 +9,9 @@ att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/odec3d_cmore")
-	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
+		[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	    [3] = {t = "Slightly increases aim zoom.", c = CustomizableWeaponry.textColors.POSITIVE}}
 	
 	att.reticle = "cw2/reticles/aim_reticule"
 	att._reticleSize = 0.42

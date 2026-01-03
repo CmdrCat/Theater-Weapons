@@ -11,7 +11,9 @@ att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/kobra")
-	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Slightly increases aim zoom.", c = CustomizableWeaponry.textColors.POSITIVE}}
 	
 	att.reticle = "cw2/reticles/kobra_sight"
 	att._reticleSize = 2.5

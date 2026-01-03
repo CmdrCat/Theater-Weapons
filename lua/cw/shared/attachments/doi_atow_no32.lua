@@ -15,7 +15,9 @@ if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/no32")
 	att.description = {
 		[1] = {t = "British 3.5x magnification scope.", c = CustomizableWeaponry.textColors.POSITIVE},
-		[2] = {t = "For medium range.", c = CustomizableWeaponry.textColors.POSITIVE}
+		[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+		[3] = {t = "Narrow scope reduces spatial awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
+		[4] = {t = "Can be disorienting at close-range.", c = CustomizableWeaponry.textColors.NEGATIVE},
 	}
 
 	local old, x, y, ang

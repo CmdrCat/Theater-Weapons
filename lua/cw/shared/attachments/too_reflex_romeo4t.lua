@@ -9,8 +9,9 @@ att.isSight = true
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts_new/att_eft_romeo4t")
 	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Slightly increases aim zoom.", c = CustomizableWeaponry.textColors.POSITIVE},
-	[3] = {t = "Narrow scope may decrease awareness.", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Slightly increases aim zoom.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[4] = {t = "Narrow scope reduces spatial awareness.", c = CustomizableWeaponry.textColors.NEGATIVE}}
 	
 	att.reticle = "vgui/atts_new/ret/scope_all_walther_mrs_mark_000"
 	att._reticleSize = 5

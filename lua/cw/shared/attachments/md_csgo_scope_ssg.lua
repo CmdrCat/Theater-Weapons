@@ -11,8 +11,9 @@ att.statModifiers = {}
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_csgo_ssgscope")
 	att.description = {[1] = {t = "Provides 12x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Narrow scope reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
-	[3] = {t = "Can be disorienting at close range.", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Narrow scope reduces spatial awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
+	[4] = {t = "Can be disorienting at close-range.", c = CustomizableWeaponry.textColors.NEGATIVE}}
 
 	local old, x, y, ang
 	local reticle = surface.GetTextureID("cw20_extras/ssg_scope_reticle")

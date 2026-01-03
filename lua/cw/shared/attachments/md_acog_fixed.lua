@@ -12,8 +12,9 @@ att.statModifiers = {}
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/acog")
 	att.description = {[1] = {t = "Provides 4x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Narrow scope reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
-	[3] = {t = "Can be disorienting at close range.", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	[2] = {t = "Has backup sights. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Narrow scope reduces spatial awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
+	[4] = {t = "Can be disorienting at close-range.", c = CustomizableWeaponry.textColors.NEGATIVE}}
 
 	local old, x, y, ang
 	local reticle = surface.GetTextureID("cw2/reticles/reticle_chevron")

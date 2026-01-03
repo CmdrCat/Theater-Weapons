@@ -1,6 +1,6 @@
 local att = {}
 att.name = "md_csgo_556"
-att.displayName = "Sig 556 Sight"
+att.displayName = "SIG556 ACOG"
 att.displayNameShort = "556"
 att.aimPos = {"CSGO556Pos", "CSGO556Ang"}
 att.FOVModifier = 15
@@ -11,8 +11,9 @@ att.statModifiers = {}
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_csgo_556scope")
 	att.description = {[1] = {t = "Provides 4x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Narrow scope reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
-	[3] = {t = "Can be disorienting at close range.", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	[2] = {t = "Has backup sights. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Narrow scope reduces spatial awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
+	[4] = {t = "Can be disorienting at close-range.", c = CustomizableWeaponry.textColors.NEGATIVE}}
 
 	local old, x, y, ang
 	local reticle = surface.GetTextureID("cw20_extras/sg556_scope_reticle")

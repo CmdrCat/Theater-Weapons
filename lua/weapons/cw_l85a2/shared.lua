@@ -146,7 +146,7 @@ if CLIENT then
 	SWEP.GrimlinePosAdjust = Vector(0.5, 0, 0)
 	SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 
-	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
+	SWEP.LaserPosAdjust = Vector(0.5, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0)
 
 	SWEP.MagBoneName = "mag"

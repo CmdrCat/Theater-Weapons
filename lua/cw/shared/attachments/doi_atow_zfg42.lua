@@ -15,8 +15,10 @@ if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/inventory/optic_scope_4x")
 	att.description = {
 		[1] = {t = "German 1.5x-4x magnification scope.", c = CustomizableWeaponry.textColors.POSITIVE},
-		[2] = {t = "For medium range.", c = CustomizableWeaponry.textColors.POSITIVE},
-		[3] = {t = "Scroll to adjust.", c = CustomizableWeaponry.textColors.NEUTRAL}
+		[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+		[3] = {t = "Narrow scope reduces spatial awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
+		[4] = {t = "Can be disorienting at close-range.", c = CustomizableWeaponry.textColors.NEGATIVE},
+		[5] = {t = "Scroll to adjust.", c = CustomizableWeaponry.textColors.NEUTRAL}
 	}
 
 	local old, x, y, ang

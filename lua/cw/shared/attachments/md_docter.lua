@@ -11,7 +11,9 @@ att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("cw20_extras/icons/upgr_reflexsight")
-	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
+    [2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Slightly increases aim zoom.", c = CustomizableWeaponry.textColors.POSITIVE}}
 	
 	att.reticle = "cw2/reticles/aim_reticule"
 	att._reticleSize = 0.5

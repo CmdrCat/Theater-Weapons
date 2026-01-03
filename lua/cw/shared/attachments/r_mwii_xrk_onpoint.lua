@@ -9,7 +9,9 @@ att.isSight = true
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_xrkonpoint")
-	att.description = {[1] = {t = "A compact reliable sight.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "A compact, reliable sight.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Slightly increases aim zoom.", c = CustomizableWeaponry.textColors.POSITIVE}}
 	
 	att.reticle = "reticles/zoom/XTENAngel_reticle"
 	att._reticleSize = 4

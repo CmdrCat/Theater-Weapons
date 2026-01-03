@@ -209,6 +209,9 @@ SWEP.BarrelBGs = {main = 3 , regular = 0 , none = 1}
 SWEP.StockBGs = {main = 2 , regular = 0 , none = 1}
 SWEP.FrontBGs = {main = 6 , short = 1 , long = 2 , med = 0 , none = 3}
 
+
+SWEP.AttachmentExclusions = {["nofs"] = {"xrkonpoint"}}
+
 SWEP.AttachmentDependencies = {
 	["bruentiltgrip_s"] = {"bruenbm20"},
 } 
@@ -220,10 +223,6 @@ SWEP.AttachmentPosDependency = {
 	["ftacgrimline"] = {["bruenbm20"] = Vector(-0.036, -2.893, 5.8), ["bruenechelon"] = Vector(-0.036, -2.893, 12.8)},
 	
 }
-
-
-
-
 
 SWEP.Attachments = {
 
@@ -239,7 +238,7 @@ SWEP.Attachments = {
 	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }
-	
+
 
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true

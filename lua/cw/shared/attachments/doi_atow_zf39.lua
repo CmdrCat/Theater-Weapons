@@ -15,7 +15,9 @@ if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/zf39")
 	att.description = {
 		[1] = {t = "German 7x magnification scope.", c = CustomizableWeaponry.textColors.POSITIVE},
-		[2] = {t = "For medium-long range.", c = CustomizableWeaponry.textColors.POSITIVE}
+		[2] = {t = "Has backup sights. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+		[3] = {t = "Narrow scope reduces spatial awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
+		[4] = {t = "Can be disorienting at close-range.", c = CustomizableWeaponry.textColors.NEGATIVE}
 	}
 
 	
