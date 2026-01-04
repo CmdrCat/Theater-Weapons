@@ -84,20 +84,20 @@ if CLIENT then
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
 
 	SWEP.BackupSights = {
-		["md_rmr"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
-		["xrkonpoint"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
-		["md_reflex"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
-		["md_cmore"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
-		["md_trijicon"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
-		["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
-		["too_reflex_romeo4t"] = {[1] = Vector(-4, 0, 0.5), [2] = Vector(0,0,-30)},
-		["md_aimpoint"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
-		["too_reflex_exps"] = {[1] = Vector(-4, 2, 0.5), [2] = Vector(0,0,-30)},
-		["corioenforcer"] = {[1] = Vector(-4, 0, 0.5), [2] = Vector(0,0,-30)},
-		["md_schmidt_shortdot"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
+		["md_rmr"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
+		["xrkonpoint"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
+		["md_reflex"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
+		["md_cmore"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
+		["md_trijicon"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
+		["md_microt1"] = {[1] = Vector(-3.75, 2.75, 1), [2] = Vector(0,0,-45)},
+		["too_reflex_romeo4t"] = {[1] = Vector(-3.75, 0.25, 1), [2] = Vector(0,0,-45)},
+		["md_aimpoint"] = {[1] = Vector(-3.75, 1.75, 1), [2] = Vector(0,0,-45)},
+		["too_reflex_exps"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
+		["corioenforcer"] = {[1] = Vector(-3.75, 0.25, 1), [2] = Vector(0,0,-45)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-3.75, 2.75, 1), [2] = Vector(0,0,-45)},
 		["md_elcan"] = {[1] = Vector(-2.25, 0, -0.39), [2] = Vector(-0.1, -0.2, 0)},
 		["md_acog"] = {[1] = Vector(-2.199, 0, -0.973), [2] = Vector(0, 0, 0)},
-		["md_nightforce_nxs"] = {[1] = Vector(-4.5, 5, 0.5), [2] = Vector(0,0,-35)},}
+		["md_nightforce_nxs"] = {[1] = Vector(-4, 2.75, 1.25), [2] = Vector(0,0,-60)}}
 
 	SWEP.SightWithRail = true
 	SWEP.ACOGAxisAlign = {right = 0.5, up = 0, forward = 0}

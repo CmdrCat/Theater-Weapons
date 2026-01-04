@@ -146,13 +146,13 @@ if CLIENT then
     SWEP.ANGELAng = Vector(0, 0, 0)
 
 	SWEP.BackupSights = {
-	["xrkonpoint"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
-	["md_microt1"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
-	["md_aimpoint"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
-	["szbattleoptic"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
-	["corioenforcer"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
-	["cronenzerop"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)},
-	["md_nightforce_nxs"] = {[1] = Vector(-5.841, 0, -0.04), [2] = Vector(0,0, -30)}
+	["xrkonpoint"] = {[1] = Vector(-5.5, -5, 1), [2] = Vector(0,0, -45)},
+	["md_microt1"] = {[1] = Vector(-5.5, -2, 1), [2] = Vector(0,0, -45)},
+	["md_aimpoint"] = {[1] = Vector(-5.5, -4.5, 1), [2] = Vector(0,0, -45)},
+	["szbattleoptic"] = {[1] = Vector(-5.5, -5.75, 1), [2] = Vector(0,0, -45)},
+	["corioenforcer"] = {[1] = Vector(-5.5, -5.75, 1), [2] = Vector(0,0, -45)},
+	["cronenzerop"] = {[1] = Vector(-5.5, -3.75, 1), [2] = Vector(0,0, -45)},
+	["md_nightforce_nxs"] = {[1] = Vector(-5.5, -4, 1.75), [2] = Vector(0,0, -60)}
 	}
 
 end

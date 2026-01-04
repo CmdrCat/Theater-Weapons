@@ -55,19 +55,19 @@ if CLIENT then
 	SWEP.MagBoneName = "mag"
 	
 	SWEP.BackupSights = {
-		["md_rmr"] = {[1] = Vector(-6, 3, 1), [2] = Vector(0,0,-30)},
-		["xrkonpoint"] = {[1] = Vector(-6, 3, 1), [2] = Vector(0,0,-30)},
-		["md_reflex"] = {[1] = Vector(-6, 3, 1), [2] = Vector(0,0,-30)},
-		["md_trijicon"] = {[1] = Vector(-6, 3, 1), [2] = Vector(0,0,-30)},
-		["md_kobra"] = {[1] = Vector(-6, 3, 1), [2] = Vector(0,0,-30)},
-		["md_microt1"] = {[1] = Vector(-6, 7, 1), [2] = Vector(0,0,-30)},
-		["too_reflex_romeo4t"] = {[1] = Vector(-6, 1, 1), [2] = Vector(0,0,-30)},
-		["md_aimpoint"] = {[1] = Vector(-6, 5, 1), [2] = Vector(0,0,-30)},
-		["too_reflex_exps"] = {[1] = Vector(-6, 3, 1), [2] = Vector(0,0,-30)},
-		["corioenforcer"] = {[1] = Vector(-6, 1, 1), [2] = Vector(0,0,-30)},
-		["md_schmidt_shortdot"] = {[1] = Vector(-6, 5, 1), [2] = Vector(0,0,-30)},
+		["md_rmr"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
+		["xrkonpoint"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
+		["md_reflex"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
+		["md_trijicon"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
+		["md_kobra"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
+		["md_microt1"] = {[1] = Vector(-5.5, 0.5, 2), [2] = Vector(0,0,-45)},
+		["too_reflex_romeo4t"] = {[1] = Vector(-5.5, -2.5, 2), [2] = Vector(0,0,-45)},
+		["md_aimpoint"] = {[1] = Vector(-5.5, -0.5, 2), [2] = Vector(0,0,-45)},
+		["too_reflex_exps"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
+		["corioenforcer"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-5.5, 0, 2), [2] = Vector(0,0,-45)},
 		["md_acog"] = {Vector(-3.862, 0, -0.676), Vector(0, 0, 0)},
-		["md_pso1"] = {[1] = Vector(-6, 5, 1), [2] = Vector(0,0,-30)}
+		["md_pso1"] = {[1] = Vector(-5.5, 0, 2), [2] = Vector(0,0,-45)},
 	}
 
 	SWEP.ViewModelMovementScale = 1.15

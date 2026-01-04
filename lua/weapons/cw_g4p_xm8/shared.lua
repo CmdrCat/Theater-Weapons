@@ -89,20 +89,20 @@ if CLIENT then
 	SWEP.SprintAng = Vector(-8.2, -42.201, 0)
 	
 	SWEP.BackupSights = {
-	["md_rmr"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["md_reflex"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["md_cmore"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["md_trijicon"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["md_microt1"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["too_reflex_romeo4t"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["md_aimpoint"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["too_reflex_exps"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["corioenforcer"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["md_schmidt_shortdot"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
+	["md_rmr"] = {[1] = Vector(4, -1, 1.25), [2] = Vector(0,0,45)},
+	["md_reflex"] = {[1] = Vector(4, -1, 1.25), [2] = Vector(0,0,45)},
+	["md_cmore"] = {[1] = Vector(4, -1, 1.25), [2] = Vector(0,0,45)},
+	["md_trijicon"] = {[1] = Vector(4, -1, 1.25), [2] = Vector(0,0,45)},
+	["md_microt1"] = {[1] = Vector(4, 1, 1.25), [2] = Vector(0,0,45)},
+	["too_reflex_romeo4t"] = {[1] = Vector(4, -2, 1.25), [2] = Vector(0,0,45)},
+	["md_aimpoint"] = {[1] = Vector(4, 0, 1.25), [2] = Vector(0,0,45)},
+	["too_reflex_exps"] = {[1] = Vector(4, -1, 1.25), [2] = Vector(0,0,45)},
+	["corioenforcer"] = {[1] = Vector(4, -2, 1.25), [2] = Vector(0,0,45)},
+	["md_schmidt_shortdot"] = {[1] = Vector(4, 1, 1.25), [2] = Vector(0,0,45)},
 	["md_elcan"] = {[1] = Vector(2.554, 0, -1.335), [2] = Vector(-0.1, 0, 0)},
 	["md_acog_fixed"] = {[1] = Vector(2.575, 0, -1.275), [2] = Vector(0.2, 0, 0)},
-	["md_uecw_csgo_acog"] = {[1] = Vector(4, 5, 0), [2] = Vector(0,0,30)},
-	["md_nightforce_nxs"] = {[1] = Vector(5, 5, 0), [2] = Vector(0,0,45)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(4, 1, 1.25), [2] = Vector(0,0,45)},
+	["md_nightforce_nxs"] = {[1] = Vector(4, 1, 1.25), [2] = Vector(0,0,45)}
 	}
 
 	SWEP.SightWithRail = true

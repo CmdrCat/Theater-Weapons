@@ -79,9 +79,9 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	
 
 	
-	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 0, 0.5), [2] = Vector(0, 0, -40)},
-	["doi_atow_zf4"] = {[1] = Vector(-5, 0, 0.5), [2] = Vector(0, 0, -50)},
-	["md_nightforce_nxs"] = {[1] = Vector (-5, 0, 0.5), [2] = Vector(0, 0, -50)}
+	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
+	["doi_atow_zf4"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0, 0, -45)},
+	["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
 	}
 
 	SWEP.AttachmentModelsVM = { 

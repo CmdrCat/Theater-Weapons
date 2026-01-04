@@ -28,8 +28,8 @@ if CLIENT then
 	SWEP.WMPos = Vector(0, -0.5, 0.5)
 	SWEP.WMAng = Vector(0, 0, 180)
 	
-	SWEP.IronsightPos = Vector(-3, 5, -0.04)
-	SWEP.IronsightAng = Vector(0,0,-30)
+	SWEP.IronsightPos = Vector(-2.75, 1.5, 0.5)
+	SWEP.IronsightAng = Vector(0,0,-45)
 
 	SWEP.BaseArm = "Right_L_Arm"
 	SWEP.BaseArmBoneOffset = Vector(-500, 0, 0)

@@ -19,12 +19,13 @@ end
 function att:attachFunc()
 	self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.none)
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.short)
+	self.PrintName = "MCX Rattler"
 end
 
 function att:detachFunc()
 	self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.regular)
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.med)
-
+	self.PrintName = "MCX Virtus"
 end
 
 

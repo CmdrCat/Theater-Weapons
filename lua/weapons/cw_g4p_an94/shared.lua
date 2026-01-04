@@ -103,23 +103,23 @@ if CLIENT then
 	SWEP.LaserAngAdjust = Angle(0, 0, 0) 
 
 	SWEP.BackupSights = {
-	["md_rmr"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["xrkonpoint"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["md_reflex"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["md_cmore"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["md_trijicon"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["md_kobra"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["md_microt1"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["too_reflex_romeo4t"] = {[1] = Vector(-3, 3, 0.5), [2] = Vector(0,0,-30)},
-	["md_aimpoint"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["too_reflex_exps"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["corioenforcer"] = {[1] = Vector(-3, 3, 0.5), [2] = Vector(0,0,-30)},
-	["md_schmidt_shortdot"] = {[1] = Vector(-3, 7, 0.5), [2] = Vector(0,0,-30)},
+	["md_rmr"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
+	["xrkonpoint"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
+	["md_reflex"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
+	["md_cmore"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
+	["md_trijicon"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
+	["md_kobra"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
+	["md_microt1"] = {[1] = Vector(-3.75, 3.5, 1), [2] = Vector(0,0,-45)},
+	["too_reflex_romeo4t"] = {[1] = Vector(-3.75, -0.5, 1), [2] = Vector(0,0,-45)},
+	["md_aimpoint"] = {[1] = Vector(-3.75, 1.5, 1), [2] = Vector(0,0,-45)},
+	["too_reflex_exps"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
+	["corioenforcer"] = {[1] = Vector(-3.75, -0.5, 1), [2] = Vector(0,0,-45)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-3.75, 3, 1), [2] = Vector(0,0,-45)},
 	["md_elcan"] = {[1] = Vector(-1.798,0,-1.515), [2] = Vector(-0.1, -0.101, 0)},
 	["md_acog_fixed"] = {[1] = Vector(-1.787,0,-1.601), [2] = Vector(-0.05, 0, 0)},
-	["md_uecw_csgo_acog"] = {[1] = Vector(-3, 5, 0.5), [2] = Vector(0,0,-30)},
-	["md_pso1"] = {[1] = Vector(-3, 7, 0.5), [2] = Vector(0,0,-30)},
-	["md_nightforce_nxs"] = {[1] = Vector(-3, 7, 0.5), [2] = Vector(0,0,-30)}
+	["md_uecw_csgo_acog"] = {[1] = Vector(-3.75, 3, 1), [2] = Vector(0,0,-45)},
+	["md_pso1"] = {[1] = Vector(-3.75, 3, 1), [2] = Vector(0,0,-45)},
+	["md_nightforce_nxs"] = {[1] = Vector(-3.75, 3, 1), [2] = Vector(0,0,-45)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}

@@ -76,9 +76,9 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.0175 --  0.024
 
 	SWEP.BackupSights = {
-		["md_reflex"] = {[1] = Vector(-5, -2, 0), [2] = Vector(0,0,-50)},
+		["md_reflex"] = {[1] = Vector(-4, -2, 1), [2] = Vector(0,0,-45)},
 		["doi_atow_lymanm82"] = {[1] = Vector(-2.887, -1.7, 1.2955), [2] = Vector(0,0,0)},
-		["md_nightforce_nxs"] = {[1] = Vector(-5, -2, 0), [2] = Vector(0,0,-50)},
+		["md_nightforce_nxs"] = {[1] = Vector(-4, -1, 1), [2] = Vector(0,0,-45)},
 	}
 	
 	SWEP.AttachmentModelsVM = {
