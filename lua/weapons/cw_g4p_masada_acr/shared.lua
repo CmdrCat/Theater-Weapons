@@ -116,9 +116,9 @@ if CLIENT then
 
 	SWEP.LaserPosAdjust = Vector(-1, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
-
-	SWEP.IronsightPos = Vector(-3, 5, -0.04)
-	SWEP.IronsightAng = Vector(0,0,-30)
+	
+	SWEP.IronsightPos = Vector(-2.75, 1.5, 0)
+	SWEP.IronsightAng = Vector(0, 0,- 45)
 	
 	SWEP.FoldSightPos = Vector(-2.208, -4.3, 0.143)
 	SWEP.FoldSightAng = Vector(0.605, 0, -0.217)
@@ -184,23 +184,23 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.BackupSights = {
-	["md_rmr"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["xrkonpoint"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["md_reflex"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["md_cmore"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["md_trijicon"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["md_microt1"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["too_reflex_romeo4t"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["md_aimpoint"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["too_reflex_exps"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["corioenforcer"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
-	["md_schmidt_shortdot"] = {[1] = Vector(-4.5, 5, -0.04), [2] = Vector(0,0,-60)},
+	["md_rmr"] = {[1] = Vector(-3, 1.5, 0.5), [2] = Vector(0,0,-45)},
+	["xrkonpoint"] = {[1] = Vector(-3, 1.5, 0.5), [2] = Vector(0,0,-45)},
+	["md_reflex"] = {[1] = Vector(-3, 1.5, 0.5), [2] = Vector(0,0,-45)},
+	["md_cmore"] = {[1] = Vector(-3, 1.5, 0.5), [2] = Vector(0,0,-45)},
+	["md_trijicon"] = {[1] = Vector(-3, 1.5, 0.5), [2] = Vector(0,0,-45)},
+	["md_microt1"] = {[1] = Vector(-3, 3.5, 0.5), [2] = Vector(0,0,-45)},
+	["too_reflex_romeo4t"] = {[1] = Vector(-3, 0.25, 0.5), [2] = Vector(0,0,-45)},
+	["md_aimpoint"] = {[1] = Vector(-3, 2.25, 0.5), [2] = Vector(0,0,-45)},
+	["too_reflex_exps"] = {[1] = Vector(-3, 1.5, 0.5), [2] = Vector(0,0,-45)},
+	["corioenforcer"] = {[1] = Vector(-3, 0.25, 0.5), [2] = Vector(0,0,-45)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-3.25, 3.75, 0.5), [2] = Vector(0,0,-60)},
 	["md_elcan"] = {[1] = Vector(-1.63, 0, -0.903), [2] = Vector(-0.1, -0.2, 0)},
 	["md_acog"] = {[1] = Vector(-1.635, 5, -1.5), [2] = Vector(-0.05, 0.01, 0)},
-	["md_uecw_csgo_acog"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)},
+	["md_uecw_csgo_acog"] = {[1] = Vector(-3, 3.25, 0.5), [2] = Vector(0,0,-45)},
 	["md_uecw_csgo_556"] = {[1] = Vector(-1.667, 0, -0.88), [2] = Vector(0.75, 0, 0)},
-	["md_nightforce_nxs"] = {[1] = Vector(-4.5, 5, -0.04), [2] = Vector(0,0,-60)},
-	["md_ballistic"] = {[1] = Vector(-3, 5, -0.04), [2] = Vector(0,0,-30)}
+	["md_nightforce_nxs"] = {[1] = Vector(-3.25, 3.75, 0.5), [2] = Vector(0,0,-60)},
+	["md_ballistic"] = {[1] = Vector(-3, 3.25, 0.5), [2] = Vector(0,0,-45)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
