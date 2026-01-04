@@ -126,7 +126,7 @@ if CLIENT then
 	
 	SWEP.AttachmentModelsVM = {
 
-        ["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.08, -2.8, 5.5), angle = Angle(-90, 90, 0), size = Vector(0.75, 0.75, 0.75)},
+        ["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.08, -2.8, 9), angle = Angle(-90, 90, 0), size = Vector(0.75, 0.75, 0.75)},
 		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "weapon", rel = "", pos = Vector(0, -3, -0.25), angle = Angle(90, -90, 0), size = Vector(1, 1, 1)},
 		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "weapon", rel = "", pos = Vector(0.105, -2.484, 0.939), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	    ["ftactiger_s"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(0,-0.2, 6.407), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -221,20 +221,21 @@ SWEP.AttachmentPosDependency = {
 	["hard20"] = {["bruenechelon"] = Vector(0, -1.45, 23),["bruenbm20"] = Vector(0, -1.45, 15), },
 	["md_saker"] = {["bruenechelon"] = Vector(0, 1.536, 0), ["bruenbm20"] = Vector(0, 1.536, -7.5)},
 	["ftacgrimline"] = {["bruenbm20"] = Vector(-0.036, -2.893, 5.8), ["bruenechelon"] = Vector(-0.036, -2.893, 12.8)},
+	["md_anpeq15"] = {["bruenbm20"] =Vector(-0.08, -2.8, 5.5), ["bruenechelon"] = Vector(-0.08, -2.8, 12.5)},
 	
 }
 
 SWEP.Attachments = {
 
 	[1] = {header = "Optic", offset = {1200 , -350},  atts = {"md_microt1","xrkonpoint", "too_reflex_romeo4t","md_aimpoint","szbattleoptic","corioenforcer", "cronenzerop", "md_thermal"}},
-	[6] = {header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline","md_anpeq15"}, exclusions = {shroudhg = true}},
-	[2] = {header = "Muzzle", offset = {-400 , -300},  atts = {"md_saker","hard20"}},
+	[6] = {header = "Tac - Top", offset = {320 , -350},  atts = {"ftacgrimline","md_anpeq15"}, exclusions = {shroudhg = true}},
+	[2] = {header = "Muzzle", offset = {-600 , -350},  atts = {"md_saker","hard20"}},
 	[4] = {header = "Bottom Rail Long", offset = {-600 , 150},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip"}, exclusions = {bruenbm20 = true}},
 	[5] = {header = "Bottom Rail Short", offset = {-600 , 150},  atts = {"bruentiltgrip_s", "ftactiger_s"}, dependencies = {bruenbm20 = true}},
-	[9] = {header = "Front Sights", offset = {300 , 550},  atts = {"nofs"}},
+	[9] = {header = "Front Sights", offset = {300 , 650},  atts = {"nofs"}},
 	[3] = {header = "Handguard", offset = {-600 , 650},  atts = {"bruenechelon", "bruenbm20"}},
-	[7] = {header = "Magazine", offset = {1200, 700},  atts = {"md_uecw_emag"}},
-	[8] = {header = "Conversion", offset = {1950, 500},  atts = {"r_mwii_300blk"}},
+	[7] = {header = "Magazine", offset = {1200, 650},  atts = {"md_uecw_emag"}},
+	[8] = {header = "Conversion", offset = {1950, 650},  atts = {"r_mwii_300blk"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }
