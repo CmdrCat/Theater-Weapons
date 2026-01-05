@@ -164,6 +164,9 @@ SWEP.BarrelBGs = {main = 3 , regular = 0 , none = 1}
 SWEP.StockBGs = {main = 2 , regular = 0 , none = 1}
 SWEP.FrontBGs = {main = 6 , fs = 0 , none = 3}
 
+SWEP.AttachmentExclusions = {["am_atow_lowvel"] = {"md_csgo_silencer_rifle"}
+}
+
 SWEP.Attachments = {
 	{header = "Optic", offset = {950 , -600},  atts = {"xrkonpoint", "md_microt1", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs"}},
 	{header = "Muzzle", offset = {-450 , -400},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}, dependencies = {saphoenix = true}},
