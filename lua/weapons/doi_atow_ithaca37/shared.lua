@@ -24,7 +24,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = false
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr12gbuck"
@@ -177,7 +177,7 @@ SWEP.ClumpSpread = 0.025
 SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.85
 SWEP.Shots = 9
-SWEP.Damage = 12
+SWEP.Damage = 16
 SWEP.DeployTime = .475
 SWEP.HolsterTime = .6
 
@@ -197,7 +197,7 @@ SWEP.ReloadFinishWait = 1
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
-    self.EffectiveRange = 15 * 39.37
+    self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .6
 
 	self.CrosshairParts = {left = false, right = false, upper = false, lower = false}

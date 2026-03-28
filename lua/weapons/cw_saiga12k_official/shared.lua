@@ -12,7 +12,7 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/saiga12")
 	killicon.Add("cw_saiga12k_official", "vgui/killicons/saiga12", Color(255, 120, 40, 0))
 	
-	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0.5
@@ -225,7 +225,7 @@ SWEP.ClumpSpread = 0.025
 SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.3
 SWEP.Shots = 12
-SWEP.Damage = 9
+SWEP.Damage = 10
 SWEP.DeployTime = 0.8
 SWEP.RecoilToSpread = 1.6 -- should actually be called SpreadToRecoil, but whatever
 SWEP.NearWallDistance = 30
@@ -239,7 +239,7 @@ SWEP.ReloadHalt_Empty = 4
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 15 * 39.37
+self.EffectiveRange = 25 * 39.37
 self.DamageFallOff = .6
 self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
 self.HipSpread = 0

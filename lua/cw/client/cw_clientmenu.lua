@@ -167,8 +167,8 @@ local function CW2_AdminPanel(panel)
 end
 
 local function CW2_PopulateToolMenu()
-	spawnmenu.AddToolMenuOption("Utilities", "CW 2.0 SWEPs", "CW 2.0 Client", "Client", "", "", CW2_ClientsidePanel)
-	spawnmenu.AddToolMenuOption("Utilities", "CW 2.0 SWEPs", "CW 2.0 Admin", "Admin", "", "", CW2_AdminPanel)
+	spawnmenu.AddToolMenuOption("Utilities", "TCW SWEPs", "TCW Client", "Client", "", "", CW2_ClientsidePanel)
+	spawnmenu.AddToolMenuOption("Utilities", "TCW SWEPs", "TCW Admin", "Admin", "", "", CW2_AdminPanel)
 end
 
 hook.Add("PopulateToolMenu", "CW2_PopulateToolMenu", CW2_PopulateToolMenu)

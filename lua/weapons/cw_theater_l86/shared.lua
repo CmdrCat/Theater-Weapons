@@ -202,7 +202,7 @@ SWEP.FireSoundSuppressed = "CW_TOO_L86_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.13
-SWEP.AimSpread = 0.003
+SWEP.AimSpread = 0.0125
 SWEP.VelocitySensitivity = 1.35
 SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002

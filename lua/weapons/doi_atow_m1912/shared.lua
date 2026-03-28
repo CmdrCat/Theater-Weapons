@@ -21,7 +21,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
 	
-	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.Shell = "khr12gbuck"
@@ -159,7 +159,7 @@ SWEP.ClumpSpread = 0.025
 SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.75
 SWEP.Shots = 9
-SWEP.Damage = 11
+SWEP.Damage = 15
 SWEP.DeployTime = .425
 SWEP.HolsterTime = .6
 
@@ -197,7 +197,7 @@ self.ShellDelay = (self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDe
 	--self.ReloadStartTime = 0.5
 	--end
 
-	self.EffectiveRange = 15 * 39.37
+	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = 0.6
 
 	self.CrosshairParts = {left = false, right = false, upper = false, lower = false}

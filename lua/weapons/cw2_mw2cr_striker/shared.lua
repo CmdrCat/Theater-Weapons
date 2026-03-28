@@ -192,7 +192,7 @@ SWEP.ShotgunReloadState = 0
 SWEP.HipSpread = 0
 SWEP.AimSpread = 0
 
-SWEP.ClumpSpread = 0.06
+SWEP.ClumpSpread = 0.03
 
 SWEP.VelocitySensitivity = 1
 SWEP.MaxSpreadInc = 0.1
@@ -241,8 +241,7 @@ SWEP.PenMod = 0.1
 
 --Damage
 SWEP.Shots = 12
-SWEP.Damage = 9
-SWEP.Damage_Orig = SWEP.Damage
+SWEP.Damage = 10
 SWEP.PushForce = 5
 
 --Shotgun Stuff
@@ -253,10 +252,8 @@ SWEP.ReloadStartTime = 0.73
 SWEP.InsertShellTime = 0.9
 SWEP.ReloadFinishWait = 0.43
 
-SWEP.EffectiveRange = 15
-SWEP.EffectiveRange_Orig = SWEP.EffectiveRange
-SWEP.DamageFallOff = 0.6
-SWEP.DamageFallOff_Orig = SWEP.DamageFallOff
+SWEP.EffectiveRange_Orig = 25 * 39.37
+SWEP.DamageFallOff_Orig = 0.6
 
 SWEP.SnapToIdlePostReload = false
 
@@ -321,12 +318,14 @@ SWEP.FireSound = "MW2CR_striker_FIRE"
 SWEP.FireSoundSuppressed = "MW2CR_striker_FIRE_SUPPRESSED"
 
 function SWEP:IndividualThink()
+	self.EffectiveRange = 25 * 39.37
+	self.DamageFallOff = .6
     self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
     self.HipSpread = 0
 
     if (self.ActiveAttachments.am_slugrounds) then
         self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
-        self.HipSpread = 2
+        self.HipSpread = 0.101
 	end
 
 local attachment = self.ActiveAttachments

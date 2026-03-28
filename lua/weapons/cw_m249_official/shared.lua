@@ -189,7 +189,7 @@ SWEP.FireSoundSuppressed = "CW_M249_OFFICIAL_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.14
-SWEP.AimSpread = 0.003
+SWEP.AimSpread = 0.015
 SWEP.VelocitySensitivity = 1.5
 SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002

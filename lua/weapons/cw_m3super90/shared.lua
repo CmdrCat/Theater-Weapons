@@ -12,7 +12,7 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/community/icon_cac_weapon_sh_t9fullauto")
 	killicon.Add("mg_sh_t9fullauto", "vgui/killicons/m3", Color(255, 120, 40, 0))
 	
-	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 
 	SWEP.MuzzleEffect = "muzzleflash_m3"
@@ -175,7 +175,7 @@ SWEP.Chamberable = true
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 15 * 39.37
+self.EffectiveRange = 25 * 39.37
 self.DamageFallOff = .6
 self.HipSpread = 0
 self.CrosshairParts = {left = false, right = false, upper = false, lower = false}

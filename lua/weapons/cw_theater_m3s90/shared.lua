@@ -12,7 +12,7 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("vgui/m3")
 	killicon.Add("cw_theater_m3s90", "vgui/killicons/m3", Color(255, 120, 40, 0))
 	
-	SWEP.EffectiveRange_Orig = 15 * 39.37
+	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
@@ -187,7 +187,7 @@ SWEP.ShotgunReload = true
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0
 clip = self:Clip1()
-self.EffectiveRange = 15 * 39.37
+self.EffectiveRange = 25 * 39.37
 self.DamageFallOff = .6
 self.HipSpread = 0
 self.CrosshairParts = {left = false, right = false, upper = false, lower = false}

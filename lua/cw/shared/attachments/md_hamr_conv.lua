@@ -8,7 +8,8 @@ att.statModifiers = {DamageMult = -2 / 21,
 	FireDelayMult = -1 / 26,
 	RecoilMult = -0.6,
 	HipSpreadMult = 0.04,
-	ReloadSpeedMult = -0.2}
+	ReloadSpeedMult = -0.2,
+	AimSpreadMult = 3.17}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
