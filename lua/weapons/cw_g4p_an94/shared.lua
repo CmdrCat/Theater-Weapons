@@ -33,6 +33,9 @@ if CLIENT then
 	SWEP.M203OffsetCycle_Reload_Empty = 0.73
 	SWEP.M203OffsetCycle_Draw = 0
 	
+--	SWEP.CustomizePos = Vector(-20, -9.981, 1.175)
+--	SWEP.CustomizeAng = Vector(27.256, -90, -29.239)
+
 	SWEP.IronsightPos = Vector(-1.8, -1.497, 0.8)
 	SWEP.IronsightAng = Vector(-0.828, 0.14, 0)
 

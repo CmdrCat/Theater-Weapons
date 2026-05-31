@@ -7,6 +7,9 @@ if CLIENT then
 	SWEP.PrintName = "AKM"
 	SWEP.CSMuzzleFlashes = true
 	
+--	SWEP.CustomizePos = Vector(-20, -13.981, 1.175)
+--	SWEP.CustomizeAng = Vector(27.256, -90, -29.239)
+
 	SWEP.IronsightPos = Vector(-3.846, -3.109, 1.1)
 	SWEP.IronsightAng = Vector(0.577, 0.079, 0)
 
@@ -101,18 +104,18 @@ if CLIENT then
 		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "body", rel = "", pos = Vector(-0.031, 21.5, -0.635), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "body", rel = "", pos = Vector(-0.031, 23.5, 0.25), angle = Angle(0, -90, 90), size = Vector(1, 1, 1)},
 		--Optics
-		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "body", pos = Vector(-0.302, -1.737, -2.55), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
-		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "body", rel = "", pos = Vector(-0.01, 2.64, 2.069), angle = Angle(0, -90, 0), size = Vector(0.72, 0.72, 0.72), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "body", rel = "", pos = Vector(-0.02, 5.32, 2.2), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", bone = "body", pos = Vector(-0.302, -1.737, -2.55), angle = Angle(0, -90, 0), adjustment = {min = -2.22, max = -1.45, axis = "y", inverseOffsetCalc = true}, size = Vector(0.8, 0.8, 0.8)},
+		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "body", rel = "", pos = Vector(-0.01, 2.64, 2.069), angle = Angle(0, -90, 0), adjustment = {min = 2.25, max = 2.86, axis = "y", inverseOffsetCalc = true}, size = Vector(0.72, 0.72, 0.72), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "body", rel = "", pos = Vector(-0.02, 4.76, 2.2), angle = Angle(0, 0, 0), adjustment = {min = 4.54, max = 4.76, axis = "y", inverseOffsetCalc = true}, size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_trijicon"] = { type = "Model", model = "models/att_trijicon.mdl", bone = "body", rel = "", pos = Vector(0, 4.537, -0.219), angle = Angle(0, 0, 0), size = Vector(1.899, 1.899, 1.899)},
 		["md_kobra"] = { type = "Model", model = "models/cw2/attachments/kobra.mdl", bone = "body", rel = "", pos = Vector(0.46, -1.23, -1.85), angle = Angle(0, 180, 0), size = Vector(0.59, 0.59, 0.59), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "body", rel = "", pos = Vector(0, 2.501, 2.126), angle = Angle(0, 180, 0), size = Vector(0.34, 0.34, 0.34)},
-		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "body", rel = "", pos = Vector(0, 2.6, 1.983), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7)},
-		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body", rel = "", pos = Vector(-0.232, -2.754, -3.096), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "body", rel = "", pos = Vector(0, 3.37, 1.99), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "body", rel = "", pos = Vector(0.07, 2.791, 1.791), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "body", rel = "", pos = Vector(-0.292, -1.991, -2.57), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "body", rel = "", pos = Vector(-0.297, -2.053, -2.57), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "body", rel = "", pos = Vector(0, 2.501, 2.126), angle = Angle(0, 180, 0), adjustment = {min = 2.1, max = 3, axis = "y", inverseOffsetCalc = true}, size = Vector(0.34, 0.34, 0.34)},
+		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "body", rel = "", pos = Vector(0, 2.6, 1.983), angle = Angle(0, -90, 0), adjustment = {min = 2.23, max = 2.75, axis = "y", inverseOffsetCalc = true}, size = Vector(0.7, 0.7, 0.7)},
+		["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body", rel = "", pos = Vector(-0.232, -3.06, -3.096), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "body", rel = "", pos = Vector(0, 3, 1.99), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "body", rel = "", pos = Vector(0.07, 2.791, 1.791), angle = Angle(0, -90, 0), adjustment = {min = 2.5, max = 2.791, axis = "y", inverseOffsetCalc = true}, size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "body", rel = "", pos = Vector(-0.292, -2.12, -2.57), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "body", rel = "", pos = Vector(-0.297, -2.15, -2.57), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", bone = "body", pos = Vector(-0.165, -5.090, -1.342), angle = Angle(0, 180, 0), size = Vector(0.85, 0.85, 0.85)},
 		--Underbarrels
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "body", rel = "", pos = Vector(0, 7.328, -0.41), angle = Angle(0, -90, 0), size = Vector(0.932, 0.932, 0.932), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

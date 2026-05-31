@@ -96,9 +96,9 @@ if CLIENT then
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "scar", pos = Vector(0, 1.58, -0.78), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_m203"] = {model = "models/cw2/attachments/m203.mdl", bone = "scar", pos = Vector(2.316, -9.063, 3.388), angle = Angle(1.07, -90, 0), size = Vector(1, 1, 1), animated = true},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "scar", pos = Vector(-0.364, -4.625, -2.806), angle = Angle(0, 0, 0), adjustment = {min = -4.625, max = -2.3, axis = "y", inverseOffsetCalc = true}, size = Vector(1, 1, 1)},
-		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "scar", pos = Vector(-0.281, -4.494, -1.621), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
+		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "scar", pos = Vector(-0.281, -4.494, -1.621), angle = Angle(0, -90, 0), adjustment = {min = -4.9, max = -2.3, axis = "y", inverseOffsetCalc = true}, size = Vector(0.8, 0.8, 0.8)},
 		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "scar", pos = Vector(0, 9.411, -0.064), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699) },
-		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "scar", pos = Vector(-0.102, 2.661, 4.099), angle = Angle(0, -90, 0), size = Vector(1.1, 1.1, 1.1)},
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "scar", pos = Vector(-0.102, 2.661, 4.099), angle = Angle(0, -90, 0), adjustment = {min = -0.33, max = 8.1, axis = "y", inverseOffsetCalc = true}, size = Vector(1.1, 1.1, 1.1)},
 		["md_hamr_conv"] = { type = "Model", model = "models/wystan/cmag.mdl", bone = "mag", rel = "", pos = Vector(-0.181, -3.78, 1.623), angle = Angle(1.2, -90, 0), size = Vector(0.68, 0.68, 0.68), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
 
