@@ -3,7 +3,7 @@ att.name = "md_nightforce_nxs"
 att.displayName = "Nightforce NXS"
 att.displayNameShort = "NXS"
 att.aimPos = {"NXSPos", "NXSAng"}
-att.FOVModifier = 15
+att.FOVModifier = 15 --Original 15, 81.5 for ACR 2D scope
 att.isSight = true
 att.SpeedDec = 3
 
@@ -21,7 +21,7 @@ if CLIENT then
 	
 	att.zoomTextures = {{tex = surface.GetTextureID("sprites/scope_leo"), offset = {0, 1}}}
 	
-	att.telescopicsFOVRange = {
+	att.telescopicsFOVRange = { --Original 10, 7.5, 5, and 5, 5, 5 for ACR 2D scope
 		10,
 		7.5,
 		5
@@ -134,7 +134,7 @@ end
 function att:attachFunc()
 	self.OverrideAimMouseSens = 0.35
 	self.SimpleTelescopicsFOV = 75
-	self.AimViewModelFOV = 50
+	self.AimViewModelFOV = 50 -- Original 50, 116.5 for ACR 2D scope
 	self.BlurOnAim = true
 	self.ZoomTextures = att.zoomTextures
 	self.AimBreathingEnabled = false

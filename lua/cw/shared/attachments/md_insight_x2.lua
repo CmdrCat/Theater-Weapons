@@ -6,6 +6,8 @@ att.laserRange = 4096
 att.laserBeamRange = 75
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
 
+att.LaserPosAdjust = Vector(0, 0, -0.85)
+
 att.statModifiers = {VelocitySensitivityMult = -0.2,
 HipSpreadMult = -0.2,
 DrawSpeedMult = -0.05,
@@ -13,8 +15,8 @@ MaxSpreadIncMult = -0.25}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/insight_x2")
-	local beam = Material("cw2/reticles/aim_reticule")
-	local laserDot = Material("cw2/reticles/aim_reticule")
+	local beam = Material("effects/laser1")
+	local laserDot = Material("sprites/glow04_noz")
 	
 	att.reticle = "cw2/reticles/aim_reticule"
 	local td = {}
@@ -42,13 +44,17 @@ if CLIENT then
 		
 		if not self.freeAimOn then
 			if self.dt.State == CW_AIMING then
-				dir.p = self.Owner:EyeAngles().p
+				local vp = self.Owner:GetViewPunchAngles()
+				
+				dir.p = self.Owner:EyeAngles().p + vp.p
 			end
 		end
 		
 		local fw = dir:Forward()
-		local laserPos = pos + ang:Right() * self.LaserPosAdjust.x + ang:Forward() * self.LaserPosAdjust.y + ang:Up() * self.LaserPosAdjust.z
-		
+
+		local lpa = att.LaserPosAdjust or self.LaserPosAdjust or Vector(0, 0, 0)
+		local laserPos = pos + ang:Right() * lpa.x + ang:Forward() * lpa.y + ang:Up() * lpa.z
+
 		td.start = laserPos
 		td.endpos = td.start + fw * att.laserRange
 		td.filter = self.Owner
@@ -59,17 +65,18 @@ if CLIENT then
 			self.lastLaserPos = tr.HitPos
 		end
 		
-		local dist = math.Clamp(att.laserRange * tr.Fraction, 0, att.laserBeamRange)
+		local dist = att.laserRange * tr.Fraction
+		local uv = math.max(dist / 32, 1)
 		
 		if util.PointContents(tr.HitPos) != CONTENTS_SOLID and not self.NearWall then
 			local renderColor = self:getSightColor(att.name)
 			local laserHQ = GetConVarNumber("cw_laser_quality") > 1
 			
 			-- draw the beam
-			renderColor.a = 100
+			renderColor.a = 255
 			render.SetMaterial(beam)
 			
-			render.DrawBeam(laserPos + fw, laserPos + fw * dist, 0.1, 0, 0.99, renderColor)
+			render.DrawBeam(laserPos + fw, laserPos + fw * dist, 1, 1, 0, renderColor)
 			
 			if laserHQ then
 				renderColor.a = 50

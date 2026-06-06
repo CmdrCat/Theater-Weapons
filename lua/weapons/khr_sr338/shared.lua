@@ -17,7 +17,7 @@ if CLIENT then
 	SWEP.PosBasedMuz = true
 	SWEP.NoDistance = true
 	SWEP.CrosshairEnabled = true
-	SWEP.ShellScale = 0.77
+	SWEP.ShellScale = 0.75
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = -2, y = 0, z = 10}
 	SWEP.ForeGripOffsetCycle_Draw = 0
@@ -39,8 +39,6 @@ if CLIENT then
 	
 	SWEP.CSGOACOGPos = Vector(-3.0852, -2.5, 0.496)
 	SWEP.CSGOACOGAng = Vector(0, 0, 0)
-
-
 
 	SWEP.MicroT1Pos = Vector(-3.1, -2.5, 0.71)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
@@ -66,6 +64,8 @@ if CLIENT then
 
 	SWEP.CustomizationMenuScale = 0.024
 	SWEP.ViewModelMovementScale = 1
+
+	SWEP.MagBoneName = "MAG"
 	
 	SWEP.AttachmentModelsVM = {
 	["md_sight_front"] = { type = "Model", model = "models/bunneh/frontsight.mdl", bone = "RSASS", rel = "", pos = Vector(-0.274, -28.4, 0), angle = Angle(0, -90, 0), size = Vector(1.25, 1.25, 1.25), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -78,7 +78,9 @@ if CLIENT then
 	["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "RSASS", rel = "", pos = Vector(2.789, -2.5, -6.531), angle = Angle(0, 90, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "RSASS", rel = "", pos = Vector(2.2, -23.378, -4.901), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_saker222"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "RSASS", rel = "", pos = Vector(2.49, -12.4, -4.45), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "RSASS", rel = "", pos = Vector(2.589, -16.026, -1.481), angle = Angle(0, -90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "RSASS", rel = "", pos = Vector(2.589, -16.026, -1.481), angle = Angle(0, -90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	--Magazines
+	["md_sr338_rsass_conversion"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "MAG", rel = "", pos = Vector(2.480, -9, -5.35), angle = Angle(0, 90, 0), size = Vector(0.8301463413, 0.8301463413, 0.446666667), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
 
 	SWEP.BackupSights = {
@@ -129,7 +131,8 @@ SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -400},  atts = {"md_
 [2] = {header = "Muzzle", offset = {180, -400}, atts = {"md_saker222"}},
 [3] = {header = "Handguard", offset = {-650, 100}, atts = {"md_foregrip","md_bipod"}},
 [4] = {header = "Laser", offset = {-550, -350}, atts = {"md_anpeq15"}},
-["+reload"] = {header = "Ammo", offset = {-400, 500}, atts = {"am_magnum","am_matchgrade"}}}
+[5] = {header = "Conversion", offset = {400, 450}, atts = {"md_sr338_rsass_conversion"}},
+["+reload"] = {header = "Ammo", offset = {-550, 500}, atts = {"am_magnum","am_matchgrade"}}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},
 	reload = "reload",
@@ -176,6 +179,9 @@ SWEP.Primary.DefaultClip	= 40
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".338 Lapua"
 
+SWEP.Secondary.DefaultClip	= 70
+SWEP.Secondary.Ammo			= "7.62x51MM"
+
 SWEP.Chamberable = false
 SWEP.FireDelay = 60/300
 SWEP.FireSound = "SR338_FIRE"
@@ -207,6 +213,9 @@ function SWEP:IndividualThink()
 	end
 	if self.ActiveAttachments.am_matchgrade then
 		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.md_sr338_rsass_conversion then
+		self.EffectiveRange = ((self.EffectiveRange - 50 * 39.37))
 	end
 end
 

@@ -6,16 +6,19 @@ att.laserRange = 4096
 att.laserBeamRange = 75
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
 
+att.LaserPosAdjust = Vector(0.75, 0, 0)
+
 att.statModifiers = {VelocitySensitivityMult = -0.2,
 HipSpreadMult = -0.2,
 DrawSpeedMult = -0.1,
-MaxSpreadIncMult = -0.25}
+MaxSpreadIncMult = -0.25,
+ReloadSpeedMult = 0.2}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_ftacgrimline")
 	att.description = {}
-	local beam = Material("cw2/reticles/aim_reticule")
-	local laserDot = Material("cw2/reticles/aim_reticule")
+	local beam = Material("sprites/physbeam")
+	local laserDot = Material("sprites/glow04_noz")
 	
 	att.reticle = "cw2/reticles/aim_reticule"
 	local td = {}
@@ -43,13 +46,16 @@ if CLIENT then
 		
 		if not self.freeAimOn then
 			if self.dt.State == CW_AIMING then
-				dir.p = self.Owner:EyeAngles().p
+				local vp = self.Owner:GetViewPunchAngles()
+				dir.p = self.Owner:EyeAngles().p + vp.p
 			end
 		end
 		
 		local fw = dir:Forward()
-		local laserPos = pos + ang:Right() * self.GrimlinePosAdjust.x + ang:Forward() * self.GrimlinePosAdjust.y + ang:Up() * self.GrimlinePosAdjust.z
-		
+
+		local lpa = att.LaserPosAdjust or self.LaserPosAdjust or Vector(0, 0, 0)
+		local laserPos = pos + ang:Right() * lpa.x + ang:Forward() * lpa.y + ang:Up() * lpa.z
+
 		td.start = laserPos
 		td.endpos = td.start + fw * att.laserRange
 		td.filter = self.Owner
@@ -61,23 +67,26 @@ if CLIENT then
 		end
 		
 		local dist = math.Clamp(att.laserRange * tr.Fraction, 0, att.laserBeamRange)
+		local uv = math.max(dist / 32, 1)
 		
 		if util.PointContents(tr.HitPos) != CONTENTS_SOLID and not self.NearWall then
 			local renderColor = self:getSightColor(att.name)
 			local laserHQ = GetConVarNumber("cw_laser_quality") > 1
 			
 			-- draw the beam
-			renderColor.a = 100
+			render.SetBlend(1)
+			renderColor.a = 255
 			render.SetMaterial(beam)
 			
-			render.DrawBeam(laserPos + fw, laserPos + fw * dist, 0.1, 0, 0.99, renderColor)
+			render.DrawBeam(laserPos + fw, tr.HitPos, 1, 1, 5000, renderColor) --5000 bc material cutoff stuff
+			render.DrawBeam(laserPos + fw, tr.HitPos, 1, 0, uv, renderColor)
 			
 			if laserHQ then
-				renderColor.a = 50
-				render.DrawBeam(laserPos + fw, laserPos + fw * dist, 0.6, 0, 0.99, renderColor)
+				renderColor.a = 255
+				render.DrawBeam(laserPos + fw, tr.HitPos, 1, 0, uv, renderColor)
 				
-				renderColor.a = 25
-				render.DrawBeam(laserPos + fw, laserPos + fw * dist, 1, 0, 0.99, renderColor)
+				renderColor.a = 255
+				render.DrawBeam(laserPos + fw, tr.HitPos, 1, 0, uv, renderColor)
 			end
 			
 			-- draw the dot if the model is not out of world bounds

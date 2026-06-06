@@ -1888,7 +1888,7 @@ function SWEP:PrimaryAttack()
 			self:fireAnimFunc()
 		else
 			if self.dt.State == CW_AIMING then
-				if self.ADSFireAnim then
+				if not self.ADSFireAnim then
 					self:playFireAnim()
 				end
 			else
