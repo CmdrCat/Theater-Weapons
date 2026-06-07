@@ -35,9 +35,15 @@ if CLIENT then
 	SWEP.M203OffsetCycle_Reload = 0.65
 	SWEP.M203OffsetCycle_Reload_Empty = 0.73
 	SWEP.M203OffsetCycle_Draw = 0
-	
+
+	SWEP.CustomizePos_Orig = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng_Orig = Vector(17.009, 29.971, 16.669)
+
 --	SWEP.CustomizePos = Vector(-10.5, -5.8, 0.4)
 --	SWEP.CustomizeAng = Vector(27, -50, -30)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -5, -10)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
 	SWEP.IronsightPos = Vector(-2.994, -1.448, 1.21)
 	SWEP.IronsightAng = Vector(0, 0, 0)
@@ -90,8 +96,17 @@ if CLIENT then
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
 	SWEP.M203CameraRotation = {p = -90, y = 0, r = -90}
 	
-	SWEP.BaseArm = "Bip01 L Clavicle"
+	SWEP.BaseArm = "v_weapon.Left_Shoulder"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverridePos = {
+	["onehand"] = {
+		["v_weapon.Left_Shoulder"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }},
+	["akimbo"] = {
+		["v_weapon.Left_Shoulder"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -40), angle = Angle(0, 0, 0) }},
+	["nah"] = {
+		["v_weapon.Left_Shoulder"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
 	
 	SWEP.AttachmentModelsVM = {
 		["md_ballistic"] = { type = "Model", model = "models/bunneh/scope01.mdl", bone = "Front", rel = "", pos = Vector(-7.042, -1.65, 1.264), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -125,6 +140,7 @@ SWEP.Trivia = {text = "A precise, single-shot pistol popular with hunters.", x =
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -500},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_elcan", "md_aimpoint", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {md_frontsight = true, md_rearsight = true}},
 	[2] = {header = "Muzzle", offset = {-700, -500}, atts = {"md_saker", "md_csgo_silencer_rifle"}},
+	[3] = {header = "Technique", offset = {1230, 400}, atts = {"cw_akimbo"}},
 	["+reload"] = {header = "Ammo", offset = {800, -100}, atts = {"am_atow_lowvel", "am_atow_ap", "am_snakeshot"}}}
 	
 --SWEP.AttachmentDependencies = {} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
@@ -134,6 +150,17 @@ SWEP.Animations = {fire = "awm_fire",
 	reload = "awm_reload",
 	idle = "awm_idle",
 	draw = "awm_draw"}
+
+SWEP.Animations_Akimbo = {fire = "awm_fire",
+	fireDry = "awm_fire",
+	reload = "awm_reload",
+	idle = "awm_idle",
+	draw = "awm_draw",
+	fire_right = "awm_fire",
+	fireDry_right = "awm_fire",
+	reload_right = "awm_reload",
+	idle_right = "awm_idle",
+	draw_right = "awm_draw"}
 	
 SWEP.Sounds = {awm_reload = {[1] = {time = 0.5, sound = "CW_G2_OPEN"},
 	[2] = {time = 0.55, sound = "CW_G2_CLIPOUT"},
@@ -175,6 +202,9 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/v_cstm_g2.mdl"
 SWEP.WorldModel		= "models/weapons/w_snip_scout.mdl"
+
+SWEP.ViewModel_AkimboL = "models/weapons/v_cstm_g2.mdl"
+SWEP.ViewModel_AkimboR = "models/weapons/v_cstm_g2.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -223,6 +253,12 @@ if self.ActiveAttachments.am_atow_lowvel then
 end
 if self.ActiveAttachments.md_csgo_silencer_rifle then
 	self.EffectiveRange = ((self.EffectiveRange * 0.85))
+end
+if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(-0.5, 5, 0.5)
+	self.ViewModelOffsetAng = Angle(0, 0, -20)
+	self.ViewModelOffsetPos2 = Vector(0.5, 5, 0.5)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 20)
 end
 end
 

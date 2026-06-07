@@ -50,6 +50,15 @@ if CLIENT then
 	
 	SWEP.AlternativePos = Vector(-0.88, 1.325, -0.561)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
+
+	SWEP.CustomizePos_Orig = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng_Orig = Vector(17.009, 29.971, 16.669)
+
+	SWEP.CustomizePos = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng = Vector(17.009, 29.971, 16.669)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -5.511, -7.283)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
 	SWEP.MoveType = 1
 	
@@ -74,6 +83,8 @@ if CLIENT then
 	SWEP.ForegripOverridePos = {
     ["onehand"] = {
         ["l-upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -4), angle = Angle(0, 0, 0) }},
+	  ["akimbo"] = {
+        ["l-upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -10), angle = Angle(0, 0, 0) }},
     ["nah"] = {
         ["l-upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 	}
@@ -100,7 +111,7 @@ SWEP.Trivia = {text = "A Russian break-action revolver meant to be exported to f
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {400, -400}, atts = {"md_acog_fixed", "md_elcan", "md_docter", "md_thermal"}},
 	[2] = {header = "Muzzle", offset = {-700, -400}, atts = {"md_saker"}},
-	[3] = {header = "Technique", offset = {500, 200}, atts = {"doi_atow_onehand"}},
+	[3] = {header = "Technique", offset = {500, 200}, atts = {"doi_atow_onehand", "cw_akimbo"}},
 	["+reload"] = {header = "Ammo", offset = {-800, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"rex_fire1", "rex_fire2"},
@@ -109,7 +120,20 @@ SWEP.Animations = {fire = {"rex_fire1", "rex_fire2"},
 	reload_empty = "rex_reload",
 	idle = "rex_idle",
 	draw = "rex_deploy"}
-	
+
+SWEP.Animations_Akimbo = {fire = {"rex_fire1", "rex_fire2"},
+	fireDry = "rex_fire_empty",
+	reload = "rex_reload",
+	reload_empty = "rex_reload",
+	idle = "rex_idle",
+	draw = "rex_deploy",
+	fire_right = {"rex_fire1", "rex_fire2"},
+	fireDry_right = "rex_fire_empty",
+	reload_right = "rex_reload",
+	reload_empty_right = "rex_reload",
+	idle_right = "rex_idle",
+	draw_right = "rex_deploy"}
+
 SWEP.Sounds = {rex_reload = {[1] = {time = 0.45, sound = "CW_MP412_CYLINDEROPEN"},
 	[2] = {time = 1.05, sound = "CW_MP412_ROUNDSOUT"},
 	[3] = {time = 2.55, sound = "CW_MP412_ROUNDSIN"},
@@ -135,6 +159,9 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/v_pist_mp412.mdl"
 SWEP.WorldModel		= "models/weapons/w_357.mdl"
+
+SWEP.ViewModel_AkimboL = "models/weapons/v_pist_mp412.mdl"
+SWEP.ViewModel_AkimboR = "models/weapons/v_pist_mp412.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -188,6 +215,12 @@ end
 if self.ActiveAttachments.am_atow_heavy then
 	self.EffectiveRange = ((self.EffectiveRange * 1.1))
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(-0.5, 5, -0.5)
+	self.ViewModelOffsetAng = Angle(0, 0, -30)
+	self.ViewModelOffsetPos2 = Vector(0.5, 5, -0.5)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 30)
 end
 end
 

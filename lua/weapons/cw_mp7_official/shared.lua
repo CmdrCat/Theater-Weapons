@@ -53,6 +53,15 @@ if CLIENT then
 	
 	SWEP.AlternativePos = Vector(0, 1.325, -0.801)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
+
+	SWEP.CustomizePos_Orig = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng_Orig = Vector(17.009, 29.971, 16.669)
+
+	SWEP.CustomizePos = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng = Vector(17.009, 29.971, 16.669)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, 0, -7.5)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
 	SWEP.BackupSights = {
 		["md_microt1"] = {[1] = Vector(-3, 10, -1.2), [2] = Vector(0, 0, -30)},
@@ -74,6 +83,16 @@ if CLIENT then
 	SWEP.LaserAngAdjust = {p = 0, y = 180, r = 0}
 	
 	SWEP.CustomizationMenuScale = 0.015
+
+	SWEP.BaseArm = "L Clavicle"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverridePos = {
+	["akimbo"] = {
+        ["L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(0, -50, 0), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
 end
 
 SWEP.SuppressorBGs = {main = 1, suppressed = 0, unsuppressed = 1}
@@ -89,6 +108,7 @@ SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {1100, -400}, atts = {"md_microt1", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-200, -400}, atts = {"bg_mp7_unsuppressed"}},
 	[3] = {header = "Laser", offset = {-200, 0}, atts = {"md_anpeq15"}},
+	--[4] = {header = "Technique", offset = {-200, 0}, atts = {"cw_akimbo"}}, Something wrong with the one-handed thing
 	["+reload"] = {header = "Ammo", offset = {1100, 35}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 
@@ -98,6 +118,19 @@ SWEP.Animations = {
 	reload_empty = "base_reloadempty",
 	idle = "base_idle",
 	draw = "base_draw"
+}
+
+SWEP.Animations_Akimbo = {
+	fire = {"base_fire1", "base_fire2"},
+	reload = "base_reload",
+	reload_empty = "base_reloadempty",
+	idle = "base_idle",
+	draw = "base_draw",
+	fire_right = {"base_fire1", "base_fire2"},
+	reload_right = "base_reload",
+	reload_empty_right = "base_reloadempty",
+	idle_right = "base_idle",
+	draw_right = "base_draw"
 }
 	
 SWEP.Sounds = {
@@ -141,6 +174,9 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/smgs/mp7.mdl"
 SWEP.WorldModel		= "models/cw2/smgs/mp7_world.mdl"
+
+SWEP.ViewModel_AkimboL = "models/cw2/smgs/mp7.mdl"
+SWEP.ViewModel_AkimboR = "models/cw2/smgs/mp7.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -194,6 +230,12 @@ end
 if self.ActiveAttachments.am_atow_heavy then
 	self.EffectiveRange = ((self.EffectiveRange * 1.1))
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(-2, 0, -1)
+	self.ViewModelOffsetAng = Angle(0, 0, -40)
+	self.ViewModelOffsetPos2 = Vector(2, 0, -1)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 40)
 end
 end
 

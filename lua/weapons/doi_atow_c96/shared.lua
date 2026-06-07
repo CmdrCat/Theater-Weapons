@@ -52,9 +52,15 @@ if CLIENT then
 	
 	SWEP.Sprint2Pos = Vector(2.1053, -1.0526, -1.0526)
 	SWEP.Sprint2Ang = Vector(-15.1579, 26.5263, -22.7368)
-	
+
+	SWEP.CustomizePos_Orig = Vector(10, -6, 1)
+	SWEP.CustomizeAng_Orig = Vector(15, 50, 20)
+
 	SWEP.CustomizePos = Vector(10, -6, 1)
 	SWEP.CustomizeAng = Vector(15, 50, 20)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -5, -10)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 
 	SWEP.AlternativePos = Vector(-0.75, .25, -0.35)
 	SWEP.AlternativeAng = Vector(1.04, 0.0329, 0)
@@ -138,6 +144,24 @@ SWEP.ForegripOverridePos = {
 		["ValveBiped.Bip01_R_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.65, .0, .1), angle = Angle(0, 0, 0) },
 		["R Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, -.15, 0), angle = Angle(0, 0, 0) },
 	["L Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-7.333, 5.332, 23.333) }},
+
+	["akimbo"] = {
+	["L Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Finger21"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Finger12"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Finger22"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Finger11"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-2, 2, -40), angle = Angle(0, 0, 0) },
+	["R Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-12, -10, 0) },
+	["ValveBiped.Bip01_L_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.65, .0, .1), angle = Angle(0, 0, 0) },
+	["ValveBiped.Bip01_R_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.65, .0, .1), angle = Angle(0, 0, 0) },
+	["R Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, -.25, 0), angle = Angle(0, 0, 0) },
+	["R Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-15, 5, 0) }},
 	
 	["nah"] = {
 	["L Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
@@ -162,7 +186,7 @@ SWEP.Attachments = {[2] = {header = "Muzzle", offset = {-400, -550}, atts = {"do
 [3] = {header = "Barrel", offset = {-1100, -450}, atts = {"doi_atow_c96longbarrel"}},
 [1] = {header = "Optic", offset = {900, -600}, atts = {"doi_atow_zf4"}},
 [6] = {header = "Finish", offset = {150, -600}, atts = {"doi_atow_c96goldfinish"}},
-[5] = {header = "Accessory", offset = {1500, 200}, atts = {"doi_atow_c96stock","doi_atow_onehand"}},
+[5] = {header = "Accessory", offset = {1500, 200}, atts = {"doi_atow_c96stock","doi_atow_onehand", "cw_akimbo"}},
 [4] = {header = "Receiver", offset = {500, 300}, atts = {"doi_atow_c96carbineconv", "doi_atow_m2carbineconv", "doi_atow_heavybolt"}},
 ["+reload"] = {header = "Ammo", offset = {-1000, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -174,6 +198,24 @@ SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
 	reload_empty = "base_reload_empty_clip",
 	idle = "base_idle",
 	draw = "base_draw"}
+
+SWEP.Animations_Akimbo = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
+	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
+	fire_last = {"base_firelast"},
+	fire_last_aim = {"iron_firelast"},
+	reload = "base_reload_clip",
+	reload_empty = "base_reload_empty_clip",
+	idle = "base_idle",
+	draw = "base_draw",
+	fire_right = {"base_fire_1","base_fire_2","base_fire_3"},
+	fire_aim_right = {"iron_fire_1","iron_fire_2","iron_fire_3"},
+	fire_last_right = {"base_firelast"},
+	fire_last_aim_right = {"iron_firelast"},
+	reload_right = "base_reload_clip",
+	reload_empty_right = "base_reload_empty_clip",
+	idle_right = "base_idle",
+	draw_right = "base_draw"
+	}
 	
 SWEP.ReloadViewBobEnabled = false //
 
@@ -203,6 +245,9 @@ SWEP.ZoomAmount = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/c96.mdl"
 SWEP.WorldModel		= "models/khrcw2/doipack/w_c96.mdl"
+
+SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/c96.mdl"
+SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/c96.mdl"
 
 SWEP.DrawTraditionalWorldModel = false
 SWEP.WM = "models/khrcw2/doipack/w_c96.mdl"
@@ -311,6 +356,12 @@ end
 	if self.ActiveAttachments.doi_atow_c96longbarrel then
 	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .13))
+end
+	if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(-0.5, 6, 0)
+	self.ViewModelOffsetAng = Angle(0, 0, -30)
+	self.ViewModelOffsetPos2 = Vector(0.5, 6, 0)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 30)
 end
 end
 

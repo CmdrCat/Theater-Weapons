@@ -39,8 +39,14 @@ if CLIENT then
 	SWEP.SprintPos = Vector(0, 0, -2.639)
 	SWEP.SprintAng = Vector(-11.612, 19.459, -38.855)
 
+	SWEP.CustomizePos_Orig = Vector(1, -3, -0.611)
+	SWEP.CustomizeAng_Orig = Vector(1.194, 21.681, -8.62)
+
 	SWEP.CustomizePos = Vector(1, -3, -0.611)
 	SWEP.CustomizeAng = Vector(1.194, 21.681, -8.62)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -5, -10)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
 	SWEP.AlternativePos = Vector(-0.88, 1.325, -0.561)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
@@ -57,6 +63,8 @@ if CLIENT then
 	SWEP.ForegripOverridePos = {
     ["onehand"] = {
         ["ValveBiped.Bip01_L_UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, -7, 0), angle = Angle(0, 0, 0) }},
+	["akimbo"] = {
+        ["ValveBiped.Bip01_L_UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, -50, 0), angle = Angle(0, 0, 0) }},
     ["nah"] = {
         ["ValveBiped.Bip01_L_UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 	}
@@ -70,9 +78,9 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.839, 2.563), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }, 
-	["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.933, 1.935), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.933, 1.935), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.221, 1.919), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.933, 1.935), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "weapon", rel = "", pos = Vector(0, -1.933, 1.935), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.221, 1.919), angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "weapon", rel = "", pos = Vector(-0.415, 3.713, -3.882), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", rel = "", pos = Vector(0, 1.342, -8), angle = Angle(0, 0, -90), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
@@ -91,7 +99,7 @@ SWEP.Trivia = {text = "This iconic handgun fires the largest round of any magazi
 SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -400}, atts = {"md_microt1","too_reflex_mrs", "too_reflex_romeo4t","too_reflex_exps", "md_acog"}},
 [2] = {header = "Muzzle", offset = {-750, -400}, atts = {"md_saker"}},
 ["+use"] = {header = "Optic Type", offset = {-850, 40}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-[3] = {header = "Technique", offset = {-100, -400}, atts = {"doi_atow_onehand"}},
+[3] = {header = "Technique", offset = {-200, -400}, atts = {"doi_atow_onehand", "cw_akimbo"}},
 [4] = {header = "Conversion", offset = {-100, 200}, atts = {"too_thunderbird_conversion"}},
 ["+reload"] = {header = "Ammo", offset = {500, -15}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -113,6 +121,25 @@ SWEP.Animations = {
     reload_empty = "reload_empty",
     idle         = "idle",
     draw         = "draw"
+}
+
+SWEP.Animations_Akimbo = {
+    fire          = "fire",
+	fire_last     = "fire_empty",
+	fire_aim      = "fire_iron",
+	fire_last_aim = "fire_empty",
+    reload        = "reload",
+    reload_empty  = "reload_empty",
+    idle          = "idle",
+    draw          = "draw",
+	fire_right          = "fire",
+	fire_last_right     = "fire_empty",
+	fire_aim_right      = "fire_iron",
+	fire_last_aim_right = "fire_empty",
+    reload_right        = "reload",
+    reload_empty_right  = "reload_empty",
+    idle_right          = "idle",
+    draw_right          = "draw"
 }
 
 SWEP.Sounds = {
@@ -160,6 +187,9 @@ SWEP.ViewModelFOV	= 90
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/rfas/pi/cw2_rfas_deagle44.mdl"
 SWEP.WorldModel		= "models/weapons/w_pist_deagle.mdl"
+
+SWEP.ViewModel_AkimboL = "models/weapons/rfas/pi/cw2_rfas_deagle44.mdl"
+SWEP.ViewModel_AkimboR = "models/weapons/rfas/pi/cw2_rfas_deagle44.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -235,6 +265,12 @@ end
 if self.ActiveAttachments.am_atow_heavy then
 	self.EffectiveRange = ((self.EffectiveRange * 1.1))
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(0, 6, 0)
+	self.ViewModelOffsetAng = Angle(0, 0, -30)
+	self.ViewModelOffsetPos2 = Vector(0, 6, 0)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 30)
 end
 end
 

@@ -56,10 +56,13 @@ if CLIENT then
 	SWEP.SprintPos = Vector(0.402, -6.226, -5.026)
 	SWEP.SprintAng = Vector(53.466, -4.926, -7.035)
 
+	SWEP.CustomizePos_Orig = Vector(7.236, -6, 1.009)
+	SWEP.CustomizeAng_Orig = Vector(43.619, 42.209, 54.874)
+
 	SWEP.CustomizePos = Vector(7.236, -6, 1.009)
 	SWEP.CustomizeAng = Vector(43.619, 42.209, 54.874)
 
-	SWEP.CustomizePos_Akimbo = Vector(0, -10.511, -15.283)
+	SWEP.CustomizePos_Akimbo = Vector(0, -5, -7.5)
 	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 
 	SWEP.AlternativePos = Vector(0.261, -0.038, -0.131)
@@ -79,6 +82,8 @@ if CLIENT then
 	SWEP.ForegripOverridePos = {
 	["onehand"] = {
 		["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -5), angle = Angle(0, 0, 0) }},
+	["akimbo"] = {
+		["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -40), angle = Angle(0, 0, 0) }},
 	["nah"] = {
 		["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 	}
@@ -122,9 +127,8 @@ SWEP.AttachmentExclusions = {["am_snakeshot"] = {"cw_500nitroexpress"},
 SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -300},  atts = {"md_docter", "md_rmr", "md_microt1", "md_elcan", "md_acog_fixed", "md_thermal", "md_nightforce_nxs"}},
 	[2] = {header = "Barrel", offset = {-450, -200},  atts = {"bg_ber_babybull", "md_saker"}},
 	[3] = {header = "Underbarrel", offset = {-600, 330}, atts = {"md_insight_x2", "md_csgo_taclight"}},
-	[4] = {header = "Technique", offset = {900, 600}, atts = {"doi_atow_onehand"}},
+	[4] = {header = "Technique", offset = {900, 600}, atts = {"doi_atow_onehand", "cw_akimbo"}},
 	[5] = {header = "Conversion", offset = {80, 450}, atts = {"cw_500nitroexpress"}},
-	[6] = {header = "Special", offset = {80, 450}, atts = {"cw_akimbo"}},
 	["+reload"] = {header = "Ammo", offset = {1000, 125}, atts = {"am_reducedpowderload", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
@@ -241,9 +245,9 @@ if self.ActiveAttachments.am_atow_heavy then
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
 end
 if self.ActiveAttachments.cw_akimbo then
-	self.ViewModelOffsetPos = Vector(0, 5, -1)
+	self.ViewModelOffsetPos = Vector(0.5, 5, 0)
 	self.ViewModelOffsetAng = Angle(0, 0, -20)
-	self.ViewModelOffsetPos2 = Vector(0, 5, -1)
+	self.ViewModelOffsetPos2 = Vector(-0.5, 5, 0)
 	self.ViewModelOffsetAng2 = Angle(0, 0, 20)
 end
 end

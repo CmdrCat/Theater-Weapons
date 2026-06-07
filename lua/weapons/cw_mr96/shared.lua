@@ -34,14 +34,14 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 25 * 39.37
 	SWEP.DamageFallOff_Orig = .85
 
-	SWEP.BaseArm = "Bip01 L UpperArm"
+	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
 	SWEP.ForegripOverridePos = {
 	["onehand"] = {
-		["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -10), angle = Angle(0, 0, 0) }},
+		["Bip01 L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -10), angle = Angle(0, 0, 0) }},
 	["nah"] = {
-		["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+		["Bip01 L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 	}
 end
 

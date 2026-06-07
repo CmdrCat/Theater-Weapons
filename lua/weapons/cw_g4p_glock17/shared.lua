@@ -27,8 +27,14 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = 1}
 	
+	SWEP.CustomizePos_Orig = Vector(-3.8, -3.6, -2.8)
+	SWEP.CustomizeAng_Orig = Vector(16.6, -28.4, -2.6)
+
 	SWEP.CustomizePos = Vector(-3.8, -3.6, -2.8)
 	SWEP.CustomizeAng = Vector(16.6, -28.4, -2.6)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -5.511, -7.283)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 
 	SWEP.MicroT1Pos = Vector(-2.115, -2.8, 0.04)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
@@ -97,6 +103,8 @@ SWEP.ForegripOverride = true
 SWEP.ForegripOverridePos = {
     ["onehand"] = {
         ["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -10), angle = Angle(0, 0, 0) }},
+	["akimbo"] = {
+        ["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -30), angle = Angle(0, 0, 0) }},
     ["nah"] = {
         ["Bip01 L UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 }
@@ -104,7 +112,7 @@ SWEP.ForegripOverridePos = {
 SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -500}, atts = {"md_docter"}},
 [2] = {header = "Muzzle", offset = {-900, -200}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
 [3] = {header = "Rail", offset = {-700, 200}, atts = {"md_anpeq15", "md_csgo_taclight"}},
-[4] = {header = "Technique", offset = {-450, -500}, atts = {"doi_atow_onehand"}},
+[4] = {header = "Technique", offset = {-450, -500}, atts = {"doi_atow_onehand", "cw_akimbo"}},
 [5] = {header = "Fire Control Group", offset = {550, 300}, atts = {"uecw_glock_switch"}},
 ["+reload"] = {header = "Ammo", offset = {200, -175}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -114,6 +122,19 @@ SWEP.Animations = {fire = "shoot_1",
 	reload_empty = "glock_reload",
 	idle = "glock_idle",
 	draw = "glock_draw"}
+
+SWEP.Animations_Akimbo = {fire = "shoot_1",
+	fireDry = "shoot_last",
+	reload = "glock_reload",
+	reload_empty = "glock_reload",
+	idle = "glock_idle",
+	draw = "glock_draw",
+	fire_right = "shoot_1",
+	fireDry_right = "shoot_last",
+	reload_right = "glock_reload",
+	reload_empty_right = "glock_reload",
+	idle_right = "glock_idle",
+	draw_right = "glock_draw"}
 	
 SWEP.Sounds = {glock_reload = {[1] = {time = 0.4, sound = "CW_GLOCK17_MAGOUT"},
 	[2] = {time = 1.5, sound = "CW_GLOCK17_MAGIN"},
@@ -140,6 +161,9 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= true
 SWEP.ViewModel		= "models/weapons/v_pist_glock17.mdl"
 SWEP.WorldModel		= "models/weapons/w_pist_glock18.mdl"
+
+SWEP.ViewModel_AkimboL = "models/weapons/v_pist_glock17.mdl"
+SWEP.ViewModel_AkimboR = "models/weapons/v_pist_glock17.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -202,6 +226,12 @@ if self.ActiveAttachments.am_atow_heavy then
 end
 if self.ActiveAttachments.md_csgo_silencer_pistol then
 	self.EffectiveRange = ((self.EffectiveRange * 0.85))
+end
+if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(-1, 5, -0.5)
+	self.ViewModelOffsetAng = Angle(0, 0, -30)
+	self.ViewModelOffsetPos2 = Vector(-3, 5, -0.5)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 30)
 end
 end
 

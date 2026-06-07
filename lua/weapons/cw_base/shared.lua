@@ -361,6 +361,7 @@ function SWEP:ActivateDualwield()
     self.AttachmentEquipped = true
 
     -- change animations
+    self.Animations_Normal = self.Animations
     self.Animations = self.Animations_Akimbo
     self.NormalHoldType_Orig = self.NormalHoldType
     self.NormalHoldType = "duel"

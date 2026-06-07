@@ -49,8 +49,14 @@ if CLIENT then
 	SWEP.SprintPos = Vector(0, 0, 0.273)
 	SWEP.SprintAng = Vector(-12.132, 0, 0)
 
+	SWEP.CustomizePos_Orig = Vector(7.711, -0.482, -2)
+	SWEP.CustomizeAng_Orig = Vector(16.364, 40.741, 15.277)
+
 	SWEP.CustomizePos = Vector(7.711, -0.482, -2)
 	SWEP.CustomizeAng = Vector(16.364, 40.741, 15.277)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, 0, -7.5)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 
 	SWEP.SightWithRail = true
 	SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
@@ -70,6 +76,16 @@ if CLIENT then
 	SWEP.HoldBoltWhileEmpty = true
 	
 	SWEP.CustomizationMenuScale = 0.01
+
+	SWEP.BaseArm = "l_upperarm"
+	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.ForegripOverridePos = {
+	["akimbo"] = {
+        ["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, -50, 0), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["l_upperarm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
+	}
 	
 	SWEP.BackupSights = {
 	["md_microt1"] = {[1] = Vector(-5, 9, -2), [2] = Vector(5, 0, -30)}}
@@ -99,11 +115,12 @@ SWEP.Trivia = {text = "This submachine gun has a monstrous rate of fire; one so 
 
 SWEP.AttachmentExclusions = {["am_atow_lowvel"] = {"cw_mac11_recoil_buffer"}}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -300},  atts = {"md_microt1"}},
 	[2] = {header = "Muzzle", offset = {-500, -600},  atts = {"md_tundra9mm"}},
 	[3] = {header = "Barrel", offset = {-500, -150},  atts = {"bg_mac11_extended_barrel"}},
-	[4] = {header = "Stock", offset = {1100, 100},  atts = {"bg_mac11_unfolded_stock"}},
-	[5] = {header = "Aftermarket", offset = {500, 200},  atts = {"cw_mac11_recoil_buffer"}},
+	[4] = {header = "Stock", offset = {1100, 300},  atts = {"bg_mac11_unfolded_stock"}},
+	[5] = {header = "Aftermarket", offset = {800, -300},  atts = {"cw_mac11_recoil_buffer"}},
+	[6] = {header = "Technique", offset = {500, 200},  atts = {"cw_akimbo"}},
 	["+reload"] = {header = "Ammo", offset = {-500, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"mac10_fire", "mac10_fire2", "mac10_fire3"},
@@ -111,6 +128,17 @@ SWEP.Animations = {fire = {"mac10_fire", "mac10_fire2", "mac10_fire3"},
 	reload_rail = "mac10_reload_rail",
 	idle = "mac10_idle",
 	draw = "mac10_draw"}
+
+SWEP.Animations_Akimbo = {fire = {"mac10_fire", "mac10_fire2", "mac10_fire3"},
+	reload = "mac10_reload",
+	reload_rail = "mac10_reload_rail",
+	idle = "mac10_idle",
+	draw = "mac10_draw",
+	fire_right = {"mac10_fire", "mac10_fire2", "mac10_fire3"},
+	reload_right = "mac10_reload",
+	reload_rail_right = "mac10_reload_rail",
+	idle_right = "mac10_idle",
+	draw_right = "mac10_draw"}
 	
 SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 
@@ -141,6 +169,9 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/smgs/mac11.mdl"
 SWEP.WorldModel		= "models/weapons/w_cst_mac11.mdl"
+
+SWEP.ViewModel_AkimboL = "models/cw2/smgs/mac11.mdl"
+SWEP.ViewModel_AkimboR = "models/cw2/smgs/mac11.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -204,6 +235,12 @@ end
 if self.ActiveAttachments.am_atow_heavy then
 	self.EffectiveRange = ((self.EffectiveRange * 1.1))
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(-2, 0, -1)
+	self.ViewModelOffsetAng = Angle(0, 0, -40)
+	self.ViewModelOffsetPos2 = Vector(2, 0, -1)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 40)
 end
 end
 

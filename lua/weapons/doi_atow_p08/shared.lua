@@ -42,9 +42,15 @@ if CLIENT then
 	
 	SWEP.SprintPos = Vector(3.8409, -11.9318, -9.5227)
 	SWEP.SprintAng = Vector(59.3182, -2.0455, 2.0455)
-	
+
+	SWEP.CustomizePos_Orig = Vector(9.75, -7.5, 2.7)
+	SWEP.CustomizeAng_Orig = Vector(15, 47, 30)
+
 	SWEP.CustomizePos = Vector(9.75, -7.5, 2.7)
 	SWEP.CustomizeAng = Vector(15, 47, 30)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -10.511, -8.283)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 
 	SWEP.AlternativePos = Vector(-.45, -2.5, -0.15)
 	SWEP.AlternativeAng = Vector(0.3, 0.0047, 3)
@@ -86,9 +92,10 @@ SWEP.LuaViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {
-[3] = {header = "Finish", offset = {350, -350}, atts = {"doi_atow_c96goldfinish"}},
-[1] = {header = "Barrel", offset = {-450, -350}, atts = {"doi_atow_lugerlongbarrel"}},
-[2] = {header = "Muzzle", offset = {-800, 0}, atts = {"doi_atow_unisuppressor"}},
+[3] = {header = "Finish", offset = {50, -350}, atts = {"doi_atow_c96goldfinish"}},
+[1] = {header = "Barrel", offset = {-700, -350}, atts = {"doi_atow_lugerlongbarrel"}},
+[2] = {header = "Muzzle", offset = {-850, 0}, atts = {"doi_atow_unisuppressor"}},
+[4] = {header = "Technique", offset = {750, -350}, atts = {"cw_akimbo"}},
 ["+reload"] = {header = "Ammo", offset = {-175,80}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire3"},
@@ -99,6 +106,23 @@ SWEP.Animations = {fire = {"base_fire","base_fire3"},
 	reload_empty = "base_reloadempty",
 	idle = "base_idle",
 	draw = "base_draw"}
+
+SWEP.Animations_Akimbo = {fire = {"base_fire","base_fire3"},
+	fire_aim = {"iron_fire_2","iron_fire_3"},
+	fire_last = {"base_firelast"},
+	fire_last_aim = {"iron_firelast"},
+	reload = "base_reload",
+	reload_empty = "base_reloadempty",
+	idle = "base_idle",
+	draw = "base_draw",
+	fire_right = {"base_fire","base_fire3"},
+	fire_aim_right = {"iron_fire_2","iron_fire_3"},
+	fire_last_right = {"base_firelast"},
+	fire_last_aim_right = {"iron_firelast"},
+	reload_right = "base_reload",
+	reload_empty_right = "base_reloadempty",
+	idle_right = "base_idle",
+	draw_right = "base_draw"}
 	
 
 SWEP.SpeedDec = 15
@@ -124,6 +148,9 @@ SWEP.ZoomAmount = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/lugerp08.mdl"
 SWEP.WorldModel		= "models/khrcw2/doipack/w_lugerp08.mdl"
+
+SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/lugerp08.mdl"
+SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/lugerp08.mdl"
 
 SWEP.DrawTraditionalWorldModel = false
 SWEP.WM = "models/khrcw2/doipack/w_lugerp08.mdl"
@@ -209,6 +236,12 @@ self.Owner.ViewAff = 0
 	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - .03))
 end
+	if self.ActiveAttachments.cw_akimbo then
+		self.ViewModelOffsetPos = Vector(0, 5, 0)
+		self.ViewModelOffsetAng = Angle(0, 0, -20)
+		self.ViewModelOffsetPos2 = Vector(0, 5, 0)
+		self.ViewModelOffsetAng2 = Angle(0, 0, 20)
+	end
 end
 
 function SWEP:fireAnimFunc()

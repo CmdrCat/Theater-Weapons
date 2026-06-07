@@ -51,8 +51,14 @@ if CLIENT then
 	SWEP.SprintPos = Vector(2.8409, -10.9318, -8.5227)
 	SWEP.SprintAng = Vector(59.3182, 2.0455, 2.0455)
 	
+	SWEP.CustomizePos_Orig = Vector(10, -5, .5)
+	SWEP.CustomizeAng_Orig = Vector(15, 45, 20)
+
 	SWEP.CustomizePos = Vector(10, -5, .5)
 	SWEP.CustomizeAng = Vector(15, 45, 20)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -10.511, -8.283)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 
 	SWEP.AlternativePos = Vector(-.8, 0, -0.3)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
@@ -93,7 +99,12 @@ SWEP.MuzzleVelocity = 250
 
 SWEP.Attachments = {[2] = {header = "Reload", offset = {-150, 150}, atts = {"doi_atow_revsbandoler","doi_atow_revspeedloader"}},
 [1] = {header = "Barrel", offset = {-400, -250}, atts = {"doi_atow_1917ext"}},
+[3] = {header = "Technique", offset = {400, 150}, atts = {"cw_akimbo"}},
 ["+reload"] = {header = "Ammo", offset = {350, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot","am_snakeshot"}}}
+
+SWEP.AttachmentDependencies = {
+	["cw_akimbo"] = {"doi_atow_revspeedloader"}
+	}
 
 SWEP.Animations = {fire = {"base_fire","base_fire2"},
 	fire_aim = {"iron_fire_1"},
@@ -106,6 +117,29 @@ SWEP.Animations = {fire = {"base_fire","base_fire2"},
 	reload_empty = "base_reload_clip_empty",
 	idle = "base_reload_end",
 	draw = "base_draw"}
+
+SWEP.Animations_Akimbo = {fire = {"base_fire","base_fire2"},
+	fire_aim = {"iron_fire_1"},
+	fire_last = {"base_fire_last"},
+	fire_last_aim = {"iron_fire_last"},
+	reload_start = "base_reload_start",
+	insert = "base_reload_insert",
+	reload_end = "base_reload_end",
+	reload = "base_reload_clip",
+	reload_empty = "base_reload_clip_empty",
+	idle = "base_reload_end",
+	draw = "base_draw",
+	fire_right = {"base_fire","base_fire2"},
+	fire_aim_right = {"iron_fire_1"},
+	fire_last_right = {"base_fire_last"},
+	fire_last_aim_right = {"iron_fire_last"},
+	reload_start_right = "base_reload_start",
+	insert_right = "base_reload_insert",
+	reload_end_right = "base_reload_end",
+	reload_right = "base_reload_clip",
+	reload_empty_right = "base_reload_clip_empty",
+	idle_right = "base_reload_end",
+	draw_right = "base_draw"}
 	
 SWEP.ReloadViewBobEnabled = false //
 
@@ -132,6 +166,9 @@ SWEP.ZoomAmount = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/sw1917.mdl"
 SWEP.WorldModel		= "models/khrcw2/doipack/w_sw1917.mdl"
+
+SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/sw1917.mdl"
+SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/sw1917.mdl"
 
 SWEP.DrawTraditionalWorldModel = false
 SWEP.WM = "models/khrcw2/doipack/w_sw1917.mdl"
@@ -200,6 +237,13 @@ if self.ActiveAttachments.doi_atow_revspeedstrip then
 			else
 				self.InsertShellTime = 0.95
 			end
+	end
+
+	if self.ActiveAttachments.cw_akimbo then
+		self.ViewModelOffsetPos = Vector(0, 5, 0)
+		self.ViewModelOffsetAng = Angle(0, 0, -20)
+		self.ViewModelOffsetPos2 = Vector(0, 5, 0)
+		self.ViewModelOffsetAng2 = Angle(0, 0, 20)
 	end
 
 self.Owner.ViewAff = 0

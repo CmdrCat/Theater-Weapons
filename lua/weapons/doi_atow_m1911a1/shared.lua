@@ -41,6 +41,9 @@ if CLIENT then
 	
 	SWEP.SprintPos = Vector(3.25, -10.9318, -8.5227)
 	SWEP.SprintAng = Vector(59.3182, -2.0455, 3)
+
+	SWEP.CustomizePos_Orig = Vector(9, -7.5, 2.7) -- For Akimbo
+	SWEP.CustomizeAng_Orig = Vector(15, 47, 30)
 	
 	SWEP.CustomizePos = Vector(9, -7.5, 2.7)
 	SWEP.CustomizeAng = Vector(15, 47, 30)
@@ -90,11 +93,11 @@ SWEP.MagBGs = {main = 2, off = 0, on = 1}
 SWEP.MuzzleVelocity = 250
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500}, atts = {"md_rmr"}, exclusions = {md_insight_x2 = true}},
-[2] = {header = "Laser", offset = {-500, 250}, atts = {"md_insight_x2"}, exclusions = {md_rmr = true}},
-[4] = {header = "Magazine", offset = {250, 350}, atts = {"doi_atow_pistolextmag"}},
+[2] = {header = "Laser", offset = {-625, 200}, atts = {"md_insight_x2"}, exclusions = {md_rmr = true}},
+[4] = {header = "Magazine", offset = {50, 325}, atts = {"doi_atow_pistolextmag"}},
 [3] = {header = "Muzzle", offset = {-700, -350}, atts = {"doi_atow_unisuppressor"}},
 [5] = {header = "Finish", offset = {-150, -400}, atts = {"doi_atow_m1911satinfinish","doi_atow_c96goldfinish"}},
-[6] = {header = "Special", offset = {-150, -400}, atts = {"cw_akimbo"}},
+[6] = {header = "Technique", offset = {725, 300}, atts = {"cw_akimbo"}},
 ["+reload"] = {header = "Ammo", offset = {600, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire3"},

@@ -48,6 +48,15 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-0.88, 1.325, -0.561)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
+	SWEP.CustomizePos_Orig = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng_Orig = Vector(17.009, 29.971, 16.669)
+
+	SWEP.CustomizePos = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng = Vector(17.009, 29.971, 16.669)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -5.511, -10.283)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
+
 	SWEP.BackupSights = {
 		["md_microt1"] = {[1] = Vector(-4, 6, -2), [2] = Vector(5, 0, -30)},
 		["md_docter"] = {[1] = Vector(-4, 6, -2), [2] = Vector(5, 0, -30)}}
@@ -67,6 +76,8 @@ if CLIENT then
 	SWEP.ForegripOverridePos = {
     ["onehand"] = {
         ["Left_U_Arm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -6), angle = Angle(0, 0, 0) }},
+	["akimbo"] = {
+		["Left_U_Arm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, -50), angle = Angle(0, 0, 0) }},
     ["nah"] = {
         ["Left_U_Arm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 	}
@@ -104,7 +115,7 @@ SWEP.Trivia = {text = "An reliable handgun chambered in .40 S&W.", x = -200, y =
 SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -350}, atts = {"md_microt1", "md_docter"}},
 [2] = {header = "Muzzle", offset = {-600, -350}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
 [3] = {header = "Rail", offset = {-500, 250}, atts = {"md_anpeq15", "md_csgo_taclight"}},
-[4] = {header = "Technique", offset = {700, -50}, atts = {"doi_atow_onehand"}},
+[4] = {header = "Technique", offset = {700, -50}, atts = {"doi_atow_onehand", "cw_akimbo"}},
 ["+reload"] = {header = "Ammo", offset = {400, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"fire1", "fire2", "fire3"},
@@ -113,6 +124,19 @@ SWEP.Animations = {fire = {"fire1", "fire2", "fire3"},
 	reload_empty = "reload",
 	idle = "idle",
 	draw = "draw"}
+
+SWEP.Animations_Akimbo = {fire = {"fire1", "fire2", "fire3"},
+	fireDry = "fire_last",
+	reload = "reload",
+	reload_empty = "reload",
+	idle = "idle",
+	draw = "draw",
+	fire_right = {"fire1", "fire2", "fire3"},
+	fireDry_right = "fire_last",
+	reload_right = "reload",
+	reload_empty_right = "reload",
+	idle_right = "idle",
+	draw_right = "draw"}
 	
 SWEP.Sounds = {reload = {[1] = {time = 0.42, sound = "CW_USP_MAGOUT"},
 	[2] = {time = 1.5, sound = "CW_USP_MAGIN"},
@@ -138,6 +162,9 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/v_g4p_usp40.mdl"
 SWEP.WorldModel		= "models/weapons/w_pist_usp.mdl"
+
+SWEP.ViewModel_AkimboL = "models/weapons/v_g4p_usp40.mdl"
+SWEP.ViewModel_AkimboR = "models/weapons/v_g4p_usp40.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -190,6 +217,12 @@ if self.ActiveAttachments.am_atow_heavy then
 end
 if self.ActiveAttachments.md_csgo_silencer_pistol then
 	self.EffectiveRange = ((self.EffectiveRange * 0.85))
+end
+if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(0, 5, 0)
+	self.ViewModelOffsetAng = Angle(0, 0, -30)
+	self.ViewModelOffsetPos2 = Vector(0, 5, 0)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 30)
 end
 end
 
