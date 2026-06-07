@@ -45,7 +45,7 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(9, -7.5, 2.7)
 	SWEP.CustomizeAng = Vector(15, 47, 30)
 
-	SWEP.CustomizePos_Akimbo = Vector(0, -3.511, -5.283)
+	SWEP.CustomizePos_Akimbo = Vector(0, -10.511, -8.283)
 	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 
 	SWEP.RMRPos = Vector(-1.745, 0, -0.17)
@@ -94,6 +94,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {600, -500}, atts = {"md_r
 [4] = {header = "Magazine", offset = {250, 350}, atts = {"doi_atow_pistolextmag"}},
 [3] = {header = "Muzzle", offset = {-700, -350}, atts = {"doi_atow_unisuppressor"}},
 [5] = {header = "Finish", offset = {-150, -400}, atts = {"doi_atow_m1911satinfinish","doi_atow_c96goldfinish"}},
+[6] = {header = "Special", offset = {-150, -400}, atts = {"cw_akimbo"}},
 ["+reload"] = {header = "Ammo", offset = {600, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire3"},
@@ -106,11 +107,15 @@ SWEP.Animations = {fire = {"base_fire","base_fire3"},
 	draw = "base_draw"}
 
 SWEP.Animations_Akimbo = {reload = "base_reload",
+	reload_empty = "base_reloadempty",
 	fire = {"base_fire","base_fire3"},
+	fire_last = {"base_firelast"},
 	idle = "base_idle",
 	draw = "base_draw",
 	reload_right = "base_reload",
+	reload_empty_right = "base_reloadempty",
 	fire_right = {"base_fire","base_fire3"},
+	fire_last_right = {"base_firelast"},
 	idle_right = "base_idle",
 	draw_right = "base_draw"
 }
@@ -218,6 +223,12 @@ self.DamageFallOff = .8
 	end
 	if self.ActiveAttachments.am_atow_riot then
 		self.EffectiveRange = ((self.EffectiveRange - 7.5 * 39.37))
+	end
+	if self.ActiveAttachments.cw_akimbo then
+		self.ViewModelOffsetPos = Vector(0, 5, 0)
+		self.ViewModelOffsetAng = Angle(0, 0, -20)
+		self.ViewModelOffsetPos2 = Vector(0, 5, 0)
+		self.ViewModelOffsetAng2 = Angle(0, 0, 20)
 	end
 end
 

@@ -21,6 +21,9 @@ if CLIENT then
 	SWEP.WM = "models/weapons/w_dber_bull.mdl"
 	SWEP.WMPos = Vector(0, 2.8, -4.4)
 	SWEP.WMAng = Vector(0, 0, 180)
+
+	SWEP.ViewModel_AkimboL = "models/weapons/v_dber_bull.mdl"
+	SWEP.ViewModel_AkimboR = "models/weapons/v_dber_bull.mdl"
 	
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = false
@@ -55,6 +58,9 @@ if CLIENT then
 
 	SWEP.CustomizePos = Vector(7.236, -6, 1.009)
 	SWEP.CustomizeAng = Vector(43.619, 42.209, 54.874)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, -10.511, -15.283)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 
 	SWEP.AlternativePos = Vector(0.261, -0.038, -0.131)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
@@ -118,12 +124,22 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -300},  atts = {"md_
 	[3] = {header = "Underbarrel", offset = {-600, 330}, atts = {"md_insight_x2", "md_csgo_taclight"}},
 	[4] = {header = "Technique", offset = {900, 600}, atts = {"doi_atow_onehand"}},
 	[5] = {header = "Conversion", offset = {80, 450}, atts = {"cw_500nitroexpress"}},
+	[6] = {header = "Special", offset = {80, 450}, atts = {"cw_akimbo"}},
 	["+reload"] = {header = "Ammo", offset = {1000, 125}, atts = {"am_reducedpowderload", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
 	reload = "reload",
 	idle = "idle1",
 	draw = "draw"}
+
+SWEP.Animations_Akimbo = {fire = {"shoot1", "shoot2"},
+	reload = "reload",
+	idle = "idle1",
+	draw = "draw",
+	fire_right = {"shoot1", "shoot2"},
+	reload_right = "reload",
+	idle_right = "idle1",
+	draw_right = "draw"}
 	
 SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_LIGHT"},
 	{time = 0.3, sound = "CW_BER_BULL_CYLINDERCLOSE"}},
@@ -223,6 +239,12 @@ end
 if self.ActiveAttachments.am_atow_heavy then
 	self.EffectiveRange = ((self.EffectiveRange * 1.1))
 	self.DamageFallOff = ((self.DamageFallOff * 0.925))
+end
+if self.ActiveAttachments.cw_akimbo then
+	self.ViewModelOffsetPos = Vector(0, 5, -1)
+	self.ViewModelOffsetAng = Angle(0, 0, -20)
+	self.ViewModelOffsetPos2 = Vector(0, 5, -1)
+	self.ViewModelOffsetAng2 = Angle(0, 0, 20)
 end
 end
 

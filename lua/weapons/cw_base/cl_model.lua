@@ -24,6 +24,18 @@ SWEP.NoStockShells = true
 SWEP.NoStockMuzzle = true
 SWEP.grenadeTime = 0
 SWEP.HUD_3D2DAlpha = 255
+SWEP.ViewModelOffsetPos = Vector(0, 0, 0)
+SWEP.ViewModelOffsetAng = Angle(0, 0, 0)
+SWEP.ViewModelOffsetPos2 = Vector(0, 0, 0)
+SWEP.ViewModelOffsetAng2 = Angle(0, 0, 0)
+SWEP.ViewModelOffsetPosAkimboL = Vector(0, 5, 0)
+SWEP.ViewModelOffsetAngAkimboL = Angle(0, 0, -20)
+SWEP.ViewModelOffsetPosAkimboR = Vector(0, 5, 0)
+SWEP.ViewModelOffsetAngAkimboR = Angle(0, 0, 20)
+SWEP.ViewModelReloadDownPos = Vector(0, 0, -100)
+SWEP.ViewModelReloadDownAng = Angle(35, 0, 0)
+SWEP.ViewModelReloadDownPos2 = Vector(0, 0, -100)
+SWEP.ViewModelReloadDownAng2 = Angle(35, 0, 0)
 
 -- TS means Telescopic Sight
 SWEP.TSGlass = Material("cw2/attachments/lens/rt")
@@ -712,6 +724,21 @@ function SWEP:drawGrenade()
 	cam.IgnoreZ(false)
 end
 
+function SWEP:applyViewModelAxisTransform(pos, ang, axisPos, axisAng)
+	axisPos = axisPos or Vector(0, 0, 0)
+	axisAng = axisAng or Angle(0, 0, 0)
+
+	RotateAroundAxis(ang, Right(ang), axisAng.p)
+	RotateAroundAxis(ang, Up(ang), axisAng.y)
+	RotateAroundAxis(ang, Forward(ang), axisAng.r)
+
+	pos = pos + Right(ang) * axisPos.x
+	pos = pos + Forward(ang) * axisPos.y
+	pos = pos + Up(ang) * axisPos.z
+
+	return pos, ang
+end
+
 function SWEP:applyOffsetToVM()
 	local CT = UnPredictedCurTime()
 	
@@ -804,11 +831,53 @@ function SWEP:applyOffsetToVM()
 	pos = pos + (CurPosMod.y + self.BipodPos[2]) * Forward(ang)
 	pos = pos + (CurPosMod.z + self.BipodPos[3]) * Up(ang)
 	
-	self.CW_VM:SetPos(pos)
-	self.CW_VM:SetAngles(ang)
+	local leftPos = pos
+	local rightPos = pos
+	local leftAng = Angle(ang.p, ang.y, ang.r)
+	local rightAng = Angle(ang.p, ang.y, ang.r)
+
+	if self.isDualwield and self.CW_VM2 then
+		local separation = -1
+		leftPos = pos - Right(ang) * separation
+		rightPos = pos + Right(ang) * separation
+	end
+
+	local leftReloadFrac = 0
+	local rightReloadFrac = 0
+
+	if self.isDualwield and self.IsReloading and self.Cycle <= 0.98 then
+		leftReloadFrac = math.sin(math.Clamp(self.Cycle, 0, 1) * math.pi)
+	end
+
+	if self.isDualwield and self.RightReloadDelay and CurTime() < self.RightReloadDelay and self.CW_VM2 then
+		rightReloadFrac = math.sin(math.Clamp(self.CW_VM2:GetCycle(), 0, 1) * math.pi)
+	end
+
+	local baseLeftPos = self.ViewModelOffsetPos
+	local baseLeftAng = self.ViewModelOffsetAng
+	local baseRightPos = self.ViewModelOffsetPos2
+	local baseRightAng = self.ViewModelOffsetAng2
+
+	if self.isDualwield and self.CW_VM2 then
+		baseLeftPos = self.ViewModelOffsetPos
+		baseLeftAng = self.ViewModelOffsetAng
+		baseRightPos = self.ViewModelOffsetPos2
+		baseRightAng = self.ViewModelOffsetAng2
+	end
+
+	local leftOffsetPos = baseLeftPos + (leftReloadFrac > 0 and self.ViewModelReloadDownPos * leftReloadFrac or Vector(0, 0, 0))
+	local leftOffsetAng = baseLeftAng + (leftReloadFrac > 0 and self.ViewModelReloadDownAng * leftReloadFrac or Angle(0, 0, 0))
+	local rightOffsetPos = baseRightPos + (rightReloadFrac > 0 and (self.ViewModelReloadDownPos2 or self.ViewModelReloadDownPos) * rightReloadFrac or Vector(0, 0, 0))
+	local rightOffsetAng = baseRightAng + (rightReloadFrac > 0 and (self.ViewModelReloadDownAng2 or self.ViewModelReloadDownAng) * rightReloadFrac or Angle(0, 0, 0))
+
+	leftPos, leftAng = self:applyViewModelAxisTransform(Vector(leftPos), Angle(ang.p, ang.y, ang.r), leftOffsetPos, leftOffsetAng)
+	rightPos, rightAng = self:applyViewModelAxisTransform(Vector(rightPos), Angle(ang.p, ang.y, ang.r), rightOffsetPos, rightOffsetAng)
+
+	self.CW_VM:SetPos(leftPos)
+	self.CW_VM:SetAngles(leftAng)
 	if self.CW_VM2 then
-		self.CW_VM2:SetPos(pos)
-		self.CW_VM2:SetAngles(ang)
+		self.CW_VM2:SetPos(rightPos)
+		self.CW_VM2:SetAngles(rightAng)
 	end
 end
 

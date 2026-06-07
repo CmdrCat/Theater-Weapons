@@ -1,7 +1,7 @@
 local SP = game.SinglePlayer()
 
 -- lol
-function SWEP:sendWeaponAnim(anim, speed, cycle)
+function SWEP:sendWeaponAnim(anim, speed, cycle, override, ent)
 	-- what the fuck are you doing without an anim name
 	if not anim then
 		return
@@ -17,6 +17,7 @@ function SWEP:sendWeaponAnim(anim, speed, cycle)
 			umsg.String(anim)
 			umsg.Float(speed)
 			umsg.Float(cycle)
+			umsg.Long(type(ent) == "number" and ent or -1)
 		umsg.End()
 		
 		return
@@ -41,8 +42,20 @@ function SWEP:sendWeaponAnim(anim, speed, cycle)
 			end
 		end
 	end
+
+	local targetEnt = self.CW_VM
+
+	if ent then
+		if type(ent) == "number" then
+			if ent == 1 or ent == 2 then
+				targetEnt = self.CW_VM2 or self.CW_VM
+			end
+		elseif IsValid(ent) then
+			targetEnt = ent
+		end
+	end
 	
-	self:playAnim(anim, speed, cycle)
+	self:playAnim(anim, speed, cycle, targetEnt)
 end
 
 function SWEP:playAnim(anim, speed, cycle, ent)
@@ -53,7 +66,7 @@ function SWEP:playAnim(anim, speed, cycle, ent)
 	local foundAnim = anim
 	self.lastPlayedAnim = anim
 	
-	if ent == self.CW_VM then
+	if ent == self.CW_VM or ent == self.CW_VM2 then
 		foundAnim = self.Animations[anim]
 		
 		if not foundAnim then
@@ -157,7 +170,12 @@ if CLIENT then
 		end
 		
 		if wep.sendWeaponAnim then
-			wep:sendWeaponAnim(anim, speed, cycle)
+			local ent = um:ReadLong()
+			if ent >= 0 then
+				wep:sendWeaponAnim(anim, speed, cycle, false, ent)
+			else
+				wep:sendWeaponAnim(anim, speed, cycle)
+			end
 		end
 	end
 	
