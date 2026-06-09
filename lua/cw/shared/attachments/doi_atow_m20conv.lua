@@ -30,6 +30,7 @@ function att:attachFunc()
 	self.FireSound = "DOIBREN_FIRE"
 	self.PrintName = "Mitrailleur M.20"
 	self.ShellScale = 0.59
+	self:loadWeapon()
 end
 
 function att:detachFunc()

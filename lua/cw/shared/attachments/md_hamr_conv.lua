@@ -20,6 +20,7 @@ end
 function att:attachFunc()
 	self.Primary.ClipSize = 100
 	self.Primary.ClipSize_Orig = 100
+	self:loadWeapon()
 	self.FireSound = "CW_G36C_FIRE_SUPPRESSED"
 	self.FireSoundSuppressed = "CW_L85A2_FIRE_SUPPRESSED"
 	self.Trivia = {text = "The Heat Adaptive Modular Rifle (HAMR) is squad automatic weapon based on the SCAR platform.", x = -100, y = -600}

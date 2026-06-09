@@ -19,6 +19,7 @@ function att:attachFunc()
 	self.Animations.reload = "base_reload_ext"
 	self.Primary.ClipSize = 15
 	self.Primary.ClipSize_Orig = 15
+	self:loadWeapon()
 end
 
 function att:detachFunc()

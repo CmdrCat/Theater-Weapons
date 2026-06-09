@@ -25,6 +25,7 @@ function att:attachFunc()
 	reload_empty = "base_reloadempty_extmag",
 	idle = "base_idle",
 	draw = "base_draw"}
+	self:loadWeapon()
 end
 
 function att:detachFunc()

@@ -23,6 +23,7 @@ function att:attachFunc()
 	draw = "base_draw"}
 	self.Primary.ClipSize = 30
 	self.Primary.ClipSize_Orig = 30
+	self:loadWeapon()
 end
 
 function att:detachFunc()

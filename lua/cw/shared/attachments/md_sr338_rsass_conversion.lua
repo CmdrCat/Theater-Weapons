@@ -22,6 +22,7 @@ function att:attachFunc()
 	self.ShellScale = 0.69
 	self.Primary.ClipSize = 20
 	self.Primary.ClipSize_Orig = 20
+	self:loadWeapon()
 	if self.MagBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.000000001, 0.000000001, 0.000000001))
 	end
@@ -42,7 +43,7 @@ function att:detachFunc()
 	self.ShellScale = 0.75
 	self.Primary.ClipSize = 10
 	self.Primary.ClipSize_Orig = 10
-	self:unloadWeapon()
+	self:unloadWeaponPartially()
 	if self.MagBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
 	end

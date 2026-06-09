@@ -20,6 +20,8 @@ function att:attachFunc()
 	
 	self.Primary.ClipSize = 100
 	self.Primary.ClipSize_Orig = 100
+
+	self:loadWeapon()
 end
 
 function att:detachFunc()

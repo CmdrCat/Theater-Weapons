@@ -17,6 +17,7 @@ function att:attachFunc()
 	self:setBodygroup(self.MagBGs.main, self.MagBGs.on)
 	self.Primary.ClipSize = 20
 	self.Primary.ClipSize_Orig = 20
+	self:loadWeapon()
 end
 
 function att:detachFunc()

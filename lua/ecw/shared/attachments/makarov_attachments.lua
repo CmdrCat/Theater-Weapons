@@ -18,6 +18,7 @@ end
 function makarov_ext_mag:attachFunc()
 	self.Primary.ClipSize = 12
 	self.Primary.ClipSize_Orig = 12
+	self:loadWeapon()
 	
 	if CLIENT then
 		self:setBodygroup(self.MagBGs.main, self.MagBGs.extended)

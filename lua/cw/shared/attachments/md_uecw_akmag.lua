@@ -23,6 +23,7 @@ function att:attachFunc()
 			self.AttachmentModelsVM.md_uecw_akmag.ent:SetSkin(self.UECWAKMagSkin or 0)
 		end
 	end
+	self:loadWeapon()
 end
 
 function att:detachFunc()

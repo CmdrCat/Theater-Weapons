@@ -48,6 +48,7 @@ end
 	self.FireSound = "DOIM1A1CAR_FIRE"
 	self.Primary.Ammo = ".30 Carbine"
 	self.Shell = "khr30carbine"
+	self:loadWeapon()
 end
 
 function att:detachFunc()
@@ -78,6 +79,7 @@ end
 	self.FireSound = "DOISPRING_FIRE"
 	self.Primary.Ammo = ".30-06"
 	self.Shell = "khr3006"
+	self:unloadWeaponPartially()
 end
 
 CustomizableWeaponry:registerAttachment(att)

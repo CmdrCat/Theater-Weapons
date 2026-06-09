@@ -31,6 +31,7 @@ function att:attachFunc()
 	self.ReloadHalt = 2.6
 	self.ReloadTime_Empty = 3.325
 	self.ReloadHalt_Empty = 4.25
+	self:loadWeapon()
 end
 
 function att:detachFunc()
