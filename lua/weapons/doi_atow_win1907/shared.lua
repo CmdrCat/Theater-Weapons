@@ -131,7 +131,7 @@ SWEP.MagBGs = {main = 1, five = 0, fifteen = 1}
 	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -600}, atts = {"md_reflex", "doi_atow_lymanm82", "md_nightforce_nxs"}},
 	[3] = {header = "Magazine", offset = {1000, 450}, atts = {"doi_atow_win190715"}},
 	[2] = {header = "Barrel", offset = {-450, -600}, atts = {"doi_atow_unisuppressor", "md_csgo_silencer_rifle", "hard20"}},
-	[4] = {header = "Laser", offset = {1000, 0}, atts = {"ftacgrimline", "md_anpeq15"}},
+	[4] = {header = "Laser", offset = {100, 0}, atts = {"ftacgrimline", "md_anpeq15"}},
 	[5] = {header = "Handguard", offset = {-450, -150}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	["+reload"] = {header = "Ammo", offset = {-450, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 

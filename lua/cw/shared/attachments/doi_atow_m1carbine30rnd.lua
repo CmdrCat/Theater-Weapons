@@ -6,7 +6,8 @@ att.isBG = true
 att.SpeedDec = 15
 
 att.statModifiers = {DrawSpeedMult = -0.1,
-ReloadSpeedMult = -0.1}
+ReloadSpeedMult = -0.1 , 
+HipSpreadMult = 0.55}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/m1c30rnd")
