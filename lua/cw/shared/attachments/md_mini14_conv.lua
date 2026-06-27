@@ -3,7 +3,7 @@ att.name = "md_mini14_conv"
 att.displayName = "Mini-14 Conversion"
 att.displayNameShort = "Mini-14"
 
-att.statModifiers = {DamageMult = -9 / 46,
+att.statModifiers = {DamageMult = -8 / 33,
 	FireDelayMult = -1 / 4,
 	RecoilMult = -0.1,
 	HipSpreadMult = -0.23,
