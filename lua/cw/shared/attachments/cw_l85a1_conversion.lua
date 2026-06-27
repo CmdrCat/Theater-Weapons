@@ -16,6 +16,10 @@ if CLIENT then
 end
 
 function att:attachFunc()
+	self:CycleFiremodes()
+	self.FireModes = {"single", "safe"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
 	self.Primary.ClipSize = 1
 	self.Primary.ClipSize_Orig = 1
 	self:unloadWeaponPartially()
@@ -27,6 +31,10 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+	self:CycleFiremodes()
+	self.FireModes = {"semi","safe","auto"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 	self.Chamberable = true

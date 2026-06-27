@@ -189,7 +189,7 @@ SWEP.Slot = 1
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"bolt"}
+SWEP.FireModes = {"single"}
 SWEP.Base = "cw_base"
 SWEP.Category = "TCW - Pistols"
 

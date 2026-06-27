@@ -58,6 +58,8 @@ if CLIENT then
 
 	SWEP.SprintPos = Vector(1.786, 0, -1)
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
+
+	SWEP.MagBoneName = "M14_Magazine"
 	
 	SWEP.BackupSights = {
 	["md_microt1"] = {[1] = Vector(-3.5, 5, 0), [2] = Vector(0,0,-30)},
@@ -111,6 +113,7 @@ if CLIENT then
 	}
 
 	SWEP.AttachmentModelsVM = {
+		["md_mini14_conv"] = { type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "M14_Magazine", rel = "", pos = Vector(0.011, -0.147, 1.033), angle = Angle(0, 0, 0), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "M14_Body", pos = Vector(-0.253, -5.233, -4.358), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), adjustment = {min = -5.233, max = -2.5, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "M14_Body", pos = Vector(0.01, 0.93, 1.373), angle = Angle(0, 180, 0), size = Vector(0.4, 0.4, 0.4), adjustment = {min = 0.93, max = 4, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}},
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "M14_Body", pos = Vector(0.039, 1.595, -1.653), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
@@ -144,7 +147,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -450},  atts = {"md_
 	[2] = {header = "Muzzle", offset = {-450, -300},  atts = {"md_saker"}},
 	[3] = {header = "Laser", offset = {0, -300}, atts = {"md_anpeq15"}, dependencies = {md_microt1 = true, md_aimpoint = true, md_schmidt_shortdot = true, md_acog = true, md_nightforce_nxs = true}},
 	[4] = {header = "Handguard", offset = {-450, 150}, atts = {"md_foregrip", "md_bipod"}},
-	[5] = {header = "Conversion", offset = {350, 500}, atts = {"cw_m14_br_conversion"}},
+	[5] = {header = "Conversion", offset = {350, 450}, atts = {"cw_m14_br_conversion", "md_mini14_conv"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"M14_Fire1", "M14_Fire2"},
@@ -190,6 +193,9 @@ SWEP.Primary.DefaultClip	= 80
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x51MM"
 
+SWEP.Secondary.DefaultClip	= 90
+SWEP.Secondary.Ammo         = "5.56x45MM"
+
 SWEP.FireDelay = 60 / 450
 SWEP.FireSound = "CW_M14_FIRE"
 SWEP.FireSoundSuppressed = "CW_M14_FIRE_SUPPRESSED"
@@ -221,6 +227,9 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 70 * 39.37
 self.DamageFallOff = .3
+if self.ActiveAttachments.md_mini14_conv then
+	self.EffectiveRange = ((self.EffectiveRange - 50 * 39.37))
+end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

@@ -102,7 +102,7 @@ SWEP.Slot = 4
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "rpg"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"cgmsingle"}
+SWEP.FireModes = {"single"}
 SWEP.Base = "cw_base"
 SWEP.Category = "TCW - Other"
 
