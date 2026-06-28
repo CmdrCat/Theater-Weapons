@@ -12,8 +12,9 @@ RecoilMult = -0.25
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "A variant often mounted on aircraft and chambered in 6.5×53MMR", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Decreases effective range by 5 M", c = CustomizableWeaponry.textColors.NEGATIVE},
-	[3] = {t = "Increases damage fall off by 5%", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	[2] = {t = "Increases capacity to 97 rounds", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Decreases effective range by 5 M", c = CustomizableWeaponry.textColors.NEGATIVE},
+	[4] = {t = "Increases damage fall off by 5%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
 function att:attachFunc()

@@ -12,7 +12,8 @@ att.statModifiers = {DamageMult = -8 / 33,
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "Fire 5.56x45MM rounds, which have less recoil and damage.", c = CustomizableWeaponry.textColors.VPOSITIVE},
-					   [2] = {t = "Decreases effective range by 50 M", c = CustomizableWeaponry.textColors.NEGATIVE}}
+					   [2] = {t = "Increases capacity to 30 rounds", c = CustomizableWeaponry.textColors.POSITIVE},
+					   [3] = {t = "Decreases effective range by 50 M", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
 function att:attachFunc()

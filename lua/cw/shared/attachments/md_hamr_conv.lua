@@ -14,7 +14,8 @@ att.statModifiers = {DamageMult = -2 / 21,
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "A squad automatic weapon based on the SCAR, chambered in 5.56x45MM", c = CustomizableWeaponry.textColors.VPOSITIVE},
-					   [2] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
+					   [2] = {t = "Increases capacity to 100 rounds", c = CustomizableWeaponry.textColors.POSITIVE},
+					   [3] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

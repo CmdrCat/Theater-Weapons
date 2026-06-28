@@ -145,7 +145,6 @@ SWEP.SpeedDec = 150
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
-SWEP.OverallMouseSens = .7
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"semi"}

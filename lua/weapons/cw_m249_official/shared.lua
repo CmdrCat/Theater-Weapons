@@ -104,8 +104,6 @@ if CLIENT then
 	
 	SWEP.LaserPosAdjust = Vector(0.5, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
-	
-	SWEP.OverallMouseSens = 0.7
 end
 
 SWEP.MuzzleVelocity = 915

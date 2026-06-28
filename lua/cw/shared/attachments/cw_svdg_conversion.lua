@@ -14,8 +14,9 @@ if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "Smoothbore variant that fires an experimental APFSDS round", c = CustomizableWeaponry.textColors.VPOSITIVE},
 					   [2] = {t = "Increases surface penetration by 250%", c = CustomizableWeaponry.textColors.POSITIVE},
-					   [3] = {t = "Decreases damage fall off by 20%", c = CustomizableWeaponry.textColors.POSITIVE},
-					   [4] = {t = "Decreases effective range by 85M", c = CustomizableWeaponry.textColors.NEGATIVE}}
+					   [3] = {t = "Decreases capacity to 7 rounds", c = CustomizableWeaponry.textColors.NEGATIVE},
+					   [4] = {t = "Decreases damage fall off by 20%", c = CustomizableWeaponry.textColors.POSITIVE},
+					   [5] = {t = "Decreases effective range by 85M", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
 function att:attachFunc()

@@ -10,7 +10,8 @@ HipSpreadMult = -0.99,}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Converts to a semi-auto .22 LR carbine", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+	att.description = {[1] = {t = "Converts to a semi-auto .22 LR carbine", c = CustomizableWeaponry.textColors.VPOSITIVE},
+					   [2] = {t = "Decreases capacity to 25 rounds", c = CustomizableWeaponry.textColors.NEGATIVE},}
 end
 
 function att:attachFunc()

@@ -12,7 +12,6 @@ if CLIENT then
 	SWEP.IconLetter = "w"
 	killicon.Add( "", "", Color(255, 80, 0, 150))
 	
-	SWEP.OverallMouseSens = .7
 	SWEP.MuzzleEffect = "muzzleflash_m14"
 	SWEP.PosBasedMuz = true
 	SWEP.NoDistance = true

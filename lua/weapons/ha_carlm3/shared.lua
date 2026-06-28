@@ -50,7 +50,6 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
 	
-	SWEP.OverallMouseSens = .85
 	SWEP.CustomizationMenuScale = 0.019
 	
 	SWEP.AttachmentModelsVM = {

@@ -98,10 +98,14 @@ SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {[4] = {header = "Finish", offset = {250, -250}, atts = {"doi_atow_normandycamo"}},
-[3] = {header = "Belt", offset = {800, -150}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
+[3] = {header = "Belt", offset = {800, -100}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
 [1] = {header = "Frame", offset = {-250, -200}, atts = {"doi_atow_bipodremove"}},
-[2] = {header = "Fire Control", offset = {1200, -325}, atts = {"doi_atow_burstconv"}},
+[2] = {header = "Fire Control", offset = {1200, -325}, atts = {"doi_atow_burstconv", "doi_atow_mg3conv"}},
 ["+reload"] = {header = "Ammo", offset = {200, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+
+SWEP.AttachmentExclusions = {
+	["doi_atow_150rndbelt"] = {"doi_atow_mg3conv"},
+	["am_atow_lowvel"] = {"doi_atow_mg3conv"}}
 
 SWEP.Animations = {fire = {"base_fire_1"},
 	fire_aim = {"iron_fire_1","iron_fire_2"},
@@ -155,6 +159,9 @@ SWEP.Primary.Ammo			= "AR2"
 else
 SWEP.Primary.Ammo			= "7.92x57MM"
 end
+
+SWEP.Secondary.DefaultClip	= 300
+SWEP.Secondary.Ammo			= "7.62x51MM"
 
 SWEP.FireDelay = 60/1300
 SWEP.FireSound = "DOIMG42_FIRE"
