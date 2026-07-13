@@ -46,6 +46,8 @@ if CLIENT then
 	SWEP.ReflexPos = Vector(-2.4625, -9.5, 0.095)
     SWEP.ReflexAng = Vector(0, 0, 0)
 
+
+
 	SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
     SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 
@@ -64,9 +66,8 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(8, -2, .5)
 	SWEP.CustomizeAng = Vector(10, 40, 18)
 	
-	SWEP.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
-	["md_ins2elcan"] = {[1] = Vector(-2.472, -7, -1.436), [2] = Vector(-0.4, 0, 0)}}
-	
+	SWEP.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)}, ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)}}
+	-- ON FOENEM GRAVE I DONT KNOW WHY THIS SHIT ISNT WORKING. PLEASE SAVE ME.
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
@@ -102,6 +103,7 @@ end
 
 SWEP.MuzzleVelocity = 600
 
+
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
@@ -132,7 +134,7 @@ SWEP.Animations = {fire = {"base_fire"},
 	idle = "base_idle",
 	draw = "base_draw"}
 
-SWEP.SpeedDec = 10
+SWEP.SpeedDec = -200
 SWEP.FOVPerShot = 0
 
 SWEP.Slot = 2
