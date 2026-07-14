@@ -22,8 +22,8 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 0, y = -1, z = 2}
 	SWEP.ForeGripOffsetCycle_Draw = 0
-	SWEP.ForeGripOffsetCycle_Reload = 0.8
-	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.87
+	SWEP.ForeGripOffsetCycle_Reload = 0
+	SWEP.ForeGripOffsetCycle_Reload_Empty = 0
 	
 	SWEP.IronsightPos = Vector(-2.747, -4.624, 1.11)
 	SWEP.IronsightAng = Vector(0, 0, 0)
@@ -47,17 +47,13 @@ if CLIENT then
 	SWEP.SprintViewNormals = {x = 1, y = -1, z = 1}
 
 	SWEP.AttachmentModelsVM = {
-		
+		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.375, -5, -1.9), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(-0.042, -2.2, 2.809), angle = Angle(0, 0, 0), size = Vector(.5, .5, .5)},
 		["md_saker"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0, 9.5, 0), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.15, 3.25, 2.9), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
         ["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1, 3.05), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 	
-
-	
-
-
 	SWEP.LaserPosAdjust = {x = 0, y = 0, z = 0.25}
 	SWEP.LaserAngAdjust = {p = 0, y = 180, r = 0}
 	SWEP.SightWithRail = true
@@ -75,6 +71,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-500, -300},  atts = {"md_microt1", "too_reflex_exps" }},
 [2] = {header = "Barrel", offset = {800, 200}, atts = {"md_saker"}},
 [3] = {header = "Laser", offset = {-500, 200}, atts = {"md_anpeq15"}},
+[4] = {header = "Foregrip", offset = {-500, -800}, atts = {"md_foregrip"}},
 ["+reload"] = {header = "Ammo", offset = {800, -300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap",}}}
 
 SWEP.Animations = {fire = {"base_fire"},
@@ -133,9 +130,9 @@ SWEP.FireSoundSuppressed = "DOITHOM1928_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.25
 
 SWEP.HipSpread = 2
-SWEP.AimSpread = 0.009
-SWEP.VelocitySensitivity = 1.5
-SWEP.MaxSpreadInc = 0.05
+SWEP.AimSpread = 0.006
+SWEP.VelocitySensitivity = 0
+SWEP.MaxSpreadInc = 0.005
 SWEP.SpreadPerShot = 0.001
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
@@ -150,8 +147,20 @@ SWEP.ReloadHalt_Empty = 4.3
 
 SWEP.UseHands = true
 
-function SWEP:IndividualThink()
+SWEP.Trivia = {text = "Notable for its Kriss Super V mechanism, which reduces muzzle climb", x = 0, y = -750}
+
+SWEP.ForegripOverride = true
+SWEP.ForegripParent = "nah"
+
+SWEP.ForegripOverridePos = {
+		["ValveBiped.Bip01_L_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.75, .0, .3), angle = Angle(0, 0, 15) },
+		["L Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, .40, -.5), angle = Angle(5, 2, -5) },
+		["L Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5, -3, -5) },
+		["L Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 6, 0) }}
 	
+
+function SWEP:IndividualThink()
+
 	if self.FireMode == "semi" then
 	self.Owner.ViewAff = 0
 	end
