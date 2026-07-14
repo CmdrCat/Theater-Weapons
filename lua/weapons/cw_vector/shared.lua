@@ -31,8 +31,8 @@ if CLIENT then
 	SWEP.PronePos = Vector(-7.397, -2.497, -1.551)
 	SWEP.ProneAng = Vector(5.618, -49.056, -15.311)
 
-	SWEP.MicroT1Pos = Vector(-2.747, -2.624, 0.5)
-	SWEP.MicroT1Ang = Vector(-0.026, 0, 0)	
+	SWEP.MicroT1Pos = Vector(-2.747, -2.624, 1.21)
+	SWEP.MicroT1Ang = Vector(-1.668, 0, 0)	
 		
 	SWEP.EXPSPos = Vector(-2.75, -5, 0.55)
 	SWEP.EXPSAng = Vector(0, 0, 0)
@@ -47,8 +47,8 @@ if CLIENT then
 	SWEP.SprintViewNormals = {x = 1, y = -1, z = 1}
 
 	SWEP.AttachmentModelsVM = {
-		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.375, -5, -2.05), angle = Angle(0, 0, 0), adjustment = {min = -5.971, max = -5, axis = "y", inverseOffsetCalc = false}, size = Vector(0.699, 0.699, 0.699)},
-		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0.022, -2.2, 3.27), angle = Angle(0, 180, 0), size = Vector(.5, .5, .5)},
+		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.375, -5, -1.9), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(-0.042, -2.2, 2.809), angle = Angle(0, 0, 0), size = Vector(.5, .5, .5)},
 		["md_saker"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0, 9.5, 0), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.15, 3.25, 2.9), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
         ["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1, 3.05), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
@@ -129,17 +129,17 @@ SWEP.FireSound = "CW_VECTOR_FIRE"
 SWEP.FireSoundSuppressed = "DOITHOM1928_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.25
 
-SWEP.HipSpread = 0.15
-SWEP.AimSpread = 0.005
+SWEP.HipSpread = 2
+SWEP.AimSpread = 0.006
 SWEP.VelocitySensitivity = 0
 SWEP.MaxSpreadInc = 0.005
-SWEP.SpreadPerShot = 0.0002
-SWEP.SpreadCooldown = 0.0005
+SWEP.SpreadPerShot = 0.001
+SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
 SWEP.Damage = 28
 SWEP.DeployTime = 0.8
 
-SWEP.ReloadSpeed = 1.6
+SWEP.ReloadSpeed = 1.3
 SWEP.ReloadTime = 2
 SWEP.ReloadTime_Empty = 2.2
 SWEP.ReloadHalt = 3.2
