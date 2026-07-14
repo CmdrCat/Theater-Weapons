@@ -4,7 +4,7 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "Vector"
+	SWEP.PrintName = "KRISS Vector"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 
@@ -168,7 +168,7 @@ SWEP.ReloadHalt_Empty = 4.3
 
 SWEP.UseHands = true
 
-SWEP.Trivia = {text = "Notable for its Kriss Super V mechanism, which reduces muzzle climb", x = 0, y = -750}
+SWEP.Trivia = {text = "Notable for its KRISS Super V mechanism, which reduces muzzle climb.", x = 0, y = -750}
 
 SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"
