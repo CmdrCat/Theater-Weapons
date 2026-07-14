@@ -37,6 +37,14 @@ if CLIENT then
 	SWEP.EXPSPos = Vector(-2.75, -5, 0.55)
 	SWEP.EXPSAng = Vector(0, 0, 0)
 
+	SWEP.CustomizePos_Orig = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng_Orig = Vector(17.009, 29.971, 16.669)
+
+	SWEP.CustomizePos = Vector(5.488, -1.627, -1.821)
+	SWEP.CustomizeAng = Vector(17.009, 29.971, 16.669)
+
+	SWEP.CustomizePos_Akimbo = Vector(0, 0, -7.5)
+	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
 	SWEP.BackupSights = {["too_reflex_exps"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)},
 	["md_microt1"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)}}
@@ -71,7 +79,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-500, -300},  atts = {"md_microt1", "too_reflex_exps" }},
 [2] = {header = "Barrel", offset = {800, 200}, atts = {"md_saker"}},
 [3] = {header = "Laser", offset = {-500, 200}, atts = {"md_anpeq15"}},
-[4] = {header = "Foregrip", offset = {-500, -800}, atts = {"md_foregrip"}},
+[4] = {header = "Foregrip", offset = {-500, -800}, atts = {"md_foregrip", "cw_akimbo"}},
 ["+reload"] = {header = "Ammo", offset = {800, -300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap",}}}
 
 SWEP.Animations = {fire = {"base_fire"},
@@ -79,6 +87,17 @@ SWEP.Animations = {fire = {"base_fire"},
 	reload_empty = "base_reloadempty",
 	idle = "base_idle",
 	draw = "base_draw"}
+
+SWEP.Animations_Akimbo = {fire = {"base_fire"},
+	reload = "base_reload",
+	reload_empty = "base_reloadempty",
+	idle = "base_idle",
+	draw = "base_draw",
+	fire_right = {"base_fire"},
+	reload_right = "base_reload",
+	reload_empty_right = "base_reloadempty",
+	idle_right = "base_idle",
+	draw_right = "base_draw"}
 	
 SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 
@@ -113,6 +132,8 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/v_tfa_vector.mdl"
 SWEP.WorldModel		= "models/weapons/w_tfa_vector.mdl"
+SWEP.ViewModel_AkimboL = "models/weapons/v_tfa_vector.mdl"
+SWEP.ViewModel_AkimboR = "models/weapons/v_tfa_vector.mdl"
 SWEP.NearWallEnabled = false
 
 SWEP.Spawnable			= true
@@ -152,11 +173,18 @@ SWEP.Trivia = {text = "Notable for its Kriss Super V mechanism, which reduces mu
 SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"
 
+SWEP.BaseArm = "L Clavicle"
+SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
 SWEP.ForegripOverridePos = {
 		["ValveBiped.Bip01_L_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.75, .0, .3), angle = Angle(0, 0, 15) },
 		["L Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, .40, -.5), angle = Angle(5, 2, -5) },
 		["L Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5, -3, -5) },
-		["L Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 6, 0) }}
+		["L Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 6, 0) },
+		["akimbo"] = {
+     		["L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(0, -50, 0), angle = Angle(0, 0, 0) }},
+		["nah"] = {
+   			["L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}}
 	
 
 function SWEP:IndividualThink()
@@ -180,5 +208,11 @@ function SWEP:IndividualThink()
 	if self.ActiveAttachments.am_atow_heavy then
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
+	if self.ActiveAttachments.cw_akimbo then
+		self.ViewModelOffsetPos = Vector(-2, 0, -1)
+		self.ViewModelOffsetAng = Angle(0, 0, -30)
+		self.ViewModelOffsetPos2 = Vector(2, 0, -1)
+		self.ViewModelOffsetAng2 = Angle(0, 0, 30)
 	end
 end

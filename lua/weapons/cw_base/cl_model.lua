@@ -393,7 +393,10 @@ function SWEP:offsetBones()
 		if m203 then
 			if self.dt.M203Active or UnPredictedCurTime() < self.M203Time then
 				self:offsetM203ArmBone(true)
-				ManipulateBonePosition(vm, self.BaseArmBone, self.BaseArmBoneOffset)
+				
+				if self.BaseArmBone then
+					ManipulateBonePosition(vm, self.BaseArmBone, self.BaseArmBoneOffset)
+				end
 				
 				return
 			else
@@ -421,8 +424,10 @@ function SWEP:offsetBones()
 					v.curAng = LerpAngleCW20(FT * 15, v.curAng, Ang0)
 				end
 				
-				ManipulateBonePosition(vm, v.bone, v.curPos)
-				ManipulateBoneAngles(vm, v.bone, v.curAng)
+				if v.bone then
+					ManipulateBonePosition(vm, v.bone, v.curPos)
+					ManipulateBoneAngles(vm, v.bone, v.curAng)
+				end
 			end
 		end
 	end
