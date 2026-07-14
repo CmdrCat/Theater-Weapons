@@ -55,18 +55,29 @@ end
 
 function CustomizableWeaponry.colorableParts:setColor(index, position)
 	-- can't load if not enough info is provided
-	if not index or not position then
+	if not index or not position or not self then
+		return
+	end
+
+	if type(self.SightColors) ~= "table" then
+	
+	local target = self.SightColors[index]
+
+	if not target then
 		return
 	end
 	
-	local target = self.SightColors[index]
-	local colors = CustomizableWeaponry.colorableParts.colors[target.type]
+	local colors = CustomizableWeaponry.colorableParts.colors and CustomizableWeaponry.colorableParts.colors[target.type]
 	
 	if not colors then
 		return
 	end
 	
 	colors = colors[position]
+
+	if not colors then
+		return
+	end
 	
 	target.last = position
 	target.color = colors.color
@@ -74,13 +85,25 @@ function CustomizableWeaponry.colorableParts:setColor(index, position)
 end
 
 function CustomizableWeaponry.colorableParts:resetColors()
+	if not self or type(self.SightColors) ~= "table" then
+		return
+	end
+
 	for k, v in pairs(self.SightColors) do
 		CustomizableWeaponry.colorableParts.resetColor(self, v)
 	end
 end
 
 function CustomizableWeaponry.colorableParts:resetColor(entry)
-	local def = CustomizableWeaponry.colorableParts.defaultColors[entry.type]
+	if not entry then
+		return
+	end
+
+	local def = CustomizableWeaponry.colorableParts.defaultColors and CustomizableWeaponry.colorableParts.defaultColors[entry.type]
+
+	if not def then
+		return
+	end
 	
 	entry.last = 1
 	entry.color = def.color
