@@ -126,7 +126,7 @@ SWEP.RVBYawMod = 1.5
 SWEP.RVBRollMod = 1
 
 SWEP.Primary.ClipSize		= 1
-SWEP.Primary.DefaultClip	= 1
+SWEP.Primary.DefaultClip	= 3
 SWEP.Primary.Automatic		= false
 SWEP.Chamberable			= false
 
