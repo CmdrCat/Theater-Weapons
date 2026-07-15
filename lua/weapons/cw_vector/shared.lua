@@ -37,6 +37,12 @@ if CLIENT then
 	SWEP.EXPSPos = Vector(-2.75, -5, 0.55)
 	SWEP.EXPSAng = Vector(0, 0, 0)
 
+	SWEP.ENFORPos = Vector(-2.75, -6, 0.5)
+    SWEP.ENFORAng = Vector(0, 0, 0)
+
+	SWEP.ACOGPos = Vector(-2.733, -5, 0.36)
+	SWEP.ACOGAng = Vector(0, 0, 0)
+
 	SWEP.CustomizePos_Orig = Vector(5.488, -1.627, -1.821)
 	SWEP.CustomizeAng_Orig = Vector(17.009, 29.971, 16.669)
 
@@ -47,7 +53,9 @@ if CLIENT then
 	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
 	SWEP.BackupSights = {["too_reflex_exps"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)},
-	["md_microt1"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)}}
+	["md_microt1"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)},
+	["md_acog"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)}, -- id rather kill myself than actually line that up
+	["corioenforcer"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)}}
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 1.5, hor = 3, roll = 1, forward = 1, pitch = 1}
 	SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
@@ -55,13 +63,27 @@ if CLIENT then
 	SWEP.SprintViewNormals = {x = 1, y = -1, z = 1}
 
 	SWEP.AttachmentModelsVM = {
-		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.375, -5, -2.05), angle = Angle(0, 0, 0), adjustment = {min = -5.971, max = -5, axis = "y", inverseOffsetCalc = false}, size = Vector(0.699, 0.699, 0.699)},
-		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0.022, -2.2, 3.27), angle = Angle(0, 180, 0), size = Vector(.5, .5, .5)},
+		--muzzle
 		["md_saker"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0, 9.5, 0), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
-		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.15, 3.25, 2.9), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
-        ["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1, 3.05), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
-	}
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "weapon", rel = "", pos = Vector(-0.05, 12, 1.25), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
+		--foregrip
+		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.375, -5, -2.05), angle = Angle(0, 0, 0), adjustment = {min = -5.971, max = -5, axis = "y", inverseOffsetCalc = false}, size = Vector(0.699, 0.699, 0.699)},
+		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(-0.03, 4.5, 1), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(0, 4.5, 0.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		--sight
+		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0.022, -2.2, 3.27), angle = Angle(0, 180, 0), size = Vector(.5, .5, .5)},
+		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "weapon", rel = "", pos = Vector(0.1, -1.70, 2.65), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1, 3.05), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-0.35, -7.5 ,-2.75 ), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+		--laser
+		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.15, 2.5, 2.9), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
+		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "weapon", rel = "", pos = Vector(0, 2.15, 3), angle = Angle(0, -90, 0), size = Vector(1, 1, 1) },
+	}	
+     
+		
 	
+	SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
+    SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.LaserPosAdjust = {x = 0, y = 0, z = 0.25}
 	SWEP.LaserAngAdjust = {p = 0, y = 180, r = 0}
 	SWEP.SightWithRail = true
@@ -76,11 +98,13 @@ SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.MagBGs = {main = 4, round15 = 0, round30 = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {-500, -300},  atts = {"md_microt1", "too_reflex_exps" }},
-[2] = {header = "Barrel", offset = {800, 200}, atts = {"md_saker"}},
-[3] = {header = "Laser", offset = {-500, 200}, atts = {"md_anpeq15"}},
-[4] = {header = "Foregrip", offset = {-500, -800}, atts = {"md_foregrip", "cw_akimbo"}},
-["+reload"] = {header = "Ammo", offset = {800, -300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap",}}}
+SWEP.Attachments = {[1] = {header = "Sight", offset = {-500, -300},  atts = {"md_microt1", "too_reflex_exps", "corioenforcer", "md_acog"}},
+[2] = {header = "Barrel", offset = {800, -300}, atts = {"md_saker", "hard20"}},
+[3] = {header = "Laser", offset = {-500, 160}, atts = {"md_anpeq15","ftacgrimline"}},
+[4] = {header = "Foregrip", offset = {-500, -750}, atts = {"md_foregrip","ftactiger_r", "bruentiltgrip_r", "cw_akimbo"}},
+["+reload"] = {header = "Ammo", offset = {800, -750}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap",}}}
+
+SWEP.Trivia = {text = "Notable for its KRISS Super V mechanism, which reduces muzzle climb.", x = -300, y = -850}
 
 SWEP.Animations = {fire = {"base_fire"},
 	reload = "base_reload",
@@ -167,8 +191,6 @@ SWEP.ReloadHalt = 3.2
 SWEP.ReloadHalt_Empty = 4.3
 
 SWEP.UseHands = true
-
-SWEP.Trivia = {text = "Notable for its KRISS Super V mechanism, which reduces muzzle climb.", x = 0, y = -750}
 
 SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"
