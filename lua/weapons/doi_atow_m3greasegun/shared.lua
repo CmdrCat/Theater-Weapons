@@ -26,6 +26,12 @@ if CLIENT then
 	SWEP.DamageFallOff_Orig = .6
 	
 	SWEP.ForeGripOffsetCycle_Draw = 0
+
+	SWEP.BackupSights = {
+		["md_reflex"] = {[1] = Vector(-4, -2, 1), [2] = Vector(0,0,-45)},
+		["too_reflex_exps"] = {[1] = Vector(-4, -2, 1), [2] = Vector(0,0,-45)},
+		["md_acog"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)}, -- id rather kill myself than actually line that up, again.
+	}
 	
 	SWEP.Shell = "khr9x19"
 	SWEP.ShellScale = 1.59
@@ -33,11 +39,26 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = -5, y = 2, z = 0}
 
+    SWEP.LaserPosAdjust = Vector(-1, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 180, 0) 
+
+	SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
+    SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+
 	SWEP.IronsightPos = Vector(-2.5062, -2, 1.28)
 	SWEP.IronsightAng = Vector(-0.0021, 0.0392, 6)
+
+	SWEP.ReflexPos = Vector(-2.4275, -6, 0.5)
+    SWEP.ReflexAng = Vector(0, 0, 6.5)
+
+	SWEP.EXPSPos = Vector(-2.4, -3, 0.275)
+	SWEP.EXPSAng = Vector(0, 0, 6.5)
+
+	SWEP.ACOGPos = Vector(-2.345, -4, -0.135)
+	SWEP.ACOGAng = Vector(0, 0, 6)
 	
-	SWEP.CustomizePos = Vector(9, -2, -1)
-	SWEP.CustomizeAng = Vector(15, 37, 10)
+	SWEP.CustomizePos = Vector(10, 5 , 0.5)
+	SWEP.CustomizeAng = Vector(0, 40, 0)
 	
 	SWEP.SprintPos = Vector(2, 0, -1)
 	SWEP.SprintAng = Vector(-15.478, 20.96, -15)
@@ -60,15 +81,30 @@ if CLIENT then
 	SWEP.AttachmentModelsVM = {["doi_atow_m3stock"] = {model = "models/khrcw2/doipack/attachments/m3stockextended.mdl", pos = Vector(2.72, -8, 3.475), angle = Angle(180, 90, 180), size = Vector(1, 1, 1), bone = "A_Stock"},
 	["m3stockcollapsed"] = {model = "models/khrcw2/doipack/attachments/m3stockcollapsed.mdl", pos = Vector(2.72, -8, 3.475), angle = Angle(180, 90, 180), size = Vector(1, 1, 1), bone = "A_Stock"},
 	["doi_atow_m3flashhider"] = {model = "models/khrcw2/doipack/attachments/m3flashhider.mdl", pos = Vector(-23.75, -2.7, 2.55), angle = Angle(180, 180, 180), size = Vector(1, 1, 1), bone = "A_Muzzle"},
-	["doi_atow_m3a1suppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(-2.18, -8.5, -1.65), angle = Angle(180, 90, 0), size = Vector(1, 1.1, 1.1), bone = "Weapon"}
-	}
-	
+	["doi_atow_m3a1suppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(-2.18, -8.5, -1.65), angle = Angle(180, 90, 0), size = Vector(1, 1.1, 1.1), bone = "Weapon"},
+	["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Weapon", rel = "", pos = Vector(0.235, -0.75, 0.25), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Weapon", rel = "", pos = Vector(-0.027, -1, 2.30), angle = Angle(0, 0, 0), size = Vector(0.65, 0.65, 0.65), color = Color(255, 255, 255, 0)},
+    ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-0.375, -8, -3.55 ), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+	["ftacgrimline"] = {model = "models/shared/lasers/r_ftacgrimline.mdl", pos = Vector(0, 0.05, 2), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"},
+	["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", pos = Vector(0, 0, 1.90), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6), bone = "Weapon"},
+	["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "Weapon", rel = "", pos = Vector(0, 11, 0.825), angle = Angle(0, -90, 0), size = Vector(1, 0.8, 0.8)},
+	["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -3.25, 2), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+}
 		SWEP.AttachmentPosDependency = {
+	["hard20"] = {
+		["doi_atow_m3carbine"] = Vector(0, 25, 0.825),
+		},
 	["doi_atow_m3flashhider"] = {
 		["doi_atow_m3carbine"] = Vector(-15.75, -2.7, 2.55),
 		},
 	}
 	
+	SWEP.AttachmentDependencies = {
+	["md_anpeq15"] = {"md_reflex", "too_reflex_exps"},
+	["ftacgrimline"] = {"md_reflex", "too_reflex_exps"},
+
+} 
+
 		SWEP.ForegripOverridePos = {
 	["nah"] = {
 	["ValveBiped.Bip01_L_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.75, .0, -.4), angle = Angle(0, 0, 0) },
@@ -92,12 +128,16 @@ SWEP.CanRestOnObjects = true
 SWEP.SlingBGs = {main = 3, off = 0, on = 1}
 SWEP.BarrelBGs = {main = 2, smg = 0, carbine = 1}
 
-SWEP.Attachments = {[2] = {header = "Barrel", offset = {-400, 50}, atts = {"doi_atow_m3carbine"}, exclusions = {doi_atow_m3a1suppressor = true}},
-[1] = {header = "Muzzle", offset = {-500, -350}, atts = {"doi_atow_m3flashhider","doi_atow_m3a1suppressor"}},
-[5] = {header = "Accessory", offset = {600, -300}, atts = {"doi_atow_sling"}},
-[3] = {header = "Receiver", offset = {-200, 450}, atts = {"doi_atow_m3pam1conv", "doi_atow_heavybolt"}},
-[4] = {header = "Body", offset = {1200, 0}, atts = {"doi_atow_m3stock"}},
-["+reload"] = {header = "Ammo", offset = {450, 270}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}}
+SWEP.Trivia = {text = "Commonly referred to as the Greaser, owing to its visual similarity to a mechanic's tool",  x = -200, y = -800}
+
+SWEP.Attachments = {[2] = {header = "Barrel", offset = {-500, -200}, atts = {"doi_atow_m3carbine"}, exclusions = {doi_atow_m3a1suppressor = true}},
+[1] = {header = "Muzzle", offset = {-500, -650}, atts = {"doi_atow_m3flashhider", "hard20", "doi_atow_m3a1suppressor"}},
+[5] = {header = "Accessory", offset = {600, -200}, atts = {"doi_atow_sling"}},
+[3] = {header = "Receiver", offset = {-500, 250}, atts = {"doi_atow_m3pam1conv", "doi_atow_heavybolt"}},
+[4] = {header = "Body", offset = {1400, -200}, atts = {"doi_atow_m3stock"}},
+[6]	= {header = "Sights", offset = {600, -650}, atts = {"md_reflex", "too_reflex_exps", "md_acog"}},
+[7] = {header = "Lasers", offset = {1400, -650}, atts = {"md_anpeq15", "ftacgrimline"}},
+["+reload"] = {header = "Ammo", offset = {600, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire_3"},
 	fire_aim = {"iron_fire","iron_fire_a","iron_fire_b"},
@@ -187,6 +227,11 @@ SWEP.ReloadTime_Empty = 3.4
 SWEP.ReloadHalt_Empty = 4.4
 
 function SWEP:IndividualThink()
+
+self.Trivia = {text = "Commonly referred to as the Greaser, owing to its visual similarity to a mechanic's tool", x = -200, y = -800}
+if self.ActiveAttachments.md_acog then
+	self.Trivia = {text = "Thank you for choosing Trijicon! If you experience any problems with your brand new optic, feel free to contact customer support!", x = -600, y = -800}
+end
 
 if self.FireMode == "semi" then
 	self.Owner.ViewAff = 0
