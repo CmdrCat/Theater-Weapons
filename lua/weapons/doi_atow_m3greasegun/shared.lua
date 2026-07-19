@@ -83,7 +83,7 @@ if CLIENT then
 	["doi_atow_m3flashhider"] = {model = "models/khrcw2/doipack/attachments/m3flashhider.mdl", pos = Vector(-23.75, -2.7, 2.55), angle = Angle(180, 180, 180), size = Vector(1, 1, 1), bone = "A_Muzzle"},
 	["doi_atow_m3a1suppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(-2.18, -8.5, -1.65), angle = Angle(180, 90, 0), size = Vector(1, 1.1, 1.1), bone = "Weapon"},
 	["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Weapon", rel = "", pos = Vector(0.235, -0.75, 0.25), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
-	["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Weapon", rel = "", pos = Vector(-0.027, -1, 2.30), angle = Angle(0, 0, 0), size = Vector(0.65, 0.65, 0.65), color = Color(255, 255, 255, 0)},
+	["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "Weapon", rel = "", pos = Vector(-0.027, -1, 2.30), angle = Angle(0, 0, 0), adjustment = {min = -1, max = -0.25, axis = "y", inverseOffsetCalc = true}, size = Vector(0.65, 0.65, 0.65), color = Color(255, 255, 255, 0)},
     ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-0.375, -8, -3.55 ), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
 	["ftacgrimline"] = {model = "models/shared/lasers/r_ftacgrimline.mdl", pos = Vector(0, 0.05, 2), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"},
 	["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", pos = Vector(0, 0, 1.90), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6), bone = "Weapon"},
@@ -130,12 +130,12 @@ SWEP.BarrelBGs = {main = 2, smg = 0, carbine = 1}
 
 SWEP.Trivia = {text = "Commonly referred to as the Greaser, owing to its visual similarity to a mechanic's tool",  x = -200, y = -800}
 
-SWEP.Attachments = {[2] = {header = "Barrel", offset = {-500, -200}, atts = {"doi_atow_m3carbine"}, exclusions = {doi_atow_m3a1suppressor = true}},
-[1] = {header = "Muzzle", offset = {-500, -650}, atts = {"doi_atow_m3flashhider", "hard20", "doi_atow_m3a1suppressor"}},
+SWEP.Attachments = {[3] = {header = "Barrel", offset = {-500, -200}, atts = {"doi_atow_m3carbine"}, exclusions = {doi_atow_m3a1suppressor = true}},
+[2] = {header = "Muzzle", offset = {-500, -650}, atts = {"doi_atow_m3flashhider", "hard20", "doi_atow_m3a1suppressor"}},
 [5] = {header = "Accessory", offset = {600, -200}, atts = {"doi_atow_sling"}},
-[3] = {header = "Receiver", offset = {-500, 250}, atts = {"doi_atow_m3pam1conv", "doi_atow_heavybolt"}},
+[6] = {header = "Receiver", offset = {-500, 250}, atts = {"doi_atow_m3pam1conv", "doi_atow_heavybolt"}},
 [4] = {header = "Body", offset = {1400, -200}, atts = {"doi_atow_m3stock"}},
-[6]	= {header = "Sights", offset = {600, -650}, atts = {"md_reflex", "too_reflex_exps", "md_acog"}},
+[1]	= {header = "Sights", offset = {600, -650}, atts = {"md_reflex", "too_reflex_exps", "md_acog"}},
 [7] = {header = "Lasers", offset = {1400, -650}, atts = {"md_anpeq15", "ftacgrimline"}},
 ["+reload"] = {header = "Ammo", offset = {600, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}}
 

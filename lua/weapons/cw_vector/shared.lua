@@ -14,7 +14,7 @@ if CLIENT then
 	SWEP.IconLetter = "x"
 	killicon.AddFont("cw_mp5", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
-	SWEP.MuzzleEffect = "muzzleflash_smg"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = true
 	SWEP.SnapToGrip = true
 	SWEP.Shell = "smallshell"
@@ -52,10 +52,10 @@ if CLIENT then
 	SWEP.CustomizePos_Akimbo = Vector(0, 0, -7.5)
 	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
-	SWEP.BackupSights = {["too_reflex_exps"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)},
-	["md_microt1"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)},
-	["md_acog"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)}, -- id rather kill myself than actually line that up
-	["corioenforcer"] = {[1] = Vector(-4.75, 0, 0), [2] = Vector(0, 0, -40)}}
+	SWEP.BackupSights = {["too_reflex_exps"] = {[1] = Vector(-4.25, 0, 0.75), [2] = Vector(0, 0, -50)},
+	["md_microt1"] = {[1] = Vector(-4.25, 2, 0.75), [2] = Vector(0, 0, -50)},
+	["md_acog"] = {[1] = Vector(-2.735, 0, -0.753), [2] = Vector(0, 0.028, 0)}, -- there you go
+	["corioenforcer"] = {[1] = Vector(-4.25, -1.25, 0.75), [2] = Vector(0, 0, -50)}}
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 1.5, hor = 3, roll = 1, forward = 1, pitch = 1}
 	SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
@@ -64,17 +64,17 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		--muzzle
-		["md_saker"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0, 9.5, 0), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
-		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "weapon", rel = "", pos = Vector(-0.05, 12, 1.25), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
+		["md_saker"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0, 10.138, 0.034), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "weapon", rel = "", pos = Vector(-0.05, 12.79, 1.017), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
 		--foregrip
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.375, -5, -2.05), angle = Angle(0, 0, 0), adjustment = {min = -5.971, max = -5, axis = "y", inverseOffsetCalc = false}, size = Vector(0.699, 0.699, 0.699)},
-		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(-0.03, 4.5, 1), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(-0.03, 4.5, 0.155), angle = Angle(0, -90, 0), adjustment = {min = 4.5, max = 5.147, axis = "y", inverseOffsetCalc = false}, size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(0, 4.5, 0.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		--sight
-		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0.022, -2.2, 3.27), angle = Angle(0, 180, 0), size = Vector(.5, .5, .5)},
-		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "weapon", rel = "", pos = Vector(0.1, -1.70, 2.65), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1, 3.05), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-0.35, -7.5 ,-2.75 ), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(0.022, -2.2, 3.27), angle = Angle(0, 180, 0), adjustment = {min = -2.714, max = -0.547, axis = "y", inverseOffsetCalc = false}, size = Vector(.5, .5, .5)},
+		["corioenforcer"] = { type = "Model", model = "models/shared/optics/r_corio_enforcer.mdl", bone = "weapon", rel = "", pos = Vector(0.1, -1.70, 2.65), angle = Angle(0, -90, 0), adjustment = {min = -2.236, max = -0.961, axis = "y", inverseOffsetCalc = false}, size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", rel = "", pos = Vector(0, -1, 3.05), angle = Angle(0, -90, 0), adjustment = {min = -1.986, max = -0.940, axis = "y", inverseOffsetCalc = false}, size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-0.35, -7.5 ,-2.75 ), angle = Angle(0, 0, 0), adjustment = {min = -8.165, max = -7.5, axis = "y", inverseOffsetCalc = false}, size = Vector(1, 1, 1)},
 		--laser
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.15, 2.5, 2.9), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
 		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "weapon", rel = "", pos = Vector(0, 2.15, 3), angle = Angle(0, -90, 0), size = Vector(1, 1, 1) },
