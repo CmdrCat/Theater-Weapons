@@ -1414,7 +1414,9 @@ function SWEP:Think()
 	if self.HoldToAim then
 		if (SP and SERVER) or not SP then
 			if self.dt.State == CW_AIMING then
-				if not self.Owner:OnGround() or Length(GetVelocity(self.Owner)) >= self.Owner:GetRunSpeed() * self.LoseAimVelocity or not self.Owner:KeyDown(IN_ATTACK2) then
+				local shouldLowerAim = not self.Owner:KeyDown(IN_ATTACK2)
+				
+				if shouldLowerAim then
 					self.dt.State = CW_IDLE
 					self:SetNextSecondaryFire(CT + 0.2)
 					self:EmitSound("CW_LOWERAIM")
@@ -1488,7 +1490,7 @@ function SWEP:Think()
 				self.FromActionToNormalWait = CT + 0.3
 			else
 				if CT > self.FromActionToNormalWait then
-					if self.dt.State != CW_IDLE then
+					if self.dt.State ~= CW_IDLE and self.dt.State ~= CW_AIMING and self.dt.State ~= CW_CUSTOMIZE then
 						self.dt.State = CW_IDLE
 						self:SetNextPrimaryFire(CT + 0.3)
 						self:SetNextSecondaryFire(CT + 0.3)
@@ -2469,7 +2471,7 @@ if self.isDualwield then
 		end
 	end
 	
-	if not self.Owner:OnGround() or Length(GetVelocity(self.Owner)) >= self.Owner:GetWalkSpeed() * self.RunStateVelocity then
+	if self.Owner:OnGround() and Length(GetVelocity(self.Owner)) >= self.Owner:GetWalkSpeed() * self.RunStateVelocity then
 		return
 	end
 	

@@ -40,10 +40,6 @@ function SWEP:canCustomize()
 		return false
 	end
 	
-	if not self.Owner:OnGround() then
-		return false
-	end
-	
 	return true
 end
 
@@ -673,14 +669,6 @@ function SWEP:canOpenInteractionMenu()
 	local CT = CurTime()
 	
 	if CT < self.ReloadWait or CT < self.BipodDelay or self.dt.BipodDeployed then
-		return false
-	end
-	
-	if Length(GetVelocity(self.Owner)) >= self.Owner:GetWalkSpeed() * self.RunStateVelocity then
-		return false
-	end
-	
-	if not self.Owner:OnGround() then
 		return false
 	end
 	
