@@ -206,6 +206,7 @@ if CLIENT then
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
 	SWEP.M203CameraRotation = {p = -90, y = 0, r = -90}
 	
+	SWEP.MaterialIndex = 15
 	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
@@ -284,8 +285,9 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {-100, -600},  atts = {"md
 	[3] = {header = "Handguard", offset = {-650, 350}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-700, -150}, atts = {"ftacgrimline", "md_anpeq15"}},	
 	[5] = {header = "Conversion", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
+	[6] = {header = "Skins", offset = {1200, 300}, atts = {"md_skinmicrochip", "md_skinmosaic", "md_skinrunes", "md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {1450, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	["+reload"] = {header = "Ammo", offset = {1500, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	["+reload"] = {header = "Ammo", offset = {1500, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
 		["xrkonpoint"] = {"too_optic_category_reflex"},
