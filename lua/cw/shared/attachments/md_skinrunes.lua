@@ -17,7 +17,14 @@ function att:attachFunc()
 	end
 
     wep.CW_VM:SetSubMaterial(0, "")
-    wep.CW_VM:SetSubMaterial(self.MaterialIndex, "models/XQM/LightLinesRed_tool")
+	for i, index in ipairs(self.MaterialIndexPrimary) do
+		wep.CW_VM:SetSubMaterial(index, "models/XQM/LightLinesRed_tool")
+	end
+	if self.MaterialIndexSecondary then
+		for i, index in ipairs(self.MaterialIndexSecondary) do
+			wep.CW_VM:SetSubMaterial(index, "models/rendertarget")
+		end
+	end
 end
 
 function att:detachFunc()
@@ -25,7 +32,14 @@ function att:detachFunc()
 		return
 	end
 
-    wep.CW_VM:SetSubMaterial(self.MaterialIndex, "")
+    for i, index in ipairs(self.MaterialIndexPrimary) do
+		wep.CW_VM:SetSubMaterial(index, "")
+	end
+	if self.MaterialIndexSecondary then
+		for i, index in ipairs(self.MaterialIndexSecondary) do
+			wep.CW_VM:SetSubMaterial(index, "")
+		end
+	end
     wep.CW_VM:SetSubMaterial(0, "")
 end
 

@@ -18,12 +18,12 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self.Trivia = {text = "The FFV-553B is a training adapter, allowing the user to fire a 7.62x51MM tracer round.", x = -1000, y = -800}
+	self.Trivia = {text = "The FFV-553B is a training adapter, allowing the user to fire a 7.62x51MM tracer round.", x = -1000, y = -1050}
 	self.FireSound = "CW_TOO_M40_FIRE"
 end
 
 function att:detachFunc()
-	self.Trivia = {text = "The integrated scope has adjustable zoom.", x = -1000, y = -800}
+	self.Trivia = {text = "The integrated scope has adjustable zoom.", x = -1000, y = -1050}
 	self.FireSound = "CGM3_FIRE"
 end
 

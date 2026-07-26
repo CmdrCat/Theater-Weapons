@@ -56,6 +56,9 @@ if CLIENT then
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
+
+	SWEP.MaterialIndexPrimary = {0}
+	SWEP.MaterialIndexSecondary = {1}
 	
 	SWEP.AttachmentModelsVM = {
 	}
@@ -97,9 +100,9 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
-SWEP.Attachments = {[4] = {header = "Finish", offset = {250, -250}, atts = {"doi_atow_normandycamo"}},
-[3] = {header = "Belt", offset = {800, -100}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
-[1] = {header = "Frame", offset = {-250, -200}, atts = {"doi_atow_bipodremove"}},
+SWEP.Attachments = {[4] = {header = "Finish", offset = {-120, -325}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+[3] = {header = "Belt", offset = {800, -50}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
+[1] = {header = "Frame", offset = {-350, -200}, atts = {"doi_atow_bipodremove"}},
 [2] = {header = "Fire Control", offset = {1200, -325}, atts = {"doi_atow_burstconv", "doi_atow_mg3conv"}},
 ["+reload"] = {header = "Ammo", offset = {200, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 

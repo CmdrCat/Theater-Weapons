@@ -99,6 +99,9 @@ if CLIENT then
 	
 	SWEP.magBoneName = {"magazine", "bulletq"}
 
+	SWEP.MaterialIndexPrimary = {1}
+	SWEP.MaterialIndexSecondary = {2}
+
 	SWEP.MagBoneName = "magazine"
 
 	SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = -2.65}
@@ -206,11 +209,12 @@ SWEP.MagBGs = {main = 4, regular = 0, rpk = 1}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-100, -600},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_thermal", "md_nightforce_nxs"}},
 	[2] = {header = "Muzzle", offset = {-950, -250}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
-	[3] = {header = "Handguard", offset = {-650, 200}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
+	[3] = {header = "Handguard", offset = {-750, 200}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	[4] = {header = "Laser", offset = {-900, -700}, atts = {"ftacgrimline", "md_anpeq15"}, dependencies = {md_rmr = true, xrkonpoint = true, md_reflex = true, md_cmore = true, md_trijicon = true, md_microt1 = true, too_reflex_romeo4t = true, md_aimpoint = true, too_reflex_exps = true, corioenforcer = true, md_schmidt_shortdot = true, md_elcan = true, md_acog = true, md_thermal = true, md_nightforce_nxs = true}},
-	[5] = {header = "Magazine", offset = {600, 300}, atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_cmag_556_official", "md_tcw_pmag"}},
+	[5] = {header = "Magazine", offset = {-50, 300}, atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_cmag_556_official", "md_tcw_pmag"}},
+	[6] = {header = "Skins", offset = {850, 300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+use"] = {header = "Sight", offset = {1450, -600},  atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	["+reload"] = {header = "Ammo", offset = {850, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	["+reload"] = {header = "Ammo", offset = {850, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
 	["xrkonpoint"] = {"too_optic_category_reflex"},

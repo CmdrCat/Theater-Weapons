@@ -51,6 +51,8 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = false
 	
 	SWEP.CustomizationMenuScale = 0.019
+
+	SWEP.MaterialIndexPrimary = {0, 1}
 	
 	SWEP.AttachmentModelsVM = {
 
@@ -66,7 +68,7 @@ if CLIENT then
 		10
 	}
 	
-	SWEP.Trivia = {text = "The integrated scope has adjustable zoom.", x = -1000, y = -800}
+	SWEP.Trivia = {text = "The integrated scope has adjustable zoom.", x = -1000, y = -1050}
 
 end
 
@@ -82,6 +84,7 @@ SWEP.CustomizeAng = Vector(-25, 0, 0)
 
 SWEP.Attachments = {
 
+	[1] = {header = "Skins", offset = {-1000, -950}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Projectile", offset = {-1000, -600}, atts = {"ha_cgm3_heat", "ha_cgm3_uhv", "ha_cgm3_smoke", "ha_cgm3_762"}}
 	
 	}

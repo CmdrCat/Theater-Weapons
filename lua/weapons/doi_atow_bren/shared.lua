@@ -55,6 +55,8 @@ if CLIENT then
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
+
+	SWEP.MaterialIndexPrimary = {0}
 	
 	SWEP.AttachmentModelsVM = {
 	}
@@ -93,6 +95,7 @@ SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {--[1] = {header = "Sight", offset = {450, -250}, atts = {"doi_atow_altsight"}},
 [1] = {header = "Frame", offset = {-250, -200}, atts = {"doi_atow_bipodremove"}},
+[2] = {header = "Skins", offset = {1000, -250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {350, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_2","base_fire_3"},

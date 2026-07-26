@@ -75,7 +75,9 @@ if CLIENT then
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
-	
+
+	SWEP.MaterialIndexPrimary = {0, 2}
+	SWEP.MaterialIndexSecondary = {1, 3}
 	SWEP.CustomizationMenuScale = 0.0205 --  0.026
 	
 	SWEP.AttachmentModelsVM = {["doi_atow_m3stock"] = {model = "models/khrcw2/doipack/attachments/m3stockextended.mdl", pos = Vector(2.72, -8, 3.475), angle = Angle(180, 90, 180), size = Vector(1, 1, 1), bone = "A_Stock"},
@@ -132,11 +134,12 @@ SWEP.Trivia = {text = "Commonly referred to as the Greaser, owing to its visual 
 
 SWEP.Attachments = {[3] = {header = "Barrel", offset = {-500, -200}, atts = {"doi_atow_m3carbine"}, exclusions = {doi_atow_m3a1suppressor = true}},
 [2] = {header = "Muzzle", offset = {-500, -650}, atts = {"doi_atow_m3flashhider", "hard20", "doi_atow_m3a1suppressor"}},
-[5] = {header = "Accessory", offset = {600, -200}, atts = {"doi_atow_sling"}},
+[5] = {header = "Accessory", offset = {1800, 250}, atts = {"doi_atow_sling"}},
 [6] = {header = "Receiver", offset = {-500, 250}, atts = {"doi_atow_m3pam1conv", "doi_atow_heavybolt"}},
 [4] = {header = "Body", offset = {1400, -200}, atts = {"doi_atow_m3stock"}},
 [1]	= {header = "Sights", offset = {600, -650}, atts = {"md_reflex", "too_reflex_exps", "md_acog"}},
 [7] = {header = "Lasers", offset = {1400, -650}, atts = {"md_anpeq15", "ftacgrimline"}},
+[8] = {header = "Skins", offset = {150, -200}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {600, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire_3"},

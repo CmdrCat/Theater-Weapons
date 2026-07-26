@@ -60,6 +60,9 @@ if CLIENT then
 		SWEP.AttachmentModelsVM = {
 	}
 	
+	SWEP.MaterialIndexPrimary = {0}
+	SWEP.MaterialIndexSecondary = {1}
+
 	SWEP.ForegripOverridePos = {
 	["bipod"] = {
 	["L Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-10, 0, -10), angle = Angle(0, 0, 0) },
@@ -90,8 +93,9 @@ SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {--[1] = {header = "Sight", offset = {450, -250}, atts = {"doi_atow_altsight"}},
-[2] = {header = "Belt", offset = {750, -150}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
+[2] = {header = "Belt", offset = {750, -100}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
 [1] = {header = "Conversion", offset = {1000, 400}, atts = {"doi_atow_stinger"}},
+[3] = {header = "Skins", offset = {-300, -350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {-300, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_2"},

@@ -208,6 +208,9 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
+SWEP.MaterialIndexPrimary = {1, 2, 5, 6, 8}
+SWEP.MaterialIndexSecondary = {0, 3, 4, 7, 9}
+
 SWEP.SightBGs = {main = 5 , on = 0 , none = 1}
 SWEP.BarrelBGs = {main = 3 , regular = 0 , none = 1}
 SWEP.StockBGs = {main = 2 , regular = 0 , none = 1}
@@ -242,6 +245,7 @@ SWEP.Attachments = {
 	[3] = {header = "Handguard", offset = {-600 , 650},  atts = {"bruenechelon", "bruenbm20"}},
 	[7] = {header = "Magazine", offset = {1200, 650},  atts = {"md_uecw_emag"}},
 	[8] = {header = "Conversion", offset = {1950, 650},  atts = {"r_mwii_300blk"}},
+	[9] = {header = "Skins", offset = {-50, 450}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }

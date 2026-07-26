@@ -72,7 +72,7 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
 	
-	SWEP.CustomizationMenuScale = 0.02 --  0.024
+	SWEP.CustomizationMenuScale = 0.015 --  0.024
 	
 	SWEP.AttachmentModelsVM = {
 	--optics
@@ -117,14 +117,15 @@ SWEP.SlingBGs = {main = 4, off = 0, on = 1}
 if CustomizableWeaponry_atowins2_optics then
 	else
 	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82", "md_reflex"}},
-	[2] = {header = "Sight", offset = {1100, 125}, atts = {"doi_atow_altsight"}},
-	[3] = {header = "Muzzle", offset = {-400, -300}, atts = {"doi_atow_unisuppressor"}},
-	[4] = {header = "Conversion", offset = {000, -450}, atts = {"doi_atow_m2carbineconv"}},
-	[5] = {header = "Magazine", offset = {600, 300}, atts = {"doi_atow_m1carbine30rnd"}},
-	[6] = {header = "Accessory", offset = {900, -100}, atts = {"doi_atow_sling"}},
-	[7] = {header = "Laser", offset = {900, -600}, atts = {-- "ftacgrimline", 
+	[2] = {header = "Sight", offset = {1225, 50}, atts = {"doi_atow_altsight"}},
+	[3] = {header = "Muzzle", offset = {-600, -400}, atts = {"doi_atow_unisuppressor"}},
+	[4] = {header = "Conversion", offset = {-50, -450}, atts = {"doi_atow_m2carbineconv"}},
+	[5] = {header = "Magazine", offset = {700, 600}, atts = {"doi_atow_m1carbine30rnd"}},
+	[6] = {header = "Accessory", offset = {-400, 400}, atts = {"doi_atow_sling"}},
+	[7] = {header = "Laser", offset = {0, 200}, atts = {-- "ftacgrimline", 
 	"md_anpeq15"}},
-	["+reload"] = {header = "Ammo", offset = {-600, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	[8] = {header = "Skins", offset = {1500, -300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	["+reload"] = {header = "Ammo", offset = {1500, 450}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	end
 
 SWEP.Animations = {fire = {"base_fire"},
@@ -204,6 +205,9 @@ SWEP.ADSFireAnim = true
 SWEP.RecoilToSpread = 0
 SWEP.RecoilToSpreadAuto = .25
 SWEP.RecoilToSpreadSemi = 0
+
+SWEP.MaterialIndexPrimary = {1, 3}
+SWEP.MaterialIndexSecondary = {0, 4}
 
 SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"

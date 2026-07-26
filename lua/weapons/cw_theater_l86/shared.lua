@@ -65,6 +65,9 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-0.2, 0, -0.4)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
+	SWEP.MaterialIndexPrimary = {0}
+	SWEP.MaterialIndexSecondary = {1, 2, 3, 4}
+
 	SWEP.ForegripOverridePos = {
 	}
 
@@ -119,7 +122,8 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {1200, -300},  atts = {"md
 	[3] = {header = "Handguard", offset = {-750, 0}, atts = {"md_foregrip"}},
 	[4] = {header = "Laser", offset = {-700, 500},  atts = {"md_anpeq15"}},
 	[5] = {header = "Conversion", offset = {850, 700},  atts = {"too_l86_conversion"}},
-    ["+use"] = {header = "Optic Type", offset = {1200, 200}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+    [6] = {header = "Skins", offset = {1300, 600}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir", "md_skinrunes", "md_skinyellowjacket"}},
+	["+use"] = {header = "Optic Type", offset = {1200, 200}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
     ["+reload"] = {header = "Ammo", offset = {150, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 

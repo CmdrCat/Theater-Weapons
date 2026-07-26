@@ -59,6 +59,9 @@ if CLIENT then
 	SWEP.PronePos = Vector(0, 0, -3.1579)
 	SWEP.ProneAng = Vector(-2, 22.7368, -28.9474)
 	
+	SWEP.MaterialIndexPrimary = {0, 1, 2}
+	SWEP.MaterialIndexSecondary = {3}
+
 	SWEP.BackupSights = {["doi_atow_zf4"] = {[1] = Vector(-2.4370, -3.5, 0.8812), [2] = Vector(0.0762, 0.034, 0)},
 	["doi_atow_zf41"] = {[1] = Vector(-2.4370, -3.5, 0.8812), [2] = Vector(0.0762, 0.034, 0)}}
 	
@@ -98,8 +101,8 @@ SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 
-SWEP.Attachments = {[1] = {header = "Optic", offset = {850, -350}, atts = {"doi_atow_zf4"}},
-[3] = {header = "Finish", offset = {300, -250}, atts = {"doi_atow_wornfinish"}},
+SWEP.Attachments = {[1] = {header = "Optic", offset = {1050, -350}, atts = {"doi_atow_zf4"}},
+[3] = {header = "Finish", offset = {-300, -350}, atts = {"doi_atow_wornfinish", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 [2] = {header = "Accessory", offset = {-200, 80}, atts = {"doi_atow_sling"}},
 ["+reload"] = {header = "Ammo", offset = {380, 180}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 

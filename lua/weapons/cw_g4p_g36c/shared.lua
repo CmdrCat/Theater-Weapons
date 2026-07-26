@@ -189,6 +189,9 @@ end
 
 end
 
+SWEP.MaterialIndexPrimary = {4}
+SWEP.MaterialIndexSecondary = {2, 3, 5, 6}
+
 SWEP.BoltBone = "slide"
 SWEP.BoltShootOffset = Vector(0, 2, 0)
 
@@ -203,8 +206,9 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {100, -700},  atts = {"md_
 	[2] = {header = "Muzzle", offset = {-700, -235}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-700, 200}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-700, -700}, atts = {"ftacgrimline", "md_anpeq15"}},
+	[5] = {header = "Skins", offset = {850, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {1650, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	["+reload"] = {header = "Ammo", offset = {900, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	["+reload"] = {header = "Ammo", offset = {1200, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 --SWEP.AttachmentDependencies = {["md_anpeq15"] = {"md_microt1"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 

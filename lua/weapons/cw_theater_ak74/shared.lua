@@ -56,6 +56,9 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 40 * 39.37
 	SWEP.DamageFallOff_Orig = .4
 
+	SWEP.MaterialIndexPrimary = {0, 2}
+	SWEP.MaterialIndexSecondary = {1, 3}
+
 	SWEP.BackupSights = {
 	["md_kobra"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
 	["too_reflex_mrs"] = {[1] = Vector(-5.5, 5, 0), [2] = Vector(0,0,-30)},
@@ -95,6 +98,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {1000, -500},  atts = {"md
 	[2] = {header = "Muzzle", offset = {-300, -500}, atts = {"md_pbs1"}},
 	[3] = {header = "Stock", offset = {2200, 500}, atts = {"too_bg_74stock"}},
 	[4] = {header = "Conversion", offset = {900, 500}, atts = {"cw_sa-006_conv"}},
+	[5] = {header = "Skins", offset = {-1200, 300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {0, 0}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1300, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 

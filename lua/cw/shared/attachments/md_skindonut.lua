@@ -1,7 +1,7 @@
 local att = {}
-att.name = "md_skinyellowjacket"
-att.displayName = "Yellow Jacket Skin"
-att.displayNameShort = "Yellow"
+att.name = "md_skindonut"
+att.displayName = "Donut Skin"
+att.displayNameShort = "Donut"
 att.isBG = true
 
 att.statModifiers = {}
@@ -17,12 +17,13 @@ function att:attachFunc()
 	end
 
     wep.CW_VM:SetSubMaterial(0, "")
+
     for i, index in ipairs(self.MaterialIndexPrimary) do
-		wep.CW_VM:SetSubMaterial(index, "phoenix_storms/stripes")
+		wep.CW_VM:SetSubMaterial(index, "models/noesis/donut")
 	end
 	if self.MaterialIndexSecondary then
 		for i, index in ipairs(self.MaterialIndexSecondary) do
-			wep.CW_VM:SetSubMaterial(index, "models/rendertarget")
+			wep.CW_VM:SetSubMaterial(index, "models/noesis/donut")
 		end
 	end
 end
@@ -32,7 +33,7 @@ function att:detachFunc()
 		return
 	end
 
-    for i, index in ipairs(self.MaterialIndexPrimary) do
+	for i, index in ipairs(self.MaterialIndexPrimary) do
 		wep.CW_VM:SetSubMaterial(index, "")
 	end
 	if self.MaterialIndexSecondary then

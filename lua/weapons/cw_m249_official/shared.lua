@@ -116,7 +116,8 @@ SWEP.Trivia = {text = "A US army's light machine gun of choice, the M249 has see
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-500, -300}, atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-500, 150}, atts = {"md_foregrip", "md_bipod"}},
-	["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	[4] = {header = "Skins", offset = {800, 650}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	["+reload"] = {header = "Ammo", offset = {800, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "reload",
@@ -204,6 +205,8 @@ SWEP.ReloadHalt_Empty = 8.9
 SWEP.NearWallDistance = 35
 
 SWEP.Chamberable = false
+
+SWEP.MaterialIndexPrimary = {0}
 
 function SWEP:IndividualThink()
 self.Owner.ViewAff = 0

@@ -64,6 +64,9 @@ if CLIENT then
 	
 	SWEP.AlternativePos = Vector(0.319, 1.325, -1.04)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
+
+	SWEP.MaterialIndexPrimary = {0}
+	SWEP.MaterialIndexSecondary = {1}
 	
 	SWEP.BackupSights = {
 	["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
@@ -118,6 +121,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -350},  atts = {"md_
 	[2] = {header = "Muzzle", offset = {-300, -300},  atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-300, 150}, atts = {"md_foregrip"}},
 	[4] = {header = "Conversion", offset = {600, 550}, atts = {"too_hk11"}},
+	[5] = {header = "Skins", offset = {1500, -300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir", "md_skinrunes", "md_skinyellowjacket"}},
     ["+use"] = {header = "Optic Type", offset = {800, -750}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
     ["+reload"] = {header = "Ammo", offset = {450, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 

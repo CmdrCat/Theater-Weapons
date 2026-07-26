@@ -148,7 +148,8 @@ if CLIENT then
 
 	SWEP.LaserPosAdjust = Vector(0.5, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 180, 0)
-
+	SWEP.MaterialIndexPrimary = {0, 3}
+	SWEP.MaterialIndexSecondary = {1, 6}
 	SWEP.MagBoneName = "mag"
 end
 
@@ -172,8 +173,9 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {50, -700},  atts = {"md_r
 	[4] = {header = "Laser", offset = {-800, -300},  atts = {"ftacgrimline", "md_anpeq15"}},
 	[5] = {header = "Magazines", offset = {-400, 600},  atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_stanag"}},
 	[6] = {header = "Conversion", offset = {800, 700},  atts = {"cw_l85a1_conversion"}},
+	[7] = {header = "Skins", offset = {1000, 300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir", "md_skinrunes", "md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {1600, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	["+reload"] = {header = "Ammo", offset = {800, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	["+reload"] = {header = "Ammo", offset = {1300, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
 	["xrkonpoint"] = {"too_optic_category_reflex"},

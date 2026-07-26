@@ -97,7 +97,9 @@ if CLIENT then
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .75
 	SWEP.CustomizationMenuScale = 0.025 --  0.03
 	
-	
+	SWEP.MaterialIndexPrimary = {0, 2}
+	SWEP.MaterialIndexSecondary = {1, 3}
+
 	SWEP.ForeGripHoldPos = {
 	["L Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(14.444, 21.111, 0) },
 	["L Finger4"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-5.444, -5.111, 0) },
@@ -189,7 +191,7 @@ if CustomizableWeaponry_atowins2_optics then
 SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -500}, atts = {"md_ins2kobra","md_ins2eotech552","md_ins2aimpoint","md_ins2aimpoint2x","md_ins2elcan","md_ins2po424p","md_ins2wsacog","doi_atow_lymanm82","md_ins2m40tac"}},
 [2] = {header = "Iron Sights", offset = {1500, -325}, atts = {"doi_atow_altsight"}},
 [4] = {header = "Model", offset = {200, 225}, atts = {"doi_atow_garandtanker", "doi_atow_bm59conv"}},
-[7] = {header = "Finish", offset = {650, -100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish"}},
+[7] = {header = "Finish", offset = {650, -100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 [3] = {header = "Muzzle", offset = {-420, -400}, atts = {"ins2_atow_riflesuppressor"}},
 [5] = {header = "Underbarrel", offset = {-400, 50}, atts = {"ins2_atow_clamplaser"}},
 [6] = {header = "Accessory", offset = {20, -475}, atts = {"doi_atow_sling", "md_foregrip","ins2_atow_tacbipod"}},
@@ -198,9 +200,10 @@ else
 SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -325}, atts = {"doi_atow_lymanm82"}},
 [2] = {header = "Iron Sights", offset = {1500, -325}, atts = {"doi_atow_altsight"}},
 [3] = {header = "Model", offset = {-300, -400}, atts = {"doi_atow_garandtanker", "doi_atow_bm59conv"}},
-[5] = {header = "Finish", offset = {1200, 100}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish"}},
-[4] = {header = "Accessory", offset = {-250, 200}, atts = {"doi_atow_sling", "md_foregrip"}},
-["+reload"] = {header = "Ammo", offset = {300, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+[5] = {header = "Finish", offset = {700, 200}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+[6] = {header = "Muzzle", offset = {-400, -400}, atts = {"ins2_atow_riflesuppressor"}},
+[4] = {header = "Accessory", offset = {-500, 200}, atts = {"doi_atow_sling", "md_foregrip"}},
+["+reload"] = {header = "Ammo", offset = {100, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 end
 
 SWEP.AttachmentExclusions = {

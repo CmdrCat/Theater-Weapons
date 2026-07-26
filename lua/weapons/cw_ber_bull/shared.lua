@@ -76,6 +76,8 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.008
 	SWEP.DisableSprintViewSimulation = true
 
+	SWEP.MaterialIndexPrimary = {0, 1}
+
 	SWEP.BaseArm = "l_upperarm"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
@@ -125,10 +127,11 @@ SWEP.AttachmentExclusions = {["am_snakeshot"] = {"cw_500nitroexpress"},
 							 ["md_thermal"] = {"bg_ber_babybull"}}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -300},  atts = {"md_docter", "md_rmr", "md_microt1", "md_elcan", "md_acog_fixed", "md_thermal", "md_nightforce_nxs"}},
-	[2] = {header = "Barrel", offset = {-450, -200},  atts = {"bg_ber_babybull", "md_saker"}},
-	[3] = {header = "Underbarrel", offset = {-600, 330}, atts = {"md_insight_x2", "md_csgo_taclight"}},
-	[4] = {header = "Technique", offset = {900, 600}, atts = {"doi_atow_onehand", "cw_akimbo"}},
-	[5] = {header = "Conversion", offset = {80, 450}, atts = {"cw_500nitroexpress"}},
+	[2] = {header = "Barrel", offset = {-450, -300},  atts = {"bg_ber_babybull", "md_saker"}},
+	[3] = {header = "Underbarrel", offset = {-600, 200}, atts = {"md_insight_x2", "md_csgo_taclight"}},
+	[4] = {header = "Technique", offset = {1100, 600}, atts = {"doi_atow_onehand", "cw_akimbo"}},
+	[5] = {header = "Conversion", offset = {300, 450}, atts = {"cw_500nitroexpress"}},
+	[6] = {header = "Skins", offset = {-875, 650}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1000, 125}, atts = {"am_reducedpowderload", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_snakeshot"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},

@@ -117,6 +117,9 @@ if CLIENT then
 	
 	SWEP.M203CameraRotation = {p = -90, y = 0, r = -90}
 
+	SWEP.MaterialIndexPrimary = {1, 2}
+	SWEP.MaterialIndexSecondary = {4, 5}
+
 	SWEP.BaseArm = "r-forearm"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 	
@@ -229,6 +232,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {150, -700},  atts = {"md_
 	[4] = {header = "Laser", offset = {-600, -250}, atts = {"ftacgrimline", "md_anpeq15"}},
 	[5] = {header = "Magazine", offset = {-300, 700},  atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag", "md_tcw_stanag", "md_tcw_pmag"}},
 	[6] = {header = "Conversion", offset = {1100, 600}, atts = {"uecw_m8a1_conversion"}},
+	[7] = {header = "Skins", offset = {1500, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {1700, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1900, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	

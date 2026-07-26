@@ -4,7 +4,7 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "KRISS Vector"
+	SWEP.PrintName = "Vector"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 
@@ -51,6 +51,9 @@ if CLIENT then
 
 	SWEP.CustomizePos_Akimbo = Vector(0, 0, -7.5)
 	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
+
+	SWEP.MaterialIndexPrimary = {1}
+	SWEP.MaterialIndexSecondary = {0, 2, 4, 5, 6, 7}
 	
 	SWEP.BackupSights = {["too_reflex_exps"] = {[1] = Vector(-4.25, 0, 0.75), [2] = Vector(0, 0, -50)},
 	["md_microt1"] = {[1] = Vector(-4.25, 2, 0.75), [2] = Vector(0, 0, -50)},
@@ -99,9 +102,10 @@ SWEP.MagBGs = {main = 4, round15 = 0, round30 = 1}
 SWEP.LuaViewmodelRecoil = true
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-500, -300},  atts = {"md_microt1", "too_reflex_exps", "corioenforcer", "md_acog"}},
-[2] = {header = "Barrel", offset = {800, -300}, atts = {"md_saker", "hard20"}},
+[2] = {header = "Muzzle", offset = {800, -300}, atts = {"md_saker", "hard20"}},
 [3] = {header = "Laser", offset = {-500, 160}, atts = {"md_anpeq15","ftacgrimline"}},
 [4] = {header = "Foregrip", offset = {-500, -750}, atts = {"md_foregrip","ftactiger_r", "bruentiltgrip_r", "cw_akimbo"}},
+[5] = {header = "Skins", offset = {800, 160}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {800, -750}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap",}}}
 
 SWEP.Trivia = {text = "Notable for its KRISS Super V mechanism, which reduces muzzle climb.", x = -300, y = -850}

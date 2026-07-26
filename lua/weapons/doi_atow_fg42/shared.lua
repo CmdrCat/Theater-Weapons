@@ -59,8 +59,11 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = false
 	
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .8
-	SWEP.CustomizationMenuScale = 0.023 --  0.03
+	SWEP.CustomizationMenuScale = 0.015 --  0.03
 	
+	SWEP.MaterialIndexPrimary = {0, 1, 3, 4}
+	SWEP.MaterialIndexSecondary = {2}
+
 	SWEP.BackupSights = {["doi_atow_zfg42"] = {[1] = Vector(-4, 5, 0.2), [2] = Vector(0,0,-30)}}
 
 	SWEP.AttachmentModelsVM = {
@@ -83,7 +86,7 @@ if CLIENT then
 	
 	SWEP.M82AxisAlign = {right = .02, up = -.015, forward = 0}
 	SWEP.LuaVMRecoilAxisMod = {vert = .2, hor = 0, roll = .35, forward = .2, pitch = .5}
-	SWEP.Trivia = {text = "One of the most influencial weapon designs of WWII, the FG 42 has inspired the designs of many other weapons. Has an integrated bipod.", x = -450, y = -400}
+	SWEP.Trivia = {text = "One of the most influencial weapon designs of WWII, the FG 42 has inspired the designs of many other weapons. Has an integrated bipod.", x = -450, y = -600}
 end
 end
 
@@ -107,11 +110,12 @@ SWEP.AttachmentExclusions = {["doi_atow_zfg42"] = {"doi_atow_fg42m9kconv"},
 							 ["am_atow_ap"] = {"doi_atow_fg42m9kconv"},
 							 ["doi_atow_unisuppressor"] = {"doi_atow_fg42m9kconv"}}
 
-SWEP.Attachments = {[1] = {header = "Optic", offset = {975, -275}, atts = {"doi_atow_zfg42"}},
-[2] = {header = "Muzzle", offset = {-200, -250}, atts = {"doi_atow_unisuppressor"}},
-[3] = {header = "Fire Control", offset = {950, 250}, atts = {"doi_atow_fg42m9kconv", "doi_atow_heavybolt"}},
-[4] = {header = "Accessory", offset = {1400, -50}, atts = {"doi_atow_sling"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
-["+reload"] = {header = "Ammo", offset = {-300, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+SWEP.Attachments = {[1] = {header = "Optic", offset = {1100, -400}, atts = {"doi_atow_zfg42"}},
+[2] = {header = "Muzzle", offset = {-200, -450}, atts = {"doi_atow_unisuppressor"}},
+[3] = {header = "Fire Control", offset = {1200, 500}, atts = {"doi_atow_fg42m9kconv", "doi_atow_heavybolt"}},
+[4] = {header = "Accessory", offset = {0, 700}, atts = {"doi_atow_sling"}, exclusions = {["doi_atow_fg42m9kconv"] = true,}},
+[5] = {header = "Skins", offset = {1700, 100}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+["+reload"] = {header = "Ammo", offset = {-500, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire2"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},

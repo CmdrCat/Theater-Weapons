@@ -9,7 +9,7 @@ include("sh_sounds.lua")
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "M82A3"
+	SWEP.PrintName = "Barrett M82A3"
 	SWEP.CSMuzzleFlashes = true
 	
 	SWEP.IconLetter = "w"
@@ -29,6 +29,8 @@ if CLIENT then
 	
 	SWEP.EffectiveRange_Orig = 170 * 39.37
 	SWEP.DamageFallOff_Orig = .14
+
+	SWEP.MaterialIndexPrimary = {1}
 	
 	SWEP.BoltBone = "bolt"
 	SWEP.BoltBonePositionRecoverySpeed = 35
@@ -122,6 +124,7 @@ SWEP.CanRestOnObjects = false
 
 SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -100},  atts = {"md_microt1kh", "odec3d_cmore_kry", "md_schmidt_shortdot", "md_elcan", "md_uecw_csgo_acog", "md_thermal", "md_nightforce_nxs"}},
 [2] = {header = "Muzzle", offset = {-600, -300}, atts = {"md_csgo_silencer_ballistic"}},
+[3] = {header = "Skins", offset = {600, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {-250, 350}, atts = {"am_416barrett"}}}
 
 SWEP.Animations = {fire = {"shoot"},
@@ -202,7 +205,6 @@ SWEP.ReloadTime = 4.3
 SWEP.ReloadTime_Empty = 4.3
 SWEP.ReloadHalt = 4.3
 SWEP.ReloadHalt_Empty = 4.3
-
 
 SWEP.Offset = {
 Pos = {

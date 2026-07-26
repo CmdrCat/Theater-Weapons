@@ -57,6 +57,9 @@ if CLIENT then
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
+
+	SWEP.MaterialIndexPrimary = {0}
+	SWEP.MaterialIndexSecondary = {1}
 	
 	SWEP.AttachmentModelsVM = {
 	}
@@ -103,6 +106,7 @@ SWEP.Attachments = {[4] = {header = "Model", offset = {575, -300}, atts = {"doi_
 [3] = {header = "Fire Control", offset = {750, 300}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
 [2] = {header = "Frame", offset = {-250, -200}, atts = {"doi_atow_bipodremove"}},
 [1] = {header = "Sight", offset = {1550, 200}, atts = {"doi_atow_altsightlewis"}, exclusions = {doi_atow_lewisaa = true, doi_atow_m20conv = true}},
+[5] = {header = "Skins", offset = {1200, 50}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {-100, 350}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},

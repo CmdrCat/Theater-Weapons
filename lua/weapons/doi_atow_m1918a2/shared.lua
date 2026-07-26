@@ -64,6 +64,9 @@ if CLIENT then
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .65
 	SWEP.LuaVMRecoilAxisMod = {vert = .35, hor = .25, roll = .45, forward = .15, pitch = .3}
 	
+	SWEP.MaterialIndexPrimary = {0}
+	SWEP.MaterialIndexSecondary = {1, 2}
+
 	SWEP.AttachmentModelsVM = {
 	}
 	
@@ -108,6 +111,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, 100}, atts = {"doi_
 [3] = {header = "Accessory", offset = {-400, -265}, atts = {"doi_atow_bipod"}},
 [2] = {header = "Handgaurd", offset = {-50, 200}, atts = {"doi_atow_barhandguard"}},
 [5] = {header = "Conversion", offset = {800, -265}, atts = {"doi_atow_hcar"}},
+[6] = {header = "Skins", offset = {1150, -300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {450, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},

@@ -64,6 +64,8 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.024
 	SWEP.ViewModelMovementScale = 1
 
+	SWEP.MaterialIndexPrimary = {0}
+
 	SWEP.MagBoneName = "MAG"
 	
 	SWEP.AttachmentModelsVM = {
@@ -131,6 +133,7 @@ SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -400},  atts = {"md_
 [3] = {header = "Handguard", offset = {-650, 100}, atts = {"md_foregrip","md_bipod"}},
 [4] = {header = "Laser", offset = {-550, -350}, atts = {"md_anpeq15"}},
 [5] = {header = "Conversion", offset = {400, 450}, atts = {"md_sr338_rsass_conversion"}},
+[6] = {header = "Skins", offset = {500, 50}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {-550, 500}, atts = {"am_magnum","am_matchgrade"}}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},

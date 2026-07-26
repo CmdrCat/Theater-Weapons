@@ -127,6 +127,9 @@ if CLIENT then
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 0.5, hor = 1, roll = 1, forward = 0.5, pitch = 0.5}
 	
+	SWEP.MaterialIndexPrimary = {1}
+	SWEP.MaterialIndexSecondary = {0, 4}
+
 	SWEP.BoltBone = "charger"
 	SWEP.BoltShootOffset = Vector(-2, 0, 0)
 	
@@ -148,6 +151,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -500},  atts = {"md_
 	[3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}},
 	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
 	[5] = {header = "Conversion", offset = {700, 500},  atts = {"md_hamr_conv"}},
+	[6] = {header = "Skins", offset = {1200, 450}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir", "md_skinrunes" ,"md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentExclusions = {

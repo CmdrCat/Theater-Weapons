@@ -104,6 +104,9 @@ if CLIENT then
 	SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
 	SWEP.M203CameraRotation = {p = -90, y = 0, r = -90}
 	
+	SWEP.MaterialIndexPrimary = {0, 1, 8}
+	SWEP.MaterialIndexSecondary = {2, 3, 4, 5, 6, 7, 10}
+
 	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 	
@@ -162,7 +165,9 @@ SWEP.Trivia = {text = "Adopted by many NATO countries, this battle rifle was dub
 SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -350},  atts = {"md_microt1", "md_cmore", "md_trijicon", "md_reflex", "md_aimpoint", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-500, -500}, atts = {"md_saker", "md_csgo_silencer_ballistic"}},
 	[3] = {header = "Laser", offset = {-500, 400}, atts = {"md_anpeq15"}},
-	["+reload"] = {header = "Ammo", offset = {1100, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	[4] = {header = "Skins", offset = {900, 650}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+	[5] = {header = "Underbarrel", offset = {-500, 150}, atts = {"md_m203", "bg_longris"}},
+	["+reload"] = {header = "Ammo", offset = {1100, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 

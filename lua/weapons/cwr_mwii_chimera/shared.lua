@@ -1,4 +1,4 @@
-AddCSLuaFile()
+bonAddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
@@ -35,7 +35,7 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, -3.2)
 
 	SWEP.ForegripOverride = false
-	
+
 	--grip pos temp
 
 	SWEP.ForeGripHoldPos ={

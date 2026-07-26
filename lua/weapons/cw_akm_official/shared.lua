@@ -91,7 +91,7 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = 0.52
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.76
 	
-	SWEP.MaterialIndex = 2
+	SWEP.MaterialIndexPrimary = {2}
 	SWEP.BoltBone = "bolt"
 	SWEP.BoltShootOffset = Vector(-4.81, 0, 0)
 	SWEP.OffsetBoltOnBipodShoot = true
@@ -180,7 +180,7 @@ SWEP.Attachments = {
 	{header = "Handguard", offset = {-600, 100}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	{header = "Conversion", offset = {500, 500}, atts = {"md_ak_556_conv"}},
 	{header = "Magazines", offset = {-400, 600}, atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}, dependencies = {md_ak_556_conv = true}},
-	{header = "Skins", offset = {950, 350}, atts = {"md_skinmicrochip", "md_skinmosaic", "md_skinrunes", "md_skinyellowjacket"}},
+	{header = "Skins", offset = {950, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+use"] = {header = "Sight", offset = {1550, -500},  atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {950, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 

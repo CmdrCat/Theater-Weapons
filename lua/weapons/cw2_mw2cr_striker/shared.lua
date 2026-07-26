@@ -90,6 +90,9 @@ SWEP.HoldBoltWhileEmpty = false
 SWEP.DontHoldWhenReloading = true
 SWEP.BoltBonePositionRecoverySpeed = 15
 
+SWEP.MaterialIndexPrimary = {0, 1}
+SWEP.MaterialIndexSecondary = {2, 3}
+
 SWEP.ForegripOverride = true
 SWEP.ForegripOverridePos = {
 ["null"] = {},
@@ -142,6 +145,7 @@ SWEP.Attachments = {
 [2] = {header = "Muzzle", offset = {-750, -300}, atts = {"doi_atow_unisuppressor", "md_saker"}},
 [3] = {header = "Laser", offset = {-800, 300}, atts = {"ftacgrimline", "md_anpeq15"}},
 [4] = {header = "Conversion", offset = {1000, 450}, atts = {"cw2_mw2cr_strikerauto"}},
+[5] = {header = "Skins", offset = {1200, 0}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {200, 350}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }
 
