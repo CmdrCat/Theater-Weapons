@@ -120,7 +120,7 @@ SWEP.Animations = {fire = {"base_fire"},
 	draw = "base_draw"}
 	
 
-SWEP.SpeedDec = 60
+SWEP.SpeedDec = 45
 SWEP.FOVPerShot = 0
 
 

@@ -55,7 +55,7 @@ SWEP.Purpose		= ""
 SWEP.Instructions	= ""
 SWEP.NearWallEnabled = false
 SWEP.FireAnimSpeed = 1.15
-SWEP.SpeedDec = 40
+SWEP.SpeedDec = 0
 
 SWEP.ViewModelFOV	= 75 // 65
 SWEP.ViewModelFlip	= false

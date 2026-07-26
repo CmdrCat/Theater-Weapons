@@ -3,6 +3,7 @@ att.name = "doi_atow_bm59conv"
 att.displayName = "BM59 ITAL Conversion"
 att.displayNameShort = "BM59"
 att.isBG = true
+att.SpeedDec = -5
 
 att.statModifiers = {FireDelayMult = -8 / 15,
 					 DamageMult = -35 / 83,

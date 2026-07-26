@@ -2,11 +2,12 @@ local att = {}
 att.name = "doi_atow_c96carbineconv"
 att.displayName = "M1932 Conversion"
 att.displayNameShort = "M1932"
+att.SpeedDec = 5
 
 att.statModifiers = {FireDelayMult = -11 / 20,
 DamageMult = -8 / 19,
 RecoilMult = -0.01,
-ReloadSpeedMult = 0.25}
+ReloadSpeedMult = 0.07}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

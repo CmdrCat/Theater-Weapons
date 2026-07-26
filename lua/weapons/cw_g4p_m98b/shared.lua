@@ -209,7 +209,7 @@ SWEP.Sounds = {m98_reload = {[1] = {time = 0.6, sound = "CW_M98_MAGTAP"},
 	[4] = {time = 1.5, sound = "CW_M98_BOLTLOCK"}
 	}}
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 50
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0

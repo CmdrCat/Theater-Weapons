@@ -2,6 +2,7 @@ local att = {}
 att.name = "doi_atow_stinger"
 att.displayName = "Stinger Conversion"
 att.displayNameShort = "Stinger"
+att.SpeedDec = -5
 
 att.statModifiers = {FireDelayMult = -9 / 16,
 DamageMult = -24 / 49,

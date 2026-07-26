@@ -125,7 +125,7 @@ SWEP.Animations_Akimbo = {reload = "base_reload",
 	
 SWEP.ReloadViewBobEnabled = false //
 	
-SWEP.SpeedDec = 15
+SWEP.SpeedDec = 5
 SWEP.FOVPerShot = 0
 
 SWEP.Slot = 1

@@ -3,6 +3,7 @@ att.name = "doi_atow_m20conv"
 att.displayName = "Mitrailleur M.20 Conversion"
 att.displayNameShort = "M.20"
 att.isBG = true
+att.SpeedDec = 5
 
 att.statModifiers = {DamageMult = -17 / 48,
 FireDelayMult = -27 / 80,

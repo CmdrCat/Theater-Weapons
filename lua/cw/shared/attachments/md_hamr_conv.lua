@@ -2,7 +2,7 @@ local att = {}
 att.name = "md_hamr_conv"
 att.displayName = "HAMR Conversion"
 att.displayNameShort = "HAMR"
-att.SpeedDec = 5
+att.SpeedDec = 10
 
 att.statModifiers = {DamageMult = -2 / 21,
 	FireDelayMult = -1 / 26,

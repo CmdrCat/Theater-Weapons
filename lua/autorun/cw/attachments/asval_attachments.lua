@@ -39,6 +39,7 @@ att.name = "bg_asval"
 att.displayName = "AS VAL variant"
 att.displayNameShort = "AS VAL"
 att.isBG = true
+att.SpeedDec = -5
 
 att.statModifiers = {DrawSpeedMult = 0.2,
 OverallMouseSensMult = 0.15,

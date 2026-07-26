@@ -125,7 +125,7 @@ SWEP.Animations_Akimbo = {fire = {"base_fire","base_fire3"},
 	draw_right = "base_draw"}
 	
 
-SWEP.SpeedDec = 15
+SWEP.SpeedDec = 5
 SWEP.FOVPerShot = 0
 
 SWEP.Slot = 1

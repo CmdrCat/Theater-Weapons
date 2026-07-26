@@ -2,6 +2,7 @@ local att = {}
 att.name = "md_sr338_rsass_conversion"
 att.displayName = "RSASS Conversion"
 att.displayNameShort = "RSASS"
+att.SpeedDec = -50
 
 att.statModifiers = {DamageMult = -46 / 95,
 	FireDelayMult = -4 / 7,

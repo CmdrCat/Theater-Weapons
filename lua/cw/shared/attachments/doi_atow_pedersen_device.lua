@@ -3,6 +3,7 @@ att.name = "doi_atow_pedersen_device"
 att.displayName = " Pedersen Device"
 att.displayNameShort = "Pedersen"
 att.isBG = false
+att.SpeedDec = -15
 
 att.statModifiers = {FireDelayMult = -181 / 200,
 ReloadSpeedMult = 1,

@@ -114,7 +114,7 @@ SWEP.Animations = {fire = {"base_fire","base_fire2"},
 	
 SWEP.ReloadViewBobEnabled = false //
 
-SWEP.SpeedDec = 15
+SWEP.SpeedDec = 10
 SWEP.FOVPerShot = 0
 
 SWEP.Slot = 1

@@ -2,6 +2,7 @@ local att = {}
 att.name = "too_mp5_22lr_rifle"
 att.displayName = "MP5 .22 LR Rifle Conversion"
 att.displayNameShort = ".22 LR Rifle"
+att.SpeedDec = -15
 
 att.statModifiers = {FireDelayMult = -3 / 5,
 DamageMult = -20 / 37,

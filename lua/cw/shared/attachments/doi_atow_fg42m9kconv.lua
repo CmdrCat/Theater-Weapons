@@ -2,6 +2,7 @@ local att = {}
 att.name = "doi_atow_fg42m9kconv"
 att.displayName = "M9K Variant"
 att.displayNameShort = "M9K"
+att.SpeedDec = -15
 
 att.statModifiers = {DamageMult = -1 / 11,
 FireDelayMult = -1 / 12,

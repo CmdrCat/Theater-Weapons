@@ -206,7 +206,7 @@ SWEP.Sounds = {reload = {{time = 0.5, sound = "CW_AWM_CLIPTAP"},
 	{time = 1, sound = "CW_AWM_BOLTLOCK"}},
 	draw = {{time = 0.01, sound = "CW_AWM_DRAW"}}}
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 50
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0

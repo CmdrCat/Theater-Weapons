@@ -200,10 +200,10 @@ else
 SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -325}, atts = {"doi_atow_lymanm82"}},
 [2] = {header = "Iron Sights", offset = {1500, -325}, atts = {"doi_atow_altsight"}},
 [3] = {header = "Model", offset = {-300, -400}, atts = {"doi_atow_garandtanker", "doi_atow_bm59conv"}},
-[5] = {header = "Finish", offset = {700, 200}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
-[6] = {header = "Muzzle", offset = {-400, -400}, atts = {"ins2_atow_riflesuppressor"}},
+[5] = {header = "Finish", offset = {700, 175}, atts = {"doi_atow_modernfinish", "doi_atow_wornfinish", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+--[6] = {header = "Muzzle", offset = {-400, -400}, atts = {"ins2_atow_riflesuppressor"}},
 [4] = {header = "Accessory", offset = {-500, 200}, atts = {"doi_atow_sling", "md_foregrip"}},
-["+reload"] = {header = "Ammo", offset = {100, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+["+reload"] = {header = "Ammo", offset = {100, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 end
 
 SWEP.AttachmentExclusions = {
@@ -220,7 +220,7 @@ SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
 	draw = "base_draw"}
 	
 
-SWEP.SpeedDec = 60
+SWEP.SpeedDec = 45
 SWEP.FOVPerShot = 0
 
 SWEP.Slot = 2

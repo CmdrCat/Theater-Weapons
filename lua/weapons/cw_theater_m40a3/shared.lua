@@ -186,7 +186,7 @@ SWEP.Sounds = {
 		 {time = 3.68, sound = "CW_TOO_M40_BOLTDOWN"},
     }
 }
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 45
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0

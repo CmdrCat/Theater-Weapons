@@ -245,7 +245,7 @@ SWEP.Sounds = {	draw = {{time = 0, sound = "CW_FAMASG2_CLOTH"}},
 	[3] = {time = 1.9, sound = "CW_FAMASG2_MAGIN1"},
 	[4] = {time = 2.5, sound = "CW_FAMASG2_FOREARM"}}}
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 25
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0

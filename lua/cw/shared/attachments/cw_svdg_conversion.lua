@@ -2,7 +2,7 @@ local att = {}
 att.name = "cw_svdg_conversion"
 att.displayName = "SVDG Conversion"
 att.displayNameShort = "SVDG"
-att.SpeedDec = 100
+att.SpeedDec = 95
 
 att.statModifiers = {DamageMult = 13 / 7,
 FireDelayMult = 11 / 6,

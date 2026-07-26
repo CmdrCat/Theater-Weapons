@@ -2,6 +2,7 @@ local att = {}
 att.name = "cw_l85a1_conversion"
 att.displayName = "L85A1 Conversion"
 att.displayNameShort = "L85A1"
+att.SpeedDec = 5
 
 att.statModifiers = {DamageMult = 161 / 39,
 RecoilMult = 25,

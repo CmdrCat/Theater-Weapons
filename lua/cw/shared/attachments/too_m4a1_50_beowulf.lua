@@ -2,6 +2,7 @@ local att = {}
 att.name = "too_m4a1_50_beowulf"
 att.displayName = ".50 Beowulf Receiver"
 att.displayNameShort = ".50 Beowulf"
+att.SpeedDec = 5
 
 att.statModifiers = {FireDelayMult = 7 / 9,
 DamageMult = 16 / 15,

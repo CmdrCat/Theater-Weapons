@@ -2,6 +2,7 @@ local att = {}
 att.name = "cw_sa-006_conv"
 att.displayName = "SA-006 Conversion"
 att.displayNameShort = "SA-006"
+att.SpeedDec = 5
 
 att.statModifiers = {RecoilMult = -0.83,
 DamageMult = -4 / 11,

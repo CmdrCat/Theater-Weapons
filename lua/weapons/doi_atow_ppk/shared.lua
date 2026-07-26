@@ -144,7 +144,7 @@ SWEP.Animations_Akimbo = {fire = {"iron_fire_1"},
 
 SWEP.ReloadViewBobEnabled = false //
 
-SWEP.SpeedDec = 15
+SWEP.SpeedDec = 5
 SWEP.FOVPerShot = 0
 
 SWEP.Slot = 1
@@ -218,7 +218,7 @@ SWEP.ShootWhileProne = false
 SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"
 
-SWEP.ReloadSpeed = 1.4
+SWEP.ReloadSpeed = 1.6
 SWEP.ReloadTime = 2.25
 SWEP.ReloadHalt = 2.9
 SWEP.ReloadTime_Empty = 3

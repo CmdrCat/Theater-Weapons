@@ -317,7 +317,7 @@ SWEP.Sounds = {
 	}
 }
 
-SWEP.SpeedDec = 70
+SWEP.SpeedDec = 35
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0

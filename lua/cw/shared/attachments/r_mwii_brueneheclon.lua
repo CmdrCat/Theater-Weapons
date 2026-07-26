@@ -3,13 +3,12 @@ att.name = "bruenechelon"
 att.displayName = "14\" Bruen Echelon"
 att.displayNameShort = "14\" Bruen"
 att.isBG = true
+att.SpeedDec = 5
 
 att.statModifiers = {
     RecoilMult = -0.08,
 	SpreadPerShotMult = - 0.20,
 	DrawSpeedMult = -0.125}
-
-    att.SpeedDec = 20
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_bruenechelon")

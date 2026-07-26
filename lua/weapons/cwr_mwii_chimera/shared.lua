@@ -1,4 +1,4 @@
-bonAddCSLuaFile()
+AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
@@ -33,6 +33,9 @@ if CLIENT then
 	
 	SWEP.AlternativePos = Vector(-1.2, -1, -1)
 	SWEP.AlternativeAng = Vector(0, 0, -3.2)
+
+	SWEP.MaterialIndexPrimary = {1}
+	SWEP.MaterialIndexSecondary = {0}
 
 	SWEP.ForegripOverride = false
 
@@ -175,6 +178,7 @@ SWEP.Attachments = {
 	{header = "Barrel", offset = {220 , 250},  atts = {"saphoenix"}},
 	{header = "Front Sights", offset = {-300 , 575},  atts = {"nofs2"}, exclusions = {xrkonpoint = true, md_nightforce_nxs = true}},
 	{header = "Magazine", offset = {1200, 400},  atts = {"md_uecw_usgimag", "md_uecw_emag"}},
+	{header = "Skins", offset = {700, 750}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1100, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 
@@ -242,7 +246,7 @@ SWEP.Sounds = {
 	}
 }
 
-SWEP.SpeedDec = 20
+SWEP.SpeedDec = 25
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0

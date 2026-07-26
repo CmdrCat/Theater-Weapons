@@ -139,7 +139,7 @@ SWEP.Sounds = {reload = {[1] = {time = 0.1, sound = "CW_FIVESEVEN_MAGPOUCH"},
 	draw = {{time = 0.01, sound = "CW_XM8_CLOTH"},
 	{time = 0.6, sound = "CW_FIVESEVEN_SAFETY"}}}
 
-SWEP.SpeedDec = 10
+SWEP.SpeedDec = 5
 
 SWEP.Slot = 1
 SWEP.SlotPos = 0

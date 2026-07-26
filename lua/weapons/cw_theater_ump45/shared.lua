@@ -136,7 +136,7 @@
         }
     }
 
-    SWEP.SpeedDec = 30
+    SWEP.SpeedDec = 15
     SWEP.Slot = 2
     SWEP.SlotPos = 0
     SWEP.NormalHoldType = "ar2"

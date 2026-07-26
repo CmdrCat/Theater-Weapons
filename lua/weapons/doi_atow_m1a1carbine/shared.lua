@@ -135,7 +135,7 @@ SWEP.Animations = {fire = {"base_fire"},
 	idle = "base_idle",
 	draw = "base_draw"}
 
-SWEP.SpeedDec = -200
+SWEP.SpeedDec = 25
 SWEP.FOVPerShot = 0
 
 SWEP.Slot = 2
@@ -212,7 +212,7 @@ SWEP.MaterialIndexSecondary = {0, 4}
 SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"
 
-SWEP.ReloadSpeed = 1.15
+SWEP.ReloadSpeed = 1.5
 SWEP.ReloadTime = 2.2
 SWEP.ReloadHalt = 3
 SWEP.ReloadTime_Empty = 3.6

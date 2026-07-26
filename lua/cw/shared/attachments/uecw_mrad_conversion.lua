@@ -2,6 +2,7 @@ local att = {}
 att.name = "uecw_mrad_conversion"
 att.displayName = "MRAD .308 Winchester Conversion"
 att.displayNameShort = "MRAD"
+att.SpeedDec = -5
 
 att.statModifiers = {DamageMult = -3 / 37,
 	FireDelayMult = -2 / 5,

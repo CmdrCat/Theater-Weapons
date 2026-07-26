@@ -142,7 +142,7 @@ SWEP.Sounds = {glock_reload = {[1] = {time = 0.4, sound = "CW_GLOCK17_MAGOUT"},
 	
 	glock_draw = {[1] = {time = 0.1, sound = "CW_GLOCK17_DRAW"}}}
 
-SWEP.SpeedDec = 10
+SWEP.SpeedDec = 5
 
 SWEP.Slot = 1
 SWEP.SlotPos = 0

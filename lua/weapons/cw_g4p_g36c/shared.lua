@@ -243,7 +243,7 @@ SWEP.Sounds = {reload = {[1] = {time = 0.4, sound = "CW_G36C_MAGOUT"},
 	[2] = {time = 0.4, sound = "CW_G36C_BOLTRELEASE"}},
 	drawkek = {{time = 0.01, sound = "CW_XM8_CLOTH"}}}
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 25
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0

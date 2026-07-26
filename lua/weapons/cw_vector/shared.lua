@@ -140,7 +140,7 @@ SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 	[4] = {time = 2.7, sound = "CW_VECTOR_MAGIN"},
 	[5] = {time = 3.5, sound = "CW_VECTOR_BOLTREL"}}}
 
-SWEP.SpeedDec = 20
+SWEP.SpeedDec = 10
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0
