@@ -34,8 +34,8 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-1.2, -1, -1)
 	SWEP.AlternativeAng = Vector(0, 0, -3.2)
 
-	SWEP.MaterialIndexPrimary = {1}
-	SWEP.MaterialIndexSecondary = {0}
+	SWEP.MaterialIndexPrimary = {1, 2, 3, 4, 5}
+	SWEP.MaterialIndexSecondary = {0, 6}
 
 	SWEP.ForegripOverride = false
 
