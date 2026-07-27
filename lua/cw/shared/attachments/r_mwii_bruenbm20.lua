@@ -9,7 +9,7 @@ att.statModifiers = {
 	SpreadPerShotMult = - -0.125,
 	DrawSpeedMult = 0.25}
 
-    att.SpeedDec = -250
+    att.SpeedDec = -10
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_bruenbm20")

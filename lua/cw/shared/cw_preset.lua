@@ -94,7 +94,10 @@ function CustomizableWeaponry.preset:postLoad(name)
 		data = util.JSONToTable(data)
 		
 		for key, value in pairs(data) do
-			local modelData = self.AttachmentModelsVM[key]
+			local modelData = self.AttachmentModelsVM and self.AttachmentModelsVM[key]
+			if not modelData or not modelData.pos or not modelData.adjustment or not modelData.adjustment.axis then
+				continue
+			end
 			
 			modelData.pos[modelData.adjustment.axis] = value
 		end

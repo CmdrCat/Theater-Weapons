@@ -20,8 +20,13 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
-	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
-	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	if self.ActiveAttachments.doi_atow_mg3conv then
+		self.Primary.ClipSize = 100
+		self.Primary.ClipSize_Orig = 100
+	else
+		self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
+		self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
+	end
 end
 
 CustomizableWeaponry:registerAttachment(att)

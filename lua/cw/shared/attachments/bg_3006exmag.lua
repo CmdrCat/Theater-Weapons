@@ -13,13 +13,13 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:unloadWeapon()
 	self.Primary.ClipSize = 30
 	self.Primary.ClipSize_Orig = 30
+	self:loadWeapon()
 end
 
 function att:detachFunc() 
-	self:unloadWeapon()
+	self:unloadWeaponPartially()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 end

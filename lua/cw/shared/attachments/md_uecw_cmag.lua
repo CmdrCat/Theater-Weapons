@@ -28,6 +28,7 @@ function att:attachFunc()
 	if self.MagBoneName then
 	self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
 	end
+	self:loadWeapon()
 end
 
 function att:detachFunc()

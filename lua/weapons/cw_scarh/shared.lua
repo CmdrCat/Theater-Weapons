@@ -201,7 +201,7 @@ SWEP.Primary.DefaultClip	= 80
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 
-SWEP.Secondary.ClipSize		= 300
+SWEP.Secondary.DefaultClip	= 300
 SWEP.Secondary.Ammo			= "5.56x45MM"
 
 SWEP.FireDelay = 0.096

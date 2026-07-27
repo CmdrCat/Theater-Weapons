@@ -58,16 +58,26 @@ function CustomizableWeaponry.colorableParts:setColor(index, position)
 	if not index or not position then
 		return
 	end
-	
+
+	if not self.SightColors then
+		return
+	end
+
 	local target = self.SightColors[index]
+	if not target then
+		return
+	end
+
 	local colors = CustomizableWeaponry.colorableParts.colors[target.type]
-	
 	if not colors then
 		return
 	end
-	
+
 	colors = colors[position]
-	
+	if not colors then
+		return
+	end
+
 	target.last = position
 	target.color = colors.color
 	target.display = CustomizableWeaponry.colorableParts:makeColorDisplayText(colors.display)

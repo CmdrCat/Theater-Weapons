@@ -599,6 +599,7 @@ function SWEP:Initialize()
 	
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize
 	self.Primary.ClipSize_ORIG_REAL = self.Primary.ClipSize -- this is the 'real' real original mag size, it is necessary for mag-size changing attachments
+	self.Primary.Ammo_Orig = self.Primary.Ammo
 	
 	if self.MuzzleVelocity then -- ENTER ONLY IN METER/S
 		self.MuzzleVelocityConverted = self.MuzzleVelocity * 39.37
@@ -696,8 +697,7 @@ function SWEP:unloadWeaponPartially()
 
 	local amt = self:Clip1()
 
-	if amt >= (self.Primary.ClipSize_Orig +1) then
-		self.Owner:SetAmmo(self.Owner:GetAmmoCount(self.Primary.Ammo) + (amt - self.Primary.ClipSize_Orig), self.Primary.Ammo)
+	if amt >= (self.Primary.ClipSize_Orig + 1) then
 		self:SetClip1(self.Primary.ClipSize_Orig)
 	end
 end
@@ -706,12 +706,30 @@ function SWEP:loadWeapon()
 
 	local amt = self:Clip1()
 
+	if self.Primary.Ammo == self.Primary.Ammo_Orig then
+		if amt == self.Primary.ClipSize_ORIG_REAL then
+			self:SetClip1(self.Primary.ClipSize)
+		end
+		if amt == (self.Primary.ClipSize_ORIG_REAL + 1) then
+			self:SetClip1(self.Primary.ClipSize + 1)
+		end
+		return
+	end
+
 	if amt == self.Primary.ClipSize_ORIG_REAL then
-		self.Owner:SetAmmo(self.Primary.ClipSize, self.Primary.Ammo)
+		local currentAmmo = self.Owner:GetAmmoCount(self.Primary.Ammo)
+		local desiredAmmo = self.Primary.ClipSize
+		if currentAmmo < desiredAmmo then
+			self.Owner:GiveAmmo(desiredAmmo - currentAmmo, self.Primary.Ammo, true)
+		end
 		self:SetClip1(self.Primary.ClipSize)
 	end
 	if amt == (self.Primary.ClipSize_ORIG_REAL + 1) then
-		self.Owner:SetAmmo(self.Primary.ClipSize + 1, self.Primary.Ammo)
+		local currentAmmo = self.Owner:GetAmmoCount(self.Primary.Ammo)
+		local desiredAmmo = self.Primary.ClipSize + 1
+		if currentAmmo < desiredAmmo then
+			self.Owner:GiveAmmo(desiredAmmo - currentAmmo, self.Primary.Ammo, true)
+		end
 		self:SetClip1(self.Primary.ClipSize + 1)
 	end
 

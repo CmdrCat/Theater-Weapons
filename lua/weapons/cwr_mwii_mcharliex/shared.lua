@@ -241,11 +241,11 @@ SWEP.Attachments = {
 	[2] = {header = "Muzzle", offset = {-700 , -350},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_mcxshrike"}},
 	[4] = {header = "Bottom Rail Long", offset = {-700 , 150},  atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {bruenbm20 = true}},
 	[5] = {header = "Bottom Rail Short", offset = {-700 , 150},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},
-	[9] = {header = "Front Sights", offset = {300 , 650},  atts = {"nofs"}},
+	[9] = {header = "Front Sights", offset = {300 , 800},  atts = {"nofs"}},
 	[3] = {header = "Handguard", offset = {-600 , 650},  atts = {"bruenechelon", "bruenbm20"}},
 	[7] = {header = "Magazine", offset = {1200, 650},  atts = {"md_uecw_emag"}},
 	[8] = {header = "Conversion", offset = {1950, 650},  atts = {"r_mwii_300blk"}},
-	[9] = {header = "Skins", offset = {-50, 450}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	["+use"] = {header = "Skins", offset = {-50, 450}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }
