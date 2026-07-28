@@ -4,7 +4,8 @@ att.displayName = ".30-03 Springfield"
 att.displayNameShort = ".30-03"
 
 att.statModifiers = {DamageMult = 24 / 145,
-	RecoilMult = .25}
+	RecoilMult = .25,
+	FireDelayMult = 1 / 2}
 
 att.sharedAmmoPool = {
 	"7.62x54MMR",
@@ -21,8 +22,8 @@ att.sharedAmmoPool = {
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/matchgradeammo")
-	att.description = {[1] = {t = "Fire .30-03 Springfield rounds", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Decreases effective range by 45M", c = CustomizableWeaponry.textColors.NEGATIVE},
+	att.description = {[1] = {t = "A heavy round with a more pronounced fall-off past mid-range; benefits from careful shot placement up close.", c = CustomizableWeaponry.textColors.COSMETIC},
+	[2] = {t = "Decreases effective range by 45 M", c = CustomizableWeaponry.textColors.NEGATIVE},
 	[3] = {t = "Increases damage fall off by 15%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 

@@ -21,6 +21,7 @@ CustomizableWeaponry.firemodes:registerFiremode("semi", "SEMI-AUTO", false, 0, 1
 CustomizableWeaponry.firemodes:registerFiremode("double", "DOUBLE-ACTION", false, 0, 1)
 CustomizableWeaponry.firemodes:registerFiremode("bolt", "BOLT-ACTION", false, 0, 1)
 CustomizableWeaponry.firemodes:registerFiremode("pump", "PUMP-ACTION", false, 0, 1)
+CustomizableWeaponry.firemodes:registerFiremode("leveract", "LEVER-ACTION", false, 0, 1)
 CustomizableWeaponry.firemodes:registerFiremode("break", "BREAK-ACTION", false, 0, 1)
 CustomizableWeaponry.firemodes:registerFiremode("single", "SINGLE-FIRE", false, 0, 1)
 CustomizableWeaponry.firemodes:registerFiremode("2burst", "2-ROUND BURST", true, 2, 2)

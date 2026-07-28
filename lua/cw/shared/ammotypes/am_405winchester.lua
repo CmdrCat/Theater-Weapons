@@ -4,8 +4,7 @@ att.displayName = ".405 Winchester"
 att.displayNameShort = ".405"
 
 att.statModifiers = {DamageMult = 7 / 29,
-	RecoilMult = 1,
-	FireDelayMult = -2 / 5}
+	RecoilMult = 1}
 
 att.sharedAmmoPool = {
 	"7.62x54MMR",
@@ -22,8 +21,8 @@ att.sharedAmmoPool = {
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/magnumrounds")
-	att.description = {[1] = {t = "Fire .405 Winchester rounds", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Decreases effective range by 75M", c = CustomizableWeaponry.textColors.NEGATIVE},
+	att.description = {[1] = {t = "Most powerful round at the cost of dramatic energy loss; one to the head up close is all it takes.", c = CustomizableWeaponry.textColors.COSMETIC},
+	[2] = {t = "Decreases effective range by 75 M", c = CustomizableWeaponry.textColors.NEGATIVE},
 	[3] = {t = "Increases damage fall off by 50%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 

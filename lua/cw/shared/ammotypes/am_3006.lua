@@ -5,7 +5,7 @@ att.displayNameShort = ".30-06"
 
 att.statModifiers = {DamageMult = -51 / 145,
 	RecoilMult = -.1,
-	FireDelayMult = -17 / 35}
+	FireDelayMult = -1 / 4}
 
 att.sharedAmmoPool = {
 	"7.62x54MMR",
@@ -22,9 +22,9 @@ att.sharedAmmoPool = {
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/apammo")
-	att.description = {[1] = {t = "Fire .30-06 Springfield rounds", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Decreases effective range by 50M", c = CustomizableWeaponry.textColors.NEGATIVE},
-	[3] = {t = "Deccreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "The most consistent round, allowing for quick follow-up shots at any range.", c = CustomizableWeaponry.textColors.COSMETIC},
+	[2] = {t = "Decreases effective range by 50 M", c = CustomizableWeaponry.textColors.NEGATIVE},
+	[3] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

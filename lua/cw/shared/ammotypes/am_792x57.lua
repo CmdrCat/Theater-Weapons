@@ -5,7 +5,7 @@ att.displayNameShort = "7.92"
 
 att.statModifiers = {DamageMult = 5 / 29,
 	RecoilMult = .3,
-	FireDelayMult = 1 / 8}
+	FireDelayMult = 7 / 8}
 
 att.sharedAmmoPool = {
 	"7.62x54MMR",
@@ -22,17 +22,61 @@ att.sharedAmmoPool = {
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/matchgradeammo")
-	att.description = {[1] = {t = "Fire 7.92x57MM Mauser rounds", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Increases effective range by 10M", c = CustomizableWeaponry.textColors.POSITIVE},
+	att.description = {[1] = {t = "A powerful cartridge that demands patience, rewarding precise marksmanship at long ranges.", c = CustomizableWeaponry.textColors.COSMETIC},
+	[2] = {t = "Increases effective range by 10 M", c = CustomizableWeaponry.textColors.POSITIVE},
 	[3] = {t = "Increases damage fall off by 5%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
 function att:attachFunc()
+	function self:fireAnimFunc()
+		clip = self:Clip1()
+		cycle = 0
+		rate = 2.1 * 0.45
+		anim = "safe"
+		prefix = ""
+		suffix = ""
+
+		if clip == 1 then
+			suffix = suffix .. "_last"
+		end
+
+		if self:isAiming() then
+			suffix = suffix .. "_aim"
+			cycle = self.ironFireAnimStartCycle
+		end
+
+		self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+	end
+
+	self.ShellDelay = 0.46
+
 	self.ShellScale = 1.04
 	self.Primary.Ammo			= "7.92x57MM"
 end
 
 function att:detachFunc()
+	function self:fireAnimFunc()
+		clip = self:Clip1()
+		cycle = 0
+		rate = 2.1
+		anim = "safe"
+		prefix = ""
+		suffix = ""
+
+		if clip == 1 then
+			suffix = suffix .. "_last"
+		end
+
+		if self:isAiming() then
+			suffix = suffix .. "_aim"
+			cycle = self.ironFireAnimStartCycle
+		end
+
+		self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+	end
+
+	self.ShellDelay = 0.21
+
 	self.ShellScale = 1
 	self.Primary.Ammo			= "7.62x54MMR"
 end

@@ -589,6 +589,7 @@ function SWEP:Initialize()
 	self.FireMode = t
 	t = CustomizableWeaponry.firemodes.registeredByID[t]
 	
+	self.Primary.Automatic = t.auto
 	self.Primary.Auto = t.auto
 	self.BurstAmount = t.burstamt
 	

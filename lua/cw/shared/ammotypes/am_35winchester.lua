@@ -5,7 +5,7 @@ att.displayNameShort = ".35"
 
 att.statModifiers = {DamageMult = 6 / 29,
 	RecoilMult = .3,
-	FireDelayMult = -7 / 25}
+	FireDelayMult = 1 / 5}
 
 att.sharedAmmoPool = {
 	"7.62x54MMR",
@@ -22,8 +22,8 @@ att.sharedAmmoPool = {
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/hvyammo")
-	att.description = {[1] = {t = "Fire .35 Winchester rounds", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Decreases effective range by 60M", c = CustomizableWeaponry.textColors.NEGATIVE},
+	att.description = {[1] = {t = "Can drop foes in one shot while retaining lethality for mid-range engagements.", c = CustomizableWeaponry.textColors.COSMETIC},
+	[2] = {t = "Decreases effective range by 60 M", c = CustomizableWeaponry.textColors.NEGATIVE},
 	[3] = {t = "Increases damage fall off by 17%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 

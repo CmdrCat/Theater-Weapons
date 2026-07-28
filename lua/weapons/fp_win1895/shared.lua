@@ -6,9 +6,6 @@ include("sh_soundscript.lua")
 
 	--SWEP.magType = "NONE"
 	
-	CustomizableWeaponry.firemodes:registerFiremode("leveract", "QUICK-FIRE", true, 0, 3)
-	CustomizableWeaponry.firemodes:registerFiremode("leveract2", "LEVER-ACTION", false, 0, 1)
-	
 	SWEP.EffectiveRange_Orig = 90 * 39.37
 	SWEP.DamageFallOff_Orig = .35
 
@@ -33,9 +30,9 @@ if CLIENT then
 	
 	SWEP.Shell = "sfkm762r"
 	SWEP.ShellScale = 1
-	SWEP.ShellDelay = .32
+	SWEP.ShellDelay = .21
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = 3, y = -2, z = 0}
+	SWEP.ShellPosOffset = {x = 0.5, y = -2, z = 2}
 	
 	SWEP.IronsightPos = Vector(-2.8, -5, 2.53)
 	SWEP.IronsightAng = Vector(-.15, .025, 0)
@@ -65,6 +62,10 @@ if CLIENT then
 	SWEP.MaterialIndexPrimary = {0, 4}
 	SWEP.MaterialIndexSecondary = {2, 3, 5, 6}
 
+	SWEP.GoldenJusticeIndexWhite = {5, 6}
+	SWEP.GoldenJusticeIndexBrass = {3, 4}
+	SWEP.GoldenJusticeIndexRed = {2}
+
 	/*
 	0 = Bullet Casing
 	1 = Unknown
@@ -76,7 +77,7 @@ if CLIENT then
 	*/
 	
 	SWEP.OverallMouseSens = .9
-	SWEP.CustomizationMenuScale = 0.026
+	SWEP.CustomizationMenuScale = 0.022
 	SWEP.AttachmentModelsVM = {["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "body", rel = "", pos = Vector(-.82, -3.15, 15), angle = Angle(0, 180, -90), size = Vector(.7, .7, .7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_fp_1895scope"] = { type = "Model", model = "models/weapons/khrcw2/att/1895_scope.mdl", bone = "body", rel = "", pos = Vector(2.7, -5.9, -18.5), angle = Angle(90, -90, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },}
 	
@@ -96,12 +97,29 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
+SWEP.Trivia = {text = "American lever-action rifle compatible with a plethora of cartridges. This model in particular was made for the Russian Empire.", x = -100, y = -600}
+
 SWEP.Attachments = {
 [2] = {header = "Optic", offset = {1050, -450}, atts = {"md_fp_1895scope"}},
-[1] = {header = "Barrel", offset = {50, -550}, atts = {"md_fp_1895short", "md_saker"}},
-[3] = {header = "Skins", offset = {1200, 0}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-["+reload"] = {header = "Ammo", offset = {150, 300}, atts = {"am_35winchester", "am_3006", "am_3003", "am_3040", "am_303brit", "am_792x57", "am_3872", "am_4072", "am_405winchester"}},
+[1] = {header = "Barrel", offset = {50, -450}, atts = {"md_fp_1895short", "md_saker"}},
+[3] = {header = "Signature Attachment", offset = {1550, 300}, atts = {"md_goldenjustice"}},
+[4] = {header = "Skins", offset = {1200, 0}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_35winchester", "am_3006", "am_3003", "am_3040", "am_303brit", "am_792x57", "am_3872", "am_4072", "am_405winchester", "am_snakeshot"}},
 }
+
+SWEP.AttachmentExclusions = {
+	["md_fp_1895short"] = {"md_goldenjustice"},
+	["md_saker"] = {"md_goldenjustice"},
+	["am_35winchester"] = {"md_goldenjustice"},
+	["am_3006"] = {"md_goldenjustice"},
+	["am_3003"] = {"md_goldenjustice"},
+	["am_3040"] = {"md_goldenjustice"},
+	["am_303brit"] = {"md_goldenjustice"},
+	["am_792x57"] = {"md_goldenjustice"},
+	["am_3872"] = {"md_goldenjustice"},
+	["am_4072"] = {"md_goldenjustice"},
+	["am_405winchester"] = {"md_goldenjustice"},
+	["am_snakeshot"] = {"md_goldenjustice"}}
 
 SWEP.Animations = {fire = "fireironfull",
 	fire_aim = "fireironfull",
@@ -125,7 +143,7 @@ SWEP.Slot = 4
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "rpg"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"leveract", "leveract2"}
+SWEP.FireModes = {"leveract"}
 SWEP.Base = "cw_base"
 SWEP.Category = "TCW - Marksman Rifles"
 
@@ -150,10 +168,10 @@ SWEP.ReloadViewBobEnabled = false
 
 SWEP.Primary.ClipSize		= 5
 SWEP.Primary.DefaultClip	= 5
-SWEP.Primary.Automatic		= true
+SWEP.Primary.Automatic		= false
 
 
-SWEP.FireDelay = 60/90
+SWEP.FireDelay = 60/150
 SWEP.FireSound = "FP1895_FIRE"
 SWEP.FireSoundSuppressed = "FP1895_FIRESUP"
 SWEP.Recoil = 1.5
@@ -222,17 +240,22 @@ function SWEP:IndividualThink()
 
 	if self.ActiveAttachments.am_3872 then
 		self.EffectiveRange = self.EffectiveRange - 70 * 39.37
-		self.DamageFallOff = self.DamageFallOff + 0.25
+		self.DamageFallOff = self.DamageFallOff + 0.3
 	end
 
 	if self.ActiveAttachments.am_4072 then
 		self.EffectiveRange = self.EffectiveRange - 70 * 39.37
-		self.DamageFallOff = self.DamageFallOff + 0.3
+		self.DamageFallOff = self.DamageFallOff + 0.35
 	end
 
 	if self.ActiveAttachments.am_405winchester then
 		self.EffectiveRange = self.EffectiveRange - 75 * 39.37
 		self.DamageFallOff = self.DamageFallOff + 0.5
+	end
+
+	if self.ActiveAttachments.md_goldenjustice then
+		self.EffectiveRange = self.EffectiveRange - 15 * 39.37
+		self.DamageFallOff = self.DamageFallOff - 1.35
 	end
 	
 	if self.ActiveAttachments.md_fp_1895short then
@@ -244,7 +267,7 @@ end
 function SWEP:fireAnimFunc()
 	clip = self:Clip1()
 	cycle = 0
-	rate = 1.4
+	rate = 2.1
 	anim = "safe"
 	prefix = ""
 	suffix = ""
