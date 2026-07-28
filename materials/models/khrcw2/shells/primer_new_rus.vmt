@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models\khrcw2\shells\Primer_New_Rus_rgb"
+    "$bumpmap" "models\khrcw2\shells\Primer_New_Rus_n"
+    //"$phongexponenttexture" "models\khrcw2\shells\${EXPONENTNAME}"
+
+"$phongexponenttexture" "models/albedotint"
+	//"$envmap" "env_cubemap"
+	"$envmaptint" "[.9 .5 0.25]"
+	"$phong" 			"1"
+	"$phongexponent"		"30"
+	"$phongboost" 			"1.5"
+	"$phongfresnelranges"		"[1.0 2.5 10.5]"//"[0.1 0.4 .8]"
+	$phongdisablehalflambert 1
+	$halflambert 0
+	$PhongAlbedoTint 1
+	"$normalmapalphaenvmapmask"	"1" 
+}

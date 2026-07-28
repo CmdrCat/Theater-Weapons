@@ -1,16 +1,21 @@
 hook.Add( "PreRegisterSWEP", "cw_mult", function( swep )
     if swep.Base ~= "cw_base" then return end
 
+    local oldBulletCallback = swep.bulletCallback
     swep.bulletCallback = function( att, tr, dmg )
+        if oldBulletCallback then
+            oldBulletCallback( att, tr, dmg )
+        end
+
         if tr.HitGroup == HITGROUP_HEAD then
             dmg:ScaleDamage( 0.75 ) -- Default headshot damage multiplier is 2, so we're multiplying 2 by the value here (0.75) to get 1.5
         end
-		if (tr.HitGroup == HITGROUP_LEFTARM || tr.HitGroup == HITGROUP_RIGHTARM) then
-			dmg:ScaleDamage( 4 ) -- Default arm damage multiplier is 0.25, so we're multiplying 0.25 by the value here (4) to get 1
-		end
-		if (tr.HitGroup == HITGROUP_LEFTLEG || tr.HitGroup == HITGROUP_RIGHTLEG) then
-			dmg:ScaleDamage( 3 ) -- Default leg damage multiplier is 0.25, so we're multiplying 0.25 by the value here (3) to get 0.75
-		end
+        if tr.HitGroup == HITGROUP_LEFTARM or tr.HitGroup == HITGROUP_RIGHTARM then
+            dmg:ScaleDamage( 4 ) -- Default arm damage multiplier is 0.25, so we're multiplying 0.25 by the value here (4) to get 1
+        end
+        if tr.HitGroup == HITGROUP_LEFTLEG or tr.HitGroup == HITGROUP_RIGHTLEG then
+            dmg:ScaleDamage( 3 ) -- Default leg damage multiplier is 0.25, so we're multiplying 0.25 by the value here (3) to get 0.75
+        end
     end
 end )
 
