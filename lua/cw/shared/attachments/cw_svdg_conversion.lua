@@ -29,7 +29,8 @@ function att:attachFunc()
 	self.FireSound = "CW_CHEYTAC_FIRE"
 	self.FireSoundSuppressed = "CW_CHEYTAC_FIRE_SUPPRESSED"
 	self.Primary.Ammo = "10/4.5x54MM"
-	self.ShellScale = 0.9
+	self.Shell = "mainshell"
+	self.ShellScale = 1.3
 end
 
 function att:detachFunc()
@@ -41,7 +42,8 @@ function att:detachFunc()
 	self.FireSound = "CW_SVD_OFFICIAL_FIRE"
 	self.FireSoundSuppressed = "CW_SVD_OFFICIAL_FIRE_SUPPRESSED"
 	self.Primary.Ammo = "7.62x54MMR"
-	self.ShellScale = 0.69
+	self.Shell = "sfkm762r"
+	self.ShellScale = 1
 end
 
 CustomizableWeaponry:registerAttachment(att)

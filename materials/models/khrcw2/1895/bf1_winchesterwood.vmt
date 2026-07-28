@@ -1,0 +1,19 @@
+"VertexlitGeneric"
+{        
+                 // Original shader: VertexLitTexture
+	"$basetexture" "models\khrcw2\1895\winchester_d2"
+	"$bumpmap" "models\khrcw2\1895\winchester_n"
+	"$halflambert" "1"					
+		
+	"$normalmapalphaenvmapmask" 1				
+	"$envmaptint" "[.1 .1 .1]"
+	"$envmapcontrast" ".4"	
+                "$ambientocclusion" 1
+                "$ambientoccltexture" "models\khrcw2\1895\winchester_a"						
+
+	$phong 1
+	$phongboost 0.25
+	$phongfresnelranges "[0.2 0.8 20]"
+	$phongexponenttexture "models/khrcw2/1895/exponent.vtf"
+	$lightwarptexture "models/khrcw2/1895/lightwarp.vtf"		
+}

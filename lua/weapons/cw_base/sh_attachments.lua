@@ -70,6 +70,10 @@ function SWEP:_attach(cur, curPos, inherit)
 		att.attachFunc(self)
 	end
 
+	if att.sharedAmmoPool then
+		self:syncAmmoReserve(att.sharedAmmoPool)
+	end
+
 	if CLIENT then
 		-- if there is a model with the provided name, make it visible
 		
@@ -242,6 +246,10 @@ function SWEP:_detach(category, pos, skipDependencyCheck)
 
 	if foundAtt.detachFunc then
 		foundAtt.detachFunc(self)
+	end
+
+	if foundAtt.sharedAmmoPool then
+		self:syncAmmoReserve(foundAtt.sharedAmmoPool)
 	end
 	
 	self:resetPostDetach(foundAtt, att)

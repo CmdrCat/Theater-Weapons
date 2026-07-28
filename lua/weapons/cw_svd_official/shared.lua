@@ -4,6 +4,8 @@ include("sh_sounds.lua")
 
 CustomizableWeaponry:registerAmmo("7.62x54MMR", "7.62x54MMR", 7.62, 54)
 
+CustomizableWeaponry.shells:addNew("sfkm762r", "models/weapons/khrcw2/shells/762rshell.mdl", "CW_SHELL_MAIN")
+
 if CLIENT then
 	SWEP.DrawCrosshair = false
 	SWEP.PrintName = "SVD"
@@ -44,7 +46,8 @@ if CLIENT then
 
 	SWEP.MuzzleEffect = "muzzleflash_m14"
 	SWEP.PosBasedMuz = false
-	SWEP.ShellScale = 0.69
+	SWEP.Shell = "sfkm762r"
+	SWEP.ShellScale = 1
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = -2, y = 0, z = -3}
 	SWEP.SightWithRail = true

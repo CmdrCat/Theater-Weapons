@@ -1,0 +1,19 @@
+"VertexlitGeneric"
+{       
+	"$basetexture" "models\khrcw2\1895\materials\metal skin"
+	"$bumpmap" "models\khrcw2\1895\materials\metal skin_n"
+	"$halflambert" "1"						
+"$nocull" "1"		
+	"$normalmapalphaenvmapmask" 1				
+	"$envmaptint" "[.1 .1 .1]"
+	"$envmapcontrast" ".5"	
+                "$ambientocclusion" 1
+                "$ambientoccltexture" "models\ConteAlfonsoII\winchester 1895\materials\metal skin_a"						
+
+	"$phong" "1"
+	"$phongalbedotint" "1"
+	"$phongboost" "20"
+	"$phongfresnelranges" "[.5 1 4]"
+"$phongexponenttexture" "models\khrcw2\1895/exp"
+	"$lightwarptexture" "models\khrcw2\1895/lightwarp"	
+}

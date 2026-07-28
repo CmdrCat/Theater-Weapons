@@ -735,6 +735,28 @@ function SWEP:loadWeapon()
 
 end
 
+function SWEP:syncAmmoReserve(ammoTypes)
+	if not SERVER then
+		return
+	end
+
+	if not ammoTypes or not IsValid(self.Owner) then
+		return
+	end
+
+	local reserve = 0
+
+	for _, ammoType in ipairs(ammoTypes) do
+		reserve = math.max(reserve, self.Owner:GetAmmoCount(ammoType))
+	end
+
+	for _, ammoType in ipairs(ammoTypes) do
+		if self.Owner:GetAmmoCount(ammoType) ~= reserve then
+			self.Owner:SetAmmo(reserve, ammoType)
+		end
+	end
+end
+
 function SWEP:setBodygroup(main, sub)
 	if SERVER then
 		return
