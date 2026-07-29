@@ -104,8 +104,9 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-500, -300},  atts = {"md_microt1", "too_reflex_exps", "corioenforcer", "md_acog"}},
 [2] = {header = "Muzzle", offset = {800, -300}, atts = {"md_saker", "hard20"}},
 [3] = {header = "Laser", offset = {-500, 160}, atts = {"md_anpeq15","ftacgrimline"}},
-[4] = {header = "Foregrip", offset = {-500, -750}, atts = {"md_foregrip","ftactiger_r", "bruentiltgrip_r", "cw_akimbo"}},
-[5] = {header = "Skins", offset = {800, 160}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+[4] = {header = "Foregrip", offset = {-500, -750}, atts = {"md_foregrip","ftactiger_r", "bruentiltgrip_r"}},
+[5] = {header = "Stance", offset = {150, -750}, atts = {"cw_akimbo"}},
+[6] = {header = "Skins", offset = {800, 160}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {800, -750}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap",}}}
 
 SWEP.Trivia = {text = "Notable for its KRISS Super V mechanism, which reduces muzzle climb.", x = -300, y = -850}

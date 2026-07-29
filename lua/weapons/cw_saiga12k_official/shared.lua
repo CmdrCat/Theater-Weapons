@@ -230,7 +230,7 @@ SWEP.DeployTime = 0.8
 SWEP.RecoilToSpread = 1.6 -- should actually be called SpreadToRecoil, but whatever
 SWEP.NearWallDistance = 30
 
-SWEP.ReloadSpeed = 1.15
+SWEP.ReloadSpeed = 1.5
 SWEP.ReloadTime = 2.5
 SWEP.ReloadTime_Empty = 3.5
 SWEP.ReloadHalt = 3

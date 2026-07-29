@@ -11,8 +11,9 @@ att.statModifiers = {OverallMouseSensMult = -0.15}
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/1895scope")
 	att.description = {[1] = {t = "Provides 5-10x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Narrow scope reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
-	[3] = {t = "Extremely disorienting at close range.", c = CustomizableWeaponry.textColors.VNEGATIVE}}
+	[2] = {t = "Has backup sights. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Narrow scope reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE},
+	[4] = {t = "Extremely disorienting at close range.", c = CustomizableWeaponry.textColors.VNEGATIVE}}
 
 	local old, x, y, ang
 	local reticle = surface.GetTextureID("models/khrcw2/1895/1895scope")

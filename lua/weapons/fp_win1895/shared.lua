@@ -39,6 +39,9 @@ if CLIENT then
 	
 	SWEP.PPCoPos = Vector(-1.045, -5, 2.36)
 	SWEP.PPCoAng = Vector(0, 0, 0)
+
+	SWEP.BackupSights = {
+	["md_fp_1895scope"] = {[1] = Vector(-2.8, -5, 2.53), [2] = Vector(-.15, .025, 0)}}
 	
 	SWEP.SprintPos = Vector(5.618, -5.051, -5.026)
 	SWEP.SprintAng = Vector(-0.704, 55.577, -14.775)

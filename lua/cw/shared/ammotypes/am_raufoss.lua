@@ -3,7 +3,9 @@ att.name = "am_raufoss"
 att.displayName = "Raufoss Mk 211 Rounds"
 att.displayNameShort = "HEAT"
 
-att.statModifiers = {}
+att.statModifiers = {
+	DamageMult = -34 / 39
+}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/apammo")
@@ -32,14 +34,13 @@ function att:attachFunc()
 			local hitPos = traceResult.HitPos
 			local effect = EffectData()
 			effect:SetOrigin(hitPos)
-			effect:SetMagnitude(1)
+			effect:SetMagnitude(0.1)
 			effect:SetScale(0)
+			util.Effect("cball_explode", effect, true, true)
 			util.Effect("Explosion", effect, true, true)
 
-			local blastDamage = math.max(10, dmgInfo:GetDamage() * 1.5)
-			util.BlastDamage(self, ply, hitPos, 128, blastDamage)
-
-			dmgInfo:SetDamage(0)
+			local blastDamage = 175
+			util.BlastDamage(self, ply, hitPos, 89.2388451444, blastDamage)
 		end
 	end
 end
@@ -64,12 +65,12 @@ if SERVER then
 		local hitPos = traceResult.HitPos
 		local effect = EffectData()
 		effect:SetOrigin(hitPos)
+		util.Effect("cball_explode", effect, true, true)
 		util.Effect("Explosion", effect, true, true)
 
-		local blastDamage = math.max(10, dmgInfo:GetDamage() * 1.5)
-		util.BlastDamage(self, ply, hitPos, 128, blastDamage)
+		local blastDamage = 175
+		util.BlastDamage(self, ply, hitPos, 89.2388451444, blastDamage)
 
-		dmgInfo:SetDamage(0)
 	end)
 end
 

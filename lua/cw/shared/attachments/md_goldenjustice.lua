@@ -37,6 +37,8 @@ function att:attachFunc()
 
 	self.ShellDelay = 0.46
 
+	self.PrintName = "Golden Justice"
+
 	self.Trivia = {text = "They say Desperado's longarm can hit clean through an army of Bloons.", x = 300, y = -600}
 
 	if SERVER then
@@ -80,6 +82,8 @@ function att:detachFunc()
 
 		self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
 	end
+
+	self.PrintName = "Model 1895"
 
 	self.Trivia = {text = "American lever-action rifle compatible with a plethora of cartridges. This model in particular was made for the Russian Empire.", x = -100, y = -600}
 
