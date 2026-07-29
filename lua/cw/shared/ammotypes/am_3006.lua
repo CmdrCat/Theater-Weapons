@@ -23,8 +23,9 @@ att.sharedAmmoPool = {
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/apammo")
 	att.description = {[1] = {t = "The most consistent round, allowing for quick follow-up shots at any range.", c = CustomizableWeaponry.textColors.COSMETIC},
-	[2] = {t = "Decreases effective range by 50 M", c = CustomizableWeaponry.textColors.NEGATIVE},
-	[3] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
+	[2] = {t = "Increases headshot multiplier from 1.25 to 2.0", c = CustomizableWeaponry.textColors.POSITIVE},
+	[3] = {t = "Decreases effective range by 50 M", c = CustomizableWeaponry.textColors.NEGATIVE},
+	[4] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

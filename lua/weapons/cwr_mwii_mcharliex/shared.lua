@@ -9,6 +9,7 @@ if CLIENT then
 	SWEP.PrintName = "MCX Virtus"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
+	SWEP.CustomizationMenuScale = 0.020
 	
 	SWEP.SelectIcon = surface.GetTextureID("vgui/m13b")
 	killicon.Add( "cwr_mwii_mcharliex", "vgui/killicons/m13b", Color(255, 120, 40, 0))
@@ -241,11 +242,11 @@ SWEP.Attachments = {
 	[2] = {header = "Muzzle", offset = {-700 , -350},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_mcxshrike"}},
 	[4] = {header = "Bottom Rail Long", offset = {-700 , 150},  atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {bruenbm20 = true}},
 	[5] = {header = "Bottom Rail Short", offset = {-700 , 150},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},
-	[9] = {header = "Front Sights", offset = {300 , 800},  atts = {"nofs"}},
-	[3] = {header = "Handguard", offset = {-600 , 650},  atts = {"bruenechelon", "bruenbm20"}},
+	[9] = {header = "Front Sights", offset = {0 , 0},  atts = {"nofs"}},
+	[3] = {header = "Handguard", offset = {-700 , 650},  atts = {"bruenechelon", "bruenbm20"}},
 	[7] = {header = "Magazine", offset = {1200, 650},  atts = {"md_uecw_emag"}},
-	[8] = {header = "Conversion", offset = {1950, 650},  atts = {"r_mwii_300blk"}},
-	["+use"] = {header = "Skins", offset = {-50, 450}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	[8] = {header = "Conversion", offset = {100, 650},  atts = {"r_mwii_300blk"}},
+	["+use"] = {header = "Skins", offset = {0, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }
@@ -411,9 +412,17 @@ if self.ActiveAttachments.md_mcxshrike then
 	self.DamageFallOff = ((self.DamageFallOff * 0.8))
 end
 if self.ActiveAttachments.r_mwii_300blk then
-	self.EffectiveRange = ((self.EffectiveRange * 0.875))
-	self.DamageFallOff = ((self.DamageFallOff + 0.26))
-end
+		self.EffectiveRange = ((self.EffectiveRange * 0.875))
+		self.DamageFallOff = ((self.DamageFallOff + 0.26))
+
+		self.bulletCallback = function( att, tr, dmg )
+			if tr.HitGroup == HITGROUP_HEAD then
+				dmg:ScaleDamage( 0.675 )
+			end
+		end
+	else
+		self.bulletCallback = nil
+	end
 end
 
 SWEP.InspectAnim = "inspect_30" -- Needs to be in self.Animations
