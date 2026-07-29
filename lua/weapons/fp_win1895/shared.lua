@@ -217,12 +217,7 @@ function SWEP:IndividualThink()
 		self.EffectiveRange = self.EffectiveRange - 45 * 39.37
 		self.DamageFallOff = self.DamageFallOff + 0.15
 	end
-
-	if self.ActiveAttachments.am_3006 then
-		self.EffectiveRange = self.EffectiveRange - 50 * 39.37
-		self.DamageFallOff = self.DamageFallOff - 0.05
-	end
-
+	
 	if self.ActiveAttachments.am_3040 then
 		self.EffectiveRange = self.EffectiveRange - 55 * 39.37
 		self.DamageFallOff = self.DamageFallOff + 0.2
@@ -243,11 +238,6 @@ function SWEP:IndividualThink()
 		self.DamageFallOff = self.DamageFallOff + 0.3
 	end
 
-	if self.ActiveAttachments.am_4072 then
-		self.EffectiveRange = self.EffectiveRange - 70 * 39.37
-		self.DamageFallOff = self.DamageFallOff + 0.35
-	end
-
 	if self.ActiveAttachments.am_405winchester then
 		self.EffectiveRange = self.EffectiveRange - 75 * 39.37
 		self.DamageFallOff = self.DamageFallOff + 0.5
@@ -260,6 +250,32 @@ function SWEP:IndividualThink()
 	
 	if self.ActiveAttachments.md_fp_1895short then
 		self.EffectiveRange = ((self.EffectiveRange * .6))
+	end
+
+	if self.ActiveAttachments.am_3006 then
+		self.EffectiveRange = self.EffectiveRange - 50 * 39.37
+		self.DamageFallOff = self.DamageFallOff - 0.05
+	end
+
+	if self.ActiveAttachments.am_4072 then
+		self.EffectiveRange = self.EffectiveRange - 70 * 39.37
+		self.DamageFallOff = self.DamageFallOff + 0.35
+	end
+
+	if self.ActiveAttachments.am_3006 then
+		self.bulletCallback = function( att, tr, dmg )
+			if tr.HitGroup == HITGROUP_HEAD then
+				dmg:ScaleDamage( 1.0 )
+			end
+		end
+	elseif self.ActiveAttachments.am_4072 then
+		self.bulletCallback = function( att, tr, dmg )
+			if tr.HitGroup == HITGROUP_HEAD then
+				dmg:ScaleDamage( 0.75 )
+			end
+		end
+	else
+		self.bulletCallback = nil -- 
 	end
 
 end
