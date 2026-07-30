@@ -69,6 +69,7 @@ if CLIENT then
 		--muzzle
 		["md_saker"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "weapon", pos = Vector(0, 10.138, 0.034), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8)},
 		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "weapon", rel = "", pos = Vector(-0.05, 12.79, 1.017), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
+		["md_csgo_silencer_pistol"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_pistol.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.31, -4.6), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255)},		
 		--foregrip
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-0.375, -5, -2.05), angle = Angle(0, 0, 0), adjustment = {min = -5.971, max = -5, axis = "y", inverseOffsetCalc = false}, size = Vector(0.699, 0.699, 0.699)},
 		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(-0.03, 4.5, 0.155), angle = Angle(0, -90, 0), adjustment = {min = 4.5, max = 5.147, axis = "y", inverseOffsetCalc = false}, size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -81,6 +82,7 @@ if CLIENT then
 		--laser
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", pos = Vector(-0.15, 2.5, 2.9), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
 		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "weapon", rel = "", pos = Vector(0, 2.15, 3), angle = Angle(0, -90, 0), size = Vector(1, 1, 1) },
+		["md_insight_x2"] = {model = "models/cw2/attachments/pistollaser.mdl", bone = "weapon", pos = Vector(0.454, 4.051, 0.931), angle = Angle(0, 90, -90), size = Vector(0.091, 0.091, 0.091)}
 	}	
      
 		
@@ -102,12 +104,25 @@ SWEP.MagBGs = {main = 4, round15 = 0, round30 = 1}
 SWEP.LuaViewmodelRecoil = true
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-500, -300},  atts = {"md_microt1", "too_reflex_exps", "corioenforcer", "md_acog"}},
-[2] = {header = "Muzzle", offset = {800, -300}, atts = {"md_saker", "hard20"}},
-[3] = {header = "Laser", offset = {-500, 160}, atts = {"md_anpeq15","ftacgrimline"}},
-[4] = {header = "Foregrip", offset = {-500, -750}, atts = {"md_foregrip","ftactiger_r", "bruentiltgrip_r"}},
+[2] = {header = "Muzzle", offset = {800, -300}, atts = {"md_saker", "hard20", "md_csgo_silencer_pistol"}},
+[3] = {header = "Laser", offset = {-500, 160}, atts = {"md_anpeq15", "ftacgrimline", "md_insight_x2"}},
+[4] = {header = "Foregrip", offset = {-500, -750}, atts = {"md_foregrip","ftactiger_r", "bruentiltgrip_r"}, exclusions = {md_vector_sac3_conversion = true}},
 [5] = {header = "Stance", offset = {150, -750}, atts = {"cw_akimbo"}},
-[6] = {header = "Skins", offset = {800, 160}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-["+reload"] = {header = "Ammo", offset = {800, -750}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap",}}}
+[6] = {header = "Signature Attachment", offset = {265, 160}, atts = {"md_vector_sac3_conversion"}},
+[7] = {header = "Skins", offset = {800, 160}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}, exclusions = {md_vector_sac3_conversion = true}},
+["+reload"] = {header = "Ammo", offset = {800, -750}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap",}, exclusions = {md_vector_sac3_conversion = true}}}
+
+SWEP.AttachmentExclusions = {["md_acog"] = {"md_vector_sac3_conversion"},
+							 ["md_saker"] = {"md_vector_sac3_conversion"},
+							 ["hard20"] = {"md_vector_sac3_conversion"},
+							 ["md_anpeq15"] = {"md_vector_sac3_conversion"},
+							 ["ftacgrimline"] = {"md_vector_sac3_conversion"}
+}
+
+SWEP.AttachmentDependencies = {
+	["md_csgo_silencer_pistol"] = {"md_vector_sac3_conversion"},
+	["md_insight_x2"] = {"md_vector_sac3_conversion"}
+} 
 
 SWEP.Trivia = {text = "Notable for its KRISS Super V mechanism, which reduces muzzle climb.", x = -300, y = -850}
 
@@ -181,7 +196,7 @@ SWEP.Recoil = 0.25
 
 SWEP.HipSpread = 0.15
 SWEP.AimSpread = 0.005
-SWEP.VelocitySensitivity = 0
+SWEP.VelocitySensitivity = 0.001
 SWEP.MaxSpreadInc = 0.005
 SWEP.SpreadPerShot = 0.0002
 SWEP.SpreadCooldown = 0.0005
@@ -225,7 +240,14 @@ function SWEP:IndividualThink()
 	if self.FireMode == "semi" then
 	self.Owner.ViewAff = 0
 	end
+
+	self.LaserPosAdjust = {x = 0, y = 0, z = 0.25}
+	self.LaserAngAdjust = {p = 0, y = 180, r = 0}
 	
+	self.Damage = 28
+	self.FireDelay = 0.05
+	self.ReloadSpeed = 1.6
+
 	self.EffectiveRange = 20 * 39.37
 	self.DamageFallOff = .65
 
@@ -253,6 +275,31 @@ function SWEP:IndividualThink()
 		self.ViewModelOffsetAng = Angle(0, 0, -30)
 		self.ViewModelOffsetPos2 = Vector(2, 0, -1)
 		self.ViewModelOffsetAng2 = Angle(0, 0, 30)
+	end
+	if self.ActiveAttachments.md_vector_sac3_conversion then
+		
+		self.bulletCallback = function( att, tr, dmg )
+			if tr.HitGroup == HITGROUP_HEAD then
+				dmg:ScaleDamage( 1.1 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+			end
+		end
+
+		if self.ActiveAttachments.cw_akimbo then
+			self.Damage = 50
+			self.FireDelay = 60 / 600
+			self.EffectiveRange = self.EffectiveRange + 11 * 39.37
+			self.DamageFallOff = 0.28
+			self.ReloadSpeed = 2.39
+		else
+			self.Damage = 32
+			self.FireDelay = 60 / 923
+			self.EffectiveRange = self.EffectiveRange + 2 * 39.37
+			self.DamageFallOff = 0.37
+			self.ReloadSpeed = 2.15
+		end
+	end
+	if self.ActiveAttachments.md_csgo_silencer_pistol then
+		self.EffectiveRange = ((self.EffectiveRange * 0.85))
 	end
 end
 

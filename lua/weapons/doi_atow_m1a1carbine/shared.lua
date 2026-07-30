@@ -114,8 +114,8 @@ SWEP.SightBGs = {main = 2, off = 0, on = 1}
 SWEP.MagBGs = {main = 3, fifteen = 0, thirty = 1}
 SWEP.SlingBGs = {main = 4, off = 0, on = 1}
 
-if CustomizableWeaponry_atowins2_optics then
-	else
+--if CustomizableWeaponry_atowins2_optics then
+	--else
 	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82", "md_reflex"}},
 	[2] = {header = "Sight", offset = {1225, 50}, atts = {"doi_atow_altsight"}},
 	[3] = {header = "Muzzle", offset = {-600, -400}, atts = {"doi_atow_unisuppressor"}},
@@ -126,7 +126,7 @@ if CustomizableWeaponry_atowins2_optics then
 	"md_anpeq15"}},
 	[8] = {header = "Skins", offset = {1500, -300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1500, 450}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
-	end
+--end
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire_1"},
