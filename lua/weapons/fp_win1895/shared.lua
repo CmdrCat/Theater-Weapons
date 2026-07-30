@@ -170,7 +170,7 @@ SWEP.AdminSpawnable		= true
 SWEP.ReloadViewBobEnabled = false
 
 SWEP.Primary.ClipSize		= 5
-SWEP.Primary.DefaultClip	= 5
+SWEP.Primary.DefaultClip	= 55
 SWEP.Primary.Automatic		= false
 
 
@@ -181,7 +181,7 @@ SWEP.Recoil = 1.5
 
 
 SWEP.HipSpread = 0.065
-SWEP.AimSpread = 0.005
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = 0.75
 SWEP.MaxSpreadInc = 0.076
 SWEP.SpreadPerShot = 0.015

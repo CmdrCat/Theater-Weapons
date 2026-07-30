@@ -195,7 +195,7 @@ SWEP.Recoil = 0.25
 SWEP.SuppressedOnEquip = true
 
 SWEP.HipSpread = 0.12
-SWEP.AimSpread = 0.003
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = 0.9
 SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002

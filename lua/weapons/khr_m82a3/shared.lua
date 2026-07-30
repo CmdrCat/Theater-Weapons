@@ -191,7 +191,7 @@ SWEP.ArmDamage = .8
 SWEP.LegDamage = .8
 
 SWEP.HipSpread = 0.15
-SWEP.AimSpread = 0.003
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002

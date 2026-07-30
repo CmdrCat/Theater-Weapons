@@ -155,7 +155,7 @@ SWEP.SpeedDec = 45
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
-SWEP.OverallMouseSens = .8
+SWEP.OverallMouseSens = 1
 SWEP.NormalHoldType = "rpg"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"semi"}
@@ -191,7 +191,7 @@ SWEP.FireSoundSuppressed = "SR338_SUPFIRE"
 SWEP.Recoil = 2.8
 
 SWEP.HipSpread = 0.13
-SWEP.AimSpread = 0.0013
+SWEP.AimSpread = 0
 SWEP.VelocitySensitivity = 1.5
 SWEP.MaxSpreadInc = 0.1
 SWEP.SpreadPerShot = 0.0002
