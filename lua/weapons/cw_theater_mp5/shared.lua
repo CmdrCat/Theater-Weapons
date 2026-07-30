@@ -203,6 +203,12 @@ SWEP.Damage = 37
 SWEP.DeployTime = 0.8
 SWEP.NearWallDistance = 25
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.2 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 3.2
 SWEP.ReloadTime_Empty = 3.35
@@ -247,9 +253,21 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .5
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.2 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	end
+end
+
 if (self.ActiveAttachments.too_sdbar_bar) then
 self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
 self.DamageFallOff = ((self.DamageFallOff + 0.1))
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 2 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	end
+end
 end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))

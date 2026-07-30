@@ -8,7 +8,7 @@ hook.Add( "PreRegisterSWEP", "cw_mult", function( swep )
         end
 
         if tr.HitGroup == HITGROUP_HEAD then
-            dmg:ScaleDamage( 0.75 ) -- Default headshot damage multiplier is 2, so we're multiplying 2 by the value here (0.75) to get 1.5
+            dmg:ScaleDamage( 0.6 ) -- Default headshot damage multiplier is 2, so we're multiplying 2 by the value here (0.6) to get 1.2
         end
         if tr.HitGroup == HITGROUP_LEFTARM or tr.HitGroup == HITGROUP_RIGHTARM then
             dmg:ScaleDamage( 4 ) -- Default arm damage multiplier is 0.25, so we're multiplying 0.25 by the value here (4) to get 1

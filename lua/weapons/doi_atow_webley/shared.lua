@@ -199,6 +199,12 @@ SWEP.Damage = 62
 SWEP.DeployTime = .15
 SWEP.HolsterTime = .2
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.25 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ADSFireAnim = true
 SWEP.ShootWhileProne = true
 SWEP.ShotgunReload = true
@@ -237,6 +243,13 @@ self.Owner.ViewAff = 0
 	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .8
 	self.FireSound = "DOIWEBLEY_FIRE"
+
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.25 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+		end
+	end
+	
 	if self.ActiveAttachments.am_snakeshot then
 		self.FireSound = "DOIM37_FIRE"
 	end

@@ -83,6 +83,8 @@ function att:detachFunc()
 		self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
 	end
 
+	self.ShellDelay = 0.21
+
 	self.PrintName = "Model 1895"
 
 	self.Trivia = {text = "American lever-action rifle compatible with a plethora of cartridges. This model in particular was made for the Russian Empire.", x = -100, y = -600}

@@ -25,19 +25,19 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload = 0
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0
 	
-	SWEP.IronsightPos = Vector(-2.747, -4.624, 1.11)
+	SWEP.IronsightPos = Vector(-2.747, -3.75, 1.11)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
 	SWEP.PronePos = Vector(-7.397, -2.497, -1.551)
 	SWEP.ProneAng = Vector(5.618, -49.056, -15.311)
 
-	SWEP.MicroT1Pos = Vector(-2.747, -2.624, 0.5)
+	SWEP.MicroT1Pos = Vector(-2.747, -0.25, 0.5)
 	SWEP.MicroT1Ang = Vector(-0.026, 0, 0)	
 		
-	SWEP.EXPSPos = Vector(-2.75, -5, 0.55)
+	SWEP.EXPSPos = Vector(-2.75, -2, 0.55)
 	SWEP.EXPSAng = Vector(0, 0, 0)
 
-	SWEP.ENFORPos = Vector(-2.75, -6, 0.5)
+	SWEP.ENFORPos = Vector(-2.75, -2.75, 0.5)
     SWEP.ENFORAng = Vector(0, 0, 0)
 
 	SWEP.ACOGPos = Vector(-2.733, -5, 0.36)
@@ -55,10 +55,10 @@ if CLIENT then
 	SWEP.MaterialIndexPrimary = {1}
 	SWEP.MaterialIndexSecondary = {0, 2, 4, 5, 6, 7}
 	
-	SWEP.BackupSights = {["too_reflex_exps"] = {[1] = Vector(-4.25, 0, 0.75), [2] = Vector(0, 0, -50)},
-	["md_microt1"] = {[1] = Vector(-4.25, 2, 0.75), [2] = Vector(0, 0, -50)},
-	["md_acog"] = {[1] = Vector(-2.735, 0, -0.753), [2] = Vector(0, 0.028, 0)}, -- there you go
-	["corioenforcer"] = {[1] = Vector(-4.25, -1.25, 0.75), [2] = Vector(0, 0, -50)}}
+	SWEP.BackupSights = {["too_reflex_exps"] = {[1] = Vector(-4.25, -2, 0.75), [2] = Vector(0, 0, -50)},
+	["md_microt1"] = {[1] = Vector(-4.25, -0.25, 0.75), [2] = Vector(0, 0, -50)},
+	["md_acog"] = {[1] = Vector(-2.735, 5, -0.753), [2] = Vector(0, 0.028, 0)}, -- there you go
+	["corioenforcer"] = {[1] = Vector(-4.25, -2.75, 0.75), [2] = Vector(0, 0, -50)}}
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 1.5, hor = 3, roll = 1, forward = 1, pitch = 1}
 	SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
@@ -189,6 +189,12 @@ SWEP.Shots = 1
 SWEP.Damage = 28
 SWEP.DeployTime = 0.8
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.05 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ReloadSpeed = 1.6
 SWEP.ReloadTime = 2
 SWEP.ReloadTime_Empty = 2.2
@@ -222,6 +228,12 @@ function SWEP:IndividualThink()
 	
 	self.EffectiveRange = 20 * 39.37
 	self.DamageFallOff = .65
+
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.05 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+		end
+	end
 
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

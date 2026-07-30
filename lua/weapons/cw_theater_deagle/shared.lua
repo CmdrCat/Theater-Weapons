@@ -56,6 +56,16 @@ if CLIENT then
 
 	SWEP.EffectiveRange_Orig = 30 * 39.37
 	SWEP.DamageFallOff_Orig = .85
+
+	SWEP.MaterialIndexPrimary = {0, 3, 2}
+	SWEP.MaterialIndexSecondary = {1}
+
+	/*
+	0 = Basically everything lol
+	1 = Sight posts, controls, hammer, grip
+	2 = Bullets
+	3 = White part of sights
+	*/
 	
 	SWEP.BaseArm = "ValveBiped.Bip01_L_UpperArm"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
@@ -216,6 +226,12 @@ SWEP.DeployTime = 1
 --SWEP.Chamberable = false
 SWEP.NearWallDistance = 15
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.5 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 1.89
 SWEP.ReloadHalt = 1.89
@@ -253,6 +269,13 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .85
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.5 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	end
+end
+
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

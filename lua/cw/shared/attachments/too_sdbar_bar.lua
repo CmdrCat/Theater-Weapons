@@ -4,7 +4,7 @@ att.displayName = "SD Variant"
 att.displayNameShort = "SD"
 att.isBG = true
 
-att.statModifiers = {DamageMult = 8 / 37,
+att.statModifiers = {DamageMult = -3 / 37,
 RecoilMult = -0.25,
 FireDelayMult = 0.14285714285714}
 

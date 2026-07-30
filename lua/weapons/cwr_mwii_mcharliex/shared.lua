@@ -366,6 +366,12 @@ SWEP.Shots = 1
 SWEP.Damage = 28
 SWEP.DeployTime = 0.6
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.2 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.25
 SWEP.ReloadHalt = 2.25
@@ -379,6 +385,12 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 55 * 39.37
 self.DamageFallOff = .15
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.2 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	end
+end
 
 self:setBodygroup(self.FrontBGs.main, self.FrontBGs.med)
 
@@ -417,7 +429,7 @@ if self.ActiveAttachments.r_mwii_300blk then
 
 		self.bulletCallback = function( att, tr, dmg )
 			if tr.HitGroup == HITGROUP_HEAD then
-				dmg:ScaleDamage( 0.675 )
+				dmg:ScaleDamage( 1 )
 			end
 		end
 	else

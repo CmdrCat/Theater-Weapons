@@ -2,9 +2,13 @@ local att = {}
 att.name = "am_raufoss"
 att.displayName = "Raufoss Mk 211 Rounds"
 att.displayNameShort = "HEAT"
+att.SpeedDec = 25
 
 att.statModifiers = {
-	DamageMult = -34 / 39
+	DamageMult = -5 / 13,
+	MaxSpreadIncMult = 1.5,
+	HipSpreadMult = 0.8,
+	ReloadSpeedMult = -0.1
 }
 
 if CLIENT then
@@ -39,7 +43,7 @@ function att:attachFunc()
 			util.Effect("cball_explode", effect, true, true)
 			util.Effect("Explosion", effect, true, true)
 
-			local blastDamage = 175
+			local blastDamage = 80
 			util.BlastDamage(self, ply, hitPos, 89.2388451444, blastDamage)
 		end
 	end
@@ -68,7 +72,7 @@ if SERVER then
 		util.Effect("cball_explode", effect, true, true)
 		util.Effect("Explosion", effect, true, true)
 
-		local blastDamage = 175
+		local blastDamage = 80
 		util.BlastDamage(self, ply, hitPos, 89.2388451444, blastDamage)
 
 	end)

@@ -117,6 +117,12 @@ SWEP.DeployTime = 0.7
 SWEP.NearWallDistance = 15
 SWEP.Chamberable = false
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.5 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.DrawSpeed = 1.5
 
 SWEP.ReloadSpeed = 1
@@ -131,6 +137,13 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 25 * 39.37
 self.DamageFallOff = .85
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.5 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	end
+end
+
 self.FireSound = "CW_MR96_FIRE_SHORT"
 if self.ActiveAttachments.am_snakeshot then
 	self.FireSound = "CW_SAIGA12K_FIRE"

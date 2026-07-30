@@ -296,6 +296,12 @@ SWEP.Damage = 35
 SWEP.DeployTime = 0.6
 SWEP.OverallMouseSens = 1.25
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.4 / 1.2 )
+	end
+end
+
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.3
 SWEP.ReloadHalt = 2.3
@@ -309,6 +315,18 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 35 * 39.37
 self.DamageFallOff = .48
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.4 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	end
+end
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.4 / 2 )
+	end
+end
 
 self:setBodygroup(self.FrontBGs.main, self.FrontBGs.fs)
 

@@ -17,6 +17,16 @@ function att:attachFunc()
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 	self.PrintName = "Thunderbird"
+
+	if SERVER then
+		return
+	end
+
+    wep.CW_VM:SetSubMaterial(0, "")
+
+    for i, index in ipairs(self.MaterialIndexSecondary) do
+		wep.CW_VM:SetSubMaterial(index, "models/khrcw2/doipack/brassknuckles/weapon_w_knuckles_dm")
+	end
 end
 
 function att:detachFunc()
@@ -25,6 +35,15 @@ function att:detachFunc()
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 	self.PrintName = "Desert Eagle"
+
+	if SERVER then
+		return
+	end
+
+	for i, index in ipairs(self.MaterialIndexSecondary) do
+		wep.CW_VM:SetSubMaterial(index, "")
+	end
+	wep.CW_VM:SetSubMaterial(0, "")
 end
 
 CustomizableWeaponry:registerAttachment(att)

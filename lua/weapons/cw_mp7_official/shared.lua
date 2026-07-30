@@ -202,6 +202,12 @@ SWEP.Damage = 33
 SWEP.DeployTime = 0.5
 SWEP.NearWallDistance = 25
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.125/1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.SuppressedOnEquip = true
 
 SWEP.ReloadSpeed = 1.3
@@ -215,6 +221,13 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 20 * 39.37
 self.DamageFallOff = .52
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.125 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	end
+end
+
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
 end

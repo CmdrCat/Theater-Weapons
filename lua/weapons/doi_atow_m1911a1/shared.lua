@@ -192,6 +192,12 @@ SWEP.Damage = 48
 SWEP.DeployTime = .25
 SWEP.HolsterTime = .35
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.25 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ADSFireAnim = true
 SWEP.ShootWhileProne = true
 SWEP.HolsterOnLadder = false
@@ -207,9 +213,15 @@ SWEP.ReloadTime_Empty = 1.8
 SWEP.ReloadHalt_Empty = 3
 
 function SWEP:IndividualThink()
-self.Owner.ViewAff = 0
-self.EffectiveRange = 25 * 39.37
-self.DamageFallOff = .8
+	self.Owner.ViewAff = 0
+	self.EffectiveRange = 25 * 39.37
+	self.DamageFallOff = .8
+
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.25 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+		end
+	end
 
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

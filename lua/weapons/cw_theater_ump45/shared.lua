@@ -176,6 +176,12 @@
     SWEP.Damage = 48
     SWEP.DeployTime = 1
 
+    SWEP.bulletCallback = function( att, tr, dmg )
+	    if tr.HitGroup == HITGROUP_HEAD then
+		    dmg:ScaleDamage( 1.06 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	    end
+    end
+
     SWEP.ReloadSpeed = 1
     SWEP.ReloadTime = 2.20
     SWEP.ReloadTime_Empty = 3.1
@@ -213,6 +219,12 @@ end
 function SWEP:IndividualThink()
     if IsValid(self.Owner) then
         self.Owner.ViewAff = 0
+    end
+
+    self.bulletCallback = function( att, tr, dmg )
+	    if tr.HitGroup == HITGROUP_HEAD then
+		    dmg:ScaleDamage( 1.06 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	    end
     end
 
     self.EffectiveRange = 50 * 39.37

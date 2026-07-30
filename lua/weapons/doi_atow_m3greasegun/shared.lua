@@ -218,6 +218,12 @@ SWEP.Damage = 65
 SWEP.DeployTime = .475
 SWEP.HolsterTime = .55
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.05 / 1.2 )
+	end
+end
+
 SWEP.ADSFireAnim = true
 
 SWEP.ForegripOverride = true
@@ -231,17 +237,23 @@ SWEP.ReloadHalt_Empty = 4.4
 
 function SWEP:IndividualThink()
 
-self.Trivia = {text = "Commonly referred to as the Greaser, owing to its visual similarity to a mechanic's tool", x = -200, y = -800}
-if self.ActiveAttachments.md_acog then
-	self.Trivia = {text = "Thank you for choosing Trijicon! If you experience any problems with your brand new optic, feel free to contact customer support!", x = -600, y = -800}
-end
+	self.Trivia = {text = "Commonly referred to as the Greaser, owing to its visual similarity to a mechanic's tool", x = -200, y = -800}
+	if self.ActiveAttachments.md_acog then
+		self.Trivia = {text = "Thank you for choosing Trijicon! If you experience any problems with your brand new optic, feel free to contact customer support!", x = -600, y = -800}
+	end
 
-if self.FireMode == "semi" then
-	self.Owner.ViewAff = 0
+	if self.FireMode == "semi" then
+		self.Owner.ViewAff = 0
 	end
 
 	self.EffectiveRange = 40 * 39.37
 	self.DamageFallOff = .6
+
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+				dmg:ScaleDamage( 1.05 / 2 )
+		end
+	end
 	
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
@@ -261,6 +273,11 @@ if self.FireMode == "semi" then
 		self.DamageFallOff = ((self.DamageFallOff - .1))
 	end
 	if self.ActiveAttachments.doi_atow_m3pam1conv then
+		self.bulletCallback = function( att, tr, dmg )
+			if tr.HitGroup == HITGROUP_HEAD then
+				dmg:ScaleDamage( 1.2 / 2 )
+			end
+		end
 		self.DamageFallOff = ((self.DamageFallOff - .05))
 	end
 end

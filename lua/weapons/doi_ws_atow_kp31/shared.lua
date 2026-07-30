@@ -166,6 +166,12 @@ SWEP.Damage = 35
 SWEP.DeployTime = .53
 SWEP.HolsterTime = .6
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.1 / 1.2 )
+	end
+end
+
 SWEP.ADSFireAnim = true
 
 SWEP.ReloadSpeed = 1
@@ -190,6 +196,12 @@ if self.FireMode == "semi" then
 	
 	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .54
+
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.1 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+		end
+	end
 	
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

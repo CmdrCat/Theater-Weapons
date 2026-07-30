@@ -207,6 +207,12 @@ SWEP.DeployTime = 0.8
 SWEP.Chamberable = false
 SWEP.MuzzleVelocity = 900
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 2 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 3.4
 SWEP.ReloadHalt = 3.4
@@ -220,6 +226,13 @@ self.EffectiveRange = 30 * 39.37
 self.DamageFallOff = .85
 self.FireSound = "CW_BER_BULL_FIRE"
 self.FireSoundSuppressed = "DOIK98_FIRE_SUPPRESSED"
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 2 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+	end
+end
+
 if self.ActiveAttachments.cw_500nitroexpress then
 	self.EffectiveRange = ((self.EffectiveRange + 20 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - 0.45))
@@ -230,6 +243,11 @@ end
 if self.ActiveAttachments.cw_500nitroexpress then
 	self.FireSound = "CW_CHEYTAC_FIRE"
 	self.FireSoundSuppressed = "CW_CHEYTAC_FIRE_SUPPRESSED"
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.2 / 2 ) -- 2 multiplied by this value is the resulting multiplier
+		end
+	end
 end
 if self.ActiveAttachments.bg_ber_babybull then
 	self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
