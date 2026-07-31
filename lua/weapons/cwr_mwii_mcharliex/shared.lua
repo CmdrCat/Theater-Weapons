@@ -9,7 +9,7 @@ if CLIENT then
 	SWEP.PrintName = "MCX Virtus"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
-	SWEP.CustomizationMenuScale = 0.020
+	SWEP.CustomizationMenuScale = 0.018
 	
 	SWEP.SelectIcon = surface.GetTextureID("vgui/m13b")
 	killicon.Add( "cwr_mwii_mcharliex", "vgui/killicons/m13b", Color(255, 120, 40, 0))
@@ -237,17 +237,17 @@ SWEP.AttachmentPosDependency = {
 
 SWEP.Attachments = {
 
-	[1] = {header = "Optic", offset = {1200 , -350},  atts = {"xrkonpoint", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs"}},
-	[6] = {header = "Tac - Top", offset = {320 , -350},  atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {shroudhg = true}},
-	[2] = {header = "Muzzle", offset = {-700 , -350},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_mcxshrike"}},
-	[4] = {header = "Bottom Rail Long", offset = {-700 , 150},  atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {bruenbm20 = true}},
-	[5] = {header = "Bottom Rail Short", offset = {-700 , 150},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},
-	[9] = {header = "Front Sights", offset = {0 , 0},  atts = {"nofs"}},
-	[3] = {header = "Handguard", offset = {-700 , 650},  atts = {"bruenechelon", "bruenbm20"}},
-	[7] = {header = "Magazine", offset = {1200, 650},  atts = {"md_uecw_emag"}},
-	[8] = {header = "Conversion", offset = {100, 650},  atts = {"r_mwii_300blk"}},
-	["+use"] = {header = "Skins", offset = {0, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-	["+reload"] = {header = "Ammo", offset = {1200, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
+	[1] = {header = "Optic", offset = {1200 , -450},  atts = {"xrkonpoint", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs"}},
+	[6] = {header = "Tac - Top", offset = {320 , -450},  atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {shroudhg = true}},
+	[2] = {header = "Muzzle", offset = {-700 , -450},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_mcxshrike"}},
+	[4] = {header = "Bottom Rail Long", offset = {-700 , 50},  atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {bruenbm20 = true}},
+	[5] = {header = "Bottom Rail Short", offset = {-700 , 50},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},
+	[9] = {header = "Front Sights", offset = {0 , -50},  atts = {"nofs"}},
+	[3] = {header = "Handguard", offset = {-700 , 550},  atts = {"bruenechelon", "bruenbm20"}},
+	[7] = {header = "Magazine", offset = {1200, 550},  atts = {"md_uecw_emag"}},
+	[8] = {header = "Conversion", offset = {100, 550},  atts = {"r_mwii_300blk"}},
+	["+use"] = {header = "Skins", offset = {0, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	["+reload"] = {header = "Ammo", offset = {1200, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }
 
@@ -256,7 +256,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 
-SWEP.Trivia = {text = "The Virtus delivers unmatched performance with modular adaptibility and precision. BSTF's standard-issue rifle.", x = -250, y = -450}
+SWEP.Trivia = {text = "The Virtus delivers unmatched performance with modular adaptibility and precision. BSTF's standard-issue rifle.", x = -250, y = -550}
 
 function SWEP:fireAnimFunc()
 	clip = self:Clip1()
