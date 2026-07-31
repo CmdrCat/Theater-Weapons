@@ -12,7 +12,8 @@ att.statModifiers = {
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/atts/r_bruenechelon")
-	att.description = {[1] = {t = "A long handguard with a light barrel", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+	att.description = {[1] = {t = "A long handguard with a light barrel", c = CustomizableWeaponry.textColors.VPOSITIVE},
+[2] = {t = "Increases effective range by 20%", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 
 function att:attachFunc()
