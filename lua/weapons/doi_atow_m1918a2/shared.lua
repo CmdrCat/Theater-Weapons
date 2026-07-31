@@ -55,6 +55,12 @@ if CLIENT then
 	
 	SWEP.PronePos = Vector(0, -2, -.1579)
 	SWEP.ProneAng = Vector(6, 15.7368, -5.9474)
+
+	SWEP.ReflexPos = Vector(-2.11, -3.5, 0.45)
+    SWEP.ReflexAng = Vector(0, 0, 0)
+
+	SWEP.NXSPos = Vector(-2.175, -1, 0.425)
+    SWEP.NXSAng = Vector(0, 0, 0)
 	
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
@@ -68,6 +74,12 @@ if CLIENT then
 	SWEP.MaterialIndexSecondary = {1, 2}
 
 	SWEP.AttachmentModelsVM = {
+
+ --optic
+ ["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "BAR", rel = "", pos = Vector(0.235, -0.6, -0.3), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+ ["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "BAR", rel = "", pos = Vector(0, 0, 1.75), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
+ ["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "BAR", rel = "", pos = Vector(-0.15, -2.6, 2.55), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+
 	}
 	
 	SWEP.ForegripOverridePos = {
@@ -106,7 +118,7 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, 100}, atts = {"doi_atow_altsight"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, 100}, atts = {"doi_atow_altsight", "md_reflex","md_nightforce_nxs"}},
 [4] = {header = "Handle", offset = {200, -265}, atts = {"doi_atow_barcarry"}},
 [3] = {header = "Accessory", offset = {-400, -265}, atts = {"doi_atow_bipod"}},
 [2] = {header = "Handgaurd", offset = {-50, 200}, atts = {"doi_atow_barhandguard"}},

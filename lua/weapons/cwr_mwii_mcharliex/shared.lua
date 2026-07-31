@@ -256,7 +256,7 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 
-SWEP.Trivia = {text = "The Virtus delivers unmatched performance with modular adaptibility and precision. BSTF's standard-issue rifle.", x = -250, y = -550}
+SWEP.Trivia = {text = "The Virtus delivers unmatched performance with modular adaptibility and precision. BSTF's standard-issue rifle.", x = -250, y = -650}
 
 function SWEP:fireAnimFunc()
 	clip = self:Clip1()
@@ -405,6 +405,10 @@ if self.ActiveAttachments.nofs or self.ActiveAttachments.xrkonpoint then
 end
 if self.ActiveAttachments.bruenbm20 and self.ActiveAttachments.md_nightforce_nxs then
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.none)
+end
+
+if self.ActiveAttachments.bruenechelon then
+	self.EffectiveRange = ((self.EffectiveRange * 1.20))
 end
 
 if self.ActiveAttachments.am_magnum then
