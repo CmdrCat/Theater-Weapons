@@ -251,6 +251,10 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 20 * 39.37
 	self.DamageFallOff = .65
 
+	self.HipSpread = 0.15
+	self.VelocitySensitivity = 0.001
+	self.MaxSpreadInc = 0.005
+
 	self.bulletCallback = function( att, tr, dmg )
 		if tr.HitGroup == HITGROUP_HEAD then
 			dmg:ScaleDamage( 1.05 / 2 ) -- 2 multiplied by this value is the resulting multiplier
@@ -275,6 +279,10 @@ function SWEP:IndividualThink()
 		self.ViewModelOffsetAng = Angle(0, 0, -30)
 		self.ViewModelOffsetPos2 = Vector(2, 0, -1)
 		self.ViewModelOffsetAng2 = Angle(0, 0, 30)
+
+		self.HipSpread = self.HipSpread * 16
+		self.VelocitySensitivity = self.VelocitySensitivity * 1600
+		self.MaxSpreadInc = self.MaxSpreadInc * 40
 	end
 	if self.ActiveAttachments.md_vector_sac3_conversion then
 		
@@ -283,6 +291,10 @@ function SWEP:IndividualThink()
 				dmg:ScaleDamage( 1.1 / 2 ) -- 2 multiplied by this value is the resulting multiplier
 			end
 		end
+
+		self.HipSpread = 0.075
+		self.VelocitySensitivity = 6
+		self.MaxSpreadInc = 0.2
 
 		if self.ActiveAttachments.cw_akimbo then
 			self.Damage = 50

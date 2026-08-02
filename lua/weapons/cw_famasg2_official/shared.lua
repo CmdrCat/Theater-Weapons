@@ -56,11 +56,16 @@ if CLIENT then
 
 	SWEP.NXSPos = Vector(-2.864, -1, -1.74)
     SWEP.NXSAng = Vector(0, 0, 2.65)
+
+	SWEP.TacStancePos = Vector(-4, 1, 1)
+	SWEP.TacStanceAng = Vector(0,0,-45)
 	
 	SWEP.SprintPos = Vector(1.786, 0, -2)
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
+
 	
-	SWEP.BackupSights = {["md_rmr"] = {[1] = Vector(-4, 1, 1), [2] = Vector(0,0,-45)},
+	SWEP.BackupSights = {["too_optic_tacstance"] = {[1] = Vector(-2.932, -3, 0.046), [2] = Vector(1.556, -0.886, 2.65)},
+	["md_rmr"] = {[1] = Vector(-4, 1, 1), [2] = Vector(0,0,-45)},
 	["xrkonpoint"] = {[1] = Vector(-4, 1, 1), [2] = Vector(0,0,-45)},
 	["md_reflex"] = {[1] = Vector(-4, 1, 1), [2] = Vector(0,0,-45)},
 	["md_cmore"] = {[1] = Vector(-4, 1, 1), [2] = Vector(0,0,-45)},
@@ -213,7 +218,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {-100, -600},  atts = {"md
 	[4] = {header = "Laser", offset = {-900, -700}, atts = {"ftacgrimline", "md_anpeq15"}, dependencies = {md_rmr = true, xrkonpoint = true, md_reflex = true, md_cmore = true, md_trijicon = true, md_microt1 = true, too_reflex_romeo4t = true, md_aimpoint = true, too_reflex_exps = true, corioenforcer = true, md_schmidt_shortdot = true, md_elcan = true, md_acog = true, md_thermal = true, md_nightforce_nxs = true}},
 	[5] = {header = "Magazine", offset = {-50, 300}, atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_cmag_556_official", "md_tcw_pmag"}},
 	[6] = {header = "Skins", offset = {850, 300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
-	["+use"] = {header = "Sight", offset = {1450, -600},  atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+use"] = {header = "Sight", offset = {1450, -600},  atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {850, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},

@@ -86,6 +86,9 @@ if CLIENT then
 	SWEP.NXSPos = Vector(4.07, -5, 0.66)
     SWEP.NXSAng = Vector(0, 0, 0)
 
+	SWEP.TacStancePos = Vector(5.5, -1, 2.25)
+	SWEP.TacStanceAng = Vector(0,0,45)
+
 	SWEP.M203Pos = Vector(-0.562, -2.481, 0.24)
 	SWEP.M203Ang = Vector(0, 0, 0)
 	
@@ -94,8 +97,9 @@ if CLIENT then
 
 	SWEP.AlternativePos = Vector(-0.32, 0, -0.64)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
-	
+
 	SWEP.BackupSights = {
+		["too_optic_tacstance"] = {[1] = Vector(4.064, -3, 1.475), [2] = Vector(0.237, 0, 0)},
 		["md_rmr"] = {[1] = Vector(5.5, -1, 2.25), [2] = Vector(0,0,45)},
 		["xrkonpoint"] = {[1] = Vector(5.5, -1, 2.25), [2] = Vector(0,0,45)},
 		["md_reflex"] = {[1] = Vector(5.5, -1, 2.25), [2] = Vector(0,0,45)},
@@ -207,7 +211,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {100, -700},  atts = {"md_
 	[3] = {header = "Handguard", offset = {-700, 200}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-700, -700}, atts = {"ftacgrimline", "md_anpeq15"}},
 	[5] = {header = "Skins", offset = {850, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
-	["+use"] = {header = "Optic Type", offset = {1650, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+use"] = {header = "Optic Type", offset = {1650, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {1200, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 --SWEP.AttachmentDependencies = {["md_anpeq15"] = {"md_microt1"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY

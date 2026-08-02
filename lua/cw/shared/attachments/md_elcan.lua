@@ -5,6 +5,7 @@ att.displayNameShort = "ELCAN"
 att.aimPos = {"ELCANPos", "ELCANAng"}
 att.FOVModifier = 15
 att.isSight = true
+att.adsViewKickMultiplier = 0.25
 att.SpeedDec = 2
 
 att.statModifiers = {}

@@ -48,6 +48,9 @@ if CLIENT then
 	SWEP.NXSPos = Vector(-2.8885, -4.5, 0.125)
     SWEP.NXSAng = Vector(0, 0, 0)
 
+	SWEP.TacStancePos = Vector(-4, -1, 1)
+	SWEP.TacStanceAng = Vector(0,0,-45)
+
 	SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
     SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 
@@ -78,9 +81,10 @@ if CLIENT then
 	SWEP.MaterialIndexPrimary = {0}
 
 	SWEP.BackupSights = {
-		["md_reflex"] = {[1] = Vector(-4, -2, 1), [2] = Vector(0,0,-45)},
+		["too_optic_tacstance"] = {[1] = Vector(-2.887, -3, 1.2955), [2] = Vector(0, 0, 0)},
+		["md_reflex"] = {[1] = Vector(-4, -1, 1), [2] = Vector(0,0,-45)},
 		["doi_atow_lymanm82"] = {[1] = Vector(-2.887, -1.7, 1.2955), [2] = Vector(0,0,0)},
-		["md_nightforce_nxs"] = {[1] = Vector(-4, -1, 1), [2] = Vector(0,0,-45)},
+		["md_nightforce_nxs"] = {[1] = Vector(-4, 1.05, 1), [2] = Vector(0,0,-45)},
 	}
 	
 	SWEP.AttachmentModelsVM = {
@@ -130,7 +134,7 @@ SWEP.CanRestOnObjects = true
 
 SWEP.MagBGs = {main = 1, five = 0, fifteen = 1}
 
-	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -600}, atts = {"md_reflex", "doi_atow_lymanm82", "md_nightforce_nxs"}},
+	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -600}, atts = {"md_reflex", "doi_atow_lymanm82", "md_nightforce_nxs", "too_optic_tacstance"}},
 	[3] = {header = "Magazine", offset = {1000, 450}, atts = {"doi_atow_win190715"}},
 	[2] = {header = "Barrel", offset = {-450, -600}, atts = {"doi_atow_unisuppressor", "md_csgo_silencer_rifle", "hard20"}},
 	[4] = {header = "Laser", offset = {350, 0}, atts = {"ftacgrimline", "md_anpeq15"}},
@@ -210,7 +214,7 @@ SWEP.Damage = 50
 SWEP.DeployTime = .525
 SWEP.HolsterTime = .5
 
-SWEP.ADSFireAnim = true
+SWEP.ADSFireAnim = false
 SWEP.RecoilToSpread = 0
 SWEP.RecoilToSpreadAuto = .25
 SWEP.RecoilToSpreadSemi = 0

@@ -215,7 +215,7 @@ SWEP.HolsterTime = .6
 SWEP.ADSFireAnim = true
 
 
-SWEP.ReloadSpeed = 1.1
+SWEP.ReloadSpeed = 1.4
 SWEP.ReloadTime = 2.4
 SWEP.ReloadHalt = 3.2
 SWEP.ReloadTime_Empty = 2.4

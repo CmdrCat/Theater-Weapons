@@ -5,6 +5,7 @@ att.displayNameShort = "556"
 att.aimPos = {"CSGO556Pos", "CSGO556Ang"}
 att.FOVModifier = 15
 att.isSight = true
+att.adsViewKickMultiplier = 0.35
 
 att.statModifiers = {}
 

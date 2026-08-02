@@ -88,6 +88,9 @@ if CLIENT then
 	SWEP.NXSPos = Vector(3.917, -5, 0.767)
     SWEP.NXSAng = Vector(0, 0, 0)
 
+	SWEP.TacStancePos = Vector(5.25, -2, 2.5)
+	SWEP.TacStanceAng = Vector(0,0,45)
+
 	SWEP.M203Pos = Vector(-0.562, -2.481, 0.24)
 	SWEP.M203Ang = Vector(0, 0, 0)
 	
@@ -99,8 +102,9 @@ if CLIENT then
 	
 	SWEP.AlternativePos = Vector(-0.32, 0, -0.64)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
-	
+
 	SWEP.BackupSights = {
+	["too_optic_tacstance"] = {[1] = Vector(3.894, -4.755, 1.911), [2] = Vector(-0.138, 0.019, 0)},
 	["md_rmr"] = {[1] = Vector(5.25, -2, 2.5), [2] = Vector(0,0,45)},
 	["xrkonpoint"] = {[1] = Vector(5.25, -2, 2.5), [2] = Vector(0,0,45)},
 	["md_reflex"] = {[1] = Vector(5.25, -2, 2.5), [2] = Vector(0,0,45)},
@@ -228,7 +232,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {-100, -600},  atts = {"md
 	[3] = {header = "Handguard", offset = {-800, 0}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	[4] = {header = "Magazines", offset = {-500, 500}, atts = {"md_uecw_usgimag", "md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}},
 	[5] = {header = "Conversion", offset = {1025, 525}, atts = {"uecw_m16a3_conversion"}},
-	["+use"] = {header = "Optic Type", offset = {1450, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+use"] = {header = "Optic Type", offset = {1450, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {1600, -100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},

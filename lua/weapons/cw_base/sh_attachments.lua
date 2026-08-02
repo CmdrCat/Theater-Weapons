@@ -58,6 +58,42 @@ function SWEP:_attach(cur, curPos, inherit)
 	
 	self:addStatModifiers(att.statModifiers)
 	self.ActiveAttachments[att.name] = true
+
+	if self.AttachmentExclusions then
+		-- detach any attachments explicitly excluded by the new attachment
+		local excludedAttachments = self.AttachmentExclusions[att.name]
+
+		if excludedAttachments then
+			for _, excludedAttName in ipairs(excludedAttachments) do
+				if self.ActiveAttachments[excludedAttName] then
+					for categoryIndex, categoryData in pairs(self.Attachments) do
+						if categoryData.last and categoryData.atts[categoryData.last] == excludedAttName then
+							self:_detach(categoryIndex, categoryData.last, true)
+							break
+						end
+					end
+				end
+			end
+		end
+
+		-- detach active attachments that explicitly exclude the newly attached item
+		for categoryIndex, categoryData in pairs(self.Attachments) do
+			if categoryData.last then
+				local activeAttName = categoryData.atts[categoryData.last]
+				local activeExclusions = self.AttachmentExclusions[activeAttName]
+
+				if activeExclusions then
+					for _, excludedAttName in ipairs(activeExclusions) do
+						if excludedAttName == att.name then
+							self:_detach(categoryIndex, categoryData.last, true)
+							break
+						end
+					end
+				end
+			end
+		end
+	end
+
 	self:checkAttachmentDependency()
 	
 	for varName, data in pairs(CustomizableWeaponry.knownVariableTexts) do
@@ -173,6 +209,7 @@ function SWEP:_attach(cur, curPos, inherit)
 	end
 	
 	self:recalculateStats()
+	self:updateADSViewKickMultiplier()
 	
 	CustomizableWeaponry.callbacks.processCategory(self, "postAttachAttachment", cur, curPos)
 	
@@ -209,6 +246,7 @@ function SWEP:resetPostDetach(att, attCategory)
 	
 	self.ActiveAttachments[att.name] = false
 	attCategory.last = nil
+	self:updateADSViewKickMultiplier()
 	
 	if CLIENT then
 		-- make attachment models inactive

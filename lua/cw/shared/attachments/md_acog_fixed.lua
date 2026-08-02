@@ -6,6 +6,7 @@ att.aimPos = {"ACOGPos", "ACOGAng"}
 att.FOVModifier = 15
 att.isSight = true
 att.SpeedDec = 2
+att.adsViewKickMultiplier = 0.35
 
 att.statModifiers = {}
 

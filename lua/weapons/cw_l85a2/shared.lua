@@ -80,10 +80,14 @@ if CLIENT then
 	SWEP.NXSPos = Vector(-2.232, -5, 0.22)
     SWEP.NXSAng = Vector(0, 0, 0)
 
+	SWEP.TacStancePos = Vector(-3.75, 1.25, 1)
+	SWEP.TacStanceAng = Vector(0,0,-45)
+
 	SWEP.SprintPos = Vector(1.786, 0, -1)
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
 
 	SWEP.BackupSights = {
+		["too_optic_tacstance"] = {[1] = Vector(-2.218, -1.785, -0.072), [2] = Vector(0,0,0)},
 		["md_rmr"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
 		["xrkonpoint"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
 		["md_reflex"] = {[1] = Vector(-3.75, 1.25, 1), [2] = Vector(0,0,-45)},
@@ -155,7 +159,7 @@ end
 
 SWEP.MuzzleVelocity = 930 -- in meter/s
 
-SWEP.SightBGs = {main = 1, none = 1}
+SWEP.SightBGs = {main = 1, none = 1, on = 0}
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
@@ -174,7 +178,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {50, -700},  atts = {"md_r
 	[5] = {header = "Magazines", offset = {-400, 600},  atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_stanag"}},
 	[6] = {header = "Conversion", offset = {800, 700},  atts = {"cw_l85a1_conversion"}},
 	[7] = {header = "Skins", offset = {1000, 300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir", "md_skinrunes", "md_skinyellowjacket"}},
-	["+use"] = {header = "Optic Type", offset = {1600, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+use"] = {header = "Optic Type", offset = {1600, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {1300, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
@@ -283,6 +287,13 @@ self.EffectiveRange = 50 * 39.37
 self.DamageFallOff = .25
 self.BipodInstalled = true
 self.BipodRecoilModifier = 0.8
+
+self:setBodygroup(self.SightBGs.main, self.SightBGs.on)
+
+if self.ActiveAttachments.md_rmr or self.ActiveAttachments.xrkonpoint or self.ActiveAttachments.md_reflex or self.ActiveAttachments.md_cmore or self.ActiveAttachments.md_trijicon or self.ActiveAttachments.md_microt1 or self.ActiveAttachments.too_reflex_romeo4t or self.ActiveAttachments.md_aimpoint or self.ActiveAttachments.too_reflex_exps or self.ActiveAttachments.corioenforcer or self.ActiveAttachments.md_schmidt_shortdot or self.ActiveAttachments.md_elcan or self.ActiveAttachments.md_acog or self.ActiveAttachments.md_thermal or self.ActiveAttachments.md_nightforce_nxs then
+	self:setBodygroup(self.SightBGs.main, self.SightBGs.none)
+end
+
 if self.ActiveAttachments.md_bipod then
 	self.BipodInstalled = true
 	self.BipodRecoilModifier = 0.3

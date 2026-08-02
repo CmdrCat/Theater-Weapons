@@ -7,6 +7,7 @@ att.FOVModifier = 15
 att.isSight = true
 att.withoutRail = true
 att.SpeedDec = 2
+att.adsViewKickMultiplier = 0.35
 att.statModifiers = {}
 
 if CLIENT then

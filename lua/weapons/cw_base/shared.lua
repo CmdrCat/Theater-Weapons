@@ -162,6 +162,8 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.015
 	SWEP.CanRestOnObjects = true
 	SWEP.FireMoveMod = 1
+	SWEP.ADSViewKickMultiplier = 1
+	SWEP.ADSViewKickMultiplier_Orig = 1
 	SWEP.M203Time = 0
 	SWEP.FOVPerShot = 1
 	SWEP.WorldMuzzleAttachmentID = 1
@@ -371,7 +373,10 @@ function SWEP:ActivateDualwield()
 	self.Secondary.ClipSize_Orig	= self.Primary.ClipSize_Orig
 	self.Secondary.DefaultClip	= self.Primary.DefaultClip
 	self.Secondary.Ammo			= self.Primary.Ammo
-    self.Secondary.Automatic    = self.Primary.Automatic
+    self.Secondary.Automatic_Orig = self.Secondary.Automatic
+    self.Secondary.Auto_Orig      = self.Secondary.Auto
+    self.Secondary.Automatic      = self.Primary.Automatic
+    self.Secondary.Auto           = self.Primary.Auto
 
 	self.isDualwield = true
 
@@ -442,7 +447,9 @@ function SWEP:ActivateDualwield()
 	
 	self.CustomizePos = self.CustomizePos_Akimbo
 	self.CustomizeAng = self.CustomizeAng_Akimbo
-	
+	self.SprintPos_Akimbo = self.CustomizePos_Akimbo
+	self.SprintAng_Akimbo = self.CustomizeAng_Akimbo
+
 	if self.BoltBone and self.BoltBone_Orig then
 		self.BoltBone = nil
 		self.HoldBoltWhileEmpty = false
@@ -1338,6 +1345,7 @@ function SWEP:SelectFiremode(n)
 	
 	t = CustomizableWeaponry.firemodes.registeredByID[n]
 	self.Primary.Automatic = t.auto
+	self.Primary.Auto = t.auto
 	self.FireMode = n
 	self.BurstAmount = t.burstamt
 	
@@ -1345,6 +1353,11 @@ function SWEP:SelectFiremode(n)
 		self.dt.Safe = true -- more reliable than umsgs
 	else
 		self.dt.Safe = false
+	end
+
+	if self.isDualwield then
+		self.Secondary.Automatic = self.Primary.Automatic
+		self.Secondary.Auto = self.Primary.Auto
 	end
 	
 	if SERVER then
@@ -1503,8 +1516,9 @@ function SWEP:Think()
 					ws = self.Owner:GetWalkSpeed()
 					
 					if ((vel > ws * self.RunStateVelocity and self.Owner:KeyDown(IN_SPEED)) or vel > ws * 3 or (self.ForceRunStateVelocity and vel > self.ForceRunStateVelocity)) and self.SprintingEnabled then
+					if self.dt.State ~= CW_AIMING and self.dt.State ~= CW_CUSTOMIZE then
 						self.dt.State = CW_RUNNING
-					else
+					end
 						if self.dt.State != CW_AIMING and self.dt.State != CW_CUSTOMIZE then
 							if CT > self.FromActionToNormalWait then
 								if self.dt.State != CW_IDLE then
@@ -1777,9 +1791,39 @@ function SWEP:Think()
 	end
 end
 
+function SWEP:getADSViewKickMultiplier()
+	local mult = self.ADSViewKickMultiplier_Orig or 1
+	
+	for attName, active in pairs(self.ActiveAttachments or {}) do
+		if active then
+			local attData = CustomizableWeaponry and CustomizableWeaponry:findAttachment(attName)
+			
+			if attData and attData.isSight then
+				local value = attData.adsViewKickMultiplier
+				
+				if value == nil then
+					value = attData.ADSViewKickMultiplier
+				end
+				
+				if value ~= nil then
+					mult = value
+				end
+			end
+		end
+	end
+	
+	return mult
+end
+
+function SWEP:updateADSViewKickMultiplier()
+	self.ADSViewKickMultiplier = self:getADSViewKickMultiplier()
+end
+
 function SWEP:simulateRecoil()
+	local adsKickMult = self.ADSViewKickMultiplier or self.ADSViewKickMultiplier_Orig or 1
+	
 	if self.dt.State == CW_AIMING or self.dt.BipodDeployed then
-		self.FireMove = math.Clamp(self.Recoil * self.FireMoveMod, 1, 3)
+		self.FireMove = math.Clamp(self.FireMoveMod * adsKickMult * 0.4, 0, 3)
 	else
 		self.FireMove = 0.4
 	end
@@ -1821,6 +1865,8 @@ function SWEP:simulateRecoil()
 end
 
 function SWEP:addFireSpread(CT)
+	local adsKickMult = self.ADSViewKickMultiplier or self.ADSViewKickMultiplier_Orig or 1
+
 	self.SpreadWait = CT + self.SpreadCooldown
 	local mul, mulMax = self:getSpreadModifiers()
 	
@@ -1931,7 +1977,9 @@ function SWEP:PrimaryAttack()
 			return
 		end
 
-		if CurTime() < self.GlobalDelay then
+		local sideDelay = self.GlobalDelayPrimary or 0
+
+		if CurTime() < sideDelay or CurTime() < self.GlobalDelay then
 			return false
 		end
 
@@ -2339,10 +2387,18 @@ function SWEP:SecondaryAttack()
 		return
 	end
 	
-	if CurTime() < self.GlobalDelay then
-		return false
+	if self.isDualwield then
+		local sideDelay = self.GlobalDelaySecondary or 0
+
+		if CurTime() < sideDelay or CurTime() < self.GlobalDelay then
+			return false
+		end
+	else
+		if CurTime() < self.GlobalDelay then
+			return false
+		end
 	end
-	
+
 	if self.dt.Safe then
 		self:CycleFiremodes()
 		return
@@ -2449,7 +2505,7 @@ if self.isDualwield then
 
 			-- apply a global delay after shooting, if there is one
 			if self.GlobalDelayOnShoot then
-				self.GlobalDelay = CT + self.GlobalDelayOnShoot
+				self.GlobalDelaySecondary = CT + self.GlobalDelayOnShoot
 			end
 		end
 
@@ -2667,10 +2723,11 @@ if CLIENT then
 					t = CustomizableWeaponry.firemodes.registeredByID[Mode]
 					
 					wep.Primary.Automatic = t.auto
-					wep.BurstAmount = t.burstamt
-					wep.FireModeDisplay = t.display
-					wep.BulletDisplay = t.buldis
-					wep.CheckTime = CurTime() + 2
+			wep.Primary.Auto = t.auto
+			if wep.isDualwield then
+				wep.Secondary.Automatic = t.auto
+				wep.Secondary.Auto = t.auto
+			end
 					
 					if ply == LocalPlayer() then
 						ply:EmitSound("weapons/smg1/switch_single.wav", 70, math.random(92, 112))

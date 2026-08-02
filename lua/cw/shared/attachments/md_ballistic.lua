@@ -6,6 +6,7 @@ att.aimPos = {"BallisticPos", "BallisticAng"}
 att.FOVModifier = 15
 att.isSight = true
 att.SpeedDec = 5
+att.adsViewKickMultiplier = 0.15
 
 att.statModifiers = {}
 

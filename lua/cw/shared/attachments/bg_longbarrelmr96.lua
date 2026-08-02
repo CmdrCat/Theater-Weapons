@@ -10,6 +10,7 @@ DrawSpeedMult = -0.2}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/longbarrel_revolver")
+	att.description = {[1] = {t = "Increases effective range by 15 M", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

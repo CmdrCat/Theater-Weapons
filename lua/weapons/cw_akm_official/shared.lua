@@ -52,12 +52,16 @@ if CLIENT then
 	SWEP.PSOPos = Vector(-3.859, 5, 0.16)
 	SWEP.PSOAng = Vector(0, 0, 0)
 
+	SWEP.TacStancePos = Vector(-5.5, -2, 2)
+	SWEP.TacStanceAng = Vector(0,0,-45)
+
 	SWEP.AlternativePos = Vector(-1, -2, -0.6)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
 	SWEP.MagBoneName = "mag"
 	
 	SWEP.BackupSights = {
+		["too_optic_tacstance"] = {[1] = Vector(-3.846, -3.109, 1.1), [2] = Vector(0.577, 0.079, 0)},
 		["md_rmr"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
 		["xrkonpoint"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
 		["md_reflex"] = {[1] = Vector(-5.5, -2, 2), [2] = Vector(0,0,-45)},
@@ -178,10 +182,10 @@ SWEP.Attachments = {
 	{header = "Sight", offset = {0, -500},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_trijicon", "md_kobra", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_acog", "md_pso1"}},
 	{header = "Muzzle", offset = {-600, -500}, atts = {"md_pbs1", "md_csgo_silencer_rifle", "hard20"}},
 	{header = "Handguard", offset = {-600, 100}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
-	{header = "Conversion", offset = {500, 500}, atts = {"md_ak_556_conv"}},
+	{header = "Signature Attachment", offset = {550, 500}, atts = {"md_ak_556_conv"}},
 	{header = "Magazines", offset = {-400, 600}, atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}, dependencies = {md_ak_556_conv = true}},
-	{header = "Skins", offset = {950, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-	["+use"] = {header = "Sight", offset = {1550, -500},  atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	{header = "Skins", offset = {1200, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	["+use"] = {header = "Sight", offset = {1550, -500},  atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {950, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},

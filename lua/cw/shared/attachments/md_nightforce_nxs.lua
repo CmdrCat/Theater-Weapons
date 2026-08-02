@@ -6,6 +6,7 @@ att.aimPos = {"NXSPos", "NXSAng"}
 att.FOVModifier = 15 --Original 15, 81.5 for ACR 2D scope
 att.isSight = true
 att.SpeedDec = 3
+att.adsViewKickMultiplier = 0.15
 
 att.statModifiers = {}
 

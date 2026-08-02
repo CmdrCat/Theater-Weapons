@@ -1415,6 +1415,10 @@ function SWEP:performViewmodelMovement()
 		self.ApproachSpeed = math.Approach(self.ApproachSpeed, 5, FT * 100)
 	elseif self.dt.State == CW_RUNNING or (((len > ws * self.RunStateVelocity and self.Owner:KeyDown(IN_SPEED)) or len > ws * 3 or (self.ForceRunStateVelocity and len > self.ForceRunStateVelocity)) and self.Owner:OnGround()) then
 		local runMod = 1
+		local sprintPos, sprintAng = self.SprintPos, self.SprintAng
+		if self.isDualwield and self.SprintPos_Akimbo then
+			sprintPos, sprintAng = self.SprintPos_Akimbo, self.SprintAng_Akimbo
+		end
 		
 		-- if we're running and our movement speed is fit for run movement speed
 		
@@ -1427,7 +1431,7 @@ function SWEP:performViewmodelMovement()
 			-- check whether sprinting is enabled or not, in the case it isn't, don't use any running positions
 			
 			if self.SprintingEnabled then
-				TargetPos, TargetAng = self.SprintPos * 1, self.SprintAng * 1
+				TargetPos, TargetAng = sprintPos * 1, sprintAng * 1
 			else
 				TargetPos, TargetAng = Vec0 * 1, Vec0 * 1
 			end
@@ -1538,7 +1542,7 @@ function SWEP:performViewmodelMovement()
 			TargetPos, TargetAng = self.CustomizePos * 1, self.CustomizeAng * 1
 		else
 			if self.dt.Safe then
-				TargetPos, TargetAng = self.SprintPos * 1, self.SprintAng * 1
+				TargetPos, TargetAng = (self.isDualwield and self.SprintPos_Akimbo or self.SprintPos) * 1, (self.isDualwield and self.SprintAng_Akimbo or self.SprintAng) * 1
 			else
 				TargetPos, TargetAng = self:getBaseViewModelPos()
 				TargetPos, TargetAng = TargetPos * 1, TargetAng * 1

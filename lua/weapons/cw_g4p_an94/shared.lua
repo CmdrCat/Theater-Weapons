@@ -105,7 +105,11 @@ if CLIENT then
 	SWEP.LaserPosAdjust = Vector(0, 0, 0)
 	SWEP.LaserAngAdjust = Angle(0, 0, 0) 
 
+	SWEP.TacStancePos = Vector(-3.75, 1, 1)
+	SWEP.TacStanceAng = Vector(0,0,-45)
+
 	SWEP.BackupSights = {
+	["too_optic_tacstance"] = {[1] = Vector(-1.8, -1.497, 0.8), [2] = Vector(-0.828, 0.14, 0)},
 	["md_rmr"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
 	["xrkonpoint"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
 	["md_reflex"] = {[1] = Vector(-3.75, 1, 1), [2] = Vector(0,0,-45)},
@@ -238,9 +242,9 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -650},  atts = {"md_rm
 	[3] = {header = "Handguard", offset = {-900, -50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	[4] = {header = "Lasers", offset = {-800, 500}, atts = {"ftacgrimline", "md_anpeq15"}},
 	[5] = {header = "Magazine", offset = {-50, 800}, atts = {"md_uecw_akmag", "md_uecw_akmag_bakelite", "md_uecw_akmag_snow"}},
-	[6] = {header = "Conversion", offset = {900, 800}, atts = {"uecw_an94_58_conversion"}},
+	[6] = {header = "Signature Attachment", offset = {900, 800}, atts = {"uecw_an94_58_conversion"}},
 	[7] = {header = "Skins", offset = {1500, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
-	["+use"] = {header = "Optic Type", offset = {1700, -650}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+use"] = {header = "Optic Type", offset = {1700, -650}, atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {1300, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
@@ -331,6 +335,7 @@ self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 40 * 39.37
 self.DamageFallOff = .4
+
 if self.ActiveAttachments.uecw_an94_58_conversion then
 	self.EffectiveRange = ((self.EffectiveRange + 5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff - 0.05))

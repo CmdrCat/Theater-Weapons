@@ -148,7 +148,11 @@ if CLIENT then
 	SWEP.ANGELPos = Vector(-3.881, -6.378, 0.2)
     SWEP.ANGELAng = Vector(0, 0, 0)
 
+	SWEP.TacStancePos = Vector(-5.5, -2, 1)
+	SWEP.TacStanceAng = Vector(0,0, -45)
+
 	SWEP.BackupSights = {
+	["too_optic_tacstance"] = {[1] = Vector(-3.881, -6.697, 0.57), [2] = Vector(-0.071, 0, 0)},
 	["xrkonpoint"] = {[1] = Vector(-5.5, -5, 1), [2] = Vector(0,0, -45)},
 	["md_microt1"] = {[1] = Vector(-5.5, -2, 1), [2] = Vector(0,0, -45)},
 	["md_aimpoint"] = {[1] = Vector(-5.5, -4.5, 1), [2] = Vector(0,0, -45)},
@@ -171,7 +175,7 @@ SWEP.AttachmentExclusions = {["am_atow_lowvel"] = {"md_csgo_silencer_rifle"}
 }
 
 SWEP.Attachments = {
-	{header = "Optic", offset = {950 , -600},  atts = {"xrkonpoint", "md_microt1", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs"}},
+	{header = "Optic", offset = {950 , -600},  atts = {"xrkonpoint", "md_microt1", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs", "too_optic_tacstance"}},
 	{header = "Muzzle", offset = {-450 , -400},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}, dependencies = {saphoenix = true}},
 	{header = "Bottom Rail", offset = {-650 , 100},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip", "md_bipod"}},
 	{header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {shroudhg = true}},
@@ -329,9 +333,14 @@ self.bulletCallback = function( att, tr, dmg )
 end
 
 self:setBodygroup(self.FrontBGs.main, self.FrontBGs.fs)
+self:setBodygroup(self.SightBGs.main, self.SightBGs.on)
 
 if self.ActiveAttachments.nofs2 or self.ActiveAttachments.xrkonpoint or self.ActiveAttachments.md_nightforce_nxs then
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.none)
+end
+
+if self.ActiveAttachments.xrkonpoint or self.ActiveAttachments.md_microt1 or self.ActiveAttachments.md_aimpoint or self.ActiveAttachments.szbattleoptic or self.ActiveAttachments.corioenforcer or self.ActiveAttachments.cronenzerop or self.ActiveAttachments.md_thermal or self.ActiveAttachments.md_nightforce_nxs then
+	self:setBodygroup(self.SightBGs.main, self.SightBGs.none)
 end
 
 if self.ActiveAttachments.am_magnum then

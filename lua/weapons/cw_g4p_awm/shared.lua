@@ -70,7 +70,7 @@ if CLIENT then
 	SWEP.CSGO556Pos = Vector(-2.77, -2.8, 0.52)
 	SWEP.CSGO556Ang = Vector(0, 0, 0)
 	
-	SWEP.CSGOSSGPos = Vector(-2.76, -2.8, 0.4)
+	SWEP.CSGOSSGPos = Vector(-2.76, -1.5, 0.4)
 	SWEP.CSGOSSGAng = Vector(0, 0, 0)
 	
 	SWEP.ELCANPos = Vector(-2.72, -2.8, 0.28)

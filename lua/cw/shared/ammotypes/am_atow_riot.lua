@@ -13,7 +13,7 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self.CrosshairParts = {left = true, right = true, upper = false, lower = true}
+	self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
 	self.ClumpSpread = 0.11
 	self.ClumpSpread_Orig = 0.11
 	self.Shots = 4

@@ -46,7 +46,8 @@ if CLIENT then
 	SWEP.ReflexPos = Vector(-2.4625, -9.5, 0.095)
     SWEP.ReflexAng = Vector(0, 0, 0)
 
-
+	SWEP.TacStancePos = Vector(-4, 0.25, 0.5)
+	SWEP.TacStanceAng = Vector(0, 0, -45)
 
 	SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
     SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
@@ -66,7 +67,9 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(8, -2, .5)
 	SWEP.CustomizeAng = Vector(10, 40, 18)
 	
-	SWEP.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)}, ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)}}
+	SWEP.BackupSights = {["too_optic_tacstance"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
+						 ["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
+						 ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)}}
 	-- ON FOENEM GRAVE I DONT KNOW WHY THIS SHIT ISNT WORKING. PLEASE SAVE ME.
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
@@ -116,7 +119,7 @@ SWEP.SlingBGs = {main = 4, off = 0, on = 1}
 
 --if CustomizableWeaponry_atowins2_optics then
 	--else
-	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82", "md_reflex"}},
+	SWEP.Attachments = {[1] = {header = "Optic", offset = {550, -350}, atts = {"doi_atow_lymanm82", "md_reflex", "too_optic_tacstance"}},
 	[2] = {header = "Sight", offset = {1225, 50}, atts = {"doi_atow_altsight"}},
 	[3] = {header = "Muzzle", offset = {-600, -400}, atts = {"doi_atow_unisuppressor"}},
 	[4] = {header = "Conversion", offset = {-50, -450}, atts = {"doi_atow_m2carbineconv"}},
@@ -230,9 +233,11 @@ function SWEP:IndividualThink()
 		self.PrintName = "M2A1 Carbine"
 	end
 	if self.ActiveAttachments.doi_atow_altsight then
-	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.27), [2] = Vector(-0.05, 0.0355, 0)}}
+	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.27), [2] = Vector(-0.05, 0.0355, 0)},
+						 ["too_optic_tacstance"] = {[1] = Vector(-2.47, -2.5, 1.27), [2] = Vector(-0.05, 0.0355, 0)}}
 	else
-	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0.2625, 0.0213, 0)}}
+	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0.2625, 0.0213, 0)},
+						 ["too_optic_tacstance"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0.2625, 0.0213, 0)}}
 	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
