@@ -1503,6 +1503,10 @@ function SWEP:Think()
 				self.dt.State = CW_PRONE_BUSY
 			elseif self:isPlayerProne() and vel >= self.BusyProneVelocity and not self.ShootWhileProne then
 				self.dt.State = CW_PRONE_MOVING
+			elseif self:isPlayerProne() and not self.ShootWhileProne then
+				if self.dt.State ~= CW_AIMING and self.dt.State ~= CW_CUSTOMIZE and self.dt.State ~= CW_ACTION and self.dt.State ~= CW_HOLSTER_START and self.dt.State ~= CW_HOLSTER_END then
+					self.dt.State = CW_IDLE
+				end
 			else
 				-- prone mod compatibility ends
 				if wl >= 3 and self.HolsterUnderwater then
@@ -2145,13 +2149,7 @@ function SWEP:PrimaryAttack()
 		if self.fireAnimFunc then
 			self:fireAnimFunc()
 		else
-			if self.dt.State == CW_AIMING then
-				if not self.ADSFireAnim then
-					self:playFireAnim()
-				end
-			else
-				self:playFireAnim()
-			end
+			self:playFireAnim()
 		end
 
 		if self.Primary.Ammo == "12 Gauge Explosive Slugs" then
