@@ -68,8 +68,8 @@ if CLIENT then
 	SWEP.CustomizeAng = Vector(10, 40, 18)
 	
 	SWEP.BackupSights = {["too_optic_tacstance"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
-						 ["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
-						 ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)}}
+						 ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
+						 ["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)}}
 	-- ON FOENEM GRAVE I DONT KNOW WHY THIS SHIT ISNT WORKING. PLEASE SAVE ME.
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
@@ -228,15 +228,19 @@ function SWEP:IndividualThink()
 	self.DamageFallOff = .4
 
 	self.PrintName = "M1A1 Carbine"
+
+	self.ADSFireAnim = true
 	
 	if self.ActiveAttachments.doi_atow_m2carbineconv then
 		self.PrintName = "M2A1 Carbine"
 	end
 	if self.ActiveAttachments.doi_atow_altsight then
 	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.27), [2] = Vector(-0.05, 0.0355, 0)},
+						 ["md_reflex"] = {[1] = Vector(-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
 						 ["too_optic_tacstance"] = {[1] = Vector(-2.47, -2.5, 1.27), [2] = Vector(-0.05, 0.0355, 0)}}
 	else
-	self.BackupSights = {["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0.2625, 0.0213, 0)},
+	self.BackupSights = { ["doi_atow_lymanm82"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0.2625, 0.0213, 0)},
+						 ["md_reflex"] = {[1] = Vector(-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
 						 ["too_optic_tacstance"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0.2625, 0.0213, 0)}}
 	end
 	if self.ActiveAttachments.am_magnum then
@@ -251,6 +255,9 @@ function SWEP:IndividualThink()
 	if self.ActiveAttachments.am_atow_heavy then
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
+	if self.ActiveAttachments.doi_atow_lymanm82 then
+		self.ADSFireAnim = false
 	end
 end
 

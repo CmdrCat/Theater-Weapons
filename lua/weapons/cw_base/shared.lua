@@ -272,6 +272,9 @@ SWEP.AddSpreadSpeed = 1
 SWEP.ReloadWait = 0
 SWEP.ReloadSpeed = 1
 SWEP.DrawSpeed = 1
+SWEP.SemiAutoTriggerBuffer = 1
+SWEP.SemiAutoTriggerBufferUntil = 0
+SWEP.SemiAutoQueuedShot = false
 
 SWEP.Chamberable = true
 SWEP.CanPenetrate = true
@@ -559,6 +562,9 @@ function SWEP:Initialize()
 	self:setupBallisticsInformation()
 	self:CalculateEffectiveRange()
 	self.CHoldType = self.NormalHoldType
+	self.SemiAutoTriggerBuffer = self.SemiAutoTriggerBuffer or 0.1
+	self.SemiAutoTriggerBufferUntil = 0
+	self.SemiAutoQueuedShot = false
 	
 	if CLIENT then
 		self.ammoTextAlpha = 0
@@ -1339,15 +1345,18 @@ function SWEP:isRunning()
 end
 
 function SWEP:SelectFiremode(n)
-	if CLIENT then
+	t = CustomizableWeaponry.firemodes.registeredByID[n]
+	
+	if not t then
 		return
 	end
 	
-	t = CustomizableWeaponry.firemodes.registeredByID[n]
 	self.Primary.Automatic = t.auto
 	self.Primary.Auto = t.auto
 	self.FireMode = n
 	self.BurstAmount = t.burstamt
+	self.BulletDisplay = t.buldis
+	self.FireModeDisplay = t.display
 	
 	if self.FireMode == "safe" then
 		self.dt.Safe = true -- more reliable than umsgs
@@ -1456,6 +1465,17 @@ function SWEP:Think()
 	end
 	
 	CT = CurTime()
+	
+	if self.Primary.Automatic == false and self.SemiAutoTriggerBuffer and self.SemiAutoTriggerBuffer > 0 and self.Owner and IsValid(self.Owner) then
+		if self.Owner:KeyPressed(IN_ATTACK) and not self.SemiAutoQueuedShot and self.SemiAutoTriggerBufferUntil > CT and self:canFireWeapon(1) and self:canFireWeapon(2) and self:canFireWeapon(3) then
+			self.SemiAutoQueuedShot = true
+		end
+		
+		if self.SemiAutoQueuedShot and CT >= self:GetNextPrimaryFire() and self:canFireWeapon(1) and self:canFireWeapon(2) and self:canFireWeapon(3) then
+			self.SemiAutoQueuedShot = false
+			self:PrimaryAttack()
+		end
+	end
 	
 	if CLIENT then
 		if self.SubCustomizationCycleTime then
@@ -1884,12 +1904,20 @@ function SWEP:addFireSpread(CT)
 	self.AddSpreadSpeed = math.Clamp(self.AddSpreadSpeed - 0.2, 0, 1)
 end
 
-function SWEP:playFireAnim()
+function SWEP:shouldPlayFireAnim()
 	if (self.dt.State == CW_AIMING and not self.ADSFireAnim) or (self.dt.BipodDeployed and not self.BipodFireAnim) then
-		return
+		return false
 	end
 	
 	if self.dt.State ~= CW_AIMING and (not self.LuaViewmodelRecoilOverride and self.LuaViewmodelRecoil) then
+		return false
+	end
+	
+	return true
+end
+
+function SWEP:playFireAnim()
+	if not self:shouldPlayFireAnim() then
 		return
 	end
 	
@@ -2091,6 +2119,10 @@ function SWEP:PrimaryAttack()
 		self:SetNextPrimaryFire( CT + (self.FireDelay or 0.05) )
 		self.ReloadWait = CT + (self.FireDelay or 0.05)
 
+		if self.Primary.Automatic == false and self.SemiAutoTriggerBuffer and self.SemiAutoTriggerBuffer > 0 then
+			self.SemiAutoTriggerBufferUntil = CT + self.SemiAutoTriggerBuffer
+		end
+
 		self:postPrimaryAttack()
 		CustomizableWeaponry.callbacks.processCategory(self, "postConsumeAmmo")
 
@@ -2147,7 +2179,9 @@ function SWEP:PrimaryAttack()
 		end
 		
 		if self.fireAnimFunc then
-			self:fireAnimFunc()
+			if self:shouldPlayFireAnim() then
+				self:fireAnimFunc()
+			end
 		else
 			self:playFireAnim()
 		end
@@ -2189,6 +2223,10 @@ function SWEP:PrimaryAttack()
 	end
 	
 	self:SetNextPrimaryFire(CT + self.FireDelay)
+	
+	if self.Primary.Automatic == false and self.SemiAutoTriggerBuffer and self.SemiAutoTriggerBuffer > 0 then
+		self.SemiAutoTriggerBufferUntil = CT + self.SemiAutoTriggerBuffer
+	end
 	
 	-- either force the weapon back to hip after firing, or don't
 	if self.ForceBackToHipAfterAimedShot then
@@ -2721,11 +2759,15 @@ if CLIENT then
 					t = CustomizableWeaponry.firemodes.registeredByID[Mode]
 					
 					wep.Primary.Automatic = t.auto
-			wep.Primary.Auto = t.auto
-			if wep.isDualwield then
-				wep.Secondary.Automatic = t.auto
-				wep.Secondary.Auto = t.auto
-			end
+					wep.Primary.Auto = t.auto
+					wep.FireMode = Mode
+					wep.BurstAmount = t.burstamt
+					wep.BulletDisplay = t.buldis
+					wep.FireModeDisplay = t.display
+					if wep.isDualwield then
+						wep.Secondary.Automatic = t.auto
+						wep.Secondary.Auto = t.auto
+					end
 					
 					if ply == LocalPlayer() then
 						ply:EmitSound("weapons/smg1/switch_single.wav", 70, math.random(92, 112))

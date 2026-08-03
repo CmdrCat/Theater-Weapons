@@ -214,7 +214,7 @@ SWEP.Damage = 50
 SWEP.DeployTime = .525
 SWEP.HolsterTime = .5
 
-SWEP.ADSFireAnim = false
+SWEP.ADSFireAnim = true
 SWEP.RecoilToSpread = 0
 SWEP.RecoilToSpreadAuto = .25
 SWEP.RecoilToSpreadSemi = 0
@@ -232,6 +232,8 @@ function SWEP:IndividualThink()
 	
 	self.EffectiveRange = 35 * 39.37
 	self.DamageFallOff = .55
+
+	self.ADSFireAnim = true
 	
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
@@ -245,6 +247,9 @@ function SWEP:IndividualThink()
 	if self.ActiveAttachments.am_atow_heavy then
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
+	if self.ActiveAttachments.doi_atow_lymanm82 or self.ActiveAttachments.md_nightforce_nxs then
+		self.ADSFireAnim = false
 	end
 end
 

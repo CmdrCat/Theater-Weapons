@@ -53,6 +53,9 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 
 	SWEP.NXSPos = Vector(-2.285, -1, -0.5)
     SWEP.NXSAng = Vector(0, 0, 0)
+
+	SWEP.TacStancePos = Vector(-4, 0.25, 0.5)
+	SWEP.TacStanceAng = Vector(0, 0, -45)
 	
 	SWEP.SprintPos = Vector(2, 0, 0)
 	SWEP.SprintAng = Vector(-15.478, 20.96, 0)
@@ -79,7 +82,8 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.MaterialIndexPrimary = {0, 2, 4}
 	SWEP.MaterialIndexSecondary = {3}
 
-	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
+	SWEP.BackupSights = { ["too_optic_tacstance"] = {[1] = Vector(-2.316, -4.5, 0.58), [2] = Vector(0.2536, 0.0368, 0)},
+	["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
 	["doi_atow_zf4"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0, 0, -45)},
 	["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
 	}
@@ -140,7 +144,7 @@ SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {
 [6] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 [2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "md_saker", "md_csgo_silencer_rifle", "hard20"}},
 [4] = {header = "Finish", offset = {850, 400}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_nightforce_nxs"}},
+[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_nightforce_nxs", "too_optic_tacstance"}},
 [5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}},
 ["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
@@ -235,6 +239,8 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 60 * 39.37
 	self.DamageFallOff = .3
 
+	self.ADSFireAnim = true
+
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end
@@ -247,6 +253,9 @@ function SWEP:IndividualThink()
 	if self.ActiveAttachments.am_atow_heavy then
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
+	end
+	if self.ActiveAttachments.doi_atow_zf4 or self.ActiveAttachments.md_nightforce_nxs then
+		self.ADSFireAnim = false
 	end
 end
 

@@ -30,6 +30,9 @@ if CLIENT then
 	SWEP.IronsightPos = Vector(-3.063, -5.447, 0.6)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 
+	SWEP.TacStancePos = Vector(-5, -0.5, 1)
+	SWEP.TacStanceAng = Vector(0, 0, -45)
+
 	SWEP.SprintPos = Vector(-0.12, 0, -0.281)
 	SWEP.SprintAng = Vector(-32.262, 23.718, -19.75)
 	
@@ -195,6 +198,7 @@ if CLIENT then
 	SWEP.AngelAngAdjust = Angle(0, 0, 0)
 
 	SWEP.BackupSights = {
+	["too_optic_tacstance"] = {[1] = Vector(-3.063, -5.447, 0.6), [2] = Vector(0,0,0)},
 	["xrkonpoint"] = {[1] = Vector(-5, -3, 1), [2] = Vector(0,0, -45)},
 	["md_microt1"] = {[1] = Vector(-5, -0.5, 1), [2] = Vector(0,0, -45)},
 	["too_reflex_romeo4t"] = {[1] = Vector(-5, -4.5, 1), [2] = Vector(0,0, -45)},
@@ -237,7 +241,7 @@ SWEP.AttachmentPosDependency = {
 
 SWEP.Attachments = {
 
-	[1] = {header = "Optic", offset = {1200 , -450},  atts = {"xrkonpoint", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs"}},
+	[1] = {header = "Optic", offset = {1200 , -450},  atts = {"xrkonpoint", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs", "too_optic_tacstance"}},
 	[6] = {header = "Tac - Top", offset = {320 , -450},  atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {shroudhg = true}},
 	[2] = {header = "Muzzle", offset = {-700 , -450},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_mcxshrike"}},
 	[4] = {header = "Bottom Rail Long", offset = {-700 , 50},  atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {bruenbm20 = true}},
@@ -393,6 +397,7 @@ self.bulletCallback = function( att, tr, dmg )
 end
 
 self:setBodygroup(self.FrontBGs.main, self.FrontBGs.med)
+self:setBodygroup(self.SightBGs.main, self.SightBGs.on)
 
 if self.ActiveAttachments.bruenechelon then
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.long)
@@ -405,6 +410,10 @@ if self.ActiveAttachments.nofs or self.ActiveAttachments.xrkonpoint then
 end
 if self.ActiveAttachments.bruenbm20 and self.ActiveAttachments.md_nightforce_nxs then
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.none)
+end
+
+if self.ActiveAttachments.xrkonpoint or self.ActiveAttachments.md_microt1 or self.ActiveAttachments.too_reflex_romeo4t or self.ActiveAttachments.md_aimpoint or self.ActiveAttachments.szbattleoptic or self.ActiveAttachments.corioenforcer or self.ActiveAttachments.cronenzerop or self.ActiveAttachments.md_thermal or self.ActiveAttachments.md_nightforce_nxs then
+	self:setBodygroup(self.SightBGs.main, self.SightBGs.none)
 end
 
 if self.ActiveAttachments.bruenechelon then
