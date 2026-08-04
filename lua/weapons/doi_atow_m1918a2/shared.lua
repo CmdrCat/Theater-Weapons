@@ -61,6 +61,9 @@ if CLIENT then
 
 	SWEP.NXSPos = Vector(-2.175, -1, 0.425)
     SWEP.NXSAng = Vector(0, 0, 0)
+
+	SWEP.ZEROPos = Vector(-2.12, -3, 0.18)
+    SWEP.ZEROAng = Vector(0, 0, 0)
 	
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
@@ -73,12 +76,21 @@ if CLIENT then
 	SWEP.MaterialIndexPrimary = {0}
 	SWEP.MaterialIndexSecondary = {1, 2}
 
+SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
+    ["cronenzerop"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0, 0, -45)},
+	["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
+	}
+
 	SWEP.AttachmentModelsVM = {
 
  --optic
  ["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "BAR", rel = "", pos = Vector(0.235, -0.6, -0.3), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
  ["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "BAR", rel = "", pos = Vector(0, 0, 1.75), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
+ ["cronenzerop"] = { type = "Model", model = "models/shared/optics/r_cronenzerop.mdl", bone = "BAR", rel = "", pos = Vector(0, -2, 1.5), angle = Angle(0, -90, 0), size = Vector(0.9, 0.9, 0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
  ["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "BAR", rel = "", pos = Vector(-0.15, -2.6, 2.55), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+ --muzzle
+["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "BAR", rel = "", pos = Vector(0, 22, -0.25), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "BAR", rel = "", pos = Vector(0, 25, 0.55), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 
 	}
 	
@@ -102,7 +114,7 @@ if CLIENT then
 	["L Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }},
 }
 	
-	SWEP.Trivia = {text = "The SLOW-FIRE fire-mode will lower the firerate to 425rpm.", x = 0, y = -375}
+	SWEP.Trivia = {text = "Support weapon for U.S. fireteams in WWII. The SLOW-FIRE fire-mode will lower the firerate to 425rpm.", x = 0, y = -375}
 end
 end
 
@@ -118,13 +130,15 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {1400, 100}, atts = {"doi_atow_altsight", "md_reflex","md_nightforce_nxs"}},
-[4] = {header = "Handle", offset = {200, -265}, atts = {"doi_atow_barcarry"}},
+	SWEP.CustomizationMenuScale = 0.018
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {1150, -265}, atts = {"doi_atow_altsight", "md_reflex","cronenzerop","md_nightforce_nxs"}},
+[4] = {header = "Handle", offset = {-400, 150}, atts = {"doi_atow_barcarry", "doi_atow_barhandguard"}},
 [3] = {header = "Accessory", offset = {-400, -265}, atts = {"doi_atow_bipod"}},
-[2] = {header = "Handgaurd", offset = {-50, 200}, atts = {"doi_atow_barhandguard"}},
-[5] = {header = "Conversion", offset = {800, -265}, atts = {"doi_atow_hcar"}},
-[6] = {header = "Skins", offset = {1150, -300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
-["+reload"] = {header = "Ammo", offset = {450, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+[5] = {header = "Conversion", offset = {200, -265}, atts = {"doi_atow_hcar"}},
+[6] = {header = "Skins", offset = {1150, 150}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+[7] ={header = "Muzzle", offset ={-400, 500}, atts= {"md_csgo_silencer_rifle", "hard20",}},
+["+reload"] = {header = "Ammo", offset = {1150, 600}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
 	fire_aim = {"iron_fire_1","iron_fire_2"},
@@ -184,6 +198,7 @@ SWEP.FireDelay = 60/600
 SWEP.FireDelayFast = 60/600
 SWEP.FireDelaySlow = 60/425
 SWEP.FireSound = "DOIBAR_FIRE"
+SWEP.FireSoundSuppressed = "DOIGARAND_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.6
 SWEP.BipodRecoilModifier = 0.3 --0.1 -- = 0 --0.35
  -- = 1
