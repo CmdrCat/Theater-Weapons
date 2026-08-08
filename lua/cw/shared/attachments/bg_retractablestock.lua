@@ -1,7 +1,7 @@
 local att = {}
 att.name = "bg_retractablestock"
-att.displayName = "Retractable stock"
-att.displayNameShort = "R. stock"
+att.displayName = "Retractable Stock"
+att.displayNameShort = "R. Stock"
 att.isBG = true
 att.SpeedDec = -3
 

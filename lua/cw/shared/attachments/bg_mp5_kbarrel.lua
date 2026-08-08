@@ -1,0 +1,41 @@
+local att = {}
+att.name = "bg_mp5_kbarrel"
+att.displayName = "MP5K Conversion"
+att.displayNameShort = "MP5K"
+att.isBG = true
+att.SpeedDec = -5
+
+att.statModifiers = {RecoilMult = -0.2,
+DrawSpeedMult = 0.2,
+FireDelayMult = -0.11111111111111}
+
+if CLIENT then
+	att.displayIcon = surface.GetTextureID("atts/mp5_kbarrel")
+	att.description = {[1] = {t = "Decreases effective range by 15 M", c = CustomizableWeaponry.textColors.NEGATIVE},
+					   [2] = {t = "Increases damage fall off by 5%", c = CustomizableWeaponry.textColors.NEGATIVE}}
+end
+
+function att:attachFunc()
+	self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.k)
+	self:setupCurrentIronsights(self.SDPos, self.SDAng)
+	self:updateSoundTo("CW_MP5K_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
+	self.ForegripOverride = true
+	self.ForegripParent = "bg_mp5_kbarrel"
+	self.MuzzleEffect = "muzzleflash_smg"
+	self.PrintName = "MP5K"
+	
+	if not self:isAttachmentActive("sights") then
+		self:updateIronsights("K")
+	end
+end
+
+function att:detachFunc()
+	self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.regular)
+	self:restoreSound()
+	self:revertToOriginalIronsights()
+	self.ForegripOverride = false
+	self.MuzzleEffect = "muzzleflash_smg"
+	self.PrintName = "MP5A3"
+end
+
+CustomizableWeaponry:registerAttachment(att)
