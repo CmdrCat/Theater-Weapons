@@ -56,7 +56,7 @@ if CLIENT then
 	SWEP.PronePos = Vector(0, -2, -.1579)
 	SWEP.ProneAng = Vector(6, 15.7368, -5.9474)
 
-	SWEP.ReflexPos = Vector(-2.11, -3.5, 0.45)
+	SWEP.ReflexPos = Vector(-2.11, -3.5, 0.5)
     SWEP.ReflexAng = Vector(0, 0, 0)
 
 	SWEP.NXSPos = Vector(-2.175, -1, 0.425)
@@ -76,9 +76,9 @@ if CLIENT then
 	SWEP.MaterialIndexPrimary = {0}
 	SWEP.MaterialIndexSecondary = {1, 2}
 
-SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
-    ["cronenzerop"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0, 0, -45)},
-	["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
+	SWEP.BackupSights = { ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
+    	["cronenzerop"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0, 0, -45)},
+		["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
 	}
 
 	SWEP.AttachmentModelsVM = {
@@ -134,10 +134,10 @@ SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {1150, -265}, atts = {"doi_atow_altsight", "md_reflex","cronenzerop","md_nightforce_nxs"}},
 [4] = {header = "Handle", offset = {-400, 150}, atts = {"doi_atow_barcarry", "doi_atow_barhandguard"}},
-[3] = {header = "Accessory", offset = {-400, -265}, atts = {"doi_atow_bipod"}},
-[5] = {header = "Conversion", offset = {200, -265}, atts = {"doi_atow_hcar"}},
-[6] = {header = "Skins", offset = {1150, 150}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
-[7] ={header = "Muzzle", offset ={-400, 500}, atts= {"md_csgo_silencer_rifle", "hard20",}},
+[3] = {header = "Accessory", offset = {-400, 500}, atts = {"doi_atow_bipod"}},
+[5] = {header = "Signature Attachment", offset = {200, -265}, atts = {"doi_atow_hcar"}},
+[6] = {header = "Skins", offset = {1150, 200}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+[2] ={header = "Muzzle", offset ={-400, -265}, atts= {"md_csgo_silencer_rifle", "hard20",}},
 ["+reload"] = {header = "Ammo", offset = {1150, 600}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
