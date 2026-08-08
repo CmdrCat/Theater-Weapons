@@ -25,6 +25,7 @@ function att:attachFunc()
 	self:unloadWeaponPartially()
 	self.Trivia = {text = "The HCAR is a modernized, semi-automatic variant of the BAR made by Ohio Ordinance Works.", x = 0, y = -375}
 	self.FireSound = "DOIGARAND_FIRE"
+	self.FireSoundSuppressed = "CW_M14_FIRE_SUPPRESSED"
 	self.PrintName = "HCAR"
 end
 
@@ -34,8 +35,9 @@ function att:detachFunc()
 	self.FireModes = {"fastauto", "slowauto", "semi"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
-	self.Trivia = {text = "The SLOW-FIRE fire-mode will lower the firerate to 425rpm.", x = 0, y = -375}
+	self.Trivia = {text = "Support weapon for U.S. fireteams in WWII. The SLOW-FIRE fire-mode will lower the firerate to 425rpm.", x = 0, y = -375}
 	self.FireSound = "DOIBAR_FIRE"
+	self.FireSoundSuppressed = "DOIGARAND_FIRE_SUPPRESSED"
 	self.PrintName = "M1918A2 BAR"
 end
 
