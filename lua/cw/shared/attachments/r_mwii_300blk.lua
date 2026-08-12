@@ -24,8 +24,8 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
-    self.FireSound = "MWII_M13B_FIRE"
-    self.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
+    self.FireSound = "mcxfire"
+    self.FireSoundSuppressed = "mcxfiresupp"
 	self.Primary.Ammo = "5.56x45MM"
     self.Trivia = {text = "The Virtus delivers unmatched performance with modular adaptibility and precision. BSTF's standard-issue rifle.", x = -250, y = -650}
 end
