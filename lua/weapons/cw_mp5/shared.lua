@@ -131,6 +131,8 @@ if CLIENT then
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "gun", pos = Vector(0.284, 4.372, -2.46), angle = Angle(0, 180, 0), size = Vector(0.899, 0.899, 0.899)},
 		--Underbarrels
 		["md_m203"] = { type = "Model", model = "models/cw2/attachments/m203.mdl", bone = "gun", rel = "", pos = Vector(-2.38, 9.358, 4), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), animated = true},
+    --lasers
+	["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-5.85, -9.5, 4.55), angle = Angle(0, -90, 90), size = Vector(1,1,1), bone = "gun"},
 	}
 	
 	SWEP.ForegripOverridePos = {
@@ -209,7 +211,9 @@ SWEP.AttachmentDependencies = {
 }
 
 SWEP.AttachmentExclusions = {
-	["md_m203"] = {"bg_mp5_kbarrel", "bg_mp5_sdbarrel"}}
+	["md_m203"] = {"bg_mp5_kbarrel", "bg_mp5_sdbarrel"},
+    ["bg_mp5_sdbarrel"] =  {"md_tundra9mm"}}
+
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
 	reload = "reloadfull",
