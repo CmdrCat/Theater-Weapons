@@ -49,7 +49,7 @@ function att:attachFunc()
 	wep.CW_VM:SetSubMaterial(0, "")
 
     for i, index in ipairs(self.MaterialIndexAlyosha) do
-		wep.CW_VM:SetSubMaterial(index, "phoenix_storms/wire/pcb_blue")
+		wep.CW_VM:SetSubMaterial(index, "metal2a")
 	end
 end
 
