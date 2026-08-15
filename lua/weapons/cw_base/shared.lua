@@ -272,7 +272,7 @@ SWEP.AddSpreadSpeed = 1
 SWEP.ReloadWait = 0
 SWEP.ReloadSpeed = 1
 SWEP.DrawSpeed = 1
-SWEP.SemiAutoTriggerBuffer = 1
+SWEP.SemiAutoTriggerBuffer = 0.5
 SWEP.SemiAutoTriggerBufferUntil = 0
 SWEP.SemiAutoQueuedShot = false
 

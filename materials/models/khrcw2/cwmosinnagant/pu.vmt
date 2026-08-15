@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\khrcw2\cwmosinnagant\pu"
+	"$bumpmap"     "models\khrcw2\cwmosinnagant\pu_n"
+
+	"$phong" "1"
+
+"$nocull" "1"
+
+	"$phongexponent" "30"
+	"$phongboost" ".1"	
+	"$phongfresnelranges"	"[1 3 6]"
+	"$halflambert" "1"
+	"$phongalbedotint" "1"
+}

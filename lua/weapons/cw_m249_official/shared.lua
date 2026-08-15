@@ -69,14 +69,19 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.AttachmentModelsVM = {
-		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "LidCont", pos = Vector(-0.427, -8.511, -4.505), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899)},
-
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "Weapon", pos = Vector(0.014, 3.732, 1.504), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6)},
-		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "LidCont", pos = Vector(-0.51, -8.903, -4.573), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899)},
+		--Optics
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "LidCont", pos = Vector(-0.181, -4.047, 0.69), angle = Angle(0, 180, 0), size = Vector(0.4, 0.4, 0.4)},
-		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "Weapon", pos = Vector(0.138, 6.619, 0.601), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), bodygroup = {[1] = 1}},
+		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "LidCont", pos = Vector(-0.427, -8.511, -4.505), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "LidCont", pos = Vector(-0.515, -9.205, -4.549), angle = Angle(0, -90, 0), size = Vector(0.899, 0.899, 0.899)},
-		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Weapon", pos = Vector(10.583, 5.614, -0.951), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699)}
+		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "LidCont", pos = Vector(-0.51, -8.903, -4.573), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899)},
+		--Muzzles
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "Weapon", pos = Vector(0.014, 3.732, 1.504), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6)},
+		--Underbarrels
+		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "Weapon", pos = Vector(0.138, 6.619, 0.601), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), bodygroup = {[1] = 1}},
+		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Weapon", pos = Vector(10.583, 5.614, -0.951), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699)},
+		--Magazines
+		["md_tcw_stanag30rnd"] = { type = "Model", model = "models/gmod4phun/30rndmag.mdl", bone = "Weapon", rel = "", pos = Vector(0.91, -0.685, 2.705), angle = Angle(45, 0, 0), size = Vector(0.62, 0.62, 0.62), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "Weapon", rel = "", pos = Vector(1.216, 0.975, 2.27), angle = Angle(45, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 
 	SWEP.ForeGripHoldPos = {
