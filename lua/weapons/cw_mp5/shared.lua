@@ -190,7 +190,7 @@ SWEP.Trivia = {text = "This reliable submachine gun is the face of counter-terro
 
 SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {700, -600}, atts = {"too_reflex_mrs", "md_microt1", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog"}},
-	[2] = {header = "Muzzle", offset = {-200, -600}, atts = {"md_tundra9mm"}, exclusions = {c = true, md_m203 = true}},
+	[2] = {header = "Muzzle", offset = {-200, -600}, atts = {"md_tundra9mm"}, exclusions = {md_m203 = true}},
 	[3] = {header = "Grip", offset = {-900, 300}, atts = {"md_m203", "cw_akimbo"}},
 	[4] = {header = "Magazine", offset = {-200, 450}, atts = {"bg_mp515rndmag"}, exclusions = {too_mp5_22lr_rifle = true, md_m203 = true}},
 	[5] = {header = "Stock", offset = {1400, 450}, atts = {"bg_retractablestock", "bg_nostock"}},
