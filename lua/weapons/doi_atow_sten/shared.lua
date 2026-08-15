@@ -39,6 +39,9 @@ if CLIENT then
 	
 	SWEP.AltIronPos = Vector(-2.6145, -1, 2.0422)
 	SWEP.AltIronAng = Vector(-0.3089, -0.0389, 9)
+
+	SWEP.ReflexPos = Vector(-2.4, -3, 0.65)
+    SWEP.ReflexAng = Vector(-0.4089, -0.0389, 9)
 	
 	SWEP.SprintPos = Vector(2, 0, -1)
 	SWEP.SprintAng = Vector(-15.478, 20.96, -15)
@@ -52,20 +55,46 @@ if CLIENT then
     SWEP.SwimPos = Vector(0.5682, -1.7045, 1.0526)
 	SWEP.SwimAng = Vector(-30.8947, 33.0455, -10.2273)
 	
+
+	SWEP.LaserPosAdjust = Vector(3.4, 17, -2.2)
+	SWEP.LaserAngAdjust = Angle(0, 0, 0)
+
 	SWEP.PronePos = Vector(0, 0, -2.1579)
 	SWEP.ProneAng = Vector(-2, 12.7368, -8.9474)
 
+	SWEP.BackupSights = {
+		["md_reflex"] = {[1] = Vector(-4, -2, 1), [2] = Vector(0,0,-45)},
+	}
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
 	
-	SWEP.CustomizationMenuScale = 0.0185 --  0.02
+	SWEP.CustomizationMenuScale = 0.0165 --  0.02
 	
 	SWEP.LuaVMRecoilAxisMod = {vert = 0, hor = 0, roll = .3, forward = .2, pitch = 0}
-	
-	SWEP.AttachmentModelsVM = {}
+
+	SWEP.AttachmentModelsVM = {
+		--sights
+		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "weapon", pos = Vector(-3.825, 1, 2), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "weapon", rel = "", pos = Vector(-3.6, 3, 4.1), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
+		--laser 
+		["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-5.85, -9.5, 4.55), angle = Angle(0, -90, 90), size = Vector(1,1,1), bone = "weapon"},
+	}
 end
 end
+
+SWEP.Attachments = {[5] = {header = "Model", offset = {950, -500}, atts = {"doi_atow_stenmk5"}},
+[4] = {header = "Accessory", offset = {-700, -500}, atts = {"doi_atow_sling"}},
+[2] = {header = "Fire Control", offset = {200, -500}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
+[3] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_altsightmk5", "doi_atow_stensuppressor"}},
+[1] = {header = "Sight", offset = {-700, -150}, atts = {"md_reflex"}},
+[6] = {header = "Laser", offset = {200, -150}, atts = {"ins2_atow_clamplaser"}},
+
+["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+
+SWEP.AttachmentPosDependency = {
+	["ins2_atow_clamplaser"] = {["doi_atow_altsightmk5"] = Vector(-5.85, -10.5, 4.65),["doi_atow_stensuppressor"] = Vector(-5.85, -8.5, 4.25),},
+}
 
 SWEP.ForegripOverridePos = {
 	["grip"] = {
@@ -152,12 +181,6 @@ SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 --SWEP.AimBreathingIntensity = .75
-
-SWEP.Attachments = {[3] = {header = "Model", offset = {650, -250}, atts = {"doi_atow_stenmk5"}},
-[4] = {header = "Accessory", offset = {-310, 100}, atts = {"doi_atow_sling"}},
-[2] = {header = "Fire Control", offset = {60, -420}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
-[1] = {header = "Muzzle", offset = {-450, -300}, atts = {"doi_atow_altsightmk5", "doi_atow_stensuppressor"}},
-["+reload"] = {header = "Ammo", offset = {200, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},

@@ -354,8 +354,8 @@ SWEP.Secondary.DefaultClip	= 90
 SWEP.Secondary.Ammo			= ".300 Blackout"
 
 SWEP.FireDelay = 60 / 900
-SWEP.FireSound = "MWII_M13B_FIRE"
-SWEP.FireSoundSuppressed = "MWII_M13B_FIRE_SUPPRESSED"
+SWEP.FireSound = "mcxfire"
+SWEP.FireSoundSuppressed = "mcxfiresupp"
 SWEP.Recoil = 0.45
 
 SWEP.AimMobilitySpreadMod = 0.3
