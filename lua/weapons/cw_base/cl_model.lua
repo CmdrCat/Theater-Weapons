@@ -36,6 +36,11 @@ SWEP.ViewModelReloadDownPos = Vector(0, 0, -100)
 SWEP.ViewModelReloadDownAng = Angle(35, 0, 0)
 SWEP.ViewModelReloadDownPos2 = Vector(0, 0, -100)
 SWEP.ViewModelReloadDownAng2 = Angle(35, 0, 0)
+-- solo-wield variants (can be changed per-weapon or by attachments)
+SWEP.ViewModelSoloReloadDownPos = Vector(0, 0, -20)
+SWEP.ViewModelSoloReloadDownAng = Angle(-45, 0, 0)
+SWEP.ViewModelSoloReloadDownPos2 = Vector(0, 0, -20)
+SWEP.ViewModelSoloReloadDownAng2 = Angle(-45, 0, 0)
 
 -- TS means Telescopic Sight
 SWEP.TSGlass = Material("cw2/attachments/lens/rt")
@@ -850,7 +855,8 @@ function SWEP:applyOffsetToVM()
 	local leftReloadFrac = 0
 	local rightReloadFrac = 0
 
-	if self.isDualwield and self.IsReloading and self.Cycle <= 0.98 then
+	-- apply reload-down fraction for dualwield or when a weapon requests solo reload-down
+	if (self.isDualwield or self.allowSoloReloadDown) and self.IsReloading and self.Cycle <= 0.98 then
 		leftReloadFrac = math.sin(math.Clamp(self.Cycle, 0, 1) * math.pi)
 	end
 
@@ -870,10 +876,15 @@ function SWEP:applyOffsetToVM()
 		baseRightAng = self.ViewModelOffsetAng2
 	end
 
-	local leftOffsetPos = baseLeftPos + (leftReloadFrac > 0 and self.ViewModelReloadDownPos * leftReloadFrac or Vector(0, 0, 0))
-	local leftOffsetAng = baseLeftAng + (leftReloadFrac > 0 and self.ViewModelReloadDownAng * leftReloadFrac or Angle(0, 0, 0))
-	local rightOffsetPos = baseRightPos + (rightReloadFrac > 0 and (self.ViewModelReloadDownPos2 or self.ViewModelReloadDownPos) * rightReloadFrac or Vector(0, 0, 0))
-	local rightOffsetAng = baseRightAng + (rightReloadFrac > 0 and (self.ViewModelReloadDownAng2 or self.ViewModelReloadDownAng) * rightReloadFrac or Angle(0, 0, 0))
+	local leftDownPos = (self.allowSoloReloadDown and (self.ViewModelSoloReloadDownPos or self.ViewModelReloadDownPos) or self.ViewModelReloadDownPos)
+	local leftDownAng = (self.allowSoloReloadDown and (self.ViewModelSoloReloadDownAng or self.ViewModelReloadDownAng) or self.ViewModelReloadDownAng)
+	local rightDownPos = (self.allowSoloReloadDown and (self.ViewModelSoloReloadDownPos2 or self.ViewModelReloadDownPos2 or self.ViewModelSoloReloadDownPos or self.ViewModelReloadDownPos) or (self.ViewModelReloadDownPos2 or self.ViewModelReloadDownPos))
+	local rightDownAng = (self.allowSoloReloadDown and (self.ViewModelSoloReloadDownAng2 or self.ViewModelReloadDownAng2 or self.ViewModelSoloReloadDownAng or self.ViewModelReloadDownAng) or (self.ViewModelReloadDownAng2 or self.ViewModelReloadDownAng))
+
+	local leftOffsetPos = baseLeftPos + (leftReloadFrac > 0 and leftDownPos * leftReloadFrac or Vector(0, 0, 0))
+	local leftOffsetAng = baseLeftAng + (leftReloadFrac > 0 and leftDownAng * leftReloadFrac or Angle(0, 0, 0))
+	local rightOffsetPos = baseRightPos + (rightReloadFrac > 0 and rightDownPos * rightReloadFrac or Vector(0, 0, 0))
+	local rightOffsetAng = baseRightAng + (rightReloadFrac > 0 and rightDownAng * rightReloadFrac or Angle(0, 0, 0))
 
 	leftPos, leftAng = self:applyViewModelAxisTransform(Vector(leftPos), Angle(ang.p, ang.y, ang.r), leftOffsetPos, leftOffsetAng)
 	rightPos, rightAng = self:applyViewModelAxisTransform(Vector(rightPos), Angle(ang.p, ang.y, ang.r), rightOffsetPos, rightOffsetAng)

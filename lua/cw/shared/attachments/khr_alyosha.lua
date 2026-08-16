@@ -2,7 +2,7 @@ local att = {}
 att.name = "khr_alyosha"
 att.displayName = "Thunderbolt Strike"
 att.displayNameShort = "Thunder"
-att.MarkDuration = 6
+att.MarkDuration = 3
 att.MarkColor = Color(95, 80, 245, 255)
 att.MarkDamageScale = 1.14
 
@@ -10,7 +10,7 @@ att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Applies the Hunter's Mark effect to hit opponents for 6 seconds.", c = CustomizableWeaponry.textColors.SPECIAL},
+	att.description = {[1] = {t = "Applies the Hunter's Mark effect to hit opponents for 3 seconds.", c = CustomizableWeaponry.textColors.SPECIAL},
 					   [2] = {t = "Marked opponents are highlighted and take 14% more damage.", c = CustomizableWeaponry.textColors.SPECIAL},
 					   [3] = {t = "Scattershot / single-bullet mode while hipfiring / aiming down sights.", c = CustomizableWeaponry.textColors.SPECIAL},
 					   [4] = {t = "Sets damage to 28×6 / 95", c = CustomizableWeaponry.textColors.COSMETIC},
