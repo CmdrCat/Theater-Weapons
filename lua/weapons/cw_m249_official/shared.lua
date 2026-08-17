@@ -45,17 +45,21 @@ if CLIENT then
 	
 	SWEP.MicroT1Pos = Vector(-2.043, -0.993, 0.236)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
+
+	SWEP.ShortDotPos = Vector(-2.02, -2.869, 0.123)
+	SWEP.ShortDotAng = Vector(0, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.02, -2.869, -0.124)
 	SWEP.ACOGAng = Vector(0, 0, 0)
-	
-	SWEP.ShortDotPos = Vector(-2.02, -2.869, 0.123)
-	SWEP.ShortDotAng = Vector(0, 0, 0)
+
+	SWEP.TacStancePos = Vector(-3.1, -1, 0.5)
+	SWEP.TacStanceAng = Vector(0, 0, -30)
 	
 	SWEP.SprintPos = Vector(1.786, 0, -1)
 	SWEP.SprintAng = Vector(-10.778, 27.573, 0)
 	
 	SWEP.BackupSights = {
+		["too_optic_tacstance"] = {[1] = Vector(-2.05, -1.964, 0.972), [2] = Vector(0,0,0)},
 		["md_microt1"] = {[1] = Vector(-3.1, 5, 0.5), [2] = Vector(0,0,-30)},
 		["md_aimpoint"] = {[1] = Vector(-3.1, 3.5, 0.5), [2] = Vector(0,0,-30)},
 		["md_schmidt_shortdot"] = {[1] = Vector(-3.2, 4, 0.5), [2] = Vector(0,0,-30)},
@@ -67,6 +71,8 @@ if CLIENT then
 	
 	SWEP.AlternativePos = Vector(-0.2, 0, -0.4)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
+
+	SWEP.MagBoneName = "Magazine"
 	
 	SWEP.AttachmentModelsVM = {
 		--Optics
@@ -80,8 +86,10 @@ if CLIENT then
 		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "Weapon", pos = Vector(0.138, 6.619, 0.601), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), bodygroup = {[1] = 1}},
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Weapon", pos = Vector(10.583, 5.614, -0.951), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699)},
 		--Magazines
-		["md_tcw_stanag30rnd"] = { type = "Model", model = "models/gmod4phun/30rndmag.mdl", bone = "Weapon", rel = "", pos = Vector(0.91, -0.685, 2.705), angle = Angle(45, 0, 0), size = Vector(0.62, 0.62, 0.62), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "Weapon", rel = "", pos = Vector(1.216, 0.975, 2.27), angle = Angle(45, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+		["md_m24930rndstanag"] = { type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "Weapon", rel = "", pos = Vector(0.91, -0.685, 2.705), angle = Angle(45, 0, 0), size = Vector(0.62, 0.62, 0.62), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_m24930rndpmag"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "Weapon", rel = "", pos = Vector(2.05, -0.489, 1.548), angle = Angle(0, -90, 45), size = Vector(0.54, 0.54, 0.54), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_m24940rndemag"] = { type = "Model", model = "models/gmod4phun/emag.mdl", bone = "Weapon", rel = "", pos = Vector(1.826, -0.685, 1.77), angle = Angle(45, 0, 0), size = Vector(0.52, 0.52, 0.52), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_m24960rndsurefire"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "Weapon", rel = "", pos = Vector(1.216, 0.975, 2.27), angle = Angle(45, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 
 	SWEP.ForeGripHoldPos = {
@@ -121,8 +129,17 @@ SWEP.Trivia = {text = "A US army's light machine gun of choice, the M249 has see
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-500, -300}, atts = {"md_saker"}},
 	[3] = {header = "Handguard", offset = {-500, 150}, atts = {"md_foregrip", "md_bipod"}},
-	[4] = {header = "Skins", offset = {800, 650}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	[4] = {header = "Magazine", offset = {-500, 600}, atts = {"md_m24930rndstanag", "md_m24930rndpmag", "md_m24940rndemag", "md_m24960rndsurefire"}},
+	[5] = {header = "Skins", offset = {800, 650}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	["+use"] = {header = "Stance", offset = {1500, -300}, atts = {"too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {800, 150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+
+SWEP.AttachmentExclusions = {
+	["md_microt1"] = {"too_optic_tacstance"},
+	["md_aimpoint"] = {"too_optic_tacstance"},
+	["md_schmidt_shortdot"] = {"too_optic_tacstance"},
+	["md_acog"] = {"too_optic_tacstance"}
+}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
 	reload = "reload",

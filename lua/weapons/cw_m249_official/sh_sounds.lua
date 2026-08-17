@@ -10,3 +10,6 @@ CustomizableWeaponry:addReloadSound("CW_M249_OFFICIAL_MAGDRAW", "weapons/cw_m249
 CustomizableWeaponry:addReloadSound("CW_M249_OFFICIAL_MAGIN", "weapons/cw_m249/magin.wav")
 CustomizableWeaponry:addReloadSound("CW_M249_OFFICIAL_MAGOUT", "weapons/cw_m249/magout.wav")
 CustomizableWeaponry:addReloadSound("CW_M249_OFFICIAL_MAGOUT_FULL", "weapons/cw_m249/magoutfull.wav")
+
+CustomizableWeaponry:addReloadSound("CW_M249_STANAG_MAGOUT", "weapons/cw_famasg2/magout.wav")
+CustomizableWeaponry:addReloadSound("CW_M249_STANAG_MAGIN", "weapons/cw_famasg2/magin.wav")
