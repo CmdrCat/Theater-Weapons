@@ -7,7 +7,7 @@ att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("gmod4phun/usgimag/upgr_usgimag")
-	att.description = {[1] = {t = "Changes magazine model to an aluminum STANAG.", c = CustomizableWeaponry.textColors.COSMETIC}}
+	att.description = {[1] = {t = "Changes magazine model to an aluminum STANAG magazine.", c = CustomizableWeaponry.textColors.COSMETIC}}
 end
 
 function att:attachFunc()

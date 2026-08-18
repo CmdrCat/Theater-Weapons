@@ -35,6 +35,10 @@ if CLIENT then
 	
 	SWEP.IronsightPos = Vector(-2, -2, -0.0059)
 	SWEP.IronsightAng = Vector(0, -1.25, 0)
+
+	--Maxim
+	--SWEP.IronsightPos = Vector(-2.979, 0, 4.729)
+	--SWEP.IronsightAng = Vector(-6.965, -0.956, 19)
 	
 	SWEP.BipodPos = Vector(-5.304, -4.23, 3.44)
 	SWEP.BipodAng = Vector(-2.65, 1.5, 0)
