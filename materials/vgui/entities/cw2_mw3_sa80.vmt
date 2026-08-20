@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "mw3_icons/weapons/weapon_sa80"
+	"$translucent" 1
+}

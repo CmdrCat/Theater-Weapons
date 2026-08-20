@@ -190,7 +190,7 @@ SWEP.Sounds = {	bent_reload_start = {
 
 SWEP.SpeedDec = 45
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "normal"
@@ -220,7 +220,6 @@ SWEP.SemiAutoTriggerBuffer = 0
 SWEP.SemiAutoTriggerBufferUntil = 0
 SWEP.SemiAutoQueuedShot = false
 
-SWEP.OverallMouseSens = .8
 SWEP.Primary.ClipSize		= 5
 SWEP.Primary.DefaultClip	= 50
 SWEP.Primary.Automatic		= false

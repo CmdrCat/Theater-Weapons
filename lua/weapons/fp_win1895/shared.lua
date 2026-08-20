@@ -79,7 +79,6 @@ if CLIENT then
 	6 = Handguard
 	*/
 	
-	SWEP.OverallMouseSens = .9
 	SWEP.CustomizationMenuScale = 0.022
 	SWEP.AttachmentModelsVM = {["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "body", rel = "", pos = Vector(-.82, -3.15, 15), angle = Angle(0, 180, -90), size = Vector(.7, .7, .7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_fp_1895scope"] = { type = "Model", model = "models/weapons/khrcw2/att/1895_scope.mdl", bone = "body", rel = "", pos = Vector(2.7, -5.9, -18.5), angle = Angle(90, -90, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },}
@@ -142,7 +141,7 @@ SWEP.ADSSpeedMult = {
 standing = .85
 }
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "rpg"
 SWEP.RunHoldType = "passive"

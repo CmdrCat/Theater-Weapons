@@ -16,6 +16,10 @@ MaxSpreadIncMult = -0.25}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/anpeq15")
+	att.description = {
+		[1] = {t = "Provides an adjustable laser sight.", c = CustomizableWeaponry.textColors.POSITIVE}
+	}
+
 	local beam = Material("effects/laser1")
 	local laserDot = Material("sprites/glow04_noz")
 	
@@ -23,7 +27,16 @@ if CLIENT then
 	local td = {}
 	
 	function att:elementRender()
-		local model = self.AttachmentModelsVM.md_anpeq15.ent
+		local modelData = self.AttachmentModelsVM.md_anpeq15
+		if modelData.models then
+			modelData = modelData.models[1]
+		end
+
+		if not modelData or not IsValid(modelData.ent) then
+			return
+		end
+
+		local model = modelData.ent
 		local pos = model:GetPos()
 		local ang = self:getLaserAngles(model)
 		local angs = nil

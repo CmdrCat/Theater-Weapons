@@ -23,6 +23,8 @@ if CLIENT then
 	
 	SWEP.EffectiveRange_Orig = 55 * 39.37
 	SWEP.DamageFallOff_Orig = .37
+
+	SWEP.TracerColor = Color(95, 80, 245, 255)
 	
 	SWEP.Shell = "khr79257"
 	SWEP.ShellScale = 0.7

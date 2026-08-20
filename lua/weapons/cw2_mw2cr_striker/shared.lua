@@ -299,10 +299,6 @@ reg_draw = {
     {time = 0, sound = "MW2CR_RAISE_MEDIUM"},
 },
 
-reg_draw_first = {
-    {time = 0, sound = "MW2CR_RAISE_MEDIUM"},
-},
-
 reg_reload_start = {
     {time = 0, sound = "MW2CR_striker_RELOAD_LIFT"},
 },

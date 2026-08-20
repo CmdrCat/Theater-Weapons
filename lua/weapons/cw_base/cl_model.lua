@@ -1373,6 +1373,10 @@ function SWEP:performViewmodelMovement()
 	CT = UnPredictedCurTime()
 	vm = self.CW_VM
 	
+	if not IsValid(vm) then
+		return
+	end
+	
 	self.Cycle = vm:GetCycle()
 	self.Sequence = vm:GetSequenceName(vm:GetSequence())
 	self.IsReloading = (self.Sequence == self.Animations.reload or self.Sequence == self.Animations.reload_empty or self.Sequence == self.Animations.reload_start or self.Sequence == self.Animations.reload_end)
