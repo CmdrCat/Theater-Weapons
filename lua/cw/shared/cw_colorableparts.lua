@@ -84,6 +84,12 @@ function CustomizableWeaponry.colorableParts:setColor(index, position)
 end
 
 function CustomizableWeaponry.colorableParts:resetColors()
+	-- Detach All is available on every CW2 weapon, including weapons that have
+	-- no colorable reticle or laser entries.  Only reset an initialized table.
+	if not istable(self.SightColors) then
+		return
+	end
+
 	for k, v in pairs(self.SightColors) do
 		CustomizableWeaponry.colorableParts.resetColor(self, v)
 	end
