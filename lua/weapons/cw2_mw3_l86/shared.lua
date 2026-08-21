@@ -23,6 +23,9 @@ SWEP.CustomizeAng = Vector(21.361, 35.674, 25.371)
 SWEP.LaserPosAdjust = Vector(-1, 0, 0)
 SWEP.LaserAngAdjust = Angle(0, 180, 0)
 
+SWEP.GrimlinePosAdjust = Vector(0, 0, 0)
+SWEP.GrimlineAngAdjust = Angle(0, 0, 0) 
+
 --Sight Positions
 
 	SWEP.IronsightPos = Vector(-2.4123, -2.0385, -0.5166)
@@ -133,8 +136,20 @@ SWEP.MagBoneName = "tag_clip"
 		
 		--Muzzles
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "tag_silencer", rel = "", pos = Vector(-10.4, 0.006, -1.85), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "tag_silencer", rel = "", pos = Vector(3.375, 0, -0.937), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "tag_silencer", rel = "", pos = Vector(5.42, -0.004, -0.036), angle = Angle(0, 0, 0), size = Vector(1.04, 1.04, 1.04)},
 
 		--Underbarrels
+		["ftactiger_r"] = { 
+			models = {
+				{type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "tag_foregrip", rel = "", pos = Vector(-1.53, 0, -0.463), angle = Angle(0, 0, 0), size = Vector(1.079, 1.079, 1.079), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "tag_foregrip", rel = "", pos = Vector(-1.962, -0.362, 2.049), angle = Angle(0, 0, 180), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
+			},
+		["bruentiltgrip_r"] = { 
+			models = {
+				{type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "tag_foregrip", rel = "", pos = Vector(0.1, 0, -0.717), angle = Angle(0, 0, 0), size = Vector(1.047, 1.047, 1.047), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "tag_foregrip", rel = "", pos = Vector(-1.962, -0.362, 2.049), angle = Angle(0, 0, 180), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
+			},
 		["md_foregrip"] = { 
 			models = {
 				{type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "tag_foregrip", rel = "", pos = Vector(10.672, -0.386, -2.917), angle = Angle(0, -90, 0), size = Vector(0.707, 0.707, 0.707), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
@@ -147,12 +162,18 @@ SWEP.MagBoneName = "tag_clip"
 				{type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "tag_weapon", rel = "", pos = Vector(5.556, 1.338, 0.428), angle = Angle(0, 180, -77.426), adjustment = {min = 4.147, max = 6.956, axis = "x", inverse = true}, size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
 				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "tag_weapon", rel = "", pos = Vector(3.965, -1.234, -0.362), angle = Angle(0, 0, 77.426), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
 			},
+		["ftacgrimline"] = { 
+			models = {
+				{type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "tag_weapon", rel = "", pos = Vector(5.932, 1.42, 0.6), angle = Angle(0, 0, 77.426), adjustment = {min = 4.215, max = 5.932, axis = "x", inverse = true}, size = Vector(1.116, 1.116, 1.116), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "tag_weapon", rel = "", pos = Vector(3.965, -1.234, -0.362), angle = Angle(0, 0, 77.426), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
+			},
 
 		--Magazines
 		["md_small30rndstanag"] = { type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "tag_clip", rel = "", pos = Vector(0.05, 0, -0.39), angle = Angle(0, 90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_small30rndpmag"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "tag_clip", rel = "", pos = Vector(0.233, 0.013, -2.075), angle = Angle(0, 0, 0), size = Vector(0.727, 0.727, 0.727), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_small40rndemag"] = { type = "Model", model = "models/gmod4phun/emag.mdl", bone = "tag_clip", rel = "", pos = Vector(0.036, 0, -2.723), angle = Angle(0, 90, 0), size = Vector(0.62, 0.62, 0.62), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_m24960rndsurefire"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "tag_clip", rel = "", pos = Vector(1.216, 0.975, 2.27), angle = Angle(45, 0, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+		["md_small60rndsurefire"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "tag_clip", rel = "", pos = Vector(1.925, 0.03, -0.801), angle = Angle(0, 90, 0), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_tcw_cmag"] = { type = "Model", model = "models/wystan/Cmag.mdl", bone = "tag_clip", rel = "", pos = Vector(-3.706, 0.202, -1.198), angle = Angle(0, 0, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
 end
 
@@ -182,14 +203,14 @@ SWEP.CustomizationMenuScale = 0.014
 SWEP.Trivia = {text = "Accurate yet maneuverable, this machine gun is the weapon of choice of C.G.I.'s commander.", x = 0, y = -500}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {1200, -300},  atts = {"too_reflex_mrs", "md_microt1", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal"}},
-	[2] = {header = "Muzzle", offset = {-500, -150}, atts = {"md_saker"}},
-	[3] = {header = "Handguard", offset = {-800, 750}, atts = {"md_foregrip"}},
-	[4] = {header = "Laser", offset = {-800, 250},  atts = {"md_anpeq15"}},
-	[5] = {header = "Magazines", offset = {1400, 1150},  atts = {"md_small30rndstanag", "md_small30rndpmag", "md_small40rndemag"}},
+	[2] = {header = "Muzzle", offset = {-700, -150}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
+	[3] = {header = "Handguard", offset = {-800, 750}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip"}},
+	[4] = {header = "Laser", offset = {-800, 250},  atts = {"md_anpeq15", "ftacgrimline"}},
+	[5] = {header = "Magazines", offset = {1400, 1150},  atts = {"md_small30rndstanag", "md_small30rndpmag", "md_small40rndemag", "md_small60rndsurefire", "md_tcw_cmag"}},
 	[6] = {header = "Signature Attachment", offset = {1200, 650},  atts = {"too_l86_conversion"}},
     [7] = {header = "Skins", offset = {2000, 200}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir", "md_skinrunes", "md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {2200, -300}, atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
-    ["+reload"] = {header = "Ammo", offset = {2000, 800}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+    ["+reload"] = {header = "Ammo", offset = {2000, 650}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
     SWEP.AttachmentDependencies = {
 		["too_reflex_mrs"] = {"too_optic_category_reflex"},
@@ -363,7 +384,7 @@ function SWEP:IndividualThink()
 		self.DamageFallOff = ((self.DamageFallOff - 0.05))
 	end
 
-	local hasGrip = self.ActiveAttachments.md_foregrip == true
+	local hasGrip = self.ActiveAttachments.bruentiltgrip_r or self.ActiveAttachments.md_foregrip == true
 	if hasGrip ~= self.GripAnimationsActive then
 		self.GripAnimationsActive = hasGrip
 		self.Animations = hasGrip and self.Animations_Grip or self.Animations_Normal

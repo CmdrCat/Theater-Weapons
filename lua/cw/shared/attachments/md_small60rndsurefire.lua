@@ -1,21 +1,21 @@
 local att = {}
-att.name = "md_small40rndemag"
-att.displayName = "40-Round E-Magazine"
-att.displayNameShort = "40 RND"
+att.name = "md_small60rndsurefire"
+att.displayName = "60-Round Surefire Magazine"
+att.displayNameShort = "60 RND"
 att.isBG = true
-att.SpeedDec = -15
+att.SpeedDec = -5
 
-att.statModifiers = {ReloadSpeedMult = 0.15}
+att.statModifiers = {ReloadSpeedMult = 0.05}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("gmod4phun/emag/upgr_emag")
-	att.description = {[1] = {t = "Decreases capacity to 40 rounds.", c = CustomizableWeaponry.textColors.NEGATIVE}}
+	att.displayIcon = surface.GetTextureID("atts/ar1560rndmag")
+	att.description = {[1] = {t = "Decreases capacity to 60 rounds.", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
 function att:attachFunc()
 
-	self.Primary.ClipSize = 40
-	self.Primary.ClipSize_Orig = 40
+	self.Primary.ClipSize = 60
+	self.Primary.ClipSize_Orig = 60
 
 	self:unloadWeaponPartially()
 
