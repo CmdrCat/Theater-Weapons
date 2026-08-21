@@ -8,7 +8,6 @@ if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/inventory/weapon_mg42")
 end
 
--- Register Fire and Reload Sounds via standard CW 2.0 methods
 CustomizableWeaponry:addFireSound("DLT19X_FIRE", "weapons_too/dlt19xconv/dlt19x_fire.wav", 1, 105, CHAN_STATIC)
 CustomizableWeaponry:addReloadSound("DLT19X_COOLED", "weapons_too/dlt19xconv/cooled.wav")
 CustomizableWeaponry:addReloadSound("DLT19X_OVERHEAT", "weapons_too/dlt19xconv/overheat.wav")
@@ -67,10 +66,8 @@ function att:attachFunc()
 	self.oldShell = self.Shell
 	self.Shell = false
 
-	-- Use standard CW 2.0 sound configuration
 	self.FireSound = "DLT19X_FIRE"
 
-	-- Normal reload sound
 	self.Sounds.base_reload = {
 		{time = 0.2, sound = "DLT19X_COOLED"},
 	}
@@ -80,7 +77,6 @@ function att:attachFunc()
 		{time = 0.4, sound = "DLT19X_COOLED"},
 	}
 
-	-- Trigger overheat sound when the 4th (last) round is fired
 	self.postPrimaryAttack = function(wep)
 		if wep._dlt19xOriginalPostPrimary then
 			wep:_dlt19xOriginalPostPrimary()
