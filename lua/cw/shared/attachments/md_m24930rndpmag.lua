@@ -76,6 +76,10 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+	if clip == 30 then
+		self:SetClip1(200)
+	end 
+	
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 

@@ -4,13 +4,17 @@ att.displayName = "DLT-19x Targeting Blaster"
 att.displayNameShort = "DLT-19x"
 att.description = {[1] = {t = "Targeting Blaster Conversion", c = Color(255, 255, 255, 255)}}
 
+att.statModifiers = {DamageMult = 13 / 12,
+FireDelayMult = 56 / 9,
+ReloadSpeedMult = 2.1,
+HipSpreadMult = -1,
+RecoilMult = -0.75,
+VelocitySensitivityMult = -1,
+AimSpreadMult = -1}
+
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/inventory/weapon_mg42")
 end
-
-CustomizableWeaponry:addFireSound("DLT19X_FIRE", "weapons_too/dlt19xconv/dlt19x_fire.wav", 1, 105, CHAN_STATIC)
-CustomizableWeaponry:addReloadSound("DLT19X_COOLED", "weapons_too/dlt19xconv/cooled.wav")
-CustomizableWeaponry:addReloadSound("DLT19X_OVERHEAT", "weapons_too/dlt19xconv/overheat.wav")
 
 local invisibleScale = Vector(0.009, 0.009, 0.009)
 local normalScale = Vector(1, 1, 1)
@@ -49,24 +53,44 @@ local function restoreVisibleRounds(wep)
 end
 
 function att:attachFunc()
+
+	self.ADSFireAnim = false
+	self.ForegripOverride = true
+	self.ForegripParent = "nobipod"
+	self.CanRestOnObjects = true
+
+	self.PenMod = 0
+	self.CanRicochet = false
+
+	self:CycleFiremodes() 
+	self.FireModes = {"semi","safe"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+	self.Primary.ClipSize = 10
+	self.Primary.ClipSize_Orig = 10
+	self:unloadWeaponPartially()
+
+	setBoneScales(self.CW_VM, {"MG42_BIPOD"}, Vector(0.009, 0.009, 0.009))
+	self.BipodInstalled = false
+	self.CanRestOnObjects = true
+	
+	self.FireSound = "DLT19X_FIRE"
+
+	self.ViewModelSoloReloadDownPos = Vector(2, -6, -7)
+	self.ViewModelSoloReloadDownAng = Angle(30, -7.5, 0)
+	self.ViewModelSoloReloadDownPos2 = Vector(2, -6, -7)
+	self.ViewModelSoloReloadDownAng2 = Angle(30, -7.5, 0)
+
 	if self._dlt19xOriginalClipSize == nil then
 		self._dlt19xOriginalClipSize = self.Primary.ClipSize
 		self._dlt19xOriginalClipSizeOrig = self.Primary.ClipSize_Orig
 	end
     
-	self._dlt19xOriginalFireSound = self.FireSound
 	self._dlt19xOriginalSounds = table.Copy(self.Sounds)
 	self._dlt19xOriginalPostPrimary = self.postPrimaryAttack
-
-	-- Base Settings & Force 4-Round Clip
-	self.Primary.ClipSize = 4
-	self.Primary.ClipSize_Orig = 4
-	self:SetClip1(4) 
     
 	self.oldShell = self.Shell
 	self.Shell = false
-
-	self.FireSound = "DLT19X_FIRE"
 
 	self.Sounds.base_reload = {
 		{time = 0.2, sound = "DLT19X_COOLED"},
@@ -75,6 +99,7 @@ function att:attachFunc()
 	-- Empty reload sound
 	self.Sounds.base_reload_empty = {
 		{time = 0.4, sound = "DLT19X_COOLED"},
+
 	}
 
 	self.postPrimaryAttack = function(wep)
@@ -87,8 +112,7 @@ function att:attachFunc()
 		end
 	end
 
-	if CLIENT then
-		self.allowSoloReloadDown = true
+	if CLIENT then	self.allowSoloReloadDown = true
 		self.forceRemoveRounds = true
 		self._dlt19xOriginalIndividualThink = self.IndividualThink
 		self.IndividualThink = function(wep, ...)
@@ -110,6 +134,21 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+
+	self.ADSFireAnim = true
+
+	self.PenMod = 1
+	self.CanRicochet = true
+
+	self:CycleFiremodes()
+	self.FireModes = {"auto","safe"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+
+	setBoneScales(self.CW_VM, {"MG42_BIPOD"}, Vector(1, 1, 1))
+	self.BipodInstalled = true
+	self.CanRestOnObjects = false
+
 	if self._dlt19xOriginalClipSize ~= nil then
 		self.Primary.ClipSize = self._dlt19xOriginalClipSize
 		self.Primary.ClipSize_Orig = self._dlt19xOriginalClipSizeOrig
@@ -122,12 +161,8 @@ function att:detachFunc()
 		self.oldShell = nil
 	end
 
-	if self._dlt19xOriginalFireSound then
-		self.FireSound = self._dlt19xOriginalFireSound
-		self._dlt19xOriginalFireSound = nil
-	else
-		self.FireSound = "DOIMG42_FIRE"
-	end
+	self.FireSound = "DOIMG42_FIRE"
+	self.reloadAnimFunc = nil
 
 	if self._dlt19xOriginalSounds then
 		self.Sounds = table.Copy(self._dlt19xOriginalSounds)

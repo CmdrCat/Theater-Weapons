@@ -53,10 +53,10 @@ if CLIENT then
 	SWEP.PronePos = Vector(0, -2, -.1579)
 	SWEP.ProneAng = Vector(6, 15.7368, -5.9474)
 	
-	SWEP.NXSPos = Vector(-2.305, -5, 0.435)
+	SWEP.NXSPos = Vector(-2.305, -3, 0.55)
     SWEP.NXSAng = Vector(0, 0, 0)
 
-	SWEP.BackupSights = {["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
+	SWEP.BackupSights = {["md_nightforce_nxs"] = {[1] = Vector (-5, 5, 1.5), [2] = Vector(0, 0, -65)}
 	}
 
 	SWEP.MoveType = 1
@@ -70,7 +70,7 @@ if CLIENT then
 
 	--optic
 	["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "MG42_LID", rel = "", pos = Vector(-0.05, -1., -1.25), angle = Angle(0, 90, 0), size = Vector(0.009, 0.009, 0.009)},
-	 ["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "MG42_LID", rel = "", pos = Vector(-0.4, 0.4, 1.7), angle = Angle(0, -90, 0), size = Vector(1.4, 1.4, 1.4)}
+	 ["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "MG42_LID", rel = "", pos = Vector(-0.4, -1.864, 1.583), angle = Angle(0, -90, 0), size = Vector(1.4, 1.4, 1.4)}
 	}
 	
 	SWEP.ForegripOverridePos = {
@@ -113,11 +113,11 @@ SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
 SWEP.Attachments = {[4] = {header = "Finish", offset = {-120, -325}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-[3] = {header = "Belt", offset = {800, -50}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}},
-[1] = {header = "Frame", offset = {-350, -200}, atts = {"doi_atow_bipodremove"}},
+[3] = {header = "Belt", offset = {800, -50}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}, exclusions = {doi_atow_dlt19x = true}},
+[1] = {header = "Frame", offset = {-350, -200}, atts = {"doi_atow_bipodremove"}, exclusions = {doi_atow_dlt19x = true}},
 [2] = {header = "Fire Control", offset = {1200, -325}, atts = {"doi_atow_burstconv", "doi_atow_mg3conv","doi_atow_dlt19x"}},
 [5] = {header = "Optics", offset = {0, 0}, atts = {"md_nightforce_nxs"}},
-["+reload"] = {header = "Ammo", offset = {200, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+["+reload"] = {header = "Ammo", offset = {200, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_dlt19x = true}}}
 
 SWEP.AttachmentExclusions = {
 	["doi_atow_150rndbelt"] = {"doi_atow_mg3conv"},
@@ -197,6 +197,12 @@ SWEP.DeployTime = 1
 SWEP.HolsterTime = 1
 SWEP.BurstCooldownMul = 3
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.2 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ADSFireAnim = true
 SWEP.BipodInstalled = true
 SWEP.Chamberable = false
@@ -210,6 +216,13 @@ SWEP.ReloadTime_Empty = 6.9
 SWEP.ReloadHalt_Empty = 8.8
 
 function SWEP:IndividualThink()
+
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.2 / 2 )
+		end
+	end
+	
 	-- 1. Bipod Logic
 	if self.dt.BipodDeployed then
 		self.ForegripOverride = true
@@ -228,13 +241,6 @@ function SWEP:IndividualThink()
 	end
 		self.EffectiveRange = 60 * 39.37
 	self.DamageFallOff = .33
-	self.Damage = 24
-	self.FireDelay = 60 / 1300
-	self.ReloadTime = 6.15
-	self.ReloadHalt = 8.1
-	self.ReloadTime_Empty = 6.9
-	self.ReloadHalt_Empty = 8.8
-	self.ReloadSpeed = 1.05
 	self.bulletCallback = nil
 	
 	-- 3. Ammo Modifiers
@@ -253,17 +259,8 @@ function SWEP:IndividualThink()
 	end
 
 	if self.ActiveAttachments.doi_atow_dlt19x then
-		self.Damage = 100
-		self.FireDelay = 60 / 100
-		self.EffectiveRange = 160 * 39.37
-		self.DamageFallOff = 0.10
-		
-		self.ReloadTime = 1.5
-		self.ReloadHalt = 1.5
-		self.ReloadTime_Empty = 1.5
-		self.ReloadHalt_Empty = 1.5
-		
-		self.ReloadSpeed = 5.86 
+		self.EffectiveRange = 9999 * 39.37
+		self.DamageFallOff = 0
 
 		-- Headshot Logic[cite: 5]
 		self.bulletCallback = function( att, tr, dmg )
