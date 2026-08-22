@@ -10,7 +10,7 @@ att.statModifiers = {HipSpreadMult = -0.5,
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "Steady-shooting variant dependent on whether it is dual / single-wielded. ", c = CustomizableWeaponry.textColors.COSMETIC},
-					   [2] = {t = "Increases headshot multiplier to 1.1x", c = CustomizableWeaponry.textColors.POSITIVE},
+					   [2] = {t = "Increases headshot multiplier from 1.05 to 1.1", c = CustomizableWeaponry.textColors.POSITIVE},
 					   [3] = {t = "Decreases magazine capacity to 32 rounds", c = CustomizableWeaponry.textColors.NEGATIVE},
 					   [4] = {t = "Increases damage to 50 / 32", c = CustomizableWeaponry.textColors.POSITIVE},
 					   [5] = {t = "Decreases firerate to 600 / 923 RPM", c = CustomizableWeaponry.textColors.NEGATIVE},
@@ -43,6 +43,10 @@ function att:detachFunc()
 	self.PrintName = "Vector"
 	self.FireSound = "CW_VECTOR_FIRE"
 	self.FireSoundSuppressed = "DOITHOM1928_FIRE_SUPPRESSED"
+
+	if clip >= 32 then
+		self:SetClip1(self.Primary.ClipSize_ORIG_REAL + clip - 32)
+	end 
 
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL

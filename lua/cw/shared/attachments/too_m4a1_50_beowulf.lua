@@ -29,6 +29,10 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+	if clip >= 10 then
+		self:SetClip1(self.Primary.ClipSize_ORIG_REAL + clip - 10)
+	end 
+
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 	self.FireSound = "CW_TOO_AR15_FIRE"

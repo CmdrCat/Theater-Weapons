@@ -13,7 +13,7 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = false
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/khrcw2/doipack/w_etoolde.mdl"
+	SWEP.WM = "models/khrcw2/doipack/w_etoolgb.mdl"
 	SWEP.WMPos = Vector(2, -1, -3)
 	SWEP.WMAng = Vector(-80, 180, -170)
 	
@@ -63,7 +63,7 @@ SWEP.SpeedDec = 5
 SWEP.ViewModelFOV	= 75 // 65
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/khrcw2/doipack/etoolde.mdl"
-SWEP.WorldModel = "models/khrcw2/doipack/w_etoolde.mdl"
+SWEP.WorldModel = "models/khrcw2/doipack/w_etoolgb.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

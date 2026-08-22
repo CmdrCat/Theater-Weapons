@@ -321,6 +321,7 @@ SWEP.HolsterTime = 0.4
 --Sounds
 CustomizableWeaponry:addFireSound("MW3_sa80_FIRE", {"ma85_mw3/weapons/sa80/fire.wav"}, 0.35, 100, CHAN_WEAPON, 95, 110)
 CustomizableWeaponry:addFireSound("MW3_sa80_FIRE_SUPPRESSED", {"ma85_mw3/weapons/sa80/fire_suppressed.wav"}, 0.35, 100, CHAN_WEAPON, 95, 110)
+CustomizableWeaponry:addFireSound("CW_L85A2_FIRE_SUPPRESSED", "ma85_mw3/weapons/sa80/l85a2_fire_suppressed.wav", 1, 92, CHAN_WEAPON)
 
 CustomizableWeaponry:addReloadSound("mw3_sa80_RELOAD_1", "ma85_mw3/weapons/sa80/lift.wav")
 CustomizableWeaponry:addReloadSound("mw3_sa80_RELOAD_2", "ma85_mw3/weapons/sa80/magout.wav")

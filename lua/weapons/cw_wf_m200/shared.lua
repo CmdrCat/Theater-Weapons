@@ -30,7 +30,7 @@ if CLIENT then
 	SWEP.FireMoveMod = 0.6
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_snip_m200.mdl"
+	SWEP.WM = "models/weapons/w_snip_awp.mdl"
 	SWEP.WMPos = Vector(-0.5, 0, 3)
 	SWEP.WMAng = Vector(0, 0, 180)
 	

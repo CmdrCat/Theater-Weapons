@@ -127,10 +127,10 @@ SWEP.AimViewModelFOV = 63
 SWEP.ZoomAmount = 10
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/bren.mdl"
-SWEP.WorldModel		= "models/khrcw2/doipack/w_bren.mdl"
+SWEP.WorldModel		= "models/weapons/w_snip_sg550.mdl"
 
 SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/khrcw2/doipack/w_bren.mdl"
+SWEP.WM = "models/weapons/w_snip_sg550.mdl"
 SWEP.WMPos = Vector(-1, 4.25, 0)
 SWEP.WMAng = Vector(-14, 2, 180)
 

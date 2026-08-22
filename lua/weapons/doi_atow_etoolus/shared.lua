@@ -25,7 +25,7 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, -15)
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/khrcw2/doipack/w_etoolus.mdl"
+	SWEP.WM = "models/khrcw2/doipack/w_etoolgb.mdl"
 	SWEP.WMPos = Vector(2, 3, -2.75)
 	SWEP.WMAng = Vector(-80, 180, -170)
 	
@@ -67,7 +67,7 @@ SWEP.SpeedDec = 5
 SWEP.ViewModelFOV	= 75 // 65
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/khrcw2/doipack/etoolus.mdl"
-SWEP.WorldModel = "models/khrcw2/doipack/w_etoolus.mdl"
+SWEP.WorldModel = "models/khrcw2/doipack/w_etoolgb.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

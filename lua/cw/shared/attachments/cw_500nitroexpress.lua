@@ -6,8 +6,9 @@ att.displayNameShort = ".500"
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "Somehow holds 6 rounds of .500 Nitro Express.", c = CustomizableWeaponry.textColors.VPOSITIVE},
-                       [2] = {t = "Increases effective range by 20M", c = CustomizableWeaponry.textColors.POSITIVE},
-                       [3] = {t = "Decreases damage fall off by 45%", c = CustomizableWeaponry.textColors.POSITIVE}}
+					   [2] = {t = "Decreases headshot multiplier from 2.0 to 1.2", c = CustomizableWeaponry.textColors.POSITIVE},
+                       [3] = {t = "Increases effective range by 20M", c = CustomizableWeaponry.textColors.POSITIVE},
+                       [4] = {t = "Decreases damage fall off by 45%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 att.statModifiers = {

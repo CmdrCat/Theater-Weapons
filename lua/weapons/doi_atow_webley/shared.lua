@@ -155,13 +155,13 @@ SWEP.AimViewModelFOV = 55
 SWEP.ZoomAmount = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/webley.mdl"
-SWEP.WorldModel		= "models/khrcw2/doipack/w_webley.mdl"
+SWEP.WorldModel		= "models/weapons/w_357.mdl"
 
 SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/webley.mdl"
 SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/webley.mdl"
 
 SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/khrcw2/doipack/w_webley.mdl"
+SWEP.WM = "models/weapons/w_357.mdl"
 SWEP.WMPos = Vector(-1.4, 4.5, 2.85)
 SWEP.WMAng = Vector(-8, 0, 180)
 

@@ -23,7 +23,7 @@ att.sharedAmmoPool = {
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/magnumrounds")
 	att.description = {[1] = {t = "Balances power for chamber speed while rewarding precise shot placement.", c = CustomizableWeaponry.textColors.COSMETIC},
-	[2] = {t = "Increases headshot multiplier from 1.25 to 1.5", c = CustomizableWeaponry.textColors.POSITIVE},
+	[2] = {t = "Increases headshot multiplier from 1.2 to 1.5", c = CustomizableWeaponry.textColors.POSITIVE},
 	[3] = {t = "Decreases effective range by 70 M", c = CustomizableWeaponry.textColors.NEGATIVE},
 	[4] = {t = "Increases damage fall off by 30%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end

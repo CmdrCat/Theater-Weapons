@@ -24,7 +24,7 @@ if CLIENT then
 	SWEP.ShellDelay = 0.45
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/cw2_super_shorty.mdl"
+	SWEP.WM = "models/weapons/w_shot_m3super90.mdl"
 	SWEP.WMPos = Vector(-1, 1.5, 0)
 	SWEP.WMAng = Vector(0, 0, 180)
 	

@@ -80,11 +80,6 @@ function att:attachFunc()
 	self.ViewModelSoloReloadDownAng = Angle(30, -7.5, 0)
 	self.ViewModelSoloReloadDownPos2 = Vector(2, -6, -7)
 	self.ViewModelSoloReloadDownAng2 = Angle(30, -7.5, 0)
-
-	if self._dlt19xOriginalClipSize == nil then
-		self._dlt19xOriginalClipSize = self.Primary.ClipSize
-		self._dlt19xOriginalClipSizeOrig = self.Primary.ClipSize_Orig
-	end
     
 	self._dlt19xOriginalSounds = table.Copy(self.Sounds)
 	self._dlt19xOriginalPostPrimary = self.postPrimaryAttack
@@ -137,6 +132,10 @@ end
 
 function att:detachFunc()
 
+	if clip == 10 then
+		self:SetClip1(250)
+	end 
+
 	self.ADSFireAnim = true
 
 	self.PenMod = 1
@@ -151,12 +150,8 @@ function att:detachFunc()
 	self.BipodInstalled = true
 	self.CanRestOnObjects = false
 
-	if self._dlt19xOriginalClipSize ~= nil then
-		self.Primary.ClipSize = self._dlt19xOriginalClipSize
-		self.Primary.ClipSize_Orig = self._dlt19xOriginalClipSizeOrig
-		self._dlt19xOriginalClipSize = nil
-		self._dlt19xOriginalClipSizeOrig = nil
-	end
+	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
+	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 
 	if self.oldShell ~= nil then
 		self.Shell = self.oldShell

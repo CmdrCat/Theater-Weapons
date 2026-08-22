@@ -10,7 +10,8 @@ att.statModifiers = {FireDelayMult = -73 / 115,
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/greasedbolt")
-	att.description = {[1] = {t = "Rapidly fire your rifle at the cost of accuracy.", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+	att.description = {[1] = {t = "Rapidly fire your rifle at the cost of accuracy.", c = CustomizableWeaponry.textColors.VPOSITIVE},
+					   [2] = {t = "Increases headshot multiplier from 1.2 to 2.0", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

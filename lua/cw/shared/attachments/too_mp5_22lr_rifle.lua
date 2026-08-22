@@ -36,6 +36,11 @@ function att:detachFunc()
 	self.FireModes = {"semi","safe","auto"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
+
+	if clip >= 25 then
+		self:SetClip1(self.Primary.ClipSize_ORIG_REAL + clip - 25)
+	end 
+
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 	self.FireSound = "CW_MP5_FIRE"

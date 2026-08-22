@@ -14,7 +14,7 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = .5
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/khrcw2/doipack/w_kar98bayonet.mdl"
+	SWEP.WM = "models/weapons/w_knife_t.mdl"
 	SWEP.WMPos = Vector(1.5, -3, -2.75)
 	SWEP.WMAng = Vector(-80, 180, 180)
 	
@@ -60,7 +60,7 @@ SWEP.SpeedDec = 0
 SWEP.ViewModelFOV	= 75 // 65
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/khrcw2/doipack/kar98bayonet.mdl"
-SWEP.WorldModel = "models/khrcw2/doipack/w_kar98bayonet.mdl"
+SWEP.WorldModel = "models/weapons/w_knife_t.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

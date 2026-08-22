@@ -30,7 +30,7 @@ if CLIENT then
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/cw2/rifles/svd_world.mdl"
+	SWEP.WM = "models/weapons/w_snip_sg550.mdl"
 	SWEP.WMPos = Vector(-1, -1, 0.5)
 	SWEP.WMAng = Vector(0, 0, 180)
 

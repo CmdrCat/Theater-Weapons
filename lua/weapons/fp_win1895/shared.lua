@@ -161,7 +161,7 @@ SWEP.ZoomAmount = 10
 SWEP.FOVPerShot = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/khrcw2/win1895.mdl"
-SWEP.WorldModel		= "models/weapons/khrcw2/w_win1895.mdl"
+SWEP.WorldModel		= "models/weapons/w_annabelle.mdl"
 
 
 SWEP.Spawnable			= true

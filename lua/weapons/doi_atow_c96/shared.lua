@@ -244,13 +244,13 @@ SWEP.AimViewModelFOV = 55
 SWEP.ZoomAmount = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/c96.mdl"
-SWEP.WorldModel		= "models/khrcw2/doipack/w_c96.mdl"
+SWEP.WorldModel		= "models/weapons/w_alyx_gun.mdl"
 
 SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/c96.mdl"
 SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/c96.mdl"
 
 SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/khrcw2/doipack/w_c96.mdl"
+SWEP.WM = "models/weapons/w_alyx_gun.mdl"
 SWEP.WMPos = Vector(-1.5, 4, 3.25)
 SWEP.WMAng = Vector(-5, 0, 180)
 

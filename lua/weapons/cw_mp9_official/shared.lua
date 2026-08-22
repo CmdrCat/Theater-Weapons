@@ -34,7 +34,7 @@ if CLIENT then
 	SWEP.RVBRollMod = 0.5
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_ecw_mp9.mdl"
+	SWEP.WM = "models/weapons/w_smg_tmp.mdl"
 	SWEP.WMPos = Vector(-1, -2.5, -2.5)
 	SWEP.WMAng = Vector(0, 0, 180)
 	

@@ -20,6 +20,10 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+	if clip >= 150 then
+		self:SetClip1(self.Primary.ClipSize_ORIG_REAL + clip - 150)
+	end 
+
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 end

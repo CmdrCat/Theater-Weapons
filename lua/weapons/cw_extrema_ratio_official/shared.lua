@@ -8,7 +8,7 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = true
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/wcw_ex_ra.mdl"
+	SWEP.WM = "models/weapons/w_knife_ct.mdl"
 	SWEP.WMPos = Vector(0.25, -1, 1.25)
 	SWEP.WMAng = Vector(-10, 90, 180)
 	

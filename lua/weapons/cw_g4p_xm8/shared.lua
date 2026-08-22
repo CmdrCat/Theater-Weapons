@@ -297,7 +297,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= true
 SWEP.ViewModel		= "models/weapons/v_cstm_xm8.mdl"
-SWEP.WorldModel		= "models/weapons/w_rif_m4a1.mdl"
+SWEP.WorldModel		= "models/weapons/w_rif_sg552.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

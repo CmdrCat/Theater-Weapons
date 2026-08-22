@@ -163,13 +163,13 @@ SWEP.AimViewModelFOV = 55
 SWEP.ZoomAmount = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/p38.mdl"
-SWEP.WorldModel		= "models/khrcw2/doipack/w_p38.mdl"
+SWEP.WorldModel		= "models/weapons/w_pist_elite_single.mdl"
 
 SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/p38.mdl"
 SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/p38.mdl"
 
 SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/khrcw2/doipack/w_p38.mdl"
+SWEP.WM = "models/weapons/w_pist_elite_single.mdl"
 SWEP.WMPos = Vector(-1.45, 4.25, 3.5)
 SWEP.WMAng = Vector(-5, 0, 180)
 

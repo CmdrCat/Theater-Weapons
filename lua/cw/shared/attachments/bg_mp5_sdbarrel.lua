@@ -10,6 +10,7 @@ FireDelayMult = 0.14285714285714}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/mp5_sdbarrel")
+	att.description = {[1] = {t = "Increases headshot multiplier from 1.2 to 2.0", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

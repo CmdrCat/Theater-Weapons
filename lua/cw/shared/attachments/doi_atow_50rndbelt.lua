@@ -21,9 +21,15 @@ end
 
 function att:detachFunc()
 	if self.ActiveAttachments.doi_atow_mg3conv then
+		if clip >= 50 then
+			self:SetClip1(100 + clip - 50)
+		end 
 		self.Primary.ClipSize = 100
 		self.Primary.ClipSize_Orig = 100
 	else
+		if clip >= 50 then
+			self:SetClip1(self.Primary.ClipSize_ORIG_REAL + clip - 50)
+		end 
 		self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 		self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 	end

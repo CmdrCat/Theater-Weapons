@@ -16,7 +16,7 @@ if CLIENT then
 	SWEP.DamageFallOff_Orig = .25
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/khrcw2/w_khri_mosinm91.mdl"
+	SWEP.WM = "models/weapons/w_annabelle.mdl"
 	SWEP.WMPos = Vector(-1, 5, 0)
 	SWEP.WMAng = Vector(-13, 0, 180)
 	

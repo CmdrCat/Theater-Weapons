@@ -13,7 +13,7 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = true
 	
 	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/khrcw2/doipack/w_kabar.mdl"
+	SWEP.WM = "models/weapons/w_knife_ct.mdl"
 	SWEP.WMPos = Vector(1.5, -3, -2.75)
 	SWEP.WMAng = Vector(-80, 180, 180)
 	
@@ -62,7 +62,7 @@ SWEP.FireAnimSpeed = 1.15
 SWEP.ViewModelFOV	= 75 // 65
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/khrcw2/doipack/kabar.mdl"
-SWEP.WorldModel = "models/khrcw2/doipack/w_kabar.mdl"
+SWEP.WorldModel = "models/weapons/w_knife_ct.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
