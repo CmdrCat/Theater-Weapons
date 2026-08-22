@@ -39,6 +39,8 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+	local clip = self:Clip1() or 0
+
 	self.Trivia = {text = "Notable for its KRISS Super V mechanism, which reduces muzzle climb.", x = -300, y = -850}
 	self.PrintName = "Vector"
 	self.FireSound = "CW_VECTOR_FIRE"

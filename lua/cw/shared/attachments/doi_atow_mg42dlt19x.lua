@@ -59,6 +59,7 @@ end
 function att:attachFunc()
 
 	self.PrintName = "DLT-19X"
+	self.Trivia = {text = "Longblaster manufactured for high precision and power over long ranges.", x = 200, y = -650}
 
 	self.TracerFrequency = 1
 	self.TracerName = "blastertracer"
@@ -211,8 +212,10 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+	local clip = self:Clip1() or 0
 
 	self.PrintName = "MG 42"
+	self.Trivia = {text = "Deploying your bipod will vastly improve your aiming accuracy.", x = 200, y = -650}
 
 	self.TracerFrequency = 3
 	self.TracerName = nil

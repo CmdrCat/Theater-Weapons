@@ -96,10 +96,10 @@ if CLIENT then
 	["L Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5, -2, -5) }},
 }
 	
-	SWEP.CustomizationMenuScale = 0.024 --  0.0325
+	SWEP.CustomizationMenuScale = 0.02 --  0.0325
 	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .55
 	SWEP.LuaVMRecoilAxisMod = {vert = -.05, hor = .15, roll = .15, forward = .8, pitch = .075}
-	SWEP.Trivia = {text = "Deploying your bipod will vastly improve your aiming accuracy.", x = 50, y = -450}
+	SWEP.Trivia = {text = "Deploying your bipod will vastly improve your aiming accuracy.", x = 200, y = -650}
 end
 end
 
@@ -113,12 +113,12 @@ SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = true
 SWEP.CanRestOnObjects = true
 
-SWEP.Attachments = {[4] = {header = "Finish", offset = {-120, -325}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-[3] = {header = "Belt", offset = {800, -50}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}, exclusions = {doi_atow_dlt19x = true}},
-[1] = {header = "Frame", offset = {-350, -200}, atts = {"doi_atow_bipodremove"}, exclusions = {doi_atow_dlt19x = true}},
-[2] = {header = "Fire Control", offset = {1200, -325}, atts = {"doi_atow_burstconv", "doi_atow_mg3conv", "doi_atow_dlt19x"}},
-[5] = {header = "Optics", offset = {0, 0}, atts = {"md_nightforce_nxs"}},
-["+reload"] = {header = "Ammo", offset = {200, 250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_dlt19x = true}}}
+SWEP.Attachments = {[5] = {header = "Finish", offset = {200, -500}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+[3] = {header = "Belt", offset = {500, 500}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}, exclusions = {doi_atow_dlt19x = true}},
+[2] = {header = "Frame", offset = {-600, -250}, atts = {"doi_atow_bipodremove"}, exclusions = {doi_atow_dlt19x = true}},
+[4] = {header = "Fire Control", offset = {1000, 500}, atts = {"doi_atow_burstconv", "doi_atow_mg3conv", "doi_atow_dlt19x"}},
+[1] = {header = "Optics", offset = {1900, 0}, atts = {"md_nightforce_nxs"}},
+["+reload"] = {header = "Ammo", offset = {-600, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_dlt19x = true}}}
 
 SWEP.AttachmentExclusions = {
 	["doi_atow_150rndbelt"] = {"doi_atow_mg3conv"},

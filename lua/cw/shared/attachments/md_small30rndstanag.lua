@@ -26,6 +26,8 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+	local clip = self:Clip1() or 0
+
 	if clip >= 30 then
 		self:SetClip1(100 + clip - 30)
 	end 

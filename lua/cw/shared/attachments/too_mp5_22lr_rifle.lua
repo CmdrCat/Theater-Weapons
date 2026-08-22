@@ -32,6 +32,8 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+	local clip = self:Clip1() or 0
+
 	self:CycleFiremodes()
 	self.FireModes = {"semi","safe","auto"}
 	self:CycleFiremodes()

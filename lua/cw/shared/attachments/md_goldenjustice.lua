@@ -16,7 +16,7 @@ end
 
 function att:attachFunc()
 	function self:fireAnimFunc()
-		clip = self:Clip1()
+		local clip = self:Clip1() or 0
 		cycle = 0
 		rate = 2.1 * 0.45
 		anim = "safe"
@@ -64,7 +64,7 @@ end
 
 function att:detachFunc()
 	function self:fireAnimFunc()
-		clip = self:Clip1()
+		local clip = self:Clip1() or 0
 		cycle = 0
 		rate = 2.1
 		anim = "safe"
