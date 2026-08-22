@@ -93,12 +93,14 @@ function att:attachFunc()
 	self.Shell = false
 
 	self.Sounds.base_reload = {
-		{time = 0.2, sound = "DLT19X_COOLED"},
+		{time = 0.2, sound = "DLT19X_VENTING"},
+		{time = 264/33.5, sound = "DLT19X_COOLED"}
 	}
 
 	-- Empty reload sound
 	self.Sounds.base_reload_empty = {
-		{time = 0.4, sound = "DLT19X_COOLED"},
+		{time = 0.4, sound = "DLT19X_VENTING"},
+		{time = 284/33.5, sound = "DLT19X_COOLED"}
 
 	}
 

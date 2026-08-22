@@ -21,4 +21,5 @@ CustomizableWeaponry:addReloadSound("DOIMG42_SHOULDER", "weapons/doipack/mg42/ha
 
 CustomizableWeaponry:addFireSound("DLT19X_FIRE", "weapons_too/dlt19xconv/dlt19x_fire.wav", 1, 105, CHAN_STAT)
 CustomizableWeaponry:addReloadSound("DLT19X_COOLED", "weapons_too/dlt19xconv/cooled.wav")
+CustomizableWeaponry:addReloadSound("DLT19X_VENTING", "weapons_too/dlt19xconv/venting.wav")
 CustomizableWeaponry:addReloadSound("DLT19X_OVERHEAT", "weapons_too/dlt19xconv/overheat.wav")
