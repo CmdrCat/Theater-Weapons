@@ -1,8 +1,8 @@
 local att = {}
 att.name = "doi_atow_dlt19x"
-att.displayName = "DLT-19x Targeting Blaster"
-att.displayNameShort = "DLT-19x"
-att.description = {[1] = {t = "Targeting Blaster Conversion", c = Color(255, 255, 255, 255)}}
+att.displayName = "DLT-19X conversion"
+att.displayNameShort = "DLT-19X"
+att.description = {[1] = {t = "Replaces internals with that of the DLT-19X longblaster, firing precise bolts of deadly plasma", c = Color(255, 255, 255, 255)}}
 
 att.statModifiers = {DamageMult = 13 / 12,
 FireDelayMult = 56 / 9,
@@ -53,6 +53,8 @@ local function restoreVisibleRounds(wep)
 end
 
 function att:attachFunc()
+
+	self.PrintName = "DLT-19X"
 
 	self.ADSFireAnim = false
 	self.ForegripOverride = true
@@ -131,6 +133,8 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
+
+	self.PrintName = "MG 42"
 
 	if clip == 10 then
 		self:SetClip1(250)
