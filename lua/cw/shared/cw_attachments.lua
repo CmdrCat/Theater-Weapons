@@ -48,7 +48,9 @@ function CustomizableWeaponry:registerAttachment(tbl)
 	
 	if tbl.reticle then
 		tbl._reticle = Material(tbl.reticle)
-		tbl._reticleIcon = surface.GetTextureID(tbl.reticle)
+		if CLIENT then
+			tbl._reticleIcon = surface.GetTextureID(tbl.reticle)
+		end
 	end
 	
 	tbl.id = totalAtts

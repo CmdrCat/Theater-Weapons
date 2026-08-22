@@ -2,9 +2,13 @@ local att = {}
 att.name = "doi_atow_dlt19x"
 att.displayName = "DLT-19X conversion"
 att.displayNameShort = "DLT-19X"
-att.description = {[1] = {t = "Replaces internals with that of the DLT-19X longblaster, firing precise bolts of deadly plasma", c = Color(255, 255, 255, 255)}}
+att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
+att.reticle = "effects/sw_laser_white_front"
+att.description = {[1] = {t = "Replaces internals with that of the DLT-19X longblaster, firing precise bolts of deadly plasma", c = CustomizableWeaponry.textColors.COSMETIC},
+				   [2] = {t = "Bolts are colorable!", c = CustomizableWeaponry.textColors.COSMETIC},
+				   [3] = {t = "Increases headshot multiplier from 1.2 to 2.5", c = CustomizableWeaponry.textColors.POSITIVE}}
 
-att.statModifiers = {DamageMult = 13 / 12,
+att.statModifiers = {DamageMult = 3 / 2,
 FireDelayMult = 56 / 9,
 ReloadSpeedMult = 2.1,
 HipSpreadMult = -1,
@@ -56,6 +60,12 @@ function att:attachFunc()
 
 	self.PrintName = "DLT-19X"
 
+	self.TracerFrequency = 1
+	self.TracerName = "blastertracer"
+	self.TracerImpactDecal = "fadingscorch"
+	self.TracerColor = (self.SightColors and self:getSightColor(att.name)) or Color(255, 0, 0, 255)
+	self.MuzzleEffect = nil
+
 	self.ADSFireAnim = false
 	self.ForegripOverride = true
 	self.ForegripParent = "nobipod"
@@ -78,10 +88,18 @@ function att:attachFunc()
 	
 	self.FireSound = "DLT19X_FIRE"
 
-	self.ViewModelSoloReloadDownPos = Vector(2, -6, -7)
-	self.ViewModelSoloReloadDownAng = Angle(30, -7.5, 0)
-	self.ViewModelSoloReloadDownPos2 = Vector(2, -6, -7)
-	self.ViewModelSoloReloadDownAng2 = Angle(30, -7.5, 0)
+	self.DLT19XReloadPos = Vector(2, 1, -7)
+	self.DLT19XReloadAng = Angle(-30, 5, 0)
+
+	self.reloadAnimFunc = function(wep, mag)
+		local reloadAnimation = mag == 0 and "reload_empty" or "reload"
+		wep:sendWeaponAnim(reloadAnimation, wep.ReloadSpeed)
+
+		if CLIENT and IsValid(wep.CW_VM) then
+			wep.CW_VM:SetCycle(0.001)
+			wep.CW_VM:SetPlaybackRate(0)
+		end
+	end
     
 	self._dlt19xOriginalSounds = table.Copy(self.Sounds)
 	self._dlt19xOriginalPostPrimary = self.postPrimaryAttack
@@ -91,13 +109,13 @@ function att:attachFunc()
 
 	self.Sounds.base_reload = {
 		{time = 0.2, sound = "DLT19X_VENTING"},
-		{time = 264/33.5, sound = "DLT19X_COOLED"}
+		{time = 6, sound = "DLT19X_COOLED"}
 	}
 
 	-- Empty reload sound
 	self.Sounds.base_reload_empty = {
 		{time = 0.4, sound = "DLT19X_VENTING"},
-		{time = 284/33.5, sound = "DLT19X_COOLED"}
+		{time = 6.6, sound = "DLT19X_COOLED"}
 
 	}
 
@@ -111,12 +129,53 @@ function att:attachFunc()
 		end
 	end
 
-	if CLIENT then	self.allowSoloReloadDown = true
+	if CLIENT then
 		self.forceRemoveRounds = true
+		self._dlt19xReloadPosePos = Vector(0, 0, 0)
+		self._dlt19xReloadPoseAng = Angle(0, 0, 0)
+		self._dlt19xOriginalSendWeaponAnim = self.sendWeaponAnim
+		self.sendWeaponAnim = function(wep, anim, speed, cycle, override, ent)
+			wep._dlt19xOriginalSendWeaponAnim(wep, anim, speed, cycle, override, ent)
+
+			if anim == "reload" or anim == "reload_empty" then
+				local reloadTime = anim == "reload_empty" and wep.ReloadTime_Empty or wep.ReloadTime
+				local animationSpeed = speed or wep.ReloadSpeed or 1
+				local soundTime = 0
+				local soundTable = wep.Sounds and wep.Sounds[wep.Animations[anim]]
+
+				if soundTable then
+					for _, soundData in ipairs(soundTable) do
+						soundTime = math.max(soundTime, soundData.time or 0)
+					end
+				end
+
+				wep._dlt19xReloadEnd = CurTime() + math.max(reloadTime, soundTime) / animationSpeed
+				if IsValid(wep.CW_VM) then
+					wep.CW_VM:SetCycle(0)
+					wep.CW_VM:SetPlaybackRate(0.01)
+				end
+			end
+		end
 		self._dlt19xOriginalIndividualThink = self.IndividualThink
 		self.IndividualThink = function(wep, ...)
 			if wep._dlt19xOriginalIndividualThink then
 				wep._dlt19xOriginalIndividualThink(wep, ...)
+			end
+
+			wep.TracerColor = wep:getSightColor(att.name) or wep.TracerColor
+
+			if wep._dlt19xReloadEnd and CurTime() >= wep._dlt19xReloadEnd then
+				wep._dlt19xReloadEnd = nil
+				local idleAnimation = wep:Clip1() == 0 and "idle_empty" or "idle"
+				wep._dlt19xOriginalSendWeaponAnim(wep, idleAnimation, 1)
+			elseif IsValid(wep.CW_VM) and wep._dlt19xReloadEnd then
+				local sequenceName = wep.CW_VM:GetSequenceName(wep.CW_VM:GetSequence())
+				local reloadAnimation = sequenceName == wep.Animations.reload or sequenceName == wep.Animations.reload_empty
+
+				if reloadAnimation then
+					wep.CW_VM:SetCycle(0.001)
+					wep.CW_VM:SetPlaybackRate(0)
+				end
 			end
 
 			if wep.forceRemoveRounds then
@@ -124,6 +183,25 @@ function att:attachFunc()
 					wep:adjustVisibleRounds(0)
 				end
 				setMG42BeltVisibility(wep, invisibleScale)
+			end
+		end
+		self._dlt19xOriginalApplyOffsetToVM = self.applyOffsetToVM
+		self.applyOffsetToVM = function(wep, ...)
+			wep._dlt19xOriginalApplyOffsetToVM(wep, ...)
+
+			if IsValid(wep.CW_VM) then
+				local basePos = wep.CW_VM:GetPos()
+				local baseAng = wep.CW_VM:GetAngles()
+				local eyeAngles = EyeAngles()
+				local targetPos = wep._dlt19xReloadEnd and wep.DLT19XReloadPos or Vector(0, 0, 0)
+				local targetAng = wep._dlt19xReloadEnd and wep.DLT19XReloadAng or Angle(0, 0, 0)
+				local interpolation = math.min(FrameTime() * 10, 1)
+
+				LerpVectorCW20(interpolation, wep._dlt19xReloadPosePos, targetPos)
+				LerpAngleCW20(interpolation, wep._dlt19xReloadPoseAng, targetAng)
+
+				wep.CW_VM:SetPos(basePos + eyeAngles:Forward() * wep._dlt19xReloadPosePos.x + eyeAngles:Right() * wep._dlt19xReloadPosePos.y + eyeAngles:Up() * wep._dlt19xReloadPosePos.z)
+				wep.CW_VM:SetAngles(baseAng + wep._dlt19xReloadPoseAng)
 			end
 		end
 	end
@@ -135,6 +213,12 @@ end
 function att:detachFunc()
 
 	self.PrintName = "MG 42"
+
+	self.TracerFrequency = 3
+	self.TracerName = nil
+	self.TracerImpactDecal = nil
+	self.TracerColor = Color(255, 255, 255, 255)
+	self.MuzzleEffect = "muzzleflash_suppressed"
 
 	if clip == 10 then
 		self:SetClip1(250)
@@ -174,10 +258,16 @@ function att:detachFunc()
 	self._dlt19xOriginalPostPrimary = nil
 
 	if CLIENT then
-		self.allowSoloReloadDown = nil
 		self.forceRemoveRounds = nil
+		self._dlt19xReloadEnd = nil
+		self._dlt19xReloadPosePos = nil
+		self._dlt19xReloadPoseAng = nil
+		self.sendWeaponAnim = self._dlt19xOriginalSendWeaponAnim
+		self._dlt19xOriginalSendWeaponAnim = nil
 		self.IndividualThink = self._dlt19xOriginalIndividualThink
 		self._dlt19xOriginalIndividualThink = nil
+		self.applyOffsetToVM = self._dlt19xOriginalApplyOffsetToVM
+		self._dlt19xOriginalApplyOffsetToVM = nil
 
 		setMG42BeltVisibility(self, normalScale)
 		restoreVisibleRounds(self)

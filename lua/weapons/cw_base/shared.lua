@@ -2656,6 +2656,14 @@ function SWEP:disableM203(firstTimePrediction)
 end
 
 function SWEP:DoImpactEffect(traceData, damageType)
+	if self.TracerImpactDecal ~= nil then
+		if self.TracerImpactDecal ~= "" and not traceData.HitSky then
+			util.Decal(self.TracerImpactDecal, traceData.HitPos + traceData.HitNormal, traceData.HitPos - traceData.HitNormal)
+		end
+
+		return true
+	end
+
 	local shouldSuppress, realm = CustomizableWeaponry.callbacks.processCategory(self, "suppressDefaultImpactEffect")
 	
 	if shouldSuppress then

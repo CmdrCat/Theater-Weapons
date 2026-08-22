@@ -24,8 +24,12 @@ function att:attachFunc()
 
 	self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
 
+	self.TracerFrequency = 1
+	self.TracerName = "blastertracer"
+	self.TracerColor = Color(95, 80, 245, 255)
+
 	if SERVER then
-		if not self._AlyoshaMarkHook then
+		if not self.AlyoshaMarkHook then
 			hook.Add("EntityTakeDamage", "CW20_khr_alyosha_mark", function(target, dmginfo)
 				if not IsValid(target) or not (target:IsPlayer() or target:IsNPC()) then return end
 				local attacker = dmginfo:GetAttacker()
@@ -38,7 +42,7 @@ function att:attachFunc()
 
 				CustomizableWeaponry:markPlayerFor(target, att.MarkDuration, att.MarkColor, att.MarkDamageScale)
 			end)
-			self._AlyoshaMarkHook = true
+			self.AlyoshaMarkHook = true
 		end
 	end
 
@@ -57,13 +61,17 @@ function att:detachFunc()
 
 	self.Trivia = {text = "Originally developed in the 1890s for the Russian Empire, the Mosin-Nagant became one of the most mass-produced bolt-action rifles in history.", x = -500, y = -500}
 
+	self.TracerFrequency = 3
+	self.TracerName = nil
+	self.TracerColor = Color(255, 255, 255, 255)
+
 	self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
 
 	self.Shots = 1
 
-	if SERVER and self._AlyoshaMarkHook then
+	if SERVER and self.AlyoshaMarkHook then
 		hook.Remove("EntityTakeDamage", "CW20_khr_alyosha_mark")
-		self._AlyoshaMarkHook = nil
+		self.AlyoshaMarkHook = nil
 	end
 
 	if SERVER then

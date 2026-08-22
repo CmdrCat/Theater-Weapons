@@ -74,7 +74,8 @@ function SWEP:FireBullet(damage, cone, clumpSpread, bullets)
 			bul.Src = sp
 			bul.Dir = Dir2
 			bul.Spread 	= zeroVec --Vector(0, 0, 0)
-			bul.Tracer	= 3
+			bul.Tracer = self.TracerFrequency ~= nil and self.TracerFrequency or 3
+			bul.TracerName = self.TracerName
 			bul.Force	= damage * 0.3
 			bul.Damage = math.Round(damage)
 			bul.Callback = self.bulletCallback
