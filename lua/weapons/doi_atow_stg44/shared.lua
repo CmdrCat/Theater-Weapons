@@ -395,6 +395,21 @@ function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
 	end
 end
 
+function SWEP:isAttachmentEligible(attName, activeAttachments)
+	activeAttachments = activeAttachments or self.ActiveAttachments or {}
+	
+	-- If the player is trying to attach the ShortDot scope...
+	if attName == "md_schmidt_shortdot" then
+		-- ...check if the A280C conversion is active. If not, block it!
+		if not activeAttachments["doi_atow_stg44a280c"] then
+			return false, self.AttachmentEligibilityEnum.ACTIVE_ATTACHMENT_EXCLUSION
+		end
+	end
+	
+	-- Fallback to standard eligibility checks for everything else
+	return true, self.AttachmentEligibilityEnum.CAN_BE_ATTACHED
+end
+-- i used gemini code i  gave up 
 /*/
 
  

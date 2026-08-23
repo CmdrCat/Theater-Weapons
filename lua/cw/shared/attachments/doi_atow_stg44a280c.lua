@@ -221,9 +221,13 @@ function att:attachFunc()
 end
 
 function att:detachFunc()
-	-- SERVER CRASH FAILSAFE
 	if SERVER and not self.setAttachmentModelState then
 		self.setAttachmentModelState = function() end
+	end
+	if self.MaterialIndexPrimary then
+		for i, index in ipairs(self.MaterialIndexPrimary) do
+			self.CW_VM:SetSubMaterial(index, "models/khrcw2/doipack/stg44/weapon_stg_dm")
+		end
 	end
 
 	self.SightWithRail = true
