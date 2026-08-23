@@ -47,7 +47,6 @@ function att:attachFunc()
 					effect:SetOrigin(target:WorldSpaceCenter())
 					effect:SetScale(1)
 					effect:SetMagnitude(1)
-					effect:SetColor(0)
 					util.Effect("Explosion", effect, true, true)
 					local blastDamage = 166
 					util.BlastDamage(self, target, target:WorldSpaceCenter(), 5 * 39.37, blastDamage)
@@ -58,7 +57,7 @@ function att:attachFunc()
 					effect:SetOrigin(target:WorldSpaceCenter())
 					effect:SetScale(1)
 					effect:SetMagnitude(1)
-					util.Effect("TeslaHitboxes", effect, true, true)
+					util.Effect("TeslaZap", effect, true, true)
 					local blastDamage = 95
 					util.BlastDamage(self, target, target:WorldSpaceCenter(), 5 * 39.37, blastDamage)
 				end

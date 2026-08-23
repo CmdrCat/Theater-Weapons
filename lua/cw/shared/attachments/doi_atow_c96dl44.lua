@@ -8,13 +8,12 @@ att.description = {[1] = {t = "Replaces internals with blaster technology, firin
 				   [2] = {t = "Energy bolts are colorable!", c = CustomizableWeaponry.textColors.COSMETIC},
 				   [3] = {t = "", c = CustomizableWeaponry.textColors.POSITIVE}}
 
-att.statModifiers = {DamageMult = 1,
-FireDelayMult = 1.15, 
-ReloadSpeedMult = 0.85,
-HipSpreadMult = 0,
+att.statModifiers = {DamageMult = 8 / 57,
+FireDelayMult = 2 / 7,
+HipSpreadMult = 2.5,
 RecoilMult = 0,
-VelocitySensitivityMult = 0,
-AimSpreadMult = 0}
+VelocitySensitivityMult = -1,
+AimSpreadMult = -1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("vgui/inventory/weapon_c96")
@@ -23,7 +22,7 @@ end
 function att:attachFunc()
 
 	self.PrintName = "C96 Blaster"
-	self.Trivia = {text = "Never tell me the odds.", x = 200, y = -650}
+	self.Trivia = {text = "Never tell me the odds.", x = 200, y = -800}
 
 	self.TracerFrequency = 1
 	self.TracerName = "blastertracer"
@@ -39,13 +38,15 @@ function att:attachFunc()
 	self.PenMod = 0
 	self.CanRicochet = false
 
-	self.FireModes = {"semi"}
-	self.Primary.ClipSize = 9
-	self.Primary.ClipSize_Orig = 9
-	
-	-- Force strict fire delay for 210 RPM (60 / 210)
-	self._c96blasterOriginalFireDelay = self.Primary.FireDelay
-	self.Primary.FireDelay = 60 / 210
+	self.Primary.Ammo = "AR2"
+	if IsValid(self.Owner) and self.Owner.GiveAmmo then
+		self.Owner:GiveAmmo(9999, "AR2", true)
+	end
+	self.Primary.ClipSize = 8
+	self.Primary.ClipSize_Orig = 8
+
+	self.ReloadHalt = 3.5
+	self.ReloadHalt_Empty = 3.5
 
 	self:unloadWeaponPartially()
 
@@ -197,11 +198,9 @@ function att:detachFunc()
 
 	self.Primary.ClipSize = 10
 	self.Primary.ClipSize_Orig = 10
-	
-	if self._c96blasterOriginalFireDelay then
-		self.Primary.FireDelay = self._c96blasterOriginalFireDelay
-		self._c96blasterOriginalFireDelay = nil
-	end
+
+	self.ReloadHalt = 6
+	self.ReloadHalt_Empty = 4.2
 
 	if self.oldShell ~= nil then
 		self.Shell = self.oldShell
