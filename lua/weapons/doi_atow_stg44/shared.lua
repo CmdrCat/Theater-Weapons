@@ -117,7 +117,7 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 		--signature
 		["doi_atow_stg44a280c"] = { 
 			models = {
-				{type = "Model", model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", bone = "STG44", rel = "", pos = Vector(-0.375, -6, 4.9), angle = Angle(0, -90, 0), size = Vector(0.5,0.5,0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", bone = "STG44", rel = "", pos = Vector(-0.375, -7, 4.9), angle = Angle(0, -90, 0), size = Vector(0.5,0.5,0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
 				{type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 7, 3.25), angle = Angle(180, 90, -90), size = Vector(0.7,0.7,0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}
 	}}
 }
