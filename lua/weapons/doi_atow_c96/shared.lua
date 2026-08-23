@@ -98,8 +98,8 @@ if CLIENT then
 	SWEP.AttachmentModelsVM = {["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(1.3, -2.45, 1.34), angle = Angle(0, -90, 0), size = Vector(0.5, 0.65, 0.65), bone = "Slide"},
 							   ["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/kar98k1xscope.mdl", pos = Vector(-0.45, -0.1, 1.55), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"},
 							   ["doi_atow_lymanm82"] = {model = "models/khrcw2/doipack/attachments/garandscope.mdl", pos = Vector(0, -4, 1.5), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), bone = "Weapon"},
-							   ["doi_atow_m3flashhider"] = {model = "models/khrcw2/doipack/attachments/m3flashhider.mdl", pos = Vector(-10, 10, 0), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), bone = "Weapon"},
-							   ["doi_atow_dl44"] = {model = "models/khrcw2/doipack/attachments/m3flashhider.mdl", pos = Vector(2.718, -19.655, 3.636), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"},}
+							   ["doi_atow_m3flashhider"] = {model = "models/khrcw2/doipack/attachments/m3flashhider.mdl", pos = Vector(2.718, -16.645, 3.636), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"},
+							   ["doi_atow_dl44"] = {model = "models/khrcw2/doipack/attachments/m3flashhider.mdl", pos = Vector(2.718, -19.655, 3.636), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"}}
 	
 	
 	SWEP.AttachmentPosDependency = {
@@ -190,13 +190,15 @@ SWEP.ForegripOverridePos = {
 	["R Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }}
 }
 
-SWEP.Attachments = {[2] = {header = "Muzzle", offset = {-400, -550}, atts = {"doi_atow_unisuppressor"}, exclusions = {doi_atow_dl44 = true}},
-[3] = {header = "Barrel", offset = {-1100, -450}, atts = {"doi_atow_c96longbarrel", "doi_atow_m3flashhider"}, exclusions = {doi_atow_dl44 = true}},
+SWEP.Attachments = {[2] = {header = "Muzzle", offset = {-400, -550}, atts = {"doi_atow_unisuppressor", "doi_atow_m3flashhider"}, exclusions = {doi_atow_dl44 = true}},
+[3] = {header = "Barrel", offset = {-1100, -450}, atts = {"doi_atow_c96longbarrel"}, exclusions = {doi_atow_dl44 = true}},
 [1] = {header = "Optic", offset = {900, -600}, atts = {"doi_atow_zf4", "doi_atow_lymanm82"}},
 [6] = {header = "Finish", offset = {150, -600}, atts = {"doi_atow_c96goldfinish"}},
 [5] = {header = "Accessory", offset = {1500, 200}, atts = {"doi_atow_c96stock","doi_atow_onehand", "cw_akimbo"}, exclusions = {doi_atow_dl44 = true}},
 [4] = {header = "Receiver", offset = {500, 300}, atts = {"doi_atow_c96carbineconv", "doi_atow_m2carbineconv", "doi_atow_heavybolt", "doi_atow_dl44"}},
 ["+reload"] = {header = "Ammo", offset = {-1000, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_dl44 = true}}}
+
+SWEP.AttachmentExclusions = {["doi_atow_m3flashhider"] = {"doi_atow_c96longbarrel"}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
