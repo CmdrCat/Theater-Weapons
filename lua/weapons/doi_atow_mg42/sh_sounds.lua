@@ -23,3 +23,4 @@ CustomizableWeaponry:addFireSound("DLT19X_FIRE", "weapons_too/dlt19xconv/dlt19x_
 CustomizableWeaponry:addReloadSound("DLT19X_COOLED", "weapons_too/dlt19xconv/cooled.wav")
 CustomizableWeaponry:addReloadSound("DLT19X_VENTING", "weapons_too/dlt19xconv/venting.wav")
 CustomizableWeaponry:addReloadSound("DLT19X_OVERHEAT", "weapons_too/dlt19xconv/overheat.wav")
+CustomizableWeaponry:addFireSound("DL44_FIRE", "weapons_too/dlt19xconv/dl44_fire.wav", 1, 105, CHAN_STAT)

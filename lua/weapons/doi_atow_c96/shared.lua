@@ -41,6 +41,9 @@ if CLIENT then
 	SWEP.ZF4Pos = Vector(-2.627, -2.5, -0.29)
 	SWEP.ZF4Ang = Vector(0, 0, 0)
 	
+    SWEP.LymanPos = Vector(-1.885, -5, 0.685)
+	SWEP.LymanAng = Vector(0, 0, 0)
+
 	SWEP.LongBarrelPos = Vector(-2.627, 3, 0.727)
 	SWEP.LongBarrelAng = Vector(0.5, 0.036, 0)
 	
@@ -83,7 +86,8 @@ if CLIENT then
 	SWEP.PronePos = Vector(0, -3, -3.1579)
 	SWEP.ProneAng = Vector(10, 12.7368, -8.9474)
 
-	SWEP.BackupSights = {["doi_atow_zf4"] = {[1] = Vector	(-2.627, 3, 0.6077), [2] = Vector(1.04, 0.06, 0)}}
+	SWEP.BackupSights = {["doi_atow_zf4"] = {[1] = Vector	(-2.627, 3, 0.6077), [2] = Vector(1.04, 0.06, 0)},
+	                    ["doi_atow_lymanm82"] = {[1] = Vector(-2.887, -1.7, 1.2955), [2] = Vector(0,0,0)}}
 	
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
@@ -92,7 +96,9 @@ if CLIENT then
 	SWEP.CustomizationMenuScale = 0.01 --  0.0165
 	
 	SWEP.AttachmentModelsVM = {["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/m3a1suppressor.mdl", pos = Vector(1.3, -2.45, 1.34), angle = Angle(0, -90, 0), size = Vector(0.5, 0.65, 0.65), bone = "Slide"},
-							  ["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/kar98k1xscope.mdl", pos = Vector(-0.45, -0.1, 1.55), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"}}
+							  ["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/kar98k1xscope.mdl", pos = Vector(-0.45, -0.1, 1.55), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "Weapon"},
+							["doi_atow_lymanm82"] = {model = "models/khrcw2/doipack/attachments/garandscope.mdl", pos = Vector(0, -4, 1.5), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), bone = "Weapon"},}
+	
 	
 	SWEP.AttachmentPosDependency = {
 	["doi_atow_unisuppressor"] = {
@@ -184,10 +190,10 @@ SWEP.ForegripOverridePos = {
 
 SWEP.Attachments = {[2] = {header = "Muzzle", offset = {-400, -550}, atts = {"doi_atow_unisuppressor"}},
 [3] = {header = "Barrel", offset = {-1100, -450}, atts = {"doi_atow_c96longbarrel"}},
-[1] = {header = "Optic", offset = {900, -600}, atts = {"doi_atow_zf4"}},
+[1] = {header = "Optic", offset = {900, -600}, atts = {"doi_atow_zf4", "doi_atow_lymanm82"}},
 [6] = {header = "Finish", offset = {150, -600}, atts = {"doi_atow_c96goldfinish"}},
 [5] = {header = "Accessory", offset = {1500, 200}, atts = {"doi_atow_c96stock","doi_atow_onehand", "cw_akimbo"}},
-[4] = {header = "Receiver", offset = {500, 300}, atts = {"doi_atow_c96carbineconv", "doi_atow_m2carbineconv", "doi_atow_heavybolt"}},
+[4] = {header = "Receiver", offset = {500, 300}, atts = {"doi_atow_c96carbineconv", "doi_atow_m2carbineconv", "doi_atow_heavybolt", "doi_atow_dl44"}},
 ["+reload"] = {header = "Ammo", offset = {-1000, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
@@ -239,8 +245,8 @@ SWEP.NearWallEnabled = false
 SWEP.ForegripOverride = true
 SWEP.ForegripParent = "nah"
 
-SWEP.ViewModelFOV	= 75 // 75
-SWEP.AimViewModelFOV = 55
+SWEP.ViewModelFOV	= 63
+SWEP.AimViewModelFOV = 40
 SWEP.ZoomAmount = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/c96.mdl"
