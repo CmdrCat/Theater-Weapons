@@ -354,6 +354,10 @@ if self.FireMode == "semi" then
 		self.DamageFallOff = ((self.DamageFallOff + 0.03))
 		self.DeployTime = .45
 	end
+	if self.ActiveAttachments.doi_atow_dl44 then
+		self.EffectiveRange = ((self.EffectiveRange + 15 * 39.37))
+		self.DamageFallOff = ((self.DamageFallOff -  0.39))
+	end
 	if self.ActiveAttachments.doi_atow_m2carbineconv then
 	self.EffectiveRange = ((self.EffectiveRange - 5 * 39.37))
 	self.DamageFallOff = ((self.DamageFallOff + 0.05))
