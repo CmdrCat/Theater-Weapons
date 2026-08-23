@@ -88,6 +88,8 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
 	}
 
+	SWEP.MagBoneName = "STG_MAGAZINE"
+
 	SWEP.AttachmentModelsVM = { 
 
 		--optics
@@ -146,7 +148,7 @@ SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {
 [4] = {header = "Finish", offset = {850, 400}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 [1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_nightforce_nxs", "too_optic_tacstance"}},
 [5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}},
-["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"doi_atow_stg44a280c", "am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire_1"},

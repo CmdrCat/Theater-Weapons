@@ -9,3 +9,5 @@ CustomizableWeaponry:addReloadSound("DOISTG44_MAGOUT", "weapons/doipack/stg44/ha
 CustomizableWeaponry:addReloadSound("DOISTG44_MAGOUTRATTLE", "weapons/doipack/stg44/handling/stg44_magout_rattle.wav")
 CustomizableWeaponry:addReloadSound("DOISTG44_MAGRELEASE", "weapons/doipack/stg44/handling/stg44_magrelease.wav")
 CustomizableWeaponry:addReloadSound("DOISTG44_RATTLE", "weapons/doipack/stg44/handling/stg44_rattle.wav")
+
+CustomizableWeaponry:addFireSound("DOIA280C_FIRE", "weapons_too/a280cconv/a280c_fire.wav", 10, 105, CHAN_STATIC)

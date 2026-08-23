@@ -22,9 +22,16 @@ function EFFECT:GetTracerColor( data )
 		weapon = entity:GetActiveWeapon();
 	end
 
-	if IsValid( weapon ) and weapon.TracerColor then
-		local color = weapon.TracerColor;
+	if IsValid( weapon ) then
+		local color = weapon.TracerColor
+
+		if weapon.getSightColor and weapon.SightColors then
+			color = weapon:getSightColor("doi_atow_dlt19x") or color
+		end
+
+		if color then
 		return Color( color.r, color.g, color.b, color.a or 255 );
+		end
 	end
 
 	return color_white;

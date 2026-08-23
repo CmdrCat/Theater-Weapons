@@ -120,6 +120,9 @@ SWEP.Attachments = {[5] = {header = "Finish", offset = {200, -500}, atts = {"doi
 [1] = {header = "Optics", offset = {1900, 0}, atts = {"md_nightforce_nxs"}},
 ["+reload"] = {header = "Ammo", offset = {-600, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_dlt19x = true}}}
 
+SWEP.AttachmentDependencies = {
+	["md_nightforce_nxs"] = {"doi_atow_dlt19x"}}
+
 SWEP.AttachmentExclusions = {
 	["doi_atow_150rndbelt"] = {"doi_atow_mg3conv"},
 	["am_atow_lowvel"] = {"doi_atow_mg3conv"}}

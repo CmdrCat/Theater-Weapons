@@ -28,7 +28,9 @@ function EFFECT:Init(fx)
 	local lightPos = nil
 	
 	if attachment then
-		ParticleEffectAttach(particleEffect, PATTACH_POINT_FOLLOW, attachModel, ent.WorldMuzzleAttachmentID)
+		if particleEffect then
+			ParticleEffectAttach(particleEffect, PATTACH_POINT_FOLLOW, attachModel, ent.WorldMuzzleAttachmentID)
+		end
 		lightPos = attachment.Pos
 	else
 		local aimVec = ent.Owner:EyeAngles()
