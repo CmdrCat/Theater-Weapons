@@ -48,6 +48,9 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.ReflexPos = Vector(-2.25, -3.5, -0.45)
     SWEP.ReflexAng = Vector(0, 0, 0)
 	
+	SWEP.ShortDotPos = Vector(-2.3755, -6, 0.1)
+	SWEP.ShortDotAng = Vector(0, 0, 0)
+
 	SWEP.ZF4Pos = Vector(-2.3575, -5.25, 0.32)
 	SWEP.ZF4Ang = Vector(0, 0.0186, 0)
 
@@ -93,7 +96,8 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.AttachmentModelsVM = { 
 
 		--optics
-		["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/zf4scope.mdl", pos = Vector(-0.04, -4.2041, 5.525), angle = Angle(0, -90, 0), size = Vector(1.075, 1.075, 1.075), bone = "STG44"},
+		["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "STG44", rel = "", pos = Vector(-0.85, -5, -1.75), angle = Angle(0, -90, 00), adjustment = {min = -7.66, max = -5.64, axis = "x", inverse = true}, size = Vector(1.15, 1.15, 1.15), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["doi_atow_zf4"] = {model = "models/khrcw2/doipack/attachments/zf4scope.mdl", pos = Vector(-0.04, -4.2041, 5.525), angle = Angle(0, -90, 0), size = Vector(1.075, 1.075, 1.075), bone = "STG44"} ,
 		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "STG44", pos = Vector(-0.09, -4.5, 3.85), angle = Angle(0, -180, 0), size = Vector(1, 1, 1)},
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "STG44", rel = "", pos = Vector(-0.315, -4.15, 5.975), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
 		--handguard
@@ -109,7 +113,16 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 19.7, 2.4), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "STG44", pos = Vector(-0.375, -0.85, 0.55), angle = Angle(0, 0, 0), size = Vector(0.9, 1, 0.9)},
 		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 22, 3.25), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)},
-		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-.375, 16.7, 3.275), angle = Angle(0, -90, 0), size = Vector(1.55, 1.3, 1.3), bone = "STG44"},
+		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-0.375, 16.7, 3.275), angle = Angle(0, -90, 0), size = Vector(1.55, 1.3, 1.3), bone = "STG44"},
+		--signature
+		["doi_atow_stg44a280c"] = { 
+			models = {
+				{type = "Model", model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", bone = "STG44", rel = "", pos = Vector(-0.375, -6, 4.9), angle = Angle(0, -90, 0), size = Vector(0.5,0.5,0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 7, 3.25), angle = Angle(180, 90, -90), size = Vector(0.7,0.7,0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}
+	}}
+}
+	SWEP.AttachmentDependencies = {
+	["md_schmidt_shortdot"] = {"doi_atow_stg44a280c"}
 	}
 		
 	SWEP.ForegripOverridePos = {
@@ -146,9 +159,10 @@ SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {
 [6] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {doi_atow_stg44a280c = true}},
 [2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "md_saker", "md_csgo_silencer_rifle", "hard20"}, exclusions = {doi_atow_stg44a280c = true}},
 [4] = {header = "Finish", offset = {850, 400}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_nightforce_nxs", "too_optic_tacstance"}},
+[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_nightforce_nxs", "too_optic_tacstance"}, exclusions = {doi_atow_stg44a280c = true}},
 [5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {doi_atow_stg44a280c = true}},
 [7] = {header = "Signature Attachment", offset = {1100, -50}, atts = {"doi_atow_stg44a280c"}},
+[8] = {header = "Optic", offset = {600, -525}, atts = {"md_schmidt_shortdot"}},
 ["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_stg44a280c = true}}}
 
 SWEP.Animations = {fire = {"base_fire"},
