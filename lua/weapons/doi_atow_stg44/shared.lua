@@ -143,12 +143,13 @@ SWEP.Trivia = {text = "The first weapon to be denominated as an assault rifle.",
 -- sumn bout saving europa or whatevs
 
 SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {"doi_atow_sling"}},
-[6] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
-[2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "md_saker", "md_csgo_silencer_rifle", "hard20"}},
+[6] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {doi_atow_stg44a280c = true}},
+[2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "md_saker", "md_csgo_silencer_rifle", "hard20"}, exclusions = {doi_atow_stg44a280c = true}},
 [4] = {header = "Finish", offset = {850, 400}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 [1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_nightforce_nxs", "too_optic_tacstance"}},
-[5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}},
-["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"doi_atow_stg44a280c", "am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+[5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {doi_atow_stg44a280c = true}},
+[7] = {header = "Signature Attachment", offset = {1100, -50}, atts = {"doi_atow_stg44a280c"}},
+["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_stg44a280c = true}}}
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire_1"},

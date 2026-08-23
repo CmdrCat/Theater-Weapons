@@ -10,7 +10,7 @@ att.description = {[1] = {t = "Replaces internals with that of the DLT-19X longb
 
 att.statModifiers = {DamageMult = 3 / 2,
 FireDelayMult = 1,
-ReloadSpeedMult = 2.1,
+ReloadSpeedMult = 0.94,
 HipSpreadMult = -0.8,
 RecoilMult = -0.75,
 AimSpreadMult = -1}
@@ -21,37 +21,60 @@ end
 
 function att:attachFunc()
 
-	self.PrintName = "DLT-19X"
-	self.Trivia = {text = "Longblaster manufactured for high precision and power over long ranges.", x = 200, y = -650}
+	--Cosmetic display info
+	self.PrintName = "A280C"
+	self.Trivia = {text = "Standard-issue blaster rifle with reliable range and damage output.", x = 200, y = -650}
 
+	--Tracer effect
 	self.TracerFrequency = 1
 	self.TracerName = "blastertracer"
 	self.TracerImpactDecal = "fadingscorch"
 	self.TracerColor = (self.SightColors and self:getSightColor(att.name)) or Color(255, 0, 0, 255)
 	self.MuzzleEffect = nil
 
+	--Unique blaster properties
 	self.PenMod = 0
 	self.CanRicochet = false
 
+	self.oldShell = self.Shell
+	self.Shell = false
+
+	--Ammo
 	self.Primary.Ammo = "AR2"
 	if IsValid(self.Owner) and self.Owner.GiveAmmo then
 		self.Owner:GiveAmmo(9999, "AR2", true)
 	end
+	self.Primary.ClipSize = 25
+	self.Primary.ClipSize_Orig = 25
+	self:unloadWeaponPartially()
 
+	--Other weapon properties
+	self.FireSound = "DOIA280C_FIRE"
+	self.Chamberable = false
 	self:CycleFiremodes() 
 	self.FireModes = {"auto","safe"}
 	self:CycleFiremodes()
 	self:CycleFiremodes()
-	self.Primary.ClipSize = 25
-	self.Primary.ClipSize_Orig = 25
-	self:unloadWeaponPartially()
-	
-	self.FireSound = "DOIA280C_FIRE"
 
+	--Model changes
 	if self.MagBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
 	end
 
+	if SERVER then
+		return
+	end
+
+	for i, index in ipairs(self.MaterialIndexPrimary) do
+		wep.CW_VM:SetSubMaterial(index, "models/weapons/v_models/famas/v_famas_parts")
+	end
+	if self.MaterialIndexSecondary then
+		for i, index in ipairs(self.MaterialIndexSecondary) do
+			wep.CW_VM:SetSubMaterial(index, "models/weapons/v_models/famas/v_famas_parts")
+		end
+	end
+
+	--Reload animation changes
 	self.ReloadPos = Vector(2, 1, -7)
 	self.DLT19XReloadAng = Angle(-30, 5, 0)
 
@@ -67,19 +90,17 @@ function att:attachFunc()
     
 	self.Sounds_Orig = table.Copy(self.Sounds)
 	self.postPrimaryAttack_Orig = self.postPrimaryAttack
-    
-	self.oldShell = self.Shell
-	self.Shell = false
+	self.FireAnimFunc_Orig = self.fireAnimFunc
 
 	self.Sounds.base_reload = {
 		{time = 0.2, sound = "DLT19X_VENTING"},
-		{time = 6, sound = "DLT19X_COOLED"}
+		{time = 1.9, sound = "DLT19X_COOLED"}
 	}
 
 	-- Empty reload sound
 	self.Sounds.base_reload_empty = {
 		{time = 0.4, sound = "DLT19X_VENTING"},
-		{time = 6.6, sound = "DLT19X_COOLED"}
+		{time = 1.9, sound = "DLT19X_COOLED"}
 
 	}
 
@@ -208,14 +229,24 @@ function att:detachFunc()
 
 	self.FireSound = "DOISTG44_FIRE"
 	self.reloadAnimFunc = nil
+	self.Chamberable = true
 
 	if self.Sounds_Orig then
 		self.Sounds = table.Copy(self.Sounds_Orig)
 		self.Sounds_Orig = nil
 	end
 
-	self.postPrimaryAttack = self.postPrimaryAttack_Orig
+	if self.postPrimaryAttack_Orig then
+		self.postPrimaryAttack = self.postPrimaryAttack_Orig
+	else
+		self.postPrimaryAttack = function() end
+	end
 	self.postPrimaryAttack_Orig = nil
+
+	if self.FireAnimFunc_Orig then
+		self.fireAnimFunc = self.FireAnimFunc_Orig
+		self.FireAnimFunc_Orig = nil
+	end
 
 	if CLIENT then
 		self.ReloadEnd = nil

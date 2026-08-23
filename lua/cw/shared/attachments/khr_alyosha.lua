@@ -41,6 +41,27 @@ function att:attachFunc()
 				if not wep.ActiveAttachments or not wep.ActiveAttachments.khr_alyosha then return end
 
 				CustomizableWeaponry:markPlayerFor(target, att.MarkDuration, att.MarkColor, att.MarkDamageScale)
+
+				if target:IsOnFire() then
+					local effect = EffectData()
+					effect:SetOrigin(target:WorldSpaceCenter())
+					effect:SetScale(1)
+					effect:SetMagnitude(1)
+					effect:SetColor(0)
+					util.Effect("Explosion", effect, true, true)
+					local blastDamage = 166
+					util.BlastDamage(self, target, target:WorldSpaceCenter(), 5 * 39.37, blastDamage)
+				end
+
+				if target:WaterLevel() > 0 then
+					local effect = EffectData()
+					effect:SetOrigin(target:WorldSpaceCenter())
+					effect:SetScale(1)
+					effect:SetMagnitude(1)
+					util.Effect("TeslaHitboxes", effect, true, true)
+					local blastDamage = 95
+					util.BlastDamage(self, target, target:WorldSpaceCenter(), 5 * 39.37, blastDamage)
+				end
 			end)
 			self.AlyoshaMarkHook = true
 		end
@@ -50,7 +71,11 @@ function att:attachFunc()
 		return
 	end
 
-	wep.CW_VM:SetSubMaterial(0, "")
+	if not IsValid(self.CW_VM) then
+		return
+	end
+
+	self.CW_VM:SetSubMaterial(0, "")
 
     for i, index in ipairs(self.MaterialIndexAlyosha) do
 		wep.CW_VM:SetSubMaterial(index, "metal2a")

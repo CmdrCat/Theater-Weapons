@@ -33,7 +33,8 @@ function att:attachFunc()
 
 	self.ADSFireAnim = false
 	self.ForegripOverride = true
-	self.ForegripParent = "nah"
+	self.SprintingEnabled = false
+	self.ForegripParent = "onehand"
 
 	self.PenMod = 0
 	self.CanRicochet = false
@@ -133,8 +134,9 @@ function att:attachFunc()
 
 			if wep._c96blasterReloadEnd and CurTime() >= wep._c96blasterReloadEnd then
 				wep._c96blasterReloadEnd = nil
-				local idleAnimation = wep:Clip1() == 0 and "idle_empty" or "idle"
-				wep._c96blasterOriginalSendWeaponAnim(wep, idleAnimation, 1)
+				wep._c96blasterOriginalSendWeaponAnim(wep, "idle", 1)
+				wep.IsReloading = false
+				wep.Cycle = 1
 			elseif IsValid(wep.CW_VM) and wep._c96blasterReloadEnd then
 				local sequenceName = wep.CW_VM:GetSequenceName(wep.CW_VM:GetSequence())
 				local reloadAnimation = sequenceName == wep.Animations.reload or sequenceName == wep.Animations.reload_empty or sequenceName == wep.Animations.reload_clip or sequenceName == wep.Animations.reload_empty_clip
@@ -181,6 +183,9 @@ function att:detachFunc()
 	self.TracerImpactDecal = nil
 	self.TracerColor = Color(255, 255, 255, 255)
 	self.MuzzleEffect = "muzzleflash_suppressed"
+
+	self.SprintingEnabled = true
+	self.ForegripParent = "nah"
 
 	if clip == 9 then
 		self:SetClip1(10)
