@@ -22,7 +22,7 @@ end
 
 function att:attachFunc()
 
-	self.PrintName = "C96 Blaster"
+	self.PrintName = "DL-44"
 	self.Trivia = {text = "Never tell me the odds.", x = 200, y = -800}
 
 	self.TracerFrequency = 1
