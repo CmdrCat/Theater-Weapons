@@ -88,6 +88,7 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 	SWEP.BackupSights = { ["too_optic_tacstance"] = {[1] = Vector(-2.316, -4.5, 0.58), [2] = Vector(0.2536, 0.0368, 0)},
 	["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
 	["doi_atow_zf4"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0, 0, -45)},
+	["md_schmidt_shortdot"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0, 0, -45)},
 	["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
 	}
 
@@ -121,9 +122,6 @@ SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 				{type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "STG44", rel = "", pos = Vector(-0.35, 7, 3.25), angle = Angle(180, 90, -90), size = Vector(0.7,0.7,0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}
 	}}
 }
-	SWEP.AttachmentDependencies = {
-	["md_schmidt_shortdot"] = {"doi_atow_stg44a280c"}
-	}
 		
 	SWEP.ForegripOverridePos = {
 	["penos"] = {
@@ -152,18 +150,25 @@ SWEP.CanRestOnObjects = true
 --SWEP.AimBreathingEnabled = true
 --SWEP.AimBreathingIntensity = .875
 
-SWEP.Trivia = {text = "The first weapon to be denominated as an assault rifle.", x = 0, y = -750}
+SWEP.Trivia = {text = "The first weapon to be denominated as an assault rifle.", x = 200, y = -650}
 -- sumn bout saving europa or whatevs
 
-SWEP.Attachments = {[3] = {header = "Accessory", offset = {-450, -700}, atts = {"doi_atow_sling"}},
-[6] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {doi_atow_stg44a280c = true}},
+SWEP.Attachments = {[5] = {header = "Accessory", offset = {-450, -700}, atts = {"doi_atow_sling"}},
+[3] = {header = "Handguard", offset = {-450, 50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {doi_atow_stg44a280c = true}},
 [2] = {header = "Muzzle", offset = {-450, -350}, atts = {"doi_atow_unisuppressor", "md_saker", "md_csgo_silencer_rifle", "hard20"}, exclusions = {doi_atow_stg44a280c = true}},
-[4] = {header = "Finish", offset = {850, 400}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_nightforce_nxs", "too_optic_tacstance"}, exclusions = {doi_atow_stg44a280c = true}},
-[5] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {doi_atow_stg44a280c = true}},
-[7] = {header = "Signature Attachment", offset = {1100, -50}, atts = {"doi_atow_stg44a280c"}},
-[8] = {header = "Optic", offset = {600, -525}, atts = {"md_schmidt_shortdot"}},
+[7] = {header = "Finish", offset = {1600, 400}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+[1] = {header = "Optic", offset = {600, -525}, atts = {"md_reflex", "doi_atow_zf4", "md_schmidt_shortdot", "md_nightforce_nxs", "too_optic_tacstance"}},
+[4] = {header = "Laser", offset = {1100, -50}, atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {doi_atow_stg44a280c = true}},
+[6] = {header = "Signature Attachment", offset = {500, 400}, atts = {"doi_atow_stg44a280c"}},
 ["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_stg44a280c = true}}}
+
+SWEP.AttachmentDependencies = {
+	["md_schmidt_shortdot"] = {"doi_atow_stg44a280c"}
+	}
+
+SWEP.AttachmentExclusions = {["md_reflex"] = {"doi_atow_stg44a280c"},
+							 ["doi_atow_zf4"] = {"doi_atow_stg44a280c"},
+							 ["md_nightforce_nxs"] = {"doi_atow_stg44a280c"}}
 
 SWEP.Animations = {fire = {"base_fire"},
 	fire_aim = {"iron_fire_1"},
@@ -234,6 +239,12 @@ SWEP.Damage = 49
 SWEP.DeployTime = .48
 SWEP.HolsterTime = .6
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.05 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ADSFireAnim = true
 
 SWEP.ReloadSpeed = 1.25
@@ -243,6 +254,12 @@ SWEP.ReloadTime_Empty = 3.8
 SWEP.ReloadHalt_Empty = 4.85
 
 function SWEP:IndividualThink()
+
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.05 / 2 )
+		end
+	end
 	
 	if CLIENT then
 		self.ForegripOverride = true
@@ -273,6 +290,15 @@ function SWEP:IndividualThink()
 	end
 	if self.ActiveAttachments.doi_atow_zf4 or self.ActiveAttachments.md_nightforce_nxs then
 		self.ADSFireAnim = false
+	end
+	if self.ActiveAttachments.doi_atow_stg44a280c then
+		self.DamageFallOff = ((self.DamageFallOff + 0.22))
+
+		self.bulletCallback = function( att, tr, dmg )
+			if tr.HitGroup == HITGROUP_HEAD then
+				dmg:ScaleDamage( 2.5 / 2 )
+			end
+		end
 	end
 end
 
@@ -394,22 +420,5 @@ function SWEP:DrawWeaponSelection(x, y, wide, tall, alpha)
 		draw.SimpleText(self.IconLetter, self.SelectFont, x + wide / 2, y + tall * 0.2, simpleTextColor, TEXT_ALIGN_CENTER)
 	end
 end
-
-function SWEP:isAttachmentEligible(attName, activeAttachments)
-	activeAttachments = activeAttachments or self.ActiveAttachments or {}
-	
-	-- If the player is trying to attach the ShortDot scope...
-	if attName == "md_schmidt_shortdot" then
-		-- ...check if the A280C conversion is active. If not, block it!
-		if not activeAttachments["doi_atow_stg44a280c"] then
-			return false, self.AttachmentEligibilityEnum.ACTIVE_ATTACHMENT_EXCLUSION
-		end
-	end
-	
-	-- Fallback to standard eligibility checks for everything else
-	return true, self.AttachmentEligibilityEnum.CAN_BE_ATTACHED
-end
--- i used gemini code i  gave up 
-/*/
 
  

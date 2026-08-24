@@ -1,6 +1,6 @@
 local att = {}
 att.name = "doi_atow_stg44a280c"
-att.displayName = "A280C conversion"
+att.displayName = "A280C Conversion"
 att.displayNameShort = "A280C"
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
 att.reticle = "effects/sw_laser_white_front"
@@ -11,11 +11,13 @@ att.AttachmentModelsWM = {}
 
 att.description = {[1] = {t = "Replaces internals with that of the DLT-19X longblaster, firing precise bolts of deadly plasma", c = CustomizableWeaponry.textColors.COSMETIC},
 				   [2] = {t = "Bolts are colorable!", c = CustomizableWeaponry.textColors.COSMETIC},
-				   [3] = {t = "Increases headshot multiplier from 1.2 to 2.5", c = CustomizableWeaponry.textColors.POSITIVE}}
+				   [3] = {t = "Increases headshot multiplier from 1.05 to 2.5", c = CustomizableWeaponry.textColors.POSITIVE},
+				   [4] = {t = "Decreases capacity to 27 bolts", c = CustomizableWeaponry.textColors.NEGATIVE},
+				   [5] = {t = "Increases damage fall off by 22%", c = CustomizableWeaponry.textColors.POSITIVE}}
 
-att.statModifiers = {DamageMult = 3 / 2,
+att.statModifiers = {DamageMult = 1 / 49,
 FireDelayMult = 0.5,
-ReloadSpeedMult = 0.94,
+ReloadSpeedMult = 0.435,
 HipSpreadMult = -0.8,
 RecoilMult = -0.75,
 AimSpreadMult = -1}
@@ -56,8 +58,8 @@ function att:attachFunc()
 	if IsValid(self.Owner) and self.Owner.GiveAmmo then
 		self.Owner:GiveAmmo(9999, "AR2", true)
 	end
-	self.Primary.ClipSize = 25
-	self.Primary.ClipSize_Orig = 25
+	self.Primary.ClipSize = 27
+	self.Primary.ClipSize_Orig = 27
 	self:unloadWeaponPartially()
 
 	--Other weapon properties
@@ -89,11 +91,6 @@ function att:attachFunc()
 
 	if self.MaterialIndexPrimary then
 		for i, index in ipairs(self.MaterialIndexPrimary) do
-			self.CW_VM:SetSubMaterial(index, "models/weapons/v_models/famas/v_famas_parts")
-		end
-	end
-	if self.MaterialIndexSecondary then
-		for i, index in ipairs(self.MaterialIndexSecondary) do
 			self.CW_VM:SetSubMaterial(index, "models/weapons/v_models/famas/v_famas_parts")
 		end
 	end

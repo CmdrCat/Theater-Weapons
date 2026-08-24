@@ -116,7 +116,7 @@ SWEP.CanRestOnObjects = true
 SWEP.Attachments = {[5] = {header = "Finish", offset = {200, -500}, atts = {"doi_atow_normandycamo", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 [3] = {header = "Belt", offset = {500, 500}, atts = {"doi_atow_150rndbelt","doi_atow_50rndbelt"}, exclusions = {doi_atow_dlt19x = true}},
 [2] = {header = "Frame", offset = {-600, -250}, atts = {"doi_atow_bipodremove"}, exclusions = {doi_atow_dlt19x = true}},
-[4] = {header = "Fire Control", offset = {1000, 500}, atts = {"doi_atow_burstconv", "doi_atow_mg3conv", "doi_atow_dlt19x"}},
+[4] = {header = "Fire Control", offset = {850, 350}, atts = {"doi_atow_burstconv", "doi_atow_mg3conv", "doi_atow_dlt19x"}},
 [1] = {header = "Optics", offset = {1900, 0}, atts = {"md_nightforce_nxs"}},
 ["+reload"] = {header = "Ammo", offset = {-600, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_dlt19x = true}}}
 

@@ -6,7 +6,10 @@ att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
 att.reticle = "effects/sw_laser_white_front"
 att.description = {[1] = {t = "Replaces internals with that of the DLT-19X longblaster, firing precise bolts of deadly plasma", c = CustomizableWeaponry.textColors.COSMETIC},
 				   [2] = {t = "Bolts are colorable!", c = CustomizableWeaponry.textColors.COSMETIC},
-				   [3] = {t = "Increases headshot multiplier from 1.2 to 2.5", c = CustomizableWeaponry.textColors.POSITIVE}}
+				   [3] = {t = "Increases headshot multiplier from 1.2 to 2.5", c = CustomizableWeaponry.textColors.POSITIVE},
+				   [4] = {t = "Decreases capacity to 10 bolts", c = CustomizableWeaponry.textColors.NEGATIVE},
+				   [5] = {t = "Increases effective range to 999 M", c = CustomizableWeaponry.textColors.POSITIVE},
+				   [6] = {t = "Decreases damage fall off to 0%", c = CustomizableWeaponry.textColors.POSITIVE}}
 
 att.statModifiers = {DamageMult = 3 / 2,
 FireDelayMult = 56 / 9,
@@ -93,6 +96,16 @@ function att:attachFunc()
 	self.CanRestOnObjects = true
 	
 	self.FireSound = "DLT19X_FIRE"
+
+	if SERVER then
+		return
+	end
+
+	if self.MaterialIndexPrimary then
+		for i, index in ipairs(self.MaterialIndexPrimary) do
+			self.CW_VM:SetSubMaterial(index, "models/weapons/v_models/famas/v_famas_parts")
+		end
+	end
 
 	self.DLT19XReloadPos = Vector(2, 1, -7)
 	self.DLT19XReloadAng = Angle(-30, 5, 0)
@@ -259,6 +272,14 @@ function att:detachFunc()
 
 	self.FireSound = "DOIMG42_FIRE"
 	self.reloadAnimFunc = nil
+
+	if SERVER then
+		return
+	end
+
+	for i, index in ipairs(self.MaterialIndexPrimary) do
+		wep.CW_VM:SetSubMaterial(index, "")
+	end
 
 	if self.dlt19xOriginalSounds then
 		self.Sounds = table.Copy(self.dlt19xOriginalSounds)
