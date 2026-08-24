@@ -9,6 +9,11 @@ att.reticle = "effects/sw_laser_white_front"
 att.AttachmentModels = {}
 att.AttachmentModelsWM = {}
 
+-- Keep the conversion self-contained.  The DLT-19X pack's "overheat" effect
+-- is the available venting sound, while "cooled" is the cooling completion.
+CustomizableWeaponry:addReloadSound("A280C_VENTING", "weapons_too/dlt19xconv/overheat.wav")
+CustomizableWeaponry:addReloadSound("A280C_COOLED", "weapons_too/dlt19xconv/cooled.wav")
+
 att.description = {[1] = {t = "Replaces internals with that of the DLT-19X longblaster, firing precise bolts of deadly plasma", c = CustomizableWeaponry.textColors.COSMETIC},
 				   [2] = {t = "Bolts are colorable!", c = CustomizableWeaponry.textColors.COSMETIC},
 				   [3] = {t = "Increases headshot multiplier from 1.05 to 2.5", c = CustomizableWeaponry.textColors.POSITIVE},
@@ -118,13 +123,14 @@ function att:attachFunc()
 	self.FireAnimFunc_Orig = self.fireAnimFunc
 
 	self.Sounds.base_reload = {
-		{time = 0.2, sound = "DLT19X_VENTING"},
-		{time = 1.9, sound = "DLT19X_COOLED"}
+		{time = 0.2, sound = "A280C_VENTING"},
+		{time = 1.9, sound = "A280C_COOLED"}
 	}
 
-	self.Sounds.base_reload_empty = {
-		{time = 0.2, sound = "DLT19X_VENTING"},
-		{time = 1.9, sound = "DLT19X_COOLED"}
+	-- The StG44 maps an empty reload to "base_reloadempty" (without an underscore).
+	self.Sounds.base_reloadempty = {
+		{time = 0.5, sound = "A280C_VENTING"},
+		{time = 1.9, sound = "A280C_COOLED"}
 	}
 
 	self.postPrimaryAttack = function(wep)
