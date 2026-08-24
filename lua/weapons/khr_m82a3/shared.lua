@@ -228,10 +228,10 @@ function SWEP:DrawWorldModel( )
                         local boneIndex = pl:LookupBone( "ValveBiped.Bip01_R_Hand" )
                         if boneIndex then
                                 local pos, ang = pl:GetBonePosition( boneIndex )
-                                pos = pos + ang:Forward() * self.Offset.Pos.Forward + ang:Right() * self.Offset.Pos.Right + ang:Up() * self.Offset.Pos.Up
+                                pos = pos + ang:Forward() * 20.5 + ang:Right() * 1.1 + ang:Up() * -8
 
-                                ang:RotateAroundAxis( ang:Up(), self.Offset.Ang.Up)
-                                ang:RotateAroundAxis( ang:Right(), self.Offset.Ang.Right )
+                                ang:RotateAroundAxis( ang:Up(), 180)
+                                ang:RotateAroundAxis( ang:Right(), 13 )
                                 ang:RotateAroundAxis( ang:Forward(),  self.Offset.Ang.Forward )
 
                                 self:SetRenderOrigin( pos )

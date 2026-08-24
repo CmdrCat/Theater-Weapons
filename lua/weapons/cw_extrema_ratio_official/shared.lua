@@ -7,11 +7,6 @@ if CLIENT then
 	
 	SWEP.DisableSprintViewSimulation = true
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_knife_ct.mdl"
-	SWEP.WMPos = Vector(0.25, -1, 1.25)
-	SWEP.WMAng = Vector(-10, 90, 180)
-	
 	SWEP.IconLetter = "j"
 	killicon.AddFont("cw_extrema_ratio_official", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 end
@@ -45,7 +40,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/cw2_ex_ra.mdl"
-SWEP.WorldModel = "models/weapons/wcw_ex_ra.mdl"
+SWEP.WorldModel = "models/weapons/w_knife_ct.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

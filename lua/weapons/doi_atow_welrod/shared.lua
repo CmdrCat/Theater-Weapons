@@ -125,12 +125,7 @@ SWEP.AimViewModelFOV = 50
 SWEP.ZoomAmount = 0
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/welrod.mdl"
-SWEP.WorldModel		= "models/weapons/w_pist_deagle.mdl"
-
-SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/weapons/w_pist_deagle.mdl"
-SWEP.WMPos = Vector(-1.4, 5, 3.25)
-SWEP.WMAng = Vector(-8, 0, 180)
+SWEP.WorldModel		= "models/weapons/w_pist_usp_silencer.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

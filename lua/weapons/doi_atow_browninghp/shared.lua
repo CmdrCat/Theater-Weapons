@@ -173,11 +173,6 @@ SWEP.WorldModel		= "models/weapons/w_pist_elite_single.mdl"
 SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/browninghp.mdl"
 SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/browninghp.mdl"
 
-SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/weapons/w_pist_elite_single.mdl"
-SWEP.WMPos = Vector(-1.5, 4, 3.25)
-SWEP.WMAng = Vector(-5, 0, 180)
-
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.ReloadViewBobEnabled = false //

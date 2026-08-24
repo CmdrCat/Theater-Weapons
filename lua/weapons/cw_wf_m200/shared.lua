@@ -29,11 +29,6 @@ if CLIENT then
 	SWEP.ShellPosOffset = {x = 20, y = -10, z = 20}
 	SWEP.FireMoveMod = 0.6
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_snip_awp.mdl"
-	SWEP.WMPos = Vector(-0.5, 0, 3)
-	SWEP.WMAng = Vector(0, 0, 180)
-	
 	SWEP.IronsightPos = Vector(-5.342, 0.15, 0.87)
 	SWEP.IronsightAng = Vector(-1.3, -0.05, 0)
 	
@@ -299,7 +294,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/v_snip_m200.mdl"
-SWEP.WorldModel		= "models/weapons/w_snip_m200.mdl"
+SWEP.WorldModel		= "models/weapons/w_snip_awp.mdl"
 SWEP.BipodFireAnim = true
 
 SWEP.Spawnable			= true

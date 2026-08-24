@@ -25,12 +25,19 @@ function EFFECT:GetTracerColor( data )
 	if IsValid( weapon ) then
 		local color = weapon.TracerColor
 
-		if weapon.getSightColor and weapon.SightColors then
-			color = weapon:getSightColor("doi_atow_dlt19x") or color
+		if weapon.getSightColor and weapon.SightColors and CustomizableWeaponry and CustomizableWeaponry.colorableParts then
+			for name, entry in pairs( weapon.SightColors ) do
+				if entry and entry.type == CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM then
+					if not weapon.ActiveAttachments or weapon.ActiveAttachments[name] then
+						color = entry.color or color
+						break
+					end
+				end
+			end
 		end
 
 		if color then
-		return Color( color.r, color.g, color.b, color.a or 255 );
+			return Color( color.r, color.g, color.b, color.a or 255 );
 		end
 	end
 

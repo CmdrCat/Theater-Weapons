@@ -124,11 +124,6 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/suomi.mdl"
 SWEP.WorldModel		= "models/weapons/w_smg_mp5.mdl"
 
-SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/weapons/w_smg_mp5.mdl"
-SWEP.WMPos = Vector(2, -4.5, .5)
-SWEP.WMAng = Vector(-10, 180, 180)
-
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.ReloadViewBobEnabled = false //

@@ -28,11 +28,6 @@ if CLIENT then
 
 	SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
-	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_snip_sg550.mdl"
-	SWEP.WMPos = Vector(-1, -1, 0.5)
-	SWEP.WMAng = Vector(0, 0, 180)
 
 	SWEP.ViewModelMovementScale = 1.15
 	SWEP.CustomizationMenuScale = 0.019
@@ -137,7 +132,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/rifles/svd.mdl"
-SWEP.WorldModel		= "models/cw2/rifles/svd_world.mdl"
+SWEP.WorldModel		= "models/weapons/w_snip_sg550.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

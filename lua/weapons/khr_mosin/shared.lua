@@ -15,11 +15,6 @@ if CLIENT then
 	SWEP.EffectiveRange_Orig = 60 * 39.37
 	SWEP.DamageFallOff_Orig = .25
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_annabelle.mdl"
-	SWEP.WMPos = Vector(-1, 5, 0)
-	SWEP.WMAng = Vector(-13, 0, 180)
-	
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = true
 	SWEP.SightWithRail = true
@@ -207,7 +202,7 @@ SWEP.ViewModelFOV	= 70
 SWEP.AimViewModelFOV = 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/v_khri_mosinm91.mdl"
-SWEP.WorldModel		= "models/khrcw2/w_khri_mosinm91.mdl"
+SWEP.WorldModel		= "models/weapons/w_annabelle.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

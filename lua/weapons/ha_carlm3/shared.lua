@@ -120,7 +120,6 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/cw2_shark/v_cgm3.mdl"
 SWEP.WorldModel		= "models/weapons/cw2_sharksenal/w_cgm3.mdl"
 
-
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.ReloadViewBobEnabled = false

@@ -6,8 +6,9 @@ att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
 att.reticle = "effects/sw_laser_white_front"
 att.description = {[1] = {t = "Replaces internals with blaster technology, firing precise bolts of energy", c = CustomizableWeaponry.textColors.COSMETIC},
 				   [2] = {t = "Energy bolts are colorable!", c = CustomizableWeaponry.textColors.COSMETIC},
-				   [3] = {t = "Increases effective range by 15 M", c = CustomizableWeaponry.textColors.POSITIVE},
-				   [4] = {t = "Decreases damage fall off by 39%", c = CustomizableWeaponry.textColors.POSITIVE}}
+				   [3] = {t = "Decreases capacity to 8 bolts", c = CustomizableWeaponry.textColors.POSITIVE},
+				   [4] = {t = "Increases effective range by 15 M", c = CustomizableWeaponry.textColors.POSITIVE},
+				   [5] = {t = "Decreases damage fall off by 39%", c = CustomizableWeaponry.textColors.POSITIVE}}
 
 att.statModifiers = {DamageMult = 8 / 57,
 FireDelayMult = 2 / 7,

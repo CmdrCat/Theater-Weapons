@@ -171,7 +171,7 @@ SWEP.ViewModelFOV	= 80
 SWEP.AimViewModelFOV = 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/v_snip_sr338.mdl"
-SWEP.WorldModel		= "models/weapons/w_snip_g3sg1.mdl"
+SWEP.WorldModel		= "models/weapons/w_snip_sg550.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

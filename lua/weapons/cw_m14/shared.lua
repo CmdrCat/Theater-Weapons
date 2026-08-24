@@ -27,11 +27,6 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.65
 	SWEP.FireMoveMod = 0.6
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_snip_sg550.mdl"
-	SWEP.WMPos = Vector(0, -0.5, 1)
-	SWEP.WMAng = Vector(0, 0, 180)
-	
 	SWEP.IronsightPos = Vector(-2.231, -3.428, 1.207)
 	SWEP.IronsightAng = Vector(0, -0.008, 0)
 	
@@ -183,7 +178,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/rifles/m14.mdl"
-SWEP.WorldModel		= "models/weapons/w_cstm_m14.mdl"
+SWEP.WorldModel		= "models/weapons/w_snip_sg550.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

@@ -18,6 +18,46 @@ if CLIENT then
 					   [6] = {t = "Sets damage fall off to 60% while in scattershot mode", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
+local function triggerAlyoshaMarkedReactiveEffect(target, source)
+	if not IsValid(target) or not (target:IsPlayer() or target:IsNPC()) then return end
+	if not CustomizableWeaponry or not CustomizableWeaponry.markedPlayers then return end
+
+	local mark = CustomizableWeaponry.markedPlayers[target]
+	if not mark then return end
+	if CurTime() >= (mark.expires or 0) then
+		CustomizableWeaponry:clearMarkedPlayer(target)
+		return
+	end
+
+	local now = CurTime()
+	if (mark.lastReactive or 0) > now - 0.75 then
+		return
+	end
+	mark.lastReactive = now
+
+	CustomizableWeaponry:clearMarkedPlayer(target)
+
+	if target:IsOnFire() then
+		local effect = EffectData()
+		effect:SetOrigin(target:WorldSpaceCenter())
+		effect:SetScale(1)
+		effect:SetMagnitude(1)
+		util.Effect("Explosion", effect, true, true)
+		local blastDamage = 166
+		util.BlastDamage(source or target, target, target:WorldSpaceCenter(), 5 * 39.37, blastDamage)
+	end
+
+	if target:WaterLevel() > 0 then
+		local effect = EffectData()
+		effect:SetOrigin(target:WorldSpaceCenter())
+		effect:SetScale(1)
+		effect:SetMagnitude(1)
+		util.Effect("TeslaZap", effect, true, true)
+		local blastDamage = 95
+		util.BlastDamage(source or target, target, target:WorldSpaceCenter(), 5 * 39.37, blastDamage)
+	end
+end
+
 function att:attachFunc()
 
 	self.Trivia = {text = "Whether a weapon is scavenged, stolen, or bought, it can be the only thing standing between you and certain death.", x = -500, y = -500}
@@ -32,34 +72,35 @@ function att:attachFunc()
 		if not self.AlyoshaMarkHook then
 			hook.Add("EntityTakeDamage", "CW20_khr_alyosha_mark", function(target, dmginfo)
 				if not IsValid(target) or not (target:IsPlayer() or target:IsNPC()) then return end
-				local attacker = dmginfo:GetAttacker()
-				if not IsValid(attacker) or not (attacker:IsPlayer() or attacker:IsNPC()) then return end
-				if attacker == target then return end
+				local attacker = IsValid(dmginfo) and dmginfo:GetAttacker() or NULL
+				if IsValid(attacker) and attacker == target then return end
 
-				local wep = attacker:GetActiveWeapon()
+				local wep = IsValid(attacker) and attacker.GetActiveWeapon and attacker:GetActiveWeapon() or NULL
 				if not IsValid(wep) or not wep.CW20Weapon then return end
 				if not wep.ActiveAttachments or not wep.ActiveAttachments.khr_alyosha then return end
 
 				CustomizableWeaponry:markPlayerFor(target, att.MarkDuration, att.MarkColor, att.MarkDamageScale)
-
-				if target:IsOnFire() then
-					local effect = EffectData()
-					effect:SetOrigin(target:WorldSpaceCenter())
-					effect:SetScale(1)
-					effect:SetMagnitude(1)
-					util.Effect("Explosion", effect, true, true)
-					local blastDamage = 166
-					util.BlastDamage(self, target, target:WorldSpaceCenter(), 5 * 39.37, blastDamage)
+				if target:IsOnFire() or target:WaterLevel() > 0 then
+					triggerAlyoshaMarkedReactiveEffect(target, attacker or target)
 				end
+			end)
 
-				if target:WaterLevel() > 0 then
-					local effect = EffectData()
-					effect:SetOrigin(target:WorldSpaceCenter())
-					effect:SetScale(1)
-					effect:SetMagnitude(1)
-					util.Effect("TeslaZap", effect, true, true)
-					local blastDamage = 95
-					util.BlastDamage(self, target, target:WorldSpaceCenter(), 5 * 39.37, blastDamage)
+			hook.Add("EntityIgnite", "CW20_khr_alyosha_mark_ignite", function(target, attacker)
+				if not IsValid(target) or not (target:IsPlayer() or target:IsNPC()) then return end
+				if not CustomizableWeaponry or not CustomizableWeaponry.markedPlayers or not CustomizableWeaponry.markedPlayers[target] then return end
+				triggerAlyoshaMarkedReactiveEffect(target, attacker or target)
+			end)
+
+			hook.Add("Think", "CW20_khr_alyosha_mark_reactive", function()
+				if not CustomizableWeaponry or not CustomizableWeaponry.markedPlayers then return end
+				for target, mark in pairs(CustomizableWeaponry.markedPlayers) do
+					if IsValid(target) then
+						if CurTime() < (mark.expires or 0) then
+							if target:IsOnFire() or target:WaterLevel() > 0 then
+								triggerAlyoshaMarkedReactiveEffect(target, target)
+							end
+						end
+					end
 				end
 			end)
 			self.AlyoshaMarkHook = true
@@ -95,6 +136,8 @@ function att:detachFunc()
 
 	if SERVER and self.AlyoshaMarkHook then
 		hook.Remove("EntityTakeDamage", "CW20_khr_alyosha_mark")
+		hook.Remove("EntityIgnite", "CW20_khr_alyosha_mark_ignite")
+		hook.Remove("Think", "CW20_khr_alyosha_mark_reactive")
 		self.AlyoshaMarkHook = nil
 	end
 

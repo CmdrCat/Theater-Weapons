@@ -23,11 +23,6 @@ if CLIENT then
 	SWEP.Shell = "shotshell"
 	SWEP.ShellDelay = 0.3
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_shot_m3super90.mdl"
-	SWEP.WMPos = Vector(-1, 1.5, 0)
-	SWEP.WMAng = Vector(0, 0, 180)
-	
 	SWEP.ShellPosOffset = {x = 4, y = 0, z = 0}
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.9
@@ -134,7 +129,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/shotguns/m3.mdl"
-SWEP.WorldModel		= "models/weapons/w_cstm_m3super90.mdl"
+SWEP.WorldModel		= "models/weapons/w_shot_m3super90.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

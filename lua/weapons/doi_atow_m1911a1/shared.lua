@@ -152,11 +152,6 @@ SWEP.WorldModel		= "models/weapons/w_pist_usp.mdl"
 SWEP.ViewModel_AkimboL = "models/khrcw2/doipack/m1911.mdl"
 SWEP.ViewModel_AkimboR = "models/khrcw2/doipack/m1911.mdl"
 
-SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/weapons/w_pist_usp.mdl"
-SWEP.WMPos = Vector(-1.4, 5, 1.25)
-SWEP.WMAng = Vector(-5, 0, 180)
-
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.ReloadViewBobEnabled = false //

@@ -33,11 +33,6 @@ if CLIENT then
 	SWEP.RVBYawMod = 0.5
 	SWEP.RVBRollMod = 0.5
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_smg_tmp.mdl"
-	SWEP.WMPos = Vector(-1, -2.5, -2.5)
-	SWEP.WMAng = Vector(0, 0, 180)
-	
 	SWEP.ShortDotPos = Vector(-2.552, -3.089, -0.245)
 	SWEP.ShortDotAng = Vector(0, 0, 4.467)
 
@@ -150,7 +145,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/v_ecw_mp9.mdl"
-SWEP.WorldModel		= "models/weapons/w_ecw_mp9.mdl"
+SWEP.WorldModel		= "models/weapons/w_smg_tmp.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

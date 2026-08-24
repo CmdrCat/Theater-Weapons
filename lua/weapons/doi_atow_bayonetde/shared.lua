@@ -13,11 +13,6 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = true
 	SWEP.ViewModelMovementScale = .5
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_knife_t.mdl"
-	SWEP.WMPos = Vector(1.5, -3, -2.75)
-	SWEP.WMAng = Vector(-80, 180, 180)
-	
 	SWEP.SwimPos = Vector(0, 0, 0)
 	SWEP.SwimAng = Vector(-40.8947, 0, 0)
 	

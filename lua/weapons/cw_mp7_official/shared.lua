@@ -16,11 +16,6 @@ if CLIENT then
 	
 	SWEP.EffectiveRange_Orig = 20 * 39.37
 	SWEP.DamageFallOff_Orig = .52
-
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_smg1.mdl"
-	SWEP.WMPos = Vector(0, -2, -2)
-	SWEP.WMAng = Vector(-5, 0, 180)
 	 
 	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
@@ -173,7 +168,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/smgs/mp7.mdl"
-SWEP.WorldModel		= "models/cw2/smgs/mp7_world.mdl"
+SWEP.WorldModel		= "models/weapons/w_smg1.mdl"
 
 SWEP.ViewModel_AkimboL = "models/cw2/smgs/mp7.mdl"
 SWEP.ViewModel_AkimboR = "models/cw2/smgs/mp7.mdl"

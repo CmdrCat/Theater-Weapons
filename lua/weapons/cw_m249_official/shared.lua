@@ -29,11 +29,6 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.93
 	SWEP.FireMoveMod = 0.6
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_mach_m249para.mdl"
-	SWEP.WMPos = Vector(-1.5, 2, 0.5)
-	SWEP.WMAng = Vector(0, 0, 180)
-	
 	SWEP.IronsightPos = Vector(-2.05, -1.964, 0.972)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
@@ -194,7 +189,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/machineguns/m249.mdl"
-SWEP.WorldModel		= "models/weapons/cw2_0_mach_para.mdl"
+SWEP.WorldModel		= "models/weapons/w_mach_m249para.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

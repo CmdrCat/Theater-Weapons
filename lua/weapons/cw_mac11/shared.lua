@@ -29,11 +29,6 @@ if CLIENT then
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.8
 	SWEP.FireMoveMod = 1
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_smg_mac10.mdl"
-	SWEP.WMPos = Vector(-1, -5, -1.5)
-	SWEP.WMAng = Vector(0, 0, 180)
-	
 	SWEP.ShortDotPos = Vector(-2.241, -3.516, -0.267)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
 	
@@ -168,7 +163,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/cw2/smgs/mac11.mdl"
-SWEP.WorldModel		= "models/weapons/w_cst_mac11.mdl"
+SWEP.WorldModel		= "models/weapons/w_smg_mac10.mdl"
 
 SWEP.ViewModel_AkimboL = "models/cw2/smgs/mac11.mdl"
 SWEP.ViewModel_AkimboR = "models/cw2/smgs/mac11.mdl"

@@ -23,11 +23,6 @@ if CLIENT then
 	SWEP.Shell = "shotshell"
 	SWEP.ShellDelay = 0.45
 	
-	SWEP.DrawTraditionalWorldModel = false
-	SWEP.WM = "models/weapons/w_shot_m3super90.mdl"
-	SWEP.WMPos = Vector(-1, 1.5, 0)
-	SWEP.WMAng = Vector(0, 0, 180)
-	
 	SWEP.PronePos = Vector(-7.397, -2.497, -1.551)
 	SWEP.ProneAng = Vector(5.618, -49.056, -15.311)
 	
@@ -124,7 +119,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= true
 SWEP.ViewModel		= "models/cw2/shotguns/serbu_super_shorty.mdl"
-SWEP.WorldModel		= "models/weapons/cw2_super_shorty.mdl"
+SWEP.WorldModel		= "models/weapons/w_shot_m3super90.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

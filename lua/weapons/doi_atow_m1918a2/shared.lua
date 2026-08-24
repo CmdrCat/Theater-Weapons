@@ -171,11 +171,6 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/bar.mdl"
 SWEP.WorldModel		= "models/weapons/w_snip_g3sg1.mdl"
 
-SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/weapons/w_snip_g3sg1.mdl"
-SWEP.WMPos = Vector(-1, 17, -1.25)
-SWEP.WMAng = Vector(-16, 2, 180)
-
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.ReloadViewBobEnabled = false //

@@ -14,8 +14,7 @@ att.AttachmentModelsWM = {}
 CustomizableWeaponry:addReloadSound("A280C_VENTING", "weapons_too/dlt19xconv/overheat.wav")
 CustomizableWeaponry:addReloadSound("A280C_COOLED", "weapons_too/dlt19xconv/cooled.wav")
 
-att.description = {[1] = {t = "Replaces internals with that of the DLT-19X longblaster, firing precise bolts of deadly plasma", c = CustomizableWeaponry.textColors.COSMETIC},
-				   [2] = {t = "Bolts are colorable!", c = CustomizableWeaponry.textColors.COSMETIC},
+att.description = {[1] = {t = "Replaces internals with that of the A280C, rapidly firing plasma bolts", c = CustomizableWeaponry.textColors.COSMETIC},
 				   [3] = {t = "Increases headshot multiplier from 1.05 to 2.5", c = CustomizableWeaponry.textColors.POSITIVE},
 				   [4] = {t = "Decreases capacity to 27 bolts", c = CustomizableWeaponry.textColors.NEGATIVE},
 				   [5] = {t = "Increases damage fall off by 22%", c = CustomizableWeaponry.textColors.POSITIVE}}
@@ -123,14 +122,14 @@ function att:attachFunc()
 	self.FireAnimFunc_Orig = self.fireAnimFunc
 
 	self.Sounds.base_reload = {
-		{time = 0.2, sound = "A280C_VENTING"},
+		{time = 0.1, sound = "A280C_VENTING"},
 		{time = 1.9, sound = "A280C_COOLED"}
 	}
 
-	-- The StG44 maps an empty reload to "base_reloadempty" (without an underscore).
+	-- The StG 44 maps an empty reload to "base_reloadempty" (without an underscore).
 	self.Sounds.base_reloadempty = {
-		{time = 0.5, sound = "A280C_VENTING"},
-		{time = 1.9, sound = "A280C_COOLED"}
+		{time = 0.1, sound = "A280C_VENTING"},
+		{time = 2.0, sound = "A280C_COOLED"}
 	}
 
 	self.postPrimaryAttack = function(wep)

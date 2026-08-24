@@ -162,11 +162,6 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/m1a1para.mdl"
 SWEP.WorldModel		= "models/weapons/w_rif_galil.mdl"
 
-SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/weapons/w_rif_galil.mdl"
-SWEP.WMPos = Vector(-1.25, 4.5, .25)
-SWEP.WMAng = Vector(-8, 3, 180)
-
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.ReloadViewBobEnabled = false //

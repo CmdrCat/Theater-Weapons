@@ -137,11 +137,6 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/khrcw2/doipack/ithaca37.mdl"
 SWEP.WorldModel		= "models/weapons/w_shot_m3super90.mdl"
 
-SWEP.DrawTraditionalWorldModel = false
-SWEP.WM = "models/weapons/w_shot_m3super90.mdl"
-SWEP.WMPos = Vector(-1.5, 11, -1)
-SWEP.WMAng = Vector(-16, 2, 180)
-
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.ReloadViewBobEnabled = false //
