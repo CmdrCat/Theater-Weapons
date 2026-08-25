@@ -11,14 +11,14 @@ att.statModifiers = {}
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
 	att.description = {[1] = {t = "Applies the Hunter's Mark effect to hit opponents for 3 seconds.", c = CustomizableWeaponry.textColors.SPECIAL},
-					   [2] = {t = "Marked opponents are highlighted and take 14% more damage.", c = CustomizableWeaponry.textColors.SPECIAL},
+					   [2] = {t = "Marked opponents are highlighted, take 14% more damage, and can trigger elemental reactions.", c = CustomizableWeaponry.textColors.SPECIAL},
 					   [3] = {t = "Scattershot / single-bullet mode while hipfiring / aiming down sights.", c = CustomizableWeaponry.textColors.SPECIAL},
 					   [4] = {t = "Sets damage to 28×6 / 95", c = CustomizableWeaponry.textColors.COSMETIC},
 					   [5] = {t = "Sets effective range to 25 M while in scattershot mode", c = CustomizableWeaponry.textColors.NEGATIVE},
 					   [6] = {t = "Sets damage fall off to 60% while in scattershot mode", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
-local function triggerAlyoshaMarkedReactiveEffect(target, source)
+local function triggerElementalReaction(target, source)
 	if not IsValid(target) or not (target:IsPlayer() or target:IsNPC()) then return end
 	if not CustomizableWeaponry or not CustomizableWeaponry.markedPlayers then return end
 
@@ -81,14 +81,14 @@ function att:attachFunc()
 
 				CustomizableWeaponry:markPlayerFor(target, att.MarkDuration, att.MarkColor, att.MarkDamageScale)
 				if target:IsOnFire() or target:WaterLevel() > 0 then
-					triggerAlyoshaMarkedReactiveEffect(target, attacker or target)
+					triggerElementalReaction(target, attacker or target)
 				end
 			end)
 
 			hook.Add("EntityIgnite", "CW20_khr_alyosha_mark_ignite", function(target, attacker)
 				if not IsValid(target) or not (target:IsPlayer() or target:IsNPC()) then return end
 				if not CustomizableWeaponry or not CustomizableWeaponry.markedPlayers or not CustomizableWeaponry.markedPlayers[target] then return end
-				triggerAlyoshaMarkedReactiveEffect(target, attacker or target)
+				triggerElementalReaction(target, attacker or target)
 			end)
 
 			hook.Add("Think", "CW20_khr_alyosha_mark_reactive", function()
@@ -97,7 +97,7 @@ function att:attachFunc()
 					if IsValid(target) then
 						if CurTime() < (mark.expires or 0) then
 							if target:IsOnFire() or target:WaterLevel() > 0 then
-								triggerAlyoshaMarkedReactiveEffect(target, target)
+								triggerElementalReaction(target, target)
 							end
 						end
 					end

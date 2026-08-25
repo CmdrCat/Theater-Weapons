@@ -51,11 +51,15 @@ if CLIENT then
 	SWEP.BoltShootOffset = Vector(0, 4.669, 0.144)
 	SWEP.OffsetBoltOnBipodShoot = true
 
+	SWEP.MaterialIndexPrimary = {3}
+
 	SWEP.AttachmentModelsVM = {
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "Base", pos = Vector(-0.468, -5.356, -3.155), angle = Angle(-1.966, -87.372, 1.379), size = Vector(0.8, 0.8, 0.8)},
 		["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", bone = "Base", pos = Vector(-0.116, -4.847, -2.024), angle = Angle(-1.966, -177.372, -1.032), size = Vector(0.8, 0.8, 0.8)},
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "Base", pos = Vector(-0.176, 0.194, 2.404), angle = Angle(-1.966, -87.373, 1.378), size = Vector(1.1, 1.1, 1.1)},
 		["md_pbs1"] = {model = "models/cw2/attachments/pbs1.mdl", bone = "Base", pos = Vector(1.427, 27.118, -2.033), angle = Angle(0, -177.01, -2.658), size = Vector(0.699, 0.699, 0.699)},
+		["cw_svd_r4hyena"] = {model = "models/attachments/heavy_muzzle_brake.mdl", bone = "Base", rel = "", pos = Vector(0.888, 15.847, -2.26), angle = Angle(1.749, 2.942, 2.006), size = Vector(0.5, 0.5, 0.5)},
+		["md_snip2_m200_heavy_muzzle_brake"] = {model = "models/attachments/heavy_muzzle_brake.mdl", bone = "Base", rel = "", pos = Vector(0.888, 15.847, -2.26), angle = Angle(1.749, 2.942, 2.006), size = Vector(0.5, 0.5, 0.5)}, 		
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "Base", pos = Vector(-0.505, -6.011, -3.149), angle = Angle(1.965, 3.263, 1.378), size = Vector(0.8, 0.8, 0.8)}
 	}
 	
@@ -85,15 +89,9 @@ SWEP.RailBGs = {main = 1, on = 0, off = 1}
 SWEP.Trivia = {text = "Developed in the Soviet Union, this marksman rifle is used by militaries and insurgencies alike.", x = -200, y = -450}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -300},  atts = {"md_schmidt_shortdot", "md_pso1", "md_acog", "md_nightforce_nxs"}},
-	[2] = {header = "Muzzle", offset = {-300, -100}, atts = {"md_pbs1"}},
-	[3] = {header = "Conversion", offset = {650, 500}, atts = {"cw_svdg_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {1200, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
-
-SWEP.AttachmentExclusions = {["am_magnum"] = {"cw_svdg_conversion"},
-							 ["am_matchgrade"] = {"cw_svdg_conversion"},
-							 ["am_atow_lowvel"] = {"cw_svdg_conversion"},
-							 ["am_atow_heavy"] = {"cw_svdg_conversion"},
-							 ["am_atow_ap"] = {"cw_svdg_conversion"}}
+	[2] = {header = "Muzzle", offset = {-300, -100}, atts = {"md_pbs1", "md_snip2_m200_heavy_muzzle_brake"}, exclusions = {cw_svd_r4hyena = true}},
+	[3] = {header = "Signature Attachments", offset = {650, 500}, atts = {"cw_svdg_conversion", "cw_svd_r4hyena"}},
+	["+reload"] = {header = "Ammo", offset = {1200, 200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {cw_svdg_conversion = true, cw_svd_r4hyena = true}}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},
 	reload = "reload",
@@ -176,6 +174,9 @@ self.DamageFallOff = .25
 if self.ActiveAttachments.cw_svdg_conversion then
 	self.EffectiveRange = ((5 * 39.37))
 	self.DamageFallOff = ((0.05))
+end
+if self.ActiveAttachments.cw_svd_r4hyena then
+	self.DamageFallOff = ((self.DamageFallOff + 0.05))
 end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))

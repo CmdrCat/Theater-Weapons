@@ -198,7 +198,8 @@ SWEP.Attachments = {[2] = {header = "Muzzle", offset = {-400, -550}, atts = {"do
 [4] = {header = "Receiver", offset = {500, 300}, atts = {"doi_atow_c96carbineconv", "doi_atow_m2carbineconv", "doi_atow_heavybolt", "doi_atow_dl44"}},
 ["+reload"] = {header = "Ammo", offset = {-1000, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {doi_atow_dl44 = true}}}
 
-SWEP.AttachmentExclusions = {["doi_atow_m3flashhider"] = {"doi_atow_c96longbarrel"}}
+SWEP.AttachmentExclusions = {["doi_atow_m3flashhider"] = {"doi_atow_c96longbarrel"},
+							 ["doi_atow_zf4"] = {"doi_atow_dl44"}}
 
 SWEP.Animations = {fire = {"base_fire_1","base_fire_2","base_fire_3"},
 	fire_aim = {"iron_fire_1","iron_fire_2","iron_fire_3"},
