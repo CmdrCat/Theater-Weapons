@@ -9,11 +9,11 @@ FireDelayMult = 47 / 38,
 RecoilMult = 1.92,
 HipSpreadMult = 0.11,
 MaxSpreadIncMult = 0.75,
-VelocitySensitivityMult = 0.76}
+VelocitySensitivityMult = 1.51}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Fires armor-piercing rounds coated in a high-ignition thermite compound to ignite targets", c = CustomizableWeaponry.textColors.VPOSITIVE},
+	att.description = {[1] = {t = "Fires heavy rounds coated in a high-ignition thermite compound to ignite targets", c = CustomizableWeaponry.textColors.VPOSITIVE},
 					   [2] = {t = "Decreases capacity to 8 rounds", c = CustomizableWeaponry.textColors.NEGATIVE},
 					   [5] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
