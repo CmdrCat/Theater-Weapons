@@ -236,11 +236,14 @@ reg_draw = {
 },
 
 reg_rechamber = {
+[1] = {time = 0.15, sound = "MW2CR_1887_PUMP_BACK"},
+[2] = {time = 0.45, sound = "MW2CR_1887_PUMP_FORWARD"},
+},
+
+reg_rechamber_onehand = {
 [1] = {time = 0, sound = "MW2CR_1887_RELOAD_LIFT"},
 [2] = {time = 0.3, sound = "MW2CR_1887_RELOAD_SPIN"},
 [3] = {time = 0.65, sound = "MW2CR_1887_PUMP_FORWARD"},
---[1] = {time = 0.15, sound = "MW2CR_1887_PUMP_BACK"},
---[2] = {time = 0.45, sound = "MW2CR_1887_PUMP_FORWARD"},
 },
 
 reg_reload_start = {
