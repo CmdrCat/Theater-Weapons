@@ -277,26 +277,20 @@ reg_reload_end = {
 
 }
 
-if CLIENT then
-	local function createShells(wep)
-		if IsValid(wep) and wep:Clip1() > 1 then
-			wep:CreateShell()
-		end
-	end
-end
-
 function SWEP:fireAnimFunc()
 	self:sendWeaponAnim("fire", self.FireAnimSpeed)
 
 	if self.Animations and self.Animations.rechamber then
 		if self:Clip1() > 1 then
-			local selectedRechamber = self.Animations.rechamber
 
 			timer.Simple(0.2, function()
 				if IsValid(self) and self:Clip1() % 2 == 0 then
-					self:sendWeaponAnim("rechamber_onehand", self.RechamberSpeed or 1, 0, true)
-				else
 					self:sendWeaponAnim("rechamber", self.RechamberSpeed or 1, 0, true)
+				else
+					self:sendWeaponAnim("rechamber_onehand", self.RechamberSpeed or 1, 0, true)
+					if IsValid(wep) then
+						wep:CreateShell()
+					end
 				end
 			end)
 		end
