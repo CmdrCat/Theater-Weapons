@@ -54,6 +54,12 @@ SWEP.ShellOffsetMul = 1
 SWEP.ShellDelay = 0.6
 SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
 
+if CLIENT then
+	function SWEP:CreateShell()
+		return false
+	end
+end
+
 --Bolt movement
 --SWEP.BoltBone = "j_bolt2"
 SWEP.BoltShootOffset = Vector(-1.5, 0, 0)
