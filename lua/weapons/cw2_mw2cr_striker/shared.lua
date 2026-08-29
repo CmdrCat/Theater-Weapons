@@ -204,7 +204,7 @@ SWEP.SpreadPerShot = 0
 SWEP.SpreadCooldown = 0
 SWEP.FOVPerShot = 0 --How much the FOV is increased per shot
 SWEP.FireAnimSpeed = 1 --Percentage speed of fire animation
-SWEP.CanRestOnObjects = false
+SWEP.CanRestOnObjects = true
 SWEP.ReloadViewBobEnabled = false
 SWEP.ADSFireAnim = true
 
