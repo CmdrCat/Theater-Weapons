@@ -161,10 +161,8 @@ SWEP.ADSFireAnim = true
 SWEP.PenMod = 0.1
 
 SWEP.RechamberTime = 1.15
-SWEP.RechamberTime_Orig = SWEP.RechamberTime
 
 SWEP.RechamberSpeed = 1
-SWEP.RechamberSpeed_Orig = SWEP.RechamberSpeed
 
 --Damage
 SWEP.Shots = 8
@@ -288,7 +286,7 @@ function SWEP:fireAnimFunc()
 
 			timer.Simple(0.2, function()
 				if IsValid(self) and self:Clip1() % 2 == 0 then
-					self:sendWeaponAnim("rechamber", self.RechamberSpeed or 1, 0, true)
+					self:sendWeaponAnim("rechamber", self.RechamberSpeed/1.25 or 1, 0, true)
 				else
 					self:sendWeaponAnim("rechamber_onehand", self.RechamberSpeed or 1, 0, true)
 					if IsValid(wep) then
