@@ -80,6 +80,12 @@ if CLIENT then
 	SWEP.MaterialIndexSecondary = {1, 3}
 	SWEP.CustomizationMenuScale = 0.0205 --  0.026
 	
+SWEP.AttachmentDependencies = {
+	["md_anpeq15"] = {"md_reflex", "too_reflex_exps"},
+	["ftacgrimline"] = {"md_reflex", "too_reflex_exps"},
+
+} 
+
 	SWEP.AttachmentModelsVM = {["doi_atow_m3stock"] = {model = "models/khrcw2/doipack/attachments/m3stockextended.mdl", pos = Vector(2.72, -8, 3.475), angle = Angle(180, 90, 180), size = Vector(1, 1, 1), bone = "A_Stock"},
 	["m3stockcollapsed"] = {model = "models/khrcw2/doipack/attachments/m3stockcollapsed.mdl", pos = Vector(2.72, -8, 3.475), angle = Angle(180, 90, 180), size = Vector(1, 1, 1), bone = "A_Stock"},
 	["doi_atow_m3flashhider"] = {model = "models/khrcw2/doipack/attachments/m3flashhider.mdl", pos = Vector(-23.75, -2.7, 2.55), angle = Angle(180, 180, 180), size = Vector(1, 1, 1), bone = "A_Muzzle"},
@@ -101,11 +107,7 @@ if CLIENT then
 		},
 	}
 	
-	SWEP.AttachmentDependencies = {
-	["md_anpeq15"] = {"md_reflex", "too_reflex_exps"},
-	["ftacgrimline"] = {"md_reflex", "too_reflex_exps"},
-
-} 
+	
 
 		SWEP.ForegripOverridePos = {
 	["nah"] = {

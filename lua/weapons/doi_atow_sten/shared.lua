@@ -55,6 +55,8 @@ if CLIENT then
     SWEP.SwimPos = Vector(0.5682, -1.7045, 1.0526)
 	SWEP.SwimAng = Vector(-30.8947, 33.0455, -10.2273)
 	
+    SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
+    SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
 
 	SWEP.LaserPosAdjust = Vector(3.4, 17, -2.2)
 	SWEP.LaserAngAdjust = Angle(0, 0, 0)
@@ -79,21 +81,41 @@ if CLIENT then
 		["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "weapon", rel = "", pos = Vector(-3.6, 3, 4.1), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
 		--laser 
 		["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-5.85, -9.5, 4.55), angle = Angle(0, -90, 90), size = Vector(1,1,1), bone = "weapon"},
+		["md_anpeq15"] = { 
+			models = {
+				{type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "weapon", rel = "", pos = Vector(-3.4, 7 ,3.1), angle = Angle(0,-90,0), adjustment = {min = 4.147, max = 6.956, axis = "x", inverse = true}, size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "weapon", rel = "", pos = Vector(-3.2, 7.5, 0.4), angle = Angle(0, 90, 0), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
+			},
+		["ftacgrimline"] = { 
+			models = {
+				{type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "weapon", rel = "", pos = Vector(-3.6, 7.5, 3.2), angle = Angle(0, -90, 0), adjustment = {min = 4.215, max = 5.932, axis = "x", inverse = true}, size = Vector(1.116, 1.116, 1.116), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "weapon", rel = "", pos = Vector(-3.2, 7.5, 0.4), angle = Angle(0, 90, 0), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
+			},
+		--muzzle
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "weapon", rel = "", pos = Vector(-3.6, 17, 2.4), angle = Angle(180, 90, -90), size = Vector(1, 0.7, 0.7)},
+		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-3.6, 12.5, 2.35), angle = Angle(0, -90, 0), size = Vector(0.85, 0.85, 0.85), bone = "weapon"},
+		--foregrip
+		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(-3.5, 7, 2.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+        ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(-3.5, 7, 2), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+        --["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-4, -4, 0.5), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
 	}
 end
 end
 
-SWEP.Attachments = {[5] = {header = "Model", offset = {950, -500}, atts = {"doi_atow_stenmk5"}},
+SWEP.Attachments = {[5] = {header = "Model", offset = {950, -500}, atts = {"doi_atow_stenmk5"}, exclusions =  {bruentiltgrip_r = true, ftactiger_r = true}},
 [4] = {header = "Accessory", offset = {-700, -500}, atts = {"doi_atow_sling"}},
 [2] = {header = "Fire Control", offset = {200, -500}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
-[3] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_altsightmk5", "doi_atow_stensuppressor"}},
+[3] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_stensuppressor", "doi_atow_unisuppressor","hard20"}},
 [1] = {header = "Sight", offset = {-700, -150}, atts = {"md_reflex"}},
-[6] = {header = "Laser", offset = {200, -150}, atts = {"ins2_atow_clamplaser"}},
+[6] = {header = "Laser", offset = {200, -125}, atts = {"ins2_atow_clamplaser", "md_anpeq15", "ftacgrimline" }},
+[7] = {header = "Foregrip", offset = {950, 0}, atts = {"ftactiger_r", "bruentiltgrip_r", 
+--"md_foregrip"
+}},
 
 ["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentPosDependency = {
-	["ins2_atow_clamplaser"] = {["doi_atow_altsightmk5"] = Vector(-5.85, -10.5, 4.65),["doi_atow_stensuppressor"] = Vector(-5.85, -8.5, 4.25),},
+	["ins2_atow_clamplaser"] = {["doi_atow_stenmk5"] = Vector(-5.85, -10.5, 4.65),["doi_atow_stensuppressor"] = Vector(-5.85, -8.5, 4.25),},
 }
 
 SWEP.ForegripOverridePos = {
@@ -263,13 +285,14 @@ function SWEP:IndividualThink()
 	self.Owner.ViewAff = 0
 	end
 	
-	if not self.ActiveAttachments.doi_atow_stenmk5 then
+	local hasCustomGrip = self.ActiveAttachments.doi_atow_stenmk5 or self.ActiveAttachments.bruentiltgrip_r
+
+	if not hasCustomGrip then
 		self.ForegripOverride = true
 		self.ForegripParent = "2"
-	if not self.ActiveAttachments.doi_atow_stenmk5 and self.ActiveAttachments.doi_atow_stensuppressor then
+	else
 		self.ForegripOverride = true
-		self.ForegripParent = "3"
-	end
+		self.ForegripParent = "grip"
 	end
 	
 	self.EffectiveRange = 25 * 39.37
