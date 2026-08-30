@@ -39,6 +39,17 @@ hook.Add("PostDrawViewModel", "CW20_PostDrawViewModel", CW20_PostDrawViewModel)
 
 local function CW20_RenderScreenspaceEffects()
 	local ply = LocalPlayer()
+	if not IsValid(ply) then
+		return
+	end
+
+	-- InitPostEntity does not run again after a live Lua reload, so make the
+	-- flash state safe for the render hook regardless of load order.
+	ply.cwFlashbangDuration = ply.cwFlashbangDuration or 0
+	ply.cwFlashbangIntensity = ply.cwFlashbangIntensity or 0
+	ply.cwFlashbangDisplayIntensity = ply.cwFlashbangDisplayIntensity or 0
+	ply.cwFlashDuration = ply.cwFlashDuration or 0
+	ply.cwFlashIntensity = ply.cwFlashIntensity or 0
 	
 	-- apply the smoke screen when in a smoke grenade area
 	if ply.CW_SmokeScreenIntensity then

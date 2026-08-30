@@ -92,11 +92,22 @@ function SWEP:getRenderTargetSize()
 end
 
 function SWEP:GetTracerOrigin()
-	if self.dt.State == CW_AIMING and self.SimulateCenterMuzzle then
+	if self.dt.State == CW_AIMING and self.SimulateCenterMuzzle and self.CenterPos then
 		return self.CenterPos
 	end
-	
-	return self:getMuzzlePosition().Pos
+
+	local muzzle = self:getMuzzlePosition()
+	if muzzle and muzzle.Pos then
+		return muzzle.Pos
+	end
+
+	-- Some viewmodels/conversions do not expose a muzzle attachment during
+	-- initialization.  Keep tracers valid until the normal attachment returns.
+	if IsValid(self.Owner) then
+		return self.Owner:GetShootPos()
+	end
+
+	return self:GetPos()
 end
 
 function SWEP:FireAnimationEvent(pos, ang, event, name)
@@ -1188,6 +1199,10 @@ function SWEP:PostDrawViewModel()
 end
 
 function SWEP:getMuzzlePosition()
+	if not IsValid(self.CW_VM) then
+		return nil
+	end
+
 	return self.CW_VM:GetAttachment(self.MuzzleAttachment)
 end
 
