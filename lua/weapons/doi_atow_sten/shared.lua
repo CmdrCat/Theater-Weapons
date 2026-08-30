@@ -56,7 +56,7 @@ if CLIENT then
 	SWEP.SwimAng = Vector(-30.8947, 33.0455, -10.2273)
 	
 
-	SWEP.LaserPosAdjust = Vector(3.4, 17, -2.2)
+	SWEP.LaserPosAdjust = Vector(3.4, 21, -2.2)
 	SWEP.LaserAngAdjust = Angle(0, 0, 0)
 
 	SWEP.PronePos = Vector(0, 0, -2.1579)

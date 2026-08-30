@@ -15,25 +15,37 @@ SWEP.PosBasedMuz = false
 SWEP.SnapToGrip = false
 
 SWEP.ForeGripOffsetCycle_Draw = 0
-SWEP.ForeGripOffsetCycle_Reload = 0.9
-SWEP.ForeGripOffsetCycle_ReloadStart = 0.9
-SWEP.ForeGripOffsetCycle_ReloadInsert = 0.9
-SWEP.ForeGripOffsetCycle_ReloadEnd = 0.9
-SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+SWEP.ForeGripOffsetCycle_Reload = 0
+SWEP.ForeGripOffsetCycle_ReloadStart = 0
+SWEP.ForeGripOffsetCycle_ReloadInsert = 0
+SWEP.ForeGripOffsetCycle_ReloadEnd = 0
+SWEP.ForeGripOffsetCycle_Reload_Empty = 0
 
 SWEP.SprintPos = Vector(2, 0, 0)
 SWEP.SprintAng = Vector(-10.778, 27.573, 0)
 
+SWEP.CustomizePos_Orig = Vector(6.88, -2.073, 1.12)
+SWEP.CustomizeAng_Orig = Vector(21.361, 35.674, 25.371)
+
 SWEP.CustomizePos = Vector(6.88, -2.073, 1.12)
 SWEP.CustomizeAng = Vector(21.361, 35.674, 25.371)
 
-SWEP.LaserPosAdjust = Vector(0, 0, 0)
+SWEP.CustomizePos_Akimbo = Vector(0, 0, -7.5)
+SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
+
+SWEP.LaserPosAdjust = Vector(6.05, 40, -4.3)
 SWEP.LaserAngAdjust = Angle(0, 0, 0)
 
 --Sight Positions
 
 	SWEP.IronsightPos = Vector(-3.0865, -0.9268, 1.5287)
 	SWEP.IronsightAng = Vector(0, 0, 0)
+
+	SWEP.TacStancePos = Vector(-4.698, -0.9268, 0.786)
+	SWEP.TacStanceAng = Vector(0, 0, -45)
+
+	SWEP.BackupSights = {
+	["too_optic_tacstance"] = {[1] = Vector(-3.0865, -0.9268, 1.5287), [2] = Vector(0,0,0)}}
 
 --Select and kill icon (Temporary)
 SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw2_MW2CR_1887")
@@ -67,16 +79,34 @@ SWEP.HoldBoltWhileEmpty = false
 SWEP.DontHoldWhenReloading = true
 SWEP.BoltBonePositionRecoverySpeed = 15
 
+SWEP.MaterialIndexPrimary = {0, 1}
+SWEP.MaterialIndexSecondary = {2}
+
+/*
+0 - Barrel and magazine tube
+1 - Receiver
+2 - Wooden Handguard
+*/
+
+SWEP.BaseArm = "j_shoulder_le"
+
 SWEP.ForegripOverride = true
 SWEP.ForegripOverridePos = {
-["null"] = {},
-
-["customize"] = {
-	["j_shoulder_le"] = { scale = Vector(1.1, 1.1, 1.1), pos = Vector(-0.038, 2.628, -6.242), angle = Angle(-35.389, 0, 0) },
-} 
+	["akimbo"] = {
+        ["j_shoulder_le"] = { scale = Vector(1, 1, 1), pos = Vector(0, -50, 0), angle = Angle(0, 0, 0) }},
+    ["nah"] = {
+        ["j_shoulder_le"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }},
+	["customize"] = {
+		["j_shoulder_le"] = { scale = Vector(1.1, 1.1, 1.1), pos = Vector(-0.038, 2.628, -6.242), angle = Angle(-35.389, 0, 0) }} 
 }
 
-SWEP.AttachmentModelsVM = {}
+SWEP.AttachmentModelsVM = {
+
+	["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "tag_silencer", rel = "", pos = Vector(11.429, 0.001, 1.392), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(28.871, 0, 4.363), angle = Angle(0, 0, 0), size = Vector(1.1, 1.1, 1.1), bone = "tag_silencer"},
+
+	["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-14.499, -4.358, 8.66), angle = Angle(0, 0, 0), size = Vector(1.9, 1.9, 1.9), bone = "tag_weapon"},
+}
 
 end
 
@@ -92,20 +122,53 @@ insert_one = "reg_reload_loop_alt",
 reload_end = "reg_reload_end",
 idle = "reg_idle",
 draw = "reg_draw",
+holster = "reg_holster"
+}
+
+SWEP.Animations_Akimbo = {
+fire = "reg_fire",
+rechamber = "reg_rechamber",
+rechamber_onehand = "reg_reload_end",
+reload_start = "reg_reload_start",
+reload_start_one = "reg_reload_start_alt",
+reload_start_empty = "reg_reload_start_empty",
+insert = "reg_reload_loop",
+insert_one = "reg_reload_loop_alt",
+reload_end = "reg_reload_end",
+idle = "reg_idle",
+draw = "reg_draw",
 holster = "reg_holster",
+
+fire_right = "reg_fire",
+rechamber_right = "reg_rechamber",
+rechamber_onehand_right = "reg_reload_end",
+reload_start_right = "reg_reload_start",
+reload_start_one_right = "reg_reload_start_alt",
+reload_start_empty_right = "reg_reload_start_empty",
+insert_right = "reg_reload_loop",
+insert_one_right = "reg_reload_loop_alt",
+reload_end_right = "reg_reload_end",
+idle_right = "reg_idle",
+draw_right = "reg_draw",
+holster_right = "reg_holster",
 }
 
 --Customization Information
 SWEP.CustomizationMenuScale = 0.0175
 
-SWEP.Attachments = {
-[1] = {header = loc('mw2cr_att_sight'), offset = SWEP.ScopePos, atts = {
-}},
+SWEP.Trivia = {text = "Designed by the legendary John Browning, this lever-action shotgun proves reliable even to this day.", x = -200, y = -350}
 
+SWEP.Attachments = {
+[1] = {header = "Sight", offset = {600, -150}, atts = {"too_optic_tacstance"}},
+[2] = {header = "Muzzle", offset = {-700, -150}, atts = {"doi_atow_unisuppressor", "md_saker"}},
+[3] = {header = "Laser", offset = {-600, 300}, atts = {"ins2_atow_clamplaser"}},
+[4] = {header = "Technique", offset = {500, 600}, atts = {"cw_akimbo"}},
+[5] = {header = "Skins", offset = {1400, 200}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+["+reload"] = {header = "Ammo", offset = {1200, 550}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }
 
 --Other information
-SWEP.SpeedDec = 25 --Speed decrease on equip
+SWEP.SpeedDec = 15 --Speed decrease on equip
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -132,6 +195,9 @@ SWEP.ViewModelFlip = false
 SWEP.ViewModel = "models/weapons/ma85_mw2cr/1887/viewmodel.mdl"
 SWEP.WorldModel = "models/weapons/w_annabelle.mdl"
 
+SWEP.ViewModel_AkimboL = "models/weapons/ma85_mw2cr/1887/viewmodel.mdl"
+SWEP.ViewModel_AkimboR = "models/weapons/ma85_mw2cr/1887/viewmodel.mdl"
+
 SWEP.Spawnable = true
 SWEP.AdminSpawnable = true
 
@@ -141,7 +207,7 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.Automatic_Orig = SWEP.Primary.Automatic
 SWEP.Primary.Ammo = "12 Gauge"
 
-SWEP.FireDelay = 60/40
+SWEP.FireDelay = 60/45
 
 SWEP.Recoil = 2.5
 
@@ -151,7 +217,7 @@ SWEP.ShotgunReloadState = 0
 SWEP.HipSpread = 0
 SWEP.AimSpread = 0
 
-SWEP.ClumpSpread = 0.04
+SWEP.ClumpSpread = 0.02
 
 SWEP.VelocitySensitivity = 1
 SWEP.MaxSpreadInc = 0.001
@@ -166,26 +232,27 @@ SWEP.ADSFireAnim = true
 
 SWEP.PenMod = 0.1
 
-SWEP.RechamberTime = 1.15
-
-SWEP.RechamberSpeed = 1
+SWEP.SemiAutoQueuedShot = false
+SWEP.SemiAutoTriggerBuffer = 0
+SWEP.SemiAutoTriggerBufferUntil = 0
+SWEP.RechamberTime = 1
+SWEP.RechamberSpeed = 1.25
 
 --Damage
-SWEP.Shots = 8
-SWEP.Damage = 35
-SWEP.PushForce = 5
+SWEP.Shots = 12
+SWEP.Damage = 16
 
 --Shotgun Stuff
 SWEP.ShotgunReload = 1
 
-SWEP.ReloadSpeed = 1.15
+SWEP.ReloadSpeed = 1.25
 SWEP.ReloadStartTime = 1.825
 SWEP.ReloadStartEmptyTime = 1.925
 SWEP.InsertShellTime = 1.1
 SWEP.ReloadFinishWait = 1.45
 
-SWEP.EffectiveRange_Orig = 25 * 39.37
-SWEP.DamageFallOff_Orig = 0.6
+SWEP.EffectiveRange_Orig = 20 * 39.37
+SWEP.DamageFallOff_Orig = 0.7
 
 SWEP.SnapToIdlePostReload = false
 SWEP.UseMW2CRShotgunReloadLogic = true
@@ -284,19 +351,49 @@ reg_reload_end = {
 
 }
 
-function SWEP:fireAnimFunc()
+function SWEP:fireAnimFunc(rightSide)
+	self.mw2crAllowImmediateReload = self:Clip1() <= 1
+
+	if self.isDualwield then
+		if rightSide then
+			self:sendWeaponAnim("fire_right", self.FireAnimSpeed, 0, false, 1)
+			if self.Animations and self.Animations.rechamber then
+				if self:Clip1() > 1 then
+					timer.Simple(0.2, function()
+						if IsValid(self) then
+							self:sendWeaponAnim("rechamber_onehand_right", self.RechamberSpeed or 1, 0, true, 1)
+						end
+					end)
+				end
+			end
+			return
+		end
+
+		self:sendWeaponAnim("fire", self.FireAnimSpeed, 0, false, nil)
+		if self.Animations and self.Animations.rechamber then
+			if self:Clip1() > 1 then
+				timer.Simple(0.2, function()
+					if IsValid(self) then
+						self:sendWeaponAnim("rechamber_onehand", self.RechamberSpeed or 1, 0, true)
+					end
+				end)
+			end
+		end
+		return
+	end
+
 	self:sendWeaponAnim("fire", self.FireAnimSpeed)
 
 	if self.Animations and self.Animations.rechamber then
 		if self:Clip1() > 1 then
-
 			timer.Simple(0.2, function()
 				if IsValid(self) and self:Clip1() % 2 == 0 then
 					self:sendWeaponAnim("rechamber", self.RechamberSpeed/1.25 or 1, 0, true)
 				else
-					self:sendWeaponAnim("rechamber_onehand", self.RechamberSpeed or 1, 0, true)
-					if IsValid(wep) then
-						wep:CreateShell()
+					if self:isAiming() then
+						self:sendWeaponAnim("rechamber", self.RechamberSpeed/1.25 or 1, 0, true)
+					else
+						self:sendWeaponAnim("rechamber_onehand", self.RechamberSpeed or 1, 0, true)
 					end
 				end
 			end)
@@ -304,22 +401,30 @@ function SWEP:fireAnimFunc()
 	end
 end
 
+function SWEP:postPrimaryAttack()
+	if self.mw2crAllowImmediateReload then
+		self.ReloadWait = CurTime()
+		self.mw2crAllowImmediateReload = false
+	end
+end
+
 function SWEP:IndividualThink()
+	self.EffectiveRange = 20 * 39.37
+	self.DamageFallOff = .7
+    self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
+    self.HipSpread = 0
 
-local attachment = self.ActiveAttachments
-if CLIENT then
-
-triviapos = {X = 0, Y = -100}
-
-self.Trivia = {text = "Hi!"}
-
-	if self.dt.State == CW_CUSTOMIZE then
-		self.ForegripParent = "customize"
-	else
-		self.ForegripParent = "null"
+    if (self.ActiveAttachments.am_slugrounds) then
+        self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
+        self.HipSpread = 0.07
 	end
 
-end
+	if self.ActiveAttachments.cw_akimbo then
+		self.ViewModelOffsetPos = Vector(2, 0, 0)
+		self.ViewModelOffsetAng = Angle(0, 0, 0)
+		self.ViewModelOffsetPos2 = Vector(-2, 0, 0)
+		self.ViewModelOffsetAng2 = Angle(0, 0, 0)
+	end
 
 end
 

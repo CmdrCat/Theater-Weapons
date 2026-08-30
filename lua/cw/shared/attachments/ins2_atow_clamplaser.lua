@@ -13,8 +13,8 @@ MaxSpreadIncMult = -0.25}
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/anpeq15")
 	att.description = {}
-	local beam = Material("cw2/reticles/aim_reticule")
-	local laserDot = Material("cw2/reticles/aim_reticule")
+	local beam = Material("effects/laser1")
+	local laserDot = Material("sprites/glow04_noz")
 	
 	att.reticle = "cw2/reticles/aim_reticule"
 	local td = {}
@@ -60,18 +60,19 @@ if CLIENT then
 			self.lastLaserPos = tr.HitPos
 		end
 		
-		local dist = math.Clamp(att.laserRange * tr.Fraction, 0, att.laserBeamRange)
-		
-		if util.PointContents(tr.HitPos) != CONTENTS_SOLID and not self.NearWall then
+		local dist = att.laserRange * tr.Fraction
+			local uv = math.max(dist / 32, 1)
+			
+			if util.PointContents(tr.HitPos) != CONTENTS_SOLID and not self.NearWall then
 			local renderColor = self:getSightColor(att.name)
 			local laserHQ = GetConVarNumber("cw_laser_quality") > 1
 			
-			-- draw the beam
-			renderColor.a = 100
+			render.SetBlend(1)
+			renderColor.a = 255
 			render.SetMaterial(beam)
 			
-			render.DrawBeam(laserPos + fw, laserPos + fw * dist, 0.1, 0, 0.99, renderColor)
-			
+			render.DrawBeam(laserPos + fw, tr.HitPos, 1, 1, 0, renderColor)
+
 			if laserHQ then
 				renderColor.a = 50
 				render.DrawBeam(laserPos + fw, laserPos + fw * dist, 0.6, 0, 0.99, renderColor)
@@ -79,8 +80,8 @@ if CLIENT then
 				renderColor.a = 25
 				render.DrawBeam(laserPos + fw, laserPos + fw * dist, 1, 0, 0.99, renderColor)
 			end
+			render.SetBlend(1)
 			
-			-- draw the dot if the model is not out of world bounds
 			renderColor.a = 255
 			
 			render.SetMaterial(laserDot)

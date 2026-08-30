@@ -865,14 +865,24 @@ function SWEP:applyOffsetToVM()
 
 	local leftReloadFrac = 0
 	local rightReloadFrac = 0
+	local leftSequence = self.Sequence or ""
+	local leftReloadEnd = leftSequence == self.Animations.reload_end or (self.Animations.rechamber_onehand and leftSequence == self.Animations.rechamber_onehand)
 
 	-- apply reload-down fraction for dualwield or when a weapon requests solo reload-down
-	if (self.isDualwield or self.allowSoloReloadDown) and self.IsReloading and self.Cycle <= 0.98 then
+	if (self.isDualwield or self.allowSoloReloadDown) and self.IsReloading and self.Cycle <= 0.98 and not leftReloadEnd then
 		leftReloadFrac = math.sin(math.Clamp(self.Cycle, 0, 1) * math.pi)
 	end
 
-	if self.isDualwield and self.RightReloadDelay and CurTime() < self.RightReloadDelay and self.CW_VM2 then
-		rightReloadFrac = math.sin(math.Clamp(self.CW_VM2:GetCycle(), 0, 1) * math.pi)
+	if self.isDualwield and self.CW_VM2 then
+		local rightSequence = self.CW_VM2:GetSequenceName(self.CW_VM2:GetSequence()) or ""
+		local rightReloadEnd = rightSequence == (self.Animations.reload_end_right or self.Animations.reload_end) or (self.Animations.rechamber_onehand_right and rightSequence == self.Animations.rechamber_onehand_right)
+		local rightReloading = rightSequence and (rightSequence:find("reload") ~= nil or rightSequence:find("insert") ~= nil or rightSequence:find("pump") ~= nil)
+		if not rightReloading and self.RightShotgunReloadState ~= 0 and self.RightReloadDelay and CurTime() < self.RightReloadDelay then
+			rightReloading = true
+		end
+		if rightReloading and self.CW_VM2:GetCycle() <= 0.98 and not rightReloadEnd then
+			rightReloadFrac = math.sin(math.Clamp(self.CW_VM2:GetCycle(), 0, 1) * math.pi)
+		end
 	end
 
 	local baseLeftPos = self.ViewModelOffsetPos
@@ -1394,10 +1404,19 @@ function SWEP:performViewmodelMovement()
 	
 	self.Cycle = vm:GetCycle()
 	self.Sequence = vm:GetSequenceName(vm:GetSequence())
-	self.IsReloading = (self.Sequence == self.Animations.reload or self.Sequence == self.Animations.reload_empty or self.Sequence == self.Animations.reload_start or self.Sequence == self.Animations.reload_end)
+	self.IsReloading = (
+		self.Sequence == self.Animations.reload or
+		self.Sequence == self.Animations.reload_empty or
+		self.Sequence == self.Animations.reload_start or
+		self.Sequence == self.Animations.reload_end or
+		self.Sequence == self.Animations.insert or
+		self.Sequence == self.Animations.insert_one or
+		(self.Animations.reload_start_one and self.Sequence == self.Animations.reload_start_one) or
+		(self.Animations.reload_start_empty and self.Sequence == self.Animations.reload_start_empty)
+	)
 	
-	if not self.IsReloading then
-		self.IsReloading = self.Sequence:find("insert")
+	if not self.IsReloading and self.Sequence then
+		self.IsReloading = self.Sequence:find("reload") ~= nil
 	end
 	
 	if not self.IsReloading then

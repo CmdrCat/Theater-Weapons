@@ -1187,6 +1187,8 @@ function SWEP:beginRightReload()
 
 	if self.ShotgunReload then
 		local reloadHalt = CT + self.ReloadStartTime / self.ReloadSpeed
+		local altReloadSpeed = (self.Altmode and self.Altmode.ReloadSpeed) or self.ReloadSpeed or 1
+		self.RightWasEmpty = mag == 0
 
 	--	self.GlobalDelay = reloadHalt
 		self.RightReloadDelay = reloadHalt
@@ -1195,12 +1197,18 @@ function SWEP:beginRightReload()
 		self.RightShotgunReloadState = 1
 		self.RightForcedReloadStop = false
 
-		if self.Animations["reload_start_empty"] and self:Clip2() == 0 then
-			self:sendWeaponAnim( "reload_start_empty", self.Altmode.ReloadSpeed, 0, false, 1 )
+		if self.Animations["reload_start_empty_right"] and self:Clip2() == 0 then
+			self:sendWeaponAnim( "reload_start_empty_right", altReloadSpeed, 0, false, 1 )
+		elseif self.Animations["reload_start_empty"] and self:Clip2() == 0 then
+			self:sendWeaponAnim( "reload_start_empty", altReloadSpeed, 0, false, 1 )
+		elseif self.Animations["reload_start_one_right"] and self:Clip2() == 1 then
+			self:sendWeaponAnim( "reload_start_one_right", altReloadSpeed, 0, false, 1 )
 		elseif self.Animations["reload_start_one"] and self:Clip2() == 1 then
-			self:sendWeaponAnim( "reload_start_one", self.Altmode.ReloadSpeed, 0, false, 1 )
+			self:sendWeaponAnim( "reload_start_one", altReloadSpeed, 0, false, 1 )
+		elseif self.Animations["reload_start_right"] then
+			self:sendWeaponAnim( "reload_start_right", altReloadSpeed, 0, false, 1 )
 		else
-			self:sendWeaponAnim( "reload_start", self.Altmode.ReloadSpeed, 0, false, 1 )
+			self:sendWeaponAnim( "reload_start", altReloadSpeed, 0, false, 1 )
 		end
 
 		if SERVER then
@@ -1812,6 +1820,100 @@ function SWEP:Think()
 				end
 			end
 		end
+
+		if self.RightShotgunReloadState == 1 then
+			if self.Owner:KeyPressed(IN_ATTACK) and self:Clip2() ~= 0 then
+				self.RightShotgunReloadState = 2
+				self.RightForcedReloadStop = true
+			end
+			
+			if CT > self.RightReloadDelay then
+				if self.Animations["insert_one_right"] and self:Clip2() == 1 then
+					self:sendWeaponAnim("insert_one_right", self.ReloadSpeed, 0, false, 1)
+				elseif self.Animations["insert_right"] then
+					self:sendWeaponAnim("insert_right", self.ReloadSpeed, 0, false, 1)
+				elseif self.Animations["insert_one"] and self:Clip2() == 1 then
+					self:sendWeaponAnim("insert_one", self.ReloadSpeed, 0, false, 1)
+				else
+					self:sendWeaponAnim("insert", self.ReloadSpeed, 0, false, 1)
+				end
+				
+				if SERVER and not SP then
+					self.Owner:SetAnimation(PLAYER_RELOAD)
+				end
+				
+				mag, ammo = self:Clip2(), self.Owner:GetAmmoCount(self.Secondary.Ammo)
+				
+				if SERVER then
+					self:SetClip2(mag + 1)
+					self.Owner:SetAmmo(ammo - 1, self.Secondary.Ammo)
+				end
+				
+				self.RightReloadDelay = CT + self.InsertShellTime / self.ReloadSpeed
+				
+				local maxReloadAmount = self.Secondary.ClipSize
+				if self.Chamberable and not self.RightWasEmpty then
+					maxReloadAmount = self.Secondary.ClipSize + 1
+				end
+				
+				if mag + 1 == maxReloadAmount or ammo - 1 == 0 then
+					self.RightShotgunReloadState = 2
+				end
+			end
+		elseif self.RightShotgunReloadState == 2 then
+			if self.Owner:KeyPressed(IN_ATTACK) then
+				self.RightShotgunReloadState = 2
+				self.RightForcedReloadStop = true
+			end
+			
+			if CT > self.RightReloadDelay then
+				if self.UseMW2CRShotgunReloadLogic then
+					if not self.RightWasEmpty then
+						if self.Animations["reload_end_right"] then
+							self:sendWeaponAnim("reload_end_right", self.ReloadSpeed, 0, false, 1)
+						else
+							self:sendWeaponAnim("reload_end", self.ReloadSpeed, 0, false, 1)
+						end
+						self.RightShotgunReloadState = 0
+						
+						local time = self.ReloadFinishWait / self.ReloadSpeed
+						self:SetNextSecondaryFire(time)
+						self.RightReloadDelay = nil
+					else
+						local canInsertMore = false
+						local waitTime = self.ReloadFinishWait
+						
+						if not self.RightForcedReloadStop and self.Chamberable and self:Clip2() < self.Secondary.ClipSize + 1 and self.Owner:GetAmmoCount(self.Secondary.Ammo) > 0 then
+							waitTime = self.PumpMidReloadWait or waitTime
+							canInsertMore = true
+						end
+						
+						if self.Animations["reload_end_pump_right"] then
+							self:sendWeaponAnim("reload_end_pump_right", self.ReloadSpeed, 0, false, 1)
+						elseif self.Animations["reload_end_right"] then
+							self:sendWeaponAnim("reload_end_right", self.ReloadSpeed, 0, false, 1)
+						else
+							self:sendWeaponAnim("reload_end", self.ReloadSpeed, 0, false, 1)
+						end
+						self.RightShotgunReloadState = 0
+						
+						local time = CT + waitTime / self.ReloadSpeed
+						self:SetNextSecondaryFire(time)
+						
+						if not canInsertMore then
+							self.RightReloadDelay = nil
+						else
+							self.RightReloadDelay = time
+						end
+						
+						if canInsertMore then
+							self.RightShotgunReloadState = 1
+							self.RightWasEmpty = false
+						end
+					end
+				end
+			end
+		end
 	end
 	
 	if SERVER then
@@ -2029,9 +2131,36 @@ function SWEP:playRechamberAnim()
 	end
 
 	local anim = self.Animations.rechamber
+	local rightAnim = self.Animations.rechamber_right or self.Animations.rechamber_onehand_right
+
+	if self.isDualwield then
+		if self.Animations.rechamber_onehand then
+			self:sendWeaponAnim(self.Animations.rechamber_onehand, self.RechamberSpeed or 1, 0, true)
+		end
+		if rightAnim then
+			self:sendWeaponAnim(rightAnim, self.RechamberSpeed or 1, 0, true, 1)
+		end
+		return true
+	end
 
 	self:sendWeaponAnim(anim, self.RechamberSpeed or 1, 0, true)
 	return true
+end
+
+function SWEP:playAkimboFireAnim()
+	if not self:shouldPlayFireAnim() then
+		return
+	end
+
+	if self.fireAnimFunc then
+		self:fireAnimFunc()
+		return
+	end
+
+	self:sendWeaponAnim("fire", self.FireAnimSpeed or 1, 0, true)
+	if self.Animations and self.Animations.fire_right then
+		self:sendWeaponAnim("fire_right", self.FireAnimSpeed or 1, 0, true, 1)
+	end
 end
 
 function SWEP:getFireSound()
@@ -2181,7 +2310,11 @@ function SWEP:PrimaryAttack()
 				end
 			end
 
-			if self:Clip2() == 1 and self.Animations["fire_last_right"] then
+			if self.fireAnimFunc then
+				if self:shouldPlayFireAnim() then
+					self:fireAnimFunc(true)
+				end
+			elseif self:Clip2() == 1 and self.Animations["fire_last_right"] then
 				self:sendWeaponAnim( "fire_last", self.FireAnimSpeed or 1, 0, true, 1 )
 			else
 				self:sendWeaponAnim( "fire", self.FireAnimSpeed or 1, 0, true, 1 )
@@ -2284,7 +2417,9 @@ function SWEP:PrimaryAttack()
 			self:EmitSound(self.FireSound, 105, 100)
 		end
 		
-		if self.fireAnimFunc then
+		if self.isDualwield then
+			self:playAkimboFireAnim()
+		elseif self.fireAnimFunc then
 			if self:shouldPlayFireAnim() then
 				self:fireAnimFunc()
 			end
@@ -2619,7 +2754,11 @@ if self.isDualwield then
 				end
 			end
 
-			if self:Clip1() == 1 and self.Animations["fire_last"] then
+			if self.fireAnimFunc then
+				if self:shouldPlayFireAnim() then
+					self:fireAnimFunc(false)
+				end
+			elseif self:Clip1() == 1 and self.Animations["fire_last"] then
 				self:sendWeaponAnim( "fire_last", self.FireAnimSpeed or 1, 0, true )
 			else
 				self:sendWeaponAnim( "fire", self.FireAnimSpeed or 1, 0, true )
