@@ -106,7 +106,7 @@ SWEP.Attachments = {[5] = {header = "Model", offset = {950, -500}, atts = {"doi_
 [4] = {header = "Accessory", offset = {-700, -500}, atts = {"doi_atow_sling"}},
 [2] = {header = "Fire Control", offset = {200, -500}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
 [3] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_stensuppressor", "doi_atow_unisuppressor","hard20"}},
-[1] = {header = "Sight", offset = {-700, -150}, atts = {"md_reflex"}},
+[1] = {header = "Sight", offset = {-700, -150}, atts = {"doi_atow_altsightmk5", "md_reflex"}},
 [6] = {header = "Laser", offset = {200, -125}, atts = {"ins2_atow_clamplaser", "md_anpeq15", "ftacgrimline" }},
 [7] = {header = "Foregrip", offset = {950, 0}, atts = {"ftactiger_r", "bruentiltgrip_r", 
 --"md_foregrip"
@@ -114,8 +114,12 @@ SWEP.Attachments = {[5] = {header = "Model", offset = {950, -500}, atts = {"doi_
 
 ["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
+SWEP.AttachmentExclusions = {
+	["doi_atow_altsightmk5"] = {"doi_atow_stenmk5"}
+}
+
 SWEP.AttachmentPosDependency = {
-	["ins2_atow_clamplaser"] = {["doi_atow_stenmk5"] = Vector(-5.85, -10.5, 4.65),["doi_atow_stensuppressor"] = Vector(-5.85, -8.5, 4.25),},
+	["ins2_atow_clamplaser"] = {["doi_atow_stenmk5"] = Vector(-5.85, -10.5, 4.65), ["doi_atow_altsightmk5"] = Vector(-5.85, -10.5, 4.65), ["doi_atow_stensuppressor"] = Vector(-5.85, -8.5, 4.25),},
 }
 
 SWEP.ForegripOverridePos = {
