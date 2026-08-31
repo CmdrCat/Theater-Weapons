@@ -83,6 +83,9 @@ if CLIENT then
 	},
 	}
 
+	-- The 40-round magazine is a native choice in bodygroup 1. Keep both
+	-- animated bones at their original scale for reloads and inspection.
+
 	SWEP.AttachmentModelsVM = {
 		--Optics
 		["xrkonpoint"] = { type = "Model", model = "models/shared/optics/r_xrkonpoint.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.741, 1.863), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -334,6 +337,9 @@ end
 
 self:setBodygroup(self.FrontBGs.main, self.FrontBGs.fs)
 self:setBodygroup(self.SightBGs.main, self.SightBGs.on)
+
+-- Select only the standard or 40-round native magazine meshes.
+self:setBodygroup(1, self.ActiveAttachments.md_uecw_emag and 1 or 0)
 
 if self.ActiveAttachments.nofs2 or self.ActiveAttachments.xrkonpoint or self.ActiveAttachments.md_nightforce_nxs then
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.none)

@@ -93,23 +93,23 @@ function ENT:PhysicsCollide(data, physobj)
 end
 
 -- Gunship workaround
+local gunship = { ["npc_combinegunship"] = true, ["npc_combinedropship"] = true }
+
 function ENT:Think()
-
 	-- Gunships dont have actual collisions. Periodically fire a trace in front of us and try to blow up near them.
+	local now = CurTime()
+	if !self.GunshipCheck or self.GunshipCheck < now then
+		self.GunshipCheck = now + 0.33
+		local tr = util.TraceLine({
+			start = self:GetPos(),
+			endpos = self:GetPos() + (self:GetVelocity() * 6 * engine.TickInterval()),
+			filter = self,
+			mask = MASK_SHOT
+		})
 
-    local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
-    if SERVER and (self.GunshipCheck or 0 < CurTime()) then
-            self.GunshipCheck = CurTime() + 0.33
-            local tr = util.TraceLine({
-                start = self:GetPos(),
-                endpos = self:GetPos() + (self:GetVelocity() * 6 * engine.TickInterval()),
-                filter = self,
-                mask = MASK_SHOT
-            })
-        if IsValid(tr.Entity) and gunship[tr.Entity:GetClass()] then
-            self:SetPos(tr.HitPos)
-            self:PhysicsCollide()
-        end
-    end
-
+		if IsValid(tr.Entity) and gunship[tr.Entity:GetClass()] then
+			self:SetPos(tr.HitPos)
+			self:PhysicsCollide()
+		end
+	end
 end

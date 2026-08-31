@@ -124,6 +124,9 @@ if CLIENT then
 
 
 	
+	-- Magazines are native choices in bodygroup 1. Keep both animated bones
+	-- at their original scale for reloads and inspection.
+
 	SWEP.AttachmentModelsVM = {
 		--Lasers
 		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "weapon", rel = "", pos = Vector(-0.036, -2.893, 9.272), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -152,7 +155,7 @@ if CLIENT then
 		["md_mcxshrike"] = { type = "Model", model = "models/kali/weapons/csgo/eq_dsr50_suppressor.mdl", bone = "weapon", rel = "", pos = Vector(-0.006, -1.376, -1.85), angle = Angle(90, 0, 0), size = Vector(0.736, 0.736, 0.736), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		--Handguards
 		["bruenechelon"] = { type = "Model", model = "models/shared/wparts/m13/cw_reshed_att_bruenechelon.mdl", bone = "weapon", rel = "", pos = Vector(3, -4.7, -17), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["bruenbm20"] = { type = "Model", model = "models/shared/wparts/m13/cw_reshed_att_bruenbm20.mdl", bone = "weapon", rel = "", pos = Vector(3, -4.7, -17), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+		["bruenbm20"] = { type = "Model", model = "models/shared/wparts/m13/cw_reshed_att_bruenbm20.mdl", bone = "weapon", rel = "", pos = Vector(3, -4.7, -17), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
 
 
@@ -248,7 +251,7 @@ SWEP.Attachments = {
 	[5] = {header = "Bottom Rail Short", offset = {-700 , 50},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},
 	[9] = {header = "Front Sights", offset = {0 , -50},  atts = {"nofs"}},
 	[3] = {header = "Handguard", offset = {-700 , 550},  atts = {"bruenechelon", "bruenbm20"}},
-	[7] = {header = "Magazine", offset = {1200, 550},  atts = {"md_uecw_emag"}},
+	[7] = {header = "Magazine", offset = {1200, 550},  atts = {"md_uecw_emag", "md_uecw_60rnd"}},
 	[8] = {header = "Conversion", offset = {100, 550},  atts = {"r_mwii_300blk"}},
 	["+use"] = {header = "Skins", offset = {0, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
@@ -398,6 +401,9 @@ end
 
 self:setBodygroup(self.FrontBGs.main, self.FrontBGs.med)
 self:setBodygroup(self.SightBGs.main, self.SightBGs.on)
+
+-- The original model drives both magazine meshes through every animation.
+self:setBodygroup(1, self.ActiveAttachments.md_uecw_60rnd and 2 or self.ActiveAttachments.md_uecw_emag and 1 or 0)
 
 if self.ActiveAttachments.bruenechelon then
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.long)

@@ -19,19 +19,40 @@ end
 
 if CustomizableWeaponry.preset.enabled then
 	if SERVER then
+		local MAX_PRESET_NAME_LENGTH = 96
+		local MAX_PRESET_DATA_LENGTH = 65536
+		local PRESET_REQUEST_INTERVAL = 0.25
+
 		net.Receive(CustomizableWeaponry.preset.networkString, function(len, ply)
-			-- read and decode the received string
+			-- Read and validate the request before JSON decoding to avoid needless
+			-- server work from malformed or repeated preset requests.
 			local name_sv = net.ReadString()
-			local data = net.ReadString()
-			data = util.JSONToTable(data)
-			
+			local encoded = net.ReadString()
 			local wep = ply:GetActiveWeapon()
-			
 			-- make sure we're trying to load the preset onto a CW 2.0 weapon
-			if not IsValid(wep) or not wep.CW20Weapon then
+			if !IsValid(ply) or !IsValid(wep) or !wep.CW20Weapon then
+				return
+			end
+
+			if !isstring(name_sv) or #name_sv > MAX_PRESET_NAME_LENGTH then
+				return
+			end
+
+			if !isstring(encoded) or #encoded == 0 or #encoded > MAX_PRESET_DATA_LENGTH then
 				return
 			end
 			
+			local now = CurTime()
+			if now < (ply.CW20NextPresetRequest or 0) then
+				return
+			end
+			ply.CW20NextPresetRequest = now + PRESET_REQUEST_INTERVAL
+
+			local data = util.JSONToTable(encoded)
+			if !istable(data) or !isstring(data.wepClass) then
+				return
+			end
+
 			if (wep.ThisClass or wep:GetClass()) ~= data.wepClass then
 				return
 			end
@@ -40,8 +61,11 @@ if CustomizableWeaponry.preset.enabled then
 		end)
 		
 		net.Receive(CustomizableWeaponry.preset.presetSavedString, function(len, ply)
-			-- read and decode the received string
+			-- A save only needs the preset name. Bound it before touching weapon state.
 			local presetName = net.ReadString()
+			if !isstring(presetName) or #presetName > MAX_PRESET_NAME_LENGTH then
+				return
+			end
 			
 			local wep = ply:GetActiveWeapon()
 			
