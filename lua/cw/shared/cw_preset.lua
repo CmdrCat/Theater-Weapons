@@ -61,16 +61,16 @@ if CustomizableWeaponry.preset.enabled then
 		end)
 		
 		net.Receive(CustomizableWeaponry.preset.presetSavedString, function(len, ply)
-			-- A save only needs the preset name. Bound it before touching weapon state.
+			-- Bound the preset name before touching weapon state.
 			local presetName = net.ReadString()
+			local wep = net.ReadEntity()
 			if !isstring(presetName) or #presetName > MAX_PRESET_NAME_LENGTH then
 				return
 			end
 			
-			local wep = ply:GetActiveWeapon()
-			
-			-- make sure we're trying to load the preset onto a CW 2.0 weapon
-			if not IsValid(wep) or not wep.CW20Weapon then
+			-- Debounced saves can finish after the player has switched weapons, so
+			-- use the weapon that was actually saved instead of the active weapon.
+			if !IsValid(ply) or !IsValid(wep) or !wep.CW20Weapon or wep:GetOwner() != ply then
 				return
 			end
 
@@ -231,6 +231,7 @@ function CustomizableWeaponry.preset:save(name)
 		-- let the server know that we've saved a preset, so that when we try to remove it, it'll remove it rather than re-equip it
 		net.Start(CustomizableWeaponry.preset.presetSavedString)
 			net.WriteString(name)
+			net.WriteEntity(self)
 		net.SendToServer()
 	end
 end
@@ -389,7 +390,7 @@ if CLIENT then
 	end
 end
 
-function CustomizableWeaponry.preset:load(data, name_sv)
+function CustomizableWeaponry.preset:load(data, name_sv, forceApply)
 	if not CustomizableWeaponry.customizationEnabled then
 		return false
 	end
@@ -434,7 +435,7 @@ function CustomizableWeaponry.preset:load(data, name_sv)
 	
 	if SERVER then
 		-- if our preset names don't match, that means we want to switch to a new one
-		if self.LastPreset ~= name_sv then
+		if forceApply or self.LastPreset ~= name_sv then
 			-- we need to set up a load order, since some attachments depend on others
 			local loadOrder = {}
 			

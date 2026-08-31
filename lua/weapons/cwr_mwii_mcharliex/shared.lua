@@ -245,7 +245,7 @@ SWEP.AttachmentPosDependency = {
 SWEP.Attachments = {
 
 	[1] = {header = "Optic", offset = {1200 , -450},  atts = {"xrkonpoint", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs", "too_optic_tacstance"}},
-	[6] = {header = "Tac - Top", offset = {320 , -450},  atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {shroudhg = true}},
+	[6] = {header = "Tac - Top", offset = {320 , -450},  atts = {"ftacgrimline", "md_anpeq15"}},
 	[2] = {header = "Muzzle", offset = {-700 , -450},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_mcxshrike"}},
 	[4] = {header = "Bottom Rail Long", offset = {-700 , 50},  atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {bruenbm20 = true}},
 	[5] = {header = "Bottom Rail Short", offset = {-700 , 50},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},

@@ -181,7 +181,7 @@ SWEP.Attachments = {
 	{header = "Optic", offset = {950 , -600},  atts = {"xrkonpoint", "md_microt1", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs", "too_optic_tacstance"}},
 	{header = "Muzzle", offset = {-450 , -400},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}, dependencies = {saphoenix = true}},
 	{header = "Bottom Rail", offset = {-650 , 100},  atts = {"bruentiltgrip_r", "ftactiger_r","md_foregrip", "md_bipod"}},
-	{header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline", "md_anpeq15"}, exclusions = {shroudhg = true}},
+	{header = "Tac - Top", offset = {320 , -200},  atts = {"ftacgrimline", "md_anpeq15"}},
 	{header = "Barrel", offset = {220 , 250},  atts = {"saphoenix"}},
 	{header = "Front Sights", offset = {-300 , 575},  atts = {"nofs2"}, exclusions = {xrkonpoint = true, md_nightforce_nxs = true}},
 	{header = "Magazine", offset = {1200, 400},  atts = {"md_uecw_usgimag", "md_uecw_emag"}},
