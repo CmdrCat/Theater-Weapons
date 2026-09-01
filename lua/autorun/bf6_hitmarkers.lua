@@ -12,58 +12,58 @@ local hmpossv = CreateConVar("bf6_override_hitmarker_dynamic", "1", flags, "Over
 if SERVER then
     util.AddNetworkString("bf6_hitmark")
 
-    local npcheadshotted = false -- fuck you garry
+    -- Per-event state: one blocked/nested hit must not affect another victim.
+    local beforeDamage = setmetatable({}, {__mode = "k"})
+    local npcHeadshots = setmetatable({}, {__mode = "k"})
 
     local function hitmark(ent, dmginfo, took)
+        local before = beforeDamage[dmginfo]
+        local headshot = npcHeadshots[dmginfo]
+        beforeDamage[dmginfo], npcHeadshots[dmginfo] = nil, nil
+        if took ~= true or not IsValid(ent) or dmginfo:GetDamage() <= 0 then return end
         local attacker, inflictor = dmginfo:GetAttacker(), dmginfo:GetInflictor()
+        if not IsValid(attacker) then return end
         if attacker:IsVehicle() and IsValid(attacker:GetDriver()) then attacker = attacker:GetDriver() end
         local attply, vicply = attacker:IsPlayer(), ent:IsPlayer()
-        if (!attply and !vicply) then return end
+        if not attply then return end
         if inflictor == ent or attacker == ent then return end
         local vichp = ent:Health()
-        local ct = CurTime()
-        if ent.phm_lastHealth and ent.phm_lastHealth == vichp and (!took and (vichp <= 0 or attacker.phm_lastMarker and attacker.phm_lastMarker > ct) or dmginfo:GetDamage() == 0 or took) then return end
         local vicnpc = ent:IsNextBot() or ent:IsNPC()
 
         if IsValid(ent) and IsValid(attacker) and attply then
-            attacker.phm_lastMarker = ct + 0.5 -- stop fucking shooting shit you cant hurt
-            local distance = ent:GetPos():Distance(attacker:GetPos())
-            if dmginfo:GetDamage() == 0 then return end
-            local dmg = math.Clamp(math.ceil(ent.phm_lastHealth and ent.phm_lastHealth - vichp or dmginfo:GetDamage() * 0.025), 0, 1023)
             local sentient = vicply or vicnpc
-            local hitdata = 0
-            if sentient then hitdata = hitdata + 1 end
-            -- if (ent.LastHitGroup and ent:LastHitGroup() == HITGROUP_HEAD or npcheadshotted) then
-            --     hitdata = hitdata + 4
-                -- if ent.SetLastHitGroup then ent:SetLastHitGroup(HITGROUP_GENERIC) end
-            -- end
+            local amount = dmginfo:GetDamage()
+            if sentient and before and before.entity == ent then
+                amount = math.max(0, before.health - vichp)
+                if vicply then amount = amount + math.max(0, before.armor - ent:Armor()) end
+                if amount <= 0 then return end
+            end
+            local dmg = math.Clamp(math.ceil(amount), 0, 1023)
 
             -- if you making some gamemode you can add here check for distance and give more points/moneys for long kills
             net.Start("bf6_hitmark")
             net.WriteUInt(dmg or 0, 10) -- Damage
             net.WriteBool(sentient) -- Sentient (Player or npc) or prop
-            net.WriteBool(isfunction(ent.LastHitGroup) and ent:LastHitGroup() == HITGROUP_HEAD or npcheadshotted or false) -- Headshot
+            net.WriteBool((vicply and isfunction(ent.LastHitGroup) and ent:LastHitGroup() == HITGROUP_HEAD) or (headshot and headshot.entity == ent and headshot.head) or false) -- Headshot
             net.WriteBool(bit.band(dmginfo:GetDamageType(), DMG_BURN+DMG_DIRECT) == DMG_BURN+DMG_DIRECT or false) -- Burned, done on client
             net.WriteBool((sentient and vichp <= 0) or (ent:GetNWInt("PFPropHealth", 1) <= 0) or false) -- Was killed
             net.WriteEntity(ent) -- Who
             net.Send(attacker)
-            npcheadshotted = false
         end
     end
 
-    -- fuck you garry
     hook.Add("ScaleNPCDamage", "bf6_hitmarkers_npcheadshots", function(ent, hitgroup, dmginfo)
-        npcheadshotted = IsValid(ent) and IsValid(dmginfo:GetAttacker()) and dmginfo:GetAttacker():IsPlayer() and hitgroup == HITGROUP_HEAD
+        npcHeadshots[dmginfo] = {entity = ent, head = hitgroup == HITGROUP_HEAD}
     end)
 
     hook.Add("EntityTakeDamage", "profiteers_hitmarkers", function(target, dmginfo)
         -- largely copied idea from hit numbers
         if !target:IsValid() or dmginfo:GetDamage() <= 0 then return end
-        if dmginfo:GetAttacker():IsPlayer() and dmginfo:IsDamageType(DMG_BURN+DMG_SLOWBURN) then target.phm_lastAttacker = dmginfo:GetAttacker() end
-        if target.phm_lastAttacker and dmginfo:IsDamageType(DMG_BURN+DMG_SLOWBURN) then
+        if IsValid(dmginfo:GetAttacker()) and dmginfo:GetAttacker():IsPlayer() and dmginfo:IsDamageType(DMG_BURN+DMG_SLOWBURN) then target.phm_lastAttacker = dmginfo:GetAttacker() end
+        if IsValid(target.phm_lastAttacker) and dmginfo:IsDamageType(DMG_BURN+DMG_SLOWBURN) then
             dmginfo:SetAttacker(target.phm_lastAttacker)
         end
-        target.phm_lastHealth = target:Health() or 0
+        beforeDamage[dmginfo] = {entity = target, health = target:Health(), armor = target:IsPlayer() and target:Armor() or 0}
     end)
 
     hook.Add("PostEntityTakeDamage", "bf6_hitmarkers", hitmark)

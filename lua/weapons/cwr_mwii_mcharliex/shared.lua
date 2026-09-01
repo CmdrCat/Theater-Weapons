@@ -216,8 +216,9 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.MaterialIndexPrimary = {1, 2, 5, 6, 8}
-SWEP.MaterialIndexSecondary = {0, 3, 4, 7, 9}
+-- STANAG occupies material slot 7; retain the existing skin assignments.
+SWEP.MaterialIndexPrimary = {1, 2, 5, 6, 7, 9}
+SWEP.MaterialIndexSecondary = {0, 3, 4, 8, 10}
 
 SWEP.SightBGs = {main = 5 , on = 0 , none = 1}
 SWEP.BarrelBGs = {main = 3 , regular = 0 , none = 1}
@@ -251,7 +252,8 @@ SWEP.Attachments = {
 	[5] = {header = "Bottom Rail Short", offset = {-700 , 50},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},
 	[9] = {header = "Front Sights", offset = {0 , -50},  atts = {"nofs"}},
 	[3] = {header = "Handguard", offset = {-700 , 550},  atts = {"bruenechelon", "bruenbm20"}},
-	[7] = {header = "Magazine", offset = {1200, 550},  atts = {"md_uecw_emag", "md_uecw_60rnd"}},
+	-- Cosmetic STANAG keeps the standard 30-round capacity and reload speed.
+	[7] = {header = "Magazine", offset = {1200, 550},  atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_stanag"}},
 	[8] = {header = "Conversion", offset = {100, 550},  atts = {"r_mwii_300blk"}},
 	["+use"] = {header = "Skins", offset = {0, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
@@ -403,7 +405,7 @@ self:setBodygroup(self.FrontBGs.main, self.FrontBGs.med)
 self:setBodygroup(self.SightBGs.main, self.SightBGs.on)
 
 -- The original model drives both magazine meshes through every animation.
-self:setBodygroup(1, self.ActiveAttachments.md_uecw_60rnd and 2 or self.ActiveAttachments.md_uecw_emag and 1 or 0)
+self:setBodygroup(1, self.ActiveAttachments.md_uecw_60rnd and 2 or self.ActiveAttachments.md_uecw_emag and 1 or self.ActiveAttachments.md_tcw_stanag and 3 or 0)
 
 if self.ActiveAttachments.bruenechelon then
 	self:setBodygroup(self.FrontBGs.main, self.FrontBGs.long)
