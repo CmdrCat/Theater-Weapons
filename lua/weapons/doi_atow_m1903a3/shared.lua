@@ -6,8 +6,6 @@ AddCSLuaFile("sh_soundscript.lua")
 include("sh_sounds.lua")
 include("sh_soundscript.lua")
 
-	--SWEP.magType = "NONE"
-
 if CLIENT then
 	SWEP.DrawCrosshair = false
 	SWEP.PrintName = "Springfield 1903A3"
@@ -50,6 +48,21 @@ if CLIENT then
 
 	SWEP.WinA5Pos = Vector(-2.5925, -3, 1.2384)
 	SWEP.WinA5Ang = Vector(0, 0, 0)
+
+	SWEP.ReflexPos = Vector(-2.565, -7.5, 0.6)
+	SWEP.ReflexAng = Vector(0, 0, 0)
+
+	SWEP.ZEROPos = Vector(-2.585, -7, 0.275)
+    SWEP.ZEROAng = Vector(0, 0, 0)
+
+	SWEP.NXSPos = Vector(-2.515, -7, 0.52)
+    SWEP.NXSAng = Vector(0, 0, 0)
+
+    SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
+    SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+
+	SWEP.LaserPosAdjust = Vector(3.4, 21, -2.2)
+	SWEP.LaserAngAdjust = Angle(0, 0, 0)
 	
 	SWEP.SprintPos = Vector(2, 0, 0)
 	SWEP.SprintAng = Vector(-15.478, 20.96, 0)
@@ -70,16 +83,37 @@ if CLIENT then
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = false
 	
-	SWEP.OverallMouseSens = 1 -- 1 --  1 --  .75
-	SWEP.CustomizationMenuScale = 0.026 --  0.03
+	SWEP.OverallMouseSens = 1
+SWEP.CustomizationMenuScale = 0.0165
 	
 	SWEP.BackupSights = {
 	["doi_atow_unertl"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)},
 	["doi_atow_m73"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)},
-	["doi_atow_wina5"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)}
+	["doi_atow_wina5"] = {[1] = Vector(-4, 10, 0.5), [2] = Vector(0,0,-30)},
+	["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
+    ["cronenzerop"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0, 0, -45)},
+	["md_nightforce_nxs"] = {[1] = Vector (-4, 2.75, 0.5), [2] = Vector(0, 0, -45)}
 	}
 
 	SWEP.AttachmentModelsVM = {
+
+	["md_anpeq15"] = { 
+			models = {
+				{type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "A_Optic", rel = "", pos = Vector(15, 1, 0.6), angle = Angle(0,0,0), adjustment = {min = 4.147, max = 6.956, axis = "x", inverse = true}, size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "A_Optic", rel = "", pos = Vector(15,1.5,-2), angle = Angle(0,0, 0), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
+			},
+		["ftacgrimline"] = { 
+			models = {
+				{type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "A_Optic", rel = "", pos = Vector(16,1,0.6), angle = Angle(0, 0, 0), adjustment = {min = 4.215, max = 5.932, axis = "x", inverse = true}, size = Vector(1.116, 1.116, 1.116), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "A_Optic", rel = "", pos = Vector(15,1.5,-2), angle = Angle(0, 0, 0), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
+			},	
+	["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "A_Optic", rel = "", pos = Vector(15,2,0), angle = Angle(-90, 90, 0), size = Vector(0.80, 1, 1)},
+	["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "A_Optic", rel = "", pos = Vector(25, 0.8, -0.8), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+    ["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "A_Optic", rel = "", pos = Vector(27.5, 0.85, 0.05), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "A_Optic", rel = "", pos = Vector(5, 1.75, 0.34), angle = Angle(0, 0, -90), size = Vector(1, 1.2, 1)},
+    ["md_reflex"] = { type = "Model", model = "models/attachments/kascope.mdl", bone = "A_Optic", rel = "", pos = Vector(7, -0.325, 0.05), angle = Angle(-90, -90, 180), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 0)},
+    ["cronenzerop"] = { type = "Model", model = "models/shared/optics/r_cronenzerop.mdl", bone = "A_Optic", rel = "", pos = Vector(6,-0.1,0.075), angle = Angle(0, 0, -90), size = Vector(0.9, 0.9, 0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+    ["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "A_Optic", rel = "", pos = Vector(7, -1.15, 0.1), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
 	["doi_atow_m73"] = {model = "models/khrcw2/doipack/attachments/springfield4xscope.mdl", pos = Vector(0, 0, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "A_Optic"},
 	["doi_atow_unertl"] = {model = "models/khrcw2/doipack/attachments/springfield8xscope.mdl", pos = Vector(0, 0, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "A_Optic"},
 	["doi_atow_wina5"] = {model = "models/khrcw2/doipack/attachments/enfield7xscope.mdl", pos = Vector(-1, .05, .085), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "A_Optic"},
@@ -111,26 +145,39 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 SWEP.CanRestOnObjects = true
---SWEP.AimBreathingEnabled = true
 
 SWEP.AttachmentExclusions = {["doi_atow_stripperclips"] = {"doi_atow_pedersen_device"}}
 
-SWEP.Attachments = {[3] = {header = "Reload", offset = {-200, -300}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_m73"] = true, ["doi_atow_wina5"] = true, ["doi_atow_unertl"] = true}},
-[1] = {header = "Optic", offset = {250, -400}, atts = {"doi_atow_m73","doi_atow_wina5","doi_atow_unertl"}},
-[4] = {header = "Finish", offset = {1050, -100}, atts = {"doi_atow_wornfinish"}},
-[2] = {header = "Action", offset = {950, 240}, atts = {"doi_atow_greasedbolt", "doi_atow_pedersen_device"}},
-["+reload"] = {header = "Ammo", offset = {0, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+SWEP.Trivia = {text = "Adopted as a standard infantry rifle by the US in WWI, to later become issued as a sniper rifle in WWII.", x = -500, y = -650}
 
-SWEP.Animations = {fire = {"iron_fire"},
-	fire_aim = {"iron_fire"},
+
+SWEP.Attachments = {[3] = {header = "Reload", offset = {-500, 600}, atts = {"doi_atow_stripperclips"}, exclusions = {["doi_atow_m73"] = true, ["doi_atow_wina5"] = true, ["doi_atow_unertl"] = true}},
+[1] = {header = "Optic", offset = {250, -500}, atts = {"md_reflex","cronenzerop","md_nightforce_nxs","doi_atow_m73","doi_atow_wina5","doi_atow_unertl",}},
+[4] = {header = "Finish", offset = {700, 0}, atts = {"doi_atow_wornfinish"}},
+[2] = {header = "Action", offset = {1550, -500}, atts = {"doi_atow_greasedbolt", "doi_atow_pedersen_device"}},
+[5] = {header = "Muzzle", offset = {1550, 100}, atts = {"md_csgo_silencer_rifle","hard20"} },
+[6] = {header = "Handguard", offset = {1550, 600}, atts = {"md_bipod"}},
+[7] = {header = "Laser", offset = {-500, -500}, atts = {"md_anpeq15", "ftacgrimline"}},
+["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+
+SWEP.ForegripOverride = false 
+SWEP.BipodFireAnim = true
+
+SWEP.Animations = {
+	fire = "iron_fire",
+	fire_aim = "iron_fire",
+	fire_bipod = "iron_fire",
+	fire_aim_bipod = "iron_fire",
+	fire_foregrip = "iron_fire",
+	fire_aim_foregrip = "iron_fire",
 	reload_start = "base_reload_start_empty",
 	insert = "base_reload_insert",
 	reload_end = "base_reload_end",
 	reload = "base_reload_clip",
 	reload_empty = "base_reload_empty_clip",
 	idle = "base_reload_end",
-	draw = "base_draw"}
-	
+	draw = "base_draw"
+}
 
 SWEP.SpeedDec = 45
 SWEP.FOVPerShot = 0
@@ -149,7 +196,7 @@ SWEP.Purpose		= ""
 SWEP.Instructions	= ""
 SWEP.NearWallEnabled = false
 
-SWEP.ViewModelFOV	= 75 // 65
+SWEP.ViewModelFOV	= 75
 SWEP.AimViewModelFOV = 70
 SWEP.ZoomAmount = 10
 SWEP.ViewModelFlip	= false
@@ -158,7 +205,7 @@ SWEP.WorldModel		= "models/weapons/w_annabelle.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
-SWEP.ReloadViewBobEnabled = false //
+SWEP.ReloadViewBobEnabled = false
 SWEP.RVBPitchMod = .5
 SWEP.RVBYawMod = 0
 SWEP.RVBRollMod = .5
@@ -176,11 +223,10 @@ else
 SWEP.Primary.Ammo			= ".30-06"
 end
 
-
 SWEP.FireDelay = 60/38
 SWEP.FireSound = "DOISPRING_FIRE"
+SWEP.FireSoundSuppressed = "DOIGARAND_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.3
- -- = .5
 
 SWEP.HipSpread = 0.13
 SWEP.AimSpread = 0
@@ -202,8 +248,8 @@ SWEP.Chamberable = false
 SWEP.ShotgunReload = true
 SWEP.PreventQuickScoping = false
 
-SWEP.ForegripOverride = true
-SWEP.ForegripParent = "nah"
+SWEP.ForegripOverride = false
+SWEP.ForegripParent = nil
 
 SWEP.ReloadStartTime = 1.21
 SWEP.InsertShellTime = 0.99
@@ -238,12 +284,11 @@ function SWEP:IndividualThink()
 							self:setBodygroup(self.ShellsBGs.main, self.ShellsBGs.five)
 							end
 
-
 self.Owner.ViewAff = 0
 	self.ShellDelay = ((self.ActiveAttachments.doi_atow_greasedbolt) and self.ShellDelayFast) or ((self.ActiveAttachments.doi_atow_pedersen_device) and self.ShellDelaySemi) or self.ShellDelaySlow
 	self.GlobalDelayOnShoot = ((self.ActiveAttachments.doi_atow_greasedbolt) and self.GlobalDelayOnShootFast) or ((self.ActiveAttachments.doi_atow_pedersen_device) and self.GlobalDelayOnShootSemi) or self.GlobalDelayOnShootSlow
 	
-		if self.ActiveAttachments.doi_atow_m73 or self.ActiveAttachments.doi_atow_wina5 or self.ActiveAttachments.doi_atow_unertl then
+		if self.ActiveAttachments.doi_atow_m73 or self.ActiveAttachments.doi_atow_wina5 or self.ActiveAttachments.doi_atow_unertl or self.ActiveAttachments.cronenzerop or self.ActiveAttachments.md_nightforce_nxs then
 		self:setBodygroup(self.BoltBGs.main, self.BoltBGs.on)
 		self.AimBreathingEnabled = false
 		else
@@ -274,23 +319,17 @@ self.Owner.ViewAff = 0
 end
 
 function SWEP:fireAnimFunc()
-	clip = self:Clip1()
-	cycle = 0
-	rate = 1
-	anim = "safe"
-	prefix = ""
-	suffix = ""
+	local cycle = 0
+	local rate = 1
 	
 	if self:isAiming() then
-		suffix = suffix .. "_aim"
-		cycle = self.ironFireAnimStartCycle
+		cycle = self.ironFireAnimStartCycle or 0
 	end
 	
-	self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+	self:sendWeaponAnim("iron_fire", rate, cycle)
 end
 
 function SWEP:Holster(wep)
-	-- can't switch if neither the weapon we want to switch to or the wep we're trying to switch to are not valid
 	if not IsValid(wep) and not IsValid(self.SwitchWep) then
 		self.SwitchWep = nil
 		return false
@@ -298,7 +337,6 @@ function SWEP:Holster(wep)
 	
 	local CT = CurTime()
 	
-	-- can't holster if we have a global delay on the weapon
 	if CT < self.GlobalDelay or CT < self.HolsterWait then
 		self.dt.HolsterDelay = CurTime() + self.HolsterTime
 		self.dt.State = CW_HOLSTER_START
@@ -309,7 +347,6 @@ function SWEP:Holster(wep)
 		return false
 	end
 	
-	-- can't holster if there are sequenced actions
 	if #self._activeSequences > 0 then
 		return false
 	end
@@ -326,7 +363,6 @@ function SWEP:Holster(wep)
 	
 	self.dt.State = CW_HOLSTER_START
 	
-	-- if holster sequence is over, let us select the desired weapon
 	if self.SwitchWep and self.dt.State == CW_HOLSTER_START and CurTime() > self.dt.HolsterDelay then
 		self.dt.State = CW_IDLE
 		self.dt.HolsterDelay = 0
@@ -334,12 +370,11 @@ function SWEP:Holster(wep)
 		return true
 	end
 	
-	-- if it isn't, make preparations for it
 	self.ShotgunReloadState = 0
 	self.ReloadDelay = nil
 	
 	if self:filterPrediction() then
-		if self.holsterSound then -- quick'n'dirty prediction fix
+		if self.holsterSound then
 			self:EmitSound("CW_HOLSTER", 70, 100)
 			self.holsterSound = false
 			
@@ -399,7 +434,7 @@ if CLIENT then
 		"Bullet_3",
 	}
 	
-	local function removeRoundMeshes(wep) -- we hide all rounds left in the belt on a non-empty reload because if we don't we're left with ghost meshes moving around (bullets with no link to the mag get moved back to it)
+	local function removeRoundMeshes(wep)
 		wep:adjustVisibleRounds(0)
 	end
 	
@@ -452,6 +487,3 @@ function SWEP:adjustVisibleRounds(curMag)
 		vm:ManipulateBoneScale(element, scale)
 	end
 end
-
- 
-/*/
