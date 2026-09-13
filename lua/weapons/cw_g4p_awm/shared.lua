@@ -97,6 +97,8 @@ if CLIENT then
 	
 	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
+
+	SWEP.BoltBoneName = "Bolt1"
 	
 	SWEP.BackupSights = {
 		["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
@@ -112,6 +114,14 @@ if CLIENT then
 	}
 	
 	SWEP.AttachmentModelsVM = {
+		["uecw_awm_krunker_conversion"] = {
+			models = {
+					{type = "Model", model = "models/attachments/heavy_muzzle_brake.mdl", bone = "Base", rel = "", pos = Vector(0, 9.7, -1.441), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5)},
+					{type = "Model", model = "models/weapons/khrcw2/shells/338shell.mdl", bone = "Base", rel = "", pos = Vector(0.624, -4.1, -0.475), angle = Angle(-90, 0, 0), size = Vector(0.3, 0.3, 0.3)},
+					{type = "Model", model = "models/weapons/khrcw2/shells/338shell.mdl", bone = "Base", rel = "", pos = Vector(0.624, -3.5, -0.475), angle = Angle(-90, 0, 0), size = Vector(0.3, 0.3, 0.3)},
+					{type = "Model", model = "models/weapons/khrcw2/shells/338shell.mdl", bone = "Base", rel = "", pos = Vector(0.624, -2.9, -0.475), angle = Angle(-90, 0, 0), size = Vector(0.3, 0.3, 0.3)}
+			}},
+
 		["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Base", rel = "", pos = Vector(0.237, 0.158, -1.209), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_fas2_leupold"] = { type = "Model", model = "models/v_fas2_leupold.mdl", bone = "Base", rel = "", pos = Vector(0, -2.34, 1.679), angle = Angle(0, -90, 0), size = Vector(1.5, 1.5, 1.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroups = {[3] = 2} },
 		["md_fas2_leupold_mount"] = { type = "Model", model = "models/v_fas2_leupold_mounts.mdl", bone = "Base", rel = "", pos = Vector(0, -2.34, 1.679), angle = Angle(0, -90, 0), size = Vector(1.5, 1.5, 1.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroups = {} },
@@ -137,6 +147,7 @@ if CLIENT then
 		["md_uecw_csgo_scope_ssg"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_scope_bender.mdl", bone = "Base", rel = "", pos = Vector(0.05, -0.801, 0.46), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255)},
 		["md_csgo_silencer_ballistic"] = { type = "Model", model = "models/kali/weapons/csgo/eq_dsr50_suppressor.mdl", bone = "Base", rel = "", pos = Vector(0.019, 4, 0), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255)},
 		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Base", rel = "", pos = Vector(-0.02, 23, -0.801), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255)},
+		["md_snip2_m200_heavy_muzzle_brake"] = {type = "Model", model = "models/attachments/heavy_muzzle_brake.mdl", bone = "Base", rel = "", pos = Vector(0, 9.7, -1.441), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5)}
 }
 
 	SWEP.LaserPosAdjust = Vector(0.4, 0, 0)--{x = 1, y = 0, z = 0}
@@ -169,16 +180,16 @@ SWEP.ADSFireAnim = true
 SWEP.BipodFireAnim = true
 SWEP.ForceBackToHipAfterAimedShot = false
 SWEP.AimBreathingIntensity = 1
-SWEP.GlobalDelayOnShoot = 1.6
 
 SWEP.Trivia = {text = "An accurate sniper rifle designed for magnum rifle rounds. The original design was made in a shed. With a box of scraps!", x = -100, y = -450}
 
 SWEP.Attachments = {
 	{header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
-	{header = "Muzzle", offset = {100, -350}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic"}},
-	{header = "Handguard", offset = {-500, -500}, atts = {"md_foregrip", "md_bipod"}},
-	{header = "Laser", offset = {-500, 100}, atts = {"md_anpeq15"}},
-	["+reload"] = {header = "Ammo", offset = {-500, 600}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
+	{header = "Muzzle", offset = {100, -350}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic", "md_snip2_m200_heavy_muzzle_brake"}, exclusions = {uecw_awm_krunker_conversion = true}},
+	{header = "Handguard", offset = {-500, -500}, atts = {"md_foregrip", "md_bipod"}, exclusions = {uecw_awm_krunker_conversion = true}},
+	{header = "Laser", offset = {-500, 100}, atts = {"md_anpeq15"}, exclusions = {uecw_awm_krunker_conversion = true}},
+	{header = "Signature Attachment", offset = {800, 700}, atts = {"uecw_awm_krunker_conversion"}},
+	["+reload"] = {header = "Ammo", offset = {-500, 600}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {uecw_awm_krunker_conversion = true}},
 }
 
 if CustomizableWeaponry_KK_HK416 then
@@ -234,10 +245,17 @@ SWEP.Primary.DefaultClip	= 45
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".338 Lapua"
 
+SWEP.Secondary.DefaultClip	= 39
+SWEP.Secondary.Ammo			= "7.62x51MM"
+
 SWEP.FireDelay = 1.5
 SWEP.FireSound = "CW_AWP_FIRE"
 SWEP.FireSoundSuppressed = "CW_AWP_FIRE_SUPPRESSED"
 SWEP.Recoil = 3.4
+
+SWEP.SemiAutoQueuedShot = false
+SWEP.SemiAutoTriggerBuffer = 0
+SWEP.SemiAutoTriggerBufferUntil = 0
 
 SWEP.HipSpread = 0.15
 SWEP.AimSpread = 0
@@ -249,6 +267,12 @@ SWEP.Shots = 1
 SWEP.Damage = 180
 SWEP.DeployTime = 1
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.2 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.4
 SWEP.ReloadTime_Empty = 4
@@ -257,6 +281,13 @@ SWEP.ReloadHalt_Empty = 4
 SWEP.SnapToIdlePostReload = true
 
 function SWEP:IndividualThink()
+
+self.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.2 / 2 )
+	end
+end
+
 self.Owner.ViewAff = 0
 clip = self:Clip1()
 self.EffectiveRange = 150 * 39.37
@@ -279,6 +310,15 @@ if self.ActiveAttachments.md_csgo_silencer_rifle then
 end
 if self.ActiveAttachments.md_csgo_silencer_ballistic then
 	self.EffectiveRange = ((self.EffectiveRange * 1.1))
+end
+if self.ActiveAttachments.uecw_awm_krunker_conversion then
+	self.EffectiveRange = 100 * 39.37
+	self.DamageFallOff = ((self.DamageFallOff + 0.2))
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.5 / 2 )
+		end
+	end
 end
 end
 
