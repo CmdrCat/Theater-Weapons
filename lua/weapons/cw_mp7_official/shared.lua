@@ -59,10 +59,10 @@ if CLIENT then
 	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
 	SWEP.BackupSights = {
-		["md_microt1"] = {[1] = Vector(-3, 10, -1.2), [2] = Vector(0, 0, -30)},
-		["md_aimpoint"] = {[1] = Vector(-3, 7.5, -1.2), [2] = Vector(0, 0, -30)},
-		["md_schmidt_shortdot"] = {[1] = Vector(-3, 10, -1.2), [2] = Vector(0, 0, -30)},
-		["too_reflex_exps"] = {[1] = Vector(-3, 6, -1.2), [2] = Vector(0, 0, -30)},
+		["md_microt1"] = {[1] = Vector(-4.7, 9, 0), [2] = Vector(0, 0, -45)},
+		["md_aimpoint"] = {[1] = Vector(-4.7, 7.5, 0), [2] = Vector(0, 0, -45)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-4.7, 9, 0), [2] = Vector(0, 0, -45)},
+		["too_reflex_exps"] = {[1] = Vector(-4.7, 6, 0), [2] = Vector(0, 0, -45)},
 		["md_acog"] = {[1] = Vector(-2.17, 0, -0.852), [2] = Vector(0, 0, 0)}}
 	
 	SWEP.AttachmentModelsVM = {
@@ -78,6 +78,8 @@ if CLIENT then
 	SWEP.LaserAngAdjust = {p = 0, y = 180, r = 0}
 	
 	SWEP.CustomizationMenuScale = 0.015
+
+	SWEP.StockBoneName = "mp7_stock"
 
 	SWEP.BaseArm = "L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
@@ -103,8 +105,9 @@ SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {1100, -400}, atts = {"md_microt1", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-200, -400}, atts = {"bg_mp7_unsuppressed"}},
 	[3] = {header = "Laser", offset = {-200, 0}, atts = {"md_anpeq15"}},
-	--[4] = {header = "Technique", offset = {-200, 0}, atts = {"cw_akimbo"}}, Something wrong with the one-handed thing
-	["+reload"] = {header = "Ammo", offset = {1100, 35}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
+	[5] = {header = "Stock", offset = {1100, 650}, atts = {"bg_nostock"}},
+	--[5] = {header = "Technique", offset = {-200, 0}, atts = {"cw_akimbo"}}, Something wrong with the one-handed thing
+	["+reload"] = {header = "Ammo", offset = {1100, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 
 SWEP.Animations = {
