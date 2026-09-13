@@ -12,6 +12,7 @@ SWEP.UseHands = true
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
 SWEP.MuzzleEffect_orig = SWEP.MuzzleEffect
 SWEP.PosBasedMuz = false
+SWEP.SightWithRail = true
 SWEP.SnapToGrip = false
 
 SWEP.ForeGripOffsetCycle_Draw = 0
@@ -41,11 +42,16 @@ SWEP.LaserAngAdjust = Angle(0, 0, 0)
 	SWEP.IronsightPos = Vector(-3.0865, -0.9268, 1.5287)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 
+	SWEP.MRSPos = Vector(-3.0865, 0, 0.27)
+	SWEP.MRSAng = Vector(0, 0, 0)
+
 	SWEP.TacStancePos = Vector(-4.698, -0.9268, 0.786)
 	SWEP.TacStanceAng = Vector(0, 0, -45)
 
 	SWEP.BackupSights = {
-	["too_optic_tacstance"] = {[1] = Vector(-3.0865, -0.9268, 1.5287), [2] = Vector(0,0,0)}}
+	["too_optic_tacstance"] = {[1] = Vector(-3.0865, -0.9268, 1.5287), [2] = Vector(0,0,0)},
+	["too_reflex_mrs"] = {[1] = Vector(-4.698, -0.9268, 0.786), [2] = Vector(0, 0, -45)},
+	}
 
 --Select and kill icon (Temporary)
 SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cw2_MW2CR_1887")
@@ -101,6 +107,12 @@ SWEP.ForegripOverridePos = {
 }
 
 SWEP.AttachmentModelsVM = {
+	["md_rail"] = { type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "tag_weapon", rel = "", pos = Vector(11.355, 0.316, 2.757), angle = Angle(0, 0, 0), size = Vector(1.33875, 1.33875, 1.33875)},
+	["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "tag_red_dot", rel = "", pos = Vector(11.14, 0, 5.206), angle = Angle(0, 0, 0), adjustment = {min = 10.3, max = 14.75, axis = "x", inverse = true}, size = Vector(0.948, 0.948, 0.948) },
+	["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "tag_red_dot", pos = Vector(-0.1, 0, 0.347), angle = Angle(0, -90, 0), size = Vector(0.46, 0.46, 0.46)},
+	["too_reflex_romeo4t"] = { type = "Model", model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "tag_red_dot", rel = "", pos = Vector(-0.25, 0, 0.16), angle = Angle(0, 0, 0), size = Vector(0.9, 0.9, 0.9)},
+	["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "tag_red_dot", pos = Vector(-6.4, 0.275, -5.45), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "tag_eotech", rel = "", pos = Vector(0.5, 0, 0.14), angle = Angle(0, 0, 0), size = Vector(.875, .875, .875) },
 
 	["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "tag_silencer", rel = "", pos = Vector(11.429, 0.001, 1.392), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
 	["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(28.871, 0, 4.363), angle = Angle(0, 0, 0), size = Vector(1.1, 1.1, 1.1), bone = "tag_silencer"},
@@ -159,12 +171,16 @@ SWEP.CustomizationMenuScale = 0.0175
 SWEP.Trivia = {text = "Designed by the legendary John Browning, this lever-action shotgun proves reliable even to this day.", x = -200, y = -350}
 
 SWEP.Attachments = {
-[1] = {header = "Sight", offset = {600, -150}, atts = {"too_optic_tacstance"}},
+[1] = {header = "Sight", offset = {600, -150}, atts = {"too_reflex_mrs", "too_optic_tacstance"}},
 [2] = {header = "Muzzle", offset = {-700, -150}, atts = {"doi_atow_unisuppressor", "md_saker"}},
 [3] = {header = "Laser", offset = {-600, 300}, atts = {"ins2_atow_clamplaser"}},
 [4] = {header = "Technique", offset = {500, 600}, atts = {"cw_akimbo"}},
 [5] = {header = "Skins", offset = {1400, 200}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-["+reload"] = {header = "Ammo", offset = {1200, 550}, atts = {"am_slugrounds", "am_flechetterounds"}}
+["+reload"] = {header = "Ammo", offset = {1200, 550}, atts = {"am_slugrounds", "am_flechetterounds", "am_explosiveslugrounds"}}
+}
+
+SWEP.AttachmentExclusions = {
+	["am_explosiveslugrounds"] = {"cw_akimbo"}
 }
 
 --Other information
@@ -206,6 +222,9 @@ SWEP.Primary.DefaultClip = 35
 SWEP.Primary.Automatic = false
 SWEP.Primary.Automatic_Orig = SWEP.Primary.Automatic
 SWEP.Primary.Ammo = "12 Gauge"
+
+SWEP.Secondary.DefaultClip	= 30
+SWEP.Secondary.Ammo			= "12 Gauge Explosive Slugs"
 
 SWEP.FireDelay = 60/45
 
@@ -413,10 +432,12 @@ function SWEP:IndividualThink()
 	self.DamageFallOff = .7
     self.CrosshairParts = {left = false, right = false, upper = false, lower = false}
     self.HipSpread = 0
+	self.RechamberSpeed = 1.25
 
-    if (self.ActiveAttachments.am_slugrounds) then
+    if (self.ActiveAttachments.am_slugrounds or self.ActiveAttachments.am_explosiveslugrounds) then
         self.CrosshairParts = {left = true, right = true, upper = true, lower = true}
         self.HipSpread = 0.07
+		self.RechamberSpeed = self.RechamberSpeed * 2/3
 	end
 
 	if self.ActiveAttachments.cw_akimbo then
