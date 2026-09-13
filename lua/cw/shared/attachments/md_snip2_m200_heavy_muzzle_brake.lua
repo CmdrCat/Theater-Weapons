@@ -12,15 +12,13 @@ VelocitySensitivityMult = 0.22}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("entities/heavy_muzzle_brake")
-	att.description = {[1] = {t = "Decreases muzzle flash", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "Large decrease in recoil", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()
-	self.MuzzleEffect = "muzzleflash_pistol"
 end
 
 function att:detachFunc()
-	self.MuzzleEffect = "muzzleflash_SR25"
 end
 
 CustomizableWeaponry:registerAttachment(att)

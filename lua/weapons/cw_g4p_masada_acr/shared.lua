@@ -212,6 +212,15 @@ if CLIENT then
 	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
+	SWEP.MagBoneName = "Masada_PMAG30"
+	SWEP.MagBoneName2 = "Masada_PMAG30.2"
+
+	SWEP.BulletsBoneName = "Masada_Cases001"
+	SWEP.BulletsBoneName2 = "Masada_Bullets001"
+
+	SWEP.SpringBoneName = "Masada_FollowerSpring"
+	SWEP.FollowerBoneName = "Masada_PMAGFollower001"
+
 	SWEP.AttachmentModelsVM = {
 		--Underbarrels
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 4.5, -1), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
@@ -242,9 +251,31 @@ if CLIENT then
 		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 4.5, 0.9), angle = Angle(0, -90, 0), size = Vector(0.9, 0.9, 0.9) },
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "Masada_body", pos = Vector(-0.08, 4, 0.94), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
 		--Muzzles
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "Masada_body", pos = Vector(0, -7.4, -3.3), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, 13.369, -1.201), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 15.2, -0.3), angle = Angle(180, 90, -90), size = Vector(1, 1, 1)}
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "Masada_body", pos = Vector(0, 0.22, -1.985), angle = Angle(0, 0, 0), size = Vector(0.55, 0.55, 0.55)},
+		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, 12.71, -1.097), angle = Angle(0, -90, 0), size = Vector(0.873, 0.873, 0.873)},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 14.47, -0.33), angle = Angle(180, 90, 180), size = Vector(0.856, 0.856, 0.856)},
+		["md_snip2_m200_heavy_muzzle_brake"] = { type = "Model", model = "models/attachments/heavy_muzzle_brake.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 2.73, -1.551), angle = Angle(0, 0, 0), size = Vector(0.41, 0.41, 0.41)},
+		--Magazines
+		["md_uecw_emag"] = {
+			models = {
+					{type = "Model", model = "models/gmod4phun/emag.mdl", bone = "Masada_PMAG30", rel = "", pos = Vector(-0.005, 0.016, -2.124), angle = Angle(0, 180, 0), size = Vector(0.55, 0.55, 0.55)},
+					{type = "Model", model = "models/gmod4phun/emag.mdl", bone = "Masada_PMAG30.2", rel = "", pos = Vector(-0.005, 0.016, -2.124), angle = Angle(0, 180, 0), size = Vector(0.55, 0.55, 0.55)}
+			}},
+		["md_uecw_60rnd"] = {
+			models = {
+					{type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "Masada_PMAG30", rel = "", pos = Vector(0.012, -1.718, -1.261), angle = Angle(0, 180, 0), size = Vector(0.745, 0.745, 0.745)},
+					{type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "Masada_PMAG30.2", rel = "", pos = Vector(0.012, -1.718, -1.261), angle = Angle(0, 180, 0), size = Vector(0.745, 0.745, 0.745)}
+			}},
+		["md_uecw_cmag"] = {
+			models = {
+					{type = "Model", model = "models/wystan/Cmag.mdl", bone = "Masada_PMAG30", rel = "", pos = Vector(0.162, 3.240, -1.579), angle = Angle(0, 90, 0), size = Vector(0.614, 0.614, 0.614)},
+					{type = "Model", model = "models/wystan/Cmag.mdl", bone = "Masada_PMAG30.2", rel = "", pos = Vector(0.162, 3.240, -1.579), angle = Angle(0, 90, 0), size = Vector(0.614, 0.614, 0.614)}
+			}},
+		["md_tcw_stanag"] = {
+			models = {
+					{type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "Masada_PMAG30", rel = "", pos = Vector(-0.018, -0.079, -0.889), angle = Angle(0, 180, 0), size = Vector(0.614, 0.614, 0.614)},
+					{type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "Masada_PMAG30.2", rel = "", pos = Vector(-0.018, -0.079, -0.889), angle = Angle(0, 180, 0), size = Vector(0.614, 0.614, 0.614)}
+			}}
 	}
 	
 
@@ -282,14 +313,15 @@ SWEP.CustomizationMenuScale = 0.01
 
 SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law enforcement use.", x = -200, y = -800}
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {-100, -600},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_nightforce_nxs", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
-	[2] = {header = "Muzzle", offset = {-700, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
-	[3] = {header = "Handguard", offset = {-650, 350}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {-25, -600},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_nightforce_nxs", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
+	[2] = {header = "Muzzle", offset = {-700, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_snip2_m200_heavy_muzzle_brake"}},
+	[3] = {header = "Underbarrel", offset = {-650, 350}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-700, -150}, atts = {"ftacgrimline", "md_anpeq15"}},	
-	[5] = {header = "Signature Attachment", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
-	[6] = {header = "Skins", offset = {1200, 300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
-	["+use"] = {header = "Optic Type", offset = {1450, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
-	["+reload"] = {header = "Ammo", offset = {1500, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	[5] = {header = "Magazine", offset = {1200, 600}, atts = {"md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag", "md_tcw_stanag"}, exclusions = {uecw_acr_68_conversion = true}},
+	[6] = {header = "Signature Attachment", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
+	[7] = {header = "Skins", offset = {1200, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+	["+use"] = {header = "Optic Type", offset = {1500, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
+	["+reload"] = {header = "Ammo", offset = {1500, -250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
 SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
 		["xrkonpoint"] = {"too_optic_category_reflex"},

@@ -24,6 +24,18 @@ function att:attachFunc()
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
 	end
 
+	if self.MagBoneName2 then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName2), Vector(0.009, 0.009, 0.009))
+	end
+
+	if self.BulletsBoneName2 then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.BulletsBoneName2), Vector(0.009, 0.009, 0.009))
+	end
+
+	if self.SpringBoneName then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.SpringBoneName), Vector(0.009, 0.009, 0.009))
+	end
+
 	self:loadWeapon()
 end
 
@@ -41,6 +53,18 @@ function att:detachFunc()
 	self:unloadWeaponPartially()
 	if self.MagBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
+	end
+
+	if self.MagBoneName2 then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName2), Vector(1, 1, 1))
+	end
+
+	if self.BulletsBoneName2 then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.BulletsBoneName2), Vector(1, 1, 1))
+	end
+
+	if self.SpringBoneName then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.SpringBoneName), Vector(1, 1, 1))
 	end
 end
 
