@@ -98,25 +98,26 @@ if CLIENT then
 	SWEP.BaseArm = "Bip01 L Clavicle"
 	SWEP.BaseArmBoneOffset = Vector(-50, 0, 0)
 
+	SWEP.MagBoneName = "Mag"
 	SWEP.BoltBoneName = "Bolt1"
 	
 	SWEP.BackupSights = {
-		["md_microt1"] = {[1] = Vector(-4, 5, 0.5), [2] = Vector(0,0,-30)},
-		["md_cmore"] = {[1] = Vector(-4, 2.5, 0.5), [2] = Vector(0,0,-30)},
-		["md_reflex"] = {[1] = Vector(-4, 2.5, 0.5), [2] = Vector(0,0,-30)},
-		["md_aimpoint"] = {[1] = Vector(-4, 3, 0.5), [2] = Vector(0,0,-30)},
+		["md_microt1"] = {[1] = Vector(-4.2, 6, 0.8), [2] = Vector(0,0,-45)},
+		["md_cmore"] = {[1] = Vector(-4.2, 2.5, 0.8), [2] = Vector(0,0,-45)},
+		["md_reflex"] = {[1] = Vector(-4.2, 2.5, 0.8), [2] = Vector(0,0,-45)},
+		["md_aimpoint"] = {[1] = Vector(-4.2, 3, 0.8), [2] = Vector(0,0,-45)},
 		["md_elcan"] = {[1] = Vector(-2.76, 0, -0.405), [2] = Vector(-0.1, -0.13, 0)},
-		["md_acog"] = {[1] = Vector(-2.74, 0, -0.5), [2] = Vector(0, 0, 0)},
-		["md_uecw_csgo_acog"] = {[1] = Vector(-4, 0, 0.5), [2] = Vector(0,0,-30)},
+		["md_acog"] = {[1] = Vector(-2.74, 0, -0.8), [2] = Vector(0, 0, 0)},
+		["md_uecw_csgo_acog"] = {[1] = Vector(-4.2, 0, 0.8), [2] = Vector(0,0,-45)},
 		["md_uecw_csgo_556"] = {[1] = Vector(-2.77, 0, -0.41), [2] = Vector(0.79, 0, 0)},
-		["md_uecw_csgo_scope_ssg"] = {[1] = Vector(-4.5, 5, 0.5), [2] = Vector(0,0,-30)},
-		["md_ballistic"] = {[1] = Vector(-4.5, 5, 0.5), [2] = Vector(0,0,-30)}
+		["md_uecw_csgo_scope_ssg"] = {[1] = Vector(-4.2, 5, 0.8), [2] = Vector(0,0,-45)},
+		["md_ballistic"] = {[1] = Vector(-4.2, 5, 0.8), [2] = Vector(0,0,-45)}
 	}
 	
 	SWEP.AttachmentModelsVM = {
 		["uecw_awm_krunker_conversion"] = {
 			models = {
-					{type = "Model", model = "models/attachments/heavy_muzzle_brake.mdl", bone = "Base", rel = "", pos = Vector(0, 9.7, -1.441), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5)},
+					{type = "Model", model = "models/attachments/heavy_muzzle_brake.mdl", bone = "Base", rel = "", pos = Vector(0, 8.79, -1.441), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5)},
 					{type = "Model", model = "models/weapons/khrcw2/shells/338shell.mdl", bone = "Base", rel = "", pos = Vector(0.624, -4.1, -0.475), angle = Angle(-90, 0, 0), size = Vector(0.3, 0.3, 0.3)},
 					{type = "Model", model = "models/weapons/khrcw2/shells/338shell.mdl", bone = "Base", rel = "", pos = Vector(0.624, -3.5, -0.475), angle = Angle(-90, 0, 0), size = Vector(0.3, 0.3, 0.3)},
 					{type = "Model", model = "models/weapons/khrcw2/shells/338shell.mdl", bone = "Base", rel = "", pos = Vector(0.624, -2.9, -0.475), angle = Angle(-90, 0, 0), size = Vector(0.3, 0.3, 0.3)}

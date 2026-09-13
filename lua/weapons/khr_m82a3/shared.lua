@@ -69,7 +69,7 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(0, 1, 0)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
-	SWEP.CustomizationMenuScale = 0.028
+	SWEP.CustomizationMenuScale = 0.02
 	SWEP.ViewModelMovementScale = 1.2
 	
 	SWEP.AttachmentModelsVM = {
@@ -121,11 +121,13 @@ SWEP.BipodFireAnim =  true
 SWEP.BipodInstalled = true
 SWEP.CanRestOnObjects = false
 
+SWEP.BipodBoneName = {"bipod1", "bipod2"}
 
 SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -100},  atts = {"md_microt1kh", "odec3d_cmore_kry", "md_schmidt_shortdot", "md_elcan", "md_uecw_csgo_acog", "md_thermal", "md_nightforce_nxs"}},
 [2] = {header = "Muzzle", offset = {-600, -300}, atts = {"md_csgo_silencer_ballistic"}},
-[3] = {header = "Skins", offset = {600, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-["+reload"] = {header = "Ammo", offset = {-250, 350}, atts = {"am_416barrett"/*, "am_raufoss"*/}}}
+[3] = {header = "Underbarrel", offset = {-425, 250}, atts = {"doi_atow_bipodremove"}},
+[4] = {header = "Skins", offset = {1300, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+["+reload"] = {header = "Ammo", offset = {-250, 700}, atts = {"am_416barrett"/*, "am_raufoss"*/}}}
 
 SWEP.Animations = {fire = {"shoot"},
 	reload = "reload",

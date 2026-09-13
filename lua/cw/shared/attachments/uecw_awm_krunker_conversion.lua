@@ -14,7 +14,7 @@ att.statModifiers = {DamageMult = -1 / 18,
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Converts to a lightweight, semi-automatic version of the AWP", c = CustomizableWeaponry.textColors.VPOSITIVE},
+	att.description = {[1] = {t = "Converts to a lightweight, semi-automatic version of the AWP", c = CustomizableWeaponry.textColors.COSMETIC},
 					   [2] = {t = "Increases headshot multiplier from 1.2 to 1.5", c = CustomizableWeaponry.textColors.POSITIVE},
 					   [3] = {t = "Decreases effective range by 50 M", c = CustomizableWeaponry.textColors.NEGATIVE},
 					   [4] = {t = "Increases damage fall off by 20%", c = CustomizableWeaponry.textColors.NEGATIVE}}
@@ -41,6 +41,9 @@ function att:attachFunc()
 	function self:fireAnimFunc()
 	end
 
+	if self.MagBoneName then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1.304, 0.795, 1))
+	end
 	if self.BoltBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.BoltBoneName), Vector(0.009, 0.009, 0.009))
 	end
@@ -70,6 +73,9 @@ function att:detachFunc()
 
 	self.allowSoloReloadDown = nil
 
+	if self.MagBoneName then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
+	end
 	if self.BoltBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.BoltBoneName), Vector(1, 1, 1))
 	end

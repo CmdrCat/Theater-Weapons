@@ -66,6 +66,8 @@ if CLIENT then
 	
 	SWEP.CustomizePos = Vector(8, -2, .5)
 	SWEP.CustomizeAng = Vector(10, 40, 18)
+
+	SWEP.StockBoneName = "FoldingStock"
 	
 	SWEP.BackupSights = {["too_optic_tacstance"] = {[1] = Vector(-2.47, -2.5, 1.1628), [2] = Vector(0, 0.0355, 0)},
 						 ["md_reflex"] = {[1] = Vector (-4, 0.25, 0.5), [2] = Vector(0, 0, -45)},
@@ -124,7 +126,7 @@ SWEP.SlingBGs = {main = 4, off = 0, on = 1}
 	[3] = {header = "Muzzle", offset = {-600, -400}, atts = {"doi_atow_unisuppressor"}},
 	[4] = {header = "Conversion", offset = {-50, -450}, atts = {"doi_atow_m2carbineconv"}},
 	[5] = {header = "Magazine", offset = {700, 600}, atts = {"doi_atow_m1carbine30rnd"}},
-	[6] = {header = "Accessory", offset = {-400, 400}, atts = {"doi_atow_sling"}},
+	[6] = {header = "Accessory", offset = {-400, 400}, atts = {"doi_atow_sling", "bg_nostock"}},
 	[7] = {header = "Laser", offset = {0, 200}, atts = {-- "ftacgrimline", 
 	"md_anpeq15"}},
 	[8] = {header = "Skins", offset = {1500, -300}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
