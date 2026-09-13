@@ -71,6 +71,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_m
 [2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker", "bg_deagle_compensator", "bg_deagle_extendedbarrel"}},
 [3] = {header = "Technique", offset = {-200, -400}, atts = {"doi_atow_onehand", "cw_akimbo"}},
 [4] = {header = "Conversion", offset = {-100, 200}, atts = {"too_thunderbird_conversion"}},
+[5] = {header = "SECRET!!!", offset = {2000, 2000}, atts = {"md_microt1"}},
 ["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
@@ -172,4 +173,5 @@ function SWEP:IndividualThink()
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
+
 end
