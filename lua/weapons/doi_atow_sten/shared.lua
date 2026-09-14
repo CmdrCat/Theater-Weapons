@@ -92,8 +92,8 @@ if CLIENT then
 				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "weapon", rel = "", pos = Vector(-3.2, 7.5, 0.4), angle = Angle(0, 90, 0), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
 			},
 		--muzzle
-		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "weapon", rel = "", pos = Vector(-3.6, 17, 2.4), angle = Angle(180, 90, -90), size = Vector(1, 0.7, 0.7)},
-		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-3.6, 12.5, 2.35), angle = Angle(0, -90, 0), size = Vector(0.85, 0.85, 0.85), bone = "weapon"},
+		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "weapon", rel = "", pos = Vector(-3.6, 17, 2.27), angle = Angle(180, 90, -90), size = Vector(1, 0.75, 0.75)},
+		["doi_atow_unisuppressor"] = {model = "models/khrcw2/doipack/attachments/unisuppressor.mdl", pos = Vector(-3.5, 12.5, 2.3), angle = Angle(0, -90, 0), size = Vector(0.85, 0.85, 0.85), bone = "weapon"},
 		--foregrip
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(-3.5, 7, 2.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
         ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(-3.5, 7, 2), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
