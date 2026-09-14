@@ -48,6 +48,9 @@ if CLIENT then
 
 	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.241, -4.728, -1.568), [2] = Vector(0, 0, 0)}}
 
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .85
+
 	SWEP.MaterialIndexSecondary = {0}
 
 	SWEP.BaseArm = "l_upperarm"
@@ -94,7 +97,7 @@ SWEP.CanRestOnObjects = false
 SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1","md_acog"}},
 [2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker", "bg_deagle_compensator", "bg_deagle_extendedbarrel"}},
 [3] = {header = "Technique", offset = {-200, -400}, atts = {"doi_atow_onehand", "cw_akimbo"}},
-[4] = {header = "Signature Attachment", offset = {-100, 200}, atts = {"too_thunderbird_conversion"}},
+[4] = {header = "Signature Attachment", offset = {-100, 200}, atts = {"too_thunderbird_conversion", "too_dungeon_eagle"}},
 [5] = {header = "SECRET!!!", offset = {2000, 2000}, atts = {"md_microt1"}},
 ["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
