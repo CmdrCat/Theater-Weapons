@@ -83,6 +83,12 @@ if CLIENT then
 	
 	SWEP.AlternativePos = Vector(0, 1.325, -0.801)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
+
+	SWEP.GrimlinePosAdjust = Vector(1, 0, 0)
+    SWEP.GrimlineAngAdjust = Angle(0, 0, 0)
+
+    SWEP.LaserPosAdjust = Vector(0, 0, 0)
+	SWEP.LaserAngAdjust = Angle(0, 0, 0)
 	
 	SWEP.BackupSights = {
 	["too_optic_tacstance"] = {[1] = Vector(2.032, -3.323, 0.759), [2] = Vector(0.388, -0.051, 0)},
@@ -131,10 +137,7 @@ if CLIENT then
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "gun", pos = Vector(0.284, 4.372, -2.46), angle = Angle(0, 180, 0), size = Vector(0.899, 0.899, 0.899)},
 		--Underbarrels
 		["md_m203"] = { type = "Model", model = "models/cw2/attachments/m203.mdl", bone = "gun", rel = "", pos = Vector(-2.38, 9.358, 4), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), animated = true},
-    --lasers
-	["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-5.85, -9.5, 4.55), angle = Angle(0, -90, 90), size = Vector(1,1,1), bone = "gun"},
 	}
-	
 	SWEP.ForegripOverridePos = {
 		["bg_mp5_sdbarrel"] = {
 			["Bip01 R Finger02"] = {pos = Vector(0, 0, 0), angle = Angle(-4.029, 14.069, 0) },
@@ -195,6 +198,7 @@ SWEP.Attachments = {
 	[4] = {header = "Magazine", offset = {-200, 450}, atts = {"bg_mp515rndmag"}, exclusions = {too_mp5_22lr_rifle = true, md_m203 = true}},
 	[5] = {header = "Stock", offset = {1400, 450}, atts = {"bg_retractablestock", "bg_nostock"}},
 	[6] = {header = "Signature Attachments", offset = {450, 450}, atts = {"bg_mp5_kbarrel", "bg_mp5_sdbarrel", "too_mp5_22lr_rifle"}},
+	--[7] = {header = "Laser", offset = {450, 450}, atts = {"ftacgrimline", "md_anpeq15"}},
 	[7] = {header = "Skins", offset = {1500, -50}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {1600, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {-900, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}

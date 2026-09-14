@@ -5,8 +5,6 @@ att.displayNameShort = "Comp"
 att.isBG = true
 
 att.statModifiers = {RecoilMult = -0.3,
-AimSpreadMult = 0.15,
-OverallMouseSensMult = -0.1,
 DrawSpeedMult = -0.1}
 
 if CLIENT then

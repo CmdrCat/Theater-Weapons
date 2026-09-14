@@ -45,8 +45,8 @@ if CLIENT then
 	SWEP.KR_CMOREPos = Vector(-3.09, -2.5, 0.58)
 	SWEP.KR_CMOREAng = Vector(0, 0, 0)
 
-	SWEP.IronsightPos = Vector(-3.112, -1, 0.46)
-	SWEP.IronsightAng = Vector(-0.4, 0.028, 0)
+	SWEP.IronsightPos = Vector(-5, 0.45, 0.75)
+	SWEP.IronsightAng = Vector(0, 0 , -55)
 
 	SWEP.ShortDotPos = Vector(-3.0735, -2, 0.6)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
@@ -61,7 +61,7 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-0.6711, -0.6711, 0)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
-	SWEP.CustomizationMenuScale = 0.024
+	SWEP.CustomizationMenuScale = 0.0165
 	SWEP.ViewModelMovementScale = 1
 
 	SWEP.MaterialIndexPrimary = {0}
@@ -69,27 +69,32 @@ if CLIENT then
 	SWEP.MagBoneName = "MAG"
 	
 	SWEP.AttachmentModelsVM = {
-	["md_sight_front"] = { type = "Model", model = "models/bunneh/frontsight.mdl", bone = "RSASS", rel = "", pos = Vector(-0.274, -28.4, 0), angle = Angle(0, -90, 0), size = Vector(1.25, 1.25, 1.25), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	
+	--optics
 	["odec3d_cmore_kry"] = { type = "Model", model = "models/weapons/krycek/sights/odec3d_cmore_reddot.mdl", bone = "RSASS", rel = "", pos = Vector(2.559, -7.292, -1.321), angle = Angle(0, 90, 0), size = Vector(0.259, 0.259, 0.259), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "RSASS", rel = "", pos = Vector(2.549, -16.105, -3.636), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_sight_rear"] = { type = "Model", model = "models/bunneh/rearsight.mdl", bone = "RSASS", rel = "", pos = Vector(5.309, 2.519, -0.01), angle = Angle(0, 90, 0), size = Vector(1.25, 1.25, 1.25), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_nxs"] = { type = "Model", model = "models/cw2/attachments/l96_scope.mdl", bone = "RSASS", rel = "", pos = Vector(2.569, -9, -0.35), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_microt1kh"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "RSASS", rel = "", pos = Vector(2.47, -7.792, -1.3), angle = Angle(0, 0, 0), size = Vector(0.4, 0.4, 0.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_uecw_csgo_acog"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_acog.mdl", bone = "RSASS", rel = "", pos = Vector(2.423, -1.341, -5.261), angle = Angle(0, 90, 0), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_schmidt_shortdot"] = { type = "Model", model = "models/cw2/attachments/schmidt.mdl", bone = "RSASS", rel = "", pos = Vector(2.789, -2.5, -6.531), angle = Angle(0, 90, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	--handguard
+	["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "RSASS", rel = "", pos = Vector(2.549, -16.105, -3.636), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "RSASS", rel = "", pos = Vector(2.2, -23.378, -4.901), angle = Angle(0, 0, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_saker222"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "RSASS", rel = "", pos = Vector(2.49, -12.4, -4.45), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "RSASS", rel = "", pos = Vector(2.589, -16.026, -1.481), angle = Angle(0, -90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	--laser
+	["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "RSASS", rel = "", pos = Vector(2.589, -16.026, -1.481), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	--Magazines
-	["md_sr338_rsass_conversion"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "MAG", rel = "", pos = Vector(2.480, -9, -5.35), angle = Angle(0, 90, 0), size = Vector(0.8301463413, 0.8301463413, 0.446666667), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	["md_sr338_rsass_conversion"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "MAG", rel = "", pos = Vector(2.480, -9.5, -5.35), angle = Angle(0, 90, 0), size = Vector(0.8301463413, 0.9301463413, 0.446666667), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	--muzzle
+	["md_snip2_m200_heavy_muzzle_brake"] = {type = "Model", model = "models/attachments/heavy_muzzle_brake.mdl", bone = "RSASS", rel = "", pos = Vector(2.5,-38,-3.90), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5)},
+	["md_saker222"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "RSASS", rel = "", pos = Vector(2.5, -12.4, -4.5), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "RSASS", rel = "", pos = Vector(2.5,-32,-2.4), angle = Angle(0, 90, -90), size = Vector(1, 1, 1)},
 }
 
 	SWEP.BackupSights = {
-		["md_microt1kh"] = {[1] = Vector(-4.5, 3, 0.1), [2] = Vector(0,0,-30)},
-		["odec3d_cmore_kry"] = {[1] = Vector(-4.5, 3, 0.1), [2] = Vector(0,0,-30)},
-		["md_schmidt_shortdot"] = {[1] = Vector(-4.5, 8, 0.1), [2] = Vector(0,0,-30)},
-		["md_uecw_csgo_acog"] = {[1] = Vector(-4.5, 8, 0.1), [2] = Vector(0,0,-30)},
-		["md_nxs"] = {[1] = Vector(-4.5, 8, 0.1), [2] = Vector(0,0,-30)}
+		["md_microt1kh"] = {[1] = Vector(-5, 0.45, 0.75), [2] = Vector(0,0,-55)},
+		["odec3d_cmore_kry"] = {[1] = Vector(-5, 0.45, 0.75), [2] = Vector(0,0,-55)},
+		["md_schmidt_shortdot"] = {[1] = Vector(-5, 0.45, 0.75), [2] = Vector(0,0,-55)},
+		["md_uecw_csgo_acog"] = {[1] = Vector(-5, 0.45, 0.75), [2] = Vector(0,0,-55)},
+		["md_nxs"] = {[1] = Vector(-5, 0.45, 0.75), [2] = Vector(0,0,-55)}
 	}
 
 	SWEP.ForeGripHoldPos = {
@@ -106,35 +111,26 @@ if CLIENT then
 	
 	function SWEP:RenderTargetFunc()
 
-	
-	if self.AimPos != self.IronsightPos then -- if we have a sight/scope equiped, hide the front and rar sights
-	self.AttachmentModelsVM.md_sight_front.active = false
-	self.AttachmentModelsVM.md_sight_rear.active = false
-	else
-	self.AttachmentModelsVM.md_sight_front.active = true
-	self.AttachmentModelsVM.md_sight_rear.active = true
-	end
-
 end
 	
 end
 
 SWEP.MuzzleVelocity = 925 -- in meter/s
 
-SWEP.LaserPosAdjust = Vector(-.7, 0, 0)--{x = 1, y = 0, z = 0}
+SWEP.LaserPosAdjust = Vector(0, 0, 0)--{x = 1, y = 0, z = 0}
 SWEP.LaserAngAdjust = Angle(0, 180, 0) --{p = 2, y = 180, r = 0}
 
 SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
-
-SWEP.Attachments = {[1] = {header = "Optic", offset = {600, -400},  atts = {"md_microt1kh","odec3d_cmore_kry", "md_schmidt_shortdot", "md_uecw_csgo_acog", "md_nxs"}},
-[2] = {header = "Muzzle", offset = {180, -400}, atts = {"md_saker222"}},
-[3] = {header = "Handguard", offset = {-650, 100}, atts = {"md_foregrip","md_bipod"}},
-[4] = {header = "Laser", offset = {-550, -350}, atts = {"md_anpeq15"}},
-[5] = {header = "Conversion", offset = {400, 450}, atts = {"md_sr338_rsass_conversion"}},
-[6] = {header = "Skins", offset = {500, 50}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
-["+reload"] = {header = "Ammo", offset = {-550, 500}, atts = {"am_magnum","am_matchgrade"}}}
+SWEP.Trivia = {text = "American high caliber semi-automatic sniper rifle.", x = -600, y = -500}
+SWEP.Attachments = {[1] = {header = "Optic", offset = {-600, -400},  atts = {"md_microt1kh","odec3d_cmore_kry", "md_schmidt_shortdot", "md_uecw_csgo_acog", "md_nxs"}},
+[2] = {header = "Muzzle", offset = {400, -400}, atts = {"md_saker222", "hard20" ,"md_snip2_m200_heavy_muzzle_brake"}},
+[3] = {header = "Handguard", offset = {-600, 100}, atts = {"md_foregrip","md_bipod"}},
+[4] = {header = "Laser", offset = {1200, -400}, atts = {"md_anpeq15"}},
+[5] = {header = "Conversion", offset = {-600, 600}, atts = {"md_sr338_rsass_conversion"}},
+[6] = {header = "Skins", offset = {500, 125}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+["+reload"] = {header = "Ammo", offset = {500, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},
 	reload = "reload",
@@ -215,6 +211,13 @@ function SWEP:IndividualThink()
 	end
 	if self.ActiveAttachments.am_matchgrade then
 		self.DamageFallOff = ((self.DamageFallOff * 0.5))
+	end
+	if self.ActiveAttachments.am_atow_lowvel then
+		self.DamageFallOff = ((self.DamageFallOff * 1.2))
+	end
+	if self.ActiveAttachments.am_atow_heavy then
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
+		self.DamageFallOff = ((self.DamageFallOff * 0.925))
 	end
 	if self.ActiveAttachments.md_sr338_rsass_conversion then
 		self.EffectiveRange = ((self.EffectiveRange - 50 * 39.37))
