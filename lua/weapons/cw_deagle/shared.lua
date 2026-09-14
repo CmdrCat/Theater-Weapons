@@ -21,9 +21,9 @@ if CLIENT then
 		
 	SWEP.MicroT1Pos = Vector(-2.28, 0, -0.292)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
-
-	SWEP.EoTechPos = Vector(-2.25, -6.198, -0.32)
-	SWEP.EoTechAng = Vector(0, 0, 0)
+    
+	SWEP.MRSPos = Vector(-2.25, -5, -0.35)
+	SWEP.MRSAng = Vector(0, 0, 0)
 
 	SWEP.IronsightPos = Vector(-2.254, 5.913, 0.31)
 	SWEP.IronsightAng = Vector(0.1, 0, 0)
@@ -50,7 +50,8 @@ if CLIENT then
 	SWEP.LaserAngAdjust = Angle(0, 0, 0)
 
 	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.241, -4.728, -1.568), [2] = Vector(0, 0, 0)}, 
-	["md_microt1"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)}}
+	["md_microt1"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)},
+["too_reflex_mrs"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-30)}}
 
 	SWEP.EffectiveRange_Orig = 30 * 39.37
 	SWEP.DamageFallOff_Orig = .85
@@ -83,7 +84,7 @@ if CLIENT then
 	SWEP.BoltBonePositionRecoverySpeed = 25
 	
 	SWEP.AttachmentModelsVM = {
-		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(4, -0.55, 0.3), angle = Angle(0, 0, -90), size = Vector(0.9,0.9,0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(4, -0.575, 0.2), angle = Angle(0, 0, -90), size = Vector(0.9,0.9,0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(3.325, -1.075, 0.209), angle = Angle(90, 0, -90), size = Vector(0.4, 0.4, 0.4)},
 		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", pos = Vector(-6.054, 8.47, -0.035), angle = Angle(0, 1.5, -90), size = Vector(0.85, 0.85, 0.85)},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-1.831, 3.892, 0.504), angle = Angle(-90, 0, -90), size = Vector(0.85, 0.85, 0.85)},
