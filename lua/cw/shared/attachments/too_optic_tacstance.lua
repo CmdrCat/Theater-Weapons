@@ -5,7 +5,8 @@ att.displayNameShort = "Tac Stance"
 att.aimPos = {"TacStancePos", "TacStanceAng"}
 att.isSight = true
 att.withoutRail = true
-
+att.isBG = true
+ 
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")

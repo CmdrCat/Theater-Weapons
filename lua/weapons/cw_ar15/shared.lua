@@ -11,6 +11,8 @@ if CLIENT then
 	SWEP.IconLetter = "w"
 	killicon.AddFont("cw_ar15", "CW_KillIcons", SWEP.IconLetter, Color(255, 80, 0, 150))
 	
+
+	SWEP.NearWallEnabled = false
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
@@ -57,9 +59,13 @@ if CLIENT then
 	
 	SWEP.AlternativePos = Vector(-0.32, 0, -0.64)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
+
+	SWEP.TacStancePos = Vector(-4.5, 2.75, 0.5)
+	SWEP.TacStanceAng = Vector(0,0, -55)
 	
 	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.211, -4, -0.95), [2] = Vector(-2, 0, 0)},
-["md_ins2coltscope"] = {[1] = Vector(-4, 2.75, 0.5), [2] = Vector(0,0, -55)}}
+["md_ins2coltscope"] = {[1] = Vector(-4.5, 2.75, 0.5), [2] = Vector(0,0, -55)},
+["too_optic_tacstance"] = {[1] = Vector(-2.208, -4.3, 0.143), [2] = Vector(0.605, 0, -0.217)}}
 
 	SWEP.ACOGAxisAlign = {right = -0.58, up = -0.01, forward = 0}
 	SWEP.SchmidtShortDotAxisAlign = {right = -2, up = 0, forward = 0}
@@ -127,9 +133,11 @@ if CLIENT then
 			["md_aimpoint"] = Vector(-0.225, 5.5, 3.15),
 		},
 		["md_saker"] = {["bg_longbarrel"] = Vector(-0.042, 9, -0.1), ["bg_longris"] = Vector(-0.042, 9, -0.1)},
-		["md_bipod"] = {
-			bg_longris = Vector(-0.011, 14.541, 0.441)
-		}
+		["ins2_atow_clamplaser"] = {["bg_longbarrel"] = Vector(-2.2,-2.5,4.2), ["bg_longris"] = Vector(-2.2,-2.5,4.2)},
+		["md_bipod"] = {bg_longris = Vector(-0.011, 14.541, 0.441)
+		},
+	
+		
 	}
 
 
@@ -148,13 +156,17 @@ SWEP.StockBGs = {main = 2, regular = 0, heavy = 1, sturdy = 2}
 SWEP.MagBGs = {main = 5, regular = 0, round60 = 1}
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"bg_foldsight", "md_ins2coltscope", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
+SWEP.Trivia = {text = "The definitive American weapon that broke tradition in the face of modern warfare.", x = -400, y = -700}
+
+
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"too_optic_tacstance","bg_foldsight", "md_ins2coltscope", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Barrel", offset = {300, -600}, atts = {"md_saker"}},
 	[3] = {header = "Receiver", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris"}},
 	[4] = {header = "Handguard", offset = {-400, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
 	[5] = {header = "Magazine", offset = {-400, 340}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}},
 	[6] = {header = "Stock", offset = {1000, 300}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock"}},
 	[7] = {header = "Laser", offset = {250, 300}, atts = {"ins2_atow_clamplaser","md_anpeq15"}},
+	[8] = {header = "Conversion", offset = {1050, 500}, atts = {"too_m4a1_50_beowulf"}, exclusions = {md_ak_556_conv = true}},
 	["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 SWEP.AttachmentDependencies = {
@@ -207,8 +219,8 @@ SWEP.Secondary.DefaultClip	= 30
 SWEP.Secondary.Ammo			= ".50 Beowulf"
 
 SWEP.FireDelay = 0.066666666666667
-SWEP.FireSound = "CW_AR15_FIRE"
-SWEP.FireSoundSuppressed = "CW_AR15_FIRE_SUPPRESSED"
+SWEP.FireSound = "CW_TOO_AR15_FIRE"
+SWEP.FireSoundSuppressed = "CW_TOO_AR15_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.6
 
 SWEP.HipSpread = 0.12
@@ -228,6 +240,9 @@ SWEP.ReloadHalt = 2.3
 SWEP.ReloadHalt_Empty = 2.77
 SWEP.SnapToIdlePostReload = true
 
+SWEP.EffectiveRange_Orig = 50 * 39.37
+SWEP.DamageFallOff_Orig = .3
+
 function SWEP:IndividualThink()
 	self.Owner.ViewAff = 0
 	clip = self:Clip1()
@@ -244,9 +259,15 @@ if self.ActiveAttachments.md_anpeq15 then
 end
 
 
+
 	self.EffectiveRange = 50 * 39.37
 	self.DamageFallOff = .3
-	
+
+    if self.ActiveAttachments.too_m4a1_50_beowulf then
+	self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + 0.2))
+	end
+
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end
@@ -259,12 +280,5 @@ end
 	if self.ActiveAttachments.am_atow_heavy then
 		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 		self.DamageFallOff = ((self.DamageFallOff * 0.925))
-	end
-end
-function SWEP:updateStandardParts()
-	self.BaseClass.updateStandardParts(self)
-	
-	if self.ActiveAttachments.bg_ar15_carryhandlerail then
-		self:setBodygroup(self.SightBGs.main, self.SightBGs.carryhandle)
 	end
 end

@@ -24,7 +24,7 @@ function att:attachFunc()
 	self.FireSoundSuppressed = "CW_TOO_M40_FIRESUPPRESSED"
 	self.Primary.Ammo = ".50 Beowulf"
 	self.PrintName = ".50 Beowulf Tactical"
-	self.Trivia = {text = "The .50 Beowulf is a heavy round developed by Alexander Arms used for smashing through vehicles and armor alike.", x = -900, y = -700}
+	self.Trivia = {text = "The .50 Beowulf is a heavy round developed by Alexander Arms used for smashing through vehicles and armor alike.", x = -400, y = -700}
 	self.ShellScale = 1.14
 end
 
@@ -40,8 +40,8 @@ function att:detachFunc()
 	self.FireSound = "CW_TOO_AR15_FIRE"
 	self.FireSoundSuppressed = "CW_TOO_AR15_FIRE_SUPPRESSED"
 	self.Primary.Ammo = "5.56x45MM"
-	self.PrintName = "M4A1"
-	self.Trivia = {text = "The AR-15 platform sees global use from civilians, law enforcement agencies, and militaries. Many modern firearms take inspiration from the AR-15 in some way.", x = -900, y = -700}
+	self.PrintName = "AR-15"
+	self.Trivia = {text = "The definitive American weapon that broke tradition in the face of modern warfare.", x = -400, y = -700}
 	self.ShellScale = 0.5
 end
 
