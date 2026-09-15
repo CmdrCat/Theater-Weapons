@@ -2,11 +2,11 @@
 {
 	"$basetexture" "models\bunneh\an94\main"
 	"$bumpmap" "models\bunneh\an94\main_n"
-	"$envmap" "env_cubemap"
+	"$envmap" ""
 	"$normalmapalphaenvmapmask" 1
 	"$envmaptint" "[.025 .025 .025]"
 	"$envmapcontrast" .7
-	"$phong" 1
+	"$phong" "0"
 	"$phongboost" 6
 //	"$phongexponenttexture" "models\weapons\v_models\millenia_aks\diffuse_exponent"
 	"$phongfresnelranges" "[.2 1 0]"

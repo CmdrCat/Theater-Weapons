@@ -3,11 +3,11 @@
 	"$basetexture"  		"models\khrcw2\doipack\suomi\suomi_col"
 	"$bumpmap"     			"models\khrcw2\doipack\suomi\suomi_nor"
 
-	"$envmap"                       "env_cubemap"
+	"$envmap"                       ""
 	"$normalmapalphaenvmapmask"	"1"
 	"$envmaptint"                   "[0.04 0.04 0.04]"
 
-	"$phong"                        "1"
+	"$phong"                        "0"
 	"$phongalbedotint"              "1"
 	"$phongtint"                    "[.6 .8 1]"
 

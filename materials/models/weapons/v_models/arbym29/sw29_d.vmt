@@ -5,13 +5,13 @@ $basetexture                      "models\weapons\v_models\arbym29\sw29_di"
 $bumpmap                         "models\weapons\v_models\arbym29\sw29_ns"
 $phongexponenttexture  "models\weapons\v_models\arbym29\sw29_g"
 //$phongexponent 7
-$phong 1
+$phong "0"
 $phongboost "285"
 $phongfresnelranges "[0 1.3 1.1]"
 //$basemapalphaphongmask 1
 $phongalbedotint 1
 //$phongtint "[0.8 0.92 1.1]"
-$envmap env_cubemap
+$envmap ""
 //$basemapalphaenvmapmask 1
 $normalmapalphaenvmapmask 1
 $envmapfresnel 1

@@ -5,7 +5,7 @@
 	
 	$phongtint 			"[0.6 0.8 1.0]"
 
-	$phong 				"1"
+	$phong 				"0"
 	//$PhongAlbedoTint 		"0"	
 	//$BasemapLuminancePhongMask	"1"
 

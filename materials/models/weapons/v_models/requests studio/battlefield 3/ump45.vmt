@@ -3,7 +3,7 @@
 	"$baseTexture" "models\weapons\v_models\Requests Studio\Battlefield 3\UMP45 D"
 	"$bumpmap" "models\weapons\v_models\Requests Studio\Battlefield 3\UMP45 N"
 	$phongexponenttexture "models\weapons\v_models\Requests Studio\Battlefield 3\UMP45 D"
-	$phong 1
+	$phong "0"
 	$phongboost ".1"
 	$phongalbedoboost 1
 	$phongfresnelranges "[.50 .50 1]"

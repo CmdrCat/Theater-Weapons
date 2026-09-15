@@ -3,7 +3,7 @@
 	"$baseTexture" "models\khrcw2\cwmosinnagant\pu"
 	"$bumpmap"     "models\khrcw2\cwmosinnagant\pu_n"
 
-	"$phong" "1"
+	"$phong" "0"
 
 "$nocull" "1"
 

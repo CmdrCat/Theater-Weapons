@@ -4,7 +4,7 @@ VertexLitGeneric
 	"$bumpmap" "effects/flat_normal"
 
 	"$halflambert" "1"
-	"$phong" 		"1"
+	"$phong" 		"0"
 	"$phongexponent" 	"40"
 	"$phongboost" "0.3"
 	"$phongfresnelranges" "[0 3 6]"

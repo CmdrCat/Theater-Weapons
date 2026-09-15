@@ -9,7 +9,7 @@
         $envmaptint   "[0.01 0.01 0.01]"
         $envmapfresnel "1" // Advanced envmap reflections
  
-        $phong  "1"
+        $phong  "0"
         $phongboost  "1"      //tone down to decrease specular reflections
         $phongfresnelranges     "[0.5 1.5 3.0]"
         $phongalbedotint  "1"

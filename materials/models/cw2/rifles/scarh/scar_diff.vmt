@@ -7,7 +7,7 @@
      "$normalmapalphaenvmapmask" 1
      "$envmapfresnel" "0.7"
 
-     "$phong" 1
+     "$phong" "0"
 
      "$phongexponenttexture" "models\cw2\rifles\scarh\bull\scar_exponent.vtf"
      "$phongboost" 6
@@ -15,7 +15,7 @@
      "$phongalbedotint" "1"
      "$phongalbedoboost" "38"
 
-     "$rimlight" "1"
+     "$rimlight" "0"
      "$rimlightexponent" "88"
      "$rimlightboost""1.8"
      "$rimmask" "1"

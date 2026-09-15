@@ -7,7 +7,7 @@
 "$phongexponenttexture" "models/albedotint"
 	//"$envmap" "env_cubemap"
 	"$envmaptint" "[.9 .5 0.25]"
-	"$phong" 			"1"
+	"$phong" 			"0"
 	"$phongexponent"		"30"
 	"$phongboost" 			"1.5"
 	"$phongfresnelranges"		"[1.0 2.5 10.5]"//"[0.1 0.4 .8]"

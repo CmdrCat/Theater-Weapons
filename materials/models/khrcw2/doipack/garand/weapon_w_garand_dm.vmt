@@ -5,7 +5,7 @@
 	
 	"$phongtint" 			"[0.6 0.8 1.0]"
 
-	"$phong" 			"1"
+	"$phong" 			"0"
 	"$phongexponent" 		"25"
 	"$phongboost"			"0.1"	
 	"$phongFresnelRanges" 		"[.3 .3 1]"

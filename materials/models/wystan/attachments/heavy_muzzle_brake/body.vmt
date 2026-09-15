@@ -2,7 +2,7 @@ VertexLitGeneric
 {
 	"$basetexture" "models\wystan\attachments\heavy_muzzle_brake\body"
 	"$bumpmap"     "models\wystan\attachments\heavy_muzzle_brake\body_nrm"
-	"$phong" "1"
+	"$phong" "0"
 	"$phongexponent" "250"
 	"$phongboost" ".25"	
 	"$phongfresnelranges" "[1 1 1]"

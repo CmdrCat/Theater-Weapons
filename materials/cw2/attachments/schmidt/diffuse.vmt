@@ -4,7 +4,7 @@
 	"$bumpmap" "cw2\attachments\schmidt\Normals"
 	//"$envmap" "env_cubemap"
 	//"$normalmapalphaenvmapmask" "1"
-	"$phong" "1"
+	"$phong" "0"
 	"$phongexponent" "16"
 	"$envmaptint" "[0.03 0.03 0.03]"
 	"$phongboost"	"0.3"

@@ -10,7 +10,7 @@
                 "$ambientocclusion" 1
                 "$ambientoccltexture" "models\khrcw2\1895\materials\winchester 1895 skin3_a"						
 
-	"$phong" "1"
+	"$phong" "0"
 	"$phongalbedotint" "1"
 	"$phongboost" "20"
 	"$phongfresnelranges" "[.5 1 4]"

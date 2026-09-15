@@ -3,7 +3,7 @@
 	"$basetexture"			"models\khrcw2\doipack\m1919\weapon_m1919_dm"
 	"$bumpmap"	 			"models\khrcw2\doipack\m1919\weapon_m1919_nm"
 
-	"$phong"  				"1"
+	"$phong"  				"0"
 	"$phongexponent" 		"40"
 	"$phongboost" 			"3.2"
 	"$phongfresnelranges"	"[1 2 3]"
@@ -11,7 +11,7 @@
 	"$phongalbedotint" 		"1"	
 
 	"$envmapfresnel"	"0.75"
-	"$envmap"			"env_cubemap"
+	"$envmap"			""
 	"$envmaptint"		"[0.1 0.1 0.1]"
 	"$normalmapalphaenvmapmask"	"1"
 }

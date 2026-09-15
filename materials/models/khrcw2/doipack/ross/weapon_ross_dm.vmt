@@ -3,7 +3,7 @@
 	"$basetexture"			"models\khrcw2\doipack\ross\weapon_ross_dm"
 	"$bumpmap"			"models\khrcw2\doipack\ross\weapon_ross_nm"
 
-	"$phong"  				"1"
+	"$phong"  				"0"
 	"$phongexponent" 		"38"
 	"$phongboost" 			"2.25"
 	"$phongfresnelranges"	"[1 2 3]"
@@ -11,7 +11,7 @@
 	"$phongalbedotint" 		"1"	
 
 	"$envmapfresnel"	"0.65"
-	"$envmap"			"env_cubemap"
+	"$envmap"			""
 	"$envmaptint"		"[0.1 0.1 0.15]"
 	"$normalmapalphaenvmapmask"	"1"
 }

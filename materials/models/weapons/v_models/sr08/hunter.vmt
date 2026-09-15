@@ -4,7 +4,7 @@
 	"$bumpmap" "models\weapons\v_models\sr08\rifle_scope_n"
 	"$normalmapalphaenvmapmask" "1"
 	"$phongexponent"   "30"
-	"$phong"   "1"
+	"$phong"   "0"
 	"$phongfresnelranges"   "[0.8 0.9 1]"
 
 	"$phongboost"   "2"

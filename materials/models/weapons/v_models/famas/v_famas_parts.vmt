@@ -2,12 +2,12 @@
 {
 	"$basetexture" 	"models/weapons/v_models/famas/v_famas_parts"
 	"$bumpmap" 	"models/weapons/v_models/famas/v_famas_parts_normal"
-	"$envmap" 	"env_cubemap"
+	"$envmap" 	""
 
 	"$normalmapalphaenvmapmask" "1"
 	
 	"$envmaptint"		"[0.04 0.04 0.04]"
-	"$phong" 		"1"
+	"$phong" 		"0"
 	"$phongexponent" 	"40"
 	"$phongboost"		"1"
 	"$phongtint"		"[0.8 0.9 1]"

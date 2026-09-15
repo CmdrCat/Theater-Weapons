@@ -3,7 +3,7 @@
 	"$basetexture"			"models\khrcw2\doipack\mg34\weapon_mg34_dm"
 	"$bumpmap"				"models\khrcw2\doipack\mg34\weapon_mg34_nm"
 
-	"$phong"			"1"
+	"$phong"			"0"
 	"$phongalbedotint"	"1"
 	"$phongtint"		"[.65 .9 1]"
 
@@ -11,7 +11,7 @@
 	"$phongexponent"		"34"
 	"$phongfresnelranges"	"[1.5 8 20]"
 
-	"$envmap" 			"env_cubemap"
+	"$envmap" 			""
 	"$normalmapalphaenvmapmask" 	"1"
 	"$envmaptint"			"[0.1 0.1 0.1]"
 }

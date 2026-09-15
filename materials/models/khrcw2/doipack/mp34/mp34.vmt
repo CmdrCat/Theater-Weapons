@@ -4,19 +4,19 @@
 	"$bumpmap" "models\khrcw2\doipack\mp34\mp34_n"
 
 
-	"$phong"                  "1"
+	"$phong"                  "0"
 	"$phongexponent"         "75"
     "$phongboost"             "0.7"
     //"$phongfresnelranges"     "[1.7 2 5]"
     "$phongtint"             "[0.6 0.8 1]"
     //"$phongalbedotint"         "1"    
     
-	"$envmap"         "env_cubemap"
+	"$envmap"         ""
      // "$halflambert"             "1"
     //"$normalmapalphaenvmapmask"     "1"
     "$envmaptint"                     "[0.007 0.007 0.007]"
    
-   $rimlight               1
+   $rimlight               "0"
     $rimlightexponent       80
     $rimlightboost          .01    
     $rimmask 1

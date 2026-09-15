@@ -4,17 +4,17 @@ Vertexlitgeneric
 "$bumpmap" "models\weapons\v_models\m249 saw\m249_N"
 "$phongexponenttexture" "models\weapons\v_models\m249 saw\m249_S"
 	
-	$phong                      		1
+	$phong                      		"0"
 	$phongboost                 		255
 	$phongfresnelranges         		"[1 4 6]"
 	"$phongalbedotint"					"1"
 	"$phongalbedoboost" 				"12"
 	$normalmapalphaphongmask    		1
 
-	$envmap                    			 env_cubemap
+	$envmap                    			 ""
 	$envmaptint                 		"[ .05 .05 .085 ]"
 
-	$rimlight							1
+	$rimlight							"0"
 	$rimmask							1
 	$rimlightexponent					150
 	$rimlightboost						0.7

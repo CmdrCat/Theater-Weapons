@@ -9,14 +9,14 @@
     "$blendtintbybasealpha" "1"                             //do not touch this
     /////////////////
 
-    "$phong" "1"
+    "$phong" "0"
     "$phongboost" "1"
     "$phongalbedotint" "1"
     "$phongalbedoboost" "10"                                //toy around with this
     "$phongfresnelranges" "[1 0.1 0]"
 
     //rimlight doesn't properly show in hlmv, make sure you're changing these values in game
-    "$rimlight" "1"
+    "$rimlight" "0"
     "$rimlightexponent" "100"
     "$rimmask" "1"
     "$rimlightboost" "1"
@@ -25,7 +25,7 @@
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
 
-    "$envmap" "models\cw2mw\atts\specularity_00"
+    "$envmap" ""
     "$envmaptint" "[0.098 0.098 0.098]"                 
 
   

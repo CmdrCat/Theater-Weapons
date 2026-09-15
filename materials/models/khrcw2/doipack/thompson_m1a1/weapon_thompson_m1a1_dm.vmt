@@ -6,13 +6,13 @@
 	"$model"						"1"
     "$color"						"[1 1 1]"
 
-	"$phong"  				"1"
+	"$phong"  				"0"
 	"$phongtint"			"[0.65 0.9 1]"
 	"$phongboost"			"1.5"
 	"$phongexponent" 		"48"
 	"$phongfresnelranges"	"[1 2 4]"
 
-	"$envmap"					"env_cubemap"
+	"$envmap"					""
 	"$normalmapalphaenvmapmask" "1"
 	"$envmaptint"				"[0.08 0.08 0.08]"
 }

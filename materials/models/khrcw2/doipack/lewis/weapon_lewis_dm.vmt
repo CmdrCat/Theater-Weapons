@@ -4,7 +4,7 @@
 	"$basetexture"			"models\khrcw2\doipack\lewis\weapon_lewis_dm"
 	"$bumpmap"			"models\khrcw2\doipack\lewis\weapon_lewis_nm"
 
-	"$phong"  				"1"
+	"$phong"  				"0"
 	"$phongexponent" 		"48"
 	"$phongboost" 			"1.5"
 	"$phongfresnelranges"	"[1 2 3]"
@@ -12,7 +12,7 @@
 	"$phongalbedotint" 		"1"	
 
 	"$envmapfresnel"	"0.5"
-	"$envmap"			"env_cubemap"
+	"$envmap"			""
 	"$envmaptint"		"[0.1 0.1 0.1]"
 	"$normalmapalphaenvmapmask"	"1"
 }

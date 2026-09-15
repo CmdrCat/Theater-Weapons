@@ -9,14 +9,14 @@
     $color						"[ .75 .75 .75 ]"
 
 //PHONG
-	$phong                      "1"
+	$phong                      "0"
 	$phongtint                  "[ .67 .85 1 ]"
 	$phongboost                	"15"
 //	$phongexponent				"60"
 	$phongfresnelranges       	"[ .1 .5 1 ]"
 
 //ENVMAP
-	$envmap						"env_cubemap"
+	$envmap						""
 //	$envmapfresnel 				"-1"
 	$normalmapalphaenvmapmask	"1"
 	$envmaptint               	"[ .05 .05 .05 ]"

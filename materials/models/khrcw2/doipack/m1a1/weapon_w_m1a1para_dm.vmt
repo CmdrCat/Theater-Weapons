@@ -4,14 +4,14 @@
 	"$bumpmap" 						"models\khrcw2\doipack\m1a1\weapon_w_m1a1para_nm"
 
 	//PHONG
-	"$phong"                        "1"
+	"$phong"                        "0"
 	"$phongtint"                    "[ .67 .85 1 ]"
 	"$phongboost"                   "1"
 	"$phongexponent"				"80"
 	"$phongfresnelranges"           "[ 1 2 3 ]"
 
 //ENVMAP
-	"$envmap"                       "env_cubemap"
+	"$envmap"                       ""
 	"$envmapfresnel" 				".33"
 	"$normalmapalphaenvmapmask" 	"1"
 	"$envmaptint"                   "[ .01 .01 .01 ]"

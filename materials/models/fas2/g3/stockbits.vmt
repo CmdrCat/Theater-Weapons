@@ -2,7 +2,7 @@ VertexLitGeneric
 {
 	"$baseTexture" "models\fas2\g3\stockbits"
 	"$basemapalphaphongmask" 	"1"
-	"$phong" 			"1"
+	"$phong" 			"0"
 	"$phongtint" 			"[1 1 0.8]"
 	"$phongexponent" 		"15"
 	"$phongboost" 			"1"

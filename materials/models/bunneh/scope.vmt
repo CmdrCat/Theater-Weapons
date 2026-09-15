@@ -3,7 +3,7 @@
 	"$baseTexture" "models\bunneh\Scope"
 	"$bumpmap" 	"models\bunneh\Scope_Normal"
 	"$halflambert" 	"1"
- 	"$phong" "1"
+ 	"$phong" "0"
 	"$phongexponent" "32"
 	"$phongboost" "1"
 	"$phongfresnelranges"	"[1 6 12]"

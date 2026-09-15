@@ -4,7 +4,7 @@ VertexLitGeneric
 	"$bumpmap" "models\weapons\v_models\Glock17\mag_normal"
 	"$normalmapalphaphongmask" "1"
 	"$halflambert" 	"1"
- 	"$phong" "1"
+ 	"$phong" "0"
 	"$phongtint"	"[0.7 0.9 1]"
 	"$phongexponenttexture" "models\weapons\v_models\Glock17\mag_exponent"
 	"$phongboost" "1"
