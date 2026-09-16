@@ -3,7 +3,7 @@
 	"$basetexture"			"models\khrcw2\doipack\fg42\weapon_w_fg42_dm"
 	"$bumpmap"				"models\khrcw2\doipack\fg42\weapon_w_fg42_nm"
 	
-	"$phong"  				"1"
+	"$phong"  				"0"
 	"$phongexponent" 		"36"
 	"$phongboost" 			"0.03"
 	"$phongfresnelranges" 	"[2 4 6]"

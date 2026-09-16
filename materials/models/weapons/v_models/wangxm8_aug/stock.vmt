@@ -2,7 +2,7 @@ VertexLitGeneric
 {
 	"$basetexture"	"models\weapons\v_models\WangXm8_AUG\Stock"
 	"$bumpmap"			"models\weapons\v_models\WangXm8_AUG\stock_normal"
-	"$phong" 			"1"
+	"$phong" 			"0"
 	"$phongalbedotint" 		"1"
 	"$normalmapalphaenvmapmask"	"1"
 	"$halflambert" 			"1"
@@ -10,7 +10,7 @@ VertexLitGeneric
 	"$phongboost"			"0.5"
 	"$phongexponent"		"10"
 
-	"$envmap"			"env_cubemap"
+	"$envmap"			""
 //	"$envmapcontrast" 		"0.4"
 //	"$envmapsaturation" 		"0.8"
 //	"$envmaptint" 			"[ 0.6 0.6 0.6 ]"

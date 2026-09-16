@@ -105,7 +105,7 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		--Muzzles
-		["md_pbs1"] = { type = "Model", model = "models/cw2/attachments/pbs1.mdl", bone = "body", rel = "", pos = Vector(-0.031, 20.329, -0.635), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_pbs1"] = { type = "Model", model = "models/cw2/attachments/pbs1.mdl", bone = "body", rel = "", pos = Vector(0, 21, -0.85), angle = Angle(0, 180, 0), size = Vector(0.85, 0.85, 0.85), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_csgo_silencer_rifle"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "body", rel = "", pos = Vector(-0.031, 21.5, -0.635), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "body", rel = "", pos = Vector(-0.031, 23.5, 0.25), angle = Angle(0, -90, 90), size = Vector(1, 1, 1)},
 		--Optics

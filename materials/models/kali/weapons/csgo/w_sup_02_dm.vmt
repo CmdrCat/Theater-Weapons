@@ -10,13 +10,13 @@
 
 	"$blendtintbybasealpha" "1"
 
-	"$phong" "1"
+	"$phong" "0"
 	"$phongboost" "0.35"
 	"$phongexponent" "2.5"
 	"$phongfresnelranges" "[ 0.5 0.75 1.5 ]"
 	"$phongalbedotint" "1"
 
-	"$rimlight" "1"
+	"$rimlight" "0"
 	"$rimlightexponent" "25"
 	"$rimlightboost" "0.15"
 }

@@ -2,9 +2,9 @@
 {
 	"$basetexture" "gmod4phun/foldsight/rearsightCol"
 	"$bumpmap"    "gmod4phun/foldsight/rearsightNor"
-	"$envmap" "env_cubemap"
+	"$envmap" ""
 	"$normalmapalphaenvmapmask" "1"
-	"$phong" "1"
+	"$phong" "0"
 	"$phongexponent" "4"
 	"$phongboost"	"0.25"
 	"$phongfresnelranges"	"[1 1 1]"

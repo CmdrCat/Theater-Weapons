@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
 	"$basetexture" "models\fas2\sh\picatinny"
-	"$phong" 			"1"
+	"$phong" 			"0"
 	"$phongexponent" 		"50"
 	"$phongboost" 			"0.5"
 	"$phongfresnelranges"		"[0.3 0.5 .6]"

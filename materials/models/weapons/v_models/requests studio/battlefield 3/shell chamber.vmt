@@ -3,12 +3,12 @@
 "$baseTexture" "models\weapons\v_models\Requests Studio\Battlefield 3\shell_d"
 "$bumpmap" "models\weapons\v_models\Requests Studio\Battlefield 3\shell_n"
 $phongexponenttexture "models\weapons\v_models\Requests Studio\Battlefield 3\shell_d"
-$phong 1
+$phong "0"
 $phongboost ".1"
 $phongalbedoboost 1
 $phongfresnelranges "[.50 .50 1]"
 $basemapalphaphongmask 1
-$envmap env_cubemap
+$envmap ""
 $envmapfresnel 1
 $envmaptint "[.02 .02 .02]"
 $phongalbedotint 1

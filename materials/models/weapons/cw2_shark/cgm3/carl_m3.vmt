@@ -8,7 +8,7 @@
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$phong" "1"						
+	"$phong" "0"
 	"$phongboost"	"15"
 	"$phongexponent" 10
 	"$phongwarptexture"		"models/weapons/cw2_shark/cgm3/phongwarp1"

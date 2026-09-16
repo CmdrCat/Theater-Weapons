@@ -4,7 +4,7 @@
 	"$bumpmap" 			"models\khrcw2\doipack\m1912\weapon_m590a1_nm"
         "$color"			"[1.5 1.5 1.5]"
 
-	"$phong"                        "1"
+	"$phong"                        "0"
 	"$phongalbedotint"              "1"
 	"$phongtint"                    "[.6 .8 1]"
 
@@ -14,7 +14,7 @@
 
 //	"$phongexponenttexture"         "models\khrcw2\doipack\m1912\weapon_m590a1_exp"
 
-	"$envmap"                       "env_cubemap"
+	"$envmap"                       ""
 	"$normalmapalphaenvmapmask"	"1"
 	"$envmaptint"                   "[0.04 0.04 0.04]"
 

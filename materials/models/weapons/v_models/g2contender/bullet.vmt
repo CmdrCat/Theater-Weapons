@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
 $baseTexture "models/weapons/v_models/G2Contender/Bullet"
-$phong "1"
+$phong "0"
 $phongboost "3.0"
 $phongfresnelranges "[1 1 10]"
 $phongexponent "25"

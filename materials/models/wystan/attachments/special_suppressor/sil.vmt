@@ -4,18 +4,18 @@
 
 	"$basetexture"                  "models\wystan\attachments\special_suppressor\Sil"
 	"$bumpmap"                      "models\wystan\attachments\special_suppressor\USP_normal"
-    $phong                      1
+    $phong                      "0"
     $phongboost                 0.84
     $phongfresnelranges         "[1 2 4]"
     $phongtint                  "[.8 .8 1]"
     $phongboost"	                "2.4"	
     $phongexponent" 	            "45"
 
-    $envmap                     env_cubemap
+    $envmap                     ""
     $envmaptint                 "[.075 .075 .125]"
     $normalmapalphaenvmapmask   1
 
-    $rimlight                       1
+    $rimlight                       "0"
     $rimlightexponent        24
     $rimlightboost              1.2
     $rimmask                     1	

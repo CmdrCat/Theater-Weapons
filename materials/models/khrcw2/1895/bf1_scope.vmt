@@ -9,7 +9,7 @@
 	"$envmaptint" "[.1 .1 .1]"
 	"$envmapcontrast" ".4"	
 
-	$phong 1
+	$phong "0"
 	$phongalbedotint 1
 	$phongboost 20
 	$phongfresnelranges "[.5 1 4]"

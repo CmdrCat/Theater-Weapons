@@ -3,7 +3,7 @@
 	"$basetexture" "models\weapons\v_models\m200\M200_Handle_S"
 	"$bumpmap"     "models\weapons\v_models\M200\M200_Handle_N"
 	"$normalmapalphaenvmapmask" "1"
-	"$phong" 		"1"
+	"$phong" 		"0"
 	"$phongexponent" 	"5"
 	"$phongboost" ".5"
 	"$phongfresnelranges" "[.9 1.5 1]"

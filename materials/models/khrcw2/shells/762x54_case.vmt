@@ -12,21 +12,21 @@
     "$color2" "[0.4 0.4 0.4]"
     "$blendtintbybasealpha" "1"
 
-    "$phong" "1"
+    "$phong" "0"
     "$phongboost" "0.5"
 	"$phongalbedoboost" "45"
     "$phongfresnelranges" "[0 0.1 1]"
     "$phongalbedotint" "1"
 
     //rimlight doesn't properly show in hlmv, make sure you're changing these values in game
-    "$rimlight" "1"
+    "$rimlight" "0"
     "$rimlightexponent" "25"
     "$rimmask" "0"
     "$rimlightboost" "0.15"
 
     "$normalmapalphaenvmapmask" "1"
     "$envmapfresnel" "0"
-    "$envmap" "env_cubemap"
+    "$envmap" ""
     "$envmaptint" "[0.2 0.2 0.2]"
 
     "Proxies"

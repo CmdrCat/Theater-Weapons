@@ -8,10 +8,10 @@
 
 	 $phongtint 			"[.9 .6 .3]"
 
-	$envmap 			env_cubemap
+	$envmap 			""
 	$envmaptint 			"[.5 .5 .5  ]"
 
-	$phong 				"1"
+	$phong 				"0"
 	//$PhongAlbedoTint 		"0"	
 	//$BasemapLuminancePhongMask	"1"
 	

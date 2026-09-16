@@ -2,7 +2,7 @@
 {
 "$baseTexture" "models\bunneh\silencer"
 "$bumpmap" "models\bunneh\silencernormal"
-"$phong" "1"
+"$phong" "0"
 "$phongexponent" "45"
 "$phongboost" "1"
 "$phongfresnelranges" "[.125 1 0.75]"

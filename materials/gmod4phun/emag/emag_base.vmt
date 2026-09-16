@@ -3,9 +3,9 @@
 	"$basetexture" "gmod4phun/emag/emag_col"
 	"$bumpmap"    "gmod4phun/emag/emag_norm"
 	"$alphatest"    1
-	"$envmap" "env_cubemap"
+	"$envmap" ""
 	"$normalmapalphaenvmapmask" "1"
-	"$phong" "1"
+	"$phong" "0"
 	"$phongexponent" "4"
 	"$phongboost"	"0.05"
 	"$phongfresnelranges"	"[1 1 1]"

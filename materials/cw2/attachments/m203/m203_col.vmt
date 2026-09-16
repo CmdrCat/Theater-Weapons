@@ -2,9 +2,9 @@
 {
 	"$baseTexture" "cw2\attachments\m203\M203_Col"
 	"$bumpmap" "cw2\attachments\m203\M203_Norm"
-	"$envmap" "env_cubemap"
+	"$envmap" ""
 	"$normalmapalphaenvmapmask" "1"
-	"$phong" "1"
+	"$phong" "0"
 	"$phongexponent" "4"
 	"$phongboost"	"1"
 	"$phongfresnelranges"	"[1 1 1]"

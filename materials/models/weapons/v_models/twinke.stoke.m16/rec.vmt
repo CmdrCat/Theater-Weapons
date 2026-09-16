@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
 	"$basetexture"	"models\weapons\v_models\Twinke.Stoke.M16\rec"
-	"$envmap" "env_cubemap"
+	"$envmap" ""
 	"$envmapmask" "models\weapons\v_models\Twinke.Stoke.M16\rec_ref"
 }

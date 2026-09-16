@@ -2,10 +2,10 @@
 {
 	"$baseTexture" "models\blacktea\attachments\KAScope08_D"
 	"$bumpmap" "models\blacktea\attachments\KAScope08_N"
-	"$envmap" "env_cubemap"
+	"$envmap" ""
 	"$envmaptint" "[0.05 0.05 0.05]"
 	"$normalmapalphaenvmapmask" "1"
-	"$phong" 		"1"
+	"$phong" 		"0"
 	"$phongexponent" 	"10"
 	"$phongboost" "0.75"
 	"$phongfresnelranges" "[1 3 6]"

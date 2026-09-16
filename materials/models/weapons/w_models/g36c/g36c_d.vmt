@@ -5,19 +5,19 @@
 
 	"$PhongExponentTexture" "models\weapons\v_models\g36c\g36c_s"
 
-	"$envmap"			"env_cubemap"
+	"$envmap"			""
 	"$envmapfresnel" 			"1"
 	"$envmapFresnelMinMaxExp"		"[0 .4 1]"
 	"$phongtint"   			"[.18 .19 .2]"
 	"$envmaptint"   			"[.018 .019 .02]"
 	"$normalmapalphaenvmapmask" 	"1"
- 	"$phong" 			"1"
+ 	"$phong" 			"0"
 
 	"$phongboost" 			"3"
 	"$phongfresnelranges"		"[7 4.5 9]"
 	"$phongalbedotint" 			"1"
         "$phongalbedoboost" "10"
-	"$rimlight"     "1"
+	"$rimlight"     "0"
 	"$rimlightexponent"   "30" 
 	"$rimlightboost"   "1"
 	"$rimmask"      "1"

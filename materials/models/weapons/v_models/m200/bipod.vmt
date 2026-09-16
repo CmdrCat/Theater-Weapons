@@ -14,7 +14,7 @@
  	"$envmapFresnel"  "[1.4] "
 
 
-	"$phong" "1"						
+	"$phong" "0"
 	"$phongboost"	"2" 		
 	//"$phongexponent" "2"	
 	"$phongexponenttexture" "Models\Weapons\V_Models\special_bipod/BipodE"  			

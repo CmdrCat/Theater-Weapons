@@ -5,16 +5,16 @@
 	"$normalmapalphaenvmapmask" "1"
                 "$normalmapalphaphongmask"    "1"	
                 //4Echo
-                "$envmap" "env_cubemap"		
+                "$envmap" ""
                 "$envmaptint" "[.1 .11 .14]"
 	
-                "$phong" "1"
+                "$phong" "0"
                 "$phongboost" ".96"                
                 "$phongtint" "[.8 .8 .9]"
                 "$phongexponenttexture" "models/weapons/v_models/P99/P99_exponent"
 	"$phongfresnelranges" "[1.6 3.4 5.77]"
                 
-                "$rimlight" 	"1"
+                "$rimlight" 	"0"
 	"$rimlightexponent" 	"85"	
 	"$rimlightboost"	".35"
 	"$rimmask" 	"1"

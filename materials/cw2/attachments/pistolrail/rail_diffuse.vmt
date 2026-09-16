@@ -2,9 +2,9 @@
 {
 	"$baseTexture" "cw2\attachments\pistolrail\rail_diffuse"
 	"$bumpmap" "cw2\attachments\pistolrail\rail_normal"
-	"$envmap" "env_cubemap"
+	"$envmap" ""
 	"$normalmapalphaenvmapmask" "1"
-	"$phong" "1"
+	"$phong" "0"
 	"$phongexponent" "4"
 	"$phongboost"	"1"
 	"$phongfresnelranges"	"[1 1 1]"

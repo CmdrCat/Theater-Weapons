@@ -142,7 +142,11 @@ if CLIENT then
 		
 		["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "Base", rel = "", pos = Vector(0, 2.2, -2.901), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_microt1"] = { type = "Model", model = "models/cw2/attachments/microt1.mdl", bone = "Base", rel = "", pos = Vector(0.019, -1.8, 0.699), angle = Angle(0, 180, 0), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "Base", rel = "", pos = Vector(0.059, 14, -0.12), angle = Angle(-180, -90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_anpeq15"] = { 
+			models = {
+				{type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "Base", rel = "", pos = Vector(-0.75, 8 , -1), angle = Angle(0,90,-90), adjustment = {min = 4.147, max = 6.956, axis = "x", inverse = true}, size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}},
+				{type = "Model", model = "models/wystan/attachments/rail.mdl", bone = "Base", rel = "", pos = Vector(2, 8, -0.5,0), angle = Angle(0, 90, -90), size = Vector(0.9, 1.53, 1.53), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}}}
+			},
 		["md_uecw_csgo_acog"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_acog.mdl", bone = "Base", rel = "", pos = Vector(0.05, -7.801, -2.75), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255)},
 		["md_uecw_csgo_556"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_sig.mdl", bone = "Base", rel = "", pos = Vector(0.039, -1.201, 0.439), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75), color = Color(255, 255, 255, 255)},
 		["md_uecw_csgo_scope_ssg"] = { type = "Model", model = "models/gmod4phun/csgo/eq_optic_scope_bender.mdl", bone = "Base", rel = "", pos = Vector(0.05, -0.801, 0.46), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255)},
@@ -185,12 +189,12 @@ SWEP.AimBreathingIntensity = 1
 SWEP.Trivia = {text = "An accurate sniper rifle designed for magnum rifle rounds. The original design was made in a shed. With a box of scraps!", x = -100, y = -450}
 
 SWEP.Attachments = {
-	{header = "Sight", offset = {800, -350},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
-	{header = "Muzzle", offset = {100, -350}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic", "md_snip2_m200_heavy_muzzle_brake"}, exclusions = {uecw_awm_krunker_conversion = true}},
-	{header = "Handguard", offset = {-500, -500}, atts = {"md_foregrip", "md_bipod"}, exclusions = {uecw_awm_krunker_conversion = true}},
-	{header = "Laser", offset = {-500, 100}, atts = {"md_anpeq15"}, exclusions = {uecw_awm_krunker_conversion = true}},
-	{header = "Signature Attachment", offset = {800, 700}, atts = {"uecw_awm_krunker_conversion"}},
-	["+reload"] = {header = "Ammo", offset = {-500, 600}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {uecw_awm_krunker_conversion = true}},
+	{header = "Sight", offset = {800, -450},  atts = {"md_microt1", "md_cmore", "md_reflex", "md_aimpoint", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_uecw_csgo_scope_ssg", "md_ballistic"}},
+	{header = "Muzzle", offset = {100, -450}, atts = {"md_saker", "md_csgo_silencer_rifle", "md_csgo_silencer_ballistic", "md_snip2_m200_heavy_muzzle_brake"}, exclusions = {uecw_awm_krunker_conversion = true}},
+	{header = "Handguard", offset = {-500, -600}, atts = {"md_foregrip", "md_bipod"}, exclusions = {uecw_awm_krunker_conversion = true}},
+	{header = "Laser", offset = {-500, 00}, atts = {"md_anpeq15"}, exclusions = {uecw_awm_krunker_conversion = true}},
+	{header = "Signature Attachment", offset = {800, 600}, atts = {"uecw_awm_krunker_conversion"}},
+	["+reload"] = {header = "Ammo", offset = {-500, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {uecw_awm_krunker_conversion = true}},
 }
 
 if CustomizableWeaponry_KK_HK416 then

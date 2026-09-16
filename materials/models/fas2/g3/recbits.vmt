@@ -2,12 +2,12 @@ VertexLitGeneric
 {
 	"$baseTexture" "models\fas2\g3\recbits"
 	"$basemapalphaphongmask" 	"1"
-	"$phong" 			"1"
+	"$phong" 			"0"
 	"$phongtint" 			"[1 1 0.8]"
 	"$phongexponent" 		"15"
 	"$phongboost" 			"1"
 	"$phongfresnelranges"		"[0.5 0.5 3.0]"//"[0.5 1.5 3.0]"
-	"$envmap" "env_cubemap"
+	"$envmap" ""
 	"$envmaptint" "[.2 .2 .2]"
 	"$halflambert"			"1"
 }

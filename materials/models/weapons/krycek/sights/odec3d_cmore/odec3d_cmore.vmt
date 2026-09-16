@@ -8,7 +8,7 @@
 	$basetexture                "models\weapons\krycek\sights\odec3d_cmore\cmore_d"
 	$bumpmap                    "models\weapons\krycek\sights\odec3d_cmore\cmore_n"
 
-	$phong                      1
+	$phong                      "0"
 	$phongboost                 10
 	$phongfresnelranges         "[5 10 10]"
 	"$phongalbedotint"		"1"
@@ -16,7 +16,7 @@
 	$phongexponenttexture       "models\weapons\krycek\sights\odec3d_cmore\cmore_e"
 	$normalmapalphaphongmask    1
 
-	$envmap                     env_cubemap
+	$envmap                     ""
 	$envmaptint                 "[.03 .03 .055]"
 	$normalmapalphaenvmapmask   1
 

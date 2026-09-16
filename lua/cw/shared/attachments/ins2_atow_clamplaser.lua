@@ -42,7 +42,8 @@ if CLIENT then
 		
 		if not self.freeAimOn then
 			if self.dt.State == CW_AIMING then
-				dir.p = self.Owner:EyeAngles().p
+				local vp = self.Owner:GetViewPunchAngles()
+				dir.p = self.Owner:EyeAngles().p + vp.p
 			end
 		end
 		

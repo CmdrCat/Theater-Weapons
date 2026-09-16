@@ -21,9 +21,9 @@ if CLIENT then
 		
 	SWEP.MicroT1Pos = Vector(-2.28, 0, -0.292)
 	SWEP.MicroT1Ang = Vector(0, 0, 0)
-
-	SWEP.EoTechPos = Vector(-2.25, -6.198, -0.32)
-	SWEP.EoTechAng = Vector(0, 0, 0)
+    
+	SWEP.MRSPos = Vector(-2.25, -5, -0.40)
+	SWEP.MRSAng = Vector(0, 0, 0)
 
 	SWEP.IronsightPos = Vector(-2.254, 5.913, 0.31)
 	SWEP.IronsightAng = Vector(0.1, 0, 0)
@@ -46,7 +46,12 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-0.88, 1.325, -0.561)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.241, -4.728, -1.568), [2] = Vector(0, 0, 0)}}
+	SWEP.LaserPosAdjust = Vector(3.25, 21, -1.5)
+	SWEP.LaserAngAdjust = Angle(0, 0, 0)
+
+	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.241, -4.728, -1.568), [2] = Vector(0, 0, 0)}, 
+	["md_microt1"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)},
+["too_reflex_mrs"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)}}
 
 	SWEP.EffectiveRange_Orig = 30 * 39.37
 	SWEP.DamageFallOff_Orig = .85
@@ -79,11 +84,14 @@ if CLIENT then
 	SWEP.BoltBonePositionRecoverySpeed = 25
 	
 	SWEP.AttachmentModelsVM = {
+		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(3.5, -0.775, 0.20), angle = Angle(0, 0, -90), size = Vector(0.8,0.8,0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(3.325, -1.075, 0.209), angle = Angle(90, 0, -90), size = Vector(0.4, 0.4, 0.4)},
 		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", pos = Vector(-6.054, 8.47, -0.035), angle = Angle(0, 1.5, -90), size = Vector(0.85, 0.85, 0.85)},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-1.831, 3.892, 0.504), angle = Angle(-90, 0, -90), size = Vector(0.85, 0.85, 0.85)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", pos = Vector(-4.784, -0.408, -1.581), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)}
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", pos = Vector(-4.784, -0.408, -1.581), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
+	["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-17.5, -2.5 , 1.85), angle = Angle(0, 0, 0), size = Vector(1,1,0.7), bone = "weapon"},
 	}
+
 end
 
 SWEP.ShootWhileProne = true
@@ -94,12 +102,12 @@ SWEP.BarrelBGs = {main = 1, regular = 0, compensator = 1, extended = 2}
 SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -350}, atts = {"md_microt1","md_acog"}},
-[2] = {header = "Barrel", offset = {-600, -350}, atts = {"md_saker", "bg_deagle_compensator", "bg_deagle_extendedbarrel"}},
-[3] = {header = "Technique", offset = {-200, -400}, atts = {"doi_atow_onehand", "cw_akimbo"}},
-[4] = {header = "Signature Attachment", offset = {-100, 200}, atts = {"too_thunderbird_conversion", "too_dungeon_eagle"}},
-[5] = {header = "SECRET!!!", offset = {2000, 2000}, atts = {"md_microt1"}},
-["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -650}, atts = {"too_reflex_mrs", "md_microt1","md_acog"}},
+[2] = {header = "Barrel", offset = {-800, -650}, atts = {"md_saker", "bg_deagle_compensator", "bg_deagle_extendedbarrel"}},
+[3] = {header = "Technique", offset = {-200, -650}, atts = {"doi_atow_onehand", "cw_akimbo"}},
+[4] = {header = "Laser", offset = {-800, -200}, atts = {"ins2_atow_clamplaser"}},
+[5] = {header = "Signature Attachment", offset = {-800, 200}, atts = {"too_thunderbird_conversion", "too_dungeon_eagle"}},
+["+reload"] = {header = "Ammo", offset = {300, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
 	reload = "reload",
@@ -199,6 +207,10 @@ function SWEP:IndividualThink()
 		if tr.HitGroup == HITGROUP_HEAD then
 			dmg:ScaleDamage( 1.5 / 2 )
 		end
+	end
+
+if self.ActiveAttachments.bg_deagle_extendedbarrel then
+		self.EffectiveRange = ((self.EffectiveRange * 1.1))
 	end
 
 	if self.ActiveAttachments.am_magnum then

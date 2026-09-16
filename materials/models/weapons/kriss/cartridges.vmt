@@ -3,7 +3,7 @@
 	"$baseTexture" 			"models\weapons\kriss\Cartridges"	
 	"$bumpmap" 			"models\weapons\kriss\Cartridges_Normal"
 
-	"$envmap" 			"env_cubemap"
+	"$envmap" 			""
 
 	"$nocull" 			"1"
 	"$basemapalphaenvmapmask" 	"1"
@@ -12,7 +12,7 @@
 	"$envmaptint" 			"[.5 .5 .5]"
 	//"$envmapfresnel"		"1"
 	
-	"$phong"     			"1"
+	"$phong"     			"0"
 	"$phongboost"   		"1"
 	"$phongalbedotint"		"1"
 	"$phongfresnelranges"		"[2 4 4]"
