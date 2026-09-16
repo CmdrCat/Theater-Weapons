@@ -156,6 +156,17 @@ if CLIENT then
 		--Handguards
 		["bruenechelon"] = { type = "Model", model = "models/shared/wparts/m13/cw_reshed_att_bruenechelon.mdl", bone = "weapon", rel = "", pos = Vector(3, -4.7, -17), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["bruenbm20"] = { type = "Model", model = "models/shared/wparts/m13/cw_reshed_att_bruenbm20.mdl", bone = "weapon", rel = "", pos = Vector(3, -4.7, -17), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		--stock
+["r_mwii_mcxthinstock"] = { 
+    type = "Model", 
+    model = "models/shared/wparts/m13/stock_all_sig_thin_folding_stock.mdl", 
+    bone = "weapon", 
+    rel = "", 
+    pos = Vector(0, -1.5, -5.75), 
+    angle = Angle(90, 0, -90), 
+    size = Vector(1, 1, 1),
+    material = "models/props_vents/borealis_vent001c"
+	}
 	}
 
 
@@ -252,10 +263,10 @@ SWEP.Attachments = {
 	[5] = {header = "Bottom Rail Short", offset = {-700 , 50},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},
 	[9] = {header = "Front Sights", offset = {0 , -50},  atts = {"nofs"}},
 	[3] = {header = "Handguard", offset = {-700 , 550},  atts = {"bruenechelon", "bruenbm20"}},
-	-- Cosmetic STANAG keeps the standard 30-round capacity and reload speed.
 	[7] = {header = "Magazine", offset = {1200, 550},  atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_stanag"}},
 	[8] = {header = "Conversion", offset = {100, 550},  atts = {"r_mwii_300blk"}},
-	["+use"] = {header = "Skins", offset = {0, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	["+use"] = {header = "Stock", offset = {100, 550},  atts = {"r_mwii_mcxthinstock"}},
+	--["+use"] = {header = "Skins", offset = {0, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }
