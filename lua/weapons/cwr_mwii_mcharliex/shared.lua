@@ -233,7 +233,7 @@ SWEP.MaterialIndexSecondary = {0, 3, 4, 8, 10}
 
 SWEP.SightBGs = {main = 5 , on = 0 , none = 1}
 SWEP.BarrelBGs = {main = 3 , regular = 0 , none = 1}
-SWEP.StockBGs = {main = 2 , regular = 0 , none = 1}
+SWEP.StockBGs = {main = 2, regular = 0, heavy = 1, sturdy = 2, none = 3}
 SWEP.FrontBGs = {main = 6 , short = 1 , long = 2 , med = 0 , none = 3}
 
 SWEP.AttachmentExclusions = {["nofs"] = {"xrkonpoint"},
@@ -257,7 +257,7 @@ SWEP.AttachmentPosDependency = {
 SWEP.Attachments = {
 
 	[1] = {header = "Optic", offset = {1200 , -450},  atts = {"xrkonpoint", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "szbattleoptic", "corioenforcer", "cronenzerop", "md_thermal", "md_nightforce_nxs", "too_optic_tacstance"}},
-	[6] = {header = "Tac - Top", offset = {320 , -450},  atts = {"ftacgrimline", "md_anpeq15"}},
+	[6] = {header = "Tac - Top", offset = {-100, -550},  atts = {"ftacgrimline", "md_anpeq15"}},
 	[2] = {header = "Muzzle", offset = {-700 , -450},  atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_mcxshrike"}},
 	[4] = {header = "Bottom Rail Long", offset = {-700 , 50},  atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}, exclusions = {bruenbm20 = true}},
 	[5] = {header = "Bottom Rail Short", offset = {-700 , 50},  atts = {"ftactiger_s", "bruentiltgrip_s", "md_foregrip"}, dependencies = {bruenbm20 = true}},
@@ -265,8 +265,8 @@ SWEP.Attachments = {
 	[3] = {header = "Handguard", offset = {-700 , 550},  atts = {"bruenechelon", "bruenbm20"}},
 	[7] = {header = "Magazine", offset = {1200, 550},  atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_stanag"}},
 	[8] = {header = "Conversion", offset = {100, 550},  atts = {"r_mwii_300blk"}},
-	["+use"] = {header = "Stock", offset = {100, 550},  atts = {"r_mwii_mcxthinstock"}},
-	--["+use"] = {header = "Skins", offset = {0, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+	[0] = {header = "Stock", offset = {650, -225}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "r_mwii_mcxthinstock"}},
+	["+use"] = {header = "Skins", offset = {0, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 
 }

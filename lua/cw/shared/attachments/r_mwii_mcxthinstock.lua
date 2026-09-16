@@ -9,14 +9,18 @@ RecoilMult = 0.15}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/m3flash")
-	att.description = {[1] = {t = "Reduces muzzle flash.", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+	att.description = {
+		[1] = {t = "Increases draw speed by 10%.", c = CustomizableWeaponry.textColors.VPOSITIVE},
+		[2] = {t = "Increases recoil by 15%.", c = CustomizableWeaponry.textColors.VNEGATIVE}
+	}
 end
 
 function att:attachFunc()
 
-	if CLIENT and IsValid(wep.AttachmentModelsVM["r_mwii_mcxthinstock"].ent) then
-        wep.AttachmentModelsVM["r_mwii_mcxthinstock"].ent:SetMaterial("phoenix_storms/black_brushes")
-    end
+	local modelData = self.AttachmentModelsVM and self.AttachmentModelsVM["r_mwii_mcxthinstock"]
+	if CLIENT and modelData and IsValid(modelData.ent) then
+		modelData.ent:SetMaterial("phoenix_storms/black_brushes")
+	end
 
 	if self.StockBGs then
 		self:setBodygroup(self.StockBGs.main, self.StockBGs.none)
@@ -29,9 +33,10 @@ end
 
 function att:detachFunc()
 
-	if CLIENT and IsValid(wep.AttachmentModelsVM["r_mwii_mcxthinstock"].ent) then
-        wep.AttachmentModelsVM["r_mwii_mcxthinstock"].ent:SetMaterial("")
-    end
+	local modelData = self.AttachmentModelsVM and self.AttachmentModelsVM["r_mwii_mcxthinstock"]
+	if CLIENT and modelData and IsValid(modelData.ent) then
+		modelData.ent:SetMaterial("")
+	end
 
 	if self.StockBGs then
 		self:setBodygroup(self.StockBGs.main, self.StockBGs.regular)
