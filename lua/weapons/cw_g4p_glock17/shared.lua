@@ -80,12 +80,16 @@ if CLIENT then
 		["md_tundra9mm"] = { type = "Model", model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "Glock18 Barrel", rel = "", pos = Vector(0, -6.35, 0.779), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255)},		["md_csgo_taclight"] = { type = "Model", model = "models/kali/weapons/csgo/eq_taclight_pistol.mdl", bone = "gun", rel = "", pos = Vector(0.039, 4.3, -2.76), angle = Angle(0, 90, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255)},
 		["md_csgo_silencer_pistol"] = { type = "Model", model = "models/kali/weapons/csgo/eq_suppressor_pistol.mdl", bone = "Glock18 Barrel", rel = "", pos = Vector(0, 6.329, -3.901), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255)},	
 		["md_csgo_taclight"] = { type = "Model", model = "models/kali/weapons/csgo/eq_taclight_pistol.mdl", bone = "Glock18", rel = "", pos = Vector(0, 4.38, -3.12), angle = Angle(0, 90, 0), size = Vector(0.899, 0.899, 0.899), color = Color(255, 255, 255, 255)},
+		["md_tcw_9mm_33rnd"] = { type = "Model", model = "models/weapons/v_tfa_vector.mdl", bone = "Glock18 Magazine", rel = "", pos = Vector(-2.030, 20.05, 2.090), angle = Angle(0, 90, 0), size = Vector(0.74, 0.74, 0.74), color = Color(255, 255, 255, 255)},
 	}
 	
 	SWEP.HoldBoltWhileEmpty = true
 	SWEP.DontHoldWhenReloading = true
 	SWEP.BoltBone = "Glock18 Slide"
 	SWEP.BoltShootOffset = Vector(-1.25, 0, 0)
+
+	SWEP.MagBoneName = "Glock18 Magazine"
+	SWEP.BulletBoneName = "Glock18 Bullet"
 	
 	SWEP.LaserPosAdjust = Vector(0.2, 0, 0)--{x = 1, y = 0, z = 0}
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) --{p = 2, y = 180, r = 0}
@@ -112,9 +116,10 @@ SWEP.ForegripOverridePos = {
 SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -500}, atts = {"md_docter"}},
 [2] = {header = "Muzzle", offset = {-900, -200}, atts = {"md_tundra9mm", "md_csgo_silencer_pistol"}},
 [3] = {header = "Rail", offset = {-700, 200}, atts = {"md_anpeq15", "md_csgo_taclight"}},
-[4] = {header = "Technique", offset = {-450, -500}, atts = {"doi_atow_onehand", "cw_akimbo"}},
-[5] = {header = "Fire Control Group", offset = {550, 300}, atts = {"uecw_glock_switch"}},
-["+reload"] = {header = "Ammo", offset = {200, -175}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+[4] = {header = "Magazine", offset = {-200, 200}, atts = {"md_tcw_9mm_33rnd"}},
+[5] = {header = "Technique", offset = {-450, -500}, atts = {"doi_atow_onehand", "cw_akimbo"}},
+[6] = {header = "Signature Attachment", offset = {550, 300}, atts = {"uecw_glock_switch"}},
+["+reload"] = {header = "Ammo", offset = {200, -175}, atts = {"md_tcw_9mm_33rnd", "am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = "shoot_1",
 	fireDry = "shoot_last",
