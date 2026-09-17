@@ -162,14 +162,14 @@ SWEP.Trivia = {text = "The definitive American weapon that broke tradition in th
 
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"too_optic_tacstance","bg_foldsight", "md_ins2coltscope", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
-	[2] = {header = "Barrel", offset = {300, -600}, atts = {"md_saker"}},
-	[3] = {header = "Receiver", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris"}},
-	[4] = {header = "Handguard", offset = {-400, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	[5] = {header = "Magazine", offset = {-400, 340}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}},
-	[6] = {header = "Stock", offset = {1000, 300}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock"}},
-	[7] = {header = "Laser", offset = {250, 300}, atts = {"ins2_atow_clamplaser","md_anpeq15"}},
-	[8] = {header = "Conversion", offset = {1050, 500}, atts = {"too_m4a1_50_beowulf"}, exclusions = {md_ak_556_conv = true}},
-	["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
+	[2] = {header = "Barrel", offset = {150, -600}, atts = {"md_saker"}},
+	[3] = {header = "Receiver", offset = {-600, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris"}},
+	[4] = {header = "Handguard", offset = {-600, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
+	[5] = {header = "Magazine", offset = {-600, 340}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}},
+	[6] = {header = "Stock", offset = {950, 340}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock"}},
+	[7] = {header = "Laser", offset = {150, 340}, atts = {"ins2_atow_clamplaser","md_anpeq15"}},
+	[8] = {header = "Conversion", offset = {1600, 340}, atts = {"too_m4a1_50_beowulf"}, exclusions = {md_ak_556_conv = true, bg_ar1560rndmag = true, md_cmag_556_official = true}},
+	["+reload"] = {header = "Ammo", offset = {950, -100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 SWEP.AttachmentDependencies = {
 	["md_m203"] = {"bg_longris"},
@@ -195,7 +195,7 @@ SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "3burst", "semi"}
 SWEP.Base = "cw_base"
-SWEP.Category = "CW 2.0"
+SWEP.Category = "TCW - Assault Rifles/Carbines"
 
 SWEP.Author			= "Spy"
 SWEP.Contact		= ""

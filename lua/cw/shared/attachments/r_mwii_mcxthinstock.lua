@@ -3,16 +3,14 @@ att.name = "r_mwii_mcxthinstock"
 att.displayName = "Skeleton Stock"
 att.displayNameShort = "THIN"
 
-att.statModifiers = {DrawSpeedMult = 0.1,
+att.statModifiers = {DrawSpeedMult = 0.2,
 VelocitySensitivityMult = -0.2,
 RecoilMult = 0.15}
+att.SpeedDec = -10
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/m3flash")
-	att.description = {
-		[1] = {t = "Increases draw speed by 10%.", c = CustomizableWeaponry.textColors.VPOSITIVE},
-		[2] = {t = "Increases recoil by 15%.", c = CustomizableWeaponry.textColors.VNEGATIVE}
-	}
+
 end
 
 function att:attachFunc()
