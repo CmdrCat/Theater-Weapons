@@ -96,9 +96,10 @@ SWEP.FullAimViewmodelRecoil = false
 
 SWEP.MuzzleVelocity = 350
 
-SWEP.Attachments = {[2] = {header = "Reload", offset = {-150, 150}, atts = {"doi_atow_revsbandoler"}},
-[1] = {header = "Barrel", offset = {-400, -250}, atts = {"doi_atow_29ext","doi_atow_29short"}},
-["+reload"] = {header = "Ammo", offset = {350, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot", "am_snakeshot"}}}
+SWEP.Attachments = {[2] = {header = "Accessory", offset = {500, 350}, atts = {"doi_atow_revsbandoler"}, exclusions = {doi_atow_m29_jjkmai = true}},
+[1] = {header = "Barrel", offset = {-400, -250}, atts = {"doi_atow_29ext","doi_atow_29short"}, exclusions = {doi_atow_m29_jjkmai = true}},
+[3] = {header = "Signature Attachment", offset = {-150, 150}, atts = {"doi_atow_m29_jjkmai"}},
+["+reload"] = {header = "Ammo", offset = {350, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap", "am_atow_riot", "am_snakeshot"}, exclusions = {doi_atow_m29_jjkmai = true}}}
 
 SWEP.Animations = {fire = {"base_fire","base_fire2"},
 	fire_aim = {"iron_fire_1"},

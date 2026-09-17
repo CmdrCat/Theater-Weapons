@@ -667,7 +667,7 @@ function SWEP:Initialize()
 			v.keyText = type(k) == "number" and "[" .. k .. "] " or self:getKeyBind(k) .. " "
 		end
 		
-		self._shellTable = CustomizableWeaponry.shells:getShell(self.Shell)
+		self.shellTable = CustomizableWeaponry.shells:getShell(self.Shell)
 		self:createCustomVM(self.ViewModel)
 		self:createGrenadeModel()
 		self:setupAttachmentModels()

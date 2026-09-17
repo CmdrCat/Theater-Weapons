@@ -63,11 +63,11 @@ function SWEP:recalculateMaxSpreadInc()
 end
 
 function SWEP:recalculateClumpSpread()
-	if not self.ClumpSpread then
+	if not self.ClumpSpread or not self.ClumpSpread_Orig then
 		return
 	end
 	
-	self.ClumpSpread = self.ClumpSpread_Orig * self.DamageMult
+	self.ClumpSpread = self.ClumpSpread_Orig * self.ClumpSpreadMult
 end
 
 function SWEP:recalculateStats()

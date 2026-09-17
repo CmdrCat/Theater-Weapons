@@ -27,6 +27,7 @@ function att:attachFunc()
     self.ChargeFire = true
 	self.ChargeStart = nil
 	self.ChargeDamage = self.Damage
+    self.ChargeRecoil = self.Recoil
 	self.ChargeOriginalThink = self.IndividualThink
     self.ChargeOriginalPrimaryAttack = self.PrimaryAttack
 
@@ -68,6 +69,7 @@ function att:attachFunc()
 
         if chargeTime >= 0.7 then
             weapon.Damage = weapon.ChargeDamage * 2
+            weapon.Recoil = weapon.ChargeRecoil * 2
 			weapon.FireSound = "CW_DEAGLE_FIRE"
 			weapon.FireSoundSuppressed = "CW_DEAGLE_FIRE_SUPPRESSED"
 		else
@@ -76,10 +78,11 @@ function att:attachFunc()
         end
 
         if weapon.Owner:KeyReleased(IN_ATTACK) then
-            weapon.ChargeOriginalPrimaryAttack(weapon)
+            self:ChargeOriginalPrimaryAttack()
         end
 
         weapon.Damage = weapon.ChargeDamage
+        weapon.Recoil = weapon.ChargeRecoil
     end
 end
 

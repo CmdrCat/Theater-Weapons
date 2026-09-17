@@ -23,7 +23,8 @@ CustomizableWeaponry.textColors = {POSITIVE = Color(177, 216, 171, 255),
 	BLACK = Color(0, 0, 0, 255),
 	GRAY = Color(200, 200, 200, 255),
 	SPECIAL = Color(208, 121, 232, 255),
-	FIRE = Color(238, 120, 48)}
+	FIRE = Color(238, 120, 48),
+	CURSED = Color(18, 237, 223)}
 	
 CustomizableWeaponry.sounds = {UNSUPPRESSED = 0,
 	SUPPRESSED = 1}

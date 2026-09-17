@@ -48,7 +48,7 @@ function CustomizableWeaponry.shells:finishMaking(pos, ang, velocity, soundTime,
 	time = time or 0.5
 	removetime = removetime or 5
 	
-	local t = self._shellTable or CustomizableWeaponry.shells:getShell("mainshell") -- default to the 'mainshell' shell type if there is none defined
+	local t = self.shellTable or CustomizableWeaponry.shells:getShell("mainshell") -- default to the 'mainshell' shell type if there is none defined
 	
 	local ent = ClientsideModel(t.m, RENDERGROUP_BOTH) 
 	ent:SetPos(pos)

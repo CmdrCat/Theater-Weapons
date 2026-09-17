@@ -132,6 +132,8 @@ if CLIENT then
 		["md_uecw_emag"] = { type = "Model", model = "models/gmod4phun/emag.mdl", bone = "mag", rel = "", pos = Vector(0, -0.3, 0.75), angle = Angle(0, 0, 0), size = Vector(0.625, 0.625, 0.625), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "mag", rel = "", pos = Vector(0, 1.39, 1.3), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_tcw_pmag"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "mag", rel = "", pos = Vector(0, -0.096, -0.405), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		--Signature Attachment
+		["md_tcw_762_75rnd"] = { type = "Model", model = "models/ma85_mw3/sa80/viewmodel.mdl", bone = "mag", rel = "", pos = Vector(2.359, -6.215, 7.165), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 
 	SWEP.ForeGripHoldPos = {
@@ -183,7 +185,7 @@ SWEP.Attachments = {
 	{header = "Muzzle", offset = {-600, -500}, atts = {"md_pbs1", "md_csgo_silencer_rifle", "hard20"}},
 	{header = "Handguard", offset = {-600, 100}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	{header = "Signature Attachment", offset = {550, 500}, atts = {"md_ak_556_conv"}},
-	{header = "Magazines", offset = {-400, 600}, atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}, dependencies = {md_ak_556_conv = true}},
+	{header = "Magazines", offset = {-400, 600}, atts = {"md_tcw_762_75rnd", "md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}},
 	{header = "Skins", offset = {1200, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+use"] = {header = "Sight", offset = {1550, -500},  atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {950, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
@@ -201,10 +203,15 @@ SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
 
 	["md_schmidt_shortdot"] = {"too_optic_category_magnified"},
 	["md_acog"] = {"too_optic_category_magnified"},
-	["md_pso1"] = {"too_optic_category_magnified"}}
+	["md_pso1"] = {"too_optic_category_magnified"},
+
+	["md_uecw_emag"] = {"md_ak_556_conv"},
+	["md_uecw_60rnd"] = {"md_ak_556_conv"},
+	["md_tcw_pmag"] = {"md_ak_556_conv"}}
 
 SWEP.AttachmentExclusions = {
-	["am_atow_lowvel"] = {"md_ak_556_conv"}}
+	["am_atow_lowvel"] = {"md_ak_556_conv"},
+	["md_tcw_762_75rnd"] = {"md_ak_556_conv"}}
 
 SWEP.Animations = {fire = {"ak47_fire1", "ak47_fire2", "ak47_fire3"},
 	reload = "ak47_reload",

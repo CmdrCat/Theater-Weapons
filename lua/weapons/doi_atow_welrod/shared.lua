@@ -61,6 +61,10 @@ if CLIENT then
 	SWEP.MoveType = 1
 	SWEP.ViewModelMovementScale = 1
 	SWEP.DisableSprintViewSimulation = true
+
+	SWEP.SemiAutoQueuedShot = false
+	SWEP.SemiAutoTriggerBuffer = 0
+	SWEP.SemiAutoTriggerBufferUntil = 0
 	
 	SWEP.LuaVMRecoilAxisMod = {vert = 1, hor = 2, roll = 2, forward = 1, pitch = 1}
 	SWEP.CustomizationMenuScale = 0.017 --  0.016

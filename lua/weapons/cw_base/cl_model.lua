@@ -572,7 +572,7 @@ function CW_MakeFakeShell(ent, shell, pos, ang, vel, time, removetime, shellscal
 		return
 	end
 
-	local t = ent._shellTable
+	local t = ent.shellTable
 	
 	if not t then
 		return

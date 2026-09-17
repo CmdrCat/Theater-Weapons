@@ -14,8 +14,8 @@ if CLIENT then
 	SWEP.SelectIcon = surface.GetTextureID("weaponicons/select/taurus")
 	killicon.Add("cw_ber_bull", "weaponicons/bull-k", Color(255, 80, 0, 150))
 	
-	SWEP.EffectiveRange = 30 * 39.37
-	SWEP.DamageFallOff = .85
+	SWEP.EffectiveRange_Orig = 30 * 39.37
+	SWEP.DamageFallOff_Orig = .85
 
 	SWEP.DrawTraditionalWorldModel = false
 	SWEP.WM = "models/weapons/w_dber_bull.mdl"

@@ -94,6 +94,7 @@ if CLIENT then
 		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "scar", pos = Vector(0, 9.411, -0.064), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699) },
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "scar", pos = Vector(-0.102, 2.661, 4.099), angle = Angle(0, -90, 0), adjustment = {min = -0.33, max = 8.1, axis = "y", inverseOffsetCalc = true}, size = Vector(1.1, 1.1, 1.1)},
 		["md_hamr_conv"] = { type = "Model", model = "models/wystan/cmag.mdl", bone = "mag", rel = "", pos = Vector(-0.181, -3.78, 1.623), angle = Angle(1.2, -90, 0), size = Vector(0.68, 0.68, 0.68), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_scr_xii"] = { type = "Model", model = "models/weapons/v_ecw_saiga12k.mdl", bone = "mag", rel = "", pos = Vector(1.962, -9.839, 5.115), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 
 	SWEP.ForeGripHoldPos = {
@@ -131,6 +132,7 @@ if CLIENT then
 	SWEP.LaserAngAdjust = Angle(0, 180, 0)
 
 	SWEP.MagBoneName = "mag"
+	SWEP.BulletBoneName = "mag-bullets"
 end
 
 SWEP.MuzzleVelocity = 714 -- in meter/s
@@ -144,9 +146,9 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {900, -500},  atts = {"md_
 	[2] = {header = "Muzzle", offset = {-400, -500},  atts = {"md_saker"}},
 	[3] = {header = "Laser", offset = {-400, -50},  atts = {"md_anpeq15"}},
 	[4] = {header = "Handguard", offset = {-400, 400}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	[5] = {header = "Conversion", offset = {700, 500},  atts = {"md_hamr_conv"}},
+	[5] = {header = "Signature Attachment", offset = {500, 500},  atts = {"md_hamr_conv", "md_scr_xii"}},
 	[6] = {header = "Skins", offset = {1200, 450}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir", "md_skinrunes" ,"md_skinyellowjacket"}},
-	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}, exclusions = {md_scr_xii = true}}}
 
 SWEP.AttachmentExclusions = {
 	["md_m203"] = {"md_hamr_conv"},
@@ -229,6 +231,10 @@ self.DamageFallOff = .25
 
 if self.ActiveAttachments.md_hamr_conv then
 	self.DamageFallOff = ((self.DamageFallOff - 0.05))
+end
+if self.ActiveAttachments.md_scr_xii then
+	self.EffectiveRange = ((self.EffectiveRange - 33 * 39.37))
+	self.DamageFallOff = ((self.DamageFallOff + 0.35))
 end
 if self.ActiveAttachments.am_magnum then
 	self.EffectiveRange = ((self.EffectiveRange * 1.15))
