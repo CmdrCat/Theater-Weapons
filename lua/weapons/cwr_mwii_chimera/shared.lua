@@ -171,7 +171,7 @@ SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.SightBGs = {main = 5 , on = 0 , none = 1}
 SWEP.BarrelBGs = {main = 3 , regular = 0 , none = 1}
-SWEP.StockBGs = {main = 2 , regular = 0 , none = 1}
+SWEP.StockBGs = {main = 2, regular = 0, heavy = 1, sturdy = 2, none = 3}
 SWEP.FrontBGs = {main = 6 , fs = 0 , none = 3}
 
 SWEP.AttachmentExclusions = {["am_atow_lowvel"] = {"md_csgo_silencer_rifle"}
@@ -186,6 +186,7 @@ SWEP.Attachments = {
 	{header = "Front Sights", offset = {-300 , 575},  atts = {"nofs2"}, exclusions = {xrkonpoint = true, md_nightforce_nxs = true}},
 	{header = "Magazine", offset = {1200, 400},  atts = {"md_uecw_usgimag", "md_uecw_emag"}},
 	{header = "Skins", offset = {700, 750}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+	{header = "Stock", offset = {750, 400}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock"}},
 	["+reload"] = {header = "Ammo", offset = {1100, -50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 

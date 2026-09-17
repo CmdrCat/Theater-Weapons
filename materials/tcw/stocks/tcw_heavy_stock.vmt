@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "cw2/rifles/ar15/m16furniture_col"
+	"$bumpmap" "cw2/rifles/ar15/m16furniture_norm"
+	"$model" "1"
+}

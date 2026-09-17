@@ -65,7 +65,9 @@ if CLIENT then
 	
 	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.211, -4, -0.95), [2] = Vector(-2, 0, 0)},
 ["md_ins2coltscope"] = {[1] = Vector(-4.5, 2.75, 0.5), [2] = Vector(0,0, -55)},
-["too_optic_tacstance"] = {[1] = Vector(-2.208, -4.3, 0.143), [2] = Vector(0.605, 0, -0.217)}}
+["too_optic_tacstance"] = {[1] = Vector(-2.208, -4.3, 0.143), [2] = Vector(0.605, 0, -0.217)},
+["bg_foldsight"] = {[1] = Vector(-4.5, 2.75, 0.5), [2] = Vector(0,0, -55)}
+	}
 
 	SWEP.ACOGAxisAlign = {right = -0.58, up = -0.01, forward = 0}
 	SWEP.SchmidtShortDotAxisAlign = {right = -2, up = 0, forward = 0}
