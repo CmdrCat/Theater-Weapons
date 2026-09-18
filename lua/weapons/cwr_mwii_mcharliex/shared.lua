@@ -33,8 +33,8 @@ if CLIENT then
 	SWEP.TacStancePos = Vector(-5, -0.5, 1)
 	SWEP.TacStanceAng = Vector(0, 0, -45)
 
-	SWEP.SprintPos = Vector(-0.12, 0, -0.281)
-	SWEP.SprintAng = Vector(-32.262, 23.718, -19.75)
+	SWEP.SprintPos = Vector(6,-6,0)
+	SWEP.SprintAng = Vector(-15,45,-5)
 	
 	SWEP.AlternativePos = Vector(-0.4, -3, -0.5)
 	SWEP.AlternativeAng = Vector(0, 0, -3)
@@ -213,7 +213,7 @@ if CLIENT then
 
 	SWEP.BackupSights = {
 	["too_optic_tacstance"] = {[1] = Vector(-3.063, -5.447, 0.6), [2] = Vector(0,0,0)},
-	["xrkonpoint"] = {[1] = Vector(-5, -3, 1), [2] = Vector(0,0, -45)},
+	["xrkonpoint"] = {[1] = Vector(-6, -3, 1.5), [2] = Vector(0,0, -55)},
 	["md_microt1"] = {[1] = Vector(-5, -0.5, 1), [2] = Vector(0,0, -45)},
 	["too_reflex_romeo4t"] = {[1] = Vector(-5, -4.5, 1), [2] = Vector(0,0, -45)},
 	["md_aimpoint"] = {[1] = Vector(-5, -2, 1), [2] = Vector(0,0, -45)},
