@@ -1724,6 +1724,12 @@ function SWEP:performViewmodelMovement()
 	
 	TargetPos = newTargetPos or TargetPos
 	TargetAng = newTargetAng or TargetAng
+
+	if self.adjustViewmodelPosition then
+		local adjustedPos, adjustedAng = self:adjustViewmodelPosition(TargetPos, TargetAng)
+		TargetPos = adjustedPos or TargetPos
+		TargetAng = adjustedAng or TargetAng
+	end
 	
 	-- the position of the weapon (running/walking/aiming)
 	self.BlendPos = LerpVectorCW20(FT * self.ApproachSpeed, self.BlendPos, TargetPos)

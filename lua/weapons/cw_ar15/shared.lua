@@ -152,10 +152,29 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.SightBGs = {main = 4, carryhandle = 0, foldsight = 1, none = 2}
-SWEP.BarrelBGs = {main = 3, longris = 4, long = 3, magpul = 2, ris = 1, regular = 0}
-SWEP.StockBGs = {main = 2, regular = 0, heavy = 1, sturdy = 2}
-SWEP.MagBGs = {main = 5, regular = 0, round60 = 1}
+SWEP.StudioBGs = {
+    main = 0,
+    none = 1
+}
+SWEP.SightBGs = {main = 4, carryhandle = 0, foldingsight = 1, none = 2}
+SWEP.BarrelBGs = {main = 3, m4 = 0, m4ris = 1, m4moe = 2, m16 = 3, m16ris = 4, none = 5}
+SWEP.StockBGs = {
+    main = 2,
+    m4 = 0,
+    m16 = 1,
+    moe = 2,
+    none = 3
+}
+SWEP.MagBGs = {
+    main = 5,
+    round30 = 0,
+    round60 = 1,
+    none = 2
+}
+SWEP.HandsBGs = {
+    main = 1,
+    none = 1
+}
 SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "The definitive American weapon that broke tradition in the face of modern warfare.", x = -400, y = -700}
@@ -165,10 +184,10 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"too_
 	[2] = {header = "Barrel", offset = {300, -600}, atts = {"md_saker"}},
 	[3] = {header = "Receiver", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris"}},
 	[4] = {header = "Handguard", offset = {-400, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	[5] = {header = "Magazine", offset = {-400, 340}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}},
+	[5] = {header = "Magazine", offset = {-400, 340}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}, exclusions = {too_m4a1_50_beowulf = true}},
 	[6] = {header = "Stock", offset = {1000, 300}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock"}},
 	[7] = {header = "Laser", offset = {250, 300}, atts = {"ins2_atow_clamplaser","md_anpeq15"}},
-	[8] = {header = "Conversion", offset = {1050, 500}, atts = {"too_m4a1_50_beowulf"}, exclusions = {md_ak_556_conv = true}},
+	[8] = {header = "Conversion", offset = {1050, 500}, atts = {"too_m4a1_50_beowulf"}},
 	["+reload"] = {header = "Ammo", offset = {-450, 500}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 SWEP.AttachmentDependencies = {
@@ -235,7 +254,7 @@ SWEP.Shots = 1
 SWEP.Damage = 30
 SWEP.DeployTime = 0.6
 
-SWEP.ReloadSpeed = 1.0
+SWEP.ReloadSpeed = 1.15
 SWEP.ReloadTime = 1.70
 SWEP.ReloadTime_Empty = 2.00
 SWEP.ReloadHalt = 2.3

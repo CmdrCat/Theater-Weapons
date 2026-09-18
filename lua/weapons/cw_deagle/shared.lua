@@ -169,7 +169,7 @@ SWEP.Primary.DefaultClip	= 63
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".50 AE"
 
-SWEP.FireDelay = 60 / 350
+SWEP.FireDelay = 60 / 353
 SWEP.FireSound = "CW_DEAGLE_FIRE"
 SWEP.FireSoundSuppressed = "CW_DEAGLE_FIRE_SUPPRESSED"
 SWEP.Recoil = 2.8

@@ -209,8 +209,9 @@ SWEP.Trivia = {text = "A compact German assault rifle that sees widespread use i
 SWEP.Attachments = {[1] = {header = "Sight", offset = {100, -700},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog_fixed", "md_uecw_csgo_acog", "md_thermal", "md_nightforce_nxs"}},
 	[2] = {header = "Muzzle", offset = {-700, -235}, atts = {"md_saker", "md_csgo_silencer_rifle", "uecw_skin_silencer"}},
 	[3] = {header = "Handguard", offset = {-700, 200}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
-	[4] = {header = "Laser", offset = {-700, -700}, atts = {"ftacgrimline", "md_anpeq15", "uecw_g36c_cecilia"}},
-	[5] = {header = "Skins", offset = {850, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+	[4] = {header = "Laser", offset = {-700, -700}, atts = {"ftacgrimline", "md_anpeq15"}},
+	[5] = {header = "Signature Attachment", offset = {600, 350}, atts = {"uecw_g36c_cecilia"}},
+	[6] = {header = "Skins", offset = {1400, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {1650, -700}, atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {1200, -200}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	

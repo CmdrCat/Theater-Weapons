@@ -40,6 +40,9 @@ if CLIENT then
 	SWEP.AltIronPos = Vector(-2.6145, -1, 2.0422)
 	SWEP.AltIronAng = Vector(-0.3089, -0.0389, 9)
 
+	SWEP.FrankIronPos = Vector(-3.8, 0.5, 1.5)
+	SWEP.FrankIronAng = Vector(0, 0, -43)
+
 	SWEP.ReflexPos = Vector(-2.4, -3, 0.65)
     SWEP.ReflexAng = Vector(-0.4089, -0.0389, 9)
 	
@@ -63,6 +66,9 @@ if CLIENT then
 
 	SWEP.PronePos = Vector(0, 0, -2.1579)
 	SWEP.ProneAng = Vector(-2, 12.7368, -8.9474)
+
+	SWEP.StockBoneName = "A_Stock"
+	SWEP.BoltBoneName = "Bolt"
 
 	SWEP.BackupSights = {
 		["md_reflex"] = {[1] = Vector(-4, -2, 1), [2] = Vector(0,0,-45)},
@@ -98,24 +104,32 @@ if CLIENT then
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "weapon", rel = "", pos = Vector(-3.5, 7, 2.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
         ["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "weapon", rel = "", pos = Vector(-3.5, 7, 2), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
         --["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "weapon", rel = "", pos = Vector(-4, -4, 0.5), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
-	}
+		--Do you think she thinks about me sometimes
+		["doi_atow_frankensten"] = { 
+			models = {
+					{type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "weapon", rel = "", pos = Vector(-1.382, -5.798, 4.81), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+					{type = "Model", model = "models/cw2/smgs/mp5.mdl", bone = "weapon", rel = "", pos = Vector(-8.26, -7.7, -3.97), angle = Angle(0, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+			}
+	}}
 end
 end
 
-SWEP.Attachments = {[5] = {header = "Model", offset = {950, -500}, atts = {"doi_atow_stenmk5"}, exclusions =  {bruentiltgrip_r = true, ftactiger_r = true}},
+SWEP.Attachments = {[5] = {header = "Signature Attachment", offset = {950, -500}, atts = {"doi_atow_frankensten", "doi_atow_stenmk5"}, exclusions =  {bruentiltgrip_r = true, ftactiger_r = true}},
 [4] = {header = "Accessory", offset = {-700, -500}, atts = {"doi_atow_sling"}},
 [2] = {header = "Fire Control", offset = {200, -500}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
-[3] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_stensuppressor", "doi_atow_unisuppressor","hard20"}},
+[3] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_stensuppressor", "doi_atow_unisuppressor","hard20"}, exclusions = {doi_atow_frankensten = true}},
 [1] = {header = "Sight", offset = {-700, -150}, atts = {"doi_atow_altsightmk5", "md_reflex"}},
 [6] = {header = "Laser", offset = {200, -125}, atts = {"ins2_atow_clamplaser", "md_anpeq15", "ftacgrimline" }},
 [7] = {header = "Foregrip", offset = {950, 0}, atts = {"ftactiger_r", "bruentiltgrip_r", 
 --"md_foregrip"
-}},
+}, exclusions = {doi_atow_frankensten = true}},
 
 ["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentExclusions = {
-	["doi_atow_altsightmk5"] = {"doi_atow_stenmk5"}
+	["doi_atow_altsightmk5"] = {"doi_atow_stenmk5"},
+	["doi_atow_altsightmk5"] = {"doi_atow_frankensten"},
+	["ins2_atow_clamplaser"] = {"doi_atow_frankensten"},
 }
 
 SWEP.AttachmentPosDependency = {
@@ -139,6 +153,11 @@ SWEP.ForegripOverridePos = {
 	["L Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(1.11, -12.557, 61.111) },
 	["ValveBiped.Bip01_L_Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(-.75, .0, 0.3), angle = Angle(0, 0, 0) },
 	["R Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-4.259, 2.778, -0.186), angle = Angle(-38.889, 0, 0) }},
+
+	["frank"] = {
+	["R Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-4.135, 5.780, 5.271), angle = Angle(0, 0, 0) },
+	["R Forearm"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(15, 0, 0) },
+	["R Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-17.673, 0, -15) },},
 	
 	["2"] = {
 	["L Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
@@ -283,15 +302,28 @@ SWEP.ReloadHalt = 3.6
 SWEP.ReloadTime_Empty = 3.4
 SWEP.ReloadHalt_Empty = 4.6	
 
+function SWEP:adjustViewmodelPosition(pos, ang)
+    if self.FrankenstenPos then
+        pos = pos + self.FrankenstenPos
+        ang = ang + self.FrankenstenAng
+    end
+
+    return pos, ang
+end
+
 function SWEP:IndividualThink()
 	
 	if self.FireMode == "semi" then
 	self.Owner.ViewAff = 0
 	end
 	
+	local hasFrankensten = self.ActiveAttachments.doi_atow_frankensten
 	local hasCustomGrip = self.ActiveAttachments.doi_atow_stenmk5 or self.ActiveAttachments.bruentiltgrip_r
 
-	if not hasCustomGrip then
+	if hasFrankensten then
+		self.ForegripOverride = true
+		self.ForegripParent = "frank"
+	elseif not hasCustomGrip then
 		self.ForegripOverride = true
 		self.ForegripParent = "2"
 	else
@@ -302,6 +334,9 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 25 * 39.37
 	self.DamageFallOff = .55
 	
+	if self.ActiveAttachments.doi_atow_frankensten then
+		self.DamageFallOff = self.DamageFallOff + 0.23
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end
