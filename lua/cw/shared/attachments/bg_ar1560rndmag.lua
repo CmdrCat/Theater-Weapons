@@ -1,7 +1,7 @@
 local att = {}
 att.name = "bg_ar1560rndmag"
-att.displayName = "Quad-stack mag"
-att.displayNameShort = "Quad"
+att.displayName = "Surefire 60-Round Magazine"
+att.displayNameShort = "60RND"
 att.isBG = true
 att.SpeedDec = 2
 

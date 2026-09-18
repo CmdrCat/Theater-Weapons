@@ -43,6 +43,9 @@ if CLIENT then
 	SWEP.FrankIronPos = Vector(-3.8, 0.5, 1.5)
 	SWEP.FrankIronAng = Vector(0, 0, -43)
 
+	SWEP.FrankReflexPos = Vector(-2.459, 0.5, 1.063)
+	SWEP.FrankReflexAng = Vector(0, 0, 2.2)
+
 	SWEP.ReflexPos = Vector(-2.4, -3, 0.65)
     SWEP.ReflexAng = Vector(-0.4089, -0.0389, 9)
 	
@@ -114,12 +117,12 @@ if CLIENT then
 end
 end
 
-SWEP.Attachments = {[5] = {header = "Signature Attachment", offset = {950, -500}, atts = {"doi_atow_frankensten", "doi_atow_stenmk5"}, exclusions =  {bruentiltgrip_r = true, ftactiger_r = true}},
+SWEP.Attachments = {[5] = {header = "Signature Attachment", offset = {300, -500}, atts = {"doi_atow_frankensten", "doi_atow_stenmk5"}, exclusions =  {bruentiltgrip_r = true, ftactiger_r = true}},
 [4] = {header = "Accessory", offset = {-700, -500}, atts = {"doi_atow_sling"}},
-[2] = {header = "Fire Control", offset = {200, -500}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
+[2] = {header = "Fire Control", offset = {-150, -500}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
 [3] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_stensuppressor", "doi_atow_unisuppressor","hard20"}, exclusions = {doi_atow_frankensten = true}},
 [1] = {header = "Sight", offset = {-700, -150}, atts = {"doi_atow_altsightmk5", "md_reflex"}},
-[6] = {header = "Laser", offset = {200, -125}, atts = {"ins2_atow_clamplaser", "md_anpeq15", "ftacgrimline" }},
+[6] = {header = "Laser", offset = {200, -125}, atts = {"ins2_atow_clamplaser", "md_anpeq15", "ftacgrimline" }, exclusions = {doi_atow_frankensten = true}},
 [7] = {header = "Foregrip", offset = {950, 0}, atts = {"ftactiger_r", "bruentiltgrip_r", 
 --"md_foregrip"
 }, exclusions = {doi_atow_frankensten = true}},
@@ -129,11 +132,12 @@ SWEP.Attachments = {[5] = {header = "Signature Attachment", offset = {950, -500}
 SWEP.AttachmentExclusions = {
 	["doi_atow_altsightmk5"] = {"doi_atow_stenmk5"},
 	["doi_atow_altsightmk5"] = {"doi_atow_frankensten"},
-	["ins2_atow_clamplaser"] = {"doi_atow_frankensten"},
 }
 
 SWEP.AttachmentPosDependency = {
 	["ins2_atow_clamplaser"] = {["doi_atow_stenmk5"] = Vector(-5.85, -10.5, 4.65), ["doi_atow_altsightmk5"] = Vector(-5.85, -10.5, 4.65), ["doi_atow_stensuppressor"] = Vector(-5.85, -8.5, 4.25),},
+	["md_reflex"] = {["doi_atow_frankensten"] = Vector(-3.6, 4.928, 3.546)},
+	["md_anpeq15"] = {["doi_atow_frankensten"] = Vector(-3.6, 5.91, 3.617)},
 }
 
 SWEP.ForegripOverridePos = {
@@ -311,6 +315,13 @@ function SWEP:adjustViewmodelPosition(pos, ang)
     return pos, ang
 end
 
+function SWEP:adjustAttachmentAimPosition(att)
+	if self.ActiveAttachments.doi_atow_frankensten and att.name == "md_reflex" then
+		self.AimPos = self.FrankReflexPos
+		self.AimAng = self.FrankReflexAng
+	end
+end
+
 function SWEP:IndividualThink()
 	
 	if self.FireMode == "semi" then
@@ -336,6 +347,9 @@ function SWEP:IndividualThink()
 	
 	if self.ActiveAttachments.doi_atow_frankensten then
 		self.DamageFallOff = self.DamageFallOff + 0.23
+		self.BackupSights = {["md_reflex"] = {[1] = Vector(-3.8, 0.5, 1.5), [2] = Vector(0, 0, -43)}}
+	else
+		self.BackupSights = {["md_reflex"] = {[1] = Vector(-4, -2, 1), [2] = Vector(0,0,-45)}}
 	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

@@ -16,14 +16,12 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self.FireSound = "CW_M16A2_FIRE"
-	self.FireSoundSuppressed = "CW_M16A2_FIRE_SUPPRESSED"
+	self.FireSound = "DOI1907_FIRE"
+	self.FireSoundSuppressed = "DOIM1A1CAR_FIRE_SUPPRESSED"
 	self.Trivia = {text = "A Soviet gun meets an American cartridge.", x = 0, y = -600}
 	self.Primary.Ammo = "5.56x45MM"
-	self.ShellScale = 0.5
-	if self.MagBoneName then
-		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
-	end
+
+	self:setBodygroup(self.MagBGs.main, self.MagBGs.none)
 end
 
 function att:detachFunc()
@@ -32,9 +30,8 @@ function att:detachFunc()
 	self.Trivia = {text = "The most common gun in the world, found in the hands of modern militaries and insurgents alike.", x = 0, y = -600}
 	self.Primary.Ammo = "7.62x39MM"
 	self.ShellScale = 0.69
-	if self.MagBoneName then
-		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
-	end
+
+	self:setBodygroup(self.MagBGs.main, self.MagBGs.regular)
 end
 
 CustomizableWeaponry:registerAttachment(att)

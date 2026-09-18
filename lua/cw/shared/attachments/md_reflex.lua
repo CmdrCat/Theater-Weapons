@@ -23,7 +23,15 @@ if CLIENT then
 			return
 		end
 		
-		diff = self:getDifferenceToAimPos(self.ReflexPos, self.ReflexAng, att._reticleSize)
+		local aimPos = self.ReflexPos
+		local aimAng = self.ReflexAng
+
+		if self.ActiveAttachments.doi_atow_frankensten then
+			aimPos = self.FrankReflexPos
+			aimAng = self.FrankReflexAng
+		end
+
+		diff = self:getDifferenceToAimPos(aimPos, aimAng, att._reticleSize)
 		
 		-- draw the reticle only when it's close to center of the aiming position
 		if diff > 0.9 and diff < 1.1 then

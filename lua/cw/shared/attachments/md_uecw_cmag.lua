@@ -1,7 +1,7 @@
 local att = {}
 att.name = "md_uecw_cmag"
 att.displayName = "Beta C-Magazine"
-att.displayNameShort = "CMAG"
+att.displayNameShort = "C-Mag"
 att.SpeedDec = 50
 
 att.statModifiers = {

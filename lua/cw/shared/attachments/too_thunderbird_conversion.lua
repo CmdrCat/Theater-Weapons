@@ -1,7 +1,7 @@
 local att = {}
 att.name = "too_thunderbird_conversion"
 att.displayName = "Thunderbird Conversion"
-att.displayNameShort = "Thunderbird"
+att.displayNameShort = "Thunder"
 
 att.statModifiers = {DamageMult = -27 / 79,
 	FireDelayMult = -191 / 543.5}

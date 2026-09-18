@@ -18,6 +18,7 @@ end
 
 function att:attachFunc()
 
+	self.SightWithRail = false
 	self.FrankenstenPos = Vector(0, -4, 0)
 	self.FrankenstenAng = Vector(0, 0, 7)
 	self.ForegripOverride = true
@@ -25,6 +26,8 @@ function att:attachFunc()
 	self:setupCurrentIronsights(self.FrankIronPos, self.FrankIronAng)
 	if not self:isAttachmentActive("sights") then
 		self:updateIronsights("FrankIron")
+	else
+		self:updateIronsights("FrankReflex")
 	end
 	self.dt.Suppressed = true
 	self.Chamberable = true
@@ -77,6 +80,7 @@ end
 
 function att:detachFunc()
 
+	self.SightWithRail = true
 	self.FrankenstenPos = nil
     self.FrankenstenAng = nil
 	self.ForegripOverride = true

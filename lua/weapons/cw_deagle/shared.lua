@@ -80,8 +80,10 @@ if CLIENT then
 	SWEP.DisableSprintViewSimulation = true
 	
 	SWEP.LuaVMRecoilAxisMod = {vert = 1, hor = 1.5, roll = 3, forward = 1, pitch = 4}
-	SWEP.CustomizationMenuScale = 0.01
+	SWEP.CustomizationMenuScale = 0.009
 	SWEP.BoltBonePositionRecoverySpeed = 25
+
+	SWEP.Trivia = {text = "This iconic handgun fires the largest round of any magazine-fed, self-loading pistol: The .50 Action Express.", x = -900, y = -750}
 	
 	SWEP.AttachmentModelsVM = {
 		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(3.5, -0.775, 0.20), angle = Angle(0, 0, -90), size = Vector(0.8,0.8,0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },

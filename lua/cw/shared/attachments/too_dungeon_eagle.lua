@@ -4,16 +4,18 @@ att.displayName = "Dungeon Eagle Conversion"
 att.displayNameShort = "Dungeon"
 
 att.statModifiers = {DamageMult = 6 / 79,
+    RecoilMult = -0.5,
 	FireDelayMult = 53 / 300,
 	ReloadSpeedMult = 0.57}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/fullautorec")
-	att.description = {[1] = {t = "Something something charged shot lol", c = CustomizableWeaponry.textColors.VPOSITIVE}}
+	att.description = {[1] = {t = "Hold down the trigger for 0.7 seconds and a more powerful shot is fired, dealing double-damage", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 
 function att:attachFunc()
 	self.PrintName = "Dungeon Eagle"
+    self.Trivia = {text = "A favorite more for its image than its efficiency, the Dungeon Eagle is capable of delivering massive damage.", x = -900, y = -750}
 
 	self.Primary.ClipSize = 9
 	self.Primary.ClipSize_Orig = 9
@@ -69,7 +71,7 @@ function att:attachFunc()
 
         if chargeTime >= 0.7 then
             weapon.Damage = weapon.ChargeDamage * 2
-            weapon.Recoil = weapon.ChargeRecoil * 2
+            weapon.Recoil = weapon.ChargeRecoil * 4
 			weapon.FireSound = "CW_DEAGLE_FIRE"
 			weapon.FireSoundSuppressed = "CW_DEAGLE_FIRE_SUPPRESSED"
 		else
@@ -88,6 +90,7 @@ end
 
 function att:detachFunc()
 	self.PrintName = "Dungeon Eagle"
+    self.Trivia = {text = "This iconic handgun fires the largest round of any magazine-fed, self-loading pistol: The .50 Action Express.", x = -900, y = -750}
 
 	local clip = self:Clip1() or 0
 

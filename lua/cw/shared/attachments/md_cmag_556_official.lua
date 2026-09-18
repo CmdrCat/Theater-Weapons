@@ -1,6 +1,6 @@
 local att = {}
 att.name = "md_cmag_556_official"
-att.displayName = "Beta C-Mag 5.56x45MM"
+att.displayName = "Beta C-Magazine"
 att.displayNameShort = "C-Mag"
 att.SpeedDec = 50
 

@@ -129,6 +129,11 @@ function SWEP:_attach(cur, curPos, inherit)
 			
 				self.AimPos = self[att.aimPos[1]]
 				self.AimAng = self[att.aimPos[2]]
+
+				if self.adjustAttachmentAimPosition then
+					self:adjustAttachmentAimPosition(att)
+				end
+
 				self.ZoomAmount = att.FOVModifier or self.ZoomAmount
 				
 				--if the current attachment has backup sights, we can swap to them
@@ -226,7 +231,7 @@ function SWEP:resetPostDetach(att, attCategory)
 		self.ZoomAmount = self.ZoomAmount_Orig
 		self.reticleFunc = nil
 		
-		if self.SightWithRail then
+		if CLIENT and self.SightWithRail then
 			-- make the rail inactive in case the weapon uses it for the sights
 			self:setAttachmentModelState("md_rail", false)
 			

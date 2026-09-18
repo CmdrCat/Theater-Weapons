@@ -20,6 +20,12 @@ function att:attachFunc()
 	self.Primary.ClipSize = 10
 	self.Primary.ClipSize_Orig = 10
 	self:unloadWeaponPartially()
+
+	self:CycleFiremodes() 
+	self.FireModes = {"semi", "safe", "auto"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
+
 	self.FireSound = "CW_FAL_FIRE"
 	self.FireSoundSuppressed = "CW_TOO_M40_FIRESUPPRESSED"
 	self.Primary.Ammo = ".50 Beowulf"
@@ -33,7 +39,12 @@ function att:detachFunc()
 
 	if clip >= 10 then
 		self:SetClip1(self.Primary.ClipSize_ORIG_REAL + clip - 10)
-	end 
+	end
+
+	self:CycleFiremodes() 
+	self.FireModes = {"semi", "safe", "auto", "3burst"}
+	self:CycleFiremodes()
+	self:CycleFiremodes()
 
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
