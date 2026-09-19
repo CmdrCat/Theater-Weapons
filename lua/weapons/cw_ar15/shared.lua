@@ -13,7 +13,7 @@ if CLIENT then
 	
 
 	SWEP.NearWallEnabled = false
-	SWEP.MuzzleEffect = "muzzleflash_6"
+	SWEP.MuzzleEffect = "muzzleflash_suppressed"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
 	SWEP.ShellScale = 0.7
@@ -29,6 +29,9 @@ if CLIENT then
 	
 	SWEP.IronsightPos = Vector(-2.208, -4.3, 0.143)
 	SWEP.IronsightAng = Vector(0.605, 0, -0.217)
+
+	SWEP.MicroBarrelIronPos = Vector(-4.5, 2.75, 0.5)
+	SWEP.MicroBarrelIronAng = Vector(0,0, -55)
 	
 	SWEP.FoldSightPos = Vector(-2.208, -4.3, 0.143)
 	SWEP.FoldSightAng = Vector(0.605, 0, -0.217)
@@ -39,7 +42,7 @@ if CLIENT then
 	SWEP.NXSPos = Vector(-2.191, -4.454, 0.439)
 	SWEP.NXSAng = Vector(0, 0, 0)
 
-	--SWEP.CustomizePos = Vector(10, -4.3, 0) -- Looking at stocks here
+	--SWEP.CustomizePos = Vector(10, -20, 2) -- Looking at side profile here
 	--SWEP.CustomizeAng = Vector(0.605, 90, -0.217)
 
 	SWEP.AimpointPos = Vector(-2.194, -2.7, 0.57)
@@ -80,6 +83,19 @@ if CLIENT then
 		["md_cmag_556_official"] = {
 			weakOverride = true,
 			["Bip01 L UpperArm"] = {pos = Vector(-0.732, -1.836, -4.113), angle = Angle(0, -12.549, 0) }
+		},
+		["maggrip"] = {
+			["Bip01 L Clavicle"] = {pos = Vector(-1.836, -3.372, -1.703), angle = Angle(0, 0, 0)},
+			["Bip01 L Hand"] = {pos = Vector(0, 0, 0), angle = Angle(10.075, 20.336, 67.078)},
+			["Bip01 L Finger11"] = {pos = Vector(0, 0, 0), angle = Angle(0, 45.467, 0)},
+			["Bip01 L Finger21"] = {pos = Vector(0, 0, 0), angle = Angle(0, 46.602, 0)},
+			["Bip01 L Finger22"] = {pos = Vector(0, 0, 0), angle = Angle(0, -31.570, 0)},
+			["Bip01 L Finger3"] = {pos = Vector(0, 0, 0), angle = Angle(0, 13.219, 0)},
+			["Bip01 L Finger31"] = {pos = Vector(0, 0, 0), angle = Angle(0, 45.448, 0)},
+			["Bip01 L Finger32"] = {pos = Vector(0, 0, 0), angle = Angle(0, -29.639, 0)},
+			["Bip01 L Finger4"] = {pos = Vector(0, 0, 0), angle = Angle(0, 16.473, 0)},
+			["Bip01 L Finger41"] = {pos = Vector(0, 0, 0), angle = Angle(0, 38.349, 0)},
+			["Bip01 L Finger42"] = {pos = Vector(0, 0, 0), angle = Angle(0, -16.863, 0)}
 		}
 	}
 	
@@ -104,7 +120,8 @@ if CLIENT then
 		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "smdimport001", pos = Vector(-0.011, 14.541, 0.441), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "smdimport001", pos = Vector(-0.35, -2.554, -1.627), angle = Angle(0, -90, 0), size = Vector(0.899, 0.899, 0.899)},
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "smdimport001", pos = Vector(-0.105, 3.852, 4.574), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-		["md_cmag_556_official"] = {model = "models/wystan/Cmag.mdl", bone = "Magazine001", pos = Vector(-0.191, -3.323, -1.254), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6),}
+		["md_cmag_556_official"] = {model = "models/wystan/Cmag.mdl", bone = "Magazine001", pos = Vector(-0.191, -3.323, -1.254), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6)},
+		["md_tcw_carryhandle_grip"] = {model = "models/cw2/rifles/ar15.mdl", bone = "smdimport001", pos = Vector(-2.243, 3.15, -0.15), angle = Angle(-2, -90, 180), size = Vector(1, 1, 1)}
 	}
 	
 	SWEP.M203HoldPos = {
@@ -155,50 +172,39 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.StudioBGs = {
-    main = 0,
-	receiver = 0,
-    none = 1
-}
-SWEP.SightBGs = {main = 4, carryhandle = 0, foldsight = 1, none = 2}
+SWEP.StudioBGs = {main = 0, receiver = 0, none = 1}
+SWEP.HandsBGs = {main = 1, hands = 0, none = 1}
+SWEP.StockBGs = {main = 2, regular = 0, heavy = 1, sturdy = 2, buffertube = 3, none = 4}
 SWEP.BarrelBGs = {main = 3, ris = 1, magpul = 2, long = 3, longris = 4, none = 5, regular = 0}
-SWEP.StockBGs = {
-    main = 2,
-    none = 4,
-	buffertube = 3,
-	regular = 0,
-	heavy = 1,
-	sturdy = 2
-}
-SWEP.MagBGs = {
-    main = 5,
-    regular = 0,
-    round60 = 1,
-    none = 2
-}
-SWEP.HandsBGs = {
-    main = 1,
-	hands = 0,
-    none = 1
-}
+SWEP.SightBGs = {main = 4, carryhandle = 0, foldsight = 1, none = 2}
+SWEP.MagBGs = {main = 5, regular = 0, round60 = 1, none = 2}
+
 SWEP.LuaViewmodelRecoil = true
 
 SWEP.Trivia = {text = "The definitive American weapon that broke tradition in the face of modern warfare.", x = -400, y = -800}
 
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"bg_foldsight", "md_ins2coltscope", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs", "too_optic_tacstance"}},
-	[2] = {header = "Muzzle", offset = {300, -600}, atts = {"md_saker"}},
-	[3] = {header = "Barrel", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris"}},
-	[4] = {header = "Underbarrel", offset = {-500, -25}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
+	[2] = {header = "Muzzle", offset = {400, -600}, atts = {"md_saker"}, exclusions = {bg_microbarrel = true}},
+	[3] = {header = "Barrel", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris", "bg_microbarrel"}},
+	[4] = {header = "Underbarrel", offset = {-400, -25}, atts = {"md_foregrip", "md_m203"}, exclusions = {bg_microbarrel = true}},
+	[9] = {header = "Extended Underbarrel", offset = {-1100, -300}, atts = {"md_tcw_carryhandle_grip", "md_bipod"}, dependencies = {bg_longris = true}},
 	[5] = {header = "Magazine", offset = {0, 650}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}, exclusions = {too_m4a1_50_beowulf = true}},
 	[6] = {header = "Stock", offset = {1500, 600}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_nostock"}},
-	[7] = {header = "Laser", offset = {1300, 0}, atts = {"ins2_atow_clamplaser","md_anpeq15"}},
+	[7] = {header = "Laser", offset = {1300, 0}, atts = {"ins2_atow_clamplaser","md_anpeq15"}, exclusions = {bg_microbarrel = true}},
 	[8] = {header = "Signature Attachment", offset = {500, 500}, atts = {"too_m4a1_50_beowulf"}},
 	["+reload"] = {header = "Ammo", offset = {-900, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 SWEP.AttachmentDependencies = {
 	["md_m203"] = {"bg_longris"},
-	md_bipod = {"bg_longris"}
+	["md_bipod"] = {"bg_longris"},
+	["md_tcw_carryhandle_grip"] = {"bg_longris"}
+}
+
+SWEP.AttachmentExclusions = {
+	["bg_foldsight"] = {"bg_microbarrel"},
+	["too_optic_tacstance"] = {"bg_microbarrel"},
+	["md_cmag_556_official"] = {"bg_microbarrel"}
 }
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
@@ -260,6 +266,12 @@ SWEP.Shots = 1
 SWEP.Damage = 30
 SWEP.DeployTime = 0.6
 
+SWEP.bulletCallback = function( att, tr, dmg )
+	if tr.HitGroup == HITGROUP_HEAD then
+		dmg:ScaleDamage( 1.4 / 1.2 ) -- 1.2 multiplied by this value is the resulting multiplier
+	end
+end
+
 SWEP.ReloadSpeed = 1.15
 SWEP.ReloadTime = 1.70
 SWEP.ReloadTime_Empty = 2.00
@@ -276,32 +288,56 @@ function SWEP:IndividualInitialize()
     end
 end
 
+function SWEP:adjustAttachmentAimPosition(att)
+	if self.ActiveAttachments.doi_atow_frankensten and att.name == "md_reflex" then
+		self.AimPos = self.FrankReflexPos
+		self.AimAng = self.FrankReflexAng
+	end
+end
+
 function SWEP:IndividualThink()
 	self.Owner.ViewAff = 0
 	clip = self:Clip1()
-	
-
-if self.ActiveAttachments.ins2_atow_clamplaser then
-	self.LaserPosAdjust = Vector(2.5, 20, -2.2)
-	self.LaserAngAdjust = Angle(0,-2,0) 
-end
-
-if self.ActiveAttachments.md_anpeq15 then
-		self.LaserPosAdjust = Vector(1, 0, 0)
-	    self.LaserAngAdjust = Angle(2, 180, 0)  
-end
-
-
-
 	self.EffectiveRange = 50 * 39.37
 	self.DamageFallOff = .3
+
+	self.bulletCallback = function( att, tr, dmg )
+		if tr.HitGroup == HITGROUP_HEAD then
+			dmg:ScaleDamage( 1.4 / 2 )
+		end
+	end
+
+	if self.ActiveAttachments.ins2_atow_clamplaser then
+		self.LaserPosAdjust = Vector(2.5, 20, -2.2)
+		self.LaserAngAdjust = Angle(0,-2,0) 
+	end
+	if self.ActiveAttachments.md_anpeq15 then
+			self.LaserPosAdjust = Vector(1, 0, 0)
+			self.LaserAngAdjust = Angle(2, 180, 0)  
+	end
 
     if self.ActiveAttachments.too_m4a1_50_beowulf then
 		self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
 		self.DamageFallOff = ((self.DamageFallOff + 0.2))
+		self.bulletCallback = function( att, tr, dmg )
+			if tr.HitGroup == HITGROUP_HEAD then
+				dmg:ScaleDamage( 1.2 / 2 )
+			end
+		end
 	end
 	if self.ActiveAttachments.bg_nostock then
 		self:setBodygroup(self.StockBGs.main, self.StockBGs.buffertube)
+	end
+	if self.ActiveAttachments.bg_longbarrel or self.ActiveAttachments.bg_longris then
+		self.DamageFallOff = self.DamageFallOff - 0.05
+	end
+	if self.ActiveAttachments.bg_microbarrel then
+		self.EffectiveRange = self.EffectiveRange - 45 * 39.37
+		self.DamageFallOff = self.DamageFallOff + 0.3
+		self:setBodygroup(self.SightBGs.main, self.SightBGs.none)
+	end
+	if self.ActiveAttachments.bg_microbarrel and self.ActiveAttachments.md_ins2coltscope then
+		self:setBodygroup(self.SightBGs.main, self.SightBGs.carryhandle)
 	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

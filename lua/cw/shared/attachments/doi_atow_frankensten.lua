@@ -83,7 +83,7 @@ function att:detachFunc()
 	self.SightWithRail = true
 	self.FrankenstenPos = nil
     self.FrankenstenAng = nil
-	self.ForegripOverride = true
+	self.ForegripOverride = false
     self.ForegripParent = "none"
 	self:resetSuppressorStatus()
 	self:revertToOriginalIronsights()

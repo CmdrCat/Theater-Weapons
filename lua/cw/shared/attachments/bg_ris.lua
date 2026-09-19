@@ -1,15 +1,14 @@
 local att = {}
 att.name = "bg_ris"
-att.displayName = "RIS"
-att.displayNameShort = "RIS"
+att.displayName = "Knights Armament M4 RAS"
+att.displayNameShort = "M4 RAS"
 att.isBG = true
 
-att.statModifiers = {RecoilMult = 0.05}
+att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15ris")
-	att.description = {[1] = {t = "A rail interface.", c = CustomizableWeaponry.textColors.REGULAR},
-	[2] = {t = "Allows additional attachments.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "A cosmetic handguard with a rail interface.", c = CustomizableWeaponry.textColors.COSMETIC}}
 end
 
 function att:attachFunc()

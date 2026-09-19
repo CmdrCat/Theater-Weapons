@@ -1,6 +1,6 @@
 local att = {}
 att.name = "md_small60rndsurefire"
-att.displayName = "60-Round Surefire Magazine"
+att.displayName = "Surefire 60-Round Magazine"
 att.displayNameShort = "60 RND"
 att.isBG = true
 att.SpeedDec = -5

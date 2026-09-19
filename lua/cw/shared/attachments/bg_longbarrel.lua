@@ -1,17 +1,18 @@
 local att = {}
 att.name = "bg_longbarrel"
-att.displayName = "Long barrel"
-att.displayNameShort = "LNGRNG"
+att.displayName = "20\" M16A2 Barrel"
+att.displayNameShort = "20\" M16"
 att.isBG = true
-att.SpeedDec = 2
+att.SpeedDec = 3
 
-att.statModifiers = {DamageMult = 0.05,
-AimSpreadMult = -0.1,
-OverallMouseSensMult = -0.1}
+att.statModifiers = {AimSpreadMult = -0.1,
+					 RecoilMult = -0.05,
+					 ReloadSpeedMult = -0.3}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15longbarrel")
-	att.description = {[1] = {t = "A barrel for long range engagements.", c = CustomizableWeaponry.textColors.REGULAR}}
+	att.description = {[1] = {t = "A barrel for long range engagements.", c = CustomizableWeaponry.textColors.COSMETIC},
+					   [2] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

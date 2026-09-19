@@ -1,7 +1,7 @@
 local att = {}
 att.name = "bg_foldsight"
-att.displayName = "Folding sights"
-att.displayNameShort = "Fold"
+att.displayName = "Folding Rear Sight"
+att.displayNameShort = "Folding"
 att.isBG = true
 att.isSight = true
 att.aimPos = {"FoldSightPos", "FoldSightAng"}

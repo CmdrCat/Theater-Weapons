@@ -5,8 +5,7 @@ att.displayNameShort = "M16"
 att.isBG = true
 att.SpeedDec = 2
 
-att.statModifiers = {RecoilMult = -0.1,
-OverallMouseSensMult = -0.1}
+att.statModifiers = {RecoilMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15heavystock")

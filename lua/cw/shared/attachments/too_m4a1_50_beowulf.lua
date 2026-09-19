@@ -26,8 +26,8 @@ function att:attachFunc()
 	self:CycleFiremodes()
 	self:CycleFiremodes()
 
-	self.FireSound = "CW_FAL_FIRE"
-	self.FireSoundSuppressed = "CW_TOO_M40_FIRESUPPRESSED"
+	self:updateSoundTo("CW_FAL_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
+	self:updateSoundTo("CW_TOO_M40_FIRESUPPRESSED", CustomizableWeaponry.sounds.SUPPRESSED)
 	self.Primary.Ammo = ".50 Beowulf"
 	self.PrintName = ".50 Beowulf Tactical"
 	self.Trivia = {text = "The .50 Beowulf is a heavy round developed by Alexander Arms used for smashing through vehicles and armor alike.", x = -400, y = -700}
@@ -48,8 +48,7 @@ function att:detachFunc()
 
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
-	self.FireSound = "CW_TOO_AR15_FIRE"
-	self.FireSoundSuppressed = "CW_TOO_AR15_FIRE_SUPPRESSED"
+	self:restoreSound()
 	self.Primary.Ammo = "5.56x45MM"
 	self.PrintName = "AR-15"
 	self.Trivia = {text = "The definitive American weapon that broke tradition in the face of modern warfare.", x = -400, y = -700}

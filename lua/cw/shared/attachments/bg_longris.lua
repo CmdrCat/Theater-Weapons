@@ -1,20 +1,18 @@
 local att = {}
 att.name = "bg_longris"
-att.displayName = "Long barrel RIS"
-att.displayNameShort = "EXT RIS"
+att.displayName = "Knights Armament M16A4 RAS"
+att.displayNameShort = "20\" RAS"
 att.isBG = true
-att.SpeedDec = 3
+att.SpeedDec = 5
 
-att.statModifiers = {DamageMult = 0.05,
-AimSpreadMult = -0.1,
-RecoilMult = 0.05,
-OverallMouseSensMult = -0.1
-}
+att.statModifiers = {AimSpreadMult = -0.1,
+RecoilMult = -0.05,
+ReloadSpeedMult = -0.3}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15longris")
-	att.description = {[1] = {t = "A rail interface for long barrels.", c = CustomizableWeaponry.textColors.REGULAR},
-	[2] = {t = "Allows additional attachments.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {[1] = {t = "A rail interface for long barrels.", c = CustomizableWeaponry.textColors.COSMETIC},
+					   [2] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()
