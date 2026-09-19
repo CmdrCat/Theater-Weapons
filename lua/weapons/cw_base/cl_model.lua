@@ -426,6 +426,8 @@ function SWEP:offsetBones()
 		
 		if self.canOffsetMagBone then
 			self:offsetMagBone(false)
+		else
+			self:offsetMagBone(true)
 		end
 		
 		if canModifyBones then

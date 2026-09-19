@@ -18,7 +18,7 @@ if CLIENT then
 	SWEP.SnapToGrip = true
 	SWEP.ShellScale = 0.7
 	SWEP.ShellOffsetMul = 1
-	SWEP.ShellPosOffset = {x = -2, y = 0, z = -3}
+	SWEP.ShellPosOffset = {x = -2, y = 0, z = 0}
 	SWEP.ForeGripOffsetCycle_Draw = 0
 	SWEP.ForeGripOffsetCycle_Reload = 0.65
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
@@ -69,10 +69,15 @@ if CLIENT then
 	SWEP.TacStancePos = Vector(-4.5, 2.75, 0.5)
 	SWEP.TacStanceAng = Vector(0,0, -55)
 	
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.211, -4, -0.95), [2] = Vector(-2, 0, 0)},
-["md_ins2coltscope"] = {[1] = Vector(-4.5, 2.75, 0.5), [2] = Vector(0,0, -55)},
-["too_optic_tacstance"] = {[1] = Vector(-2.208, -4.3, 0.143), [2] = Vector(0.605, 0, -0.217)},
-["bg_foldsight"] = {[1] = Vector(-4.5, 2.75, 0.5), [2] = Vector(0,0, -55)}
+	SWEP.BackupSights = {
+		["too_optic_tacstance"] = {[1] = Vector(-2.208, -4.3, 0.143), [2] = Vector(0.605, 0, -0.217)},
+		["bg_foldsight"] = {[1] = Vector(-4.5, 2.75, 0.5), [2] = Vector(0,0, -55)},
+		["md_microt1"] = {[1] = Vector(-4.5, 6, 0.5), [2] = Vector(0,0, -55)},
+		["md_aimpoint"] = {[1] = Vector(-4.5, 4, 0.5), [2] = Vector(0,0, -55)},
+		["md_eotech"] = {[1] = Vector(-4.5, 6, 0.5), [2] = Vector(0,0, -55)},
+		["md_ins2coltscope"] = {[1] = Vector(-4.5, 8, 0.5), [2] = Vector(0,0, -55)},
+		["md_acog"] = {[1] = Vector(-2.211, 5, -0.64), [2] = Vector(-2, 0, 0)},
+		["md_nightforce_nxs"] = {[1] = Vector(-4.5, 6, 0.5), [2] = Vector(0,0, -55)}
 	}
 
 	SWEP.ACOGAxisAlign = {right = -0.58, up = -0.01, forward = 0}
@@ -80,6 +85,24 @@ if CLIENT then
 	SWEP.M203CameraRotation = {p = -90, y = 0, r = -90}
 	
 	SWEP.ForegripOverridePos = {
+		["default"] = {},
+		["bruentiltgrip_r"] = {
+			["Bip01 L Finger3"] = {pos = Vector(0, 0, 0), angle = Angle(0, 42.713, 0) },
+			["Bip01 L Clavicle"] = {pos = Vector(-2.9, 0.75, -2.4), angle = Angle(-55.446, 11.843, 0) },
+			["Bip01 L Forearm"] = {pos = Vector(0, 0, 0), angle = Angle(0, 0, 42.41) },
+			["Bip01 L Finger02"] = {pos = Vector(0, 0, 0), angle = Angle(0, 71.308, 0) },
+			["Bip01 L Finger11"] = {pos = Vector(0, 0, 0), angle = Angle(0, 25.795, 0) },
+			["Bip01 L Finger4"] = {pos = Vector(0, 0, 0), angle = Angle(0, 26.148, 0) },
+			["Bip01 L Finger1"] = {pos = Vector(0, 0, 0), angle = Angle(6.522, 83.597, 0) },
+			["Bip01 L Finger0"] = {pos = Vector(0, 0, 0), angle = Angle(23.2, 16.545, 0) },
+			["Bip01 L Finger42"] = {pos = Vector(0, 0, 0), angle = Angle(0, 31.427, 0) },
+			["Bip01 L Finger32"] = {pos = Vector(0, 0, 0), angle = Angle(0, 29.565, 0) },
+			["Bip01 L Hand"] = {pos = Vector(0, 0, 0), angle = Angle(9.491, 14.793, -15.926) },
+			["Bip01 L Finger12"] = {pos = Vector(0, 0, 0), angle = Angle(0, -9.195, 0) },
+			["Bip01 L Finger21"] = {pos = Vector(0, 0, 0), angle = Angle(0, 10.164, 0) },
+			["Bip01 L Finger01"] = {pos = Vector(0, 0, 0), angle = Angle(0, 18.395, 0) },
+			["Bip01 L Finger2"] = {pos = Vector(0, 0, 0), angle = Angle(2.411, 57.007, 0) }
+		},
 		["md_cmag_556_official"] = {
 			weakOverride = true,
 			["Bip01 L UpperArm"] = {pos = Vector(-0.732, -1.836, -4.113), angle = Angle(0, -12.549, 0) }
@@ -107,21 +130,31 @@ if CLIENT then
 	SWEP.NXSAlign = {right = -1.97, up = -0.01, forward = 0}
 	
 	SWEP.AttachmentModelsVM = {
-		["md_ins2coltscope"] = {model = "models/khrcw2/ins2pack/attachments/coltchscope.mdl", pos = Vector(0,3,4.2), angle = Angle(0,-90,0), size = Vector(.9, .9, .9), bone = "smdimport001"},
-		["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-2.2,-6,4.2), angle = Angle(0, -90, 90), size = Vector(1,1,1), bone = "smdimport001"},
-		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "smdimport001", rel = "", pos = Vector(-0.281, -4.55, -2.086), adjustment = {min = -4.3, max = -2.8, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(0, 0, 1), size = Vector(1, 1, 1)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "smdimport001", rel = "", pos = Vector(0.238, -9.3, -7.223), adjustment = {min = -9.2, max = -7.6, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "smdimport001", rel = "", pos = Vector(-0.452, -2.556, -1.428), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "smdimport001", pos = Vector(-0.042, 4.362, 0.1), angle = Angle(0, 0, 2), size = Vector(0.75, 0.75, 0.75)},
+		--Optics
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "smdimport001", pos = Vector(-0.027, 1.25, 3.634), adjustment = {min = 1.25, max = 3.6, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(0, 180, 0), size = Vector(0.4, 0.4, 0.4)},
+		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "smdimport001", rel = "", pos = Vector(-0.281, -4.55, -2.086), adjustment = {min = -4.3, max = -2.8, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(0, 0, 1), size = Vector(1, 1, 1)},
+		--["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "smdimport001", rel = "", pos = Vector(0.238, -9.3, -7.223), adjustment = {min = -9.2, max = -7.6, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_ins2coltscope"] = {model = "models/khrcw2/ins2pack/attachments/coltchscope.mdl", pos = Vector(0,3,4.2), angle = Angle(0,-90,0), size = Vector(.9, .9, .9), bone = "smdimport001"},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "smdimport001", pos = Vector(-0.401, -3.291, -2.22), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "smdimport001", pos = Vector(-0.225, 9.715, 3.15), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
-		["md_m203"] = {model = "models/cw2/attachments/m203.mdl", bone = "smdimport001", pos = Vector(2.299, -6.611, 4.138), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), animated = true},
-		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "smdimport001", pos = Vector(-0.011, 14.541, 0.441), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "smdimport001", pos = Vector(-0.35, -2.554, -1.627), angle = Angle(0, -90, 0), size = Vector(0.899, 0.899, 0.899)},
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "smdimport001", pos = Vector(-0.105, 3.852, 4.574), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		--Muzzle
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "smdimport001", pos = Vector(-0.042, 4.362, 0.1), angle = Angle(0, 0, 2), size = Vector(0.75, 0.75, 0.75)},
+		--Underbarrel
+		["ftactiger_r"] = {model = "models/shared/grips/r_ftactiger.mdl", bone = "smdimport001", rel = "", pos = Vector(-0.038, 7.452, 1.041), angle = Angle(-2, -90, 0), size = Vector(1.14, 1.14, 1.14)},
+		["bruentiltgrip_r"] = {model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "smdimport001", rel = "", pos = Vector(-0.035, 8.7, 0.832), angle = Angle(-2, -90, 0), size = Vector(1.11, 1.11, 1.11)},
+		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "smdimport001", rel = "", pos = Vector(-0.452, -2.556, -1.428), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75)},
+		["md_tcw_carryhandle_grip"] = {model = "models/cw2/rifles/ar15.mdl", bone = "smdimport001", pos = Vector(-2.243, 3.15, -0.15), angle = Angle(-2, -90, 180), size = Vector(1, 1, 1)},
+		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "smdimport001", pos = Vector(-0.011, 14.541, 0.441), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_m203"] = {model = "models/cw2/attachments/m203.mdl", bone = "smdimport001", pos = Vector(2.299, -6.611, 4.138), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), animated = true},
+		--Lasers
+		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "smdimport001", pos = Vector(-0.225, 9.715, 3.15), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
+		["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-2.2,-6,4.2), angle = Angle(0, -90, 90), size = Vector(1,1,1), bone = "smdimport001"},
+		--Magazines
+		["md_uecw_usgimag"] = {model = "models/gmod4phun/usgimag.mdl", bone = "Magazine001", pos = Vector(-0.012, 0.179, -0.162), angle = Angle(0, 0, 2), size = Vector(0.68, 0.68, 0.68)},
+		["md_uecw_emag"] = {model = "models/gmod4phun/emag.mdl", bone = "Magazine001", pos = Vector(-0.027, 0.124, -1.438), angle = Angle(0, 0, 2), size = Vector(0.602, 0.602, 0.602)},
 		["md_cmag_556_official"] = {model = "models/wystan/Cmag.mdl", bone = "Magazine001", pos = Vector(-0.191, -3.323, -1.254), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6)},
-		["md_tcw_carryhandle_grip"] = {model = "models/cw2/rifles/ar15.mdl", bone = "smdimport001", pos = Vector(-2.243, 3.15, -0.15), angle = Angle(-2, -90, 180), size = Vector(1, 1, 1)}
+		["md_tcw_pmag"] = {model = "models/gmod4phun/pmag30.mdl", bone = "Magazine001", pos = Vector(-0.031, 0.375, -1.979), angle = Angle(-2, -90, 0), size = Vector(0.706, 0.706, 0.706)}
 	}
 	
 	SWEP.M203HoldPos = {
@@ -157,13 +190,8 @@ if CLIENT then
 		["md_saker"] = {["bg_longbarrel"] = Vector(-0.042, 9, -0.1), ["bg_longris"] = Vector(-0.042, 9, -0.1)},
 		["ins2_atow_clamplaser"] = {["bg_longbarrel"] = Vector(-2.2,-2.5,4.2), ["bg_longris"] = Vector(-2.2,-2.5,4.2)},
 		["md_bipod"] = {bg_longris = Vector(-0.011, 14.541, 0.441)
-		},
-	
-		
+		}	
 	}
-
-
-
 	
 	SWEP.LaserPosAdjust = Vector(1, 0, 0)
 	SWEP.LaserAngAdjust = Angle(2, 180, 0) 
@@ -184,15 +212,15 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.Trivia = {text = "The definitive American weapon that broke tradition in the face of modern warfare.", x = -400, y = -800}
 
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"bg_foldsight", "md_ins2coltscope", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs", "too_optic_tacstance"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"bg_foldsight", "md_microt1", "md_aimpoint", "md_ins2coltscope", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs", "too_optic_tacstance"}},
 	[2] = {header = "Muzzle", offset = {400, -600}, atts = {"md_saker"}, exclusions = {bg_microbarrel = true}},
 	[3] = {header = "Barrel", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris", "bg_microbarrel"}},
-	[4] = {header = "Underbarrel", offset = {-400, -25}, atts = {"md_foregrip", "md_m203"}, exclusions = {bg_microbarrel = true}},
+	[4] = {header = "Underbarrel", offset = {-400, -25}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_m203"}, exclusions = {bg_microbarrel = true}},
 	[9] = {header = "Extended Underbarrel", offset = {-1100, -300}, atts = {"md_tcw_carryhandle_grip", "md_bipod"}, dependencies = {bg_longris = true}},
-	[5] = {header = "Magazine", offset = {0, 650}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}, exclusions = {too_m4a1_50_beowulf = true}},
-	[6] = {header = "Stock", offset = {1500, 600}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_nostock"}},
-	[7] = {header = "Laser", offset = {1300, 0}, atts = {"ins2_atow_clamplaser","md_anpeq15"}, exclusions = {bg_microbarrel = true}},
-	[8] = {header = "Signature Attachment", offset = {500, 500}, atts = {"too_m4a1_50_beowulf"}},
+	[5] = {header = "Magazine", offset = {-100, 750}, atts = {"md_uecw_usgimag", "md_uecw_emag", "bg_ar1560rndmag", "md_cmag_556_official", "md_tcw_pmag"}},
+	[6] = {header = "Stock", offset = {1550, 600}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_nostock"}},
+	[7] = {header = "Laser", offset = {1300, 0}, atts = {"md_anpeq15", "ins2_atow_clamplaser"}, exclusions = {bg_microbarrel = true}},
+	[8] = {header = "Signature Attachment", offset = {500, 450}, atts = {"too_m4a1_50_beowulf"}},
 	["+reload"] = {header = "Ammo", offset = {-900, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 SWEP.AttachmentDependencies = {
@@ -203,8 +231,14 @@ SWEP.AttachmentDependencies = {
 
 SWEP.AttachmentExclusions = {
 	["bg_foldsight"] = {"bg_microbarrel"},
+	["md_tcw_carryhandle_grip"] = {"md_m203"},
+	["md_bipod"] = {"md_m203"},
 	["too_optic_tacstance"] = {"bg_microbarrel"},
-	["md_cmag_556_official"] = {"bg_microbarrel"}
+	["md_cmag_556_official"] = {"bg_microbarrel"},
+	["md_uecw_usgimag"] = {"too_m4a1_50_beowulf"},
+	["md_uecw_emag"] = {"too_m4a1_50_beowulf"},
+	["bg_ar1560rndmag"] = {"too_m4a1_50_beowulf"},
+	["md_cmag_556_official"] = {"too_m4a1_50_beowulf"}
 }
 
 SWEP.Animations = {fire = {"shoot1", "shoot2", "shoot3"},
@@ -288,13 +322,6 @@ function SWEP:IndividualInitialize()
     end
 end
 
-function SWEP:adjustAttachmentAimPosition(att)
-	if self.ActiveAttachments.doi_atow_frankensten and att.name == "md_reflex" then
-		self.AimPos = self.FrankReflexPos
-		self.AimAng = self.FrankReflexAng
-	end
-end
-
 function SWEP:IndividualThink()
 	self.Owner.ViewAff = 0
 	clip = self:Clip1()
@@ -332,7 +359,7 @@ function SWEP:IndividualThink()
 		self.DamageFallOff = self.DamageFallOff - 0.05
 	end
 	if self.ActiveAttachments.bg_microbarrel then
-		self.EffectiveRange = self.EffectiveRange - 45 * 39.37
+		self.EffectiveRange = self.EffectiveRange * 0.1
 		self.DamageFallOff = self.DamageFallOff + 0.3
 		self:setBodygroup(self.SightBGs.main, self.SightBGs.none)
 	end

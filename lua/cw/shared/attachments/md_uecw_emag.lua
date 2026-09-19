@@ -15,10 +15,7 @@ function att:attachFunc()
 	self.Primary.ClipSize = 40
 	self.Primary.ClipSize_Orig = 40
 
-	-- MCX/M13B has one original magazine per reload animation.
-	if self.ExtendedMagBoneNames then
-		self.canOffsetMagBone = true
-	end
+	self.canOffsetMagBone = true
 
 	if self.MagBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
@@ -43,12 +40,7 @@ function att:detachFunc()
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 
-	if self.ExtendedMagBoneNames then
-		self.canOffsetMagBone = false
-		if CLIENT then
-			self:offsetMagBone(true)
-		end
-	end
+	self.canOffsetMagBone = false
 
 	self:unloadWeaponPartially()
 

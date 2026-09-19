@@ -3,13 +3,9 @@ att.name = "bg_ar1560rndmag"
 att.displayName = "Surefire 60-Round Magazine"
 att.displayNameShort = "60RND"
 att.isBG = true
-att.SpeedDec = 2
+att.SpeedDec = 15
 
-att.statModifiers = {ReloadSpeedMult = -0.15,
-DrawSpeedMult = -0.05,
-HipSpreadMult = 0.075,
-VelocitySensitivityMult = 0.07,
-OverallMouseSensMult = -0.05}
+att.statModifiers = {ReloadSpeedMult = -0.15}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar1560rndmag")

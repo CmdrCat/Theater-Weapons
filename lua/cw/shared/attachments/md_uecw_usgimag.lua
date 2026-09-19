@@ -12,20 +12,22 @@ if CLIENT then
 end
 
 function att:attachFunc()
+	self.canOffsetMagBone = true
 	self.Primary.ClipSize = 35
 	self.Primary.ClipSize_Orig = 35
-	if self.MagBoneName then
-	self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
-	end
 	self:loadWeapon()
+	if self.MagBoneName then
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
+	end
 end
 
 function att:detachFunc()
+	self.canOffsetMagBone = false
 	self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
 	self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 	self:unloadWeaponPartially()
 	if self.MagBoneName then
-	self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
+		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
 	end
 end
 

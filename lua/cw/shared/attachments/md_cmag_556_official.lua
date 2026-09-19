@@ -4,11 +4,8 @@ att.displayName = "Beta C-Magazine"
 att.displayNameShort = "C-Mag"
 att.SpeedDec = 50
 
-att.statModifiers = {ReloadSpeedMult = -0.25,
-DrawSpeedMult = -0.1,
-HipSpreadMult = 0.15,
-VelocitySensitivityMult = 0.15}
-
+att.statModifiers = {
+	ReloadSpeedMult = -0.3}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/cmag_official")

@@ -11,12 +11,14 @@ if CLIENT then
 end
 
 function att:attachFunc()
+	self.canOffsetMagBone = true
 	if self.MagBoneName then
 	self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
 	end
 end
 
 function att:detachFunc()
+	self.canOffsetMagBone = false
 	if self.MagBoneName then
 	self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
 	end

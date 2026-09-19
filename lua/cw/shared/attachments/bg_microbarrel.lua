@@ -16,7 +16,7 @@ att.statModifiers = {DrawSpeedMult = 0.5,
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("")
 	att.description = {[1] = {t = "Goodbye heavy barrel; hello extremely poor range", c = CustomizableWeaponry.textColors.COSMETIC},
-					   [2] = {t = "Decreases effective range by 45 M", c = CustomizableWeaponry.textColors.NEGATIVE},
+					   [2] = {t = "Decreases effective range by 90%", c = CustomizableWeaponry.textColors.NEGATIVE},
 					   [3] = {t = "Increases damage fall off by 30%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end
 
@@ -42,6 +42,9 @@ function att:detachFunc()
 	self.MuzzleEffect = "muzzleflash_suppressed"
 
 	self:revertToOriginalIronsights()
+	if not self:isAttachmentActive("sights") then
+		self:setBodygroup(self.SightBGs.main, self.SightBGs.carryhandle)
+	end
 	
 	self:restoreSound()
 

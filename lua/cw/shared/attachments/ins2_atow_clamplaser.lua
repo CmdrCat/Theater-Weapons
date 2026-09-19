@@ -1,6 +1,6 @@
 local att = {}
 att.name = "ins2_atow_clamplaser"
-att.displayName = "Clamp-on Laser"
+att.displayName = "Clamp-On Laser"
 att.displayNameShort = "Laser"
 att.laserRange = 4096
 att.laserBeamRange = 75
@@ -11,7 +11,7 @@ HipSpreadMult = -0.2,
 MaxSpreadIncMult = -0.25}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/anpeq15")
+	att.displayIcon = surface.GetTextureID("atts/insight_x2")
 	att.description = {}
 	local beam = Material("effects/laser1")
 	local laserDot = Material("sprites/glow04_noz")
