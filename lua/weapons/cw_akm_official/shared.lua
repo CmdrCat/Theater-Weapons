@@ -58,7 +58,7 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(-1, -2, -0.6)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 
-	SWEP.MagBoneName = "mag"
+	--SWEP.MagBoneName = "mag"
 	
 	SWEP.BackupSights = {
 		["too_optic_tacstance"] = {[1] = Vector(-3.846, -3.109, 1.1), [2] = Vector(0.577, 0.079, 0)},

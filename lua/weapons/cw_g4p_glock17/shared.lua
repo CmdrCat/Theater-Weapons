@@ -119,7 +119,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {500, -500}, atts = {"md_d
 [4] = {header = "Magazine", offset = {-200, 200}, atts = {"md_tcw_9mm_33rnd"}},
 [5] = {header = "Technique", offset = {-450, -500}, atts = {"doi_atow_onehand", "cw_akimbo"}},
 [6] = {header = "Signature Attachment", offset = {550, 300}, atts = {"uecw_glock_switch"}},
-["+reload"] = {header = "Ammo", offset = {200, -175}, atts = {"md_tcw_9mm_33rnd", "am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
+["+reload"] = {header = "Ammo", offset = {200, -175}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = "shoot_1",
 	fireDry = "shoot_last",

@@ -17,12 +17,13 @@ function att:attachFunc()
 	self.Primary.ClipSize_Orig = 75
 	self:loadWeapon()
 
-	if self.MagBoneName then
-		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(0.009, 0.009, 0.009))
-	end
+	if CLIENT and IsValid(self.CW_VM) then
+		local magBoneName = "mag"
+		local magBone = self.CW_VM:LookupBone(magBoneName)
 
-	if self.BulletBoneName then
-		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.BulletBoneName), Vector(0.009, 0.009, 0.009))
+		if magBone then
+			self.CW_VM:ManipulateBoneScale(magBone, Vector(0.009, 0.009, 0.009))
+		end
 	end
 
 	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.md_tcw_762_75rnd then
@@ -64,11 +65,13 @@ local clip = self:Clip1() or 0
 	self:loadWeapon()
 
 
-	if self.MagBoneName then
-		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.MagBoneName), Vector(1, 1, 1))
-	end
-	if self.BulletBoneName then
-		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.BulletBoneName), Vector(1, 1, 1))
+	if CLIENT and IsValid(self.CW_VM) then
+		local magBoneName = "mag"
+		local magBone = self.CW_VM:LookupBone(magBoneName)
+
+		if magBone then
+			self.CW_VM:ManipulateBoneScale(magBone, Vector(1, 1, 1))
+		end
 	end
 end
 
