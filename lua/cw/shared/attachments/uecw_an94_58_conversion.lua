@@ -8,7 +8,7 @@ att.statModifiers = {DamageMult = -2 / 15,
 	RecoilMult = 0.34}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/an9458")
 	att.description = {[1] = {t = "Chinese version chambered in 5.8x42MM", c = CustomizableWeaponry.textColors.VPOSITIVE},
 					   [2] = {t = "Increases effective range by 5 M", c = CustomizableWeaponry.textColors.POSITIVE},
 					   [3] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}

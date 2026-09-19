@@ -264,8 +264,8 @@ SWEP.Attachments = {
 	[9] = {header = "Front Sights", offset = {0 , -50},  atts = {"nofs"}},
 	[3] = {header = "Handguard", offset = {-700 , 550},  atts = {"bruenechelon", "bruenbm20"}},
 	[7] = {header = "Magazine", offset = {1200, 550},  atts = {"md_uecw_emag", "md_uecw_60rnd", "md_tcw_stanag"}},
-	[8] = {header = "Conversion", offset = {100, 550},  atts = {"r_mwii_300blk"}},
-	[0] = {header = "Stock", offset = {650, -225}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "r_mwii_mcxthinstock"}},
+	[8] = {header = "Signature Attachment", offset = {100, 550},  atts = {"r_mwii_300blk"}},
+	[0] = {header = "Stock", offset = {650, -225}, atts = {"r_mwii_mcxthinstock", "bg_ar15sturdystock", "bg_ar15heavystock"}},
 	["+use"] = {header = "Skins", offset = {0, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+reload"] = {header = "Ammo", offset = {1200, 50}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 

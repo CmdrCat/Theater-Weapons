@@ -7,7 +7,7 @@ att.statModifiers = {FireDelayMult = -13 / 365,
 DamageMult = -2 / 9}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/khyber")
 	att.description = {[1] = {t = "Fully-automatic conversion.", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 

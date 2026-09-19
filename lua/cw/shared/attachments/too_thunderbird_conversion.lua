@@ -7,7 +7,7 @@ att.statModifiers = {DamageMult = -27 / 79,
 	FireDelayMult = -191 / 543.5}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/mrwilk")
 	att.description = {[1] = {t = "Converts to the Thunderbird, a fully-automatic-only variant", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 

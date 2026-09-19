@@ -6,7 +6,7 @@ att.displayNameShort = "Snotra"
 att.statModifiers = {FireDelayMult = 122 / 253}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/cecilia")
 	att.description = {[1] = {t = "Eliminating a player charges Resilient Mind", c = CustomizableWeaponry.textColors.POSITIVE},
 				  	   [2] = {t = "Resilient Mind: After reloading, gain 20 armor", c = CustomizableWeaponry.textColors.FIRE}}
 end

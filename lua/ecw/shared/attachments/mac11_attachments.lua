@@ -39,7 +39,7 @@ RecoilMult = -0.75,
 HipSpreadMult = 100}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/khyber")
 	att.description = {[1] = {t = "Reduces bolt travel distance and absorbs shock from recoil at the cost of reliability", c = CustomizableWeaponry.textColors.VPOSITIVE},
 [2] = {t = "Decreases effective range by 25%", c = CustomizableWeaponry.textColors.NEGATIVE}}
 end

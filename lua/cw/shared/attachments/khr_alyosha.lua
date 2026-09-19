@@ -9,7 +9,7 @@ att.MarkDamageScale = 1.14
 att.statModifiers = {}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/electro")
 	att.description = {[1] = {t = "Applies the Hunter's Mark effect to hit opponents for 3 seconds.", c = CustomizableWeaponry.textColors.SPECIAL},
 					   [2] = {t = "Marked opponents are highlighted, take 14% more damage, and can trigger elemental reactions.", c = CustomizableWeaponry.textColors.SPECIAL},
 					   [3] = {t = "Scattershot / single-bullet mode while hipfiring / aiming down sights.", c = CustomizableWeaponry.textColors.SPECIAL},

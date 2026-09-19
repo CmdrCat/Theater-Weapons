@@ -10,7 +10,7 @@ att.statModifiers = {FireDelayMult = -29 / 85,
 					 VelocitySensitivityMult = -0.5}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/mp5_sdbarrel")
+	att.displayIcon = surface.GetTextureID("atts/khyber")
 	att.description = {[1] = {t = "AR receiver and integrated suppressor allows for a higher fire rate at the cost of lethality.", c = CustomizableWeaponry.textColors.COSMETIC},
 					   [2] = {t = "Increases damage fall off by 23%", c = CustomizableWeaponry.textColors.NEGATIVE}
 					  }

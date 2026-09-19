@@ -161,12 +161,13 @@ if CLIENT then
 									end
 								end
 
-								local size = #foundAtt.description
+								local description = foundAtt.description or {}
+								local size = #description
 								surface.SetDrawColor(bgR, bgG, bgB, 200 * self.CustomizeMenuAlpha)
 								surface.SetTexture(gradient)
 								surface.DrawTexturedRect(x - 3, y + 200 - 3, 300, size * 30 + 50)
 								
-								for k3, v3 in ipairs(foundAtt.description) do
+								for k3, v3 in ipairs(description) do
 									draw.ShadowText(v3.t, hud18, x + 5, y + 210 - 3 + k3 * 30 + 17, v3.c, self.HUDColors.black, 2, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 								end
 								

@@ -12,7 +12,7 @@ MaxSpreadIncMult = 0.75,
 VelocitySensitivityMult = 1.51}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/hyena")
 	att.description = {[1] = {t = "Fires heavy rounds coated in a high-ignition thermite compound to ignite targets", c = CustomizableWeaponry.textColors.VPOSITIVE},
 					   [2] = {t = "Decreases capacity to 8 rounds", c = CustomizableWeaponry.textColors.NEGATIVE},
 					   [5] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}

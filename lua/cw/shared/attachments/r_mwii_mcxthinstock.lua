@@ -1,7 +1,7 @@
 local att = {}
 att.name = "r_mwii_mcxthinstock"
-att.displayName = "Skeleton Stock"
-att.displayNameShort = "THIN"
+att.displayName = "Thin Folding Stock"
+att.displayNameShort = "Folding"
 
 att.statModifiers = {DrawSpeedMult = 0.2,
 VelocitySensitivityMult = -0.2,
@@ -9,7 +9,7 @@ RecoilMult = 0.15}
 att.SpeedDec = -10
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/m3flash")
+	att.displayIcon = surface.GetTextureID("atts/mac11_unfolded_stock")
 
 end
 

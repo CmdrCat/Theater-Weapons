@@ -117,16 +117,16 @@ if CLIENT then
 end
 end
 
-SWEP.Attachments = {[5] = {header = "Signature Attachment", offset = {300, -500}, atts = {"doi_atow_frankensten", "doi_atow_stenmk5"}, exclusions =  {bruentiltgrip_r = true, ftactiger_r = true}},
-[4] = {header = "Accessory", offset = {-700, -500}, atts = {"doi_atow_sling"}},
-[2] = {header = "Fire Control", offset = {-150, -500}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
-[3] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_stensuppressor", "doi_atow_unisuppressor","hard20"}, exclusions = {doi_atow_frankensten = true}},
+SWEP.Attachments = {[7] = {header = "Signature Attachment", offset = {300, -500}, atts = {"doi_atow_frankensten", "doi_atow_stenmk5"}, exclusions =  {bruentiltgrip_r = true, ftactiger_r = true}},
+[5] = {header = "Accessory", offset = {-700, -500}, atts = {"doi_atow_sling"}},
+[6] = {header = "Fire Control", offset = {-150, -500}, atts = {"doi_atow_burstconv","doi_atow_heavybolt"}},
+[2] = {header = "Muzzle", offset = {-700, 300}, atts = {"doi_atow_stensuppressor", "doi_atow_unisuppressor","hard20"}, exclusions = {doi_atow_frankensten = true}},
 [1] = {header = "Sight", offset = {-700, -150}, atts = {"doi_atow_altsightmk5", "md_reflex"}},
-[6] = {header = "Laser", offset = {200, -125}, atts = {"ins2_atow_clamplaser", "md_anpeq15", "ftacgrimline" }, exclusions = {doi_atow_frankensten = true}},
-[7] = {header = "Foregrip", offset = {950, 0}, atts = {"ftactiger_r", "bruentiltgrip_r", 
+[4] = {header = "Laser", offset = {200, -125}, atts = {"ins2_atow_clamplaser", "md_anpeq15", "ftacgrimline" }, exclusions = {doi_atow_frankensten = true}},
+[3] = {header = "Foregrip", offset = {950, 0}, atts = {"ftactiger_r", "bruentiltgrip_r", 
 --"md_foregrip"
 }, exclusions = {doi_atow_frankensten = true}},
-
+[8] = {header = "Stock", offset = {950, 0}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_nostock"}, dependencies = {doi_atow_frankensten = true}},
 ["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentExclusions = {

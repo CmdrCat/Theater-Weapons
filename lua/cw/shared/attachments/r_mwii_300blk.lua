@@ -4,7 +4,7 @@ att.displayName = ".300 Blackout Conversion"
 att.displayNameShort = ".300 BLK"
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/300blk")
 	att.description = {[1] = {t = "Changes the barrel to fire .300 Blackout, a heavy-hitting, subsonic round", c = CustomizableWeaponry.textColors.VPOSITIVE},
                        [2] = {t = "Increases headshot multiplier from 1.2 to 2.0", c = CustomizableWeaponry.textColors.POSITIVE},  
                        [3] = {t = "Decreases effective range by 12.5%", c = CustomizableWeaponry.textColors.NEGATIVE}}

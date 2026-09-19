@@ -9,7 +9,7 @@ att.statModifiers = {DamageMult = -9 / 46,
 	HipSpreadMult = 0.2}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/khyber")
 	att.description = {[1] = {t = "Fire 5.56x45MM rounds, which are more accurate but carry less energy", c = CustomizableWeaponry.textColors.VPOSITIVE},
 					   [2] = {t = "Increases effective range by 5 M", c = CustomizableWeaponry.textColors.POSITIVE},
 					   [3] = {t = "Decreases damage fall off by 10%", c = CustomizableWeaponry.textColors.POSITIVE}}

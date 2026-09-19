@@ -1,6 +1,6 @@
 local att = {}
 att.name = "doi_atow_dlt19x"
-att.displayName = "DLT-19X conversion"
+att.displayName = "DLT-19X Conversion"
 att.displayNameShort = "DLT-19X"
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
 att.reticle = "effects/sw_laser_white_front"
@@ -20,7 +20,7 @@ VelocitySensitivityMult = -1,
 AimSpreadMult = -1}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("vgui/inventory/weapon_mg42")
+	att.displayIcon = surface.GetTextureID("atts/galacticempire")
 end
 
 local invisibleScale = Vector(0.009, 0.009, 0.009)

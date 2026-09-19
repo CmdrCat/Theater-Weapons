@@ -181,6 +181,7 @@ SWEP.HandsBGs = {main = 1, hands = 0, none = 1}
 SWEP.StockBGs = {main = 2, regular = 0, none = 1}
 SWEP.BarrelBGs = {main = 3, handguard = 0, none = 1}
 SWEP.MagBGs = {main = 4, regular = 0, none = 1}
+SWEP.RearGripBGs = {main = 5, regular = 0, none = 1}
 
 SWEP.LuaViewmodelRecoil = true
 
@@ -191,8 +192,8 @@ SWEP.Attachments = {
 	{header = "Muzzle", offset = {-600, -500}, atts = {"md_pbs1", "md_csgo_silencer_rifle", "hard20"}},
 	{header = "Underbarrel", offset = {-600, 100}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	{header = "Stock", offset = {1200, 750}, atts = {"bg_nostock"}},
-	{header = "Magazines", offset = {-400, 600}, atts = {"md_tcw_762_75rnd", "md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}},
 	{header = "Signature Attachment", offset = {500, 400}, atts = {"md_ak_556_conv"}},
+	{header = "Magazines", offset = {-400, 600}, atts = {"md_tcw_762_75rnd", "md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}},
 	{header = "Skins", offset = {1200, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 	["+use"] = {header = "Sight", offset = {1550, -500},  atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {950, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}

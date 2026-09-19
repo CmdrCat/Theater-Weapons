@@ -13,7 +13,7 @@ att.statModifiers = {DamageMult = -1 / 18,
 	MaxSpreadIncMult = 7}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/hunter")
 	att.description = {[1] = {t = "Converts to a lightweight, semi-automatic version of the AWP", c = CustomizableWeaponry.textColors.COSMETIC},
 					   [2] = {t = "Increases headshot multiplier from 1.2 to 1.5", c = CustomizableWeaponry.textColors.POSITIVE},
 					   [3] = {t = "Decreases effective range by 50 M", c = CustomizableWeaponry.textColors.NEGATIVE},

@@ -9,7 +9,7 @@ att.statModifiers = {DamageMult = 6 / 79,
 	ReloadSpeedMult = 0.57}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/dungeoneagle")
 	att.description = {[1] = {t = "Hold down the trigger for 0.7 seconds and a more powerful shot is fired, dealing double-damage", c = CustomizableWeaponry.textColors.VPOSITIVE}}
 end
 

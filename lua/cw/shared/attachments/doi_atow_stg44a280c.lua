@@ -27,7 +27,7 @@ RecoilMult = -0.75,
 AimSpreadMult = -1}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("vgui/inventory/weapon_stg44")
+	att.displayIcon = surface.GetTextureID("atts/rebelalliance")
 end
 
 function att:attachFunc()

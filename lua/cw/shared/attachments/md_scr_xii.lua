@@ -1,7 +1,7 @@
 local att = {}
 att.name = "md_scr_xii"
 att.displayName = "SCR XII"
-att.displayNameShort = "SCR"
+att.displayNameShort = "SCR XII"
 att.SpeedDec = -15
 
 att.statModifiers = {DamageMult = -17 / 21,
@@ -9,7 +9,7 @@ att.statModifiers = {DamageMult = -17 / 21,
 					 HipSpreadMult = -1}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/scrxii")
 	att.description = {[1] = {t = "Converts to a semi-automatic, 12 Gauge shotgun", c = CustomizableWeaponry.textColors.COSMETIC},
 					   [2] = {t = "Decreases capacity to 5 rounds", c = CustomizableWeaponry.textColors.NEGATIVE},
 					   [3] = {t = "Decreases effective range by 33 M", c = CustomizableWeaponry.textColors.NEGATIVE},

@@ -6,7 +6,7 @@ att.displayNameShort = "Cursed Technique"
 att.statModifiers = {ReloadSpeedMult = 1}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/cursedtechnique")
 	att.description = {[1] = {t = "Completing a full reload replenishes your Cursed Energy", c = CustomizableWeaponry.textColors.POSITIVE},
 				  	   [2] = {t = "Construction: Fire a bullet reinforced with Cursed Energy, dealing double damage", c = CustomizableWeaponry.textColors.CURSED},
                        [3] = {t = "Can only be fired when 0 bullets are in the cylinder and costs 50 HP", c = CustomizableWeaponry.textColors.CURSED}

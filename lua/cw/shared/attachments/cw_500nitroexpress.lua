@@ -4,7 +4,7 @@ att.displayName = ".500 Nitro Express Conversion"
 att.displayNameShort = ".500"
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/khyber")
 	att.description = {[1] = {t = "Somehow holds 6 rounds of .500 Nitro Express.", c = CustomizableWeaponry.textColors.VPOSITIVE},
 					   [2] = {t = "Decreases headshot multiplier from 2.0 to 1.2", c = CustomizableWeaponry.textColors.POSITIVE},
                        [3] = {t = "Increases effective range by 20M", c = CustomizableWeaponry.textColors.POSITIVE},

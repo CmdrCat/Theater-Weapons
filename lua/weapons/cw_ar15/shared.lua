@@ -39,6 +39,9 @@ if CLIENT then
 	SWEP.NXSPos = Vector(-2.191, -4.454, 0.439)
 	SWEP.NXSAng = Vector(0, 0, 0)
 
+	--SWEP.CustomizePos = Vector(10, -4.3, 0) -- Looking at stocks here
+	--SWEP.CustomizeAng = Vector(0.605, 90, -0.217)
+
 	SWEP.AimpointPos = Vector(-2.194, -2.7, 0.57)
 	SWEP.AimpointAng = Vector(-1.951, 0, -0.217)
 	
@@ -154,41 +157,44 @@ SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.StudioBGs = {
     main = 0,
+	receiver = 0,
     none = 1
 }
-SWEP.SightBGs = {main = 4, carryhandle = 0, foldingsight = 1, none = 2}
-SWEP.BarrelBGs = {main = 3, m4 = 0, m4ris = 1, m4moe = 2, m16 = 3, m16ris = 4, none = 5}
+SWEP.SightBGs = {main = 4, carryhandle = 0, foldsight = 1, none = 2}
+SWEP.BarrelBGs = {main = 3, ris = 1, magpul = 2, long = 3, longris = 4, none = 5, regular = 0}
 SWEP.StockBGs = {
     main = 2,
-    m4 = 0,
-    m16 = 1,
-    moe = 2,
-    none = 3
+    none = 4,
+	buffertube = 3,
+	regular = 0,
+	heavy = 1,
+	sturdy = 2
 }
 SWEP.MagBGs = {
     main = 5,
-    round30 = 0,
+    regular = 0,
     round60 = 1,
     none = 2
 }
 SWEP.HandsBGs = {
     main = 1,
+	hands = 0,
     none = 1
 }
 SWEP.LuaViewmodelRecoil = true
 
-SWEP.Trivia = {text = "The definitive American weapon that broke tradition in the face of modern warfare.", x = -400, y = -700}
+SWEP.Trivia = {text = "The definitive American weapon that broke tradition in the face of modern warfare.", x = -400, y = -800}
 
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"too_optic_tacstance","bg_foldsight", "md_ins2coltscope", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
-	[2] = {header = "Barrel", offset = {150, -600}, atts = {"md_saker"}},
-	[3] = {header = "Receiver", offset = {-600, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris"}},
-	[4] = {header = "Handguard", offset = {-600, -100}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
-	[5] = {header = "Magazine", offset = {-600, 340}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}, exclusions = {too_m4a1_50_beowulf = true}},
-	[6] = {header = "Stock", offset = {950, 340}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock"}},
-	[7] = {header = "Laser", offset = {150, 340}, atts = {"ins2_atow_clamplaser","md_anpeq15"}},
-	[8] = {header = "Conversion", offset = {1600, 340}, atts = {"too_m4a1_50_beowulf"}, exclusions = {md_ak_556_conv = true, bg_ar1560rndmag = true, md_cmag_556_official = true}},
-	["+reload"] = {header = "Ammo", offset = {950, -100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"bg_foldsight", "md_ins2coltscope", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs", "too_optic_tacstance"}},
+	[2] = {header = "Muzzle", offset = {300, -600}, atts = {"md_saker"}},
+	[3] = {header = "Barrel", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris"}},
+	[4] = {header = "Underbarrel", offset = {-500, -25}, atts = {"md_foregrip", "md_bipod", "md_m203"}},
+	[5] = {header = "Magazine", offset = {0, 650}, atts = {"bg_ar1560rndmag", "md_cmag_556_official"}, exclusions = {too_m4a1_50_beowulf = true}},
+	[6] = {header = "Stock", offset = {1500, 600}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_nostock"}},
+	[7] = {header = "Laser", offset = {1300, 0}, atts = {"ins2_atow_clamplaser","md_anpeq15"}},
+	[8] = {header = "Signature Attachment", offset = {500, 500}, atts = {"too_m4a1_50_beowulf"}},
+	["+reload"] = {header = "Ammo", offset = {-900, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
 SWEP.AttachmentDependencies = {
 	["md_m203"] = {"bg_longris"},
@@ -264,6 +270,12 @@ SWEP.SnapToIdlePostReload = true
 SWEP.EffectiveRange_Orig = 50 * 39.37
 SWEP.DamageFallOff_Orig = .3
 
+function SWEP:IndividualInitialize()
+    if CLIENT and self.CW_VM then
+        self:setBodygroup(self.StockBGs.main, self.StockBGs.regular)
+    end
+end
+
 function SWEP:IndividualThink()
 	self.Owner.ViewAff = 0
 	clip = self:Clip1()
@@ -285,10 +297,12 @@ end
 	self.DamageFallOff = .3
 
     if self.ActiveAttachments.too_m4a1_50_beowulf then
-	self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
-	self.DamageFallOff = ((self.DamageFallOff + 0.2))
+		self.EffectiveRange = ((self.EffectiveRange - 15 * 39.37))
+		self.DamageFallOff = ((self.DamageFallOff + 0.2))
 	end
-
+	if self.ActiveAttachments.bg_nostock then
+		self:setBodygroup(self.StockBGs.main, self.StockBGs.buffertube)
+	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))
 	end

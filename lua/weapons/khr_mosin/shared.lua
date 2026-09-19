@@ -115,7 +115,7 @@ SWEP.StockBGs = {main = 0, full = 0, custom = 1, carbine = 2, obrez = 3}
 SWEP.Trivia = {text = "Originally developed in the 1890s for the Russian Empire, the Mosin-Nagant became one of the most mass-produced bolt-action rifles in history.", x = -500, y = -500}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {1100, -300},  atts = {"md_microt1", "md_aimpoint", "md_schmidt_shortdot", "bg_skspuscope", "md_acog", "md_nightforce_nxs"}},
-[2] = {header = "Signature Attachments", offset = {-500, -300},  atts = {"bg_mncustombody", "bg_mncarbinebody", "bg_mnobrezbody", "khr_alyosha"}},
+[2] = {header = "Signature Attachment", offset = {-500, -300},  atts = {"bg_mncustombody", "bg_mncarbinebody", "bg_mnobrezbody", "khr_alyosha"}},
 [3] = {header = "Laser", offset = {-500, 200},  atts = {"md_anpeq15", "ftacgrimline"}},
 [4] = {header = "Bolt", offset = {1600, 700},  atts = {"bg_bentbolt"}},
 [5] = {header = "Finish", offset = {1600, 300},  atts = {"md_mnbrandnew1", "md_mnbrandnew2", "md_mnolddark", "md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},

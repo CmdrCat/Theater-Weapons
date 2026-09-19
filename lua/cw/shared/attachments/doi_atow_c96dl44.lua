@@ -1,6 +1,6 @@
 local att = {}
 att.name = "doi_atow_dl44"
-att.displayName = "DL-44 Blaster Conversion"
+att.displayName = "DL-44 Conversion"
 att.displayNameShort = "DL-44"
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_BEAM
 att.reticle = "effects/sw_laser_white_front"
@@ -18,7 +18,7 @@ VelocitySensitivityMult = -1,
 AimSpreadMult = -1}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("vgui/inventory/weapon_c96")
+	att.displayIcon = surface.GetTextureID("atts/rebelalliance")
 end
 
 function att:attachFunc()

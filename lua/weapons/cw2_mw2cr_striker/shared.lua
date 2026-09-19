@@ -144,7 +144,7 @@ SWEP.Attachments = {
 [1] = {header = "Sight", offset = {400, -450}, atts = {"too_reflex_mrs", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog"}},
 [2] = {header = "Muzzle", offset = {-750, -300}, atts = {"doi_atow_unisuppressor", "md_saker"}},
 [3] = {header = "Laser", offset = {-800, 300}, atts = {"ftacgrimline", "md_anpeq15"}},
-[4] = {header = "Conversion", offset = {1000, 450}, atts = {"cw2_mw2cr_strikerauto"}},
+[4] = {header = "Signature Attachment", offset = {1000, 450}, atts = {"cw2_mw2cr_strikerauto"}},
 [5] = {header = "Skins", offset = {1200, 0}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {200, 350}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }

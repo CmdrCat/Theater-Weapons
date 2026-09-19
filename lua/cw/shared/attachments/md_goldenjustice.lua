@@ -8,7 +8,7 @@ att.statModifiers = {DamageMult = -57 / 145,
 	RecoilMult = -0.8}
 
 if CLIENT then
-	att.displayIcon = surface.GetTextureID("atts/fullautorec")
+	att.displayIcon = surface.GetTextureID("atts/goldenjustice")
 	att.description = {[1] = {t = "Increases damage the further targets are from the player.", c = CustomizableWeaponry.textColors.VPOSITIVE},
 					   [2] = {t = "Sets maximum damage range to 100 M", c = CustomizableWeaponry.textColors.COSMETIC},
 					   [3] = {t = "Sets damage increase rate to 100%", c = CustomizableWeaponry.textColors.COSMETIC}}
