@@ -18,15 +18,21 @@ if CLIENT then
 	SWEP.ShellScale = 1.14
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = 1}
-		
-	SWEP.MicroT1Pos = Vector(-2.28, 0, -0.292)
-	SWEP.MicroT1Ang = Vector(0, 0, 0)
-    
-	SWEP.MRSPos = Vector(-2.25, -5, -0.40)
-	SWEP.MRSAng = Vector(0, 0, 0)
 
 	SWEP.IronsightPos = Vector(-2.254, 5.913, 0.31)
 	SWEP.IronsightAng = Vector(0.1, 0, 0)
+
+	SWEP.MRSPos = Vector(-2.25, -5, -0.40)
+	SWEP.MRSAng = Vector(0, 0, 0)
+		
+	SWEP.MicroT1Pos = Vector(-2.28, 0, -0.292)
+	SWEP.MicroT1Ang = Vector(0, 0, 0)
+
+	SWEP.ROMEO4TPos = Vector(-2.26, -2.9, -0.538)
+	SWEP.ROMEO4TAng = Vector(0, 0, 0)
+
+	SWEP.EXPSPos = Vector(-2.25, -5, -0.375)
+	SWEP.EXPSAng = Vector(0, 0, 0)
 	
 	SWEP.ACOGPos = Vector(-2.247, -6.5, -0.602)
 	SWEP.ACOGAng = Vector(0, 0, 0)
@@ -49,9 +55,12 @@ if CLIENT then
 	SWEP.LaserPosAdjust = Vector(3.25, 21, -1.5)
 	SWEP.LaserAngAdjust = Angle(0, 0, 0)
 
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(-2.241, -4.728, -1.568), [2] = Vector(0, 0, 0)}, 
-	["md_microt1"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)},
-["too_reflex_mrs"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)}}
+	SWEP.BackupSights = {
+		["too_reflex_mrs"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)},
+		["md_microt1"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)},
+		["too_reflex_romeo4t"] = {[1] = Vector(-3.5, 0.5, 0), [2] = Vector(0,0,-45)},
+		["too_reflex_exps"] = {[1] = Vector(-3.5, 2.5, 0), [2] = Vector(0,0,-45)},
+		["md_acog"] = {[1] = Vector(-2.241, -4.728, -1.568), [2] = Vector(0, 0, 0)}}
 
 	SWEP.EffectiveRange_Orig = 30 * 39.37
 	SWEP.DamageFallOff_Orig = .85
@@ -86,9 +95,10 @@ if CLIENT then
 	SWEP.Trivia = {text = "This iconic handgun fires the largest round of any magazine-fed, self-loading pistol: The .50 Action Express.", x = -900, y = -750}
 	
 	SWEP.AttachmentModelsVM = {
-		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(3.5, -0.775, 0.20), angle = Angle(0, 0, -90), size = Vector(0.8,0.8,0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(3.325, -1.075, 0.209), angle = Angle(90, 0, -90), size = Vector(0.4, 0.4, 0.4)},
-		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "weapon", pos = Vector(-6.054, 8.47, -0.035), angle = Angle(0, 1.5, -90), size = Vector(0.85, 0.85, 0.85)},
+		["too_reflex_mrs"] = { type = "Model", model = "models/eftatts/eft_scope_mrs.mdl", bone = "weapon", rel = "", pos = Vector(3.5, -0.775, 0.2), angle = Angle(0, 0, -90), size = Vector(0.8,0.8,0.8), adjustment = {min = 3.251, max = 4.064, axis = "x", inverseOffsetCalc = false}, color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "weapon", pos = Vector(3.325, -1.075, 0.209), angle = Angle(90, 0, -90), adjustment = {min = 2.846, max = 4.352, axis = "x", inverseOffsetCalc = false}, size = Vector(0.4, 0.4, 0.4)},
+		["too_reflex_romeo4t"] = {model = "models/eftatts/eft_scope_romeo4t.mdl", bone = "weapon", pos = Vector(3.068, -0.943, 0.212), angle = Angle(0, 0, -90), adjustment = {min = 2.919, max = 4.152, axis = "x", inverseOffsetCalc = false}, size = Vector(0.754, 0.754, 0.754)},
+		["too_reflex_exps"] = {model = "models/eftatts/eft_scope_exps.mdl", bone = "weapon", pos = Vector(3.745, -0.91, 0.206), angle = Angle(0, 0, -90), size = Vector(0.685, 0.685, 0.685)},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "weapon", pos = Vector(-1.831, 3.892, 0.504), angle = Angle(-90, 0, -90), size = Vector(0.85, 0.85, 0.85)},
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "weapon", pos = Vector(-4.784, -0.408, -1.581), angle = Angle(0, 90, 0), size = Vector(0.6, 0.6, 0.6)},
 	["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-17.5, -2.5 , 1.85), angle = Angle(0, 0, 0), size = Vector(1,1,0.7), bone = "weapon"},
@@ -104,7 +114,7 @@ SWEP.BarrelBGs = {main = 1, regular = 0, compensator = 1, extended = 2}
 SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -650}, atts = {"too_reflex_mrs", "md_microt1","md_acog"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {450, -650}, atts = {"too_reflex_mrs", "md_microt1", "too_reflex_romeo4t", "too_reflex_exps", "md_acog"}},
 [2] = {header = "Barrel", offset = {-800, -650}, atts = {"md_saker", "bg_deagle_compensator", "bg_deagle_extendedbarrel"}},
 [3] = {header = "Technique", offset = {-200, -650}, atts = {"doi_atow_onehand", "cw_akimbo"}},
 [4] = {header = "Laser", offset = {-800, -200}, atts = {"ins2_atow_clamplaser"}},

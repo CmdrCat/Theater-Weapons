@@ -1059,6 +1059,8 @@ function SWEP:Reload()
 	
 	self.dt.State = CW_IDLE
 	self.dt.M203Active = false
+	self.SemiAutoQueuedShot = false
+	self.SemiAutoTriggerBufferUntil = 0
 	
 	self:beginReload()
 end

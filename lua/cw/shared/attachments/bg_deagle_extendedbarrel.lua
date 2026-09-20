@@ -1,7 +1,7 @@
 local att = {}
 att.name = "bg_deagle_extendedbarrel"
-att.displayName = "Extended barrel"
-att.displayNameShort = "Ext. b."
+att.displayName = "Extended Barrel"
+att.displayNameShort = "Ext. B."
 att.isBG = true
 
 att.statModifiers = {AimSpreadMult = -0.2, DrawSpeedMult = -0.2}

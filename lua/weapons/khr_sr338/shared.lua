@@ -87,6 +87,11 @@ if CLIENT then
 	["md_snip2_m200_heavy_muzzle_brake"] = {type = "Model", model = "models/attachments/heavy_muzzle_brake.mdl", bone = "RSASS", rel = "", pos = Vector(2.5,-38,-3.90), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5)},
 	["md_saker222"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "RSASS", rel = "", pos = Vector(2.5, -12.4, -4.5), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "RSASS", rel = "", pos = Vector(2.5,-32,-2.4), angle = Angle(0, 90, -90), size = Vector(1, 1, 1)},
+	--Stocks
+	["bg_ar15regularstock_lighter"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["bg_ar15sturdystock_lighter"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["bg_ar15heavystock_lighter"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["bg_nostock"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)}
 }
 
 	SWEP.BackupSights = {
@@ -123,13 +128,21 @@ SWEP.LaserAngAdjust = Angle(0, 180, 0) --{p = 2, y = 180, r = 0}
 SWEP.LuaViewmodelRecoil = true
 SWEP.CanRestOnObjects = false
 
+SWEP.StudioBGs = {main = 0, regular = 0, none = 1}
+SWEP.ScopeBGs = {main = 1, regular = 0, none = 1}
+SWEP.HandsBGs = {main = 2, regular = 0, none = 1}
+SWEP.StockBGs = {main = 3, regular = 0, none = 1}
+SWEP.MagBGs = {main = 4, regular = 0, none = 1}
+SWEP.RearGripBGs = {main = 5, regular = 0, none = 1}
+
 SWEP.Trivia = {text = "American high caliber semi-automatic sniper rifle.", x = -600, y = -500}
 SWEP.Attachments = {[1] = {header = "Optic", offset = {-600, -400},  atts = {"md_microt1kh","odec3d_cmore_kry", "md_schmidt_shortdot", "md_uecw_csgo_acog", "md_nxs"}},
 [2] = {header = "Muzzle", offset = {400, -400}, atts = {"md_saker222", "hard20" ,"md_snip2_m200_heavy_muzzle_brake"}},
 [3] = {header = "Handguard", offset = {-600, 100}, atts = {"md_foregrip","md_bipod"}},
 [4] = {header = "Laser", offset = {1200, -400}, atts = {"md_anpeq15"}},
-[5] = {header = "Conversion", offset = {-600, 600}, atts = {"md_sr338_rsass_conversion"}},
-[6] = {header = "Skins", offset = {500, 125}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
+[5] = {header = "Stock", offset = {1700, 500}, atts = {"bg_ar15regularstock_lighter", "bg_ar15sturdystock_lighter", "bg_ar15heavystock_lighter", "bg_nostock"}},
+[6] = {header = "Conversion", offset = {-600, 600}, atts = {"md_sr338_rsass_conversion"}},
+[7] = {header = "Skins", offset = {500, 125}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {500, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.Animations = {fire = {"shoot", "shoot2"},
