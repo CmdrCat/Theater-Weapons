@@ -139,7 +139,9 @@ if CLIENT then
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "smdimport001", pos = Vector(-0.35, -2.554, -1.627), angle = Angle(0, -90, 0), size = Vector(0.899, 0.899, 0.899)},
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "smdimport001", pos = Vector(-0.105, 3.852, 4.574), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		--Muzzle
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "smdimport001", pos = Vector(-0.042, 4.362, 0.1), angle = Angle(0, 0, 2), size = Vector(0.75, 0.75, 0.75)},
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "smdimport001", pos = Vector(-0.042, 4.362, 0.05), angle = Angle(0, 0, 2), size = Vector(0.75, 0.75, 0.75)},
+		["md_csgo_silencer_rifle"] = {model = "models/kali/weapons/csgo/eq_suppressor_rifle.mdl", bone = "smdimport001", pos = Vector(-0.038, 21.466, 0.597), angle = Angle(-2, -90, 0), size = Vector(1.25, 1.25, 1.25)},
+		["hard20"] = {model = "models/shared/muzzles/r_harbinger20.mdl", bone = "smdimport001", pos = Vector(-0.038, 22.363, 1.665), angle = Angle(-2, -90, 0), size = Vector(0.964, 0.964, 0.964)},
 		--Underbarrel
 		["ftactiger_r"] = {model = "models/shared/grips/r_ftactiger.mdl", bone = "smdimport001", rel = "", pos = Vector(-0.038, 7.452, 1.041), angle = Angle(-2, -90, 0), size = Vector(1.14, 1.14, 1.14)},
 		["bruentiltgrip_r"] = {model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "smdimport001", rel = "", pos = Vector(-0.035, 8.7, 0.832), angle = Angle(-2, -90, 0), size = Vector(1.11, 1.11, 1.11)},
@@ -187,9 +189,11 @@ if CLIENT then
 			["md_microt1"] = Vector(-0.225, 5.5, 3.15),
 			["md_aimpoint"] = Vector(-0.225, 5.5, 3.15),
 		},
-		["md_saker"] = {["bg_longbarrel"] = Vector(-0.042, 9, -0.1), ["bg_longris"] = Vector(-0.042, 9, -0.1)},
+		["md_saker"] = {["bg_magpulhandguard"] = Vector(-0.042, 4.52, 0.04), ["bg_longbarrel"] = Vector(-0.042, 9, -0.12), ["bg_longris"] = Vector(-0.042, 9, -0.12)},
+		["md_csgo_silencer_rifle"] = {["bg_magpulhandguard"] = Vector(-0.038, 21.79, 0.58), ["bg_longbarrel"] = Vector(-0.038, 26.104, 0.45), ["bg_longris"] = Vector(-0.038, 26.104, 0.45)},
+		["hard20"] = {["bg_magpulhandguard"] = Vector(-0.038, 22.521, 1.67), ["bg_longbarrel"] = Vector(-0.038, 27.001, 1.51), ["bg_longris"] = Vector(-0.038, 27.001, 1.51)},
 		["ins2_atow_clamplaser"] = {["bg_longbarrel"] = Vector(-2.2,-2.5,4.2), ["bg_longris"] = Vector(-2.2,-2.5,4.2)},
-		["md_bipod"] = {bg_longris = Vector(-0.011, 14.541, 0.441)
+		["md_bipod"] = {bg_longbarrel = Vector(-0.011, 14.541, 0.36), bg_ris = Vector(-0.011, 11.1, 0.441)
 		}	
 	}
 	
@@ -213,10 +217,10 @@ SWEP.Trivia = {text = "The definitive American weapon that broke tradition in th
 
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"bg_foldsight", "md_microt1", "md_aimpoint", "md_ins2coltscope", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs", "too_optic_tacstance"}},
-	[2] = {header = "Muzzle", offset = {400, -600}, atts = {"md_saker"}, exclusions = {bg_microbarrel = true}},
+	[2] = {header = "Muzzle", offset = {400, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}, exclusions = {bg_microbarrel = true}},
 	[3] = {header = "Barrel", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris", "bg_microbarrel"}},
 	[4] = {header = "Underbarrel", offset = {-400, -25}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_m203"}, exclusions = {bg_microbarrel = true}},
-	[9] = {header = "Extended Underbarrel", offset = {-1100, -300}, atts = {"md_tcw_carryhandle_grip", "md_bipod"}, dependencies = {bg_longris = true}},
+	[9] = {header = "Extended Underbarrel", offset = {-1100, -300}, atts = {"md_tcw_carryhandle_grip", "md_bipod"}, dependencies = {bg_longbarrel = true, bg_ris = true, bg_longris = true}},
 	[5] = {header = "Magazine", offset = {-100, 750}, atts = {"md_uecw_usgimag", "md_uecw_emag", "bg_ar1560rndmag", "md_cmag_556_official", "md_tcw_pmag"}},
 	[6] = {header = "Stock", offset = {1550, 600}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_nostock"}},
 	[7] = {header = "Laser", offset = {1300, 0}, atts = {"md_anpeq15", "ins2_atow_clamplaser"}, exclusions = {bg_microbarrel = true}},
@@ -225,7 +229,6 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"bg_f
 }
 SWEP.AttachmentDependencies = {
 	["md_m203"] = {"bg_longris"},
-	["md_bipod"] = {"bg_longris"},
 	["md_tcw_carryhandle_grip"] = {"bg_longris"}
 }
 
@@ -328,9 +331,19 @@ function SWEP:IndividualThink()
 	self.EffectiveRange = 50 * 39.37
 	self.DamageFallOff = .3
 
+	self.PrintName = "AR-15"
+
 	self.bulletCallback = function( att, tr, dmg )
 		if tr.HitGroup == HITGROUP_HEAD then
 			dmg:ScaleDamage( 1.4 / 2 )
+		end
+	end
+
+	if self.ActiveAttachments.bg_longbarrel and self.ActiveAttachments.bg_ar15heavystock then
+		if self.ActiveAttachments.too_m4a1_50_beowulf then
+			self.PrintName = ".50 Beowulf Tactical"
+		else
+			self.PrintName = "M16A3"
 		end
 	end
 
@@ -365,6 +378,9 @@ function SWEP:IndividualThink()
 	end
 	if self.ActiveAttachments.bg_microbarrel and self.ActiveAttachments.md_ins2coltscope then
 		self:setBodygroup(self.SightBGs.main, self.SightBGs.carryhandle)
+	end
+	if self.ActiveAttachments.bg_magpulhandguard then
+		self.EffectiveRange = self.EffectiveRange + 2.5 * 39.37
 	end
 	if self.ActiveAttachments.am_magnum then
 		self.EffectiveRange = ((self.EffectiveRange * 1.15))

@@ -6,13 +6,14 @@ att.aimPos = {"ColtPos", "ColtAng"}
 att.FOVModifier = 20
 att.isSight = true
 att.isBG = true
+att.SpeedDec = 2
 
 att.statModifiers = {}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/coltchscope")
 	att.description = {[1] = {t = "Provides 3x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
-	[2] = {t = "Double-tap your ''USE KEY'' for TACSTANCE", c = CustomizableWeaponry.textColors.COSMETIC}}
+	[2] = {t = "Can Tac Stance. Double-tap use key to toggle.", c = CustomizableWeaponry.textColors.POSITIVE}}
 	
 	local old, x, y, ang
 	local reticle = surface.GetTextureID("models/khrcw2/1895/1895scope")

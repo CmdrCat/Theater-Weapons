@@ -7,12 +7,13 @@ att.SpeedDec = 3
 
 att.statModifiers = {AimSpreadMult = -0.1,
 					 RecoilMult = -0.05,
-					 ReloadSpeedMult = -0.3}
+					 ReloadSpeedMult = -0.1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15longbarrel")
 	att.description = {[1] = {t = "A barrel for long range engagements.", c = CustomizableWeaponry.textColors.COSMETIC},
-					   [2] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
+	 				   [2]= {t = "Allows for a bipod.", c = CustomizableWeaponry.textColors.POSITIVE},
+					   [3] = {t = "Decreases damage fall off by 5%", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()
