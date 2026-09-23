@@ -54,7 +54,7 @@ if CLIENT then
 	SWEP.ACOGPos = Vector(-2.211, -4, 0.146)
 	SWEP.ACOGAng = Vector(-1.4, 0, 0)
 	
-	SWEP.ShortDotPos = Vector(-2.201, -4.148, 0.425)
+	SWEP.ShortDotPos = Vector(-2.2, -4, 0.46)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
 	
 	SWEP.M203Pos = Vector(-0.562, -2.481, 0.24)
@@ -70,6 +70,7 @@ if CLIENT then
 	SWEP.TacStanceAng = Vector(0,0, -55)
 	
 	SWEP.BackupSights = {
+		["md_schmidt_shortdot"] = {[1] = Vector(-4.5, 6, 0.5), [2] = Vector(0,0, -55)} ,
 		["too_optic_tacstance"] = {[1] = Vector(-2.208, -4.3, 0.143), [2] = Vector(0.605, 0, -0.217)},
 		["bg_foldsight"] = {[1] = Vector(-4.5, 2.75, 0.5), [2] = Vector(0,0, -55)},
 		["md_microt1"] = {[1] = Vector(-4.5, 6, 0.5), [2] = Vector(0,0, -55)},
@@ -136,7 +137,7 @@ if CLIENT then
 		--["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "smdimport001", rel = "", pos = Vector(0.238, -9.3, -7.223), adjustment = {min = -9.2, max = -7.6, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		["md_ins2coltscope"] = {model = "models/khrcw2/ins2pack/attachments/coltchscope.mdl", pos = Vector(0,3,4.2), angle = Angle(0,-90,0), size = Vector(.9, .9, .9), bone = "smdimport001"},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "smdimport001", pos = Vector(-0.401, -3.291, -2.22), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "smdimport001", pos = Vector(-0.35, -2.554, -1.627), angle = Angle(0, -90, 0), size = Vector(0.899, 0.899, 0.899)},
+		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "smdimport001", pos = Vector(-0.35, -3.5, -1.627), angle = Angle(0, -90, 0), size = Vector(1, 0.899, 0.899)},
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "smdimport001", pos = Vector(-0.105, 3.852, 4.574), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 		--Muzzle
 		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "smdimport001", pos = Vector(-0.042, 4.362, 0.05), angle = Angle(0, 0, 2), size = Vector(0.75, 0.75, 0.75)},
