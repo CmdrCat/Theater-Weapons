@@ -137,16 +137,6 @@ function SWEP:FireBullet(damage, cone, clumpSpread, bullets)
 						bul.Damage = bul.Damage * 0.5
 						
 						self.Owner:FireBullets(bul)
-						
-						bul.Num = 1
-						bul.Src = trace.HitPos
-						bul.Dir = -Dir2
-						bul.Spread 	= zeroVec
-						bul.Tracer	= 4
-						bul.Force	= damage * 0.15
-						bul.Damage = bul.Damage * 0.5
-						
-						self.Owner:FireBullets(bul)
 					end
 				else
 					if self:canRicochet(trace) then
