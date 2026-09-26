@@ -226,6 +226,7 @@ if CLIENT then
 		["ftactiger_r"] = { type = "Model", model = "models/shared/grips/r_ftactiger.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 4.5, -1), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["bruentiltgrip_r"] = { type = "Model", model = "models/shared/grips/r_bruentiltgrip.mdl", bone = "Masada_body", rel = "", pos = Vector(0, 5, -1.25), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "Masada_body", rel = "", pos = Vector(-0.4, -5, -3.295), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_tcw_carryhandle_grip"] = {model = "models/cw2/rifles/ar15.mdl", bone = "Masada_body", rel = "", pos = Vector(-2.205, -5.090, -2.892), angle = Angle(0, -90, 180), size = Vector(1, 1, 1)},
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "Masada_Body", rel = "", pos = Vector(0, 6.5, -2.06), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
 		["md_m203"] = {model = "models/cw2/attachments/m203.mdl", bone = "Masada_body", pos = Vector(2.35, -12, 1.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), animated = true},
 		--Optics
@@ -275,7 +276,10 @@ if CLIENT then
 			models = {
 					{type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "Masada_PMAG30", rel = "", pos = Vector(-0.018, -0.079, -0.889), angle = Angle(0, 180, 0), size = Vector(0.614, 0.614, 0.614)},
 					{type = "Model", model = "models/gmod4phun/usgimag.mdl", bone = "Masada_PMAG30.2", rel = "", pos = Vector(-0.018, -0.079, -0.889), angle = Angle(0, 180, 0), size = Vector(0.614, 0.614, 0.614)}
-			}}
+			}},
+		--Stocks
+		["bg_foldedstock"] = { type = "Model", model = "models/weapons/v_mas_scar.mdl", bone = "Masada_body", rel = "", pos = Vector(18.373, -8.92, 24.858), angle = Angle(31.998, 67, 57.216), size = Vector(1, 1, 1) },
+		["bg_scarstock_acr"] = { type = "Model", model = "models/weapons/v_mas_scar.mdl", bone = "Masada_body", rel = "", pos = Vector(1.442, -10.213, 1.813), angle = Angle(0, -90, 0), size = Vector(0.85, 0.85, 0.85) }
 	}
 	
 
@@ -327,11 +331,12 @@ SWEP.Trivia = {text = "The Masada manufactured by Remington for military and law
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {-25, -600},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_cmore", "md_trijicon", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_elcan", "md_acog", "md_uecw_csgo_acog", "md_uecw_csgo_556", "md_thermal", "md_nightforce_nxs", "md_ballistic"}, exclusions = {bg_ris = true, bg_longbarrel = true}},
 	[2] = {header = "Muzzle", offset = {-700, -600}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20", "md_snip2_m200_heavy_muzzle_brake"}},
-	[3] = {header = "Underbarrel", offset = {-650, 350}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod", "md_m203"}},
+	[3] = {header = "Underbarrel", offset = {-650, 350}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_tcw_carryhandle_grip", "md_bipod", "md_m203"}},
 	[4] = {header = "Laser", offset = {-700, -150}, atts = {"ftacgrimline", "md_anpeq15"}},	
-	[5] = {header = "Magazine", offset = {1200, 600}, atts = {"md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag", "md_tcw_stanag"}, exclusions = {uecw_acr_68_conversion = true}},
-	[6] = {header = "Signature Attachment", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
-	[7] = {header = "Skins", offset = {1200, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+	[5] = {header = "Stock", offset = {1900, 550}, atts = {"bg_foldedstock", "bg_scarstock_acr"}},	
+	[6] = {header = "Magazine", offset = {1200, 600}, atts = {"md_uecw_emag", "md_uecw_60rnd", "md_uecw_cmag", "md_tcw_stanag"}, exclusions = {uecw_acr_68_conversion = true}},
+	[7] = {header = "Signature Attachment", offset = {550, 500}, atts = {"uecw_acr_68_conversion"}},
+	[8] = {header = "Skins", offset = {1200, 250}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {1500, -600}, atts = {"too_optic_category_reflex", "too_optic_category_magnified"}},
 	["+reload"] = {header = "Ammo", offset = {1500, -250}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	
@@ -354,6 +359,10 @@ SWEP.AttachmentDependencies = {["md_rmr"] = {"too_optic_category_reflex"},
 		["md_thermal"] = {"too_optic_category_magnified"},
 		["md_nightforce_nxs"] = {"too_optic_category_magnified"},
 		["md_ballistic"] = {"too_optic_category_magnified"}}
+
+SWEP.AttachmentExclusions = {
+	["md_uecw_cmag"] = {"bg_foldedstock"}
+}
 
 SWEP.AttachmentPosDependency = {
 	["md_anpeq15"] = {["md_nightforce_nxs"] = Vector(-0.76, 6, -0.2)},

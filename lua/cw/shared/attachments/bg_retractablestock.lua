@@ -5,8 +5,10 @@ att.displayNameShort = "R. Stock"
 att.isBG = true
 att.SpeedDec = -3
 
-att.statModifiers = {DrawSpeedMult = 0.1,
-RecoilMult = 0.1}
+att.statModifiers = {DrawSpeedMult = 0.25,
+					 RecoilMult = 0.1,
+					 VelocitySensitivityMult = -0.5,
+					 HipSpreadMult = 1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/retractablestock")

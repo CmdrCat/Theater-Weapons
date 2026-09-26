@@ -3,10 +3,12 @@ att.name = "bg_ar15sturdystock_mp5a3"
 att.displayName = "MOE Carbine Stock"
 att.displayNameShort = "MOE"
 att.isBG = true
-att.SpeedDec = -5
+att.SpeedDec = -10
 
-att.statModifiers = {RecoilMult = 0.05,
-					 DrawSpeedMult = 0.2}
+att.statModifiers = {RecoilMult = 0.2,
+					 VelocitySensitivityMult = -0.5,
+					 DrawSpeedMult = 0.15,
+					 HipSpreadMult = 1.5}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15sturdystock")

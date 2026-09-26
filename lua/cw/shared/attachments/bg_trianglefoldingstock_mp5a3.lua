@@ -1,13 +1,13 @@
 local att = {}
-att.name = "bg_trianglefoldingstock_akm"
+att.name = "bg_trianglefoldingstock_mp5a3"
 att.displayName = "Triangle Folding Stock"
 att.displayNameShort = "Folding"
 att.isBG = true
-att.SpeedDec = -2.5
+att.SpeedDec = -5
 
-att.statModifiers = {RecoilMult = -0.05,
-					 HipSpreadMult = 0.025,
-					 DrawSpeedMult = 0.8}
+att.statModifiers = {RecoilMult = 0.15,
+					 DrawSpeedMult = 0.25,
+					 HipSpreadMult = 1}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/mac11_unfolded_stock")
@@ -19,10 +19,10 @@ function att:attachFunc()
 		self:setBodygroup(self.StockBGs.main, self.StockBGs.none)
 	end
 
-	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.bg_trianglefoldingstock_akm then
+	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.bg_trianglefoldingstock_mp5a3 then
 		local ent
 		
-		ent = self.AttachmentModelsVM.bg_trianglefoldingstock_akm.ent
+		ent = self.AttachmentModelsVM.bg_trianglefoldingstock_mp5a3.ent
 
 		ent:SetBodygroup(0, 1)
 		ent:SetBodygroup(1, 1)

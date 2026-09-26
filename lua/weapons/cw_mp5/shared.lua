@@ -78,6 +78,9 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(-8.174, -1.27, -1.288)
 	SWEP.CustomizeAng = Vector(17.954, -40.578, -18.357)
 
+	--SWEP.CustomizePos = Vector(-10, -6.6, 2) -- Looking at side profile here
+	--SWEP.CustomizeAng = Vector(0.605, -90, -0.217)
+
 	SWEP.CustomizePos_Akimbo = Vector(0, -5, -7.5)
 	SWEP.CustomizeAng_Akimbo = Vector(37.627, 0, 0)
 	
@@ -138,6 +141,7 @@ if CLIENT then
 		--Underbarrels
 		["md_m203"] = { type = "Model", model = "models/cw2/attachments/m203.mdl", bone = "gun", rel = "", pos = Vector(-2.38, 9.358, 4), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), animated = true},
 		--Stocks
+		["bg_trianglefoldingstock_mp5a3"] = { type = "Model", model = "models/weapons/v_ecw_saiga12k.mdl", bone = "stockcap", rel = "", pos = Vector(-2.030, 3.51, 2.735), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
 		["bg_ar15regularstock_mp5a3"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "stockcap", rel = "", pos = Vector(-2.208, 5.72, 2.474), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
 		["bg_ar15sturdystock_mp5a3"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "stockcap", rel = "", pos = Vector(-2.208, 5.72, 2.474), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
 		["bg_precisionstock_mp5a3"] = { type = "Model", model = "models/khrcw2/v_snip_sr338.mdl", bone = "stockcap", rel = "", pos = Vector(-3.097, 4.83, 2.548), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)}
@@ -200,7 +204,7 @@ SWEP.Attachments = {
 	[2] = {header = "Muzzle", offset = {-200, -600}, atts = {"md_tundra9mm"}, exclusions = {md_m203 = true}},
 	[3] = {header = "Grip", offset = {-900, 300}, atts = {"md_m203", "cw_akimbo"}},
 	[5] = {header = "Magazine", offset = {-200, 450}, atts = {"bg_mp515rndmag"}, exclusions = {too_mp5_22lr_rifle = true, md_m203 = true}},
-	[4] = {header = "Stock", offset = {1400, 450}, atts = {"bg_retractablestock", "bg_ar15regularstock_mp5a3", "bg_ar15sturdystock_mp5a3", "bg_precisionstock_mp5a3", "bg_nostock"}},
+	[4] = {header = "Stock", offset = {1400, 450}, atts = {"bg_nostock", "bg_retractablestock", "bg_trianglefoldingstock_mp5a3", "bg_ar15regularstock_mp5a3", "bg_ar15sturdystock_mp5a3", "bg_precisionstock_mp5a3"}},
 	[6] = {header = "Signature Attachments", offset = {450, 450}, atts = {"bg_mp5_kbarrel", "bg_mp5_sdbarrel", "too_mp5_22lr_rifle"}},
 	--[7] = {header = "Laser", offset = {450, 450}, atts = {"ftacgrimline", "md_anpeq15"}},
 	[7] = {header = "Skins", offset = {1500, -50}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},

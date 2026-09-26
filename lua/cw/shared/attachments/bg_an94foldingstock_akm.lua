@@ -5,7 +5,7 @@ att.displayNameShort = "AN-94"
 att.isBG = true
 att.SpeedDec = -2.5
 
-att.statModifiers = {RecoilMult = -0.025}
+att.statModifiers = {RecoilMult = -0.05}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15heavystock")

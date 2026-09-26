@@ -8,7 +8,7 @@ att.SpeedDec = -20
 att.statModifiers = {DrawSpeedMult = 1,
 					 VelocitySensitivityMult = -1.5,
 					 RecoilMult = 1,
-					 HipSpreadMult = -0.2}
+					 HipSpreadMult = 5}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/nostock")

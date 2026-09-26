@@ -3,10 +3,11 @@ att.name = "bg_ar15regularstock_mp5a3"
 att.displayName = "M4 Collapsible Stock"
 att.displayNameShort = "M4"
 att.isBG = true
-att.SpeedDec = -10
+att.SpeedDec = -15
 
-att.statModifiers = {RecoilMult = 0.15,
-					 VelocitySensitivityMult = -0.5}
+att.statModifiers = {RecoilMult = 0.25,
+					 VelocitySensitivityMult = -0.5,
+					 HipSpreadMult = 2}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15sturdystock")

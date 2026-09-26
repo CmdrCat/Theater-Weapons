@@ -11,7 +11,7 @@ att.statModifiers = {DamageMult = 9 / 13,
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/68spc")
-	att.description = {[1] = {t = "Installs a 6.8mm Remington SPC conversion kit. Fire more lethal shots in semi-automatic mode.", c = CustomizableWeaponry.textColors.VPOSITIVE},
+	att.description = {[1] = {t = "Fire more lethal shots in semi-automatic mode.", c = CustomizableWeaponry.textColors.VPOSITIVE},
 					   [2] = {t = "Decreases capacity to 25 rounds", c = CustomizableWeaponry.textColors.NEGATIVE},
 					   [3] = {t = "Increases effective range by 15 M", c = CustomizableWeaponry.textColors.POSITIVE},
 					   [4] = {t = "Decreases damage fall off by 10%", c = CustomizableWeaponry.textColors.POSITIVE}}

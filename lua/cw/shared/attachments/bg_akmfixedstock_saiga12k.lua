@@ -11,7 +11,7 @@ att.statModifiers = {RecoilMult = -0.1,
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15heavystock")
-	att.description = {[1] = {t = "Adds a wooden, fixed stock", c = CustomizableWeaponry.textColors.COSMETIC}}
+	att.description = {[1] = {t = "Adds a wooden fixed stock", c = CustomizableWeaponry.textColors.COSMETIC}}
 end
 
 function att:attachFunc()

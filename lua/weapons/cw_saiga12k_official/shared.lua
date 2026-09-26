@@ -97,7 +97,8 @@ if CLIENT then
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "Saiga12k", pos = Vector(-0.306, 3.2, 2.345), angle = Angle(0, 90, 0), size = Vector(0.43, 0.43, 0.43)},
 		["bg_foldedstock"] = {model = "models/weapons/v_ecw_saiga12k.mdl", bone = "Saiga12k", pos = Vector(-1.11, -0.530, 2.472), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
 		["bg_an94foldingstock_saiga12k"] = {model = "models/weapons/v_cstm_an94.mdl", bone = "Saiga12k", pos = Vector(2.052, -9.209, 3.125), angle = Angle(-0.6, -90, 0), size = Vector(1.25, 1.25, 1.25)},
-		["bg_akmfixedstock_saiga12k"] = {model = "models/cw2/rifles/akm_official_v.mdl", bone = "Saiga12k", pos = Vector(3.168, -9.865, 2.73), angle = Angle(0, -90, 0), size = Vector(0.85, 0.85, 0.85)}
+		["bg_akmfixedstock_saiga12k"] = {model = "models/cw2/rifles/akm_official_v.mdl", bone = "Saiga12k", pos = Vector(3.168, -9.865, 2.73), angle = Angle(0, -90, 0), size = Vector(0.85, 0.85, 0.85)},
+		["bg_acrstock_saiga12k"] = {model = "models/weapons/v_mas_scar.mdl", bone = "Saiga12k", pos = Vector(-17.756, -1.611, 22.4), angle = Angle(148.659, 67.924, -122.84), size = Vector(0.9, 0.9, 0.9)}
 	}
 
 	SWEP.AttachmentPosDependency = {
@@ -151,7 +152,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -500}, atts = {"md_k
 	[2] = {header = "Muzzle", offset = {-200, -400}, atts = {"md_pbs1"}},
 	[3] = {header = "Laser", offset = {-200, 50}, atts = {"md_anpeq15"}, exclusions = {md_kobra = true, md_pso1 = true}, dependencies = {md_microt1 = true,  md_aimpoint = true, md_schmidt_shortdot = true}},
 	[4] = {header = "Handguard", offset = {800, -75}, atts = {"md_foregrip"}},
-	[5] = {header = "Stock", offset = {1550, 200}, atts = {"bg_foldedstock", "bg_an94foldingstock_saiga12k", "bg_akmfixedstock_saiga12k"}},
+	[5] = {header = "Stock", offset = {1550, 200}, atts = {"bg_foldedstock", "bg_an94foldingstock_saiga12k", "bg_akmfixedstock_saiga12k", "bg_acrstock_saiga12k"}},
 	["+reload"] = {header = "Ammo", offset = {800, 350}, atts = {"am_slugrounds", "am_flechetterounds"}}}
 
 SWEP.AttachmentExclusions = {
