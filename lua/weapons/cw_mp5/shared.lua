@@ -138,9 +138,9 @@ if CLIENT then
 		--Underbarrels
 		["md_m203"] = { type = "Model", model = "models/cw2/attachments/m203.mdl", bone = "gun", rel = "", pos = Vector(-2.38, 9.358, 4), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), animated = true},
 		--Stocks
-		["bg_ar15regularstock_lighter"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "stockcap", rel = "", pos = Vector(-2.208, 5.72, 2.474), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
-		["bg_ar15sturdystock_lighter"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "stockcap", rel = "", pos = Vector(-2.208, 5.72, 2.474), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
-		["bg_precisionstock"] = { type = "Model", model = "models/khrcw2/v_snip_sr338.mdl", bone = "stockcap", rel = "", pos = Vector(-3.097, 4.83, 2.548), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)}
+		["bg_ar15regularstock_mp5a3"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "stockcap", rel = "", pos = Vector(-2.208, 5.72, 2.474), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+		["bg_ar15sturdystock_mp5a3"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "stockcap", rel = "", pos = Vector(-2.208, 5.72, 2.474), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+		["bg_precisionstock_mp5a3"] = { type = "Model", model = "models/khrcw2/v_snip_sr338.mdl", bone = "stockcap", rel = "", pos = Vector(-3.097, 4.83, 2.548), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)}
 	}
 	SWEP.ForegripOverridePos = {
 		["bg_mp5_sdbarrel"] = {
@@ -199,8 +199,8 @@ SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {700, -600}, atts = {"too_reflex_mrs", "md_microt1", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-200, -600}, atts = {"md_tundra9mm"}, exclusions = {md_m203 = true}},
 	[3] = {header = "Grip", offset = {-900, 300}, atts = {"md_m203", "cw_akimbo"}},
-	[4] = {header = "Magazine", offset = {-200, 450}, atts = {"bg_mp515rndmag"}, exclusions = {too_mp5_22lr_rifle = true, md_m203 = true}},
-	[5] = {header = "Stock", offset = {1400, 450}, atts = {"bg_retractablestock", "bg_ar15regularstock_lighter", "bg_ar15sturdystock_lighter", "bg_precisionstock", "bg_nostock"}},
+	[5] = {header = "Magazine", offset = {-200, 450}, atts = {"bg_mp515rndmag"}, exclusions = {too_mp5_22lr_rifle = true, md_m203 = true}},
+	[4] = {header = "Stock", offset = {1400, 450}, atts = {"bg_retractablestock", "bg_ar15regularstock_mp5a3", "bg_ar15sturdystock_mp5a3", "bg_precisionstock_mp5a3", "bg_nostock"}},
 	[6] = {header = "Signature Attachments", offset = {450, 450}, atts = {"bg_mp5_kbarrel", "bg_mp5_sdbarrel", "too_mp5_22lr_rifle"}},
 	--[7] = {header = "Laser", offset = {450, 450}, atts = {"ftacgrimline", "md_anpeq15"}},
 	[7] = {header = "Skins", offset = {1500, -50}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},

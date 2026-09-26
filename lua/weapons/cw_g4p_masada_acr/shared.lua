@@ -306,8 +306,20 @@ if CLIENT then
 	SWEP.LaserAngAdjust = Angle(0, 180, 0) --{p = 2, y = 180, r = 0}
 end
 
-SWEP.SightBGs = {main = 1, carryhandle = 0, none = 1}
-SWEP.BarrelBGs = {regular = 0}
+SWEP.HandsBGs = {main = 0, hands = 0, none = 1}
+SWEP.MagBGs = {main = 1, regular = 0, none = 1}
+SWEP.ReceiverBGs = {main = 2, regular = 0, none = 1}
+SWEP.HandguardBGs = {main = 3, regular = 0, none = 1}
+SWEP.StockBGs = {main = 4, regular = 0, none = 1}
+SWEP.RailBGs = {main = 5, regular = 0, none = 1}
+SWEP.HoloBGs = {main = 6, regular = 0, none = 1}
+SWEP.SCARLowerReceiverBGs = {main = 7, regular = 0, none = 1}
+SWEP.SCARUpperReceiverBGs = {main = 8, regular = 0, none = 1}
+SWEP.SCARStockBGs = {main = 9, regular = 0, none = 1}
+SWEP.SCARRearGripBGs = {main = 10, regular = 0, none = 1}
+SWEP.SCARIronSightsBGs = {main = 11, regular = 0, none = 1}
+SWEP.SCARReflexBGs = {main = 12, regular = 0, none = 1}
+SWEP.SCARSuppressorBGs = {main = 13, regular = 0, none = 1}
 SWEP.LuaViewmodelRecoil = true
 SWEP.CustomizationMenuScale = 0.01
 

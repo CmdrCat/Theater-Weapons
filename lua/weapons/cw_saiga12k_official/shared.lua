@@ -94,7 +94,10 @@ if CLIENT then
 		["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "Saiga12k", pos = Vector(-0.408, -0.044, 0.774), angle = Angle(0, 0, 0), size = Vector(0.899, 0.899, 0.899)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "Saiga12k", pos = Vector(-0.429, -4.9, -1.56), angle = Angle(0, -90, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_kobra"] = {model = "models/cw2/attachments/kobra.mdl", bone = "Saiga12k", pos = Vector(0.349, -0.245, -2.007), angle = Angle(0, 180, 0), size = Vector(0.6, 0.6, 0.6)},
-		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "Saiga12k", pos = Vector(-0.306, 3.2, 2.345), angle = Angle(0, 90, 0), size = Vector(0.43, 0.43, 0.43)}
+		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "Saiga12k", pos = Vector(-0.306, 3.2, 2.345), angle = Angle(0, 90, 0), size = Vector(0.43, 0.43, 0.43)},
+		["bg_foldedstock"] = {model = "models/weapons/v_ecw_saiga12k.mdl", bone = "Saiga12k", pos = Vector(-1.11, -0.530, 2.472), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+		["bg_an94foldingstock_saiga12k"] = {model = "models/weapons/v_cstm_an94.mdl", bone = "Saiga12k", pos = Vector(2.052, -9.209, 3.125), angle = Angle(-0.6, -90, 0), size = Vector(1.25, 1.25, 1.25)},
+		["bg_akmfixedstock_saiga12k"] = {model = "models/cw2/rifles/akm_official_v.mdl", bone = "Saiga12k", pos = Vector(3.168, -9.865, 2.73), angle = Angle(0, -90, 0), size = Vector(0.85, 0.85, 0.85)}
 	}
 
 	SWEP.AttachmentPosDependency = {
@@ -137,13 +140,23 @@ SWEP.ADSFireAnim = false
 SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 
+SWEP.StudioBGs = {main = 0, regular = 0, none = 1}
+SWEP.HandsBGs = {main = 1, hands = 0, none = 1}
+SWEP.StockBGs = {main = 2, regular = 0, none = 1}
+SWEP.MagBGs = {main = 3, regular = 0, none = 1}
+
 SWEP.Trivia = {text = "An AK-platform shotgun with a shorter barrel and folding stock.", x = 0, y = -600}
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -500}, atts = {"md_kobra", "md_microt1", "md_aimpoint", "md_schmidt_shortdot", "md_pso1"}},
 	[2] = {header = "Muzzle", offset = {-200, -400}, atts = {"md_pbs1"}},
 	[3] = {header = "Laser", offset = {-200, 50}, atts = {"md_anpeq15"}, exclusions = {md_kobra = true, md_pso1 = true}, dependencies = {md_microt1 = true,  md_aimpoint = true, md_schmidt_shortdot = true}},
 	[4] = {header = "Handguard", offset = {800, -75}, atts = {"md_foregrip"}},
+	[5] = {header = "Stock", offset = {1550, 200}, atts = {"bg_foldedstock", "bg_an94foldingstock_saiga12k", "bg_akmfixedstock_saiga12k"}},
 	["+reload"] = {header = "Ammo", offset = {800, 350}, atts = {"am_slugrounds", "am_flechetterounds"}}}
+
+SWEP.AttachmentExclusions = {
+	["md_kobra"] = {"bg_foldedstock"},
+	["md_pso1"] = {"bg_foldedstock"}}
 
 SWEP.Animations = {fire = {"shoot1", "shoot2"},
 	reload = "reload2",

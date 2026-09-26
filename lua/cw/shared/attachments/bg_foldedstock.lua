@@ -1,7 +1,7 @@
 local att = {}
-att.name = "bg_nostock"
-att.displayName = "No Stock"
-att.displayNameShort = "None"
+att.name = "bg_foldedstock"
+att.displayName = "Folded Stock"
+att.displayNameShort = "Folded"
 att.isBG = true
 att.SpeedDec = -20
 
@@ -12,7 +12,7 @@ att.statModifiers = {DrawSpeedMult = 1,
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/nostock")
-	att.description = {[1] = {t = "Removes the stock", c = CustomizableWeaponry.textColors.COSMETIC}}
+	att.description = {[1] = {t = "Folds the stock", c = CustomizableWeaponry.textColors.COSMETIC}}
 end
 
 function att:attachFunc()
@@ -24,17 +24,26 @@ function att:attachFunc()
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.StockBoneName), Vector(0.009, 0.009, 0.009))
 	end
 
-	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.bg_nostock then
-		local ent
-		
-		ent = self.AttachmentModelsVM.bg_nostock.ent
+	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.bg_foldedstock then
+		local ent = self.AttachmentModelsVM.bg_foldedstock.ent
 
-		ent:SetBodygroup(0, 1)
-		ent:SetBodygroup(1, 1)
-		ent:SetBodygroup(2, 3)
-		ent:SetBodygroup(3, 5)
-		ent:SetBodygroup(4, 2)
-		ent:SetBodygroup(5, 2)
+		if IsValid(ent) then
+			local stockBGs = self.StockBGs
+			local stockGroup = stockBGs and stockBGs.main
+			local foundStockGroup = false
+
+			for i, bodygroup in ipairs(ent:GetBodyGroups()) do
+				if bodygroup.id == stockGroup then
+					foundStockGroup = true
+				else
+					ent:SetBodygroup(bodygroup.id, 1)
+				end
+			end
+
+			if foundStockGroup and stockBGs.regular ~= nil then
+				ent:SetBodygroup(stockGroup, stockBGs.regular)
+			end
+		end
 	end
 end
 

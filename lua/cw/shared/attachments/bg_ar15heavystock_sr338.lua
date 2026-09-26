@@ -1,9 +1,9 @@
 local att = {}
-att.name = "bg_ar15heavystock_lighter"
+att.name = "bg_ar15heavystock_sr338"
 att.displayName = "M16 Fixed Stock"
 att.displayNameShort = "M16"
 att.isBG = true
-att.SpeedDec = -10
+att.SpeedDec = -7.5
 
 att.statModifiers = {RecoilMult = 0.05}
 
@@ -17,14 +17,10 @@ function att:attachFunc()
 		self:setBodygroup(self.StockBGs.main, self.StockBGs.none)
 	end
 
-	if self.StockBoneName then
-		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.StockBoneName), Vector(0.009, 0.009, 0.009))
-	end
-
-	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.bg_ar15heavystock_lighter then
+	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.bg_ar15heavystock_sr338 then
 		local ent
 
-		ent = self.AttachmentModelsVM.bg_ar15heavystock_lighter.ent
+		ent = self.AttachmentModelsVM.bg_ar15heavystock_sr338.ent
 		ent:SetBodygroup(0, 1)
 		ent:SetBodygroup(1, 1)
 		ent:SetBodygroup(3, 5)
@@ -38,10 +34,6 @@ end
 function att:detachFunc()
 	if self.StockBGs then
 		self:setBodygroup(self.StockBGs.main, self.StockBGs.regular)
-	end
-
-	if self.StockBoneName then
-		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.StockBoneName), Vector(1, 1, 1))
 	end
 end
 

@@ -133,7 +133,10 @@ if CLIENT then
 		["md_uecw_60rnd"] = { type = "Model", model = "models/gmod4phun/60rndmag.mdl", bone = "mag", rel = "", pos = Vector(0, 1.39, 1.3), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		["md_tcw_pmag"] = { type = "Model", model = "models/gmod4phun/pmag30.mdl", bone = "mag", rel = "", pos = Vector(0, -0.096, -0.405), angle = Angle(0, -90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		--Signature Attachment
-		["md_tcw_762_75rnd"] = { type = "Model", model = "models/ma85_mw3/sa80/viewmodel.mdl", bone = "mag", rel = "", pos = Vector(2.359, -6.215, 7.165), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+		["md_tcw_762_75rnd"] = { type = "Model", model = "models/ma85_mw3/sa80/viewmodel.mdl", bone = "mag", rel = "", pos = Vector(2.359, -6.215, 7.165), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		--Stocks
+		["bg_trianglefoldingstock_akm"] = { type = "Model", model = "models/weapons/v_ecw_saiga12k.mdl", bone = "body", rel = "", pos = Vector(2.022, -8.508, 2.490), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["bg_an94foldingstock_akm"] = { type = "Model", model = "models/weapons/v_cstm_an94.mdl", bone = "body", rel = "", pos = Vector(2.421, -10.907, 3.579), angle = Angle(-1, -90, 0), size = Vector(1.4, 1.4, 1.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	}
 
 	SWEP.ForeGripHoldPos = {
@@ -191,7 +194,7 @@ SWEP.Attachments = {
 	{header = "Sight", offset = {0, -500},  atts = {"md_rmr", "xrkonpoint", "md_reflex", "md_trijicon", "md_kobra", "md_microt1", "too_reflex_romeo4t", "md_aimpoint", "too_reflex_exps", "corioenforcer", "md_schmidt_shortdot", "md_acog", "md_pso1"}},
 	{header = "Muzzle", offset = {-600, -500}, atts = {"md_pbs1", "md_csgo_silencer_rifle", "hard20"}},
 	{header = "Underbarrel", offset = {-600, 100}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
-	{header = "Stock", offset = {1200, 750}, atts = {"bg_nostock"}},
+	{header = "Stock", offset = {1200, 750}, atts = {"bg_trianglefoldingstock_akm", "bg_an94foldingstock_akm", "bg_nostock"}},
 	{header = "Signature Attachment", offset = {500, 400}, atts = {"md_ak_556_conv"}},
 	{header = "Magazines", offset = {-400, 600}, atts = {"md_tcw_762_75rnd", "md_uecw_emag", "md_uecw_60rnd", "md_tcw_pmag"}},
 	{header = "Skins", offset = {1200, 350}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},

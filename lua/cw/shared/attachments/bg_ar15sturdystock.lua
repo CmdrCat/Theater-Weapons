@@ -5,7 +5,8 @@ att.displayNameShort = "MOE"
 att.isBG = true
 att.SpeedDec = 5
 
-att.statModifiers = {RecoilMult = -0.1}
+att.statModifiers = {RecoilMult = -0.1,
+					 DrawSpeedMult = 0.2}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15sturdystock")

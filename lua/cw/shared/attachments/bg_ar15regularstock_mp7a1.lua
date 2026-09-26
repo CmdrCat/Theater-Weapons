@@ -1,11 +1,12 @@
 local att = {}
-att.name = "bg_ar15regularstock"
+att.name = "bg_ar15regularstock_mp7a1"
 att.displayName = "M4 Collapsible Stock"
 att.displayNameShort = "M4"
 att.isBG = true
-att.SpeedDec = 2
+att.SpeedDec = 5
 
-att.statModifiers = {RecoilMult = -0.05}
+att.statModifiers = {RecoilMult = -0.05,
+					 DrawSpeedMult = -0.3}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15sturdystock")
@@ -13,37 +14,29 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	if self.StockBGs then
-		self:setBodygroup(self.StockBGs.main, self.StockBGs.none)
-	end
-
 	if self.StockBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.StockBoneName), Vector(0.009, 0.009, 0.009))
 	end
 
-	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.bg_ar15regularstock then
+	if CLIENT and self.AttachmentModelsVM and self.AttachmentModelsVM.bg_ar15regularstock_mp7a1 then
 		local ent
 		
-		ent = self.AttachmentModelsVM.bg_ar15regularstock.ent
+		ent = self.AttachmentModelsVM.bg_ar15regularstock_mp7a1.ent
 
 		ent:SetBodygroup(0, 1)
 		ent:SetBodygroup(1, 1)
-		ent:SetBodygroup(2, 0)
 		ent:SetBodygroup(3, 5)
 		ent:SetBodygroup(4, 2)
 		ent:SetBodygroup(5, 2)
+
+		ent:SetBodygroup(2, 0)
 	end
 end
 
 function att:detachFunc()
-	if self.StockBgs then
-		self:setBodygroup(self.StockBGs.main, self.StockBGs.regular)
-	end
-
 	if self.StockBoneName then
 		self.CW_VM:ManipulateBoneScale(self.CW_VM:LookupBone(self.StockBoneName), Vector(1, 1, 1))
 	end
-
 end
 
 CustomizableWeaponry:registerAttachment(att)

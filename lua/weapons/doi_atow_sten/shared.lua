@@ -55,6 +55,9 @@ if CLIENT then
 	SWEP.CustomizePos = Vector(10, -4, -2)
 	SWEP.CustomizeAng = Vector(20, 45, 12)
 
+	--SWEP.CustomizePos = Vector(10, 0, 2) -- Looking at side profile here
+	--SWEP.CustomizeAng = Vector(0.605, 90, -0.217)
+
 	SWEP.AlternativePos = Vector(-0.5682, .5, .3)
 	SWEP.AlternativeAng = Vector(-0.4089, -0.0389, 8)
 	
@@ -112,8 +115,10 @@ if CLIENT then
 			models = {
 					{type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "weapon", rel = "", pos = Vector(-1.382, -5.798, 4.81), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 					{type = "Model", model = "models/cw2/smgs/mp5.mdl", bone = "weapon", rel = "", pos = Vector(-8.26, -7.7, -3.97), angle = Angle(0, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-			}
-	}}
+			},
+		},
+		["bg_precisionstock_ar15"] = { type = "Model", model = "models/khrcw2/v_snip_sr338.mdl", bone = "weapon", rel = "", pos = Vector(-0.494, -4.924, 4.863), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	}
 end
 end
 
@@ -126,7 +131,7 @@ SWEP.Attachments = {[7] = {header = "Signature Attachment", offset = {300, -500}
 [3] = {header = "Foregrip", offset = {950, 0}, atts = {"ftactiger_r", "bruentiltgrip_r", 
 --"md_foregrip"
 }, exclusions = {doi_atow_frankensten = true}},
-[8] = {header = "Stock", offset = {950, 0}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_nostock"}, dependencies = {doi_atow_frankensten = true}},
+[8] = {header = "Stock", offset = {950, 0}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_precisionstock_ar15", "bg_nostock"}, dependencies = {doi_atow_frankensten = true}},
 ["+reload"] = {header = "Ammo", offset = {200, 300}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 
 SWEP.AttachmentExclusions = {

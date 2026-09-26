@@ -88,9 +88,9 @@ if CLIENT then
 	["md_saker222"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "RSASS", rel = "", pos = Vector(2.5, -12.4, -4.5), angle = Angle(0, 180, 0), size = Vector(0.699, 0.699, 0.699), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["hard20"] = { type = "Model", model = "models/shared/muzzles/r_harbinger20.mdl", bone = "RSASS", rel = "", pos = Vector(2.5,-32,-2.4), angle = Angle(0, 90, -90), size = Vector(1, 1, 1)},
 	--Stocks
-	["bg_ar15regularstock_lighter"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
-	["bg_ar15sturdystock_lighter"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
-	["bg_ar15heavystock_lighter"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["bg_ar15regularstock_sr338"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["bg_ar15sturdystock_sr338"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
+	["bg_ar15heavystock_sr338"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)},
 	["bg_nostock"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "RSASS", rel = "", pos = Vector(0.276, 2.373, 0.05), angle = Angle(0, 90, 0), size = Vector(1, 1, 1)}
 }
 
@@ -140,7 +140,7 @@ SWEP.Attachments = {[1] = {header = "Optic", offset = {-600, -400},  atts = {"md
 [2] = {header = "Muzzle", offset = {400, -400}, atts = {"md_saker222", "hard20" ,"md_snip2_m200_heavy_muzzle_brake"}},
 [3] = {header = "Handguard", offset = {-600, 100}, atts = {"md_foregrip","md_bipod"}},
 [4] = {header = "Laser", offset = {1200, -400}, atts = {"md_anpeq15"}},
-[5] = {header = "Stock", offset = {1700, 500}, atts = {"bg_ar15regularstock_lighter", "bg_ar15sturdystock_lighter", "bg_ar15heavystock_lighter", "bg_nostock"}},
+[5] = {header = "Stock", offset = {1700, 500}, atts = {"bg_ar15regularstock_sr338", "bg_ar15sturdystock_sr338", "bg_ar15heavystock_sr338", "bg_nostock"}},
 [6] = {header = "Conversion", offset = {-600, 600}, atts = {"md_sr338_rsass_conversion"}},
 [7] = {header = "Skins", offset = {500, 125}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes", "md_skinyellowjacket"}},
 ["+reload"] = {header = "Ammo", offset = {500, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}

@@ -5,7 +5,10 @@ att.displayNameShort = "M16"
 att.isBG = true
 att.SpeedDec = 10
 
-att.statModifiers = {RecoilMult = -0.15}
+att.statModifiers = {RecoilMult = -0.15,
+					 MaxSpreadIncMult = 0.5,
+					 VelocitySensitivityMult = 1,
+					 DrawSpeedMult = -0.4}
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("atts/ar15heavystock")
@@ -15,10 +18,6 @@ end
 function att:attachFunc()
 	if self.StockBGs and self.StockBGs.main and self.StockBGs.heavy then
 		self:setBodygroup(self.StockBGs.main, self.StockBGs.heavy)
-	end
-
-	if self.StockBGs then
-		self:setBodygroup(self.StockBGs.main, self.StockBGs.none)
 	end
 
 	if self.StockBoneName then

@@ -36,6 +36,9 @@ if CLIENT then
 --	SWEP.CustomizePos = Vector(-20, -9.981, 1.175)
 --	SWEP.CustomizeAng = Vector(27.256, -90, -29.239)
 
+	--SWEP.CustomizePos = Vector(10, -5, 2) -- Looking at side profile here
+	--SWEP.CustomizeAng = Vector(0.605, 90, -0.217)
+
 	SWEP.IronsightPos = Vector(-1.8, -1.497, 0.8)
 	SWEP.IronsightAng = Vector(-0.828, 0.14, 0)
 
@@ -174,7 +177,10 @@ if CLIENT then
 		["md_bipod"] = { type = "Model", model = "models/wystan/attachments/bipod.mdl", bone = "body", rel = "", pos = Vector(-0.05, 9.898, -1), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 0), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1} },
 		--Lasers
 		["ftacgrimline"] = { type = "Model", model = "models/shared/lasers/r_ftacgrimline.mdl", bone = "body", rel = "", pos = Vector(-0.95, 11.15, 0.548), angle = Angle(0, -90, 90), size = Vector(0.9, 0.9, 0.9)},
-		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "body", rel = "", pos = Vector(-0.85, 10.839, 0.44), angle = Angle(180, -92, 90), size = Vector(0.5, 0.5, 0.5)}
+		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "body", rel = "", pos = Vector(-0.85, 10.839, 0.44), angle = Angle(180, -92, 90), size = Vector(0.5, 0.5, 0.5)},
+		--Stocks
+		["bg_akmfixedstock_an94"] = { type = "Model", model = "models/cw2/rifles/akm_official_v.mdl", bone = "body", rel = "", pos = Vector(2.856, -8.767, 2.264), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75)},
+		["bg_foldedstock_an94"] = { type = "Model", model = "models/weapons/v_cstm_an94.mdl", bone = "body", rel = "", pos = Vector(-3.082, 0.697, 2.349), angle = Angle(0, 86, 0), size = Vector(1, 1, 1)}
 	}
 	
 	SWEP.ForeGripHoldPos = {
@@ -231,7 +237,10 @@ if CLIENT then
 	
 end
 
-SWEP.SightBGs = {main = 2, none = 1}
+SWEP.StudioBGs = {main = 0, regular = 0, none = 1}
+SWEP.HandsBGs = {main = 1, hands = 0, none = 1}
+SWEP.StockBGs = {main = 2, regular = 0, none = 1}
+SWEP.MagBGs = {main = 3, regular = 0, none = 1}
 SWEP.LuaViewmodelRecoil = true
 SWEP.CustomizationMenuScale = 0.01
 
@@ -241,9 +250,10 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {0, -650},  atts = {"md_rm
 	[2] = {header = "Muzzle", offset = {-900, -500}, atts = {"md_saker", "md_csgo_silencer_rifle", "hard20"}},
 	[3] = {header = "Handguard", offset = {-900, -50}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_bipod"}},
 	[4] = {header = "Lasers", offset = {-800, 500}, atts = {"ftacgrimline", "md_anpeq15"}},
-	[5] = {header = "Magazine", offset = {-50, 800}, atts = {"md_uecw_akmag", "md_uecw_akmag_bakelite", "md_uecw_akmag_snow"}},
-	[6] = {header = "Signature Attachment", offset = {900, 800}, atts = {"uecw_an94_58_conversion"}},
-	[7] = {header = "Skins", offset = {1500, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
+	[6] = {header = "Magazine", offset = {-50, 800}, atts = {"md_uecw_akmag", "md_uecw_akmag_bakelite", "md_uecw_akmag_snow"}},
+	[5] = {header = "Stock", offset = {1700, 800}, atts = {"bg_akmfixedstock_an94", "bg_foldedstock_an94"}},
+	[7] = {header = "Signature Attachment", offset = {900, 800}, atts = {"uecw_an94_58_conversion"}},
+	[8] = {header = "Skins", offset = {1500, 400}, atts = {"md_skinburger", "md_skincheckered", "md_skindonut", "md_skinmicrochip", "md_skinmosaic", "md_skinnoir","md_skinrunes","md_skinyellowjacket"}},
 	["+use"] = {header = "Optic Type", offset = {1700, -650}, atts = {"too_optic_category_reflex", "too_optic_category_magnified", "too_optic_tacstance"}},
 	["+reload"] = {header = "Ammo", offset = {1300, -150}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}}
 	

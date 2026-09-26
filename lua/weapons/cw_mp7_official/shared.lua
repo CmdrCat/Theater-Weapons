@@ -73,10 +73,9 @@ if CLIENT then
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "mp7_main", pos = Vector(-4.637, 2.27, 0.273), angle = Angle(-90, 0, -90), size = Vector(0.75, 0.75, 0.75)},
 		["too_reflex_exps"] = { type = "Model", model = "models/eftatts/eft_scope_exps.mdl", bone = "mp7_main", rel = "", pos = Vector(0.4, -2, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 		--Stocks
-		["bg_ar15regularstock"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "mp7_stock", rel = "", pos = Vector(-1.642, -2.344, -2.21), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["bg_ar15sturdystock"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "mp7_stock", rel = "", pos = Vector(-1.642, -2.344, -2.21), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["bg_ar15heavystock"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "mp7_stock", rel = "", pos = Vector(-1.642, -2.344, -2.21), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
-	}
+		["bg_ar15regularstock_mp7a1"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "mp7_stock", rel = "", pos = Vector(-1.642, -2.344, -2.21), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["bg_ar15sturdystock_mp7a1"] = { type = "Model", model = "models/cw2/rifles/ar15.mdl", bone = "mp7_stock", rel = "", pos = Vector(-1.642, -2.344, -2.21), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["bg_precisionstock_mp7a1"] = {model = "models/khrcw2/v_snip_sr338.mdl", bone = "mp7_stock", rel = "", pos = Vector(-0.754, -2.459, -3.099), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)}}
 
 	SWEP.LaserPosAdjust = {x = 0, y = 0, z = 0.25}
 	SWEP.LaserAngAdjust = {p = 0, y = 180, r = 0}
@@ -109,7 +108,7 @@ SWEP.Attachments = {
 	[1] = {header = "Sight", offset = {1100, -400}, atts = {"md_microt1", "md_aimpoint", "too_reflex_exps", "md_schmidt_shortdot", "md_acog"}},
 	[2] = {header = "Muzzle", offset = {-200, -400}, atts = {"bg_mp7_unsuppressed"}},
 	[3] = {header = "Laser", offset = {-200, 0}, atts = {"md_anpeq15"}},
-	[5] = {header = "Stock", offset = {1100, 650}, atts = {"bg_ar15regularstock", "bg_ar15sturdystock", "bg_nostock"}},
+	[5] = {header = "Stock", offset = {1100, 650}, atts = {"bg_ar15regularstock_mp7a1", "bg_ar15sturdystock_mp7a1", "bg_precisionstock_mp7a1", "bg_nostock"}},
 	--[5] = {header = "Technique", offset = {-200, 0}, atts = {"cw_akimbo"}}, Something wrong with the one-handed thing
 	["+reload"] = {header = "Ammo", offset = {1100, 100}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }

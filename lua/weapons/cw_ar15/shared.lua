@@ -155,7 +155,7 @@ if CLIENT then
 		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "smdimport001", pos = Vector(-0.225, 9.715, 3.15), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
 		["ins2_atow_clamplaser"] = {model = "models/khrcw2/ins2pack/attachments/lasers/laserrifle.mdl", pos = Vector(-2.2,-6,4.2), angle = Angle(0, -90, 90), size = Vector(1,1,1), bone = "smdimport001"},
 		--Stocks
-		["bg_precisionstock"] = {model = "models/khrcw2/v_snip_sr338.mdl", bone = "smdimport001", rel = "", pos = Vector(3.057, -6.51, 5.262), angle = Angle(-2, -90, 0), size = Vector(1, 1, 1)},
+		["bg_precisionstock_ar15"] = {model = "models/khrcw2/v_snip_sr338.mdl", bone = "smdimport001", rel = "", pos = Vector(3.057, -6.51, 5.262), angle = Angle(-2, -90, 0), size = Vector(1, 1, 1)},
 		--Magazines
 		["md_uecw_usgimag"] = {model = "models/gmod4phun/usgimag.mdl", bone = "Magazine001", pos = Vector(-0.012, 0.179, -0.162), angle = Angle(0, 0, 2), size = Vector(0.68, 0.68, 0.68)},
 		["md_uecw_emag"] = {model = "models/gmod4phun/emag.mdl", bone = "Magazine001", pos = Vector(-0.027, 0.124, -1.438), angle = Angle(0, 0, 2), size = Vector(0.602, 0.602, 0.602)},
@@ -225,9 +225,9 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"bg_f
 	[3] = {header = "Barrel", offset = {-400, -600}, atts = {"bg_magpulhandguard", "bg_longbarrel", "bg_ris", "bg_longris", "bg_microbarrel"}},
 	[4] = {header = "Underbarrel", offset = {-400, -25}, atts = {"ftactiger_r", "bruentiltgrip_r", "md_foregrip", "md_tcw_carryhandle_grip", "md_m203"}, exclusions = {bg_microbarrel = true}},
 	[9] = {header = "Extended Underbarrel", offset = {-1100, -300}, atts = {"md_tcw_carryhandle_grip_cosmetic", "md_bipod"}, dependencies = {bg_longbarrel = true, bg_ris = true, bg_longris = true}},
-	[5] = {header = "Magazine", offset = {-100, 750}, atts = {"md_uecw_usgimag", "md_uecw_emag", "bg_ar1560rndmag", "md_cmag_556_official", "md_tcw_pmag"}},
-	[6] = {header = "Stock", offset = {1550, 600}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_precisionstock", "bg_nostock"}},
-	[7] = {header = "Laser", offset = {1300, 0}, atts = {"md_anpeq15", "ins2_atow_clamplaser"}, exclusions = {bg_microbarrel = true}},
+	[7] = {header = "Magazine", offset = {-100, 750}, atts = {"md_uecw_usgimag", "md_uecw_emag", "bg_ar1560rndmag", "md_cmag_556_official", "md_tcw_pmag"}},
+	[6] = {header = "Stock", offset = {1550, 600}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock", "bg_precisionstock_ar15", "bg_nostock"}},
+	[5] = {header = "Laser", offset = {1300, 0}, atts = {"md_anpeq15", "ins2_atow_clamplaser"}, exclusions = {bg_microbarrel = true}},
 	[8] = {header = "Signature Attachment", offset = {500, 450}, atts = {"too_m4a1_50_beowulf"}},
 	["+reload"] = {header = "Ammo", offset = {-900, 400}, atts = {"am_magnum", "am_matchgrade", "am_atow_lowvel", "am_atow_heavy", "am_atow_ap"}}
 }
